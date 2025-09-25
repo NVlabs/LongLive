@@ -97,13 +97,8 @@ pip install flash-attn==2.7.4.post1 --no-build-isolation
 ## Inference
 **Download checkpoints**
 
-Wan:
 ```
 huggingface-cli download Wan-AI/Wan2.1-T2V-1.3B --local-dir wan_models/Wan2.1-T2V-1.3B
-```
-
-LongLive checkpoints(base, lora, prompt examples)
-```
 huggingface-cli download Efficient-Large-Model/LongLive --local-dir longlive_models
 ```
 
