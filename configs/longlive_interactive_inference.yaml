@@ -1,0 +1,38 @@
+# Architecture
+denoising_step_list:
+- 1000
+- 750
+- 500
+- 250
+warp_denoising_step: true # need to remove - 0 in denoising_step_list if warp_denoising_step is true
+num_frame_per_block: 3
+model_name: Wan2.1-T2V-1.3B
+model_kwargs:
+  local_attn_size: 12
+  timestep_shift: 5.0
+  sink_size: 3
+
+
+# Inference
+data_path: prompts/interactive_example.jsonl
+output_folder: videos/interactive
+inference_iter: -1
+num_output_frames: 240
+use_ema: false
+seed: 1
+num_samples: 1
+save_with_index: true
+switch_frame_indices: 40, 80, 120, 160, 200
+global_sink: false
+context_noise: 0
+
+generator_ckpt: longlive_models/models/longlive_base.pt
+lora_ckpt: longlive_models/models/lora.pt
+
+adapter:
+  type: "lora"
+  rank: 256                    # LoRA rank (typical values: 8, 16, 32, 64)
+  alpha: 256                   # LoRA alpha (typically same as rank, but can be different)
+  dropout: 0.0                # LoRA dropout rate
+  dtype: "bfloat16"          # Data type for LoRA parameters: "bfloat16", "float16", "float32"
+  verbose: false              # Whether to print all target module names

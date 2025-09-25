@@ -1,0 +1,103 @@
+generator_ckpt: checkpoints/longlive_init.pt
+generator_fsdp_wrap_strategy: size
+real_score_fsdp_wrap_strategy: size
+fake_score_fsdp_wrap_strategy: size
+real_name: Wan2.1-T2V-1.3B
+fake_name: Wan2.1-T2V-1.3B
+text_encoder_fsdp_wrap_strategy: size
+denoising_step_list:
+- 1000
+- 750
+- 500
+- 250
+warp_denoising_step: true # need to remove - 0 in denoising_step_list if warp_denoising_step is true
+ts_schedule: false
+num_train_timestep: 1000
+timestep_shift: 5.0
+guidance_scale: 3.0
+denoising_loss_type: flow
+mixed_precision: true
+seed: 0
+wandb_key: YOUR_WANDB_KEY
+wandb_entity: YOUR_WANDB_ENTITY
+wandb_project: YOUR_WANDB_PROJECT
+sharding_strategy: hybrid_full
+lr: 1.0e-05
+lr_critic: 2.0e-06
+beta1: 0.0
+beta2: 0.999
+beta1_critic: 0.0
+beta2_critic: 0.999
+data_path: prompts/vidprom_filtered_extended.txt
+switch_prompt_path: prompts/vidprom_filtered_extended_switch.txt
+batch_size: 1
+gradient_accumulation_steps: 1
+ema_weight: 0.99
+ema_start_step: 200
+total_batch_size: 64
+log_iters: 50
+max_checkpoints: 3
+max_iters: 3000
+
+negative_prompt: '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走'
+dfake_gen_update_ratio: 5
+image_or_video_shape:
+- 1
+- 240 # unused in streaming training
+- 16
+- 60
+- 104
+distribution_loss: dmd_switch
+global_sink: false
+trainer: score_distillation
+gradient_checkpointing: true
+num_frame_per_block: 3
+load_raw_video: false
+model_kwargs:
+  timestep_shift: 5.0
+  local_attn_size: 12
+  sink_size: 3
+
+# Visualization
+vis_interval: 500
+vis_ema: false
+vis_video_lengths:
+- 240
+val_batch_size: 1
+val_data_path: prompts/vidprom_filtered_extended.txt
+val_switch_prompt_path: prompts/vidprom_filtered_extended_switch.txt
+
+slice_last_frames: 21
+
+switch_mode: random_choice
+switch_choices:
+- 21
+- 39
+- 57
+- 75
+- 93
+- 111
+- 129
+- 147
+- 165
+- 183
+- 201
+
+streaming_training: true
+streaming_chunk_size: 21
+streaming_max_length: 240
+
+streaming_min_new_frame: 18
+train_first_chunk: true
+
+last_step_only: false
+
+## LoRA Configuration
+adapter:
+  type: "lora"
+  rank: 256                    # LoRA rank (typical values: 8, 16, 32, 64)
+  alpha: 256                   # LoRA alpha (typically same as rank, but can be different)
+  dropout: 0.0                # LoRA dropout rate
+  dtype: "bfloat16"          # Data type for LoRA parameters: "bfloat16", "float16", "float32"
+  apply_to_critic: true       # Whether to apply LoRA to critic/fake_score model
+  verbose: true              # Whether to print all target module names
