@@ -37,7 +37,7 @@ With FP8 quantization, LongLive boosts inference to 24.8 FPS with marginal quali
 10. [Acknowledgement](#acknowledgement)
 
 ## News
-- [x] [2025.9.25] We release [Paper](https://arxiv.org/abs/xxx), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/xxx), and demo page [Website](https://andysonys.github.io/longlive-page/).
+- [x] [2025.9.25] We release [Paper](https://arxiv.org/abs/xxx), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website]().
 
 ## Highlights
 1. **Long Video Gen**: LongLive supports up to 240s video generation, with visual consistency.
