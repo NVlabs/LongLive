@@ -117,7 +117,7 @@ bash interactive_inference.sh
 ```
 ## Training
 **Download checkpoints**
-Please follow [Self-Forcing]{https://github.com/guandeh17/Self-Forcing} to download text prompts and ODE initialized checkpoint.
+Please follow [Self-Forcing](https://github.com/guandeh17/Self-Forcing) to download text prompts and ODE initialized checkpoint.
 
 **Step1: Self-Forcing Initialization for Short Window and Frame Sink**
 ```
