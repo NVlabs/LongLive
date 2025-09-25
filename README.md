@@ -7,12 +7,12 @@
 [![Paper](https://img.shields.io/badge/ArXiv-Paper-brown)](https://arxiv.org/abs/xxx)
 [![Code](https://img.shields.io/badge/GitHub-LongLive-blue)](https://github.com/NVlabs/LongLive)
 [![Model](https://img.shields.io/badge/HuggingFace-Model-yellow)](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B)
-[![Video](https://img.shields.io/badge/YouTube-Video-red)](https://youtu.be/CO1QC7BNvig)
-[![Demo](https://img.shields.io/badge/Demo-Page-bron)]()
+[![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=CO1QC7BNvig)
+[![Demo](https://img.shields.io/badge/Demo-Page-bron)](https://nvlabs.github.io/LongLive)
 
 <div align="center">
 
-[![Watch the video](assets/video-first-frame.png)](https://youtu.be/CO1QC7BNvig)
+[![Watch the video](assets/video-first-frame.png)](https://www.youtube.com/watch?v=CO1QC7BNvig)
 
 </div>
 
@@ -37,7 +37,7 @@ With FP8 quantization, LongLive boosts inference to 24.8 FPS with marginal quali
 10. [Acknowledgement](#acknowledgement)
 
 ## News
-- [x] [2025.9.25] We release [Paper](https://arxiv.org/abs/xxx), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website]().
+- [x] [2025.9.25] We release [Paper](https://arxiv.org/abs/xxx), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive).
 
 ## Highlights
 1. **Long Video Gen**: LongLive supports up to 240s video generation, with visual consistency.
@@ -67,7 +67,7 @@ With FP8 quantization, LongLive boosts inference to 24.8 FPS with marginal quali
 </p>
 <p align="center" style="border-radius: 10px">
   <img src="assets/demo.png" width="100%" alt="logo"/>
-<strong>Interactive 60s videos with 6 prompts. See our demo <a href="https://andysonys.github.io/longlive-page/"><strong>Website</strong></a> for video examples.</strong>
+<strong>Interactive 60s videos with 6 prompts. See our demo <a href="https://nvlabs.github.io/LongLive"><strong>Website</strong></a> for video examples.</strong>
 </p>
 
 
