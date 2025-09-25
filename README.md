@@ -130,10 +130,6 @@ bash train_init.sh
 bash train_long.sh
 ```
 
-<!-- ## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=NVlabs/sana&type=Date)](https://www.star-history.com/#NVlabs/sana&Date) -->
-
 ## How to contribute
 - Make sure to have git installed.
 - Create your own [fork](https://github.com/NVlabs/LongLive/fork) of the project.
