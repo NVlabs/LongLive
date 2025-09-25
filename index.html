@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/logo.png" type="image/png">
+    <title>LongLive</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="mobile-warning">
+        For the best experience, it's better to use a desktop computer to view this website.
+        <br>
+        <button onclick="dismissWarning()">Continue</button>
+    </div>
+    
+    <div class="sidebar">
+        <h2 class="sidebar-title"><img src="./assets/logo.png" alt="LongLive logo" class="sidebar-logo"> LongLive</h2>
+        
+            <ul>
+                <li><a href="#teaser" class="nav-link"><i class="fas fa-video"></i> Demo Video </a></li>
+                <li><a href="#interactive" class="nav-link"><i class="fas fa-video"></i> Interactive Long Video Showcases </a></li>
+                <li><a href="#long" class="nav-link"><i class="fas fa-video"></i> Long Video Showcases </a></li>
+                <li><a href="#ultra-long" class="nav-link"><i class="fas fa-video"></i> Ultra-Long Video Showcases </a></li>
+                <li><a href="#compare" class="nav-link"><i class="fas fa-trophy"></i> Comparisons </a></li>
+                <li><a href="#kvrecaching" class="nav-link"><i class="fas fa-trophy"></i> KV Recaching </a></li>
+                <li><a href="#shortwindow" class="nav-link"><i class="fas fa-trophy"></i> Short Window Attention & Frame Sink</a></li>
+                <li><a href="#contact-us" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        
+    </div>
+    <div class="content">
+        <div id="paper-info" class="paper-info">
+            <h1><img src="./assets/logo.png" alt="LongLive logo" class="title-logo"> LongLive: Real-time Interactive Long Video Generation</h1>
+            <div class="authors">
+                <p>
+                    <span class="author"><a href="https://andysonys.github.io/" target="_blank">Shuai Yang<sup>1,3</sup></a></span>, 
+                    <span class="author"><a href="https://aaron-weihuang.com/" target="_blank">Wei Huang<sup>1,4</sup></a></span>, 
+                    <span class="author"><a href="https://ruihang-chu.github.io/" target="_blank">Ruihang Chu<sup>5</sup></a></span>, 
+                    <span class="author"><a href="https://easonxiao-888.github.io/" target="_blank">Yicheng Xiao<sup>5</sup></a></span>, 
+                    <span class="author"><a href="https://yuyangzhao.com/" target="_blank">Yuyang Zhao<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://peppaking8.github.io/" target="_blank">Xianbang Wang<sup>2</sup></a></span>, 
+                    <span class="author"><a href="https://lmxyy.me/" target="_blank">Muyang Li<sup>2</sup></a></span>, 
+                    <span class="author"><a href="https://xieenze.github.io/" target="_blank">Enze Xie<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://www.yingcong.me/" target="_blank"> Yingcong Chen<sup>3</sup></a></span>, 
+                    <span class="author"><a href="https://scholar.google.com/citations?user=OI7zFmwAAAAJ&hl=en" target="_blank"> Yao Lu<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://hanlab.mit.edu/songhan" target="_blank">Song Han<sup>1,2</sup></a></span>, 
+                    <span class="author"><a href="https://yukangchen.com/" target="_blank">Yukang Chen<sup>1</sup></a></span>
+                </p>
+                <p>
+                    <span class="affiliation"><sup>1</sup> NVIDIA</span>, 
+                    <span class="affiliation"><sup>2</sup> MIT</span>,
+                    <span class="affiliation"><sup>3</sup> HKUST(GZ)</span>,
+                    <span class="affiliation"><sup>4</sup> HKU</span>
+                    <span class="affiliation"><sup>5</sup> THU</span>
+                </p>
+            </div>
+            <div class="links">
+                <p><a href="https://arxiv.org" target="_blank">Paper (Arxiv)</a></p>
+                <p><a href="https://github.com" target="_blank">GitHub</a></p>
+            </div>
+            <h2>Please stay tuned for all video loading...</h2>
+           
+        
+        <section id="teaser" class="gallery-section">
+            <h2>Demo Video </h2>
+            <div class="speed-controls" role="group" aria-label="Playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" data-speed="1">x1</button>
+                <button class="speed-btn" data-speed="2">x2</button>
+            </div>
+            <div class="gallery-60">
+                <div class="gallery-item demo-hero" style="grid-column: 1 / -1; grid-row: span 20;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/demo/demo_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+            </div>  
+            </section>
+
+        <section id="interactive" class="gallery-section">
+            <h2>Interactive Long Video Showcases</h2>
+            <h3>Hover on the video to see corresponding text prompts</h3>
+            <div class="speed-controls" role="group" aria-label="Playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" data-speed="1">x1</button>
+                <button class="speed-btn" data-speed="2">x2</button>
+            </div>
+            <div class="gallery-3 interactive-grid"></div>
+        </section>
+        
+        <section id="long" class="gallery-section">
+            <h2>Long Video Showcases</h2>
+            <h3>Hover on the video to see corresponding text prompts</h3>
+            <div class="speed-controls" role="group" aria-label="Playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" data-speed="1">x1</button>
+                <button class="speed-btn" data-speed="2">x2</button>
+            </div>
+            <div class="gallery-3">
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-ad_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">A video featuring a woman introducing the iPhone 15, available for purchase on Shopee. The woman has a friendly and engaging demeanor, speaking clearly and confidently about the phone's features and benefits. She demonstrates the phone's camera capabilities, display quality, and user interface. The background includes subtle animations of the Shopee app and product listings. The woman wears casual, modern clothing and maintains a neutral facial expression as she interacts with the phone. The video opens with a close-up of the woman’s face, then transitions to medium shots of her handling the phone. The camera occasionally zooms in on specific features of the iPhone 15.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-batman_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">Create a Batman and Joker fight scene using the graphics style of Grand Theft Auto V. In the video, Batman is dressed in his iconic black cape and utility belt, while Joker sports his signature green hair and purple outfit. They are engaged in a fierce hand-to-hand combat in a gritty urban environment, with buildings and vehicles in the background. Both characters display intense expressions and fluid motions as they dodge, punch, and kick each other. The scene is captured from a dynamic third-person perspective, with occasional close-ups emphasizing their intense facial expressions and body language.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-bird_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">A 1940s film noir-style animation with realistic RTX effects, featuring a flock of angry birds. The birds have detailed feathers, expressive scowling faces, and their wings are spread as if ready to attack. The scene takes place in a dimly lit alleyway with old brick walls and flickering streetlights casting shadows. The birds are shown in a medium close-up, emphasizing their aggressive postures and animated expressions. The realistic textures and lighting create a gritty, vintage aesthetic.</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-candle_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">Animated scene features a close-up of a short fluffy monster kneeling beside a melting red candle. The art style is 3D and realistic, with a focus on lighting and texture. The mood of the painting is one of wonder and curiosity, as the monster gazes at the flame with wide eyes and open mouth. Its pose and expression convey a sense of innocence and playfulness, as if it is exploring the world around it for the first time. The use of warm colors and dramatic lighting further enhances the cozy atmosphere of the image.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-cook_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">A dynamic over-the-shoulder perspective of a chef meticulously plating a dish in a bustling kitchen. The chef, a middle-aged man with a neatly trimmed beard and focused expression, deftly arranges ingredients on a pristine white plate. His hands move with precision, each gesture deliberate and practiced. The background shows a crowded kitchen with steaming pots, whirring blenders, and the clatter of utensils. Bright lights highlight the scene, casting shadows across the busy workspace. The camera angle captures the chef's detailed work from behind, emphasizing his skill and dedication.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-cute_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">3D animation of a small, round, fluffy creature with big, expressive eyes explores a vibrant, enchanted forest. The creature, a whimsical blend of a rabbit and a squirrel, has soft blue fur and a bushy, striped tail. It hops along a sparkling stream, its eyes wide with wonder. The forest is alive with magical elements: flowers that glow and change colors, trees with leaves in shades of purple and silver, and small floating lights that resemble fireflies. The creature stops to interact playfully with a group of tiny, fairy-like beings dancing around a mushroom ring. The creature looks up in awe at a large, glowing tree that seems to be the heart of the forest.</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-exercise.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">A group of diverse individuals, including adults and seniors, performing various exercise routines in a park. They are jogging, stretching, lifting weights, and practicing yoga. Each person is engaged in their own activity, showcasing a range of body postures and expressions of concentration and determination. The environment is bright and lively, with green grass, trees, and a clear blue sky visible in the background. The camera captures each individual in a series of medium shots, maintaining a static perspective to highlight the fluid motions of their exercises.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-guitar_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">A playful raccoon is seen playing an electronic guitar, strumming the strings with its front paws. The raccoon has distinctive black facial markings and a bushy tail. It sits comfortably on a small stool, its body slightly tilted as it focuses intently on the instrument. The setting is a cozy, dimly lit room with vintage posters on the walls, adding a retro vibe. The raccoon's expressive eyes convey a sense of joy and concentration. Medium close-up shot, focusing on the raccoon's face and hands interacting with the guitar.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-gun_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">Steampunk-themed animation, set in the 1800s, featuring two rival characters engaged in a tense gun duel. Both characters are dressed in intricate steampunk attire, with goggles and brass mechanical elements visible on their outfits. One character is a stern-faced gentleman with a top hat and a long coat, while the other is a fierce woman with a leather jacket and a bandanna. They stand facing each other in a dimly lit, foggy alleyway filled with old machinery and gears. Each holds a custom-made revolver, emphasizing the detailed mechanisms and steam-powered elements. The background showcases a gritty industrial cityscape with smokestacks and gas lamps. Medium close-up shot focusing on the intense expressions and hand movements of the characters during the duel.</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-panda_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">A playful, animated panda dancing joyfully under a blanket of snow. The panda moves gracefully, performing lively dance steps that include twirling and hopping. The scene is set in a serene winter landscape with gently falling snowflakes and tall pine trees in the background. The panda has soft, fluffy fur and expressive, joyful eyes. The camera captures the panda from a medium close-up angle, focusing on the panda’s energetic movements and the peaceful snowy environment surrounding it.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-train_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">A dynamic time-lapse video showing the rapidly moving scenery from the window of a speeding train. The camera captures various elements such as lush green fields, towering trees, quaint countryside houses, and distant mountain ranges passing by quickly. The train window frames the view, adding a sense of speed and motion as the landscape rushes past. The camera remains static but emphasizes the fast-paced movement outside. The overall atmosphere is serene yet exhilarating, capturing the essence of travel and exploration. Medium shot focusing on the train window and the rushing scenery beyond.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/long/long-wild_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">60s</div>
+                    <div class="prompt-overlay">A dynamic and chaotic scene in a dense forest during a heavy rainstorm, capturing a real girl frantically running through the foliage. Her wild hair flows behind her as she sprints, her arms flailing and her face contorted in fear and desperation. Behind her, various animals—rabbits, deer, and birds—are also running, creating a frenzied atmosphere. The girl's clothes are soaked, clinging to her body, and she is screaming and shouting as she tries to escape. The background is a blur of greenery and rain-drenched trees, with occasional glimpses of the darkening sky. A wide-angle shot from a low angle, emphasizing the urgency and chaos of the moment.</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ultra-long" class="gallery-section">
+            <h2>Ultra-Long Video Showcases</h2>
+            <div class="speed-controls" role="group" aria-label="Playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" data-speed="1">x1</button>
+                <button class="speed-btn" data-speed="2">x2</button>
+            </div>
+            <div class="gallery-3">
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/ultra-long/ultra-long-alley_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">240s</div>
+                    <div class="prompt-overlay">A dramatic and dynamic scene in the style of a disaster movie, depicting a powerful tsunami rushing through a narrow alley in Bulgaria. The water is turbulent and chaotic, with waves crashing violently against the walls and buildings on either side. The alley is lined with old, weathered houses, their facades partially submerged and splintered. The camera angle is low, capturing the full force of the tsunami as it surges forward, creating a sense of urgency and danger. People can be seen running frantically, adding to the chaos. The background features a distant horizon, hinting at the larger scale of the tsunami. A dynamic, sweeping shot from a low-angle perspective, emphasizing the movement and intensity of the event.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/ultra-long/ultra-long-sheep_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">240s</div>
+                    <div class="prompt-overlay">A single white sheep bending down to drink water from a calm river. The sheep has fluffy wool, long curved horns, and soft brown eyes. It is positioned near the riverbank, with its front legs partially submerged in the clear water. The river flows gently, reflecting the surrounding greenery and blue sky. The background shows lush grass and trees along the riverbank, creating a serene pastoral landscape. The sheep's body is slightly tilted as it bends down to drink, emphasizing a natural and tranquil motion. Medium close-up shot focusing on the sheep and the river.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/ultra-long/ultra-long-tea_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">240s</div>
+                    <div class="prompt-overlay">A close-up shot of a ceramic teacup slowly pouring water into a glass mug. The water flows smoothly from the spout of the teacup into the mug, creating gentle ripples as it fills up. Both cups have detailed textures, with the teacup having a matte finish and the glass mug showcasing clear transparency. The background is a blurred kitchen countertop, adding context without distracting from the central action. The pouring motion is fluid and natural, emphasizing the interaction between the two cups.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compare" class="gallery-section">
+            <h2>Comparisons</h2>
+            <p style="text-align: center; color: #666;">LongLive exhibits strong prompt compliance, smooth transitions, and high long-range consistency while sustaining high throughput.<br>Compared to ours, SkyReels-V2 shows weaker long-range consistency and lower throughput.<br>Self-Forcing faces quality degradation on longer videos.</p>
+            <div class="speed-controls" role="group" aria-label="Playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" data-speed="1">x1</button>
+                <button class="speed-btn" data-speed="2">x2</button>
+            </div>
+            <div class="gallery-3 compare-grid">
+                <div class="col-header">Self-Forcing<br/>Generation FPS: 17.0</div>
+                <div class="col-header">SkyReels-V2<br/>Generation FPS: 0.49</div>
+                <div class="col-header">LongLive<br/>Generation FPS: 20.7</div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/self-forcing-cat_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a warmly lit home office, a bearded Asian man in his early thirties types intently on a laptop. An orange tabby with bright green eyes sits beside him, a steaming coffee mug nearby, bookshelves framing the cozy scene.
+                        10s–20s: He pauses to rub his right forearm, gaze fixed on the screen; the cat’s tail curls lazily, eyes following the motion.
+                        20s–30s: Hands return to the keys; the cat turns its head toward his concentrated face, ears perked.
+                        30s–40s: He glances at the cat and murmurs a few gentle words, smiling as their eyes meet; the cat settles into a loaf, tail loosely wrapped.
+                        40s–50s: He scratches beneath the cat’s chin; it purrs, eyes half-closed.
+                        50s–60s: He pats the cat’s head twice, then resumes typing while it blinks slowly, tail curled in contentment.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/skyreel-cat_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a warmly lit home office, a bearded Asian man in his early thirties types intently on a laptop. An orange tabby with bright green eyes sits beside him, a steaming coffee mug nearby, bookshelves framing the cozy scene.
+                        10s–20s: He pauses to rub his right forearm, gaze fixed on the screen; the cat’s tail curls lazily, eyes following the motion.
+                        20s–30s: Hands return to the keys; the cat turns its head toward his concentrated face, ears perked.
+                        30s–40s: He glances at the cat and murmurs a few gentle words, smiling as their eyes meet; the cat settles into a loaf, tail loosely wrapped.
+                        40s–50s: He scratches beneath the cat’s chin; it purrs, eyes half-closed.
+                        50s–60s: He pats the cat’s head twice, then resumes typing while it blinks slowly, tail curled in contentment.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/longlive-cat_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a warmly lit home office, a bearded Asian man in his early thirties types intently on a laptop. An orange tabby with bright green eyes sits beside him, a steaming coffee mug nearby, bookshelves framing the cozy scene.
+                        10s–20s: He pauses to rub his right forearm, gaze fixed on the screen; the cat’s tail curls lazily, eyes following the motion.
+                        20s–30s: Hands return to the keys; the cat turns its head toward his concentrated face, ears perked.
+                        30s–40s: He glances at the cat and murmurs a few gentle words, smiling as their eyes meet; the cat settles into a loaf, tail loosely wrapped.
+                        40s–50s: He scratches beneath the cat’s chin; it purrs, eyes half-closed.
+                        50s–60s: He pats the cat’s head twice, then resumes typing while it blinks slowly, tail curled in contentment.</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/self-forcing-lady_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a serene garden of blooming flowers and lush greenery, a joyful Madonna in a flowing pastel, embroidered robe holds a rosary, smiling warmly as she gently blesses. Clear blue sky; soft sunlight through leaves.
+                        10s–20s: She brings her free hand to her chest, deepening the blessing.
+                        20s–30s: A light breeze stirs; flowers sway softly.
+                        30s–40s: A butterfly lands on her outstretched hand; dappled light plays across the scene.
+                        40s–50s: The butterfly lifts off, circling her head before disappearing into the foliage, leaving a faint shimmer.
+                        50s–60s: She smiles and begins to speak softly, lips moving as if offering comfort.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/skyreel-lady_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a serene garden of blooming flowers and lush greenery, a joyful Madonna in a flowing pastel, embroidered robe holds a rosary, smiling warmly as she gently blesses. Clear blue sky; soft sunlight through leaves.
+                        10s–20s: She brings her free hand to her chest, deepening the blessing.
+                        20s–30s: A light breeze stirs; flowers sway softly.
+                        30s–40s: A butterfly lands on her outstretched hand; dappled light plays across the scene.
+                        40s–50s: The butterfly lifts off, circling her head before disappearing into the foliage, leaving a faint shimmer.
+                        50s–60s: She smiles and begins to speak softly, lips moving as if offering comfort.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/longlive-lady_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a serene garden of blooming flowers and lush greenery, a joyful Madonna in a flowing pastel, embroidered robe holds a rosary, smiling warmly as she gently blesses. Clear blue sky; soft sunlight through leaves.
+                        10s–20s: She brings her free hand to her chest, deepening the blessing.
+                        20s–30s: A light breeze stirs; flowers sway softly.
+                        30s–40s: A butterfly lands on her outstretched hand; dappled light plays across the scene.
+                        40s–50s: The butterfly lifts off, circling her head before disappearing into the foliage, leaving a faint shimmer.
+                        50s–60s: She smiles and begins to speak softly, lips moving as if offering comfort.</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/self-forcing-model_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: A serene model with long pink hair stands amid gently falling sakura. Swirling pink smoke partially veils her; a simple white gown complements the palette, creating a dreamy, ethereal mood.
+                        10s–20s: She slowly raises her hand, fingertips grazing the mist as if caressing a petal.
+                        20s–30s: A soft breeze stirs; more petals flutter around her.
+                        30s–40s: She closes her eyes; lashes rest softly as the calm endures.
+                        40s–50s: She takes a subtle step forward; a small bird flits in and settles on a nearby branch.
+                        50s–60s: The bird alights on her outstretched finger; the pink smoke thickens with hints of cyan-blue, gently enveloping the scene.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/skyreel-model_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: A serene model with long pink hair stands amid gently falling sakura. Swirling pink smoke partially veils her; a simple white gown complements the palette, creating a dreamy, ethereal mood.
+                        10s–20s: She slowly raises her hand, fingertips grazing the mist as if caressing a petal.
+                        20s–30s: A soft breeze stirs; more petals flutter around her.
+                        30s–40s: She closes her eyes; lashes rest softly as the calm endures.
+                        40s–50s: She takes a subtle step forward; a small bird flits in and settles on a nearby branch.
+                        50s–60s: The bird alights on her outstretched finger; the pink smoke thickens with hints of cyan-blue, gently enveloping the scene.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/longlive-model_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: A serene model with long pink hair stands amid gently falling sakura. Swirling pink smoke partially veils her; a simple white gown complements the palette, creating a dreamy, ethereal mood.
+                        10s–20s: She slowly raises her hand, fingertips grazing the mist as if caressing a petal.
+                        20s–30s: A soft breeze stirs; more petals flutter around her.
+                        30s–40s: She closes her eyes; lashes rest softly as the calm endures.
+                        40s–50s: She takes a subtle step forward; a small bird flits in and settles on a nearby branch.
+                        50s–60s: The bird alights on her outstretched finger; the pink smoke thickens with hints of cyan-blue, gently enveloping the scene.</div>
+            </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/self-forcing-ballet_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: Empty stage under a lone ghost light; red velvet seats fade into darkness. A solo ballet dancer in a simple leotard rehearses—each landing kicks up rosin dust. Muscles ripple with controlled breath; a water bottle sits at the wings.
+                        10s–20s: She traces an imaginary line toward the ghost light, settling into a poised phrase.
+                        20s–30s: She flows into a clean pirouette, fingers still sketching that invisible line.
+                        30s–40s: Spin blooms into a leap; feet kiss the floor before a graceful landing.
+                        40s–50s: She holds a serene stillness, eyes closed in quiet focus.
+                        50s–60s: A light jump, soft landing; a stagehand slips in at the side to adjust a prop without breaking her focus.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/skyreel-ballet_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: Empty stage under a lone ghost light; red velvet seats fade into darkness. A solo ballet dancer in a simple leotard rehearses—each landing kicks up rosin dust. Muscles ripple with controlled breath; a water bottle sits at the wings.
+                        10s–20s: She traces an imaginary line toward the ghost light, settling into a poised phrase.
+                        20s–30s: She flows into a clean pirouette, fingers still sketching that invisible line.
+                        30s–40s: Spin blooms into a leap; feet kiss the floor before a graceful landing.
+                        40s–50s: She holds a serene stillness, eyes closed in quiet focus.
+                        50s–60s: A light jump, soft landing; a stagehand slips in at the side to adjust a prop without breaking her focus.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/longlive-balllet_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: Empty stage under a lone ghost light; red velvet seats fade into darkness. A solo ballet dancer in a simple leotard rehearses—each landing kicks up rosin dust. Muscles ripple with controlled breath; a water bottle sits at the wings.
+                        10s–20s: She traces an imaginary line toward the ghost light, settling into a poised phrase.
+                        20s–30s: She flows into a clean pirouette, fingers still sketching that invisible line.
+                        30s–40s: Spin blooms into a leap; feet kiss the floor before a graceful landing.
+                        40s–50s: She holds a serene stillness, eyes closed in quiet focus.
+                        50s–60s: A light jump, soft landing; a stagehand slips in at the side to adjust a prop without breaking her focus.</div>
+            </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/self-forcing-wedding_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a lantern-lit temple, David and Michal stand under a flowered chuppah; he wears a white robe with gold sash and crown, she a veiled white gown with gold-ivory embroidery.
+                        10s–20s: David takes her hand and slips a ring on her finger as the crowd watches in silence.
+                        20s–30s: He kisses her cheek; approving murmurs rise.
+                        30s–40s: They share a quiet, reverent gaze, hands touching beneath the chuppah.
+                        40s–50s: David gently leads Michal around the chuppah; a small child runs in with a bouquet.
+                        50s–60s: The child offers the bouquet with a shy smile, then steps back to watch.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/skyreel-wedding_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a lantern-lit temple, David and Michal stand under a flowered chuppah; he wears a white robe with gold sash and crown, she a veiled white gown with gold-ivory embroidery.
+                        10s–20s: David takes her hand and slips a ring on her finger as the crowd watches in silence.
+                        20s–30s: He kisses her cheek; approving murmurs rise.
+                        30s–40s: They share a quiet, reverent gaze, hands touching beneath the chuppah.
+                        40s–50s: David gently leads Michal around the chuppah; a small child runs in with a bouquet.
+                        50s–60s: The child offers the bouquet with a shy smile, then steps back to watch.</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/comparison/longlive-wedding_web.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">0s–10s: In a lantern-lit temple, David and Michal stand under a flowered chuppah; he wears a white robe with gold sash and crown, she a veiled white gown with gold-ivory embroidery.
+                        10s–20s: David takes her hand and slips a ring on her finger as the crowd watches in silence.
+                        20s–30s: He kisses her cheek; approving murmurs rise.
+                        30s–40s: They share a quiet, reverent gaze, hands touching beneath the chuppah.
+                        40s–50s: David gently leads Michal around the chuppah; a small child runs in with a bouquet.
+                        50s–60s: The child offers the bouquet with a shy smile, then steps back to watch.</div>
+                </div>
+            </div>
+
+        </section>
+        
+        <section id="kvrecaching" class="gallery-section">
+            <h2>KV Recaching</h2>
+            <p style="text-align: center; color: #666;">Prompt switching under different KV-cache strategies.<br/>No KV cache: New-prompt adherence but abrupt transitions and visual discontinuity.<br/>KV cache: Smooth visuals but new-prompt non-adherence (delayed or ignored).<br/>KV recache: Visual consistency and new-prompt adherence.</p>
+            <div class="speed-controls" role="group" aria-label="Playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" data-speed="1">x1</button>
+                <button class="speed-btn" data-speed="2">x2</button>
+            </div>
+            <div class="gallery-3 kv-grid">
+                <div class="col-header">no KV cache</div>
+                <div class="col-header">KV cache</div>
+                <div class="col-header">KV recache</div>
+
+                <div class="row-prompt">0s–5s: ambitious young man in a sharp suit stands arms-crossed, slight confident smile, bustling modern office behind him.
+5s–10s: he <span class="prompt-highlight-red">uncrosses his arms</span>, focus tightening as he's about to address the team; same office backdrop, medium shot, static.</div>
+                    
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/kvrecaching/no-cache-man_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/kvrecaching/all-cache-man_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/kvrecaching/recache-man_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="shortwindow" class="gallery-section">
+            <h2>Short Window Attention & Frame Sink</h2>
+            <p style="text-align: center; color: #666;">Comparison in a 20s generated video of long window attention (21 local latent frames), short-window attention (12 local), and short-window + frame-sink (9 local + 3 sink).<br/>Shorter windows boost efficiency but weaken long-range consistency; adding a frame-sink restores consistency while keeping the efficiency gains.</p>
+            <div class="speed-controls" role="group" aria-label="Playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" data-speed="1">x1</button>
+                <button class="speed-btn" data-speed="2">x2</button>
+            </div>
+            <div class="gallery-3 shortwindow-grid">
+                <div class="col-header">w/o Frame Sink (Window 21)</div>
+                <div class="col-header">w/o Frame Sink (Window 12)</div>
+                <div class="col-header">w/ Frame Sink (Window 9 + Sink3)</div>
+
+                <div class="row-prompt">A serene, picturesque scene of an elderly woman living in a quaint, weathered wooden cottage surrounded by lush greenery and tall trees. She leans forward slightly in her rocking chair, reaching out to pluck a fallen leaf from the porch floor, its veins glowing silver in the moonlight. The moon casts a soft glow over the tranquil landscape, highlighting the distant hills and the twinkling stars above. The rustle of leaves and a distant owl hoot blend with the gentle creak of the rocking chair. medium‑close static</div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/short_window_case/short-local21-madam_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/short_window_case/short-local9-madam_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9;">
+                    <video class="gallery-video" loop muted autoplay playsinline>
+                        <source src="./assets/short_window_case/short-local6-sink3-madam_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact-us" class="contact-us">
+            <h2>Contact Us</h2>
+            <p>
+                Feel free to contact Shuai Yang at shyang@nvidia.com or Yukang Chen at yukangc@nvidia.com for any question, cooperation, and communication.
+            </p>
+            <!-- add a bibtex -->
+            <p>
+                If you find this work useful, please consider citing:
+            </p>
+            <!-- align left, use a rounded gray box to bound it.-->
+            <div class="citation-container">
+                <div class="citation-box">
+                    <pre>@article{yang2025longlive,
+    title={LongLive: Real-time Interactive Long Video Generation},
+    author={Shuai Yang and Wei Huang and Ruihang Chu and Yicheng Xiao and Yuyang Zhao and Xianbang Wang and Muyang Li and Enze Xie and Yingcong Chen and Yao Lu and Song Hanand Yukang Chen},
+    year={2025},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}</pre>
+                </div>
+            </div>
+            <h2>Thank Jenga, UltraPixel, ControlNeXt, and ToonCrafter to provide us the project page's template! </h2>
+        </section>
+
+
+
+    </div>
+
+   <!-- Modal for image enlargement -->
+    <script src="./interactive_prompts.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
