@@ -85,6 +85,8 @@ Other hardware setup could also work but hasn't been tested.
 
 Create a conda environment and install dependencies:
 ```
+git clone https://github.com/NVlabs/LongLive
+cd LongLive
 conda create -n longlive python=3.10 -y
 conda activate longlive
 conda install nvidia/label/cuda-12.4.1::cuda
