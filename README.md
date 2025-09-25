@@ -115,6 +115,12 @@ bash interactive_inference.sh
 
 Please follow [Self-Forcing](https://github.com/guandeh17/Self-Forcing) to download text prompts and ODE initialized checkpoint.
 
+Download Wan2.1-T2V-14B as the teacher model.
+
+```
+huggingface-cli download Wan-AI/Wan2.1-T2V-14B --local-dir wan_models/Wan2.1-T2V-14B
+```
+
 **Step1: Self-Forcing Initialization for Short Window and Frame Sink**
 ```
 bash train_init.sh
