@@ -47,7 +47,7 @@ With FP8 quantization, LongLive boosts inference to 24.8 FPS with marginal quali
 ## Introduction
 <p align="center" style="border-radius: 10px">
   <img src="assets/pipeline.jpg" width="100%" alt="logo"/>
-<strong>LongLive accepts sequential user prompts and generates corresponding videos in real time, enabling user-guided long video generation. The 60-second sequence shown is an example, \textsc{LongLive} supports up to 240-second videos in a single H100 GPU.</strong>
+<strong>LongLive accepts sequential user prompts and generates corresponding videos in real time, enabling user-guided long video generation.</strong>
 </p>
 <p align="center" style="border-radius: 10px">
   <img src="assets/framework.png" width="100%" alt="logo"/>
