@@ -89,6 +89,8 @@ Other hardware setup could also work but hasn't been tested.
 
 Create a conda environment and install dependencies:
 ```
+git clone https://github.com/NVlabs/LongLive
+cd LongLive
 conda create -n longlive python=3.10 -y
 conda activate longlive
 conda install nvidia/label/cuda-12.4.1::cuda
@@ -133,10 +135,6 @@ bash train_init.sh
 ```
 bash train_long.sh
 ```
-
-<!-- ## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=NVlabs/sana&type=Date)](https://www.star-history.com/#NVlabs/sana&Date) -->
 
 ## How to contribute
 - Make sure to have git installed.
