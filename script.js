@@ -15,21 +15,23 @@ var scale = 1; // Initial zoom ratio
 var isDragging = false;
 var startX, startY, scrollLeft, scrollTop;
 
-// Create a thumbnail for each image and add click event
-images.forEach((img, index) => {
-    var thumbnail = img.cloneNode(true);
-    thumbnail.classList.remove('gallery-image');
-    thumbnail.classList.add('thumbnail');
-    thumbnailsContainer.appendChild(thumbnail);
+// Create a thumbnail for each image and add click event (only if containers exist)
+if (thumbnailsContainer && modal) {
+    images.forEach((img, index) => {
+        var thumbnail = img.cloneNode(true);
+        thumbnail.classList.remove('gallery-image');
+        thumbnail.classList.add('thumbnail');
+        thumbnailsContainer.appendChild(thumbnail);
 
-    img.onclick = function () {
-        openModal(index);
-    }
+        img.onclick = function () {
+            openModal(index);
+        }
 
-    thumbnail.onclick = function () {
-        openModal(index);
-    }
-});
+        thumbnail.onclick = function () {
+            openModal(index);
+        }
+    });
+}
 
 // Open modal
 function openModal(index) {
