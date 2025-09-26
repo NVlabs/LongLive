@@ -58,10 +58,6 @@ With FP8 quantization, LongLive boosts inference to 24.8 FPS with marginal quali
 <strong>The streaming long tuning pipeline. Our approach trains on long sequences by reusing the historical KV cache each iteration to generate the next 5s clip, then supervising it with the teacher.</strong>
 </p>
 <p align="center" style="border-radius: 10px">
-  <img src="assets/algo.png" width="100%" alt="logo"/>
-<strong>The algorithm of streaming long tuning and interactive inference.</strong>
-</p>
-<p align="center" style="border-radius: 10px">
   <img src="assets/frame_sink.png" width="100%" alt="logo"/>
 <strong>The effectiveness of Frame Sink.</strong>
 </p>
