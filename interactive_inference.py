@@ -97,16 +97,8 @@ if config.generator_ckpt:
         pipeline.generator.load_state_dict(raw_gen_state_dict)
 
 # --------------------------- LoRA support (optional) ---------------------------
-# Apply and load LoRA (enabled only when config.adapter is provided).
-try:
-    from utils.lora_utils import configure_lora_for_model
-    import peft
-except Exception as e:
-    configure_lora_for_model = None
-    peft = None
-    if getattr(config, "adapter", None):
-        if local_rank == 0:
-            print(f"[Warning] LoRA requested but dependencies unavailable: {e}")
+from utils.lora_utils import configure_lora_for_model
+import peft
 
 pipeline.is_lora_enabled = False
 if getattr(config, "adapter", None) and configure_lora_for_model is not None:
