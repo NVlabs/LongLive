@@ -25,9 +25,9 @@
                 <li><a href="#long" class="nav-link"><i class="fas fa-video"></i> Long Video Showcases </a></li>
                 <li><a href="#ultra-long" class="nav-link"><i class="fas fa-video"></i> Ultra-Long Video Showcases </a></li>
                 <li><a href="#compare" class="nav-link"><i class="fas fa-trophy"></i> Comparisons </a></li>
-                <li><a href="#streaminglong" class="nav-link"><i class="fas fa-trophy"></i> Streaming Long Tuning </a></li>
                 <li><a href="#kvrecaching" class="nav-link"><i class="fas fa-trophy"></i> KV Recaching </a></li>
                 <li><a href="#shortwindow" class="nav-link"><i class="fas fa-trophy"></i> Short Window Attention & Frame Sink</a></li>
+                <li><a href="#streaminglong" class="nav-link"><i class="fas fa-trophy"></i> Streaming Long Tuning </a></li>
                 <li><a href="#contact-us" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
             </ul>
         
@@ -411,16 +411,6 @@
             </div>
 
         </section>
-        
-        <section id="streaminglong" class="gallery-section">
-            <h2>Streaming Long Tuning</h2>
-<p style="text-align: center; color: #666;">The streaming long tuning pipeline.<br>(a) Short tuning: only 5s clips are supervised, like Self-Forcing, leading to quality loss on long videos.<br>(b) Naive long tuning: naively scaling to long sequences causes incorrect teacher supervision and OOM.<br>(c) Streaming long tuning: our approach trains on long sequences by reusing the historical KV cache each iteration to generate the next 5s clip, then supervising it with the teacher.</p>
-            <div class="gallery-3">
-                <div class="gallery-item" style=" --aspect-ratio: 21 / 9; grid-column: 1 / -1;">
-                    <img src="./assets/streaming_long.jpg" alt="Streaming long tuning pipeline" class="gallery-image-pure">
-                </div>
-            </div>
-        </section>
 
         <section id="kvrecaching" class="gallery-section">
             <h2>KV Recaching</h2>
@@ -488,6 +478,16 @@
             </div>
         </section>
         
+        <section id="streaminglong" class="gallery-section">
+            <h2>Streaming Long Tuning</h2>
+<p style="text-align: center; color: #666;">The streaming long tuning pipeline.<br>(a) Short tuning: only 5s clips are supervised, like Self-Forcing, leading to quality loss on long videos.<br>(b) Naive long tuning: naively scaling to long sequences causes incorrect teacher supervision and OOM.<br>(c) Streaming long tuning: our approach trains on long sequences by reusing the historical KV cache each iteration to generate the next 5s clip, then supervising it with the teacher.</p>
+            <div class="gallery-3">
+                <div class="gallery-item" style=" --aspect-ratio: 21 / 9; grid-column: 1 / -1;">
+                    <img src="./assets/streaming_long.jpg" alt="Streaming long tuning pipeline" class="gallery-image-pure">
+                </div>
+            </div>
+        </section>
+
         <section id="contact-us" class="contact-us">
             <h2>Contact Us</h2>
             <p>
