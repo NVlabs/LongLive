@@ -159,5 +159,5 @@ Please consider to cite our paper and this framework, if they are helpful in you
 - LongLive-1.3B model weight is under CC-BY-NC 4.0 license.
 
 ## Acknowledgement
-- [Self-Forcing](https://github.com/hiyouga/EasyR1): the codebase and algorithm we built upon. Thanks for their wonderful work.
-- [Wan](https://github.com/volcengine/verl): the base model we built upon. Thanks for their wonderful work.
+- [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the codebase and algorithm we built upon. Thanks for their wonderful work.
+- [Wan](https://github.com/Wan-Video/Wan2.1): the base model we built upon. Thanks for their wonderful work.
