@@ -112,6 +112,13 @@ bash inference.sh
 ```
 bash interactive_inference.sh
 ```
+**Hints for video prompt**
+
+1. When building interactive prompts, include a brief subject (who/what) and background/setting (where) in every prompt. Re-stating these anchors at each step greatly improves global coherence during prompt switches.
+See the `example` for the exact prompt set we used to produce some of our videos on the demo page.
+
+2. LongLive supports diverse interaction—action changes, introducing/removing objects, background shifts, style changes, and more. But during large scene transitions the camera motion cannot be explicitly controlled. In another word, LongLive excels at cinematic long takes, but is less suited to rapid shot-by-shot edits or fast cutscenes.
+
 ## Training
 **Download checkpoints**
 
