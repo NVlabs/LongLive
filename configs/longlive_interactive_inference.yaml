@@ -14,7 +14,7 @@ model_kwargs:
 
 
 # Inference
-data_path: prompts/interactive_example.jsonl
+data_path: longlive_models/prompts/interactive_example.jsonl
 output_folder: videos/interactive
 inference_iter: -1
 num_output_frames: 240
