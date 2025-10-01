@@ -13,7 +13,7 @@
 <div align="center">
 
 [![Watch the video](assets/video-first-frame.png)](https://www.youtube.com/watch?v=CO1QC7BNvig)
-[![Watch the video](assets/Comparison_with_Sora2)](https://x.com/yukangchen_/status/1973405662177529993)
+[![Watch the video](assets/Comparison_with_Sora2.png)](https://x.com/yukangchen_/status/1973405662177529993)
 
 </div>
 
