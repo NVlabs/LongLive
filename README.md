@@ -93,9 +93,9 @@ conda create -n longlive python=3.10 -y
 conda activate longlive
 conda install nvidia/label/cuda-12.4.1::cuda
 conda install -c nvidia/label/cuda-12.4.1 cudatoolkit
-pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu124
+pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu128
 pip install -r requirements.txt
-pip install flash-attn==2.7.4.post1 --no-build-isolation
+pip install flash-attn --no-build-isolation
 ```
 
 ## Inference
