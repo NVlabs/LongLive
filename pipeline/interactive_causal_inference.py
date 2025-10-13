@@ -186,8 +186,8 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
 
         for current_num_frames in all_num_frames:
             if next_switch_pos is not None and current_start_frame >= next_switch_pos:
-                self._recache_after_switch(output, current_start_frame, cond_list[segment_idx])
                 segment_idx += 1
+                self._recache_after_switch(output, current_start_frame, cond_list[segment_idx])
                 if DEBUG:
                     print(
                         f"[MultipleSwitch] Switch to segment {segment_idx} at frame {current_start_frame}"
