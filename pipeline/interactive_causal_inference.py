@@ -36,8 +36,8 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
             # reset kv cache
             for block_idx in range(self.num_transformer_blocks):
                 cache = self.kv_cache1[block_idx]
-                cache["k"].zero_()
-                cache["v"].zero_()
+                cache["k"][:, self.generator.model.config.sink_size*self.frame_seq_length:].zero_()
+                cache["v"][:, self.generator.model.config.sink_size*self.frame_seq_length:].zero_()
                 # cache["global_end_index"].zero_()
                 # cache["local_end_index"].zero_()
             
