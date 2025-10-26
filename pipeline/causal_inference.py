@@ -44,6 +44,7 @@ class CausalInferencePipeline(torch.nn.Module):
         self.args = args
         self.num_frame_per_block = getattr(args, "num_frame_per_block", 1)
         self.local_attn_size = args.model_kwargs.local_attn_size
+        self.global_sink = getattr(args, "global_sink", False)
 
         # Normalize to list if sequence-like (e.g., OmegaConf ListConfig)
 
@@ -260,7 +261,8 @@ class CausalInferencePipeline(torch.nn.Module):
                 "k": torch.zeros([batch_size, kv_cache_size, 12, 128], dtype=dtype, device=device),
                 "v": torch.zeros([batch_size, kv_cache_size, 12, 128], dtype=dtype, device=device),
                 "global_end_index": torch.tensor([0], dtype=torch.long, device=device),
-                "local_end_index": torch.tensor([0], dtype=torch.long, device=device)
+                "local_end_index": torch.tensor([0], dtype=torch.long, device=device),
+                "global_sink": self.global_sink,
             })
 
         self.kv_cache1 = kv_cache1  # always store the clean cache

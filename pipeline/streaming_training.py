@@ -45,6 +45,7 @@ class StreamingTrainingPipeline:
         self.last_step_only = last_step_only
 
         self.local_attn_size = kwargs.get("local_attn_size", -1)
+        self.global_sink = kwargs.get("global_sink", False)
 
         slice_last_frames: int = int(kwargs.get("slice_last_frames", 21))
         self.kv_cache_size = (self.local_attn_size + slice_last_frames) * self.frame_seq_length
@@ -268,7 +269,8 @@ class StreamingTrainingPipeline:
                 "k": torch.zeros([batch_size, self.kv_cache_size, 12, 128], dtype=dtype, device=device),
                 "v": torch.zeros([batch_size, self.kv_cache_size, 12, 128], dtype=dtype, device=device),
                 "global_end_index": torch.tensor([0], dtype=torch.long, device=device),
-                "local_end_index": torch.tensor([0], dtype=torch.long, device=device)
+                "local_end_index": torch.tensor([0], dtype=torch.long, device=device),
+                "global_sink": self.global_sink,
             })
 
         self.kv_cache1 = kv_cache1  # always store the clean cache

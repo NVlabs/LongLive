@@ -28,19 +28,9 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
         vae: WanVAEWrapper | None = None,
     ):
         super().__init__(args, device, generator=generator, text_encoder=text_encoder, vae=vae)
-        self.global_sink = getattr(args, "global_sink", False)
 
     # Internal helpers
     def _recache_after_switch(self, output, current_start_frame, new_conditional_dict):
-        if not self.global_sink:
-            # reset kv cache
-            for block_idx in range(self.num_transformer_blocks):
-                cache = self.kv_cache1[block_idx]
-                cache["k"][:, self.generator.model.config.sink_size*self.frame_seq_length:].zero_()
-                cache["v"][:, self.generator.model.config.sink_size*self.frame_seq_length:].zero_()
-                # cache["global_end_index"].zero_()
-                # cache["local_end_index"].zero_()
-            
         # reset cross-attention cache
         for blk in self.crossattn_cache:
             blk["k"].zero_()

@@ -257,7 +257,7 @@ class CausalWanSelfAttention(nn.Module):
                 
                 # Insert new key/value into the temporary cache
                 # Protect sink_tokens only during recomputation; regular forward generation allows writing into the initial sink region
-                write_start_index = max(local_start_index, sink_tokens) if is_recompute else local_start_index
+                write_start_index = max(local_start_index, sink_tokens) if (is_recompute and kv_cache.get("global_sink", False)) else local_start_index
                 roped_offset = max(0, write_start_index - local_start_index)
                 write_len = max(0, local_end_index - write_start_index)
                 if write_len > 0:

@@ -24,14 +24,6 @@ class StreamingSwitchTrainingPipeline(StreamingTrainingPipeline):
     remaining frames.
     """
 
-    def __init__(
-        self,
-        *args,
-        **kwargs,
-    ):
-        super().__init__(*args, **kwargs)
-        self.global_sink = getattr(args, "global_sink", False)
-
     def generate_chunk_with_cache(
         self,
         noise: torch.Tensor,
@@ -242,15 +234,6 @@ class StreamingSwitchTrainingPipeline(StreamingTrainingPipeline):
         return output, denoised_timestep_from, denoised_timestep_to
 
     def _recache_after_switch(self, output, current_start_frame, new_conditional_dict, local_start_frame=None, switch_recache_frames=None):
-        if not self.global_sink:
-            # reset kv cache
-            for block_idx in range(self.num_transformer_blocks):
-                cache = self.kv_cache1[block_idx]
-                cache["k"][:, self.generator.model.config.sink_size*self.frame_seq_length:].zero_()
-                cache["v"][:, self.generator.model.config.sink_size*self.frame_seq_length:].zero_()
-                # cache["global_end_index"].zero_()
-                # cache["local_end_index"].zero_()
-            
         # reset cross-attention cache
         for blk in self.crossattn_cache:
             blk["k"].zero_()
