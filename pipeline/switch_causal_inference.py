@@ -65,9 +65,7 @@ class SwitchCausalInferencePipeline(CausalInferencePipeline):
 
         context_timestep = torch.ones([batch_size, recompute_frames], 
                                     device=device, dtype=torch.int64) * self.args.context_noise
-        
-        self.generator.model.block_mask = block_mask
-            
+                    
         with torch.no_grad():
             self.generator(
                 noisy_image_or_video=frames_to_recompute,
@@ -76,6 +74,7 @@ class SwitchCausalInferencePipeline(CausalInferencePipeline):
                 kv_cache=self.kv_cache1,
                 crossattn_cache=self.crossattn_cache,
                 current_start=recompute_start_frame * self.frame_seq_length,
+                block_mask=block_mask,
             )
 
         # reset cross-attention cache

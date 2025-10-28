@@ -273,7 +273,7 @@ class StreamingSwitchTrainingPipeline(StreamingTrainingPipeline):
             num_frames=num_recache_frames,
             frame_seqlen=self.frame_seq_length,
             num_frame_per_block=self.num_frame_per_block,
-            local_attn_size=21
+            local_attn_size=self.local_attn_size,
         )
         
         # Prepare time steps
@@ -281,7 +281,6 @@ class StreamingSwitchTrainingPipeline(StreamingTrainingPipeline):
                                     device=device, dtype=torch.int64) * self.context_noise
         
         # Set the new block_mask
-        self.generator.model.block_mask = block_mask
         if DEBUG and (not dist.is_initialized() or dist.get_rank() == 0):
             print(f"current_start_frame: {current_start_frame}, num_recache_frames: {num_recache_frames}")
         with torch.no_grad():
@@ -292,6 +291,7 @@ class StreamingSwitchTrainingPipeline(StreamingTrainingPipeline):
                 kv_cache=self.kv_cache1,
                 crossattn_cache=self.crossattn_cache,
                 current_start=(current_start_frame - num_recache_frames) * self.frame_seq_length,
+                block_mask=block_mask,
             )
 
         # reset cross-attention cache

@@ -65,8 +65,6 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
         context_timestep = torch.ones([batch_size, num_recache_frames], 
                                     device=device, dtype=torch.int64) * self.args.context_noise
         
-        self.generator.model.block_mask = block_mask
-        
         # recache
         with torch.no_grad():
             self.generator(
@@ -76,6 +74,7 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
                 kv_cache=self.kv_cache1,
                 crossattn_cache=self.crossattn_cache,
                 current_start=recache_start_frame * self.frame_seq_length,
+                block_mask=block_mask,
             )
         
         # reset cross-attention cache

@@ -1,5 +1,6 @@
 # Adopted from https://github.com/guandeh17/Self-Forcing
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
+from typing import Optional
 from wan.modules.attention import attention
 from wan.modules.model import (
     WanRMSNorm,
@@ -103,7 +104,7 @@ class CausalWanSelfAttention(nn.Module):
         block_mask,
         kv_cache=None,
         current_start=0,
-        cache_start=None
+        cache_start=None,
     ):
         r"""
         Args:
@@ -226,7 +227,7 @@ class CausalWanSelfAttention(nn.Module):
 
             # Compute cache update parameters without modifying kv_cache directly
             cache_update_info = None
-            is_recompute = current_end <= kv_cache["global_end_index"].item() and current_start > 0
+            is_recompute = block_mask is not None
             if self.local_attn_size != -1 and (current_end > kv_cache["global_end_index"].item()) and (
                     num_new_tokens + kv_cache["local_end_index"].item() > kv_cache_size):
                 # Calculate the number of new tokens added in this step
@@ -331,18 +332,34 @@ class CausalWanSelfAttention(nn.Module):
                 else:
                     k_cat = k_sink
                     v_cat = v_sink
-                x = attention(
-                    roped_query,
-                    k_cat,
-                    v_cat
-                )
+                if block_mask is not None:
+                    x = flex_attention(
+                        query=roped_query.transpose(2, 1),
+                        key=k_cat.transpose(2, 1),
+                        value=v_cat.transpose(2, 1),
+                        block_mask=block_mask
+                    ).transpose(2, 1)
+                else:
+                    x = attention(
+                        roped_query,
+                        k_cat,
+                        v_cat
+                    )
             else:
                 window_start = max(0, local_end_index - self.max_attention_size)
-                x = attention(
-                    roped_query,
-                    temp_k[:, window_start:local_end_index],
-                    temp_v[:, window_start:local_end_index]
-                )
+                if block_mask is not None:
+                    x = flex_attention(
+                        query=roped_query.transpose(2, 1),
+                        key=temp_k[:, window_start:local_end_index].transpose(2, 1),
+                        value=temp_v[:, window_start:local_end_index].transpose(2, 1),
+                        block_mask=block_mask
+                    ).transpose(2, 1)
+                else:
+                    x = attention(
+                        roped_query,
+                        temp_k[:, window_start:local_end_index],
+                        temp_v[:, window_start:local_end_index]
+                    )
 
         # output
         x = x.flatten(2)
@@ -638,18 +655,15 @@ class CausalWanModel(ModelMixin, ConfigMixin):
         [1 latent frame] [1 latent frame] ... [1 latent frame]
         We use flexattention to construct the attention mask
         """
-        total_length = num_frames * frame_seqlen
+        total_q_length = num_frames * frame_seqlen
+        total_kv_length = (local_attn_size * frame_seqlen) if local_attn_size != -1 else total_q_length
 
-        # we do right padding to get to a multiple of 128
-        padded_length = math.ceil(total_length / 128) * 128 - total_length
-
-        ends = torch.zeros(total_length + padded_length,
-                           device=device, dtype=torch.long)
+        ends = torch.zeros(total_q_length, device=device, dtype=torch.long)
 
         # Block-wise causal mask will attend to all elements that are before the end of the current chunk
         frame_indices = torch.arange(
             start=0,
-            end=total_length,
+            end=total_q_length,
             step=frame_seqlen * num_frame_per_block,
             device=device
         )
@@ -665,8 +679,8 @@ class CausalWanModel(ModelMixin, ConfigMixin):
                 return ((kv_idx < ends[q_idx]) & (kv_idx >= (ends[q_idx] - local_attn_size * frame_seqlen))) | (q_idx == kv_idx)
             # return ((kv_idx < total_length) & (q_idx < total_length))  | (q_idx == kv_idx) # bidirectional mask
 
-        block_mask = create_block_mask(attention_mask, B=None, H=None, Q_LEN=total_length + padded_length,
-                                       KV_LEN=total_length + padded_length, _compile=False, device=device)
+        block_mask = create_block_mask(attention_mask, B=None, H=None, Q_LEN=total_q_length,
+                                       KV_LEN=total_kv_length, _compile=False, device=device)
 
         import torch.distributed as dist
         if (not dist.is_initialized() or dist.get_rank() == 0) and DEBUG:
@@ -895,7 +909,8 @@ class CausalWanModel(ModelMixin, ConfigMixin):
         kv_cache: dict = None,
         crossattn_cache: dict = None,
         current_start: int = 0,
-        cache_start: int = 0
+        cache_start: int = 0,
+        block_mask: Optional[BlockMask] = None
     ):
         r"""
         Run the diffusion model with kv caching.
@@ -979,7 +994,7 @@ class CausalWanModel(ModelMixin, ConfigMixin):
             freqs=self.freqs,
             context=context,
             context_lens=context_lens,
-            block_mask=self.block_mask
+            block_mask=block_mask
         )
         # print("kwargs done")
         def create_custom_forward(module):
