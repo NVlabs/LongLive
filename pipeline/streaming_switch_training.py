@@ -234,17 +234,10 @@ class StreamingSwitchTrainingPipeline(StreamingTrainingPipeline):
         return output, denoised_timestep_from, denoised_timestep_to
 
     def _recache_after_switch(self, output, current_start_frame, new_conditional_dict, local_start_frame=None, switch_recache_frames=None):
-        # reset cross-attention cache
-        for blk in self.crossattn_cache:
-            blk["k"].zero_()
-            blk["v"].zero_()
-            blk["is_init"] = False
-        
-        if current_start_frame == 0:
-            return
+        assert current_start_frame > 0, "recache should happen after frames after generated"
 
         if switch_recache_frames is not None:
-            frames_to_recache = torch.cat([switch_recache_frames, output], dim=1)[:, -21:, ...]
+            frames_to_recache = torch.cat([switch_recache_frames, output], dim=1)[:, -self.local_attn_size:, ...]
             num_recache_frames = frames_to_recache.shape[1]
             if DEBUG and (not dist.is_initialized() or dist.get_rank() == 0):
                 print(f"[SeqTrain-DMDSwitch] Using external switch_recache_frames (previous_frames): {frames_to_recache.shape}")
@@ -252,15 +245,26 @@ class StreamingSwitchTrainingPipeline(StreamingTrainingPipeline):
             # Determine how to fetch frames based on whether local_start_frame is provided
             if local_start_frame is not None:
                 # Chunk mode: output is the current chunk's output; use relative coordinates
-                num_recache_frames = min(local_start_frame, 21)
+                num_recache_frames = min(local_start_frame, self.local_attn_size)
                 frames_to_recache = output[:, -num_recache_frames:]
             else:
                 # Full sequence mode: output is the complete sequence; use absolute coordinates
-                num_recache_frames = min(current_start_frame, 21)
+                num_recache_frames = min(current_start_frame, self.local_attn_size)
                 frames_to_recache = output[:, -num_recache_frames:]
             
         batch_size, num_recache_frames, c, h, w = frames_to_recache.shape
         
+        for block_idx in range(self.num_transformer_blocks):
+            cache = self.kv_cache1[block_idx]
+            # update local end index pointer so that we rebuild the cache from the beginning
+            cache["local_end_index"].fill_((num_recache_frames - current_start_frame) * self.frame_seq_length + cache["global_end_index"].item())
+
+        # reset cross-attention cache
+        for blk in self.crossattn_cache:
+            blk["k"].zero_()
+            blk["v"].zero_()
+            blk["is_init"] = False
+
         if (not dist.is_initialized() or dist.get_rank() == 0) and DEBUG:
             print(f"num_recache_frames: {num_recache_frames}, current_start_frame: {current_start_frame}, local_start_frame: {local_start_frame}")
         

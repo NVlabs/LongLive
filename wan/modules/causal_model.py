@@ -227,7 +227,7 @@ class CausalWanSelfAttention(nn.Module):
 
             # Compute cache update parameters without modifying kv_cache directly
             cache_update_info = None
-            is_recompute = block_mask is not None
+            is_recompute = current_end <= kv_cache["global_end_index"].item() and current_start > 0
             if self.local_attn_size != -1 and (current_end > kv_cache["global_end_index"].item()) and (
                     num_new_tokens + kv_cache["local_end_index"].item() > kv_cache_size):
                 # Calculate the number of new tokens added in this step
@@ -257,8 +257,8 @@ class CausalWanSelfAttention(nn.Module):
                     temp_v[:, sink_tokens + num_evicted_tokens:sink_tokens + num_evicted_tokens + num_rolled_tokens].clone()
                 
                 # Insert new key/value into the temporary cache
-                # Protect sink_tokens only during recomputation; regular forward generation allows writing into the initial sink region
-                write_start_index = max(local_start_index, sink_tokens) if (is_recompute and kv_cache.get("global_sink", False)) else local_start_index
+                # Protect sink_tokens only during recaching; regular forward generation allows writing into the initial sink region
+                write_start_index = max(local_start_index, sink_tokens) if ((block_mask is not None) and kv_cache.get("global_sink", False)) else local_start_index
                 roped_offset = max(0, write_start_index - local_start_index)
                 write_len = max(0, local_end_index - write_start_index)
                 if write_len > 0:
@@ -291,8 +291,8 @@ class CausalWanSelfAttention(nn.Module):
                 # Construct full k, v for attention computation (without modifying the original cache)
                 temp_k = kv_cache["k"].clone()
                 temp_v = kv_cache["v"].clone()
-                # Protect sink_tokens only during recomputation; regular forward generation allows writing into the initial sink region
-                write_start_index = max(local_start_index, sink_tokens) if (is_recompute and kv_cache.get("global_sink", False)) else local_start_index
+                # Protect sink_tokens only during recaching; regular forward generation allows writing into the initial sink region
+                write_start_index = max(local_start_index, sink_tokens) if ((block_mask is not None) and kv_cache.get("global_sink", False)) else local_start_index
                 roped_offset = max(0, write_start_index - local_start_index)
                 write_len = max(0, local_end_index - write_start_index)
                 if write_len > 0:

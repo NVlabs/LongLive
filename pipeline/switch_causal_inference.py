@@ -63,17 +63,17 @@ class SwitchCausalInferencePipeline(CausalInferencePipeline):
             local_attn_size=self.local_attn_size
         )
 
-        context_timestep = torch.ones([batch_size, recompute_frames], 
+        context_timestep = torch.ones([batch_size, num_recache_frames],
                                     device=device, dtype=torch.int64) * self.args.context_noise
                     
         with torch.no_grad():
             self.generator(
-                noisy_image_or_video=frames_to_recompute,
+                noisy_image_or_video=frames_to_recache,
                 conditional_dict=new_conditional_dict,
                 timestep=context_timestep,
                 kv_cache=self.kv_cache1,
                 crossattn_cache=self.crossattn_cache,
-                current_start=recompute_start_frame * self.frame_seq_length,
+                current_start=recache_start_frame * self.frame_seq_length,
                 block_mask=block_mask,
             )
 
@@ -166,7 +166,7 @@ class SwitchCausalInferencePipeline(CausalInferencePipeline):
             else:
                 cond_in_use = cond_second if using_second else cond_first
             
-            noisy_input = noise[:, current_start_frame - num_input_frames : current_start_frame + current_num_frames - num_input_frames]
+            noisy_input = noise[:, current_start_frame - (1 if initial_latent is not None else 0) : current_start_frame + current_num_frames - (1 if initial_latent is not None else 0)]
 
             # Spatial denoising loop (same as parent but uses cond_in_use)
             for index, current_timestep in enumerate(self.denoising_step_list):
