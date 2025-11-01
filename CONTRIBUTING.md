@@ -1,79 +1,141 @@
-# Contributing Guide
 
-Thank you for your interest in the project! We welcome all forms of contributions, including but not limited to:
+## LongLive OSS Contribution Rules
 
-- Bug reports
-- Feature suggestions
-- Documentation improvements
-- Code fixes
-- New features
+#### Issue Tracking
 
-## Development Process
+* All enhancement, bugfix, or change requests must begin with the creation of a [LongLive Issue Request](https://github.com/nvidia/LongLive/issues).
+  * The issue request must be reviewed by LongLive engineers and approved prior to code review.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
-## Developer Certificate of Origin
+#### Coding Guidelines
 
-Version 1.1
+- All source code contributions must strictly adhere to the [LongLive Coding Guidelines](CODING-GUIDELINES.md).
 
-Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
+- In addition, please follow the existing conventions in the relevant file, submodule, module, and project when you add new code or when you extend/fix existing functionality.
 
-Everyone is permitted to copy and distribute verbatim copies of this
-license document, but changing it is not allowed.
+- To maintain consistency in code formatting and style, you should also run `clang-format` on the modified sources with the provided configuration file. This applies LongLive code formatting rules to:
+  - class, function/method, and variable/field naming
+  - comment style
+  - indentation
+  - line length
 
-### Developer's Certificate of Origin 1.1
+- Format git changes:
+  ```bash
+  # Commit ID is optional - if unspecified, run format on staged changes.
+  git-clang-format --style file [commit ID/reference]
+  ```
 
-By making a contribution to this project, I certify that:
+- Format  individual source files:
+  ```bash
+  # -style=file : Obtain the formatting rules from .clang-format
+  # -i : In-place modification of the processed file
+  clang-format -style=file -i -fallback-style=none <file(s) to process>
+  ```
 
-(a) The contribution was created in whole or in part by me and I
-    have the right to submit it under the open source license
-    indicated in the file; or
+- Format entire codebase (for project maintainers only):
+  ```bash
+  find samples plugin -iname *.h -o -iname *.c -o -iname *.cpp -o -iname *.hpp \
+  | xargs clang-format -style=file -i -fallback-style=none
+  ```
 
-(b) The contribution is based upon previous work that, to the best
-    of my knowledge, is covered under an appropriate open source
-    license and I have the right under that license to submit that
-    work with modifications, whether created in whole or in part
-    by me, under the same open source license (unless I am
-    permitted to submit under a different license), as indicated
-    in the file; or
+- Avoid introducing unnecessary complexity into existing code so that maintainability and readability are preserved.
 
-(c) The contribution was provided directly to me by some other
-    person who certified (a), (b) or (c) and I have not modified
-    it.
+- Try to keep pull requests (PRs) as concise as possible:
+  - Avoid committing commented-out code.
+  - Wherever possible, each PR should address a single concern. If there are several otherwise-unrelated things that should be fixed to reach a desired endpoint, our recommendation is to open several PRs and indicate the dependencies in the description. The more complex the changes are in a single PR, the more time it will take to review those changes.
 
-(d) I understand and agree that this project and the contribution
-    are public and that a record of the contribution (including all
-    personal information I submit with it, including my sign-off) is
-    maintained indefinitely and may be redistributed consistent with
-    this project or the open source license(s) involved.
+- Write commit titles using imperative mood and [these rules](https://chris.beams.io/posts/git-commit/), and reference the Issue number corresponding to the PR. Following is the recommended format for commit texts:
+```
+#<Issue Number> - <Commit Title>
 
-## Code Style
+<Commit Body>
+```
 
-Please ensure your code follows the project's code style guidelines. We use the following tools to maintain code quality:
+- Ensure that the build log is clean, meaning no warnings or errors should be present.
 
-- Code formatting tools
-- Code linting tools
-- Unit tests
+- Ensure that all `sample_*` tests pass prior to submitting your code.
 
-## Submitting Pull Requests
+- All OSS components must contain accompanying documentation (READMEs) describing the functionality, dependencies, and known issues.
 
-Before submitting a Pull Request, please ensure:
+  - See `README.md` for existing samples and plugins for reference.
 
-1. Your code passes all tests
-2. You have updated relevant documentation
-3. Your commit messages are clear and descriptive
-4. Your code follows the project's code style guidelines
+- All OSS components must have an accompanying test.
 
-## Issue Reporting
+  - If introducing a new component, such as a plugin, provide a test sample to verify the functionality.
 
-If you find any issues or have suggestions, please submit them through GitHub Issues. Before submitting an issue, please ensure:
+- To add or disable functionality:
+  - Add a CMake option with a default value that matches the existing behavior.
+  - Where entire files can be included/excluded based on the value of this option, selectively include/exclude the relevant files from compilation by modifying `CMakeLists.txt` rather than using `#if` guards around the entire body of each file.
+  - Where the functionality involves minor changes to existing files, use `#if` guards.
 
-1. The issue hasn't been reported already
-2. You have provided sufficient information to reproduce the issue
-3. You have attempted to resolve the issue yourself
+- Make sure that you can contribute your work to open source (no license and/or patent conflict is introduced by your code). You will need to [`sign`](#signing-your-work) your commit.
 
-Thank you for contributing! 
+- Thanks in advance for your patience as we review your contributions; we do appreciate them!
+
+
+#### Pull Requests
+Developer workflow for code contributions is as follows:
+
+1. Developers must first [fork](https://help.github.com/en/articles/fork-a-repo) the [upstream](https://github.com/nvidia/LongLive) LongLive OSS repository.
+
+2. Git clone the forked repository and push changes to the personal fork.
+
+  ```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_FORK.git LongLive
+# Checkout the targeted branch and commit changes
+# Push the commits to a branch on the fork (remote).
+git push -u origin <local-branch>:<remote-branch>
+  ```
+
+3. Once the code changes are staged on the fork and ready for review, a [Pull Request](https://help.github.com/en/articles/about-pull-requests) (PR) can be [requested](https://help.github.com/en/articles/creating-a-pull-request) to merge the changes from a branch of the fork into a selected branch of upstream.
+  * Exercise caution when selecting the source and target branches for the PR.
+    Note that versioned releases of LongLive OSS are posted to `release/` branches of the upstream repo.
+  * Creation of a PR creation kicks off the code review process.
+  * Atleast one LongLive engineer will be assigned for the review.
+  * While under review, mark your PRs as work-in-progress by prefixing the PR title with [WIP].
+
+4. Since there is no CI/CD process in place yet, the PR will be accepted and the corresponding issue closed only after adequate testing has been completed, manually, by the developer and/or LongLive engineer reviewing the code.
+
+
+#### Signing Your Work
+
+* We require that all contributors "sign-off" on their commits. This certifies that the contribution is your original work, or you have rights to submit it under the same license, or a compatible license.
+
+  * Any contribution which contains commits that are not Signed-Off will not be accepted.
+
+* To sign off on a commit you simply use the `--signoff` (or `-s`) option when committing your changes:
+  ```bash
+  $ git commit -s -m "Add cool feature."
+  ```
+  This will append the following to your commit message:
+  ```
+  Signed-off-by: Your Name <your@email.com>
+  ```
+
+* Full text of the DCO:
+
+  ```
+    Developer Certificate of Origin
+    Version 1.1
+    
+    Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
+    1 Letterman Drive
+    Suite D4700
+    San Francisco, CA, 94129
+    
+    Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+  ```
+
+  ```
+    Developer's Certificate of Origin 1.1
+    
+    By making a contribution to this project, I certify that:
+    
+    (a) The contribution was created in whole or in part by me and I have the right to submit it under the open source license indicated in the file; or
+    
+    (b) The contribution is based upon previous work that, to the best of my knowledge, is covered under an appropriate open source license and I have the right under that license to submit that work with modifications, whether created in whole or in part by me, under the same open source license (unless I am permitted to submit under a different license), as indicated in the file; or
+    
+    (c) The contribution was provided directly to me by some other person who certified (a), (b) or (c) and I have not modified it.
+    
+    (d) I understand and agree that this project and the contribution are public and that a record of the contribution (including all personal information I submit with it, including my sign-off) is maintained indefinitely and may be redistributed consistent with this project or the open source license(s) involved.
+  ```
