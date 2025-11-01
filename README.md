@@ -37,6 +37,7 @@ We present LongLive, a frame-level autoregressive (AR) framework for real-time a
 10. [Acknowledgement](#acknowledgement)
 
 ## News
+- [x] [2025.11.1] The license has been changed from CC-BY-NC-SA 4.0 to **Apache 2.0**.
 - [x] [2025.10.11] Many thanks to @yondonfu for building an interactive UI based on LongLive. Please check it here: https://github.com/daydreamlive/scope
 - [x] [2025.10.1] We compare Sora2 (+ GPT-5 prompt engineering) with LongLive-1.3B in the interactive long video generation. See [here](https://x.com/yukangchen_/status/1973405662177529993) for details.
 - [x] [2025.9.30] We release [example prompts](https://github.com/NVlabs/LongLive/tree/main/example) to reproduce our demo videos.
@@ -163,10 +164,6 @@ Please consider to cite our paper and this framework, if they are helpful in you
       primaryClass={cs.CV}
 }
 ```
-
-## License
-- LongLive code is under CC-BY-NC-SA 4.0 license.
-- LongLive-1.3B model weight is under CC-BY-NC 4.0 license.
 
 ## Acknowledgement
 - [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the codebase and algorithm we built upon. Thanks for their wonderful work.
