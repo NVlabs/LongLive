@@ -1,12 +1,12 @@
 # Copyright (c) 2025 NVIDIA CORPORATION & AFFILIATES
 #
-# Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+# Licensed under the Apache License, Version 2.0 (the "License").
 # You may not use this file except in compliance with the License.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
 #
 # No warranties are given. The work is provided "AS IS", without warranty of any kind, express or implied.
 #
-# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# SPDX-License-Identifier: Apache-2.0
 from utils.wan_wrapper import WanDiffusionWrapper
 from utils.scheduler import SchedulerInterface
 from typing import List, Optional, Tuple

@@ -1,5 +1,5 @@
 # Adopted from https://github.com/guandeh17/Self-Forcing
-# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# SPDX-License-Identifier: Apache-2.0
 import argparse
 import os
 from omegaconf import OmegaConf

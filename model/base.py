@@ -1,5 +1,5 @@
 # Adopted from https://github.com/guandeh17/Self-Forcing
-# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# SPDX-License-Identifier: Apache-2.0
 from typing import Tuple
 from einops import rearrange
 from torch import nn
