@@ -169,3 +169,20 @@ Please consider to cite our paper and this framework, if they are helpful in you
 ## Acknowledgement
 - [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the codebase and algorithm we built upon. Thanks for their wonderful work.
 - [Wan](https://github.com/Wan-Video/Wan2.1): the base model we built upon. Thanks for their wonderful work.
+Short pompt: "Manas' Wedding" (4 minutes)
+
+Create a cinematic video in the Kyrgyz epic style.
+
+Topic: "Manas' Wedding".
+
+The scenes follow smoothly, without abrupt transitions.
+
+Show: quiet dawn over the Kyrgyz mountains, yurts in the valley, women are preparing a holiday, men decorate horses. Manas appears on a magnificent stallion - in a traditional kalpak, a red cloak and light armor. People meet him.
+
+Then Kanykey appears in a white wedding dress with national jewelry, women sing. The elders bless the young, they hold hands, around - white handkerchiefs and flowers.
+
+Festive tables: beshbarmak, kimyz, many guests, music of komuz. Dances, games, boys and girls in national costumes. A short fragment of kyz-kuumai and other games.
+
+Horse parade: decorated horses, riders jump around the valley. Manas and Kanykey are smiling at each other. The camera goes up, showing a huge valley decorated for the wedding. The final inscription: "May the Manas family be happy".
+
+Style: cinematic, historical, bright, joyful, epic, rich national details, smooth camera movements, soft light, realistic faces and costumes.
