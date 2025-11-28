@@ -169,3 +169,11 @@ Please consider to cite our paper and this framework, if they are helpful in you
 ## Acknowledgement
 - [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the codebase and algorithm we built upon. Thanks for their wonderful work.
 - [Wan](https://github.com/Wan-Video/Wan2.1): the base model we built upon. Thanks for their wonderful work.
+Short prompt: "Manas’ Wedding" (4 min)
+
+Scene: The wedding ceremony of Manas, the moment of receiving blessings, the arrival of guests, national clothes, ancient Kyrgyz atmosphere.  
+Beautiful and joyful scenes.  
+No other scenes from the epic — only the wedding.  
+At the end — the inscription: "May the Manas family be happy".
+
+Style: cinematic, historical, bright, joyful, epic, rich national details, smooth camera movements, soft light, realistic faces and costumes.
