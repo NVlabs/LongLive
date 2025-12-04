@@ -37,6 +37,7 @@ We present LongLive, a frame-level autoregressive (AR) framework for real-time a
 10. [Acknowledgement](#acknowledgement)
 
 ## News
+- [x] [2025.12.4] We fix a bug in `global_sink==False` mode. Now our model generate videos in higher quality.
 - [x] [2025.11.3] We implement LongLive on linear attention model [SANA-Video](https://nvlabs.github.io/Sana/Video/)! Now SANA-Video can generate 60s interactive videos in real-time.
 - [x] [2025.11.1] The license has been changed from CC-BY-NC-SA 4.0 to **Apache 2.0**.
 - [x] [2025.10.11] Many thanks to @yondonfu for building an interactive UI based on LongLive. Please check it [here](https://github.com/daydreamlive/scope).

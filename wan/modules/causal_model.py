@@ -103,7 +103,8 @@ class CausalWanSelfAttention(nn.Module):
         block_mask,
         kv_cache=None,
         current_start=0,
-        cache_start=None
+        cache_start=None,
+        sink_recache_after_switch=False
     ):
         r"""
         Args:
@@ -292,6 +293,8 @@ class CausalWanSelfAttention(nn.Module):
                 temp_v = kv_cache["v"].clone()
                 # Protect sink_tokens only during recomputation; regular forward generation allows writing into the initial sink region
                 write_start_index = max(local_start_index, sink_tokens) if is_recompute else local_start_index
+                if sink_recache_after_switch:
+                    write_start_index = local_start_index
                 roped_offset = max(0, write_start_index - local_start_index)
                 write_len = max(0, local_end_index - write_start_index)
                 if write_len > 0:
@@ -408,7 +411,8 @@ class CausalWanAttentionBlock(nn.Module):
         kv_cache=None,
         crossattn_cache=None,
         current_start=0,
-        cache_start=None
+        cache_start=None,
+        sink_recache_after_switch=False,
     ):
         r"""
         Args:
@@ -428,7 +432,7 @@ class CausalWanAttentionBlock(nn.Module):
         self_attn_result = self.self_attn(
             (self.norm1(x).unflatten(dim=1, sizes=(num_frames, frame_seqlen)) * (1 + e[1]) + e[0]).flatten(1, 2),
             seq_lens, grid_sizes,
-            freqs, block_mask, kv_cache, current_start, cache_start)
+            freqs, block_mask, kv_cache, current_start, cache_start, sink_recache_after_switch)
         
         if kv_cache is not None:
             y, cache_update_info = self_attn_result
@@ -895,7 +899,8 @@ class CausalWanModel(ModelMixin, ConfigMixin):
         kv_cache: dict = None,
         crossattn_cache: dict = None,
         current_start: int = 0,
-        cache_start: int = 0
+        cache_start: int = 0,
+        sink_recache_after_switch=False
     ):
         r"""
         Run the diffusion model with kv caching.
@@ -979,7 +984,8 @@ class CausalWanModel(ModelMixin, ConfigMixin):
             freqs=self.freqs,
             context=context,
             context_lens=context_lens,
-            block_mask=self.block_mask
+            block_mask=self.block_mask,
+            sink_recache_after_switch=sink_recache_after_switch
         )
         # print("kwargs done")
         def create_custom_forward(module):

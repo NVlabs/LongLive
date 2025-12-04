@@ -86,6 +86,7 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
                 kv_cache=self.kv_cache1,
                 crossattn_cache=self.crossattn_cache,
                 current_start=recache_start_frame * self.frame_seq_length,
+                sink_recache_after_switch=not self.global_sink,
             )
         
         # reset cross-attention cache

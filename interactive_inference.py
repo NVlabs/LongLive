@@ -142,7 +142,12 @@ pipeline.vae.to(device=device)
 
 # ----------------------------- Build dataset -----------------------------
 # Parse switch_frame_indices
-switch_frame_indices: List[int] = [int(x) for x in config.switch_frame_indices.split(",") if x.strip()]
+if isinstance(config.switch_frame_indices, int):
+    switch_frame_indices: List[int] = [int(config.switch_frame_indices)]
+else:
+    switch_frame_indices: List[int] = [
+        int(x) for x in str(config.switch_frame_indices).split(",") if str(x).strip()
+    ]
 
 # Create dataset
 dataset = MultiTextDataset(config.data_path)
