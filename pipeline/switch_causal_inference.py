@@ -158,6 +158,7 @@ class SwitchCausalInferencePipeline(CausalInferencePipeline):
             device=noise.device
         )
 
+        num_input_frames = initial_latent.shape[1] if initial_latent is not None else 0
         current_start_frame = 0
         self.generator.model.local_attn_size = self.local_attn_size
         print(f"[inference] local_attn_size set on model: {self.generator.model.local_attn_size}")
