@@ -647,6 +647,7 @@ class WanModel(ModelMixin, ConfigMixin):
         gan_ca_blocks=None,
         clip_fea=None,
         y=None,
+        sink_recache_after_switch=False,
     ):
         r"""
         Forward pass through the diffusion model
