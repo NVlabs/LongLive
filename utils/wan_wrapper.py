@@ -116,6 +116,58 @@ class WanVAEWrapper(torch.nn.Module):
         output = output.permute(0, 2, 1, 3, 4)
         return output
 
+    def decode_to_pixel_chunk(self, latent: torch.Tensor, use_cache: bool = False, chunk_size: int = 120) -> torch.Tensor:
+        """
+        Decode latent frames to pixel space.
+        
+        Args:
+            latent: Latent tensor with shape [batch_size, num_frames, num_channels, height, width]
+            use_cache: Whether to use cached decoding (for streaming)
+            chunk_size: Number of latent frames to decode at once (default 240 to avoid OOM)
+        
+        Returns:
+            Decoded video tensor with shape [batch_size, num_frames, num_channels, height, width]
+        """
+        # latent shape: [batch_size, num_frames, num_channels, height, width]
+        # zs shape after permute: [batch_size, num_channels, num_frames, height, width]
+        zs = latent.permute(0, 2, 1, 3, 4)
+        if use_cache:
+            assert latent.shape[0] == 1, "Batch size must be 1 when using cache"
+
+        device, dtype = latent.device, latent.dtype
+        scale = [self.mean.to(device=device, dtype=dtype),
+                 1.0 / self.std.to(device=device, dtype=dtype)]
+
+        if use_cache:
+            decode_function = self.model.cached_decode
+        else:
+            decode_function = self.model.decode
+
+        output = []
+        for u in zs:
+            num_frames = u.shape[1]
+            if num_frames <= chunk_size:
+                decoded = decode_function(u.unsqueeze(0), scale).float().clamp_(-1, 1).squeeze(0)
+                decoded = decoded.cpu()
+            else:
+                decoded_chunks = []
+                for start_idx in range(0, num_frames, chunk_size):
+                    end_idx = min(start_idx + chunk_size, num_frames)
+                    chunk = u[:, start_idx:end_idx, :, :]  # [C, chunk_frames, H, W]
+                    self.model.clear_cache()
+                    decoded_chunk = decode_function(chunk.unsqueeze(0), scale).float().clamp_(-1, 1).squeeze(0)
+                    decoded_chunks.append(decoded_chunk.cpu())
+                    
+                    del decoded_chunk
+                    torch.cuda.empty_cache()
+                decoded = torch.cat(decoded_chunks, dim=1)
+                self.model.clear_cache()
+            output.append(decoded)
+        
+        output = torch.stack(output, dim=0)
+        output = output.permute(0, 2, 1, 3, 4)
+        return output
+
 
 class WanDiffusionWrapper(torch.nn.Module):
     def __init__(
