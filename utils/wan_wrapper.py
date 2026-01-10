@@ -11,6 +11,7 @@ from wan.modules.model import WanModel, RegisterTokens, GanAttentionBlock
 from wan.modules.vae import _video_vae
 from wan.modules.t5 import umt5_xxl
 from wan.modules.causal_model import CausalWanModel
+from wan.modules.causal_model_infinity import CausalWanModel as CausalWanModelInfinity
 
 
 class WanTextEncoder(torch.nn.Module):
@@ -176,13 +177,17 @@ class WanDiffusionWrapper(torch.nn.Module):
             timestep_shift=8.0,
             is_causal=False,
             local_attn_size=-1,
-            sink_size=0
+            sink_size=0,
+            use_infinite_attention=False
     ):
         super().__init__()
-
         if is_causal:
-            self.model = CausalWanModel.from_pretrained(
-                f"wan_models/{model_name}/", local_attn_size=local_attn_size, sink_size=sink_size)
+            if use_infinite_attention:
+                self.model = CausalWanModelInfinity.from_pretrained(
+                    f"wan_models/{model_name}/", local_attn_size=local_attn_size, sink_size=sink_size)
+            else:
+                self.model = CausalWanModel.from_pretrained(
+                    f"wan_models/{model_name}/", local_attn_size=local_attn_size, sink_size=sink_size)
         else:
             self.model = WanModel.from_pretrained(f"wan_models/{model_name}/")
         self.model.eval()
