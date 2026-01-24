@@ -28,7 +28,7 @@ from utils.debug_option import DEBUG
 flex_attention = torch.compile(
     flex_attention, dynamic=False, mode="max-autotune-no-cudagraphs")
 
-
+# Adapted from Infinity-RoPE (https://arxiv.org/abs/2511.20649)
 def block_relativistic_rope(x, grid_sizes, freqs, start_frame=0, relative_frame_indices=None):
     """
     Apply causal RoPE (Rotary Position Embedding) to input tensor.
