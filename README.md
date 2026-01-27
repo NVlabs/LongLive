@@ -37,6 +37,7 @@ We present LongLive, a frame-level autoregressive (AR) framework for real-time a
 10. [Acknowledgement](#acknowledgement)
 
 ## News
+- [x] [2026.1.27] **LongLive is accepted by ICLR-2026.** 🎉🎉🎉
 - [x] [2026.1.11] Many thanks @qixinhu11 for adapting LongLive's original RoPE into KV-cache relative RoPE. Now LongLive supports generating infinite long videos!
 - [x] [2025.12.4] We fix a bug in `global_sink==False` mode. Now our model generate videos in higher quality.
 - [x] [2025.11.3] We implement LongLive on linear attention model [SANA-Video](https://nvlabs.github.io/Sana/Video/)! Now SANA-Video can generate 60s interactive videos in real-time.
