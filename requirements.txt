@@ -27,7 +27,7 @@ pydantic==2.10.6
 scikit-image
 huggingface_hub[cli]
 dominate
-nvidia-pyindex
+#nvidia-pyindex
 nvidia-tensorrt
 pycuda
 onnx

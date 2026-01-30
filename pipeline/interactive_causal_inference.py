@@ -32,6 +32,7 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
 
     # Internal helpers
     def _recache_after_switch(self, output, current_start_frame, new_conditional_dict):
+        print("🔁 RECACHING NOW...")
         if not self.global_sink:
             # reset kv cache
             for block_idx in range(self.num_transformer_blocks):
@@ -120,12 +121,28 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
             "length of switch_frame_indices should be one less than text_prompts_list"
         )
         assert num_output_frames % self.num_frame_per_block == 0
+        gen_device = next(self.generator.parameters()).device
+        vae_device = next(self.vae.parameters()).device
+        text_device = next(self.text_encoder.parameters()).device
+        noise = noise.to(gen_device)
         num_blocks = num_output_frames // self.num_frame_per_block
 
         
         # encode all prompts
         print(text_prompts_list)
-        cond_list = [self.text_encoder(text_prompts=p) for p in text_prompts_list]
+        gen_device = next(self.generator.parameters()).device
+        gen_dtype = next(self.generator.parameters()).dtype
+
+        cond_list = []
+        for p in text_prompts_list:
+            cond = self.text_encoder(text_prompts=p)
+
+            # Move every tensor inside the conditioning dict to generator device AND dtype
+            for k, v in cond.items():
+                if torch.is_tensor(v):
+                    cond[k] = v.to(device=gen_device, dtype=gen_dtype)
+
+            cond_list.append(cond)
 
         if low_memory:
             gpu_memory_preservation = get_cuda_free_memory_gb(gpu) + 5
@@ -205,12 +222,13 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
             noisy_input = noise[
                 :, current_start_frame : current_start_frame + current_num_frames
             ]
-
+            # print("KV cache device:", self.kv_cache1[0]["k"].device)
+            # print("Cross-attn cache device:", self.crossattn_cache[0]["k"].device)
             # ---------------- Spatial denoising loop ----------------
             for index, current_timestep in enumerate(self.denoising_step_list):
                 timestep = (
                     torch.ones([batch_size, current_num_frames],
-                    device=noise.device,
+                    device=gen_device,
                     dtype=torch.int64)
                     * current_timestep
                 )
@@ -230,7 +248,7 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
                         torch.randn_like(denoised_pred.flatten(0, 1)),
                         next_timestep
                         * torch.ones(
-                            [batch_size * current_num_frames], device=noise.device, dtype=torch.long
+                            [batch_size * current_num_frames], device=gen_device, dtype=torch.long
                         ),
                     ).unflatten(0, denoised_pred.shape[:2])
                 else:
@@ -261,7 +279,8 @@ class InteractiveCausalInferencePipeline(CausalInferencePipeline):
             current_start_frame += current_num_frames
 
         # Standard decoding
-        video = self.vae.decode_to_pixel(output.to(noise.device), use_cache=False)
+        # video = self.vae.decode_to_pixel(output.to(vae_device, dtype=next(self.vae.parameters()).dtype), use_cache=False)
+        video = self.vae.decode_to_pixel(output.to(vae_device, dtype=torch.float32), use_cache=False)
         video = (video * 0.5 + 0.5).clamp(0, 1)
 
         if return_latents:

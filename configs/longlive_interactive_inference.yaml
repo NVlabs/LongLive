@@ -5,7 +5,7 @@ denoising_step_list:
 - 500
 - 250
 warp_denoising_step: true # need to remove - 0 in denoising_step_list if warp_denoising_step is true
-num_frame_per_block: 3
+num_frame_per_block: 6
 model_name: Wan2.1-T2V-1.3B
 model_kwargs:
   local_attn_size: 12
@@ -17,12 +17,12 @@ model_kwargs:
 data_path: longlive_models/prompts/interactive_example.jsonl
 output_folder: videos/interactive
 inference_iter: -1
-num_output_frames: 240
+num_output_frames: 144
 use_ema: false
 seed: 1
 num_samples: 1
 save_with_index: true
-switch_frame_indices: 40, 80, 120, 160, 200
+switch_frame_indices:  48, 96
 global_sink: true
 context_noise: 0
 
