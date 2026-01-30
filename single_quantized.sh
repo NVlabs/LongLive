@@ -1,0 +1,1 @@
+python single_prompt_inference.py --config_path configs/longlive_inference.yaml --use_quantized
