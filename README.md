@@ -1,3 +1,13 @@
+<p>This repo contains code to run LongLive using 2x 3090, both single prompt and interactive prompts. It needs at least 2x24gb gpus</p>
+<p>Download bfloat weights from https://huggingface.co/srivassid/LongLiveMultiGPU/tree/main, create a new folder longlive_models/models folder under the same parent as LongLive adn put them there, 
+  and clone the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) and put that folder inside LongLive folder.</p>
+<p>Create a folder under longlive_models/prompts and create a file called interactive_models.jsonl, pick one line from LongLive/example/interactive_example.jsonl and save it.</p>
+<p>Do the same for single prompt, create a file longlive_models/prompts/vidprom_filtered_extended.txt, go to LongLive/example/long_example.txt adn paste one of the lines in the file</p>
+<p>if nvidia-pyindex package throws an error, comment it out from requirements.txt</p>
+<p>For single prompts run single_quantized.sh, for interactive prompts, run run_quantized.sh</p>
+<p>I put cuda:2 in interactive_inference_quantized.py and single_prompt_inference.py. Change it to cuda:1 for the second gpu</p>
+<p>Any issues, leave a comment</p>
+
 <p align="center" style="border-radius: 10px">
   <img src="assets/LongLive-logo.png" width="100%" alt="logo"/>
 </p>
