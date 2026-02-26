@@ -24,19 +24,16 @@
 **LongLive: Real-time Interactive Long Video Generation [[Paper](https://arxiv.org/abs/2509.22622)]** <br />
 [Shuai Yang](https://andysonys.github.io/), [Wei Huang](https://aaron-weihuang.com/), [Ruihang Chu](https://ruihang-chu.github.io/), [Yicheng Xiao](https://easonxiao-888.github.io/), [Yuyang Zhao](https://yuyangzhao.com/), [Xianbang Wang](https://peppaking8.github.io/), [Muyang Li](https://lmxyy.me/), [Enze Xie](https://xieenze.github.io/), [Yingcong Chen](https://www.yingcong.me/), [Yao Lu](https://scholar.google.com/citations?user=OI7zFmwAAAAJ&hl=en), [Song Han](http://songhan.mit.edu/), [Yukang Chen](https://yukangchen.com/) <br />
 
-We present LongLive, a frame-level autoregressive (AR) framework for real-time and interactive long video generation. Long video generation presents challenges in both efficiency and quality. Diffusion and Diffusion-Forcing models can produce high-quality videos but suffer from low efficiency due to bidirectional attention. Causal attention AR models support KV caching for faster inference, but often degrade in quality on long videos due to memory challenges during long-video training. In addition, beyond static prompt-based generation, interactive capabilities, such as streaming prompt inputs, are critical for dynamic content creation, enabling users to guide narratives in real time. This interactive requirement significantly increases complexity, especially in ensuring visual consistency and semantic coherence during prompt transitions. To address these challenges, LongLive adopts a causal, frame-level AR design that integrates a KV-recache mechanism that refreshes cached states with new prompts for smooth, adherent switches; streaming long tuning to enable long video training and to align training and inference (train-long-test-long); and short window attention paired with a frame-level attention sink, shorten as frame sink, preserving long-range consistency while enabling faster generation. With these key designs, LongLive fine-tunes a 1.3B-parameter short-clip model to minute-long generation in just 32 GPU-days. At inference, LongLive sustains 20.7 FPS on a single NVIDIA H100, achieves strong performance on VBench in both short and long videos. LongLive supports up to 240-second videos on a single H100 GPU. LongLive further supports INT8-quantized inference with only marginal quality loss.
+Please see our [docs](https://nvlabs.github.io/LongLive/docs) for Installation, Train, and Inference.
 
 ## TABLE OF CONTENTS
 1. [News](#news)
 2. [Highlights](#highlights)
 3. [Introduction](#introduction)
-4. [Installation](#installation)
-5. [Inference](#inference)
-6. [Training](#training)
-7. [How to contribute](#how-to-contribute)
-8. [Citation](#citation)
-9. [License](#license)
-10. [Acknowledgement](#acknowledgement)
+4. [How to contribute](#how-to-contribute)
+5. [Citation](#citation)
+6. [License](#license)
+7. [Acknowledgement](#acknowledgement)
 
 ## News
 - [x] [2026.1.27] **LongLive is accepted by ICLR-2026.** 🎉🎉🎉
@@ -63,26 +60,6 @@ We present LongLive, a frame-level autoregressive (AR) framework for real-time a
   <img src="assets/framework.png" width="100%" alt="logo"/>
 <strong>The framework of LongLive. (Left) Frame Sink + Short window attention. (Right) KV-recache.</strong>
 </p>
-<p align="center" style="border-radius: 10px">
-  <img src="assets/streaming_long.jpg" width="100%" alt="logo"/>
-<strong>The streaming long tuning pipeline. Our approach trains on long sequences by reusing the historical KV cache each iteration to generate the next 5s clip, then supervising it with the teacher.</strong>
-</p>
-<p align="center" style="border-radius: 10px">
-  <img src="assets/frame_sink.png" width="100%" alt="logo"/>
-<strong>The effectiveness of Frame Sink.</strong>
-</p>
-<p align="center" style="border-radius: 10px">
-  <img src="assets/effects-KV-recache.png" width="100%" alt="logo"/>
-<strong>The effectiveness of KV re-cache. Consistent transitions with new-prompt compliance.</strong>
-</p>
-<p align="center" style="border-radius: 10px">
-  <img src="assets/demo.png" width="100%" alt="logo"/>
-<strong>Interactive 60s videos with 6 prompts. See our demo <a href="https://nvlabs.github.io/LongLive"><strong>Website</strong></a> for video examples.</strong>
-</p>
-
-
-## Installation, Train, and Inference
-Please see our [docs](https://nvlabs.github.io/LongLive/docs) for details.
 
 ## How to contribute
 - Make sure to have git installed.
