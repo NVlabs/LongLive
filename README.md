@@ -8,7 +8,9 @@
 [![Code](https://img.shields.io/badge/GitHub-LongLive-blue)](https://github.com/NVlabs/LongLive)
 [![Model](https://img.shields.io/badge/HuggingFace-Model-yellow)](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B)
 [![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=CO1QC7BNvig)
-[![Demo](https://img.shields.io/badge/Demo-Page-bron)](https://nvlabs.github.io/LongLive) [![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/NVlabs/LongLive)
+[![Docs](https://img.shields.io/badge/Docs-Online-brightgreen)](https://github.com/NVlabs/LongLive/docs)
+[![Demo](https://img.shields.io/badge/Demo-Page-bron)](https://nvlabs.github.io/LongLive) 
+[![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/NVlabs/LongLive)
 
 <div align="center">
 
@@ -79,73 +81,8 @@ We present LongLive, a frame-level autoregressive (AR) framework for real-time a
 </p>
 
 
-## Installation
-**Requirements**
-
-We tested this repo on the following setup:
-* Nvidia GPU with at least 40 GB memory (A100, and H100 are tested).
-* Linux operating system.
-* 64 GB RAM.
-
-Other hardware setup could also work but hasn't been tested.
-
-**Environment**
-
-Create a conda environment and install dependencies:
-```
-git clone https://github.com/NVlabs/LongLive
-cd LongLive
-conda create -n longlive python=3.10 -y
-conda activate longlive
-conda install nvidia/label/cuda-12.4.1::cuda
-conda install -c nvidia/label/cuda-12.4.1 cudatoolkit
-pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu128
-pip install -r requirements.txt
-pip install flash-attn --no-build-isolation
-```
-
-## Inference
-**Download checkpoints**
-
-```
-huggingface-cli download Wan-AI/Wan2.1-T2V-1.3B --local-dir wan_models/Wan2.1-T2V-1.3B
-huggingface-cli download Efficient-Large-Model/LongLive --local-dir longlive_models
-```
-
-**Single Prompt Video Generation**
-```
-bash inference.sh
-```
-**Interactive Long Video Generation**
-```
-bash interactive_inference.sh
-```
-**Hints for video prompt**
-
-1. When building interactive prompts, include a brief subject (who/what) and background/setting (where) in every prompt. Re-stating these anchors at each step greatly improves global coherence during prompt switches.
-See the `example` for the exact prompt set we used to produce some of our videos on the demo page.
-
-2. LongLive supports diverse interaction—action changes, introducing/removing objects, background shifts, style changes, and more. But during large scene transitions the camera motion cannot be explicitly controlled. In another word, LongLive excels at cinematic long takes, but is less suited to rapid shot-by-shot edits or fast cutscenes.
-
-## Training
-**Download checkpoints**
-
-Please follow [Self-Forcing](https://github.com/guandeh17/Self-Forcing) to download text prompts and ODE initialized checkpoint.
-
-Download Wan2.1-T2V-14B as the teacher model.
-
-```
-huggingface-cli download Wan-AI/Wan2.1-T2V-14B --local-dir wan_models/Wan2.1-T2V-14B
-```
-
-**Step1: Self-Forcing Initialization for Short Window and Frame Sink**
-```
-bash train_init.sh
-```
-**Step2: Streaming Long Tuning**
-```
-bash train_long.sh
-```
+## Installation, Train, and Inference
+Please see our [docs](https://github.com/NVlabs/LongLive/docs) for details.
 
 ## How to contribute
 - Make sure to have git installed.
