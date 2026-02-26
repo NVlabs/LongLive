@@ -8,6 +8,7 @@
 [![Code](https://img.shields.io/badge/GitHub-LongLive-blue)](https://github.com/NVlabs/LongLive)
 [![Model](https://img.shields.io/badge/HuggingFace-Model-yellow)](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B)
 [![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=CO1QC7BNvig)
+[![vs-Sora2](https://img.shields.io/badge/VS-Sora2-red)](https://x.com/yukangchen_/status/1973405662177529993)
 [![Docs](https://img.shields.io/badge/Docs-Online-brightgreen)](https://nvlabs.github.io/LongLive/docs)
 [![Demo](https://img.shields.io/badge/Demo-Page-bron)](https://nvlabs.github.io/LongLive) 
 [![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/NVlabs/LongLive)
@@ -15,7 +16,6 @@
 <div align="center">
 
 [![Watch the video](assets/video-first-frame.png)](https://www.youtube.com/watch?v=CO1QC7BNvig)
-[![Watch the video](assets/Comparison_with_Sora2.png)](https://x.com/yukangchen_/status/1973405662177529993)
 
 </div>
 
@@ -24,7 +24,6 @@
 **LongLive: Real-time Interactive Long Video Generation [[Paper](https://arxiv.org/abs/2509.22622)]** <br />
 [Shuai Yang](https://andysonys.github.io/), [Wei Huang](https://aaron-weihuang.com/), [Ruihang Chu](https://ruihang-chu.github.io/), [Yicheng Xiao](https://easonxiao-888.github.io/), [Yuyang Zhao](https://yuyangzhao.com/), [Xianbang Wang](https://peppaking8.github.io/), [Muyang Li](https://lmxyy.me/), [Enze Xie](https://xieenze.github.io/), [Yingcong Chen](https://www.yingcong.me/), [Yao Lu](https://scholar.google.com/citations?user=OI7zFmwAAAAJ&hl=en), [Song Han](http://songhan.mit.edu/), [Yukang Chen](https://yukangchen.com/) <br />
 
-Please see our [docs](https://nvlabs.github.io/LongLive/docs) for Installation, Train, and Inference.
 
 ## TABLE OF CONTENTS
 1. [News](#news)
@@ -56,10 +55,7 @@ Please see our [docs](https://nvlabs.github.io/LongLive/docs) for Installation, 
   <img src="assets/pipeline.jpg" width="100%" alt="logo"/>
 <strong>LongLive accepts sequential user prompts and generates corresponding videos in real time, enabling user-guided long video generation.</strong>
 </p>
-<p align="center" style="border-radius: 10px">
-  <img src="assets/framework.png" width="100%" alt="logo"/>
-<strong>The framework of LongLive. (Left) Frame Sink + Short window attention. (Right) KV-recache.</strong>
-</p>
+Please see our [docs](https://nvlabs.github.io/LongLive/docs) for Installation, Train, and Inference.
 
 ## How to contribute
 - Make sure to have git installed.
