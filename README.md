@@ -55,6 +55,7 @@
   <img src="assets/pipeline.jpg" width="100%" alt="logo"/>
 <strong>LongLive accepts sequential user prompts and generates corresponding videos in real time, enabling user-guided long video generation.</strong>
 </p>
+
 Please see our [docs](https://nvlabs.github.io/LongLive/docs) for Installation, Train, and Inference.
 
 ## How to contribute
@@ -82,4 +83,3 @@ Please consider to cite our paper and this framework, if they are helpful in you
 ## Acknowledgement
 - [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the codebase and algorithm we built upon. Thanks for their wonderful work.
 - [Wan](https://github.com/Wan-Video/Wan2.1): the base model we built upon. Thanks for their wonderful work.
-Short pompt: "Manas' Wedding" (4 minutes)
