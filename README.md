@@ -8,7 +8,7 @@
 [![Code](https://img.shields.io/badge/GitHub-LongLive-blue)](https://github.com/NVlabs/LongLive)
 [![Model](https://img.shields.io/badge/HuggingFace-Model-yellow)](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B)
 [![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=CO1QC7BNvig)
-[![Docs](https://img.shields.io/badge/Docs-Online-brightgreen)](https://github.com/NVlabs/LongLive/docs)
+[![Docs](https://img.shields.io/badge/Docs-Online-brightgreen)](https://nvlabs.github.io/LongLive/docs)
 [![Demo](https://img.shields.io/badge/Demo-Page-bron)](https://nvlabs.github.io/LongLive) 
 [![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/NVlabs/LongLive)
 
@@ -82,7 +82,7 @@ We present LongLive, a frame-level autoregressive (AR) framework for real-time a
 
 
 ## Installation, Train, and Inference
-Please see our [docs](https://github.com/NVlabs/LongLive/docs) for details.
+Please see our [docs](https://nvlabs.github.io/LongLive/docs) for details.
 
 ## How to contribute
 - Make sure to have git installed.
