@@ -56,7 +56,7 @@
 <strong>LongLive accepts sequential user prompts and generates corresponding videos in real time, enabling user-guided long video generation.</strong>
 </p>
 
-Please see our [docs](https://nvlabs.github.io/LongLive/docs) for Installation, Train, and Inference.
+Please see our [docs](https://nvlabs.github.io/LongLive/docs) for Installation, Training, and Inference.
 
 ## How to contribute
 - Make sure to have git installed.
