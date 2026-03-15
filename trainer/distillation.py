@@ -347,14 +347,9 @@ class Trainer:
             self.name_to_trainable_params[renamed_n] = p
         ema_weight = config.ema_weight
         self.generator_ema = None
-        if (ema_weight is not None) and (ema_weight > 0.0):
-            if self.is_lora_enabled:
-                if self.is_main_process:
-                    print(f"EMA disabled in LoRA mode (LoRA provides efficient parameter updates without EMA)")
-                self.generator_ema = None
-            else:
-                print(f"Setting up EMA with weight {ema_weight}")
-                self.generator_ema = EMA_FSDP(self.model.generator, decay=ema_weight)
+        if (ema_weight is not None) and (ema_weight > 0.0) and self.is_lora_enabled:
+            if self.is_main_process:
+                print(f"EMA disabled in LoRA mode (LoRA provides efficient parameter updates without EMA)")
 
         
         if self.one_logger is not None:
@@ -483,7 +478,17 @@ class Trainer:
                 if self.is_main_process:
                     print(f"Loading checkpoint from {checkpoint_path}")
                 checkpoint = torch.load(checkpoint_path, map_location="cpu")
-                
+
+                if (ema_weight is not None) and (ema_weight > 0.0) and not self.is_lora_enabled and "generator_ema" in checkpoint:
+                    if self.is_main_process:
+                        print(f"Loading pretrained EMA from {checkpoint_path}")
+                    self.model.generator.load_state_dict(checkpoint["generator_ema"], strict=True)
+                    if self.is_main_process:
+                        print(f"Setting up EMA with weight {ema_weight}")
+                    self.generator_ema = EMA_FSDP(self.model.generator, decay=ema_weight)
+                elif (ema_weight is not None) and (ema_weight > 0.0) and (not self.is_lora_enabled) and self.is_main_process:
+                    print("Warning: EMA checkpoint not found or EMA not initialized.")
+
                 # Load generator
                 if "generator" in checkpoint:
                     if self.is_main_process:
@@ -496,7 +501,12 @@ class Trainer:
                 else:
                     if self.is_main_process:
                         print("Warning: Generator checkpoint not found.")
-                
+
+                if (ema_weight is not None) and (ema_weight > 0.0) and (not self.is_lora_enabled) and self.generator_ema is None:
+                    if self.is_main_process:
+                        print(f"Setting up EMA with weight {ema_weight}")
+                    self.generator_ema = EMA_FSDP(self.model.generator, decay=ema_weight)
+
                 # Load critic
                 if "critic" in checkpoint:
                     if self.is_main_process:
@@ -505,16 +515,7 @@ class Trainer:
                 else:
                     if self.is_main_process:
                         print("Warning: Critic checkpoint not found.")
-                
-                # Load EMA
-                if "generator_ema" in checkpoint and self.generator_ema is not None:
-                    if self.is_main_process:
-                        print(f"Loading pretrained EMA from {checkpoint_path}")
-                    self.generator_ema.load_state_dict(checkpoint["generator_ema"])
-                else:
-                    if self.is_main_process:
-                        print("Warning: EMA checkpoint not found or EMA not initialized.")
-                
+
                 # For auto resume, always resume full training state
                 # Load optimizers
                 if "generator_optimizer" in checkpoint:
@@ -529,7 +530,7 @@ class Trainer:
                 else:
                     if self.is_main_process:
                         print("Warning: Generator optimizer checkpoint not found.")
-                
+
                 if "critic_optimizer" in checkpoint:
                     if self.is_main_process:
                         print("Resuming critic optimizer...")
@@ -542,7 +543,7 @@ class Trainer:
                 else:
                     if self.is_main_process:
                         print("Warning: Critic optimizer checkpoint not found.")
-                
+
                 # Load training step
                 if "step" in checkpoint:
                     self.step = checkpoint["step"]
@@ -551,6 +552,10 @@ class Trainer:
                 else:
                     if self.is_main_process:
                         print("Warning: Step not found in checkpoint, starting from step 0.")
+            elif (ema_weight is not None) and (ema_weight > 0.0) and not self.is_lora_enabled:
+                if self.is_main_process:
+                    print(f"Setting up EMA with weight {ema_weight}")
+                self.generator_ema = EMA_FSDP(self.model.generator, decay=ema_weight)
 
         if self.one_logger is not None:
             self.one_logger.on_load_checkpoint_end()
@@ -779,7 +784,7 @@ class Trainer:
                 state_dict = {
                     "generator": generator_state_dict,
                     "critic": critic_state_dict,
-                    "generator_ema": self.generator_ema.state_dict(),
+                    "generator_ema": self.generator_ema.full_state_dict(self.model.generator),
                     "generator_optimizer": generator_opim_state_dict,
                     "critic_optimizer": critic_opim_state_dict,
                     "step": self.step,
