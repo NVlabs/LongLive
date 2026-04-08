@@ -3,6 +3,8 @@
 from typing import List, Optional
 import torch
 import os
+import numpy as np
+from PIL import Image
 
 from utils.wan_wrapper import WanDiffusionWrapper, WanTextEncoder, WanVAEWrapper
 
@@ -241,6 +243,107 @@ class CausalInferencePipeline(torch.nn.Module):
             return video, output.to(noise.device)
         else:
             return video
+
+    def encode_reference_images(
+        self,
+        image_paths: List[str],
+        device: torch.device,
+        dtype: torch.dtype,
+        image_size: tuple = (480, 832),
+    ) -> torch.Tensor:
+        """
+        Load reference images, preprocess, and encode via VAE.
+        Returns latent of shape [1, num_refs, 16, 60, 104].
+        """
+        if len(image_paths) > 3:
+            raise ValueError(f"At most 3 reference images allowed, got {len(image_paths)}")
+
+        frames = []
+        for p in image_paths:
+            img = Image.open(p).convert("RGB")
+            img = img.resize((image_size[1], image_size[0]))
+            # Normalize to [-1, 1]
+            t = torch.from_numpy(np.array(img)).permute(2, 0, 1).float() / 127.5 - 1.0
+            frames.append(t)
+
+        # Stack to [num_refs, 3, H, W] -> [1, 3, num_refs, H, W] for VAE
+        pixel = torch.stack(frames, dim=0).unsqueeze(0)  # [1, num_refs, 3, H, W]
+        pixel = pixel.permute(0, 2, 1, 3, 4)  # [1, 3, num_refs, H, W]
+        pixel = pixel.to(device=device, dtype=dtype)
+
+        with torch.no_grad():
+            # encode_to_latent expects [B, 3, T, H, W], returns [B, T, 16, 60, 104]
+            ref_latents = self.vae.encode_to_latent(pixel)
+
+        return ref_latents  # [1, num_refs, 16, 60, 104]
+
+    def inference_with_references(
+        self,
+        noise: torch.Tensor,
+        text_prompts: List[str],
+        reference_images: Optional[List[str]] = None,
+        return_latents: bool = False,
+        profile: bool = False,
+        low_memory: bool = False,
+    ) -> torch.Tensor:
+        """
+        Inference with optional reference images prepended as context frames.
+        Reference latents are prepended along the temporal dimension before denoising,
+        then stripped from the output so the returned video has the original frame count.
+        """
+        if not reference_images:
+            return self.inference(noise, text_prompts, return_latents, profile, low_memory)
+
+        # Encode reference images to latent space
+        ref_latents = self.encode_reference_images(
+            reference_images, device=noise.device, dtype=noise.dtype
+        )
+        num_ref_frames = ref_latents.shape[1]
+
+        # Expand ref_latents to match batch size
+        batch_size = noise.shape[0]
+        if ref_latents.shape[0] != batch_size:
+            ref_latents = ref_latents.expand(batch_size, -1, -1, -1, -1)
+
+        # Prepend reference latents along temporal dimension
+        # noise: [B, T, 16, 60, 104] -> [B, num_ref+T, 16, 60, 104]
+        augmented_noise = torch.cat([
+            torch.zeros_like(ref_latents),  # zero noise for clean reference frames
+            noise
+        ], dim=1)
+
+        # Adjust num_frame_per_block alignment: total frames must be divisible
+        total_frames = augmented_noise.shape[1]
+        if total_frames % self.num_frame_per_block != 0:
+            # Pad with extra noise frames to align
+            pad_count = self.num_frame_per_block - (total_frames % self.num_frame_per_block)
+            pad = torch.randn(
+                [batch_size, pad_count, *noise.shape[2:]],
+                device=noise.device, dtype=noise.dtype
+            )
+            augmented_noise = torch.cat([augmented_noise, pad], dim=1)
+
+        # Replace the reference frame positions with actual ref latents
+        augmented_noise[:, :num_ref_frames] = ref_latents
+
+        # Run standard inference on augmented noise
+        result = self.inference(
+            noise=augmented_noise,
+            text_prompts=text_prompts,
+            return_latents=return_latents,
+            profile=profile,
+            low_memory=low_memory,
+        )
+
+        # Strip reference frames and any padding from output
+        num_original = noise.shape[1]
+        if return_latents:
+            video, latents = result
+            video = video[:, num_ref_frames:num_ref_frames + num_original]
+            latents = latents[:, num_ref_frames:num_ref_frames + num_original]
+            return video, latents
+        else:
+            return result[:, num_ref_frames:num_ref_frames + num_original]
 
     def _initialize_kv_cache(self, batch_size, dtype, device, kv_cache_size_override: int | None = None):
         """
