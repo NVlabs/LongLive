@@ -16,7 +16,7 @@ from torch.distributed.fsdp import (
 )
 
 
-def configure_lora_for_model(transformer, model_name, lora_config, is_main_process=True):
+def configure_lora_for_model(transformer, model_name, lora_config, is_main_process=True, all_causal=False):
     """Configure LoRA for a WanDiffusionWrapper model
     
     Args:
@@ -24,18 +24,17 @@ def configure_lora_for_model(transformer, model_name, lora_config, is_main_proce
         model_name: 'generator' or 'fake_score'
         lora_config: LoRA configuration
         is_main_process: Whether this is the main process (for logging)
+        all_causal: Whether all models use causal attention blocks
     
     Returns:
         lora_model: The LoRA-wrapped model
     """
-    # Find all Linear modules in WanAttentionBlock modules
     target_linear_modules = set()
     
-    # Define the specific modules we want to apply LoRA to
     if model_name == 'generator':
         adapter_target_modules = ['CausalWanAttentionBlock']
     elif model_name == 'fake_score':
-        adapter_target_modules = ['WanAttentionBlock']
+        adapter_target_modules = ['CausalWanAttentionBlock'] if all_causal else ['WanAttentionBlock']
     else:
         raise ValueError(f"Invalid model name: {model_name}")
     

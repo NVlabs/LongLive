@@ -1,0 +1,102 @@
+# Distributed distillation runtime.
+infra:
+  sharding_strategy: hybrid_full
+  mixed_precision: true
+  gradient_checkpointing: true
+  generator_fsdp_wrap_strategy: size
+  real_score_fsdp_wrap_strategy: size
+  fake_score_fsdp_wrap_strategy: size
+  text_encoder_fsdp_wrap_strategy: size
+
+# Shared Wan backbone settings for the student, real-score teacher, and fake-score critic.
+# Role-specific model kwargs can still be provided as real_model_kwargs/fake_model_kwargs
+# if a future run needs different model construction.
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: 32
+
+# Optional initialization checkpoints. These are flattened by normalize_config
+# so the trainer still reads generator_ckpt/real_score_ckpt/fake_score_ckpt.
+# With adapter enabled, generator_ckpt initializes the base generator before LoRA wrapping.
+checkpoints:
+  generator_ckpt: null
+  real_score_ckpt: null
+  fake_score_ckpt: null
+
+# DMD distillation objective.
+algorithm:
+  trainer: score_distillation
+  distribution_loss: dmd
+  all_causal: true
+  ts_schedule: false
+  real_guidance_scale: 3.0
+  fake_guidance_scale: 0.0
+
+
+training:
+  lr: 1.0e-05
+  lr_critic: 2.0e-06
+  weight_decay: 0.0
+  beta1: 0.0
+  beta2: 0.999
+  beta1_critic: 0.0
+  beta2_critic: 0.999
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  ema_weight: 0.99
+  ema_start_step: 200
+  log_iters: 50
+  max_checkpoints: 50
+  max_iters: 5000
+  gc_interval: 100
+
+  dfake_gen_update_ratio: 5
+  # Backward simulation samples a rollout length in [min_num_training_frames, num_training_frames].
+  # Setting both to 32 gives a fixed 32-latent DMD rollout.
+  min_num_training_frames: 32
+  num_training_frames: 32
+  # Keep this many tail latents for the DMD/critic losses after backward simulation.
+  # With a 32-latent rollout, 32 keeps the full generated window.
+  slice_last_frames: 32
+
+data:
+  data_path: /path/to/longlive2/train_dataset
+  eval_data_path: /path/to/longlive2/eval_prompts
+  image_or_video_shape:
+  - 1
+  - 32
+  - 48
+  - 44
+  - 80
+
+# The distillation loop generates video trajectories, then computes DMD losses.
+inference:
+  sampling_steps: 4
+  sink_size: 0
+  multi_shot_rope_offset: 8
+
+# Optional validation generation from the distilled model. Uses inference sampling/cache settings by default.
+evaluation:
+  interval: 1
+  num_frames: 32
+  use_ema: false
+  # Can be raised when validation memory allows; 1 is the safe default.
+  val_batch_size: 1
+  save_latents_only: true
+
+# Presence of this section enables LoRA distillation; remove it for full fine-tuning.
+adapter:
+  type: lora
+  rank: 128
+  alpha: 128
+  dropout: 0.0
+  apply_to_critic: true
+  verbose: true
+
+logging:
+  seed: 0
+  wandb_key: null
+  wandb_entity: null
+  wandb_project: LongLive2-DMD

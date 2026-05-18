@@ -1,0 +1,85 @@
+# Distributed training runtime.
+infra:
+  sequence_parallel_size: 4
+  sharding_strategy: hybrid_full
+  mixed_precision: true
+  gradient_checkpointing: true
+  vae_halo_latents: 28
+  generator_fsdp_wrap_strategy: size
+  text_encoder_fsdp_wrap_strategy: size
+
+# Passed directly to WanDiffusionWrapper(**model_kwargs).
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: -1
+
+# AR diffusion objective.
+algorithm:
+  trainer: diffusion
+  causal: true
+  teacher_forcing: true
+  num_train_timestep: 1000
+  denoising_loss_type: flow
+
+training:
+  lr: 1.0e-05
+  weight_decay: 0.0
+  beta1: 0.0
+  beta2: 0.999
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  ema_weight: 0.99
+  ema_start_step: 100
+  log_iters: 1
+  max_checkpoints: 20
+  max_iters: 600
+  gc_interval: 100
+  error_recycling:
+    enabled: true
+    num_buckets: 50
+    buffer_size_per_bucket: 500
+    buffer_warmup_iter: 50
+    context_inject_prob: 0.9
+    latent_inject_prob: 0.9
+    noise_inject_prob: 0.01
+    clean_prob: 0.2
+    clean_buffer_update_prob: 0.1
+    modulate_factor: 0.3
+    start_step: 0
+    replacement_strategy: random
+
+data:
+  data_path: /path/to/longlive2/train_dataset
+  eval_data_path: /path/to/longlive2/eval_prompts
+  image_or_video_shape:
+  - 1
+  - 96
+  - 48
+  - 44
+  - 80
+  load_raw_video: true
+
+# Generation settings used by training-time evaluation.
+inference:
+  sampling_steps: 50
+  sink_size: 0
+  multi_shot_sink: true
+  multi_shot_rope_offset: 8
+  guidance_scale: 3.0
+  negative_prompt: '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走'
+
+# Lightweight validation generation during AR training.
+evaluation:
+  interval: 1
+  num_frames: 16
+  use_ema: true
+  val_batch_size: 1
+  save_latents_only: true
+
+logging:
+  seed: 0
+  wandb_key: null
+  wandb_entity: null
+  wandb_project: LongLive2-AR

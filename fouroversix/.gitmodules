@@ -1,0 +1,21 @@
+[submodule "third_party/cutlass"]
+	path = third_party/cutlass
+	url = https://github.com/NVIDIA/cutlass.git
+[submodule "third_party/fp-quant"]
+	path = third_party/fp-quant
+	url = https://github.com/jackcook/fp-quant-fouroversix.git
+[submodule "third_party/llm-awq"]
+	path = third_party/llm-awq
+	url = https://github.com/jackcook/llm-awq-fouroversix.git
+[submodule "third_party/qutlass"]
+	path = third_party/qutlass
+	url = https://github.com/IST-DASLab/qutlass.git
+[submodule "third_party/fast-hadamard-transform"]
+	path = third_party/fast-hadamard-transform
+	url = https://github.com/Dao-AILab/fast-hadamard-transform.git
+[submodule "third_party/spinquant"]
+	path = third_party/spinquant
+	url = https://github.com/jackcook/spinquant-fouroversix.git
+[submodule "third_party/flame"]
+	path = third_party/flame
+	url = https://github.com/jackcook/flame-fouroversix.git

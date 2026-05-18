@@ -1,0 +1,31 @@
+{
+    "attention_bias": false,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "fuse_cross_entropy": true,
+    "fuse_norm": true,
+    "fuse_swiglu": false,
+    "hidden_act": "swish",
+    "hidden_ratio": 4,
+    "hidden_size": 2048,
+    "initializer_range": 0.02,
+    "max_position_embeddings": 8192,
+    "model_type": "fp4_transformer",
+    "num_heads": 32,
+    "num_hidden_layers": 24,
+    "norm_eps": 1e-06,
+    "tie_word_embeddings": false,
+    "use_cache": true,
+    "vocab_size": 32000,
+    "qk_norm": true,
+    "layer_precision_configs": [
+        {
+            "repeats": 20,
+            "dtype": "nvfp4",
+            "scale_rule": "mse"
+        },
+        {
+            "repeats": 4
+        }
+    ]
+}

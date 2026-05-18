@@ -1,0 +1,110 @@
+[build-system]
+requires = [
+    "ninja",
+    "packaging",
+    "psutil",
+    "setuptools>=77.0.3",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fouroversix"
+dynamic = ["version"]
+authors = [
+    { name="Jack Cook", email="cookj@mit.edu" },
+    { name="Junxian Guo", email="junxian@mit.edu" },
+]
+description = "More Accurate FP4 Quantization with Adaptive Block Scaling"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE.md"]
+dependencies = [
+    "torch>=2.7.0",
+]
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs~=1.6.1",
+    "mkdocs-material~=9.7.4",
+    "mkdocstrings[python]~=1.0.3",
+]
+evals = [
+    "inspect-ai~=0.3.186",
+    "inspect-evals~=0.3.106",
+    "lm-eval[hf]~=0.4.11",
+    "modal~=1.3.5",
+    "openai~=2.24.0",
+    "pytest~=8.1.1",
+    "ruff~=0.15.4",
+    "SQLAlchemy~=2.0.48",
+    "transformers @ git+https://github.com/huggingface/transformers.git@22c35ca",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+exclude = ["build", "dist", "env", ".venv", "third_party", "scripts/ptq/tasks"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+ignore = [
+    # Various dumb rules related to docstrings
+    "D100",
+    "D103",  # TODO: Remove this one
+    "D104",
+    "D107",
+    "D202",
+    "D203",
+    "D205",
+    "D212",
+
+    "A001", "A002",  # Allow variables to be named `input`
+    "FIX002",  # Allow TODO comments
+    "FIX004",  # Allow hacks
+    "N812",  # Allow importing torch.nn.functional as F
+    "PLR0402",  # Allow importing torch.nn as nn
+    "PLC0415",  # Allow imports that aren't at the top of the file
+    "PLR0913",  # Allow functions with more than 5 arguments
+    "RET506",  # Allow elif after raise
+    "S603",  # Allow untrusted inputs to be passed to subprocesses
+    "S607",  # Allow commands to be run by subprocess without providing a full path
+    "TD003",  # Don't require issue links on TODO comments
+]
+select = [
+    "ALL",
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"setup.py" = [
+    "T201",  # Allow print statements in setup.py
+]
+"scripts/**/*.py" = [
+    "T201",  # Allow print statements in CLI tools
+    "TID252",  # Allow relative imports from parent modules
+]
+"src/fouroversix/**/ops.py" = [
+    "I001",  # Allow unsorted imports, because torch needs to be imported before fouroversix._C
+]
+"src/fouroversix/quantize/pytorch/reference.py" = [
+    "S101",  # Allow assert statements in reference implementation
+]
+"src/fouroversix/quantize/triton/kernel.py" = [
+    "ANN001",  # Allow missing annotations in Triton kernels
+    "N803",  # Allow uppercase arguments to Triton kernels
+    "N806",  # Allow uppercase variables in Triton kernels
+    "PLR1714", "SIM109",  # Allow multiple equality comparisons in Triton kernels
+]
+"tests/**/test_*.py" = [
+    "S101",  # Allow assert statements in tests
+    "T201",  # Allow print statements in tests
+]
+
+[tool.ruff.lint.isort]
+known-third-party = ["fouroversix"]

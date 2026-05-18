@@ -1,0 +1,8 @@
+site_name: Four Over Six Documentation
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - mkdocstrings

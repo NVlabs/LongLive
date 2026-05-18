@@ -74,7 +74,7 @@ A warning is issued when FA3 is explicitly requested but unavailable.
 By default, LongLive automatically selects the optimal attention implementation:
 
 ```python
-from wan.modules.attention import attention
+from wan_5b.modules.attention import attention
 
 # FA3 will be used on Hopper GPUs, FA2 otherwise
 output = attention(q, k, v)

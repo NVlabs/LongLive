@@ -1,85 +1,175 @@
 <p align="center" style="border-radius: 10px">
-  <img src="assets/LongLive-logo.png" width="100%" alt="logo"/>
+  <img src="assets/longlive2/logo.png" width="100%" alt="LongLive2.0 logo"/>
 </p>
 
-# 🎬 LongLive: Real-time Interactive Long Video Generation
+# 🎬 LongLive 2.0: An NVFP4 Parallel Infrastructure for Long Video Generation
 
-[![Paper](https://img.shields.io/badge/ArXiv-Paper-brown)](https://arxiv.org/abs/2509.22622)
-[![Code](https://img.shields.io/badge/GitHub-LongLive-blue)](https://github.com/NVlabs/LongLive)
-[![Model](https://img.shields.io/badge/HuggingFace-Model-yellow)](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B)
-[![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=CO1QC7BNvig)
-[![vs-Sora2](https://img.shields.io/badge/VS-Sora2-red)](https://x.com/yukangchen_/status/1973405662177529993)
-[![Docs](https://img.shields.io/badge/Docs-Online-brightgreen)](https://nvlabs.github.io/LongLive/docs)
-[![Demo](https://img.shields.io/badge/Demo-Page-bron)](https://nvlabs.github.io/LongLive) 
-[![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/NVlabs/LongLive)
+[![Paper](https://img.shields.io/badge/ArXiv-Paper-brown)](#)
+[![Code](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/NVlabs/LongLive)
+[![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=7oQALy32fiU)
+[![Models](https://img.shields.io/badge/Model-BF16-yellow)](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B)
+[![Models](https://img.shields.io/badge/Model-NVFP4-orange)](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4)
+[![Demo](https://img.shields.io/badge/Demo-Page-brightgreen)](https://nvlabs.github.io/LongLive/LongLive2/)
+[![Docs](https://img.shields.io/badge/Full-Documentation-green)](https://nvlabs.github.io/LongLive/LongLive2/docs/)
 
 <div align="center">
 
-[![Watch the video](assets/video-first-frame.png)](https://www.youtube.com/watch?v=CO1QC7BNvig)
+<!-- TODO: replace this text block with the final project-page video/demo embed. -->
+
+[![Watch the video](assets/longlive2/first-video-frame.png)](https://www.youtube.com/watch?v=7oQALy32fiU)
 
 </div>
 
-## 💡 TLDR: Turn interactive prompts into long videos—instantly, as you type!
+## 💡 TLDR: Infra with NVFP4 and parallelism for both training and inference
 
-**LongLive: Real-time Interactive Long Video Generation [[Paper](https://arxiv.org/abs/2509.22622)]** <br />
-[Shuai Yang](https://andysonys.github.io/), [Wei Huang](https://aaron-weihuang.com/), [Ruihang Chu](https://ruihang-chu.github.io/), [Yicheng Xiao](https://easonxiao-888.github.io/), [Yuyang Zhao](https://yuyangzhao.com/), [Xianbang Wang](https://peppaking8.github.io/), [Muyang Li](https://lmxyy.me/), [Enze Xie](https://xieenze.github.io/), [Yingcong Chen](https://www.yingcong.me/), [Yao Lu](https://scholar.google.com/citations?user=OI7zFmwAAAAJ&hl=en), [Song Han](http://songhan.mit.edu/), [Yukang Chen](https://yukangchen.com/) <br />
-
-
-## TABLE OF CONTENTS
-1. [News](#news)
-2. [Highlights](#highlights)
-3. [Introduction](#introduction)
-4. [How to contribute](#how-to-contribute)
-5. [Citation](#citation)
-6. [License](#license)
-7. [Acknowledgement](#acknowledgement)
-
-## News
-- [x] [2026.1.27] **LongLive is accepted by ICLR-2026.** 🎉🎉🎉
-- [x] [2026.1.11] Many thanks @qixinhu11 for adapting LongLive's original RoPE into KV-cache relative RoPE. Now LongLive supports generating infinite long videos!
-- [x] [2025.12.4] We fix a bug in `global_sink==False` mode. Now our model generate videos in higher quality.
-- [x] [2025.11.3] We implement LongLive on linear attention model [SANA-Video](https://nvlabs.github.io/Sana/Video/)! Now SANA-Video can generate 60s interactive videos in real-time.
-- [x] [2025.11.1] The license has been changed from CC-BY-NC-SA 4.0 to **Apache 2.0**.
-- [x] [2025.10.11] Many thanks to @yondonfu for building an interactive UI based on LongLive. Please check it [here](https://github.com/daydreamlive/scope).
-- [x] [2025.10.1] We compare Sora2 (+ GPT-5 prompt engineering) with LongLive-1.3B in the interactive long video generation. See [here](https://x.com/yukangchen_/status/1973405662177529993) for details.
-- [x] [2025.9.30] We release [example prompts](https://github.com/NVlabs/LongLive/tree/main/example) to reproduce our demo videos.
-- [x] [2025.9.29] We release [Paper](https://arxiv.org/abs/2509.22622), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive).
-
-## Highlights
-1. **Long Video Gen**: LongLive supports up to 240s video generation, with visual consistency.
-2. **Real-time Inference**: LongLive supports 20.7 FPS generation speed on a single H100 GPU, and 24.8 FPS with FP8 quantization with marginal quality loss.
-3. **Efficient Fine-tuning**: LongLive extends a short-clip model to minute-long generation in 32 H100 GPU-days.
-
-## Introduction
 <p align="center" style="border-radius: 10px">
-  <img src="assets/pipeline.jpg" width="100%" alt="logo"/>
-<strong>LongLive accepts sequential user prompts and generates corresponding videos in real time, enabling user-guided long video generation.</strong>
+  <img src="assets/longlive2/teaser.jpg" width="100%" alt="LongLive2.0 teaser"/>
 </p>
 
-Please see our [docs](https://nvlabs.github.io/LongLive/docs) for Installation, Training, and Inference.
+## News
+- 🔥 [2026.05.13] We release **LongLive 2.0**, infra with NVFP4 and parallelism for AR training, DMD distillation, and inference.
+- 🎉 [2026.1.27] LongLive is accepted by **ICLR-2026**.
+- 🔥 [2026.1.11] LongLive supports adapting LongLive's original RoPE into KV-cache relative RoPE and generates infinite long videos!
+- 🔥 [2025.11.3] We implement LongLive on linear attention model [SANA-Video](https://nvlabs.github.io/Sana/Video/)! Now SANA-Video can generate 60s interactive videos in real-time.
+- 🔥 [2025.9.29] We release [Paper](https://arxiv.org/abs/2509.22622), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive).
 
-## How to contribute
-- Make sure to have git installed.
-- Create your own [fork](https://github.com/NVlabs/LongLive/fork) of the project.
-- Clone the repository on your local machine, using git clone and pasting the url of this project.
-- Read both the `Requirements` and `Installation and Quick Guide` sections below.
-- Commit and push your changes.
-- Make a pull request when finished modifying the project.
+## Introduction
 
+**LongLive 2.0**: an NVFP4 Parallel Infrastructure for Long Video Generation
+- For training, it supports
+  - [x] Balanced sequence parallel for AR training (teacher-forcing).
+  - [x] AR training on multi-shot (or single-shot) videos. 
+  - [x] NVFP4 (or BF16) for both AR training and few-step distillation.
+- For inference, it supports
+  - [x] NVFP4 inference (W4A4) and NVFP4 KV Cache.
+  - [x] Multi-shot attention sink.
+  - [x] Sequence parallel inference.
+  - [x] Async decoding.
+
+
+<p align="left" style="border-radius: 10px">
+  <img src="assets/longlive2/fig_framework_overview.png" width="80%" alt="LongLive2.0 framework overview"/>
+</p>
+
+
+**LongLive 1.0**: Real-time Interactive Long Video Generation. It accepts sequential user prompts and generates corresponding videos in real time, enabling user-guided long video generation. The key insights are attention sink, KV-recache, and streaming long tuning. 
+
+
+<p align="left" style="border-radius: 10px">
+  <img src="assets/longlive2/LongLive1_teaser.png" width="80%" alt="LongLive1.0 framework overview"/>
+</p>
+
+
+## Getting Started
+- [Full Documentation](https://nvlabs.github.io/LongLive/LongLive2/docs/)
+- [Installation](https://nvlabs.github.io/LongLive/LongLive2/docs/#installation)
+- [NVFP4 Setup](https://nvlabs.github.io/LongLive/LongLive2/docs/#nvfp4-installation)
+- [Training](https://nvlabs.github.io/LongLive/LongLive2/docs/#training)
+- [Inference](https://nvlabs.github.io/LongLive/LongLive2/docs/#inference)
+- [Data Organization](https://nvlabs.github.io/LongLive/LongLive2/docs/#training-data)
+
+### Quick Start
+
+#### BF16
+
+```python
+import torch
+from omegaconf import OmegaConf
+
+from pipeline import CausalDiffusionInferencePipeline
+from utils.config import normalize_config
+from utils.inference_utils import (
+    load_generator_checkpoint,
+    place_vae_for_streaming,
+    prepare_single_prompt_inputs,
+    save_video,
+)
+
+prompt = "A compact silver robot walks through a clean robotics lab."
+merged_checkpoint_path = "LongLive-2.0-5B/model_bf16.pt"
+
+config = normalize_config(OmegaConf.load("configs/inference.yaml"))
+device = torch.device("cuda")
+
+torch.set_grad_enabled(False)
+pipe = CausalDiffusionInferencePipeline(config, device=device)
+load_generator_checkpoint(pipe.generator, merged_checkpoint_path)
+pipe = pipe.to(device=device, dtype=torch.bfloat16)
+place_vae_for_streaming(pipe, config)  # honor streaming_vae + vae_device when set
+pipe.generator.model.eval().requires_grad_(False)
+
+noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
+video = pipe.inference(noise=noise, text_prompts=prompts)
+save_video(video[0], "videos/quickstart/sample.mp4", fps=24)
+```
+
+`place_vae_for_streaming` is a no-op unless `inference.streaming_vae` is true and `inference.vae_device` is set, so toggling streaming-pipeline decode in your yaml is enough — the script does not need to change.
+
+#### NVFP4
+
+Point `checkpoints.generator_ckpt` in `configs/nvfp4/inference_nvfp4.yaml` at the downloaded checkpoint and set `model_quant_use_transformer_engine` according to the backend you are using:
+
+- TransformerEngine checkpoint (`model_te.pt`): `model_quant_use_transformer_engine: true`
+- FourOverSix checkpoint (`model_4o6.pt`): `model_quant_use_transformer_engine: false`
+
+`setup_nvfp4_pipeline` handles checkpoint loading, NVFP4 module wrapping, weight materialization, dtype/device placement, and the streaming-pipeline VAE relocation for both backends — the bf16 `pipe.to(...)` shortcut is unsafe here because it would cast the quantized buffers.
+
+```python
+import torch
+from omegaconf import OmegaConf
+
+from pipeline import CausalDiffusionInferencePipeline
+from utils.config import normalize_config
+from utils.inference_utils import prepare_single_prompt_inputs, save_video, setup_nvfp4_pipeline
+
+prompt = "A compact silver robot walks through a clean robotics lab."
+
+config = normalize_config(OmegaConf.load("configs/nvfp4/inference_nvfp4.yaml"))
+device = torch.device("cuda")
+
+torch.set_grad_enabled(False)
+pipe = CausalDiffusionInferencePipeline(config, device=device)
+setup_nvfp4_pipeline(pipe, config, device)
+pipe.generator.model.eval().requires_grad_(False)
+
+noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
+video = pipe.inference(noise=noise, text_prompts=prompts)
+save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)
+```
+
+## Models
+
+| Model | FPS ↑ | Params | VBench ↑ | Multi-shot |
+| --- | ---: | ---: | ---: | :---: |
+| [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | 20.7 | 1.3B | 84.87 |  |
+| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | 24.8 | 5B | 85.06 | ✅ |
+| [LongLive-2.0-5B-NVFP4-4Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4) | 29.7 | 5B | 84.51 | ✅ |
+| [LongLive-2.0-5B-NVFP4-2Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2) | 45.7 | 5B | 83.14 | ✅ |
+
+## License
+This repository is released under the Apache 2.0 license. See [LICENSE](LICENSE) for details.
 
 ## Citation
-Please consider to cite our paper and this framework, if they are helpful in your research.
+Please consider citing our work if you find them useful:
+
 ```bibtex
-@article{yang2025longlive,
-      title={LongLive: Real-time Interactive Long Video Generation},
-      author={Shuai Yang and Wei Huang and Ruihang Chu and Yicheng Xiao and Yuyang Zhao and Xianbang Wang and Muyang Li and Enze Xie and Yingcong Chen and Yao Lu and Song Hanand Yukang Chen},
-      year={2025},
-      eprint={2509.22622},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{longlive_2.0,
+  title={LongLive2.0: An NVFP4 Parallel Infrastructure for Long Video Generation},
+  author={Chen, Yukang and Wang, Luozhou and Huang, Wei and Yang, Shuai and Zhang, Bohan and Xiao, Yicheng and Chu, Ruihang and Mao, Weian and Hu, Qixin and Liu, Shaoteng and Zhao, Yuyang and Mao, Huizi and Chen, Ying-Cong and Xie, Enze and Qi, Xiaojuan and Han, Song},
+  journal={arXiv preprint arXiv},
+  year={2026}
+}
+```
+
+```bibtex
+@inproceedings{longlive,
+    title={Longlive: Real-time interactive long video generation}, 
+    author={Yang, Shuai and Huang, Wei and Chu, Ruihang and Xiao, Yicheng and Zhao, Yuyang and Wang, Xianbang and Li, Muyang and Xie, Enze and Chen, Yingcong and Lu, Yao and others},
+    booktitle={ICLR},
+    year={2026},
 }
 ```
 
 ## Acknowledgement
-- [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the codebase and algorithm we built upon. Thanks for their wonderful work.
-- [Wan](https://github.com/Wan-Video/Wan2.1): the base model we built upon. Thanks for their wonderful work.
+- [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the AR training codebase and formulation we build upon.
+- [Wan2.2](https://github.com/Wan-Video/Wan2.2): the base video diffusion model components used in this release.

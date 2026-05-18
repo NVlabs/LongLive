@@ -83,8 +83,12 @@ def launch_distributed_job(backend: str = "nccl"):
         init_method = f"tcp://[{host}]:{port}"
     else:  # IPv4
         init_method = f"tcp://{host}:{port}"
+    # Use a long timeout so that slow collectives during checkpoint saving
+    # (e.g. FSDP.optim_state_dict all-gather + rank0-only disk write for a
+    # multi-GB full optimizer state) do not trip the NCCL watchdog on other
+    # ranks while they wait at the post-save barrier.
     dist.init_process_group(rank=rank, world_size=world_size, backend=backend,
-                            init_method=init_method, timeout=timedelta(minutes=30))
+                            init_method=init_method, timeout=timedelta(minutes=60))
     torch.cuda.set_device(local_rank)
 
 
@@ -94,12 +98,20 @@ class EMA_FSDP:
         self.shadow = {}
         self._init_shadow(fsdp_module)
 
+    @staticmethod
+    def _clean_param_name(name: str) -> str:
+        """Remove FSDP wrapper prefixes from parameter names."""
+        return name.replace("_fsdp_wrapped_module.", "").replace("_checkpoint_wrapped_module.", "").replace("_orig_mod.", "")
+
     @torch.no_grad()
     def _init_shadow(self, fsdp_module):
         from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
         with FSDP.summon_full_params(fsdp_module, writeback=False):
             for n, p in fsdp_module.module.named_parameters():
-                self.shadow[n] = p.detach().clone().float().cpu()
+                # Clean the parameter name to remove FSDP prefixes
+                # This ensures shadow keys are compatible with unwrapped models for inference
+                cleaned_name = self._clean_param_name(n)
+                self.shadow[cleaned_name] = p.detach().clone().float().cpu()
 
     @torch.no_grad()
     def update(self, fsdp_module):
@@ -107,19 +119,31 @@ class EMA_FSDP:
         from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
         with FSDP.summon_full_params(fsdp_module, writeback=False):
             for n, p in fsdp_module.module.named_parameters():
-                self.shadow[n].mul_(d).add_(p.detach().float().cpu(), alpha=1. - d)
+                cleaned_name = self._clean_param_name(n)
+                if cleaned_name in self.shadow:
+                    self.shadow[cleaned_name].mul_(d).add_(p.detach().float().cpu(), alpha=1. - d)
 
     # Optional helpers ---------------------------------------------------
     def state_dict(self):
+        # Return shadow dict directly - keys are already cleaned during init/update
+        # This makes the state_dict directly usable for inference with unwrapped models
         return self.shadow            # picklable
 
     def load_state_dict(self, sd):
-        self.shadow = {k: v.clone() for k, v in sd.items()}
+        # Handle both cases: with or without FSDP prefixes
+        # This ensures backward compatibility and flexibility
+        cleaned_sd = {}
+        for k, v in sd.items():
+            # Remove FSDP prefixes if present to match internal naming convention
+            cleaned_key = self._clean_param_name(k)
+            cleaned_sd[cleaned_key] = v.clone()
+        self.shadow = cleaned_sd
 
     def copy_to(self, fsdp_module):
         # load EMA weights into an (unwrapped) copy of the generator
         from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
         with FSDP.summon_full_params(fsdp_module, writeback=True):
             for n, p in fsdp_module.module.named_parameters():
-                if n in self.shadow:
-                    p.data.copy_(self.shadow[n].to(p.dtype, device=p.device))
+                cleaned_name = self._clean_param_name(n)
+                if cleaned_name in self.shadow:
+                    p.data.copy_(self.shadow[cleaned_name].to(p.dtype, device=p.device))

@@ -1,0 +1,48 @@
+# Passed directly to WanDiffusionWrapper(**model_kwargs).
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: 32
+
+use_ema: false
+output_folder: videos/longlive2
+num_samples: 1
+save_latents_only: false
+
+data:
+  data_path: /path/to/longlive2/inference_prompts
+  # Latent tensor shape [B, F, C, H, W]. F is also the default number of
+  # generated latent frames unless num_output_frames is provided.
+  image_or_video_shape:
+  - 1
+  - 128
+  - 48
+  - 44
+  - 80
+
+inference:
+  sampling_steps: 4
+  sink_size: 8
+  guidance_scale: 1.0
+  multi_shot_sink: true
+  multi_shot_rope_offset: 8
+  streaming_vae: false
+  async_vae: false
+  vae_type: wan # wan, mg_lightvae, mg_lightvae_v2
+  vae_device: "cuda:2"
+
+checkpoints:
+  generator_ckpt: /path/to/longlive2/generator_checkpoint.pt
+  lora_ckpt: /path/to/longlive2/lora_checkpoint.pt
+
+# Presence of this section enables LoRA inference; remove it for full-generator inference.
+adapter:
+  type: lora
+  rank: 128
+  alpha: 128
+  dropout: 0.0
+  verbose: true
+
+logging:
+  seed: 0

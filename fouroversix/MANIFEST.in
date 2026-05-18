@@ -1,0 +1,12 @@
+recursive-include src *.cu
+recursive-include src *.h
+recursive-include src *.cpp
+recursive-include src *.hpp
+recursive-include src *.py
+
+recursive-include third_party/cutlass *.cu
+recursive-include third_party/cutlass *.h
+recursive-include third_party/cutlass *.cuh
+recursive-include third_party/cutlass *.cpp
+recursive-include third_party/cutlass *.hpp
+recursive-include third_party/cutlass *.inl

@@ -1,6 +1,6 @@
 from .dmd import DMD
-from .dmd_switch import DMDSwitch
+from .diffusion import CausalDiffusion
 __all__ = [
     "DMD",
-    "DMDSwitch",
+    "CausalDiffusion",
 ]

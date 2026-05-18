@@ -27,9 +27,11 @@ pydantic==2.10.6
 scikit-image
 huggingface_hub[cli]
 dominate
-nvidia-pyindex
-nvidia-tensorrt
-pycuda
+# Optional TensorRT support. Install separately because nvidia-tensorrt is a
+# placeholder on PyPI and requires NVIDIA's package index to be configured first:
+#   pip install nvidia-pyindex
+#   pip install nvidia-tensorrt
+#   pip install pycuda
 onnx
 onnxruntime
 onnxscript
