@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "african_savanna/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video presents a warm, golden-hued tone under natural daylight, with soft, diffused sunlight filtering through a partly cloudy sky, casting gentle shadows across the savanna. The atmosphere is tranquil and immersive, evoking a sense of quiet observation and awe. The style is documentary realism, with a handheld or mounted camera capturing intimate, observational moments from within a safari vehicle. The camera’s perspective is slightly elevated, offering a wide, immersive view of the landscape while keeping the subject in frame.\nThe scene is set outdoors in a vast, arid African savanna during midday, characterized by dry, golden-brown grasses and scattered acacia trees. In the distance, rolling hills fade into the horizon under a sky streaked with soft pink and white clouds. A lone elephant, dark gray and massive, stands beneath the canopy of a solitary acacia tree, grazing or resting. Its silhouette contrasts against the bright backdrop, emphasizing the wild, untouched nature of the environment.\n\nInside the safari vehicle, a single male filmmaker, mid-50s to 60s, with curly, salt-and-pepper hair and a weathered face, is focused on capturing the scene. He wears a green, short-sleeved shirt and appears deeply engaged in his craft. His posture is upright, leaning slightly forward as he adjusts the camera. His expression is one of concentration, eyes fixed on the monitor or the distant elephant.\n\nIn the foreground, a professional-grade video camera mounted on a stabilizing rig is prominently visible. It features a large telephoto lens, a small LCD monitor, and various controls, indicating high-end wildlife filmmaking equipment. The camera is positioned to the right of the filmmaker, angled outward to frame the elephant. The vehicle’s frame and canvas roof are visible, adding context to the setting.\n\nAs the video progresses, the filmmaker subtly adjusts the camera’s position, tilting it slightly to better frame the elephant. The camera’s monitor reflects the scene, showing the elephant’s silhouette against the tree. The elephant remains largely stationary, occasionally shifting its weight or lifting its trunk. The wind gently rustles the grass and leaves, adding subtle motion to the otherwise still scene.\n\nThe shot is a medium close-up, maintaining focus on the filmmaker while still including the expansive background. The depth of field is shallow, blurring the background slightly to emphasize the subject and his equipment. The camera remains steady, suggesting a tripod or stabilizer, with minimal movement, allowing viewers to absorb the serene interaction between human observer and wild animal. The overall narrative is one of quiet reverence for nature, capturing the majesty of wildlife through the lens of a dedicated filmmaker.",
+    "title": "Shot 1",
+    "source_txt": "rank3-The video presents a warm, golden-hued African savanna scene under a soft, diffused daylight, sugges-0_lora_prompts.txt",
+    "block_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "num_blocks": 6
+}

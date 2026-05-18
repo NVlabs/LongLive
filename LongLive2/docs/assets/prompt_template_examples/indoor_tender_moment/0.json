@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "indoor_tender_moment/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video clip presents a tender, emotionally charged moment between two individuals in an indoor urban setting, bathed in warm, golden-hour lighting that enhances the intimate atmosphere. The color tone is soft and muted, with a slight sepia-like warmth that suggests a cinematic, emotionally resonant style. The lighting is diffused, likely from large windows, creating gentle shadows and highlighting the characters’ faces and clothing textures. The camera employs a shallow depth of field, keeping the subjects in sharp focus while softly blurring the background, which consists of a cityscape visible through a large window — suggesting a high-rise apartment or office. Buildings with muted tones and occasional warm lights hint at late afternoon or early evening, with no visible weather effects.\n\nTwo characters are present: a man and a woman. The woman, appearing in her late 30s to early 40s, has shoulder-length, wavy auburn hair and fair skin. Her expression is tender and contemplative, with slightly parted lips and eyes gazing downward, conveying vulnerability or quiet emotion. She wears a light beige or cream-colored blouse, suggesting a professional or semi-formal setting. The man, seen from behind, is dressed in a gray suit with a white collared shirt, indicating a formal or business context. His short, neatly trimmed brown hair and posture suggest he is leaning into the woman, offering comfort or solace.\n\nThe scene is tightly framed in a medium close-up, focusing on the woman’s face and the man’s shoulder. As the clip progresses, the woman slowly turns her head slightly toward the man, her eyes briefly closing as if savoring the moment or absorbing comfort. Her subtle movements are slow and deliberate, emphasizing emotional depth. The man remains still, his back turned to the camera, reinforcing the intimate, private nature of the interaction.\n\nThe camera remains static, maintaining an eye-level angle that captures the emotional intimacy from a neutral, observational perspective. There is minimal movement, allowing the viewer to absorb the stillness and the quiet tension of the moment. The shallow depth of field ensures that the background cityscape remains out of focus, enhancing the sense of isolation and intimacy between the two. The overall atmosphere is subdued and introspective, suggesting a moment of emotional connection, support, or reconciliation. The lighting, composition, and pacing all converge to convey a narrative of quiet vulnerability and human connection in an urban environment.",
+    "title": "Shot 0",
+    "source_txt": "rank0-The video clip presents a tender, emotionally charged moment between two individuals in an indoor ur-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ],
+    "num_blocks": 8
+}

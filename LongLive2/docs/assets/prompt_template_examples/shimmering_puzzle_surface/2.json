@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "shimmering_puzzle_surface/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video features a stylized, animated Santa Claus character in a festive, indoor setting, likely a decorated room or workshop. The color tone is warm and festive, dominated by rich reds, whites, and greens, complemented by soft, diffused lighting that evokes a cozy, holiday atmosphere. The style is 3D computer animation with a slightly exaggerated, cartoonish aesthetic—characterized by smooth textures, expressive facial features, and fluid motion. The background is softly blurred, drawing focus to the foreground subject, suggesting a shallow depth of field. \nThe scene is set indoors, likely a holiday-themed room, with a large, decorated Christmas tree in the background adorned with colorful ornaments, twinkling lights, and garlands. The tree is positioned behind the character, slightly to the right, creating a balanced composition. The environment feels festive yet intimate, with no visible windows or outdoor elements, implying an enclosed, celebratory space.\n\nThe sole character is a male Santa Claus, appearing to be middle-aged with a cheerful yet slightly exasperated expression. His face is animated with wide, expressive eyes and a prominent white beard. He wears the classic red Santa suit with white trim, a fluffy white hat with a red pom-pom, and a black belt. His hair is short and dark, peeking out beneath the hat. He holds a black mobile phone in his right hand, bringing it to his ear as if engaged in a conversation. His body posture shifts subtly throughout the frames—leaning slightly forward, gesturing with his left hand, and occasionally squinting or raising his eyebrows, conveying a sense of animated dialogue or mild frustration. \n\nThe camera maintains a medium close-up shot throughout, keeping the character centered and emphasizing his facial expressions and gestures. The camera remains static, with no panning or zooming, ensuring the viewer’s attention remains fixed on Santa’s reactions and movements. His movements are slow and deliberate, with minimal shifts in position, suggesting he is seated or standing still while talking. The phone is held steadily against his ear, and his gestures are small but expressive, enhancing the emotional tone of the scene. The background remains out of focus, reinforcing the character as the central subject. The overall narrative suggests a lighthearted, humorous moment—perhaps a frantic holiday call or a mischievous conversation—captured in a warm, festive setting.",
+    "title": "Shot 2",
+    "source_txt": "rank0-The video opens with a shimmering, textured surface resembling water or snow, dotted with scattered -0_lora_prompts.txt",
+    "block_indices": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+    ],
+    "num_blocks": 8
+}

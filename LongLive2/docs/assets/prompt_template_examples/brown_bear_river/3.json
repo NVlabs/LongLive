@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "brown_bear_river/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video exhibits a natural, earthy color tone with muted browns, greens, and grays dominating the scene. The lighting is soft and diffused, suggesting an overcast or shaded outdoor environment, likely during midday or early afternoon. The atmosphere is serene yet wild, with a sense of quiet wilderness. The style is documentary-like, capturing realistic wildlife behavior with a handheld, slightly shaky camera that follows the subject closely, enhancing immersion.\nThe setting is outdoors in a forested or semi-wooded area, with patches of grass, scattered dry leaves, twigs, and small stones on the ground. The terrain appears uneven and natural, with a mix of dirt and sparse vegetation. No urban elements are visible, reinforcing the wild, untamed environment. The background includes tree roots and possibly a low rock or log partially visible, hinting at a natural habitat.\n\nThe main subject is a large brown bear, likely a grizzly or black bear, captured in motion. The bear appears in the first frame, with only its paw and part of its leg visible. As the video progresses, the bear walks from right to left across the frame, its powerful, shaggy fur and thick limbs clearly visible. The bear’s gait is deliberate and steady, with each step creating a slight disturbance in the dirt and grass. Its claws are visible, gripping the ground as it moves. The bear’s head is lowered, focused on the path ahead, suggesting purposeful movement, possibly searching or traveling. No other characters are present.\n\nKey objects include the ground surface, which is composed of dirt, grass, and scattered debris. The bear’s paws and legs are in the foreground, while the background remains slightly out of focus, emphasizing the bear’s movement. The camera follows the bear’s motion, panning left to maintain framing, creating a sense of dynamic tracking. The bear’s movement is slow and grounded, with each step deliberate and heavy. The camera angle is low, almost at ground level, enhancing the bear’s imposing presence. The overall shot is a medium close-up, focusing on the bear’s lower body and movement, with a shallow depth of field that blurs the background slightly. The video captures the raw, unfiltered essence of wildlife in its natural habitat, emphasizing the bear’s power and grace as it moves through its environment.",
+    "title": "Shot 3",
+    "source_txt": "rank3-The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, capt-0_lora_prompts.txt",
+    "block_indices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+    ],
+    "num_blocks": 6
+}

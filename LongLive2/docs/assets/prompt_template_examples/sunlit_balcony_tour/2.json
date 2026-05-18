@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "sunlit_balcony_tour/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video features a warm, inviting indoor setting with a neutral color palette dominated by rich wood tones and soft whites, creating a luxurious yet cozy atmosphere. The lighting is soft and ambient, with recessed wall sconces casting gentle, golden illumination, enhancing the room’s elegant and modern aesthetic. The camera employs a medium shot with a shallow depth of field, keeping the subject sharp while softly blurring the background, allowing viewers to focus on the man’s gestures and expressions. The scene is set in a spacious, high-end living area with a sophisticated, contemporary design. Walls are adorned with dark wood paneling and framed abstract art, while a plush blue armchair with patterned cushions sits on a textured rug beside a sleek, round coffee table with decorative items. A tall floor lamp and a large white vase with greenery add to the refined decor. The room opens into a hallway with additional seating and a staircase, suggesting a multi-level residence. \nThe central character is a young adult male, likely in his late 20s, with short dark hair and a neatly trimmed beard. He wears a white V-neck T-shirt with a small emblem on the chest and black trousers. A small microphone is clipped to his shirt, indicating he is presenting or narrating. His movements are expressive and animated as he gestures toward the door and surrounding furniture, conveying enthusiasm and engagement. He begins near a dark wooden door, then steps back slightly to encompass the room’s layout, gesturing expansively with both hands. His facial expressions are warm and inviting, suggesting he is explaining or showcasing the space with pride. The camera remains stationary throughout, maintaining a steady eye-level angle that captures his full upper body and the surrounding environment. The overall narrative style is informative and personal, likely part of a home tour or lifestyle vlog, with the man acting as a guide or host. The scene exudes a calm, sophisticated ambiance, with no natural elements or disruptive movements, reinforcing the controlled, curated nature of the video’s presentation.",
+    "title": "Shot 2",
+    "source_txt": "rank3-The video presents a bright, sunlit outdoor scene with a warm, natural color tone, dominated by vivi-0_lora_prompts.txt",
+    "block_indices": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+    ],
+    "num_blocks": 8
+}

@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "cozy_red_room/6.mp4",
+    "filename": "6.mp4",
+    "caption": "The video features a warm, natural indoor lighting ambiance, with soft daylight filtering through unseen windows, casting gentle shadows across the carpeted floor. The color tone is neutral and earthy, dominated by beige walls, wooden door frames, and cream-colored carpeting, creating a cozy, domestic atmosphere. The style is candid and intimate, with handheld camera work that follows the movement of the subjects, resulting in a slightly shaky, immersive feel. The video is shot indoors, likely within a home, with visible doorways, white trim, and a glimpse of a hallway or adjacent room. The environment suggests a typical residential setting with no outdoor elements; the time of day appears to be midday, given the bright, even lighting. \nTwo Alaskan Malamutes are the central characters. The first appears in the opening frame, captured in a close-up as it moves toward the camera, showcasing its thick, fluffy coat with shades of gray, black, and white. Its expressive dark eyes and playful demeanor suggest a curious or excited state. The second dog, slightly smaller or younger, enters the frame from a doorway behind the first, displaying similar coloring and a fluffier tail. Both dogs are medium to large-sized, with sturdy builds and bushy tails that curl upward. Their facial expressions are alert and friendly, with mouths slightly open as if panting or smiling. \n\nThe first dog walks forward, then turns to the right, passing through a doorway into another room, while the second dog follows closely behind. The camera follows them, panning smoothly to maintain focus on their movement. The background includes white door frames, a glimpse of a wooden door, and a green mat near the doorway. The dogs’ movements are fluid and purposeful, suggesting they are exploring or following a scent. The camera remains at eye level, capturing the dogs from a medium shot as they move through the space. There is minimal background clutter, emphasizing the natural behavior of the dogs. The video concludes with the first dog turning back toward the camera, offering a final glance before disappearing into the next room. The overall narrative is playful and domestic, highlighting the dogs’ curiosity and interaction with their environment.",
+    "title": "Shot 6",
+    "source_txt": "rank0-The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unse-0_lora_prompts.txt",
+    "block_indices": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+    ],
+    "num_blocks": 6
+}

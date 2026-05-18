@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "aquamarine_underwater/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video features a cool, deep blue underwater color tone, with natural daylight filtering through the water’s surface, creating a soft, diffused illumination that enhances the serene and immersive atmosphere. The lighting subtly shifts as the camera moves, casting gentle highlights on the dolphins’ sleek bodies and creating a tranquil, almost ethereal glow. The style is realistic and naturalistic, capturing the fluid motion of marine life with high clarity and minimal visual distortion.\nThe environment is entirely underwater, set in the open ocean, characterized by clear, azure waters that stretch into the horizon. The scene is bathed in daylight, suggesting midday or early afternoon, with no visible clouds or weather disturbances. The water’s surface is occasionally visible at the top of the frame, shimmering with ripples and sunlight reflections. No artificial structures or urban elements are present—only the natural marine setting with occasional bubbles and particles suspended in the water.\n\nTwo dolphins are the central characters. The first dolphin appears in frame 0:00, viewed from below as it swims upward with its mouth slightly open, revealing a small fish or squid it has caught. The second dolphin enters the frame at 0:03, swimming alongside the first, its streamlined body gliding effortlessly through the water. Both are adult dolphins, with smooth grayish-blue skin, slightly darker on their backs and lighter on their bellies. Their sleek, elongated bodies are accentuated by their dorsal fins and flippers, which propel them with grace. Their expressions are neutral, focused on their surroundings and prey.\n\nThe key objects are the dolphins themselves, whose bodies are made of smooth, wet skin, with streamlined shapes and dynamic motion. Their fins and tails create fluid trails of bubbles and water displacement as they move. The first dolphin is initially in the foreground, swimming upward from the lower frame, while the second dolphin enters from the left and swims diagonally across the frame, eventually passing the first. The camera follows their movements closely, suggesting a handheld or possibly mounted underwater camera. The camera angle shifts slightly from a low-angle shot at 0:00 to a side profile at 0:05, capturing both dolphins’ synchronized movements.\n\nThe main movement forms are fluid and continuous, with the dolphins gliding in a coordinated manner, occasionally turning or adjusting direction. Their motion is smooth and purposeful, with no abrupt changes. The water’s gentle currents and light refraction add to the naturalistic feel, enhancing the realism of the scene. The video’s narrative is observational and documentary, focusing on the dolphins’ natural behavior and interaction with their environment, with no human or artificial interference. The shot composition is primarily medium to close-up, with shallow depth of field that keeps the dolphins sharply in focus while softly blurring the background water. The camera’s movement mimics the dolphins’ motion, creating an immersive experience for the viewer.",
+    "title": "Shot 1",
+    "source_txt": "rank0-The video presents a serene underwater scene bathed in a cool, aquamarine-blue tone, with natural da-0_lora_prompts.txt",
+    "block_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "num_blocks": 6
+}

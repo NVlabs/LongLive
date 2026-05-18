@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "cozy_red_room/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unseen windows, casting gentle shadows across the scene. The color tone is dominated by earthy red walls and wooden furniture, creating a homely, inviting ambiance. The style is candid and intimate, capturing spontaneous moments with a handheld camera that moves slightly, enhancing the realism and charm. The camera is positioned at eye-level, offering a close-up view of the subject, occasionally shifting angles to follow movement.\n\nThe setting is clearly indoors, likely a dining or living area, with a wooden chair visible in the background. The chair, crafted from light-toned wood with turned legs, stands against the red wall, beside a white radiator. The flooring is a dark reddish-brown, complementing the wall color. The environment feels lived-in and comfortable, suggesting a casual, domestic moment.\n\nThe central character is a fluffy Siberian Husky, with a striking coat of white and gray fur, expressive brown eyes, and a black nose. The dog’s face is the focal point, initially shown in close-up as it licks a crumb of food off its snout. The food, likely a piece of cake or bread, is sticky and clinging to its nose and forehead. The dog’s eyes are wide and alert, conveying curiosity or mild amusement as it grooms itself. As the video progresses, the dog turns its head away from the camera, perhaps in response to something off-screen or as it moves to lick the food off its muzzle. Its ears perk up slightly, indicating attentiveness. The camera follows its movement, panning slightly to keep the dog in frame as it shifts position, revealing more of its fluffy body. The dog’s movements are slow and deliberate, exuding a relaxed, content demeanor.\n\nNo human characters are visible, but the presence of a person is implied by the camera’s handling and the dog’s interaction with the food. The video’s narrative is playful and endearing, focusing on the dog’s natural behavior and its charming, slightly messy interaction with food. The shallow depth of field keeps the dog’s face sharply in focus while softly blurring the background, emphasizing the dog’s expressions and actions. The camera’s gentle motion and close framing create an intimate portrait of the dog’s personality, capturing a fleeting, joyful moment in a domestic setting.",
+    "title": "Shot 0",
+    "source_txt": "rank0-The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unse-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "sunlit_balcony_tour/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video features a warm, natural daylight ambiance with soft, golden sunlight streaming through large windows, casting geometric patterns on the dark wooden floors. The atmosphere is serene, spacious, and modern, with a clean, minimalist aesthetic dominated by neutral tones — whites, grays, and rich browns. The style is documentary-like, with handheld camera movement that follows the subject closely, creating an immersive, personal tour feel. The environment is clearly an upscale, contemporary indoor space, likely a residential or commercial interior, with high ceilings and architectural details such as recessed lighting and framed artwork. The setting appears to be daytime, possibly late morning to early afternoon, under clear, sunny conditions, as evidenced by the bright, unfiltered sunlight.\nThe scene begins with a man walking down a narrow hallway, initially seen from behind. He is mid-30s, with short dark hair, a neatly trimmed beard, and a fit, athletic build. He wears a crisp white T-shirt with a small emblem on the chest and dark jeans. As he moves forward, he opens a large glass door, revealing a bright exterior, then turns to face the camera, gesturing with his hands as if explaining or presenting. The camera follows him as he walks into a more open, well-lit room. This space features a modern dining area with a round table set for a meal, upholstered chairs, and a stylish chandelier with spherical pendant lights. A long wooden counter with bar stools lines one wall, and potted plants add greenery. The room is airy and elegant, with large windows allowing natural light to flood in.\n\nThe man pauses, turns fully to face the camera, and begins speaking, using expressive hand gestures to emphasize his points. He appears engaged and enthusiastic, likely describing the space’s features. His posture is relaxed yet confident, and he occasionally points toward different areas, drawing attention to design elements. The camera remains at eye level, maintaining a medium shot that captures his upper body and the surrounding environment. As he moves slightly within the frame, the camera subtly pans to keep him centered, creating a dynamic yet smooth visual flow. The focus remains sharp on him while the background remains slightly blurred, indicating a shallow depth of field. There is no noticeable wind or other natural elements, but the lighting subtly shifts as he moves, enhancing the natural feel of the space. The video serves as an engaging, personal tour of a luxurious interior, combining architectural beauty with the presenter’s charismatic narration.",
+    "title": "Shot 1",
+    "source_txt": "rank3-The video presents a bright, sunlit outdoor scene with a warm, natural color tone, dominated by vivi-0_lora_prompts.txt",
+    "block_indices": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+    ],
+    "num_blocks": 8
+}

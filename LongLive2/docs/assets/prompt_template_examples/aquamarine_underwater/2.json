@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "aquamarine_underwater/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video opens with a serene, expansive ocean scene bathed in the golden glow of either sunrise or sunset, casting a warm, luminous hue across the water’s surface. The sky is a blend of soft lavender and pale yellow, with scattered clouds diffusing the sunlight into gentle rays that shimmer on the waves. The color tone is warm and slightly hazy, evoking a tranquil, dreamlike atmosphere. The lighting is natural and directional, with the sun positioned low on the horizon, creating elongated reflections and a soft backlighting effect. The style is cinematic and immersive, with a wide-angle lens capturing the vastness of the sea and sky, emphasizing the solitude and majesty of the natural environment.\nThe environment is entirely natural and outdoors, set on an open ocean with no landmasses or human structures visible. The water’s surface is textured with gentle, rolling waves that ripple and reflect the sunlight, creating a dynamic interplay of light and shadow. The horizon line is clearly defined, separating the ocean from the sky, and the weather is clear with no rain or fog, only a few wispy clouds. The scene conveys a sense of peaceful isolation, as if the viewer is floating alone on the water.\n\nThere are no human characters or animals visible in the video. Instead, the focal point is a single, dark dorsal fin breaking the surface of the water, suggesting the presence of a large marine animal—likely a shark or dolphin—swimming beneath. The fin appears briefly, rising and dipping into the water, creating small splashes and ripples around it. The fin is dark and sleek, contrasting sharply with the golden-hued water. Its movement is smooth and deliberate, indicating a calm, unhurried pace. The camera remains mostly static, with slight handheld motion, maintaining a low-angle perspective that captures the fin’s emergence and submersion. The shot is an extreme long shot, emphasizing the vastness of the ocean and the solitary presence of the animal. The depth of field is deep, keeping both the fin and the distant horizon in focus, enhancing the sense of scale and immersion. The overall mood is one of awe and quiet wonder, inviting the viewer to contemplate the majesty of the natural world.",
+    "title": "Shot 2",
+    "source_txt": "rank0-The video presents a serene underwater scene bathed in a cool, aquamarine-blue tone, with natural da-0_lora_prompts.txt",
+    "block_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+    ],
+    "num_blocks": 6
+}

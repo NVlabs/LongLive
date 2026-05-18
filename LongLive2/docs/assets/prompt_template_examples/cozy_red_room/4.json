@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "cozy_red_room/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video opens with a warm, naturally lit indoor setting, characterized by soft, diffused daylight filtering through unseen windows, creating a cozy, intimate atmosphere. The color tone is neutral to slightly warm, with beige walls, wooden flooring, and soft furnishings enhancing the homely ambiance. The style is candid and dynamic, with handheld camera work producing slight motion blur and a sense of spontaneity, often shifting perspectives abruptly to capture the lively energy of the scene.\nThe environment transitions from a hallway or entryway—marked by a white doorframe and a black handbag resting against a wall—to a bathroom with tiled flooring, a white toilet, and a yellow-painted wall, indicating a domestic, residential setting. The camera follows closely behind a large, fluffy Siberian Husky with striking black-and-white fur and expressive brown eyes. The dog appears joyful and curious, its tongue slightly out, radiating playful energy. Its posture is alert yet relaxed, occasionally turning its head to survey its surroundings. The camera moves erratically, sometimes capturing the dog’s face in close-up, then suddenly panning to the bathroom floor or walls, suggesting a handheld, first-person perspective.\n\nThe second dog, slightly smaller and equally fluffy with a grayish-brown coat, briefly enters the frame, adding depth to the scene. Both dogs move with natural grace, their fluffy tails and paws occasionally brushing the camera lens, creating a sense of intimacy and immediacy. The camera’s chaotic movement—jostling between the dogs’ faces and the surrounding environment—enhances the playful, unscripted nature of the video.\n\nThe lighting remains consistent throughout, with natural daylight illuminating the space, casting soft shadows that emphasize the texture of the dogs’ fur and the smooth surfaces of the bathroom fixtures. The video’s narrative is informal and affectionate, capturing the dogs’ energetic exploration of their home, likely during a casual, everyday moment. The overall mood is lighthearted and endearing, celebrating the companionship between the dogs and their environment. The dynamic camera work, combined with the dogs’ lively movements, creates an immersive, joyful experience that draws viewers into the heart of the household.",
+    "title": "Shot 4",
+    "source_txt": "rank0-The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unse-0_lora_prompts.txt",
+    "block_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "frying_egg_closeup/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video opens with a warm, inviting color tone dominated by rich reds, yellows, and golden hues, evoking a cozy, rustic kitchen atmosphere. The lighting is soft and natural, likely from overhead or window light, casting gentle highlights on the bubbling ingredients. The scene is set indoors, likely in a home or small-scale street food stall, with a bustling yet intimate ambiance. The background reveals glimpses of kitchenware, including a metal pot and a wooden spoon, hinting at a busy cooking environment. The time of day appears to be midday, with bright, even illumination enhancing the vividness of the food.\nA single person, partially visible, is actively engaged in cooking. Wearing a red apron over a purple shirt, the individual’s hands move with practiced precision, though their face remains unseen. Their posture suggests focused concentration as they stir the contents of a large, metallic wok. The character’s gender is indeterminate due to the framing, but their attire and actions imply a professional or experienced cook, possibly of East Asian descent, given the culinary context. Their hair is likely tied back, though not visible due to the angle.\n\nThe central focus is on the simmering dish: a vibrant, bubbling sauce filled with diced tomatoes and bell peppers. The tomatoes are a rich red, while the bell peppers offer contrasting yellow and green hues, all glistening with moisture as they cook. The sauce, thick and glossy, clings to the vegetables as gentle bubbles rise to the surface, indicating a slow, steady simmer. The camera remains static in a close-up shot, capturing the textures and colors in great detail, with a shallow depth of field that blurs the background slightly to emphasize the food. The angle is slightly elevated, looking down into the pan, allowing viewers to appreciate the movement of the ingredients as they swirl gently with each stir. The overall mood is warm and appetizing, capturing the essence of home-style cooking with a sense of comfort and care. The video’s narrative is centered on the sensory experience of cooking, highlighting the transformation of raw ingredients into a delicious, aromatic dish.",
+    "title": "Shot 4",
+    "source_txt": "rank2-The video exhibits a warm, golden-yellow color tone with soft, diffused lighting, emphasizing the gl-0_lora_prompts.txt",
+    "block_indices": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+    ],
+    "num_blocks": 7
+}

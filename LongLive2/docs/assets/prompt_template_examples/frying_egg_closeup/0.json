@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "frying_egg_closeup/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video exhibits a warm, golden-yellow color tone with soft, diffused lighting, emphasizing the glossy, bubbling surface of the frying egg. The atmosphere is intimate and sensory, evoking the comforting aroma and visual appeal of freshly cooked food. The style is realistic and macro-focused, capturing minute details with high clarity. The scene is set indoors, likely in a kitchen, with the egg sizzling in a dark, non-stick frying pan. The background is blurred, drawing attention to the egg’s texture and movement. The environment suggests a domestic, cozy setting, possibly during morning or early afternoon, with no visible weather elements.\n\nThe video features no human characters; instead, the sole focus is on the egg cooking in the pan. The egg’s surface is vibrant yellow, with translucent white bubbles forming along the edges as it cooks. Small flecks of green herbs or spices are scattered within the egg mixture, adding visual contrast. The egg’s texture evolves from liquid to semi-solid as it cooks, with bubbles rising and popping gently. The pan’s surface is dark and slightly reflective, with oil shimmering around the edges of the egg.\n\nThe camera remains stationary throughout, offering a close-up, macro shot that captures the egg’s transformation in detail. The depth of field is shallow, keeping the egg’s surface in sharp focus while softly blurring the pan’s background. The camera angle is slightly elevated, positioned above the pan’s edge, allowing viewers to observe the egg’s edges and bubbles forming. There is no movement from characters or objects, but the egg’s cooking process is dynamic — bubbles pop and spread outward as the egg solidifies. The motion is slow and methodical, emphasizing the sensory experience of cooking. The video’s narrative is purely observational, capturing the transformation of raw egg into a cooked dish, highlighting the beauty and simplicity of everyday culinary moments. The focus on texture, color, and movement creates an immersive, almost meditative experience.",
+    "title": "Shot 0",
+    "source_txt": "rank2-The video exhibits a warm, golden-yellow color tone with soft, diffused lighting, emphasizing the gl-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "num_blocks": 7
+}

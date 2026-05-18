@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "cozy_red_room/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video opens with a blurry, fast-moving shot that suggests the camera is being handheld and possibly in motion, capturing a fleeting glimpse of interior walls and a window framed by red curtains, indicating an indoor setting. The lighting is warm and natural, likely from daylight filtering through the window, casting soft shadows and creating an inviting, cozy atmosphere. The scene transitions to a close-up of a husky dog, with striking black and white fur, expressive brown eyes, and a fluffy coat. The dog’s nose is gently touched by a human hand wearing a gray, textured sweater, revealing a silver ring on the finger. The hand delicately places a small, white, crumbly treat on the dog’s snout. The husky, initially calm and curious, begins to lick the treat off its nose, then eagerly starts to eat it from the floor, its tongue darting out to scoop up the crumbs. The camera follows the dog’s movements as it lowers its head to the carpeted floor, which is a light brown color with a patterned border near the door. The background reveals a white door frame and a glimpse of a tiled floor, suggesting a home environment. The dog’s tail wags slightly as it enjoys its treat, conveying contentment and happiness. The video ends with the husky fully engrossed in eating, its focus entirely on the treat. The camera remains steady, capturing the intimate, joyful moment between the human and the dog, emphasizing the bond and affection shared in a warm, domestic setting. The style is candid and personal, with natural lighting and a shallow depth of field that keeps the focus on the dog and the hand, while softly blurring the background elements. The overall tone is gentle and heartwarming, capturing a simple yet tender interaction.",
+    "title": "Shot 5",
+    "source_txt": "rank0-The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unse-0_lora_prompts.txt",
+    "block_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "indoor_tender_moment/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video is bathed in warm, golden-hour lighting, casting a soft, diffused glow that suggests late afternoon or early evening. The atmosphere is calm, intimate, and slightly introspective, with a muted color palette dominated by beige, cream, and soft whites, enhancing the serene, domestic feel. The style is realistic with a touch of cinematic elegance, employing medium shots and shallow depth of field to focus attention on the subject while gently blurring the background.\nThe scene is set indoors, likely in a modern hotel room or upscale bedroom. Behind the subject are floor-to-ceiling windows draped with sheer white curtains and heavier, taupe-colored drapes on the left. A contemporary wall-mounted lamp with a cylindrical white shade rests beside the window, subtly contributing to the ambient lighting. The environment is minimalistic and uncluttered, emphasizing tranquility.\n\nA single male character, appearing to be in his late 40s to early 50s, is the focal point. He has short, neatly styled brown hair, a clean-shaven face, and a composed, neutral expression. His ethnicity appears Caucasian. He wears a crisp, long-sleeved white button-down shirt, unbuttoned at the collar, revealing a sliver of chest. A simple silver wedding band is visible on his left ring finger. His posture is upright and deliberate.\n\nIn the first shot, he stands centered, buttoning his shirt with both hands, his gaze focused downward. As the video progresses, he begins to walk slowly toward the right side of the frame, maintaining his deliberate pace. His movement is smooth and unhurried, suggesting a quiet transition or preparation for an event. The camera remains stationary, capturing him in a medium shot that frames his torso and upper legs, allowing viewers to observe his actions clearly while keeping the environment contextually present. The depth of field remains shallow, keeping the subject in sharp focus while softly blurring the background curtains and lamp. The overall narrative conveys a sense of quiet readiness or introspection, possibly before a significant moment. There is no interaction with other characters or objects, reinforcing the solitary, contemplative mood. The lighting remains consistent, and no natural elements like wind or rain are present. The composition remains balanced, with the subject’s movement creating subtle dynamism within the otherwise still frame.",
+    "title": "Shot 4",
+    "source_txt": "rank0-The video clip presents a tender, emotionally charged moment between two individuals in an indoor ur-0_lora_prompts.txt",
+    "block_indices": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+    ],
+    "num_blocks": 8
+}

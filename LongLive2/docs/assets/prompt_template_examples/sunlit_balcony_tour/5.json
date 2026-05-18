@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "sunlit_balcony_tour/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video features a modern, minimalist interior with a warm, neutral color tone dominated by dark wood cabinetry and beige walls. The lighting is soft, ambient, and evenly distributed, with recessed ceiling lights and subtle under-cabinet lighting that enhances the sleek, contemporary aesthetic. The atmosphere is calm, sophisticated, and inviting, suggesting a high-end residential or boutique hotel setting. The style is realistic, with clean lines and a focus on architectural details, captured in a steady, medium shot that follows the subject’s movements.\nThe scene is indoors, likely within a luxury apartment or hotel suite, characterized by polished flooring, dark cabinetry, and a sleek, modern design. The hallway behind the subject reveals additional rooms with framed artwork on walls and a glimpse of a lounge area with a white chair and a dark console table, suggesting a spacious, well-appointed environment. The setting is well-lit, indicating daytime, with no visible weather elements since it’s an interior space.\n\nThe central character is a young adult male, appearing to be in his late 20s to early 30s, with a neatly groomed beard and short, dark brown hair. He wears a white t-shirt with a subtle emblem on the chest and dark pants. A small lavalier microphone is clipped to his shirt, suggesting he is presenting or demonstrating. He begins by opening a dark wooden wardrobe door, revealing a lit interior with hanging rods and shelves. He then gestures upward with his right hand, pointing toward the top of the cabinet, indicating a hidden compartment or feature. His expression is animated, conveying enthusiasm as he explains the functionality of the space. His body turns slightly to the right, maintaining eye contact with the camera, while his left hand rests on his abdomen for balance.\n\nKey objects include the dark wooden wardrobe with a matte finish and a sleek, horizontal gold accent strip above the door. The wardrobe is positioned on the left side of the frame, while the lounge area with a white chair and dark console table appears on the right. The camera remains stationary, maintaining a medium shot that captures the subject’s upper body and surroundings. The depth of field is shallow, keeping the subject in focus while slightly blurring the background. The camera angle is eye-level, creating an intimate, conversational feel as if the viewer is part of the presentation. The subject’s movements are deliberate and slow, emphasizing the features he is showcasing, with no rapid motion or natural elements present. The overall narrative is informative, as he guides the viewer through a sophisticated storage solution within the modern interior.",
+    "title": "Shot 5",
+    "source_txt": "rank3-The video presents a bright, sunlit outdoor scene with a warm, natural color tone, dominated by vivi-0_lora_prompts.txt",
+    "block_indices": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 8
+}

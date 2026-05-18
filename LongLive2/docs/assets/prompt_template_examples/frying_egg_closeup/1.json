@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "frying_egg_closeup/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video presents a vibrant, warm-toned kitchen scene, bathed in bright, even artificial lighting that highlights the gleam of metal cookware and the golden hue of scrambled eggs. The atmosphere is energetic and utilitarian, characteristic of a bustling commercial kitchen, with a focus on efficiency and culinary skill. The style is documentary-like, capturing the fluid motion of cooking with a steady, close-up perspective that emphasizes texture and action.\nThe setting is clearly indoors, within a professional kitchen environment. Steel countertops and stainless-steel bowls populate the background, suggesting a high-volume food preparation area. A large, round, blackened wok dominates the foreground, its surface speckled with remnants of previous cooking. In the background, another large pan contains a similar dish, hinting at a continuous production line. The environment is organized yet busy, with a few utensils and containers visible, including a small metal bowl and a pair of red-handled scissors on a shelf, adding to the functional ambiance.\n\nTwo individuals are involved in the scene. The first, appearing in the first frame, is wearing a bright orange apron over a purple shirt. Their hands are visible, one gripping a wooden-handled spatula, the other holding a metal ladle. The second person, partially visible later, appears to be assisting or observing. Their attire suggests they are kitchen staff, likely chefs or cooks, focused on preparing a dish. The first individual’s hands move with precision, indicating experience and confidence.\n\nThe main objects include a large, round, blackened wok, a metal ladle, a wooden-handled spatula, and a stainless-steel bowl. The wok is in the foreground, while the ladle and spatula are actively used to transfer and stir the food. The metal bowl, positioned slightly to the side, contains a portion of the cooked egg mixture, suggesting a step in a larger recipe. The spatula moves in a circular motion, scraping and folding the scrambled eggs, while the ladle scoops and transfers the mixture into the wok, creating a dynamic interplay of motion and texture.\n\nThe camera remains static throughout, maintaining a medium close-up shot centered on the wok and the cook’s hands. The focus is shallow, keeping the wok and the immediate actions sharp while slightly blurring the background. The camera angle is eye-level, offering an intimate view of the cooking process. The movements of the cook are fluid and deliberate, with the spatula moving in sweeping arcs and the ladle lifting and pouring in a controlled manner. The eggs appear fluffy and golden, with the spatula breaking them into smaller pieces as they are stirred. The scene conveys a sense of rhythm and expertise, emphasizing the tactile nature of cooking. The overall narrative is one of culinary craftsmanship, capturing the essence of a professional kitchen in action.",
+    "title": "Shot 1",
+    "source_txt": "rank2-The video exhibits a warm, golden-yellow color tone with soft, diffused lighting, emphasizing the gl-0_lora_prompts.txt",
+    "block_indices": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+    ],
+    "num_blocks": 7
+}

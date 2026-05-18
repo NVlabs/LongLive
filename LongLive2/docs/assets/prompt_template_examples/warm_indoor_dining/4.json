@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "warm_indoor_dining/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video features a rich, warm-toned color palette dominated by deep reds and earthy browns from the broth, contrasted with the pale yellow of the noodles and the vibrant green of chopped scallions. The lighting is soft and ambient, suggesting an indoor dining environment with warm, diffused illumination that enhances the glossy sheen of the broth and the texture of the noodles. The atmosphere is cozy and inviting, evoking a sense of comfort and indulgence, with a slight haze of steam rising subtly from the hot dish. The style is intimate and cinematic, employing shallow depth of field to draw attention to the food while softly blurring the background elements.\nThe setting is clearly indoors, likely a traditional or modern Chinese restaurant, with wooden table surfaces and blue-and-white ceramic tableware visible in the background. The environment suggests a casual dining experience, possibly during evening hours, given the warm, dim lighting. The background is softly out of focus, revealing hints of other dishes and table settings, but no specific landmarks or external weather conditions are discernible.\n\nNo human characters are visible in the video. The focus remains entirely on the food and the action of eating. The main subjects are the noodles, broth, meat, and garnishes. The noodles are wide, flat, and translucent, glistening with sauce and speckled with red chili flakes and green scallions. The broth is a deep reddish-brown, rich and oily, with visible bits of meat and vegetables. A large piece of tender, dark-brown braised meat, likely beef or lamb, is nestled among the noodles. The noodles are lifted with black chopsticks, indicating an active interaction with the meal.\n\nThe camera begins with a medium close-up of the bowl, slowly zooming in as the chopsticks lift a portion of noodles and meat. The movement is slow and deliberate, emphasizing the texture and richness of the dish. The noodles dangle slightly, glistening with broth, while the meat clings to the chopsticks. The camera follows the upward motion, maintaining focus on the lifted portion as it moves out of the bowl. The depth of field remains shallow, keeping the noodles and meat in sharp focus while the bowl and background remain softly blurred. The shot transitions from a medium close-up to a close-up, capturing the intricate details of the noodles’ texture and the sauce’s viscosity. The angle is slightly elevated, as if from the perspective of someone seated at the table, enhancing the immersive experience of the meal. There is no wind or natural movement, but the subtle motion of the noodles and broth evokes a sense of warmth and satisfaction. The video’s narrative centers on the sensory indulgence of the dish, inviting viewers to imagine the taste and aroma of the meal.",
+    "title": "Shot 4",
+    "source_txt": "rank1-The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhan-0_lora_prompts.txt",
+    "block_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+    ],
+    "num_blocks": 6
+}

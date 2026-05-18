@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "warm_indoor_dining/6.mp4",
+    "filename": "6.mp4",
+    "caption": "The video presents a close-up, appetizing shot of a traditional Chinese cold beef dish, likely “Sliced Beef with Chili Oil and Peanuts,” served on a white ceramic plate with blue floral patterns along the rim. The scene is warmly lit, likely indoors under artificial lighting with a soft, golden hue that enhances the glossy, savory appearance of the dish. The atmosphere is inviting and mouthwatering, emphasizing the dish’s rich textures and vibrant garnishes. The camera remains static throughout, employing a shallow depth of field to keep the foreground sharply in focus while gently blurring the background, allowing the viewer to concentrate on the food’s intricate details.\nThe dish consists of thinly sliced beef arranged neatly on the plate, its surface glistening with a dark, oily sauce that hints at chili and soy-based seasoning. Scattered across the beef are roasted peanuts, finely chopped green onions, and minced garlic, adding contrasting textures and colors. The peanuts are light brown and glossy, while the green onions provide a fresh, bright green contrast. The sauce appears thick and glossy, pooling slightly between the slices, indicating a well-seasoned marinade.\n\nA pair of black chopsticks enters the frame from above, delicately grasping a slice of beef along with a few peanuts and green onions. The chopsticks move slowly and deliberately, lifting the slice upward in a gentle arc, revealing the tender, juicy interior of the beef. The motion is smooth and controlled, suggesting care and appreciation for the dish. The camera remains fixed, maintaining a close-up shot that captures the texture of the beef’s surface and the vibrant garnishes clinging to it.\n\nNo characters or people are visible in the video — the focus remains solely on the food and the act of lifting a portion with chopsticks. The environment is entirely implied through the plate’s design and the lighting, suggesting a dining setting, perhaps a restaurant or home kitchen. The time of day is not discernible, but the warm lighting suggests evening or indoor dining ambiance. The video’s style is realistic and culinary-focused, designed to evoke sensory pleasure and stimulate appetite. The shot is a medium close-up, with a shallow depth of field that isolates the food, creating an intimate, almost tactile experience for the viewer. The movement is slow and deliberate, emphasizing the dish’s visual appeal and the ritual of eating.",
+    "title": "Shot 6",
+    "source_txt": "rank1-The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhan-0_lora_prompts.txt",
+    "block_indices": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+    ],
+    "num_blocks": 6
+}

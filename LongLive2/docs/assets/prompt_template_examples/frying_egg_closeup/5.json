@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "frying_egg_closeup/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video is shot in a warm, slightly hazy kitchen environment, with natural daylight filtering through, casting soft, diffused illumination that enhances the steam rising from the cooking wok. The color tone is dominated by earthy metallic grays of the wok and pans, contrasted with the vibrant red of tomato sauce and the pale yellow of scrambled eggs. The atmosphere is bustling and aromatic, evoking the sensory richness of a professional or high-volume street food kitchen. The style is documentary realism, capturing the fluid motion and sensory details of cooking in real time.\nThe scene is set indoors, likely in a commercial kitchen, characterized by stainless steel surfaces, tiled flooring with patterned borders, and industrial cooking equipment. In the background, another large pan contains a simmering, golden-brown broth or soup, hinting at simultaneous meal preparation. The environment is functional and utilitarian, with no decorative elements, emphasizing the efficiency of the cooking process. The time of day appears to be midday, given the even, bright lighting, and the weather is not visible but implied to be clear due to the absence of shadows or haze outside the kitchen.\n\nA single chef, whose gender is not clearly discernible, appears in the frame starting at 0:00. They are wearing a red apron over casual clothing, suggesting a working kitchen setting. Their hands are the primary focus, with no visible facial features or hairstyle. The chef’s movements are deliberate and practiced, indicating experience. They hold a metal ladle in one hand and a small metal bowl in the other, pouring a mound of scrambled eggs into the wok containing tomato sauce. The chef then uses the ladle to stir and mix the ingredients, breaking apart the eggs to blend them thoroughly into the sauce. The motion is fluid and rhythmic, suggesting familiarity with the task. The camera remains static, positioned at eye level, offering a medium shot that captures the wok and the chef’s upper body. The depth of field is shallow, keeping the wok and ingredients in sharp focus while slightly blurring the background elements. The steam rising from the wok adds a dynamic, almost ethereal quality to the scene, enhancing the feeling of warmth and activity. The main movement is the chef’s hands and the ladle, moving in circular motions to mix the ingredients. The overall narrative is one of culinary craftsmanship, emphasizing the tactile and sensory experience of cooking.",
+    "title": "Shot 5",
+    "source_txt": "rank2-The video exhibits a warm, golden-yellow color tone with soft, diffused lighting, emphasizing the gl-0_lora_prompts.txt",
+    "block_indices": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+    ],
+    "num_blocks": 7
+}

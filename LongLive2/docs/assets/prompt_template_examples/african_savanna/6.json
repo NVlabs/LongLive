@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "african_savanna/6.mp4",
+    "filename": "6.mp4",
+    "caption": "The video opens with a warm, golden-hued tone under bright, natural daylight, casting soft, diffused light across the savanna. The atmosphere is serene yet dynamic, evoking the wildness of an African safari. The style is documentary-like, with handheld camera movement that conveys immediacy and immersion. The camera starts with a close-up of an adult African elephant, its wrinkled gray skin glistening slightly under the sun, large flapping ears, and prominent white tusks. It strides confidently through tall, dry grass, kicking up dust as it moves. The background reveals a vast, open savanna dotted with acacia trees and distant rolling hills under a partly cloudy sky, suggesting midday warmth and dryness.\nThe scene transitions to a moving vehicle’s perspective, with the camera positioned inside a safari jeep. A red strap dangles from the frame’s edge, hinting at the vehicle’s rustic, functional design. The elephant, now viewed from a distance, continues to walk steadily toward the horizon, framed by a solitary acacia tree. The camera pans slightly, capturing the expansive landscape as the jeep moves forward, maintaining the elephant in the center of the frame. The sky’s scattered clouds cast shifting patterns of light and shadow over the terrain.\n\nInside the jeep, a young man with short, light brown hair appears in profile, smiling with evident excitement and awe. He wears a green shirt and holds a camera, suggesting he’s a wildlife photographer or safari guide. His expression is animated, reflecting the thrill of witnessing the majestic animal up close. The camera briefly captures his joyful reaction before refocusing on the elephant as it moves away.\n\nThe main subject—the elephant—remains the central focus of the video, moving steadily across the frame from center to left, gradually receding into the distance. Its slow, deliberate gait contrasts with the jeep’s forward motion, creating a sense of cinematic pursuit. The camera employs a medium shot to capture both the elephant’s grandeur and the observer’s perspective, maintaining a shallow depth of field that blurs the background slightly, emphasizing the elephant’s presence.\n\nThe video’s narrative is observational and immersive, blending the grandeur of nature with human curiosity. The elephant’s calm, steady movement contrasts with the jeep’s forward momentum, symbolizing the harmonious coexistence between wildlife and human exploration. The wind occasionally stirs the grass, adding subtle motion to the scene, while the sun casts long, warm shadows that enhance the earthy tones of the landscape. The overall effect is one of awe, tranquility, and reverence for the untamed African wilderness.",
+    "title": "Shot 6",
+    "source_txt": "rank3-The video presents a warm, golden-hued African savanna scene under a soft, diffused daylight, sugges-0_lora_prompts.txt",
+    "block_indices": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LongLive2.0 Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="LongLive2.0 documentation home">
+      <span class="brand-mark">LL2</span>
+      <span>
+        <strong>LongLive2.0</strong>
+        <small>Documentation</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Top navigation">
+      <a href="#installation">Installation</a>
+      <a href="#training">Training</a>
+      <a href="#inference">Inference</a>
+      <a href="https://github.com/NVlabs/LongLive">GitHub</a>
+    </nav>
+  </header>
+
+  <div class="layout" id="top">
+    <aside class="sidebar" aria-label="Documentation sections">
+      <nav>
+        <a class="nav-top" href="#about">About</a>
+        <details class="nav-group" open>
+          <summary>Installation</summary>
+          <a href="#installation">Environment</a>
+          <a href="#nvfp4-installation">NVFP4 Environment</a>
+          <a href="#quick-start">Quick Start</a>
+        </details>
+        <details class="nav-group" open>
+          <summary>Training</summary>
+          <a href="#configs">Configs</a>
+          <a href="#training-data">Training Data</a>
+          <a href="#ar-training">AR Diffusion Training</a>
+          <a href="#dmd-training">DMD Distillation</a>
+          <a href="#nvfp4-training">NVFP4 Training</a>
+        </details>
+        <details class="nav-group" open>
+          <summary>Inference</summary>
+          <a href="#inference">Overview</a>
+          <a href="#export-checkpoints">Export Checkpoints</a>
+          <a href="#prompt-format">Prompt Format</a>
+          <a href="#prompt-design">Prompt Design</a>
+          <a href="#nvfp4-inference">NVFP4 Inference</a>
+          <a href="#sp-inference">SP Inference</a>
+          <a href="#utilities">Utilities</a>
+          <a href="#troubleshooting">Troubleshooting</a>
+        </details>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <img src="assets/logo.png" alt="LongLive2.0 logo">
+        <p class="eyebrow">Long video generation infrastructure</p>
+        <h1>LongLive2.0 Documentation</h1>
+        <p class="lead">
+          Setup, training, and inference instructions for the LongLive2.0 release.
+          This release focuses on Wan2.2-TI2V-5B, chunk-level AR diffusion training,
+          DMD distillation, and long-video inference.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#installation">Get started</a>
+          <a class="button" href="https://github.com/NVlabs/LongLive">View repository</a>
+        </div>
+      </section>
+
+      <section id="about" class="card">
+        <h2>About</h2>
+        <p>
+          LongLive2.0 co-designs chunk-level autoregressive video generation with
+          the training and inference infrastructure needed for long videos. The
+          release contains three primary workflows: AR diffusion training, DMD
+          distillation, and inference.
+        </p>
+        <figure>
+          <img src="assets/fig_framework_overview.png" alt="LongLive2.0 framework overview">
+          <figcaption>LongLive2.0 framework overview.</figcaption>
+        </figure>
+      </section>
+
+      <section id="installation" class="card">
+        <h2>Installation</h2>
+        <p>Create a Python 3.10 environment named <code>longlive2</code> and install the required packages.</p>
+        <pre><code>conda create -n longlive2 python=3.10 -y
+conda activate longlive2
+pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu128
+pip install -r requirements.txt
+pip install flash-attn --no-build-isolation</code></pre>
+
+        <h3>Repository</h3>
+        <pre><code>git clone https://github.com/NVlabs/LongLive.git
+cd LongLive</code></pre>
+
+        <h3>Model Files</h3>
+        <p>
+          Download the Wan2.2-TI2V-5B components and place them under
+          <code>wan_models/Wan2.2-TI2V-5B</code>. LongLive2.0 checkpoints should be
+          placed in a local checkpoint folder, then referenced from the config files.
+        </p>
+        <pre><code>huggingface-cli download Wan-AI/Wan2.2-TI2V-5B \
+  --local-dir wan_models/Wan2.2-TI2V-5B</code></pre>
+
+        <p>
+          If <code>inference.vae_type</code> is set to <code>mg_lightvae</code> or
+          <code>mg_lightvae_v2</code>, download the corresponding VAE checkpoints
+          from <code>Skywork/Matrix-Game-3.0</code> and place them under
+          <code>wan_models/Matrix-Game-3.0</code>.
+        </p>
+        <pre><code>wan_models/Matrix-Game-3.0/MG-LightVAE.pth
+wan_models/Matrix-Game-3.0/MG-LightVAE_v2.pth</code></pre>
+
+        <section id="nvfp4-installation" class="subsection">
+          <h3>NVFP4 Environment</h3>
+          <p>
+            The default installation above is the clean BF16 release setup.
+            NVFP4 training and inference use local CUDA extensions and are more
+            version-sensitive, so keep them in a separate environment.
+          </p>
+          <pre><code>conda create -n longlive2_nvfp4 python=3.12 -y
+conda activate longlive2_nvfp4
+conda install -c nvidia cuda-toolkit=12.8 -y
+pip install -r requirements.txt
+pip install --upgrade --index-url https://download.pytorch.org/whl/cu128 \
+  torch==2.10.0 torchvision==0.25.0</code></pre>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Known-good version</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Python</td>
+                  <td><code>3.12.12</code></td>
+                </tr>
+                <tr>
+                  <td>PyTorch</td>
+                  <td><code>2.10.0+cu128</code></td>
+                </tr>
+                <tr>
+                  <td>TorchVision</td>
+                  <td><code>0.25.0+cu128</code></td>
+                </tr>
+                <tr>
+                  <td>CUDA target</td>
+                  <td><code>12.8</code></td>
+                </tr>
+                <tr>
+                  <td>FlashAttention</td>
+                  <td><code>2.8.3</code>, built from source</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>Build NVFP4 extensions</h4>
+          <pre><code>cd fouroversix
+pip install ninja packaging psutil "setuptools&gt;=77.0.3"
+export CUDA_ARCHS=100
+pip install --no-build-isolation -e .
+cd ..
+
+cd utils/kernel
+python setup.py build_ext --inplace
+cd ../..</code></pre>
+          <ul>
+            <li>Use <code>CUDA_ARCHS=100</code> for B200, GB200, or GB300 targets.</li>
+            <li>Build FlashAttention from source with tag <code>v2.8.3</code> for the NVFP4 environment.</li>
+            <li>Install <code>transformer-engine[pytorch]</code> if <code>model_quant_use_transformer_engine</code> will be enabled.</li>
+          </ul>
+        </section>
+      </section>
+
+      <section id="quick-start" class="card">
+        <h2>Quick Start</h2>
+
+        <h3>BF16</h3>
+        <pre><code>import torch
+from omegaconf import OmegaConf
+
+from pipeline import CausalDiffusionInferencePipeline
+from utils.config import normalize_config
+from utils.inference_utils import (
+    load_generator_checkpoint,
+    place_vae_for_streaming,
+    prepare_single_prompt_inputs,
+    save_video,
+)
+
+prompt = "A compact silver robot walks through a clean robotics lab."
+merged_checkpoint_path = "LongLive-2.0-5B/model_bf16.pt"
+
+config = normalize_config(OmegaConf.load("configs/inference.yaml"))
+device = torch.device("cuda")
+
+torch.set_grad_enabled(False)
+pipe = CausalDiffusionInferencePipeline(config, device=device)
+load_generator_checkpoint(pipe.generator, merged_checkpoint_path)
+pipe = pipe.to(device=device, dtype=torch.bfloat16)
+place_vae_for_streaming(pipe, config)  # honor streaming_vae + vae_device when set
+pipe.generator.model.eval().requires_grad_(False)
+
+noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
+video = pipe.inference(noise=noise, text_prompts=prompts)
+save_video(video[0], "videos/quickstart/sample.mp4", fps=24)</code></pre>
+        <p>
+          <code>place_vae_for_streaming</code> is a no-op unless
+          <code>inference.streaming_vae</code> is true and
+          <code>inference.vae_device</code> is set, so toggling streaming-pipeline
+          decode in the yaml is enough.
+        </p>
+
+        <h3>NVFP4</h3>
+        <p>
+          Point <code>checkpoints.generator_ckpt</code> in
+          <code>configs/nvfp4/inference_nvfp4.yaml</code> at the downloaded
+          checkpoint and set <code>model_quant_use_transformer_engine</code>
+          according to the backend:
+        </p>
+        <ul>
+          <li>TransformerEngine checkpoint (<code>model_te.pt</code>): <code>model_quant_use_transformer_engine: true</code></li>
+          <li>FourOverSix checkpoint (<code>model_4o6.pt</code>): <code>model_quant_use_transformer_engine: false</code></li>
+        </ul>
+        <p>
+          <code>setup_nvfp4_pipeline</code> handles checkpoint loading, NVFP4
+          module wrapping, weight materialization, dtype/device placement, and
+          streaming-pipeline VAE relocation for both backends.
+        </p>
+        <pre><code>import torch
+from omegaconf import OmegaConf
+
+from pipeline import CausalDiffusionInferencePipeline
+from utils.config import normalize_config
+from utils.inference_utils import prepare_single_prompt_inputs, save_video, setup_nvfp4_pipeline
+
+prompt = "A compact silver robot walks through a clean robotics lab."
+
+config = normalize_config(OmegaConf.load("configs/nvfp4/inference_nvfp4.yaml"))
+device = torch.device("cuda")
+
+torch.set_grad_enabled(False)
+pipe = CausalDiffusionInferencePipeline(config, device=device)
+setup_nvfp4_pipeline(pipe, config, device)
+pipe.generator.model.eval().requires_grad_(False)
+
+noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
+video = pipe.inference(noise=noise, text_prompts=prompts)
+save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
+      </section>
+
+      <section id="configs" class="card">
+        <h2>Configs</h2>
+        <p>The release keeps BF16 configs at the top level and NVFP4 configs under <code>configs/nvfp4</code>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Config</th>
+                <th>Workflow</th>
+                <th>Main entry</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>configs/train_ar.yaml</code></td>
+                <td>AR diffusion training</td>
+                <td><code>train.py</code></td>
+              </tr>
+              <tr>
+                <td><code>configs/train_dmd.yaml</code></td>
+                <td>DMD distillation</td>
+                <td><code>train.py</code></td>
+              </tr>
+              <tr>
+                <td><code>configs/inference.yaml</code></td>
+                <td>Generation</td>
+                <td><code>inference.py</code></td>
+              </tr>
+              <tr>
+                <td><code>configs/inference_sp.yaml</code></td>
+                <td>Sequence-parallel generation</td>
+                <td><code>inference_sp.py</code></td>
+              </tr>
+              <tr>
+                <td><code>configs/nvfp4/train_ar_nvfp4.yaml</code></td>
+                <td>NVFP4 AR teacher-forcing training</td>
+                <td><code>train.py</code></td>
+              </tr>
+              <tr>
+                <td><code>configs/nvfp4/train_dmd_nvfp4_step4.yaml</code></td>
+                <td>NVFP4 DMD LoRA distillation</td>
+                <td><code>train.py</code></td>
+              </tr>
+              <tr>
+                <td><code>configs/nvfp4/inference_nvfp4.yaml</code></td>
+                <td>NVFP4 generation with optional KV quantization</td>
+                <td><code>inference.py</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Before running, replace the <code>/path/to/longlive2/...</code> placeholders
+          in the BF16 and NVFP4 configs with local dataset, prompt, and
+          checkpoint paths.
+        </p>
+      </section>
+
+      <section id="training" class="card">
+        <h2>Training</h2>
+        <p>
+          LongLive2.0 uses a two-stage training path. The first stage trains the
+          chunk-level AR diffusion model. The second stage distills it into a
+          few-step generator with DMD and optional LoRA adapters.
+        </p>
+
+        <section id="training-data" class="subsection">
+          <h3>Training Data Organization</h3>
+          <p>
+            AR diffusion training reads paired video-caption folders through
+            <code>MultiVideoConcatDataset</code>. Each sample has a matching
+            folder under <code>video/</code> and <code>caption/</code>. The video
+            folder stores one or more clips, and the caption folder stores JSON
+            captions with matching file stems.
+          </p>
+          <div class="callout">
+            <strong>Toy dataset.</strong>
+            A small format-checking toy dataset is available on Hugging Face:
+            <a href="https://huggingface.co/datasets/Efficient-Large-Model/LongLive2.0-Toy-Dataset">LongLive2.0 toy dataset</a>.
+          </div>
+          <pre><code>longlive2_train_dataset/
+  video/
+    sample_0001/
+      0.mp4
+      1.mp4
+  caption/
+    sample_0001/
+      0.json
+      1.json</code></pre>
+          <p>Each caption JSON should contain a <code>caption</code> field.</p>
+          <pre><code>{
+  "caption": "A compact silver robot with one blue optic explores a clean robotics lab."
+}</code></pre>
+          <ul>
+            <li>AR training uses longer windows and chunk-halo VAE preparation with sequence parallelism.</li>
+            <li>AR training samples chunks according to the source video durations and loads the caption JSON with the same file stem as each sampled clip.</li>
+            <li>Use <code>max_chunks_per_shot</code> in the training config if a long video should be split into shorter virtual shots.</li>
+          </ul>
+          <p>
+            DMD distillation uses prompt-only backward simulation by default and
+            reads prompts through <code>MultiTextConcatDataset</code>. Set
+            <code>configs/train_dmd.yaml:data.data_path</code> to either a
+            <code>.txt</code> prompt file or a JSON caption directory.
+          </p>
+          <pre><code>dmd_distillation/
+  prompts.txt
+  json_prompts/
+    sample_0001/
+      0.json
+      1.json
+      shot_durations.txt</code></pre>
+        </section>
+
+        <section id="ar-training" class="subsection">
+          <h3>AR Diffusion Training</h3>
+          <p>
+            Edit <code>configs/train_ar.yaml</code> to set the training dataset,
+            evaluation prompt folder, SP size, and logging options.
+          </p>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_ar.yaml \
+  --logdir logs/train_ar \
+  --wandb-save-dir wandb \
+  --disable-wandb</code></pre>
+          <ul>
+            <li><code>infra.sequence_parallel_size</code> controls the SP group size.</li>
+            <li><code>infra.vae_halo_latents</code> controls chunk-halo VAE preparation.</li>
+            <li><code>model_kwargs.local_attn_size</code> is kept in model kwargs to match model construction.</li>
+            <li><code>inference.sampling_steps</code> and sink settings control training-time evaluation.</li>
+          </ul>
+        </section>
+
+        <section id="dmd-training" class="subsection">
+          <h3>DMD Distillation</h3>
+          <p>
+            Edit <code>configs/train_dmd.yaml</code> to set initialization checkpoints
+            and distillation data. If the <code>adapter</code> section is present,
+            LoRA distillation is enabled.
+          </p>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_dmd.yaml \
+  --logdir logs/train_dmd \
+  --wandb-save-dir wandb \
+  --disable-wandb</code></pre>
+          <ul>
+            <li><code>algorithm.real_guidance_scale</code> and <code>algorithm.fake_guidance_scale</code> are used by score distillation.</li>
+            <li><code>inference.sampling_steps</code> controls the rollout used during distillation.</li>
+            <li>Auto-resume is enabled by default. Pass <code>--no-auto-resume</code> to disable it.</li>
+          </ul>
+        </section>
+
+        <section id="nvfp4-training" class="subsection">
+          <h3>NVFP4 Training</h3>
+          <p>
+            Use the <code>longlive2_nvfp4</code> environment and build the NVFP4
+            extensions before running these commands. Replace the
+            <code>/path/to/...</code> placeholders in the configs first.
+          </p>
+          <h4>AR Diffusion Training</h4>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=4 train.py \
+  --config_path configs/nvfp4/train_ar_nvfp4.yaml \
+  --logdir logs/nvfp4_ar \
+  --wandb-save-dir wandb \
+  --disable-wandb</code></pre>
+          <h4>DMD Distillation</h4>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=4 train.py \
+  --config_path configs/nvfp4/train_dmd_nvfp4_step4.yaml \
+  --logdir logs/nvfp4_dmd_step4 \
+  --wandb-save-dir wandb \
+  --disable-wandb</code></pre>
+          <ul>
+            <li><code>--nproc_per_node</code> controls the per-node GPU count. The NVFP4 examples use 4 GPUs.</li>
+            <li><code>infra.model_quant</code> enables NVFP4 generator training for stage 1.</li>
+            <li><code>infra.generator_quant</code>, <code>infra.real_score_quant</code>, and <code>infra.fake_score_quant</code> choose which DMD networks use NVFP4 in stage 2.</li>
+          </ul>
+          <p>
+            After stage 1 and stage 2 are complete, export a merged inference
+            checkpoint using the unified
+            <a href="#export-checkpoints">checkpoint export section</a>.
+          </p>
+        </section>
+      </section>
+
+      <section id="inference" class="card">
+        <h2>Inference</h2>
+        <p>
+          Edit <code>configs/inference.yaml</code> to set the prompt folder,
+          generator checkpoint, optional LoRA checkpoint, output folder, and number
+          of samples.
+        </p>
+        <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 inference.py \
+  --config_path configs/inference.yaml</code></pre>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>data.data_path</code></td>
+                <td>Prompt folder for generation.</td>
+              </tr>
+              <tr>
+                <td><code>checkpoints.generator_ckpt</code></td>
+                <td>Generator checkpoint. This can be either a merged checkpoint or the AR-trained base checkpoint used together with LoRA.</td>
+              </tr>
+              <tr>
+                <td><code>checkpoints.lora_ckpt</code></td>
+                <td>Optional LoRA checkpoint. Use it only when <code>generator_ckpt</code> points to the base generator rather than a merged checkpoint.</td>
+              </tr>
+              <tr>
+                <td><code>inference.sampling_steps</code></td>
+                <td>Number of denoising steps.</td>
+              </tr>
+              <tr>
+                <td><code>inference.sink_size</code></td>
+                <td>Standard attention sink length.</td>
+              </tr>
+              <tr>
+                <td><code>inference.multi_shot_sink</code></td>
+                <td>Enable multi-shot attention sink.</td>
+              </tr>
+              <tr>
+                <td><code>inference.multi_shot_rope_offset</code></td>
+                <td>Multi-shot RoPE offset.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section id="export-checkpoints" class="subsection">
+          <h3>Export Inference Checkpoints</h3>
+          <p>
+            After AR diffusion training and DMD distillation, you may have an
+            AR-trained base generator checkpoint and a DMD LoRA checkpoint. For
+            inference, export a merged checkpoint once so runtime loading is
+            simpler. Use the BF16 path for regular inference, and the NVFP4 path
+            when preparing quantized inference checkpoints.
+          </p>
+
+          <h4>BF16 merged generator</h4>
+          <p>
+            This path merges the base generator and LoRA weights into one BF16
+            generator checkpoint. The script reads
+            <code>checkpoints.generator_ckpt</code>,
+            <code>checkpoints.lora_ckpt</code>, and the top-level
+            <code>adapter</code> settings from <code>configs/inference.yaml</code>.
+          </p>
+          <pre><code>python scripts/merge_lora_generator.py \
+  --config_path configs/inference.yaml \
+  --output_path /path/to/longlive2_merged_generator.pt \
+  --device cuda:0</code></pre>
+          <p>
+            You can also override the two input checkpoints from the command
+            line:
+          </p>
+          <pre><code>python scripts/merge_lora_generator.py \
+  --config_path configs/inference.yaml \
+  --generator_ckpt /path/to/ar_generator.pt \
+  --lora_ckpt /path/to/dmd_lora.pt \
+  --output_path /path/to/longlive2_merged_generator.pt \
+  --device cuda:0</code></pre>
+          <p>
+            To use the merged BF16 checkpoint with the full
+            <code>inference.py</code> entry point, set
+            <code>checkpoints.generator_ckpt</code> to the merged file and
+            remove <code>checkpoints.lora_ckpt</code> and the top-level
+            <code>adapter</code> section. Keeping LoRA enabled after loading a
+            merged checkpoint would apply the adapter twice.
+          </p>
+          <pre><code>checkpoints:
+  generator_ckpt: /path/to/longlive2_merged_generator.pt
+
+# Remove lora_ckpt and adapter when using merged weights.</code></pre>
+
+          <h4>NVFP4 merged exports</h4>
+          <p>
+            This path prepares merged checkpoints for NVFP4 inference. The script
+            reads <code>generator_ckpt</code>, <code>lora_ckpt</code>,
+            <code>adapter</code>, and <code>model_quant_*</code> from
+            <code>configs/nvfp4/inference_nvfp4.yaml</code>.
+          </p>
+          <p>Save a compact FourOverSix materialized NVFP4 generator checkpoint:</p>
+          <pre><code>python scripts/save_merged_nvfp4_generator.py \
+  --config_path configs/nvfp4/inference_nvfp4.yaml \
+  --output_path /path/to/model_4o6.pt \
+  --backend fouroversix \
+  --device cuda:0</code></pre>
+          <p>Save merged BF16 weights for TransformerEngine runtime quantization:</p>
+          <pre><code>python scripts/save_merged_nvfp4_generator.py \
+  --config_path configs/nvfp4/inference_nvfp4.yaml \
+  --output_path /path/to/model_te.pt \
+  --backend transformer_engine \
+  --device cuda:0</code></pre>
+          <ul>
+            <li><code>--backend fouroversix</code> saves the small packed/materialized NVFP4 checkpoint.</li>
+            <li><code>--backend transformer_engine</code> intentionally saves merged BF16 weights; TransformerEngine quantization is applied again when inference loads them.</li>
+          </ul>
+        </section>
+
+        <section id="prompt-format" class="subsection">
+          <h3>Prompt Input Format</h3>
+          <p>
+            <code>data.data_path</code> can point to either a plain text file or a
+            directory of multi-shot prompt folders.
+          </p>
+          <h4>Single-shot text file</h4>
+          <p>
+            Each non-empty line is treated as one sample. The same caption is
+            repeated across all generated temporal chunks.
+          </p>
+          <pre><code>prompts.txt
+  A compact silver robot with one blue optic moves through a clean robotics lab.
+  A first-person autonomous driving view explores a quiet campus road.</code></pre>
+          <h4>Multi-shot directory</h4>
+          <p>
+            Each sample folder contains numbered JSON caption files. The
+            recommended layout makes <code>data.data_path</code> point directly
+            to the caption-root directory.
+          </p>
+          <pre><code>inference_prompts/
+  robot_lab_demo/
+    0.json
+    1.json
+    2.json
+    shot_durations.txt</code></pre>
+          <p>
+            The loader also accepts a dataset root that contains an outer
+            <code>caption/</code> folder.
+          </p>
+          <pre><code>inference_prompts/
+  caption/
+    robot_lab_demo/
+      0.json
+      1.json
+      2.json
+      shot_durations.txt</code></pre>
+          <p>
+            If <code>shot_durations.txt</code> is present, each number gives the
+            number of temporal chunks for the corresponding caption.
+          </p>
+          <pre><code>{
+  "caption": "A compact silver robot with one blue optic stands beside a white workbench."
+}</code></pre>
+          <p>
+            At shot boundaries, LongLive2.0 automatically prepends the configured
+            <code>scene_cut_prefix</code> to the first chunk of the new shot.
+          </p>
+        </section>
+
+        <section id="prompt-design" class="subsection">
+          <h3>Prompt Design Notes</h3>
+          <p>
+            Multi-shot evaluation prompts should describe grounded, realistic
+            short video sequences with simple elements, stable backgrounds, slow
+            normal actions, and clear shot-to-shot progression. Each case folder
+            represents one complete video, and each numbered JSON file describes
+            one shot in that sequence.
+          </p>
+          <div class="callout">
+            <strong>Prompt examples.</strong>
+            The concrete example cases live under
+            <a href="assets/prompt_template_examples/">assets/prompt_template_examples/</a>.
+            Keep example folders there, with numbered JSON files and
+            <code>shot_durations.txt</code> files beside them.
+          </div>
+
+          <h4>Dataset Layout</h4>
+          <p>
+            The recommended layout is to make <code>data.data_path</code> point
+            directly to the caption-root directory.
+          </p>
+          <pre><code>prompt_root/
+  case_name/
+    0.json
+    1.json
+    2.json
+    ...
+    shot_durations.txt</code></pre>
+          <p>
+            The inference loader also accepts a dataset root with an outer
+            <code>caption/</code> folder.
+          </p>
+          <pre><code>prompt_root/
+  caption/
+    case_name/
+      0.json
+      1.json
+      2.json
+      ...
+      shot_durations.txt</code></pre>
+          <ul>
+            <li>Use one folder per complete multi-shot video case.</li>
+            <li>Name shot JSON files consecutively from <code>0.json</code> to <code>N-1.json</code>.</li>
+            <li>Store one duration value per shot in <code>shot_durations.txt</code>; the value is the number of blocks assigned to the matching shot.</li>
+            <li>Keep the number of duration values equal to the number of shot JSON files.</li>
+            <li>The outer <code>caption/</code> folder is optional for inference; if <code>data.data_path/caption/</code> exists, the code reads from it, otherwise it reads sample folders directly under <code>data.data_path</code>.</li>
+          </ul>
+
+          <h4>Per-shot JSON</h4>
+          <p>
+            Each shot file must be valid JSON. The required field for generation
+            is <code>caption</code>; metadata fields may stay empty when they are
+            not needed by the prompt loader.
+          </p>
+          <pre><code>{
+  "video_path": "",
+  "relative_path": "",
+  "filename": "",
+  "caption": "Full shot prompt text here.",
+  "title": "Short descriptive title"
+}</code></pre>
+
+          <h4>Caption Structure</h4>
+          <p>
+            Aim for roughly 300 tokens per shot prompt. Use complete English
+            sentences in present tense, keep the caption as one JSON string, and
+            separate paragraphs with <code>\n\n</code>. Do not add bullet points
+            or Markdown formatting inside the caption.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Paragraph</th>
+                  <th>Focus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Visual style, color tone, lighting, atmosphere, and overall camera feeling.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Scene and environment, including time of day, weather, and stable background details.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Visible characters, stable identity descriptors, clothing, expression, and posture.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Key objects, materials, quantities, spatial positions, and foreground or background placement.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Action, blocking, subject motion, object interactions, and natural motion cues.</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Shot size, depth of field, lens feeling, camera movement, and shooting angle.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Five-paragraph captions are also acceptable. In that case, combine
+            key objects with action, or combine action with cinematography.
+          </p>
+
+          <h4>Continuity Checklist</h4>
+          <ul>
+            <li>Keep each shot visually simple. Use one main subject, one location, and one clear action when possible.</li>
+            <li>Anchor identity with short repeated descriptors instead of relying only on words like <code>same</code>.</li>
+            <li>Repeat important object attributes across shots, such as color, shape, material, and scale.</li>
+            <li>Change the action or camera view at shot boundaries while preserving the subject description.</li>
+            <li>Avoid describing the same completed action again in the next shot unless the action should continue.</li>
+            <li>Use <code>shot_durations.txt</code> to keep complex shots shorter and calm exploration shots longer.</li>
+            <li>Before adding a case, confirm every JSON has a non-empty <code>caption</code> and the expected paragraph format.</li>
+          </ul>
+        </section>
+
+        <section id="nvfp4-inference" class="subsection">
+          <h3>NVFP4 Inference</h3>
+          <p>
+            Edit <code>configs/nvfp4/inference_nvfp4.yaml</code> to set the prompt
+            folder, generator checkpoint, optional DMD LoRA checkpoint, output
+            folder, and number of samples.
+          </p>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=4 inference.py \
+  --config_path configs/nvfp4/inference_nvfp4.yaml</code></pre>
+          <p>For single-GPU inference, use <code>python</code> directly.</p>
+          <pre><code>python inference.py --config_path configs/nvfp4/inference_nvfp4.yaml</code></pre>
+          <h4>Async / streaming VAE decode</h4>
+          <p>
+            Use the VAE decode options to decode long videos chunk by chunk,
+            optionally overlapping decode with generation.
+          </p>
+          <pre><code>inference:
+  streaming_vae: true
+  async_vae: true
+  vae_type: wan # wan, mg_lightvae, mg_lightvae_v2
+  # Omit vae_device for same-GPU async CUDA-stream decode.
+  # Set vae_device to use a dedicated GPU for VAE decode.
+  # vae_device: "cuda:2"</code></pre>
+          <div class="callout">
+            <strong>Async decode mode.</strong>
+            <code>vae_device</code> only applies when <code>streaming_vae</code> is
+            enabled. If <code>vae_device</code> is set, VAE decode runs on that
+            device in the dedicated VAE path. If it is omitted,
+            <code>async_vae: true</code> overlaps VAE decode on the inference GPU
+            with an extra CUDA stream.
+          </div>
+          <h4>Checkpoint styles</h4>
+          <p>FourOverSix compact/materialized NVFP4 checkpoint:</p>
+          <pre><code>checkpoints:
+  generator_ckpt: /path/to/model_4o6.pt
+
+merge_lora: false
+model_quant: true
+model_quant_use_transformer_engine: false</code></pre>
+          <p>TransformerEngine runtime quantization from merged BF16 weights:</p>
+          <pre><code>checkpoints:
+  generator_ckpt: /path/to/model_te.pt
+
+merge_lora: false
+model_quant: true
+model_quant_use_transformer_engine: true</code></pre>
+          <div class="callout">
+            <strong>Checkpoint backend.</strong>
+            Do not set <code>model_quant_use_transformer_engine: true</code> when
+            loading a FourOverSix materialized checkpoint. FourOverSix checkpoints
+            store <code>quantized_weight_*</code> buffers and can only be loaded by
+            the FourOverSix path. TransformerEngine inference should load merged
+            BF16 weights and quantize them at runtime.
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>model_quant</code></td>
+                  <td>Enable generator NVFP4 inference; regular BF16 checkpoints are quantized during startup, while pre-saved FourOverSix checkpoints already contain materialized weights.</td>
+                </tr>
+                <tr>
+                  <td><code>merge_lora</code></td>
+                  <td>Merge the LoRA checkpoint before quantized materialization. Set to <code>false</code> when <code>generator_ckpt</code> already points to a merged export.</td>
+                </tr>
+                <tr>
+                  <td><code>inference.kv_quant</code></td>
+                  <td>Enable FP4 KV-cache storage with the fused dequant extension.</td>
+                </tr>
+                <tr>
+                  <td><code>inference.streaming_vae</code></td>
+                  <td>Decode generated latents chunk by chunk instead of decoding the full output at the end.</td>
+                </tr>
+                <tr>
+                  <td><code>inference.async_vae</code></td>
+                  <td>When <code>streaming_vae</code> is true and <code>vae_device</code> is omitted, overlap VAE decode with generation on an extra CUDA stream.</td>
+                </tr>
+                <tr>
+                  <td><code>inference.vae_type</code></td>
+                  <td>Select <code>wan</code>, <code>mg_lightvae</code>, or <code>mg_lightvae_v2</code> for decode.</td>
+                </tr>
+                <tr>
+                  <td><code>inference.vae_device</code></td>
+                  <td>When <code>streaming_vae</code> is true, run VAE decode on a dedicated device such as <code>cuda:2</code>; otherwise it is ignored.</td>
+                </tr>
+                <tr>
+                  <td><code>torch_compile</code></td>
+                  <td>Set compile behavior to <code>auto</code>, <code>true</code>, or <code>false</code>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="sp-inference" class="subsection">
+          <h3>Sequence-parallel (SP) Inference</h3>
+          <p>
+            <code>inference_sp.py</code> drives Ulysses sequence-parallel sampling
+            for WAN. See <code>configs/inference_sp.yaml</code> for
+            <code>sp_size</code>, <code>dp_size</code>, prompts, checkpoints, and
+            the usual <code>inference.*</code> knobs.
+          </p>
+          <pre><code>torchrun --nproc_per_node=4 inference_sp.py --config_path configs/inference_sp.yaml</code></pre>
+          <div class="callout">
+            <strong>Process count.</strong>
+            Launch one process per GPU with <code>--nproc_per_node</code> equal to
+            <code>sp_size &times; dp_size</code>. The shipped example uses
+            <code>sp_size: 4</code> and <code>dp_size: 1</code>, so it runs four ranks.
+          </div>
+        </section>
+      </section>
+
+      <section id="utilities" class="card">
+        <h2>Utilities</h2>
+        <h3>Inspect Chunk-Halo VAE Windows</h3>
+        <pre><code>python scripts/compute_sp_vae_chunk_halo.py --config configs/train_ar.yaml</code></pre>
+
+        <h3>Decode Saved Latents</h3>
+        <pre><code>python scripts/decode_vae_latents.py --help
+python scripts/decode_lightvae_latents.py --help</code></pre>
+      </section>
+
+      <section id="troubleshooting" class="card">
+        <h2>Troubleshooting</h2>
+        <div class="callout">
+          <strong>Config placeholders.</strong>
+          Training or inference will fail until dataset, prompt, and checkpoint
+          placeholders are replaced with valid local paths.
+        </div>
+        <div class="callout">
+          <strong>GPU count.</strong>
+          Make sure <code>--nproc_per_node</code> matches the available GPUs and is
+          compatible with <code>infra.sequence_parallel_size</code> for AR training.
+        </div>
+        <div class="callout">
+          <strong>FlashAttention.</strong>
+          If <code>flash-attn</code> fails to build, verify CUDA, PyTorch, and compiler
+          compatibility before running training.
+        </div>
+        <div class="callout">
+          <strong>NVFP4 kernels.</strong>
+          Build both the local <code>fouroversix</code> package and
+          <code>utils/kernel</code> extension before enabling NVFP4 inference with
+          <code>inference.kv_quant</code>.
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

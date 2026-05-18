@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "brown_bear_river/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video presents a serene, naturalistic close-up of a brown bear’s face, bathed in soft, diffused daylight that suggests either early morning or late afternoon. The color tone is warm and earthy, dominated by browns and muted greens, with a shallow depth of field that blurs the background into a soft bokeh of foliage, emphasizing the bear’s facial features. The lighting is gentle and even, casting subtle shadows that contour the bear’s fur and facial structure without harsh contrast. The atmosphere is tranquil and immersive, evoking a sense of wild, untouched nature.\nThe scene is entirely outdoors, set in a forest or woodland environment, with blurred greenery and hints of sunlight filtering through trees in the background. The bear is the sole subject, positioned centrally in the frame, its face filling most of the shot. No other characters or objects are present, allowing the viewer to focus entirely on the bear’s expression and anatomy. The bear’s fur is thick, coarse, and textured, with shades of dark and light brown, particularly around the muzzle and ears. Its eyes are dark, soulful, and slightly reflective, gazing forward with an alert yet calm demeanor. The bear’s ears are rounded and tufted with lighter fur on the tips, and its nose is large, wet, and black, with visible nostrils.\n\nIn the sequence, the video begins with a static close-up of the bear’s face. At 0:02, vertical bars appear, briefly dividing the frame before fading. At 0:03, a yellow border forms around the image, and at 0:04, a red dotted outline appears around the bear’s muzzle. By 0:05, the muzzle is highlighted with a 3D mesh overlay, revealing anatomical structures beneath the fur. The overlay fades by 0:07, and at 0:08, the vertical bars reappear before disappearing at 0:09, returning to the original close-up. The camera remains fixed throughout, with no movement or panning, maintaining an eye-level shot. The bear remains still, with only subtle micro-movements in its eyes and slight shifts in its mouth, conveying a sense of quiet observation. The video’s style is documentary and educational, with an emphasis on anatomical detail and natural beauty, enhanced by the digital overlays that momentarily dissect the bear’s facial structure. The overall mood is contemplative and intimate, inviting viewers to appreciate the bear’s majesty and complexity.",
+    "title": "Shot 4",
+    "source_txt": "rank3-The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, capt-0_lora_prompts.txt",
+    "block_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+    ],
+    "num_blocks": 6
+}

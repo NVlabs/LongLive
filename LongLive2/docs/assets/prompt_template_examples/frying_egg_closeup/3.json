@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "frying_egg_closeup/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video features a vibrant, warm-toned culinary scene set in a bustling kitchen, likely indoors, with bright, even lighting that accentuates the vivid reds and yellows of the ingredients. The atmosphere is lively and aromatic, with steam rising from the wok, suggesting a high-heat cooking environment. The style is documentary-like, capturing the dynamic motion of cooking in real time with a handheld, slightly shaky camera that moves closely around the action, enhancing the immersive feel.\nThe scene centers on a large, round, metallic wok positioned on a commercial stove. The wok’s surface is slightly worn, indicating frequent use, and it’s filled with chopped tomatoes and yellow bell peppers sizzling in oil. A chef, partially visible, wears a red apron over a blue shirt with yellow trim, and their hands are adorned with a simple bracelet. The chef’s movements are swift and confident as they stir the ingredients with a large, flat, wooden-handled spatula. The spatula’s metal head glides through the mixture, mixing the vegetables thoroughly, causing steam to billow upward and obscure parts of the frame intermittently.\n\nIn the background, stainless steel kitchen equipment and a few bowls containing ingredients are visible, reinforcing the commercial kitchen setting. The environment is utilitarian and functional, with no decorative elements, emphasizing efficiency and speed. The chef’s actions are methodical, indicating experience and mastery of the technique. The camera remains close to the wok, capturing the motion of the spatula’s circular movements and the transformation of the vegetables as they soften and release their juices.\n\nThe video’s narrative is focused on the preparation of a dish, likely a tomato-based stir-fry, highlighting the sensory experience of cooking. The shot composition is tight, with a shallow depth of field that keeps the wok and the chef’s hands in sharp focus while blurring the background slightly. The camera angle is slightly low, offering a view from the cook’s perspective, enhancing the viewer’s immersion into the cooking process. The steam and the rhythmic stirring create a sense of energy and motion, emphasizing the heat and the transformation of the ingredients as they cook. The overall tone is warm and inviting, celebrating the art of cooking with a focus on technique and sensory detail.",
+    "title": "Shot 3",
+    "source_txt": "rank2-The video exhibits a warm, golden-yellow color tone with soft, diffused lighting, emphasizing the gl-0_lora_prompts.txt",
+    "block_indices": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+    ],
+    "num_blocks": 7
+}

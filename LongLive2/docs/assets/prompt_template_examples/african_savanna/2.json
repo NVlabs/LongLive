@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "african_savanna/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video showcases a serene, natural African savanna landscape under a partly cloudy sky, with soft, diffused daylight illuminating the scene. The color tone is warm and earthy — golden yellows of the grass, deep browns of the elephant’s skin, and muted greens of scattered shrubs — contrasted against the purplish-gray tones of distant hills and the pale, cloud-streaked sky. The atmosphere is tranquil and majestic, evoking a sense of untouched wilderness. The style is realistic, documentary-like, with natural lighting and a cinematic composition emphasizing scale and wildlife immersion.\nThe setting is entirely outdoor, in a vast, open savanna environment. The terrain is dry grassland dotted with acacia trees and low shrubs. In the background, rolling hills and mountain ridges stretch across the horizon, partially veiled by haze, suggesting either early morning or late afternoon. The weather appears calm, with no visible rain or wind, though subtle movement in the grass indicates a gentle breeze.\n\nThe central subject is a single African elephant, an adult male (bull) with prominent, curved tusks and thick, wrinkled gray skin. The elephant is seen in a medium shot from 0:00 to 0:04, initially positioned under a large acacia tree, its trunk extended toward the ground or tree branches. It remains mostly stationary, occasionally shifting weight or swaying slightly, suggesting calm grazing or foraging behavior. The elephant’s posture is grounded and deliberate, its ears occasionally twitching or flapping slightly in response to ambient sound or breeze.\n\nThe acacia tree, with its wide, flat canopy and dark, gnarled branches, dominates the midground, providing shade. The tree’s branches partially obscure the elephant’s upper body, enhancing the sense of depth. The grass is dry and golden, swaying subtly in the breeze, while the distant hills are bathed in soft, ambient light, creating a layered, textured background. The camera remains steady, slowly zooming in slightly from 0:00 to 0:03, transitioning from a medium shot to a tighter medium close-up, maintaining eye-level framing that centers the elephant. The depth of field is deep, keeping both the foreground elephant and background hills in focus, emphasizing the vastness of the environment.\n\nThere are no other characters or animals visible. The elephant’s slow, deliberate movements and the stillness of the landscape create a peaceful, contemplative narrative — a moment of quiet coexistence between wildlife and nature. The video’s tone is observational and reverent, capturing the majesty of the African wilderness without human interference.",
+    "title": "Shot 2",
+    "source_txt": "rank3-The video presents a warm, golden-hued African savanna scene under a soft, diffused daylight, sugges-0_lora_prompts.txt",
+    "block_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+    ],
+    "num_blocks": 6
+}

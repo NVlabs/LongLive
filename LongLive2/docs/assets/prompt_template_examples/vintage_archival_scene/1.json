@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "vintage_archival_scene/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video presents a grainy, vintage aesthetic with muted, desaturated tones—dominated by browns, grays, and faded greens—suggesting aged film stock. The lighting is dim and artificial, casting soft shadows, likely indoors under overhead fluorescent or incandescent bulbs, contributing to a gritty, industrial atmosphere. The style is documentary-like, with handheld, slightly shaky footage emphasizing realism and immediacy, possibly from archival or behind-the-scenes material.\nThe scene takes place indoors, within the confined, cluttered space of what appears to be a mechanical workshop or engine bay. Large, exposed machinery dominates the background—likely an aircraft engine or heavy industrial equipment—with visible pipes, bolts, and metallic components. The setting is utilitarian, with no decorative elements; the focus is purely functional. The time of day is indeterminate due to artificial lighting, but the environment feels like midday or early evening in a workshop setting. There are no windows or natural light sources visible.\n\nOne shirtless male figure appears centrally, viewed from behind, with dark, short hair and a muscular build. He appears to be in his late 20s to early 30s, likely a mechanic or technician, engaged in physical labor. His skin tone is light, and he wears no visible accessories or clothing except for a watch on his left wrist. His posture is bent forward, arms extended as he works on the machinery, suggesting intense focus.\n\nThe machinery is massive, with cylindrical components and metallic surfaces. A large fan or turbine assembly is visible, with multiple blades and exposed wiring. The engine occupies the background, while the man is positioned in the foreground, partially obscuring the machinery. The camera remains static throughout, providing a medium shot that captures the man’s upper body and the machinery behind him. His movements are slow and deliberate, adjusting or tightening components with his hands. No other characters appear.\n\nThe shot composition is centered on the man’s back, with a shallow depth of field blurring the background machinery slightly, drawing attention to his labor. The camera angle is eye-level, creating a neutral, observational stance. The narrative is documentary and instructional, emphasizing the physicality and precision of mechanical work. The movement is minimal, with the man’s arms moving slowly as he works, reinforcing the deliberate, methodical nature of the task. There is no discernible natural element or environmental change, reinforcing the industrial, controlled setting.",
+    "title": "Shot 1",
+    "source_txt": "rank1-The video exhibits a muted, desaturated color tone with a grainy, vintage aesthetic, suggesting arch-0_lora_prompts.txt",
+    "block_indices": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+    ],
+    "num_blocks": 7
+}

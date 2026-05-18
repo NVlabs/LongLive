@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+    <title>LongLive-2.0</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="mobile-warning">
+        For the best experience, it is better to use a desktop computer to view this website.
+        <br>
+        <button type="button" onclick="dismissWarning()">Continue</button>
+    </div>
+
+    <aside class="sidebar">
+        <h2 class="sidebar-title"><img src="./assets/images/logo.png" alt="LongLive logo" class="sidebar-logo"> LongLive-2.0</h2>
+        <ul>
+            <li><a href="#paper-info" class="nav-link"><i class="fas fa-file-alt"></i> Overview</a></li>
+            <li><a href="#why" class="nav-link"><i class="fas fa-lightbulb"></i> Motivation</a></li>
+            <li><a href="#demo" class="nav-link"><i class="fas fa-video"></i> Demo Preview</a></li>
+            <li><a href="#walkthrough" class="nav-link"><i class="fas fa-project-diagram"></i> Technical Walkthrough</a></li>
+            <li><a href="#results" class="nav-link"><i class="fas fa-chart-line"></i> Key Results</a></li>
+            <li><a href="#bibtex" class="nav-link"><i class="fas fa-quote-right"></i> BibTeX</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <section id="paper-info" class="paper-info hero-panel">
+            <p class="eyebrow">Long Video Generation | NVFP4 Infrastructure</p>
+            <h1><img src="./assets/images/logo2.png" alt="LongLive logo" class="title-logo"> LongLive-2.0: An NVFP4 Parallel Infrastructure for Long Video Generation</h1>
+            <div class="authors" aria-label="Authors">
+                <div class="author-row">
+                    <span class="author-name"><a href="https://yukangchen.com/" target="_blank" rel="noopener">Yukang Chen<sup>1*</sup></a></span>
+                    <span class="author-name"><a href="https://wileewang.github.io/" target="_blank" rel="noopener">Luozhou Wang<sup>1,3*</sup></a></span>
+                    <span class="author-name"><a href="https://aaron-weihuang.com/" target="_blank" rel="noopener">Wei Huang<sup>1,4*</sup></a></span>
+                    <span class="author-name"><a href="https://andysonys.github.io/" target="_blank" rel="noopener">Shuai Yang<sup>1*</sup></a></span>
+                    <span class="author-name"><a href="https://baihuadada.github.io/" target="_blank" rel="noopener">Bohan Zhang<sup>2</sup></a></span>
+                    <span class="author-name"><a href="https://easonxiao-888.github.io/" target="_blank" rel="noopener">Yicheng Xiao<sup>4</sup></a></span>
+                    <span class="author-name"><a href="https://ruihang-chu.github.io/" target="_blank" rel="noopener">Ruihang Chu<sup>5</sup></a></span>
+                    <span class="author-name"><a href="https://scholar.google.com/citations?hl=en&amp;user=Qu-QXTsAAAAJ" target="_blank" rel="noopener">Weian Mao<sup>2</sup></a></span>
+                </div>
+                <div class="author-row">
+                    <span class="author-name"><a href="https://qixinhu11.github.io/" target="_blank" rel="noopener">Qixin Hu<sup>1</sup></a></span>
+                    <span class="author-name"><a href="https://www.shaotengliu.com/" target="_blank" rel="noopener">Shaoteng Liu<sup>5</sup></a></span>
+                    <span class="author-name"><a href="https://yuyangzhao.com/" target="_blank" rel="noopener">Yuyang Zhao<sup>1</sup></a></span>
+                    <span class="author-name"><a href="https://huizimao.com/" target="_blank" rel="noopener">Huizi Mao<sup>1</sup></a></span>
+                    <span class="author-name"><a href="https://www.yingcong.me/" target="_blank" rel="noopener">Ying-Cong Chen<sup>3</sup></a></span>
+                    <span class="author-name"><a href="https://xieenze.github.io/" target="_blank" rel="noopener">Enze Xie<sup>1</sup></a></span>
+                    <span class="author-name"><a href="https://xjqi.github.io/" target="_blank" rel="noopener">Xiaojuan Qi<sup>4</sup></a></span>
+                    <span class="author-name"><a href="https://hanlab.mit.edu/songhan" target="_blank" rel="noopener">Song Han<sup>1,2</sup></a></span>
+                </div>
+            </div>
+            <div class="affiliations" aria-label="Affiliations">
+                <span><sup>1</sup>NVIDIA</span>
+                <span><sup>2</sup>MIT</span>
+                <span><sup>3</sup>HKUST</span>
+                <span><sup>4</sup>HKU</span>
+                <span><sup>5</sup>CUHK</span>
+            </div>
+            <div class="contribution-notes" aria-label="Contribution notes">
+                <span class="contribution-note"><sup>*</sup>Equal Contribution</span>
+            </div>
+            <div class="links">
+                <p><a href="https://drive.google.com/file/d/1sS6RZVmDEb7kAGbJHySoyvVykc7kGAzk/view?usp=sharing" target="_blank" rel="noopener">Paper</a></p>
+                <p><a href="https://github.com/NVlabs/LongLive" target="_blank" rel="noopener">GitHub</a></p>
+            </div>
+            <div class="intro-video-wrap">
+                <video class="intro-video" controls playsinline preload="metadata">
+                    <source src="./assets/videos/LongLive-2.0.mp4" type="video/mp4">
+                </video>
+            </div>
+            <figure class="figure hero-figure">
+                <img src="./assets/images/bf16_vs_nvfp4_nvidia_style.png" alt="Baseline versus NVFP4 key result overview">
+            </figure>
+            <div class="speed-controls hero-speed-controls" role="group" aria-label="Robot demo playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" type="button" data-speed="1">x1</button>
+                <button class="speed-btn" type="button" data-speed="2">x2</button>
+            </div>
+            <div class="hero-video-compare">
+                <article class="demo-card">
+                    <h3>BF16</h3>
+                    <video class="gallery-video" loop muted autoplay playsinline controls>
+                        <source src="./assets/videos/robot_demo.mp4" type="video/mp4">
+                    </video>
+                </article>
+                <article class="demo-card">
+                    <h3 class="accent-heading">NVFP4</h3>
+                    <video class="gallery-video" loop muted autoplay playsinline controls>
+                        <source src="./assets/videos/robot_demo_nvfp4.mp4" type="video/mp4">
+                    </video>
+                </article>
+            </div>
+        </section>
+
+        <section id="why" class="gallery-section">
+            <h2>Why It Matters</h2>
+            <div class="columns">
+                <article class="item">
+                    <h3>Long-video training is expensive</h3>
+                    <p>
+                        AR long-video training needs to process long clean-history and noisy-target sequences,
+                        so GPU memory, VAE latent preparation, and DiT GEMMs all scale sharply with video length.
+                    </p>
+                </article>
+                <article class="item">
+                    <h3>Deployment needs end-to-end speed</h3>
+                    <p>
+                        Real applications need more than diffusion-model FPS: KV cache, VAE decoding,
+                        and multi-shot continuous generation latency all have to be handled at the system level.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="demo" class="gallery-section">
+            <h2>Demo Preview</h2>
+            <div class="speed-controls" role="group" aria-label="Playback speed">
+                <span class="speed-label">Play speed:</span>
+                <button class="speed-btn active" type="button" data-speed="1">x1</button>
+                <button class="speed-btn" type="button" data-speed="2">x2</button>
+            </div>
+            <div class="demo-collection">
+                <h3 class="demo-group-title">BF16</h3>
+                <div class="demo-grid">
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_cozy_red_room_6.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_frying_egg_closeup_5.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/robot_demo.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_shimmering_puzzle_surface_4.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_sunlit_balcony_tour_12.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_warm_indoor_dining_0.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_african_savanna_6.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_aquamarine_underwater_6.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_brown_bear_river_6.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_indoor_grooming_scene_7.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_openai_multishot_0062_0.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/bf16_stonehenge_blue_sky_2.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                </div>
+
+                <h3 class="demo-group-title">NVFP4</h3>
+                <div class="demo-grid">
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/nvfp4_cozy_red_room_6.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/nvfp4_frying_egg_closeup_2.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/robot_demo_nvfp4.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/nvfp4_sunlit_balcony_tour_6.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/nvfp4_warm_indoor_dining_4.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/nvfp4_african_savanna_6.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/nvfp4_aquamarine_underwater_0.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/nvfp4_brown_bear_river_6.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="demo-card">
+                        <video class="gallery-video" loop muted autoplay playsinline controls>
+                            <source src="./assets/videos/nvfp4_aquamarine_underwater_1.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="walkthrough" class="gallery-section">
+            <h2>Technical Walkthrough</h2>
+            <div class="story-list">
+                <article class="story">
+                    <figure class="figure">
+                        <img src="./assets/images/fig_framework_overview.png" alt="Overview of the LongLive-2.0 framework">
+                    </figure>
+                    <div class="story-text">
+                        <h3>Overall Framework</h3>
+                        <p>
+                            LongLive-2.0 treats algorithm and infrastructure as one system. On the training side,
+                            Balanced SP and NVFP4 make long-video AR fine-tuning practical. On the inference side,
+                            W4A4 execution, NVFP4 KV cache, parallel dequantization, and asynchronous VAE decoding
+                            improve end-to-end throughput.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="story">
+                    <figure class="figure">
+                        <img src="./assets/images/fig_training_infrastructure.png" alt="Overview of the LongLive-2.0 training infrastructure">
+                    </figure>
+                    <div class="story-text">
+                        <h3>Balanced SP for AR Training</h3>
+                        <p>
+                            Each SP rank owns clean and noisy latents from the same temporal chunk. This matches the
+                            teacher-forcing attention mask, balances loss-bearing tokens across ranks, and lets VAE
+                            encoding be sharded by chunk instead of replicated on every GPU.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="story">
+                    <figure class="figure">
+                        <img src="./assets/images/clean_pipeline.png" alt="Clean training pipeline for AR video generation">
+                    </figure>
+                    <div class="story-text">
+                        <h3>Clean Training Pipeline</h3>
+                        <p>
+                            Instead of relying on ODE initialization, short-video DMD, and extra long-tuning stages,
+                            LongLive-2.0 directly turns the base bidirectional diffusion model into a long, interactive,
+                            multi-shot AR model. Standalone LoRA weights then provide few-step inference capability.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="story">
+                    <figure class="figure">
+                        <img src="./assets/images/fig_inference_infrastructure.png" alt="NVFP4 inference infrastructure">
+                    </figure>
+                    <div class="story-text">
+                        <h3>NVFP4 Inference Infrastructure</h3>
+                        <p>
+                            At deployment time, LongLive-2.0 uses W4A4 inference, compresses the KV cache into NVFP4,
+                            and reconstructs cached chunks with a parallel dequantization kernel. Streaming VAE decoding
+                            overlaps video decoding with DiT denoising to reduce end-to-end latency.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="story story-narrow story-compact">
+                    <figure class="figure">
+                        <img src="./assets/images/fig_nvfp4_dmd.png" alt="NVFP4 DMD distillation diagram">
+                    </figure>
+                    <div class="story-text">
+                        <h3>NVFP4 DMD With LoRA</h3>
+                        <p>
+                            Few-step distillation keeps the generator and score models aligned with the W4A4 inference path.
+                            The quantized backbone stays fixed, while LoRA-only updates make the two-step generation recipe
+                            more stable and easier to transfer.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="story story-narrow story-compact">
+                    <figure class="figure">
+                        <img src="./assets/images/fig_multishot_attention_sink.png" alt="Multi-shot attention sink for streaming inference">
+                    </figure>
+                    <div class="story-text">
+                        <h3>Multi-Shot Attention Sink</h3>
+                        <p>
+                            A fixed global sink preserves identity across the full video, while a shot-level sink is rebound
+                            at every scene change to maintain local temporal coherence. This supports minute-scale streaming
+                            without recomputing earlier history.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="results" class="gallery-section">
+            <h2>Key Results</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <strong>2.1x</strong>
+                    <span>64s AR training speedup over BF16 + SP</span>
+                </div>
+                <div class="metric">
+                    <strong>45.7</strong>
+                    <span>FPS on GB200 with 2-step generation</span>
+                </div>
+                <div class="metric">
+                    <strong>19.4GB</strong>
+                    <span>peak memory with NVFP4 KV cache</span>
+                </div>
+                <div class="metric">
+                    <strong>0.69x</strong>
+                    <span>DMD peak-memory ratio with NVFP4 + LoRA</span>
+                </div>
+            </div>
+
+            <table class="result-table" aria-label="LongLive-2.0 end-to-end inference latency">
+                <thead>
+                    <tr>
+                        <th>Setting</th>
+                        <th>16s</th>
+                        <th>32s</th>
+                        <th>64s</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BF16 baseline E2E generation</td>
+                        <td>26.6s</td>
+                        <td>53.2s</td>
+                        <td>112.9s</td>
+                    </tr>
+                    <tr>
+                        <td>LongLive-2.0 2-step E2E generation</td>
+                        <td>11.2s</td>
+                        <td>19.2s</td>
+                        <td>36.3s</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="result-grid">
+                <figure class="figure">
+                    <figcaption>Training efficiency</figcaption>
+                    <img src="./assets/images/training_efficiency.png" alt="Training efficiency result">
+                </figure>
+                <figure class="figure">
+                    <figcaption>Inference efficiency</figcaption>
+                    <img src="./assets/images/inference_efficiency.png" alt="Inference efficiency result">
+                </figure>
+                <figure class="figure">
+                    <figcaption>VBench short-video quality</figcaption>
+                    <img src="./assets/images/vbench_short.png" alt="VBench short video result">
+                </figure>
+                <figure class="figure">
+                    <figcaption>VBench long-video quality</figcaption>
+                    <img src="./assets/images/vbench_long.png" alt="VBench long video result">
+                </figure>
+            </div>
+        </section>
+
+        <section id="bibtex" class="bibtex-section">
+            <h2>BibTeX</h2>
+            <p class="bibtex-note">If you find this work useful, please consider citing:</p>
+            <pre class="bibtex-box"></pre>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

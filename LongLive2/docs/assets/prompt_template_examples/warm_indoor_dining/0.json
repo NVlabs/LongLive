@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "warm_indoor_dining/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhances the rich, earthy tones of the wooden table and ceramic dishes. The color palette is dominated by deep browns, creamy whites, and vibrant accents of red and green from the food, creating a cozy, rustic aesthetic. The atmosphere feels intimate and homely, as if captured in a traditional East Asian restaurant or home kitchen. The camera remains stationary, offering a medium shot with a shallow depth of field that gently blurs the background while keeping the foreground sharply focused on the table and the action.\n\nThe scene is set indoors, likely during late afternoon or early evening, given the warm, diffused lighting. The background reveals wooden chairs with curved backs and a few decorative ceramic cups with blue floral patterns, suggesting a cultural or regional dining setting. The table is dark-stained wood, polished to a smooth sheen, with visible grain patterns adding texture. Three small, blue-and-white patterned bowls sit in front of larger plates: one holds golden-brown fried food, another contains bright green herbs, and the third holds a red, spicy-looking condiment. A plate of sliced meat, garnished with chopped green onions and peanuts, is placed in the foreground. A pair of orange-handled scissors and metal tongs lie beside a spoon and chopsticks, suggesting preparation or serving activity.\n\nA person’s hand, wearing a transparent plastic glove, enters from the right side of the frame. The hand moves deliberately toward the plate of meat, gently adjusting its position or adding garnish. The hand’s motion is slow and careful, indicating attention to presentation. The glove suggests hygiene or food safety protocol. The person’s arm is partially visible, but no further details about their appearance or clothing are discernible. The hand’s movement is the only dynamic element; the rest of the scene remains static. The camera maintains a consistent eye-level angle, capturing the action as if the viewer is seated at the table. The overall style is documentary-like, emphasizing realism and detail, with a focus on the sensory appeal of the food and the careful, ritualistic presentation. The narrative is centered on the final touches of a meal, evoking anticipation and appreciation for culinary artistry.",
+    "title": "Shot 0",
+    "source_txt": "rank1-The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhan-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "num_blocks": 6
+}

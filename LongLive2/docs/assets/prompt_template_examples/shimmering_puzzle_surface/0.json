@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "shimmering_puzzle_surface/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video opens with a shimmering, textured surface resembling water or snow, dotted with scattered green fragments that resemble puzzle pieces or leaves. The lighting is soft and diffused, casting gentle shadows and creating a serene, almost ethereal atmosphere. The color tone leans toward muted greens and grays, suggesting a calm, quiet environment, possibly indoors or in a controlled setting. The style is digital and animated, with a slightly grainy texture that adds to the dreamlike quality.\n\nAs the scene transitions, a cartoonish Santa Claus appears, kneeling on a gray carpeted floor. He is dressed in a classic red suit with white trim, a fluffy white beard, and a red hat with a white pom-pom. His facial expression is one of focused concentration as he carefully picks up and examines the scattered green fragments. Behind him, a decorated Christmas tree with twinkling lights and ornaments is partially visible, reinforcing the festive setting. The time of day appears to be indoors, with artificial lighting casting soft shadows.\n\nSanta’s movements are deliberate and slow. He uses both hands to gather the fragments, occasionally pausing to inspect them closely. His posture is slightly hunched, indicating deep engagement with the task. The camera remains stationary, maintaining a medium shot that captures Santa from the waist up, allowing viewers to clearly see his facial expressions and hand movements. The depth of field is shallow, keeping Santa in sharp focus while slightly blurring the background, emphasizing his central role in the scene. The overall mood is one of gentle curiosity and festive preparation, as if Santa is assembling something important for the holiday season. The video’s narrative suggests a moment of quiet reflection or a playful activity, with Santa as the central, endearing figure.",
+    "title": "Shot 0",
+    "source_txt": "rank0-The video opens with a shimmering, textured surface resembling water or snow, dotted with scattered -0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ],
+    "num_blocks": 8
+}

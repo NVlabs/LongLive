@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "warm_indoor_dining/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video presents a warm, inviting culinary scene, bathed in soft, ambient indoor lighting that enhances the rich textures and vibrant colors of the food. The color tone leans toward earthy browns and deep blues, with the blue-and-white porcelain dishes adding a traditional, elegant contrast against the dark wooden table. The atmosphere is cozy and intimate, evoking a rustic restaurant or home dining setting, with a focus on the sensory appeal of the meal. The style is realistic and detailed, with a shallow depth of field that draws attention to the foreground while gently blurring the background elements.\nThe scene is set indoors, likely a dining room or eatery, with wooden furniture and a warm, muted backdrop. The table is dark wood with visible grain, suggesting a natural, handcrafted aesthetic. The environment feels tranquil and relaxed, with no visible windows or outdoor elements, and the lighting suggests late afternoon or evening, casting a soft glow over the meal. A gray thermos and wooden pipes or decorative elements are faintly visible in the background, reinforcing the rustic, traditional ambiance.\n\nNo characters are visible in the video, so no descriptions of gender, age, attire, or expressions are applicable. The focus remains entirely on the food.\n\nThe key objects include: a large blue-and-white porcelain bowl in the foreground, filled with a steaming, aromatic broth topped with chopped green onions, chili oil, and sesame seeds, suggesting a spicy, savory dish. To its left, a matching plate holds neatly arranged slices of marinated meat garnished with herbs and nuts. To the right, another plate features golden, crispy fried dumplings or fritters. Between them, two small bowls hold dipping sauces — one with red chili oil and the other with fresh greens. A white porcelain spoon with a blue floral pattern rests near the bowl, and orange-handled tongs lie beside it. All objects are arranged neatly on the wooden table, with the bowl as the central focal point.\n\nThe camera begins with a medium shot, slowly panning downward and zooming in slightly to emphasize the bowl’s steaming contents and the vibrant garnishes. The movement is smooth and deliberate, enhancing the appetizing presentation. The shallow depth of field ensures the bowl remains sharp while softly blurring the surrounding dishes, guiding the viewer’s attention to the main dish. The shot composition is static in terms of character movement, but the camera’s subtle motion creates a dynamic, immersive experience, as if inviting the viewer to lean in and savor the meal. The steam gently rises, adding a sense of warmth and immediacy. The overall narrative is one of indulgence and sensory delight, centered on the artistry and appeal of the food.",
+    "title": "Shot 1",
+    "source_txt": "rank1-The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhan-0_lora_prompts.txt",
+    "block_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "num_blocks": 6
+}

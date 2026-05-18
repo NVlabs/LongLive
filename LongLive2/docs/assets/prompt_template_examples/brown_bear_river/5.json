@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "brown_bear_river/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video presents a serene, naturalistic tone with muted earthy tones and soft, diffused lighting, likely captured during early morning or late afternoon under overcast skies. The atmosphere is tranquil and immersive, emphasizing the quietude of the wild. The style is realistic, with a shallow depth of field that blurs foreground foliage while keeping the bear in focus, enhancing the sense of intimacy and observation.\nThe scene unfolds outdoors in a dense, verdant forest environment. Thick green ferns and leafy underbrush dominate the foreground, partially obscuring the view and creating a natural frame. Behind the foliage, a weathered, moss-covered log lies horizontally, adding texture and grounding the setting in a woodland habitat. The background reveals dappled sunlight filtering through unseen trees, suggesting a shaded, humid environment.\n\nThe main subject is a single brown bear, likely an adult male or female, with thick, shaggy fur in shades of dark brown. Its face is partially obscured by foliage in the early frames, but as the camera subtly pans right and zooms slightly, the bear’s features become clearer — alert, focused eyes, a broad snout, and rounded ears. The bear is foraging, its head lowered as it sniffs and investigates the ground near the log, occasionally shifting its weight and moving its muzzle closer to the earth. Its movements are deliberate and slow, conveying a sense of purpose and curiosity. It remains largely stationary, occasionally adjusting its position slightly, suggesting it is tracking scent or searching for food.\n\nThe camera maintains a medium close-up shot throughout, keeping the bear’s head and upper torso in focus while foreground plants remain softly blurred. The shallow depth of field and gentle camera movement create a sense of immersion, as if the viewer is hidden within the underbrush, quietly observing the bear’s natural behavior. There is no wind or rain, but the subtle sway of leaves hints at a gentle breeze. The overall narrative is observational, capturing the bear’s quiet, methodical exploration of its environment, evoking a sense of reverence for wildlife in its natural state. The bear’s calm demeanor and the lush, textured surroundings form a harmonious visual story of wilderness life.",
+    "title": "Shot 5",
+    "source_txt": "rank3-The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, capt-0_lora_prompts.txt",
+    "block_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "shimmering_puzzle_surface/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video presents a festive, animated scene with a warm, slightly saturated color tone, dominated by rich reds, greens, and whites, evoking a cheerful holiday atmosphere. Lighting is soft and diffused, suggesting an indoor or artificially lit environment, possibly during evening or nighttime, with no visible natural light sources. The style is cartoonish and stylized, with smooth, rounded character designs and exaggerated expressions typical of 3D animation. The camera remains relatively static, offering a medium close-up of the character, with shallow depth of field blurring the background slightly to emphasize the subject.\nThe scene is set indoors, likely in a decorated room, with a large, festively adorned Christmas tree in the background. The tree is green, adorned with glowing string lights, colorful ornaments, and candy cane decorations, creating a vibrant holiday ambiance. The background is softly blurred, suggesting a cozy, domestic setting, possibly a living room or festive hall.\n\nThe central character is a male animated figure dressed as Santa Claus. He appears middle-aged, with fair skin, dark hair peeking beneath a red Santa hat with a white trim and pom-pom. He wears a traditional red suit with white fur trim and a white scarf. His facial expression is initially neutral but shifts to one of mild surprise or concern as he holds a black telephone receiver to his ear. His eyes widen slightly, and his eyebrows raise, indicating he is reacting to something unexpected or urgent on the other end of the line. His posture is upright, and he stands centered in the frame, facing slightly toward the camera.\n\nIn the first frame, Santa is holding the phone with his right hand, and the camera focuses tightly on his upper body and face. As the video progresses, he begins to turn his head slightly to the left, suggesting he is listening intently or responding. The camera remains steady, maintaining a medium close-up shot that captures his facial micro-expressions and hand movements. The phone is held steady, indicating a conversation rather than an action requiring movement. There is no significant motion in the background; the Christmas tree remains static, reinforcing the focus on Santa’s reaction. The overall mood is one of mild suspense or curiosity, as if he is receiving critical or surprising news during the holiday season. The shot composition is balanced, with Santa occupying the center of the frame, and the blurred Christmas tree providing context without distraction. The depth of field enhances the emotional focus on his reaction, while the warm color palette and soft lighting maintain a festive, albeit slightly tense, atmosphere.",
+    "title": "Shot 3",
+    "source_txt": "rank0-The video opens with a shimmering, textured surface resembling water or snow, dotted with scattered -0_lora_prompts.txt",
+    "block_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+    ],
+    "num_blocks": 8
+}

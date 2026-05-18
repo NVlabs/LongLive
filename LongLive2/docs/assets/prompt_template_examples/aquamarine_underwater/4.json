@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "aquamarine_underwater/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video presents a serene, immersive underwater scene bathed in a cool, deep blue tone, evoking the tranquil and mysterious ambiance of oceanic life. Natural daylight filters through the water, creating a soft, diffused illumination that enhances the clarity of the surroundings. The lighting subtly highlights the dolphin’s smooth, pale gray skin, revealing scattered dark spots along its flank. The camera maintains a steady, medium shot, tracking the dolphin’s graceful movements as it glides through the water. The composition is centered on the dolphin, emphasizing its elegance and fluid motion against the vast, uninterrupted blue backdrop.\nThe setting is entirely underwater — an open aquatic environment, likely a controlled marine habitat or natural oceanic zone — with no visible land, structures, or artificial elements. The water’s surface is intermittently visible near the top of the frame, where light ripples and reflections distort, adding texture and dynamism to the scene. The absence of weather conditions suggests the footage was captured in calm, clear waters, possibly during midday when sunlight penetrates most effectively.\n\nThe video features one primary subject: a single dolphin, whose gender is indeterminate but appears mature, with a streamlined body, sleek skin, and expressive dark eyes. The dolphin’s mouth is slightly open, holding a small, white, spherical object — possibly a toy or training reward — which it maneuvers with deliberate, playful motions. The dolphin’s fins and tail move rhythmically as it propels itself forward, occasionally tilting its head or rotating its body to adjust its trajectory relative to the camera.\n\nThe white object remains consistently in the dolphin’s mouth throughout the sequence, serving as a focal point. Its position shifts subtly as the dolphin rotates, but it never falls out. The camera follows the dolphin closely, maintaining a dynamic, low-angle shot that captures the creature’s powerful yet graceful movements. At one point, the dolphin surfaces briefly, causing a burst of bubbles and ripples, and the camera pans upward to follow its motion, revealing the sunlit water’s surface.\n\nThe narrative is playful and observational, focusing on the dolphin’s interaction with its environment and the object. The video’s style is documentary-like, with a shallow depth of field that keeps the dolphin sharply in focus while blurring the distant water, enhancing the sense of immersion. The overall tone is peaceful and captivating, inviting viewers to appreciate the beauty and intelligence of marine life. There is no human presence or interaction, allowing the dolphin’s natural behavior to remain the central theme.",
+    "title": "Shot 4",
+    "source_txt": "rank0-The video presents a serene underwater scene bathed in a cool, aquamarine-blue tone, with natural da-0_lora_prompts.txt",
+    "block_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+    ],
+    "num_blocks": 6
+}

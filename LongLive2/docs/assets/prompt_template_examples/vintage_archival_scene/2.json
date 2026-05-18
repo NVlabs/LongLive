@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "vintage_archival_scene/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video presents a close-up, grainy, and slightly overexposed shot of a mechanical device, likely a weather vane or a windmill-like rotor, set against a pale, overcast sky. The color tone is muted and desaturated, with a grayish-white dominance, suggesting either early morning or late afternoon under diffused lighting. The atmosphere feels static and industrial, with no natural vibrancy, evoking a sense of mechanical reliability or operational monotony. The camera remains steady, with slight handheld jitter, focusing on the spinning rotor, which appears to be made of metal—possibly aluminum or steel—with a central vertical pole and two horizontal arms extending outward. The rotor spins slowly, creating a blur effect, suggesting either low wind speed or mechanical inertia. No human characters appear in the video; the sole focus is on the mechanical object. The environment is entirely outdoor, with no discernible landmarks or vegetation, reinforcing the industrial or utilitarian setting. The rotor’s motion is continuous and circular, rotating around its axis, indicating functional operation. The camera angle is eye-level, slightly tilted upward, emphasizing the verticality of the pole and the horizontal motion of the arms. The depth of field is shallow, keeping the rotor in sharp focus while blurring the background sky, enhancing the mechanical subject’s prominence. The overall style is documentary-like, capturing a mundane yet essential mechanical process in a stark, unembellished manner. There is no narrative or emotional context provided, only the mechanical rhythm of the spinning rotor against the monochromatic sky.",
+    "title": "Shot 2",
+    "source_txt": "rank1-The video exhibits a muted, desaturated color tone with a grainy, vintage aesthetic, suggesting arch-0_lora_prompts.txt",
+    "block_indices": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+    ],
+    "num_blocks": 7
+}

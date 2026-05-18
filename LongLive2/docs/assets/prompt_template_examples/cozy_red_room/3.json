@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "cozy_red_room/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video features a warm, natural daylight ambiance with soft, diffused lighting filtering through windows, casting gentle shadows across the room. The color tone leans toward neutral and pastel hues, with beige carpets, white doors, and light green patterned flooring contributing to a cozy, domestic atmosphere. The style is intimate and candid, capturing a tender, everyday moment with a shallow depth of field that keeps the focus on the dog and the human hand while softly blurring the background. The camera remains mostly static, with slight handheld movements that follow the dog’s head as it tilts upward.\nThe scene is set indoors, likely in a hallway or entryway near a staircase, with a white door featuring a brass handle on the right and a dark leather armchair partially visible in the background. A black handbag rests against the door, and a basket with keys sits on the carpeted stairs to the right. Sunlight streams in from a window, illuminating the floor and casting a bright path. The environment suggests a comfortable, lived-in home, possibly during midday or early afternoon, as the light is bright but not harsh.\n\nThe main character is a large, fluffy dog, likely an Alaskan Malamute or similar breed, with thick gray and white fur and expressive dark eyes. It is seated upright on the carpet, its head tilted upward as if expecting something. A human hand, adorned with a silver ring, gently strokes the dog’s muzzle, which has a small piece of food or treat clinging to its nose. The dog’s tongue flicks out to lick the treat, and its eyes sparkle with anticipation. The hand withdraws slightly as the dog continues to gaze upward, perhaps waiting for more. The dog’s posture remains calm and patient, exuding trust and affection.\n\nThe camera begins with a close-up shot of the dog’s face, emphasizing the texture of its fur and the treat on its nose. As the video progresses, the camera pulls back slightly to reveal more of the dog’s body and the surrounding environment, maintaining a medium shot that captures the dog’s full upper torso and the immediate surroundings. The angle is slightly elevated, looking down at the dog, which enhances the sense of intimacy and care. The dog’s slow, deliberate movements—licking, tilting its head, and gazing upward—create a serene, almost meditative rhythm. The overall narrative is one of quiet companionship, highlighting the bond between human and pet. The soft focus and natural lighting amplify the gentle, affectionate mood of the scene.",
+    "title": "Shot 3",
+    "source_txt": "rank0-The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unse-0_lora_prompts.txt",
+    "block_indices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+    ],
+    "num_blocks": 6
+}

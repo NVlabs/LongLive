@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "african_savanna/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video presents a vivid, naturalistic portrayal of an African elephant traversing a savanna landscape under a dynamic sky. The color tone is warm and earthy, dominated by golden-brown grasses, deep greens of scattered acacia trees, and the gray-brown skin of the elephant. The lighting is soft and diffused, suggesting either early morning or late afternoon, with clouds casting gentle shadows and creating a serene, slightly hazy atmosphere. The style is documentary realism, capturing the animal’s movement with cinematic fluidity and an immersive perspective.\nThe scene unfolds outdoors in a sprawling savanna, marked by dry, golden grasses and sporadic acacia trees with flat, umbrella-like canopies. Distant rolling hills and mountains form a muted backdrop under a sky filled with soft, scattered clouds. The environment is open and expansive, with no urban or human structures visible, emphasizing the wild, untouched nature of the habitat.\n\nThe sole character is a large African elephant, appearing in all frames. It is an adult male, identifiable by its prominent, curved tusks and robust build. Its gray-brown skin is textured and wrinkled, and its ears are wide and flapping slightly as it moves. The elephant’s expression is calm and focused, with its trunk occasionally swaying or touching the ground. It appears in the first frame at close range, standing beside a tree, then gradually moves toward the camera as the shot widens to a long shot, revealing its full body and surroundings. The elephant walks steadily forward, its massive legs kicking up dust as it advances through the grass, creating a sense of purposeful motion.\n\nKey objects include the acacia trees—some in the foreground and others in the background—and the golden grasses covering the ground. The trees are leafy and sturdy, with their branches spreading wide, casting dappled shade. The elephant is positioned centrally in the frame, initially close to the camera and later moving toward the center of the wide shot. The camera follows the elephant’s movement, panning slightly to keep it in focus as it walks. The shot transitions from a medium close-up to a long shot, employing a wide-angle lens to capture the vastness of the landscape and the elephant’s place within it. The camera angle is at eye level, offering a natural, immersive perspective.\n\nThe wind is subtly present, causing the grasses to sway gently and the tree leaves to flutter slightly. The elephant’s movement is slow and deliberate, with its trunk occasionally lifting or lowering, suggesting it is foraging or sensing its surroundings. The overall narrative conveys a peaceful journey through the savanna, highlighting the majesty of the elephant and the quiet beauty of its habitat. The depth of field is deep, keeping both the elephant and the distant mountains in focus, reinforcing the sense of scale and tranquility.",
+    "title": "Shot 5",
+    "source_txt": "rank3-The video presents a warm, golden-hued African savanna scene under a soft, diffused daylight, sugges-0_lora_prompts.txt",
+    "block_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+    ],
+    "num_blocks": 6
+}

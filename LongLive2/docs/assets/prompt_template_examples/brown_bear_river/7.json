@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "brown_bear_river/7.mp4",
+    "filename": "7.mp4",
+    "caption": "The video features a warm, natural daylight tone with soft, even illumination, casting a distinct shadow of the bear onto the ground. The atmosphere is serene and observational, capturing wildlife in its natural habitat. The style is documentary realism, with a steady, unobtrusive camera that follows the bear’s movement without interruption. The scene is entirely outdoors, set in a rugged, open terrain with sparse vegetation. The ground is a mix of gravel and patches of green grass, suggesting a semi-wild or lightly disturbed natural environment. The weather is clear and sunny, with no visible clouds or precipitation, and the time of day appears to be midday, judging by the sharpness of the shadows.\nThe primary subject is a single brown bear, seen from behind, walking steadily away from the camera. The bear’s fur is thick, medium-brown, and slightly tousled, indicating movement. It moves with a calm, deliberate gait, its legs swinging in a natural rhythm. The bear’s head is slightly raised, suggesting alertness or curiosity as it navigates the terrain. No human characters are present, and the video focuses solely on the bear’s solitary motion.\n\nForeground elements include a small green bush with dense, leafy branches partially obscuring the lower right corner of the frame. The bear walks past this bush, moving from the center-left toward the upper-right of the frame. The camera follows the bear at a medium distance, maintaining a consistent eye-level shot that captures the bear’s full silhouette. The depth of field is moderate, keeping the bear in sharp focus while softly blurring the distant background, which consists of more gravel and sparse vegetation.\n\nThe bear’s movement is slow and methodical, with no abrupt turns or acceleration. The camera remains steady, tracking its motion without panning or zooming, reinforcing the documentary’s observational nature. There are no visible natural elements like wind or rain, though the bear’s fur occasionally shifts slightly, suggesting a light breeze. The shot is a medium-long shot, allowing viewers to observe both the bear’s anatomy and its environment in context. The composition is balanced, with the bear’s path leading the viewer’s eye through the frame, creating a sense of quiet exploration and immersion in the wild.",
+    "title": "Shot 7",
+    "source_txt": "rank3-The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, capt-0_lora_prompts.txt",
+    "block_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "shimmering_puzzle_surface/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video features a festive, animated Christmas scene with a warm, cheerful color tone dominated by rich greens, reds, and golds, evoking a joyful holiday atmosphere. The lighting is soft and evenly distributed, suggesting an indoor or controlled environment with artificial illumination, possibly a mall or decorated public space. The style is cartoonish and stylized, with smooth, exaggerated movements and vibrant textures that convey a playful, childlike energy. The scene is set in an urban, indoor environment, likely a shopping mall or holiday-themed plaza, with artificial Christmas trees adorned with ornaments, string lights, and decorative baubles. The background includes buildings with colorful storefronts and a striped awning, adding to the festive ambiance. The time appears to be daytime, with no indication of rain or harsh weather, contributing to the bright and inviting mood.\nThe central character is a Santa Claus figure, appearing in the first frame, dressed in a traditional red suit with white trim, black boots, and a white beard. He wears a Santa hat and glasses, giving him a friendly, approachable appearance. He has a round face with a cheerful expression, and his movements suggest he’s dancing or swaying to music, turning in a circular motion. As the video progresses, a young boy and girl enter the scene. The boy, dressed in a black jacket and yellow shorts, and the girl, wearing a yellow dress with white leggings and black shoes, run energetically into the frame from behind Santa. Their expressions are excited and playful, suggesting they are enjoying the festive atmosphere.\n\nThe key objects include two large, decorated Christmas trees positioned symmetrically on either side of the central pathway. The trees are adorned with gold and red ornaments, twinkling lights, and ribbons, with one tree featuring a prominent star at the top. The trees are made of a textured material resembling artificial greenery, and their placement creates a natural corridor for movement. In the background, additional smaller trees and storefronts add depth to the scene.\n\nThe camera remains mostly stationary, employing a medium shot that captures the full body of Santa and the children as they move. The focus remains sharp on the characters, with a shallow depth of field blurring the distant background slightly. The Santa’s dance path moves from left to right, while the children enter from behind, running toward the right side of the frame, creating dynamic motion. The camera angle is eye-level, allowing viewers to engage with the characters as if standing in the scene. The overall narrative is lighthearted and festive, capturing the spirit of holiday cheer through playful movement and vibrant visuals.",
+    "title": "Shot 4",
+    "source_txt": "rank0-The video opens with a shimmering, textured surface resembling water or snow, dotted with scattered -0_lora_prompts.txt",
+    "block_indices": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+    ],
+    "num_blocks": 8
+}

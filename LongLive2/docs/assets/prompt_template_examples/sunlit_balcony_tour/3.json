@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "sunlit_balcony_tour/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video presents a sleek, modern interior with a sophisticated, minimalist aesthetic. The color tone is warm and neutral, dominated by dark wood paneling, black cabinetry, and beige flooring, accented by soft, ambient lighting from recessed ceiling fixtures and a glowing blue LED strip along the vanity mirror. The atmosphere is calm and luxurious, with a clean, uncluttered layout that emphasizes spaciousness and elegance. The style is realistic and immersive, capturing the room’s luxury through careful composition and natural lighting, likely filmed during the day with soft, diffused daylight filtering in.\nThe scene is entirely indoor, set within a high-end hallway or dressing area leading into a bedroom or bathroom. The environment features dark, glossy cabinetry, a large vanity mirror with integrated LED lighting, a modern chair draped with a striped garment, and a hallway extending into another room with framed artwork on the walls. The flooring is polished beige tile with a subtle border, and the ceiling is white with recessed lights. No outdoor elements or weather are visible.\n\nThe only character is a man, appearing in all frames, likely in his late 20s to early 30s, with short, neatly styled brown hair and a trimmed beard. He wears a white T-shirt with a small emblem on the chest and black trousers. His expression is engaged and enthusiastic as he gestures while speaking, indicating he is presenting or showcasing the space. He enters from the right, opens a dark wooden door, and walks into the room, turning to face the camera. He moves confidently, gesturing toward the cabinetry and mirror, and occasionally pointing to the hallway. His movements are smooth and purposeful, suggesting he is familiar with the space.\n\nThe camera follows him in a medium shot, maintaining an eye-level perspective as he moves through the hallway. The camera pans slightly as he walks, keeping him centered, and occasionally zooms slightly to emphasize specific features like the vanity or cabinetry. The depth of field keeps the background slightly blurred, drawing attention to the man and the immediate surroundings. The overall narrative is a walkthrough or tour, highlighting the design and functionality of the space, with the man as the guide. His gestures and facial expressions convey excitement and pride in the room’s aesthetics.",
+    "title": "Shot 3",
+    "source_txt": "rank3-The video presents a bright, sunlit outdoor scene with a warm, natural color tone, dominated by vivi-0_lora_prompts.txt",
+    "block_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+    ],
+    "num_blocks": 8
+}

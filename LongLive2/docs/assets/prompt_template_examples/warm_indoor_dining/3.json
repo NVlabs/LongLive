@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "warm_indoor_dining/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video features a warm, inviting color tone dominated by rich browns, deep reds, and vibrant greens, creating a mouthwatering, appetizing atmosphere. The lighting is soft and diffused, likely from indoor ambient sources, enhancing the glossy sheen of the sauce and the textures of the ingredients. The style is highly cinematic and intimate, employing shallow depth of field to focus sharply on the food while gently blurring the background, emphasizing the dish’s visual appeal. The camera moves smoothly upward, transitioning from a close-up of the bowl to a vertical elevation of the meat, enhancing the sensory experience.\nThe scene is set indoors, likely in a cozy, traditional Asian restaurant, with blurred blue-and-white ceramic plates and warm wooden surfaces visible in the background. The environment suggests a casual dining ambiance, possibly during late afternoon or evening, with no visible windows or natural light, implying an interior setting. The background includes faint hints of other dishes and tableware, reinforcing the restaurant context without distracting from the main subject.\n\nNo human characters appear in the video; the focus remains entirely on the food. The main object is a stack of thinly sliced beef, glistening with a savory, reddish-brown sauce, garnished with chopped green onions and sesame seeds. The beef is tender and layered, appearing perfectly marinated, and held aloft by black chopsticks that enter the frame from the top right. The chopsticks are made of smooth, polished material, likely lacquered wood or plastic, and are positioned to elevate the meat vertically, showcasing its texture and sauce coating. The beef slices are arranged in a cascading stack, with each slice slightly overlapping the other, revealing the marbling and tenderness.\n\nThe camera begins with a close-up shot, capturing the details of the sauce and garnishes, then slowly tilts upward as the chopsticks lift the beef stack, emphasizing its height and the glistening sauce. The movement is slow and deliberate, allowing viewers to appreciate the texture and color. The camera remains steady, with a telephoto lens that maintains sharp focus on the beef while softly blurring the background, creating a cinematic, almost luxurious presentation. The shot is a medium close-up that transitions into a close-up as the beef rises, highlighting the sauce’s viscosity and the beef’s tenderness. The overall narrative is one of indulgence and sensory delight, inviting viewers to imagine the flavor and texture of the dish.",
+    "title": "Shot 3",
+    "source_txt": "rank1-The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhan-0_lora_prompts.txt",
+    "block_indices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+    ],
+    "num_blocks": 6
+}

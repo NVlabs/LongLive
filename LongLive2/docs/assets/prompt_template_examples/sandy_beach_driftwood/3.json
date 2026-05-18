@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "sandy_beach_driftwood/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video opens with a vibrant, sunlit beach scene under a clear blue sky, creating a warm, golden tone with natural daylight casting sharp, crisp shadows. The atmosphere is serene yet adventurous, with a rustic, survivalist aesthetic. The setting is an outdoor, natural environment: a white-sand beach bordered by rugged, mossy cliffs and scattered driftwood. A green tarp tent is pitched nearby, hinting at a temporary campsite, while the calm ocean stretches into the distance under the bright sun. The scene is bathed in midday sunlight, suggesting a hot, clear day with no clouds or wind.\nIn the first shot (0:00), a woman—appearing mid-30s, Caucasian, with short dark hair peeking from under a wide-brimmed olive-green hat—stands in the foreground. She wears a black bikini top and a simple gold necklace, her expression triumphant and proud as she holds a large, freshly caught fish mounted on a wooden stick. The fish, likely a rockfish or similar species, has a mottled brown-and-orange body, sharp teeth, and a wide-open mouth. Her hands grip the stick firmly, positioning the fish to showcase its size. The camera is at eye-level, capturing her face partially obscured by the fish, emphasizing her accomplishment. The background includes rocky terrain and sparse vegetation.\n\nAt 0:02, the scene transitions to a close-up of her hands as she arranges a fire pit made of driftwood. The camera focuses tightly on her fingers, adorned with a silver ring, gently placing a small stick into the structure. The driftwood is weathered, gray-brown, and uneven, forming a teepee-like arrangement. The sand beneath is light and granular, and the shot is static, emphasizing her deliberate, careful movements. The shallow depth of field blurs the background, keeping attention on her hands and the fire structure. The lighting remains bright and natural, casting soft shadows across the wood. The mood shifts subtly from celebration to preparation, suggesting the next step: cooking the fish over the fire. The video’s style is documentary-style realism, capturing raw, unpolished moments of survival and achievement in nature. The camera remains steady, with no noticeable movement, maintaining a grounded, intimate perspective. The narrative arc is clear: catch → prepare → cook, framed as a self-reliant outdoor adventure.",
+    "title": "Shot 3",
+    "source_txt": "rank2-The video opens with a close-up shot of a sandy beach scene, where weathered driftwood and scattered-0_lora_prompts.txt",
+    "block_indices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "aquamarine_underwater/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video presents a vivid underwater scene with a cool, deep blue tone dominating the background, suggesting clarity and depth of oceanic waters. The lighting is diffused and natural, emanating from above, casting a soft, even glow that enhances the serene and tranquil atmosphere. The style is realistic, capturing the fluid motion and natural behavior of marine life with high fidelity. The camera remains submerged, offering a first-person or close-up perspective that immerses the viewer directly into the aquatic environment.\nThe scene is entirely underwater, set in a vast, open oceanic space, likely during midday given the consistent, bright illumination filtering through the water. There are no visible landmarks, structures, or artificial elements—only the uninterrupted blue expanse and the gentle movement of water. The environment is calm, with no visible currents or disturbances, allowing for a smooth, almost meditative viewing experience.\n\nA single dolphin is the central character, appearing in frame 1 and remaining the focus throughout. The dolphin is a mature adult, with smooth, grayish-blue skin and a streamlined body adapted for swift movement. Its facial features are expressive, with large, dark, intelligent eyes and a curved, toothy mouth. The dolphin’s posture is calm and curious, and its movements are graceful and unhurried. It holds a small, greenish-yellow fish in its mouth—likely a mackerel or similar species—caught mid-swim. The fish is slender, with a slightly translucent body and visible fins, positioned horizontally across the dolphin’s jaws.\n\nThe camera follows the dolphin closely, starting with a slightly blurred, motion-filled shot as it approaches, then stabilizing into a steady close-up that captures the dolphin’s face and the fish in its mouth. The dolphin turns its head slightly, offering a clear view of the fish’s position and the dolphin’s gentle, almost playful grip. The camera angle is low, slightly below eye level, emphasizing the dolphin’s dominance and the dominance of the oceanic environment. No other characters or objects are present, and the focus remains solely on the interaction between the dolphin and its prey.\n\nThe movement is slow and deliberate, with the dolphin gliding through the water with minimal disturbance. The fish remains motionless in its grasp, suggesting the dolphin has just caught it or is holding it for display. The video’s narrative is observational, capturing a moment of natural behavior without human intervention. The shallow depth of field keeps the dolphin and the fish sharply in focus while softly blurring the background, emphasizing their presence. The shot is a close-up, with a medium focal length, allowing for detailed observation of textures and expressions while maintaining context within the vast oceanic setting. The overall tone is peaceful, highlighting the beauty and grace of marine life in its natural habitat.",
+    "title": "Shot 5",
+    "source_txt": "rank0-The video presents a serene underwater scene bathed in a cool, aquamarine-blue tone, with natural da-0_lora_prompts.txt",
+    "block_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+    ],
+    "num_blocks": 6
+}

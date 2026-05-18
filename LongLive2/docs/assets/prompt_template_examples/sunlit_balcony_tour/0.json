@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "sunlit_balcony_tour/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video presents a bright, sunlit outdoor scene with a warm, natural color tone, dominated by vivid greens from surrounding trees and earthy tones of brick and beige walls. The lighting is strong and direct, casting sharp shadows, indicating midday or early afternoon under clear, sunny skies. The atmosphere is relaxed and casual, with a realistic, documentary-style aesthetic. The camera follows a man walking along a modern balcony or walkway adjacent to a building, captured in a medium shot that gradually zooms in to a medium close-up as he approaches the camera. The setting is urban yet serene, with lush greenery, brick buildings, and architectural details like black railings and large glass doors. The background includes a red-brick structure with balconies and a distant bell tower, suggesting a residential or institutional complex. The man, appearing to be in his late 20s or early 30s, has a neatly groomed beard and short, styled brown hair. He wears a white v-neck t-shirt adorned with a crest-like emblem and dark jeans. His demeanor is expressive and animated as he gestures while speaking, conveying enthusiasm or explanation. He walks steadily from the left side of the frame toward the right, eventually stopping near a large black door with gold accents. The camera tracks his movement smoothly, maintaining eye-level framing that emphasizes his facial expressions and hand motions. The overall composition is balanced, with the man centered as he moves, and the background elements remain static, reinforcing the focus on his narrative. The video’s tone is engaging and conversational, inviting viewers into an informal tour or personal commentary.",
+    "title": "Shot 0",
+    "source_txt": "rank3-The video presents a bright, sunlit outdoor scene with a warm, natural color tone, dominated by vivi-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ],
+    "num_blocks": 8
+}

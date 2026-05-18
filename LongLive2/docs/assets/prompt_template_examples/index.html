@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Examples</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #182230;
+      --muted: #667085;
+      --line: #d9e0e8;
+      --blue: #2563eb;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(960px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 42px 0 60px;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #344054;
+      background: #f3f6fa;
+      font-weight: 800;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    code {
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: #0b6337;
+      background: #ecfdf3;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="../../index.html#prompt-design">Back to Prompt Design</a>
+    <h1>Prompt Examples</h1>
+    <p>
+      Each folder contains numbered per-shot JSON files and a
+      <code>shot_durations.txt</code> file for one complete multi-shot prompt case.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Shots</th>
+          <th>Files</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="african_savanna/0.json">african_savanna</a></td>
+          <td>8</td>
+          <td><a href="african_savanna/0.json">0.json</a> · <a href="african_savanna/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="aquamarine_underwater/0.json">aquamarine_underwater</a></td>
+          <td>8</td>
+          <td><a href="aquamarine_underwater/0.json">0.json</a> · <a href="aquamarine_underwater/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="brown_bear_river/0.json">brown_bear_river</a></td>
+          <td>8</td>
+          <td><a href="brown_bear_river/0.json">0.json</a> · <a href="brown_bear_river/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="cozy_red_room/0.json">cozy_red_room</a></td>
+          <td>8</td>
+          <td><a href="cozy_red_room/0.json">0.json</a> · <a href="cozy_red_room/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="frying_egg_closeup/0.json">frying_egg_closeup</a></td>
+          <td>7</td>
+          <td><a href="frying_egg_closeup/0.json">0.json</a> · <a href="frying_egg_closeup/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="indoor_tender_moment/0.json">indoor_tender_moment</a></td>
+          <td>6</td>
+          <td><a href="indoor_tender_moment/0.json">0.json</a> · <a href="indoor_tender_moment/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="sandy_beach_driftwood/0.json">sandy_beach_driftwood</a></td>
+          <td>8</td>
+          <td><a href="sandy_beach_driftwood/0.json">0.json</a> · <a href="sandy_beach_driftwood/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="shimmering_puzzle_surface/0.json">shimmering_puzzle_surface</a></td>
+          <td>6</td>
+          <td><a href="shimmering_puzzle_surface/0.json">0.json</a> · <a href="shimmering_puzzle_surface/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="sunlit_balcony_tour/0.json">sunlit_balcony_tour</a></td>
+          <td>6</td>
+          <td><a href="sunlit_balcony_tour/0.json">0.json</a> · <a href="sunlit_balcony_tour/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="vintage_archival_scene/0.json">vintage_archival_scene</a></td>
+          <td>7</td>
+          <td><a href="vintage_archival_scene/0.json">0.json</a> · <a href="vintage_archival_scene/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+        <tr>
+          <td><a href="warm_indoor_dining/0.json">warm_indoor_dining</a></td>
+          <td>8</td>
+          <td><a href="warm_indoor_dining/0.json">0.json</a> · <a href="warm_indoor_dining/shot_durations.txt">shot_durations.txt</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

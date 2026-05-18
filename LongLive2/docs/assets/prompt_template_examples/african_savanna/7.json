@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "african_savanna/7.mp4",
+    "filename": "7.mp4",
+    "caption": "The video presents a serene, naturalistic scene in a savanna environment under a dynamic sky. The color tone is warm and earthy, with golden-brown grasses, muted greens of scattered shrubs, and a soft gradient of blue and white clouds overhead. The lighting is natural daylight, with midday sun casting even illumination and minimal harsh shadows, creating a calm, open atmosphere. The style is documentary-style realism, capturing wildlife in its natural habitat with a steady, observational camera approach.\nThe scene unfolds outdoors in a vast, open savanna, characterized by dry grasses, scattered low-lying shrubs, and distant rolling hills or mountains on the horizon. The sky is partly cloudy, with fluffy cumulus clouds drifting slowly, suggesting a tranquil, possibly late morning or early afternoon setting. There’s no urban or human infrastructure visible—only the untouched wilderness, reinforcing the raw, untamed beauty of the environment. The terrain is uneven, with patches of dry soil and sparse vegetation.\n\nA single African elephant is the central character, appearing in frame 0:00 and remaining in view throughout. It is a mature adult, with large, wrinkled gray skin, prominent white tusks curving outward, and enormous ears that flap slightly as it moves. Its expression is neutral and calm, with eyes focused forward, suggesting curiosity or awareness of the camera’s presence. The elephant’s gender is not discernible without closer inspection, but it appears to be a male based on the size and tusk prominence. It has no clothing or accessories, typical of wild animals.\n\nThe elephant is positioned centrally in the frame, walking slowly and deliberately toward the camera. It moves from the background toward the foreground, gradually filling the frame as it advances. Its trunk sways gently, occasionally touching the ground or brushing against nearby shrubs. The camera remains mostly static, with slight panning to follow the elephant’s movement, maintaining a medium shot that keeps the animal’s full body in frame. The depth of field is deep, allowing both the foreground grasses and distant mountains to remain in focus. The shot is taken at eye level, creating an immersive, observational perspective.\n\nThe elephant’s movement is slow and deliberate, with a steady gait, each step causing slight tremors in the surrounding grass. There’s no wind visibly affecting the vegetation, but the elephant’s ears flap occasionally, suggesting minor environmental motion. The overall narrative is one of peaceful coexistence between wildlife and the vastness of nature, inviting viewers to witness the majesty of the elephant in its natural habitat. The camera’s steady framing and natural lighting enhance the authenticity and emotional resonance of the moment.",
+    "title": "Shot 7",
+    "source_txt": "rank3-The video presents a warm, golden-hued African savanna scene under a soft, diffused daylight, sugges-0_lora_prompts.txt",
+    "block_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 6
+}

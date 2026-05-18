@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "indoor_tender_moment/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video opens with a warm, slightly golden-hued interior lighting, casting soft shadows across a modern, minimalist living space. The atmosphere is calm and domestic, with neutral beige and white tones dominating the walls and furniture. The scene is indoors, likely a hotel room or upscale apartment, featuring contemporary decor. Natural light appears to filter gently through sheer curtains, suggesting either late afternoon or early evening. The environment is tidy and composed, with a sleek white console table, a flat-screen TV, and a stylish black lamp.\nA single male character, appearing in his late 30s to early 40s, enters the frame from the left. He has short, neatly styled dark hair and wears a crisp white button-down shirt with dark trousers, suggesting a professional or semi-formal setting. His expression is focused, perhaps slightly hurried as he moves. He walks toward the console table, bends forward slightly, and reaches toward the floor near the table’s base. His posture indicates he’s retrieving or adjusting something out of view. The camera remains stationary, capturing a medium shot that frames him from the waist up, allowing full visibility of his movements.\n\nKey objects include the flat-screen TV (black, mounted on a white console), a black cylindrical lamp with a metal base, a white coffee machine, and a few small items like cups and pens on the console. A dark garment lies on a chair in the background, and a door frame is visible to the right. The depth of field is shallow, keeping the man and console table in sharp focus while softly blurring the background elements.\n\nThe camera maintains an eye-level perspective throughout, enhancing the realism and intimacy of the scene. The man’s movement is deliberate, slow, yet purposeful—no frantic motion, but rather a quiet, task-oriented action. There’s no interaction with others, and no external environmental elements like wind or rain are present. The overall narrative suggests routine or preparation, perhaps the man tidying up or retrieving something essential. The tone is understated, cinematic, and grounded in realism, with a focus on the quiet rhythm of daily life.",
+    "title": "Shot 5",
+    "source_txt": "rank0-The video clip presents a tender, emotionally charged moment between two individuals in an indoor ur-0_lora_prompts.txt",
+    "block_indices": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 8
+}

@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "sandy_beach_driftwood/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video unfolds in a sun-drenched, natural beach environment under clear blue skies, casting sharp, high-contrast shadows across the scene. The color tone is warm and golden, enhanced by natural daylight—likely midday—with a crisp, vivid realism that emphasizes the texture of sand, rocks, and sea. The atmosphere is serene yet adventurous, with a sense of solitude and connection to nature. The style is documentary-like, capturing candid moments with dynamic camera movement and natural framing.\nThe setting is an outdoor, rugged coastline with fine white sand, scattered driftwood, and smooth, weathered rocks. In the background, distant mountains and calm blue water stretch under a cloudless sky. The environment feels untouched and wild, with no signs of urbanization. The lighting suggests bright, direct sunlight, enhancing the vividness of colors and casting elongated shadows from the characters and objects.\n\nThe only visible character is a woman, appearing in the first frame (0:00) and again at 0:03. She is likely in her late 20s to early 30s, with fair skin and long, blonde braided hair. She wears a black bikini top and white bikini bottoms, complemented by a wide-brimmed olive-green hat and a delicate gold necklace. Her expression is relaxed and cheerful, with a warm smile directed at the camera. She appears to be a traveler or outdoor enthusiast, possibly engaged in beachside fishing or exploration.\n\nAt 0:01, the camera tilts down to a close-up of a freshly caught fish—its scales glistening with moisture, its mouth agape, and fins slightly frayed—resting on a gray stone. The fish’s reddish-orange hue contrasts with the pale sand. At 0:02, the camera pans up to show the woman’s feet and the fish, emphasizing the casual, hands-on nature of her activity. At 0:03, the camera returns to a medium shot of the woman, who turns toward the camera with a playful, proud smile, her body angled slightly away from the lens. She gestures casually with her hands, as if presenting her catch or explaining her activity.\n\nThe camera movement is fluid and handheld, shifting from a low-angle shot of the fish to a medium shot of the woman, then panning to reveal the surrounding driftwood and rocks. The focus remains sharp throughout, with a shallow depth of field that blurs the background slightly, drawing attention to the subject and her immediate environment. The video’s narrative is observational and personal, capturing a moment of quiet triumph in nature. The woman’s movements are slow and deliberate, reinforcing the tranquil, meditative mood of the scene. There is no visible wind or other natural elements in motion, but the sunlight’s shifting shadows suggest the passage of time. The overall tone is joyful and immersive, inviting viewers into a moment of simple, natural beauty.",
+    "title": "Shot 1",
+    "source_txt": "rank2-The video opens with a close-up shot of a sandy beach scene, where weathered driftwood and scattered-0_lora_prompts.txt",
+    "block_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "num_blocks": 6
+}

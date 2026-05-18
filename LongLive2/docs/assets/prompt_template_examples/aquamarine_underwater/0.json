@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "aquamarine_underwater/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video presents a serene underwater scene bathed in a cool, aquamarine-blue tone, with natural daylight filtering through the water’s surface, creating a soft, diffused illumination. The atmosphere is tranquil and immersive, evoking a sense of calm exploration beneath the ocean’s surface. The camera employs a dynamic, fluid movement, often following the subjects closely, resulting in medium close-ups and close-ups that emphasize intimate interactions. The style is realistic, capturing the natural behavior of marine life with high clarity and depth of field that keeps both foreground and background elements in focus, though slightly blurred at times due to water’s natural diffusion.\n\nThe environment is an open ocean setting, likely shallow to mid-depth, with visible sandy seabed and scattered marine vegetation or coral fragments. Sunlight pierces the water from above, casting shimmering patterns and enhancing the ethereal quality of the scene. No artificial structures or urban elements are present — only the natural underwater world. The time of day appears to be midday, as the lighting is bright and even, with no indication of dawn or dusk.\n\nTwo main characters are featured: a spotted pufferfish and a dolphin. The pufferfish, appearing first at 0:00, is round and inflated, with a yellowish-green body covered in dark spots and a distinctive, fan-like tail fin. Its eyes are large and dark, giving it a curious, almost expressive look. The dolphin, appearing at 0:03, is sleek and gray, with a streamlined body, smooth skin, and a curved dorsal fin. Its head is slightly turned, showing a gentle, inquisitive expression as it observes the pufferfish.\n\nThe pufferfish moves slowly and deliberately, drifting in the water with a gentle bobbing motion, seemingly unafraid of the dolphin’s presence. At 0:06, the dolphin approaches, its body gliding past the pufferfish, which remains motionless, as if fascinated or unbothered. The dolphin’s movements are graceful and controlled, its fins propelling it with fluid precision. The camera follows them closely, shifting angles to maintain focus on their interaction — sometimes from below, sometimes from the side — capturing the dynamic interplay between predator and prey, or perhaps simply curious companions.\n\nThe narrative is observational and unscripted, highlighting the natural curiosity of the dolphin and the pufferfish’s calm demeanor. The video’s focal length varies between medium close-ups and wide shots, allowing viewers to appreciate both the intimate details of the animals’ expressions and the broader context of their underwater habitat. The overall tone is peaceful, showcasing the beauty and wonder of marine life in its most authentic form.",
+    "title": "Shot 0",
+    "source_txt": "rank0-The video presents a serene underwater scene bathed in a cool, aquamarine-blue tone, with natural da-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "indoor_tender_moment/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video is shot in a warm, muted color tone, dominated by soft beige and brown hues, suggesting an intimate, emotionally charged atmosphere. The lighting is soft and diffused, likely from interior sources, casting gentle shadows and enhancing the romantic and tender mood. The style is cinematic, with a shallow depth of field that keeps the focus tightly on the couple while softly blurring the background. The camera employs a medium close-up shot, maintaining eye-level framing to emphasize the emotional connection between the characters.\nThe scene takes place indoors, likely in a modern, upscale setting such as a gallery or private residence, as indicated by the abstract artwork visible on the wall behind them. The environment is minimalistic, with neutral-toned walls and subtle architectural details, reinforcing the intimacy of the moment. The time of day is ambiguous but appears to be evening or late afternoon, given the warm, subdued lighting.\n\nTwo characters are present: a man and a woman. The man appears middle-aged, with short, neatly styled brown hair and a clean-shaven face. He is dressed in a dark gray suit with a white shirt and black tie, suggesting a formal or professional context. The woman, also middle-aged, has shoulder-length wavy auburn hair and is wearing a light-colored blouse. Her expression is tender and emotive, conveying affection and vulnerability.\n\nThe man initiates the interaction by leaning down to kiss the woman’s neck, then gently cradles her face with one hand while the other rests on her shoulder. His movements are slow and deliberate, indicating deep affection. The woman tilts her head back slightly, closing her eyes in response, and smiles softly. Their faces are close, almost touching, as they share an intimate moment. The camera remains steady, capturing their interaction from a slightly elevated angle, enhancing the emotional intensity.\n\nThe background artwork remains out of focus, ensuring the viewer’s attention remains on the couple. The overall narrative is one of emotional intimacy and connection, conveyed through subtle gestures and expressions. The camera’s shallow depth of field and close framing amplify the personal, private nature of the moment, suggesting a pivotal emotional exchange between the two characters. The movement is minimal but meaningful, with slow, deliberate motions that underscore the tenderness and significance of their interaction.",
+    "title": "Shot 1",
+    "source_txt": "rank0-The video clip presents a tender, emotionally charged moment between two individuals in an indoor ur-0_lora_prompts.txt",
+    "block_indices": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+    ],
+    "num_blocks": 8
+}

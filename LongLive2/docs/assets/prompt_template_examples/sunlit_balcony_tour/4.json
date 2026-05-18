@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "sunlit_balcony_tour/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video features a modern, minimalist interior with a warm, neutral color tone dominated by dark wood cabinetry and beige walls. The lighting is soft and evenly distributed, likely from recessed ceiling lights, creating a clean, inviting atmosphere. The style is contemporary, with sleek lines and uncluttered design, emphasizing functionality and elegance. The scene is indoors, likely within a luxury apartment or home, with polished flooring and refined architectural details. In the background, framed artwork adorns the walls, and a hallway leads to other rooms, suggesting a spacious layout.\nA single male character, appearing in every frame, is mid-30s with short, styled brown hair and a well-groomed beard. He wears a white T-shirt with a small emblem on the chest and black pants. His demeanor is enthusiastic and demonstrative as he gestures toward and interacts with the cabinetry. He begins by pointing at the dark wooden wardrobe units, then proceeds to open one, revealing neatly folded towels and interior lighting. His movements are deliberate and fluid, indicating familiarity with the space.\n\nThe cabinetry is constructed from dark, matte-finished wood, with sleek, horizontal metallic handles and integrated LED lighting inside the compartments. These units are positioned along the wall, forming a continuous, seamless structure. The camera remains stationary throughout, capturing a medium shot that keeps the man and the cabinetry as the central focus. His position shifts slightly as he moves from one side of the frame to the other, engaging with different parts of the cabinetry while maintaining eye contact with the camera, suggesting he is presenting or explaining. The overall narrative conveys a walkthrough or tour of a high-end, thoughtfully designed interior space, emphasizing storage solutions and aesthetic cohesion. The lighting remains consistent, and there is no natural element or weather condition visible, reinforcing the controlled, indoor environment. The shot composition is balanced, with a shallow depth of field that keeps the man and the cabinetry sharply in focus while softly blurring the background elements. The camera angle is eye-level, creating an intimate and personal perspective for the viewer.",
+    "title": "Shot 4",
+    "source_txt": "rank3-The video presents a bright, sunlit outdoor scene with a warm, natural color tone, dominated by vivi-0_lora_prompts.txt",
+    "block_indices": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+    ],
+    "num_blocks": 8
+}

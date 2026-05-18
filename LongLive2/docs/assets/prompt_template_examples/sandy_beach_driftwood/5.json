@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "sandy_beach_driftwood/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video features a warm, golden-orange color tone, illuminated by natural sunlight that casts soft, diffused light across the scene. The atmosphere is serene yet primal, evoking a sense of survival and connection to nature. The style is realistic and documentary-like, with a handheld, intimate camera angle that emphasizes the tactile experience of building a fire. The shot is a close-up, shallow depth of field, focusing sharply on the flames and the hand, while the background remains slightly blurred.\nThe scene takes place outdoors on a sandy, possibly beach or desert-like terrain, with dry, weathered driftwood and scattered twigs forming the structure of the fire pit. The fire burns steadily, with flickering orange flames and glowing embers visible through the gaps in the wood. The environment appears arid and sunlit, suggesting midday or early afternoon under clear skies. No artificial structures or urban elements are visible — only natural elements like sand, driftwood, and sparse vegetation (a red berry briefly appears at the edge of the frame).\n\nA single character — an adult hand, likely male or gender-neutral — is visible. The hand is tanned, with visible veins and calluses, suggesting outdoor activity or manual labor. The hand is positioned in the foreground, gently adjusting a piece of driftwood to feed the fire. No face, clothing, or accessories are visible, keeping focus on the action. The hand moves slowly and deliberately, indicating experience and care in fire tending.\n\nKey objects include the fire pit, constructed of interwoven driftwood (light gray, weathered, splintered), and smaller twigs and sand scattered around. The fire itself is the central dynamic element, with flames flickering upward and embers glowing intermittently. The camera remains stationary, maintaining a close-up shot, with the hand entering the frame from the top left and moving downward to adjust the wood.\n\nThe hand’s movement is slow, deliberate, and controlled — it pushes a piece of wood slightly deeper into the fire, creating a subtle shift in the flame’s pattern. The fire responds with a gentle flicker, and the sand around the pit remains undisturbed except for the hand’s interaction. The camera stays low and close, capturing the texture of the wood and the warmth of the flames, enhancing the immersive, tactile quality of the scene. The natural elements — the fire, wind (implied by slight wood movement), and sunlight — are in constant, gentle motion, contrasting with the hand’s steady, purposeful action. The shot is a medium close-up, with a shallow depth of field that keeps the fire and hand in sharp focus while blurring the surrounding sand and background. The angle is slightly tilted downward, emphasizing the intimate, grounded nature of the task.",
+    "title": "Shot 5",
+    "source_txt": "rank2-The video opens with a close-up shot of a sandy beach scene, where weathered driftwood and scattered-0_lora_prompts.txt",
+    "block_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+    ],
+    "num_blocks": 6
+}

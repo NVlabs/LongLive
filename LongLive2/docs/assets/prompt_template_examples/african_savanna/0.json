@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "african_savanna/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video presents a warm, golden-hued African savanna scene under a soft, diffused daylight, suggesting late afternoon or early evening. The atmosphere is serene and natural, with gentle winds rustling the grasses and leaves of scattered acacia trees. The style is documentary-like, emphasizing realism with a shallow depth of field that subtly blurs the foreground, drawing focus to the distant horizon and wildlife. The camera is mounted inside a safari vehicle, as indicated by the visible interior frame and windshield bars, lending a voyeuristic yet immersive perspective. \n\nThe environment is entirely outdoor, rural, and wild, dominated by golden-brown grasses and sparse acacia trees with umbrella-like canopies. In the background, faint, rolling hills or mountains are visible under a partly cloudy sky with soft lavender and white clouds. The scene lacks urban elements, reinforcing its untouched, natural setting. \n\nThe main subject is a single elephant, appearing in frame 0:00, walking slowly from left to right across the savanna. It is a large, dark gray adult, likely a female or young bull, with visible tusks and a calm demeanor. The elephant moves steadily toward the right edge of the frame, partially obscured by a tree in the center. No human characters are present. \n\nThe camera remains mostly static but pans slightly to follow the elephant’s movement, creating a dynamic yet unhurried motion. The framing is a medium long shot, capturing the elephant and its surroundings in context. The shallow depth of field keeps the elephant in focus while gently blurring the vehicle’s interior and distant landscape. The elephant’s movement is slow and deliberate, embodying the tranquil rhythm of the wild. The wind’s gentle sway through the grass and trees adds subtle motion, enhancing the scene’s peaceful ambiance. The video’s narrative is observational, inviting viewers to witness the majesty of the African wilderness from a safe, curated perspective.",
+    "title": "Shot 0",
+    "source_txt": "rank3-The video presents a warm, golden-hued African savanna scene under a soft, diffused daylight, sugges-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "num_blocks": 6
+}

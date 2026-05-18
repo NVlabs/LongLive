@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "brown_bear_river/6.mp4",
+    "filename": "6.mp4",
+    "caption": "The video presents a natural, earthy-toned scene with a muted green and brown color palette, bathed in soft, diffused daylight that suggests an overcast or shaded forest environment. The atmosphere feels tranquil yet slightly wild, with gentle movement in the foliage hinting at a breeze. The style is documentary-like, employing a shallow depth of field that keeps the foreground vegetation in sharp focus while softly blurring the background, creating a sense of immersion in the wild.\nThe setting is entirely outdoors, nestled in a dense, verdant forest. Ferns and small leafy plants dominate the foreground, their fronds delicately swaying as if stirred by a light breeze. The background, though blurred, reveals more trees and underbrush, reinforcing the secluded, untamed nature of the habitat. The time appears to be daytime—perhaps late morning or early afternoon—given the even, natural lighting without harsh shadows.\n\nA large, brown-furred animal, likely a bear, is the central subject. It first appears partially obscured by ferns at 0:00, its massive body moving from left to right across the frame. The bear’s fur is thick and textured, blending subtly with the forest floor. It moves steadily, its motion deliberate and unhurried, suggesting foraging or exploration. The animal’s head is not visible, emphasizing its bulk and the natural camouflage of its surroundings. Its movement is fluid, with its body shifting slightly as it navigates the undergrowth, occasionally brushing against nearby plants.\n\nThe camera remains static throughout, capturing the bear’s passage in a medium shot that emphasizes its scale relative to the environment. The shallow depth of field isolates the bear as it moves through the frame, with the foreground ferns acting as a natural screen. The bear’s path is linear, moving from left to right, gradually exiting the frame by 0:03. No other characters or objects appear, keeping the focus entirely on the animal’s quiet, natural behavior. The scene conveys a sense of harmony between the creature and its habitat, untouched by human presence. The wind’s subtle influence on the foliage adds a gentle, organic rhythm to the visual narrative.",
+    "title": "Shot 6",
+    "source_txt": "rank3-The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, capt-0_lora_prompts.txt",
+    "block_indices": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+    ],
+    "num_blocks": 6
+}

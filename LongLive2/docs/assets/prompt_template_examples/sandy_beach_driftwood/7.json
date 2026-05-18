@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "sandy_beach_driftwood/7.mp4",
+    "filename": "7.mp4",
+    "caption": "The video opens with a vivid, sunlit beach scene, bathed in warm, golden natural daylight that enhances the earthy tones of the environment. The lighting is bright and direct, casting sharp shadows, suggesting a midday setting under clear, cloudless skies. The atmosphere is serene and primal, evoking a sense of isolation and simplicity, with the camera capturing the rawness of nature through a realistic, documentary-style lens. The style is unfiltered and immersive, emphasizing texture and motion.\nThe scene unfolds outdoors on a sandy beach, scattered with rocks and driftwood, surrounded by the vast, shimmering blue expanse of the ocean. In the distance, rugged, hazy mountains frame the horizon, adding depth and a sense of untouched wilderness. The sand is textured with footprints and small debris, hinting at human presence without intrusion. At the center of the frame, a small fire crackles among driftwood and rocks, flames dancing vividly in the sunlight. The camera pans slowly across the fire, revealing the charred wood and embers, then shifts focus to the sand, capturing its undulating surface and scattered shells.\n\nA woman appears in the final shot, seated on the beach with her back to the camera. She is wearing a dark sun hat and a bikini, her bare shoulders and back exposed to the sun. Her hair is tied back, and she appears relaxed, gazing out at the ocean. The camera remains stationary, capturing her in a long shot that emphasizes the vastness of the landscape around her. The fire’s flickering flames and the gentle movement of the water create a tranquil, meditative rhythm. Her posture is calm, suggesting a moment of reflection or solitude. The video’s narrative is contemplative, focusing on the harmony between human presence and nature, with the fire’s warmth contrasting the cool blue of the sea and sky. The camera’s slow, deliberate movements enhance the immersive, almost ritualistic quality of the scene.",
+    "title": "Shot 7",
+    "source_txt": "rank2-The video opens with a close-up shot of a sandy beach scene, where weathered driftwood and scattered-0_lora_prompts.txt",
+    "block_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 6
+}

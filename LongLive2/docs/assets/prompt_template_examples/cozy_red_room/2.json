@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "cozy_red_room/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video features a warm, domestic indoor atmosphere with soft, natural lighting filtering through windows, casting gentle shadows across the space. The color tone leans toward earthy and muted hues—reds on the walls, beige carpeting, and the fluffy, cream-and-gray coat of the dog. The style is candid and intimate, capturing spontaneous moments of pet interaction with a handheld, slightly shaky camera that enhances the personal, home-video feel.\nThe scene begins with a large, fluffy dog, likely a husky or similar breed, lying on a reddish-brown carpeted floor. Its fur is thick and light brown with darker markings around the eyes and muzzle, and it has expressive, dark eyes. The dog appears relaxed, occasionally lifting its head to look around. A person, partially visible in the background, sits nearby wearing a gray t-shirt and dark shorts; only their torso and arm are in frame. The setting includes a wooden chair, a white-painted wall with paneling, and a red wall above, suggesting a cozy, lived-in room.\n\nAs the video progresses, the dog moves toward a doorway, where it is gently petted on the head by a woman’s hand. Her sleeve is a light beige knit, and a ring glints on her finger. The dog tilts its head upward, eyes half-closed in contentment, its tongue slightly out as it enjoys the affection. The floor transitions to a green patterned carpet near the doorway, with a white plastic bag and a black object partially visible in the background. The dog’s movements are slow and deliberate, conveying a sense of calm and trust.\n\nThe camera follows the dog’s motion, shifting angles from a low perspective near the floor to a close-up of its face as it’s petted. The framing is intimate—close-up shots emphasize the dog’s facial expressions, while medium shots capture its movements and the surrounding environment. The camera work is handheld, resulting in natural, unpolished motion that feels personal and spontaneous. There is no dramatic lighting or professional staging—just the quiet, everyday joy of a pet being loved. The overall mood is warm, affectionate, and peaceful, highlighting the bond between the dog and its human companion.",
+    "title": "Shot 2",
+    "source_txt": "rank0-The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unse-0_lora_prompts.txt",
+    "block_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "brown_bear_river/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video exhibits a natural, earthy color tone dominated by muted greens, browns, and soft yellows, evoking a tranquil, forested environment. Lighting appears diffused, suggesting an overcast day or dappled sunlight filtering through tree canopies, creating a soft, even illumination without harsh shadows. The atmosphere is serene and immersive, with a shallow depth of field that blurs the background slightly, emphasizing the foreground foliage and the movement of the subject. The style is documentary-like, capturing wildlife in its natural habitat with minimal interference, using a handheld or steady cam approach that subtly tracks the subject’s motion.\nThe scene unfolds outdoors in a lush, dense woodland, likely during late morning or early afternoon, given the even, natural light. Ferns and shrubs with serrated leaves dominate the foreground, while taller greenery and tree trunks form the background. The environment is rich with vegetation, including yellow wildflowers intermingled with ferns, suggesting a temperate forest ecosystem. There are no man-made structures or urban elements, reinforcing the untouched wilderness setting.\n\nA single large brown bear, likely a mature adult, is the central subject. It first appears partially obscured by foliage in the foreground, its thick fur and muscular build visible as it moves from the left to the right edge of the frame. The bear’s movement is deliberate and slow, suggesting it is foraging or exploring. Its head is often lowered, indicating it may be sniffing or searching for food. The bear’s fur appears thick and slightly matted, blending seamlessly with the surrounding earth tones.\n\nThe camera remains relatively static but pans slightly to follow the bear’s movement, maintaining a medium shot that captures its upper body and surroundings. The depth of field keeps the bear in focus while rendering the foreground ferns slightly blurred, enhancing the sense of immersion. The bear’s motion is unhurried and purposeful, with no signs of agitation. There is no interaction with other animals or humans, reinforcing the solitary nature of the creature. The gentle rustling of leaves and subtle swaying of plants suggest a light breeze, adding to the natural ambiance.\n\nThe video’s narrative is observational, aiming to showcase wildlife behavior in its natural habitat. The shot composition, shallow depth of field, and smooth camera tracking create an intimate yet respectful portrayal of the bear’s movement through its environment. The overall tone is calm and reverent, inviting viewers to witness the quiet majesty of nature.",
+    "title": "Shot 2",
+    "source_txt": "rank3-The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, capt-0_lora_prompts.txt",
+    "block_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+    ],
+    "num_blocks": 6
+}

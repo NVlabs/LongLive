@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "vintage_archival_scene/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video exhibits a muted, grayish-blue color tone with soft, diffused lighting, suggesting an overcast or foggy day. The atmosphere is calm but carries a sense of operational readiness, with the camera maintaining a steady, aerial perspective that slowly pans rightward, keeping the ship and helicopter as focal points. The style is documentary-like, with a grainy, vintage quality that hints at historical footage.\nThe scene unfolds outdoors on the deck of a large naval vessel, likely an amphibious assault ship or helicopter carrier, docked or moving slowly on calm, gray water. The deck is bustling with activity: several personnel in uniforms are scattered across the surface, some walking purposefully while others appear to be monitoring operations. The ship’s structure includes multiple levels of equipment, railings, and what appears to be a helipad marked with a white circle. A single military helicopter, dark green or gray in color, is the central object. It begins stationary on the helipad, then lifts off slowly, its rotors spinning steadily as it ascends vertically before tilting slightly forward and beginning a smooth transition into forward flight. The camera follows the helicopter’s ascent and lateral movement, capturing its graceful departure from the ship’s deck.\n\nThe helicopter’s movement is the primary action, and its trajectory is clearly tracked as it moves from the center of the frame toward the right, gradually distancing itself from the ship. The personnel on deck remain largely static or move minimally, indicating a controlled environment. The ship’s hull and superstructure are visible in the background, with faint details of antennas, cranes, and other onboard machinery. The water below reflects the muted sky, adding to the serene yet functional atmosphere.\n\nThe shot is a medium-long shot, maintaining a consistent depth of field that keeps both the helicopter and the ship’s deck in focus. The camera angle is slightly elevated, offering a bird’s-eye view that emphasizes the helicopter’s takeoff and the ship’s scale. No close-ups or dramatic camera movements are present, reinforcing the documentary, observational tone. The overall narrative conveys a routine military operation — possibly a training exercise or deployment — with precision and calmness. The helicopter’s steady flight and the orderly ship deck suggest professionalism and preparedness, while the foggy weather adds a layer of subdued realism.",
+    "title": "Shot 3",
+    "source_txt": "rank1-The video exhibits a muted, desaturated color tone with a grainy, vintage aesthetic, suggesting arch-0_lora_prompts.txt",
+    "block_indices": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+    ],
+    "num_blocks": 7
+}

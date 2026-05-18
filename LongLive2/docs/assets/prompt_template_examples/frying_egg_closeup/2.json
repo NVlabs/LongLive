@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "frying_egg_closeup/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video opens with a vivid, warm-toned close-up shot of a sizzling wok filled with diced tomatoes, onions, and garlic, simmering under high heat. Steam rises vigorously, creating a hazy, aromatic atmosphere that suggests a bustling kitchen environment. The lighting is bright and natural, likely from overhead kitchen lights, casting a golden glow on the ingredients and emphasizing their textures. The style is realistic, documentary-like, capturing the authentic essence of cooking in motion.\nThe scene takes place indoors, likely in a commercial or home kitchen, with the wok positioned on a stovetop. The background is slightly blurred, but hints of other cooking utensils and possibly a second pan with a golden-brown dish (possibly fried rice or noodles) are visible. The setting suggests a midday cooking session, with no visible windows or outdoor elements, and the weather is irrelevant as the environment is fully enclosed.\n\nNo human characters are visible in the video frames. The focus remains entirely on the food and the cooking process. The camera stays stationary throughout, maintaining a close-up shot that captures the steam and movement of the ingredients as they are stirred with a metal spatula. The spatula’s motion is deliberate and rhythmic, lifting and turning the mixture, indicating skilled cooking. The tomatoes appear juicy and slightly softened, while the onions and garlic are translucent, suggesting they are being sautéed for flavor development.\n\nThe camera angle is slightly elevated, looking down into the wok, allowing viewers to clearly observe the texture and color changes of the ingredients as they cook. The depth of field is shallow, keeping the wok’s contents in sharp focus while softly blurring the background. The shot transitions from a clear view of the ingredients to a moment where steam obscures the view, emphasizing the intensity of the cooking process. The movement is slow and deliberate, highlighting the transformation of the ingredients as they meld together, creating a sense of anticipation for the final dish. The overall narrative is centered on the sensory experience of cooking, emphasizing aroma, texture, and the transformative power of heat and time.",
+    "title": "Shot 2",
+    "source_txt": "rank2-The video exhibits a warm, golden-yellow color tone with soft, diffused lighting, emphasizing the gl-0_lora_prompts.txt",
+    "block_indices": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+    ],
+    "num_blocks": 7
+}

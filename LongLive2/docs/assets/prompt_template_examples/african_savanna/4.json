@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "african_savanna/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video presents a serene, naturalistic portrayal of an elephant in its wild habitat, captured under warm, golden-hour lighting that bathes the scene in a soft, earthy tone. The color palette is dominated by deep browns and muted greens, evoking a tranquil, sun-dappled savanna atmosphere. The lighting suggests late afternoon or early evening, with gentle shadows accentuating the elephant’s wrinkled skin and textured features. The camera employs a slow, deliberate movement, beginning with a tight close-up of the elephant’s eye and gradually panning upward to reveal its full facial profile. This low-angle shot emphasizes the elephant’s imposing presence, while the shallow depth of field keeps the background softly blurred, focusing attention on the creature’s aged, weathered skin and calm demeanor. The environment is distinctly outdoor, with sparse acacia trees and dry grass visible behind the elephant, suggesting a dry, open African bushland. The elephant’s skin is thick, deeply creased, and dusty, with visible scars and wrinkles that hint at a life of endurance. Its eyes are large, dark, and intelligent, conveying a sense of quiet wisdom. The elephant remains stationary throughout, gazing calmly into the distance, occasionally blinking slowly. The camera’s gradual upward pan reveals the elephant’s massive ears and the subtle movement of its trunk as it shifts slightly, possibly sensing its surroundings. There is no human presence or artificial structure in the frame, reinforcing the untouched, primal nature of the setting. The video’s style is observational and documentary, capturing the elephant in its natural state with reverence and intimacy. The slow, steady camera motion and close framing create a meditative tone, inviting viewers to connect with the animal’s quiet dignity. The elephant’s stillness contrasts with the subtle movement of the wind rustling through the foliage in the background, adding a gentle, natural rhythm to the scene. The shot is a medium close-up, maintaining focus on the elephant’s face while allowing just enough background to contextualize its environment. The overall effect is one of reverence, highlighting the majesty and resilience of this ancient creature in its natural domain.",
+    "title": "Shot 4",
+    "source_txt": "rank3-The video presents a warm, golden-hued African savanna scene under a soft, diffused daylight, sugges-0_lora_prompts.txt",
+    "block_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+    ],
+    "num_blocks": 6
+}

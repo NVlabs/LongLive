@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "sandy_beach_driftwood/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video opens with a close-up shot of a sandy beach scene, where weathered driftwood and scattered rocks form a natural arrangement. The sand is pale and textured, with visible footprints and debris, illuminated by bright, natural daylight. The color tone is warm and sun-drenched, with high contrast casting sharp shadows, suggesting a clear, sunny day. The atmosphere is serene, untouched, and evocative of a remote coastal paradise. The camera pans slightly upward, revealing a woman walking into the frame from the right. She is wearing a wide-brimmed olive-green hat, a black bikini top with thin straps, and white bikini bottoms. Her long, dark hair is tied back in a braid, and she moves with a relaxed, contemplative gait, glancing down at the sand. Her facial expression is neutral, suggesting quiet enjoyment of the surroundings. The background features a vast, pristine beach stretching toward turquoise waters, with distant, hazy mountains visible on the horizon. The sea sparkles under the sun, and the sky is a vibrant blue with minimal cloud cover. The camera follows her movement, maintaining a medium shot that captures her from the waist up, keeping her centered as she walks toward the left of the frame. The driftwood and rocks remain in the foreground, grounding the scene, while the expansive beach and ocean form the backdrop. The overall style is cinematic and naturalistic, with a wide-angle lens emphasizing the openness and tranquility of the environment. There is no wind or other natural movement beyond her slow, deliberate walk, and the focus remains consistently on her and the serene landscape, conveying a sense of peaceful solitude.",
+    "title": "Shot 0",
+    "source_txt": "rank2-The video opens with a close-up shot of a sandy beach scene, where weathered driftwood and scattered-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "num_blocks": 6
+}

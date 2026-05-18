@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "vintage_archival_scene/6.mp4",
+    "filename": "6.mp4",
+    "caption": "The video features a muted, desaturated color tone dominated by shades of gray and green, evoking a foggy or overcast atmosphere. Lighting is diffused and soft, suggesting either early morning or late afternoon under cloudy skies. The style is documentary-like, with handheld or slightly shaky camera work that conveys realism and immediacy. The footage appears to be captured from inside another aircraft, as indicated by the visible edge of a wing or fuselage in later frames.\nThe scene unfolds outdoors over a vast, flat, grassy or marshy terrain, possibly a wetland or agricultural field, with faintly visible patches of darker earth or water. In the distance, low-lying hills or ridges are barely discernible through the haze. The environment feels expansive and somewhat barren, with no significant urban or man-made structures visible. The weather is consistently foggy or misty, reducing visibility and creating a sense of isolation.\n\nThe central subject is a single military-style helicopter, likely a utility or attack model, painted in camouflage or dull gray. Its rotor blades spin rapidly, and its landing gear is extended, suggesting it is either hovering or preparing to land. The helicopter is seen from various angles as it moves slowly across the frame, maintaining a low altitude. The camera pans slightly to follow its movement, creating a sense of motion and purpose. At one point, the helicopter’s exhaust or engine emits a trail of white smoke, indicating it is either accelerating or performing a maneuver. The helicopter eventually exits the frame, replaced by a wider view of the landscape, reinforcing the vastness of the terrain.\n\nNo human characters are visible, and the focus remains entirely on the helicopter and its environment. The camera movement is dynamic, shifting from a side profile of the helicopter to a more distant, overhead perspective as it moves. The helicopter’s movement is steady and controlled, suggesting it is piloted with precision. The video’s narrative tone is observational and atmospheric, emphasizing the isolation of the aircraft in the expansive, misty landscape. The shallow depth of field keeps the helicopter in focus while softly blurring the background, enhancing the sense of scale and motion. The overall mood is somber and contemplative, with a hint of tension implied by the helicopter’s presence and the smoke trail.",
+    "title": "Shot 6",
+    "source_txt": "rank1-The video exhibits a muted, desaturated color tone with a grainy, vintage aesthetic, suggesting arch-0_lora_prompts.txt",
+    "block_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 6
+}

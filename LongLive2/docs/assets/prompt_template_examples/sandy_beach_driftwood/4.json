@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "sandy_beach_driftwood/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video opens with a close-up of a smoldering campfire, its embers glowing beneath a pile of weathered driftwood and ash. The scene is bathed in natural daylight with a warm, earthy color tone, suggesting a clear, sunny day. The lighting is soft and diffused, casting gentle shadows that highlight the textures of the wood and sand. The atmosphere feels serene and rustic, evoking a sense of solitude and connection with nature. The camera remains steady, focusing on the fire’s quiet, flickering life as it slowly consumes the wood.\nAs the camera pans upward, a young woman appears, kneeling beside the fire. She is wearing a wide-brimmed hat, a black bikini top, and a necklace with a circular pendant. Her long, dark hair is tied back in a braid, and her expression is focused and content as she tends to the flames. The background reveals a sandy beach with scattered rocks and sparse vegetation, reinforcing the outdoor, natural setting.\n\nThe camera then zooms in on a fish impaled on a stick, resting atop a rock. The fish, with its reddish-orange flesh and open mouth, appears freshly caught and prepared for cooking. The camera lingers on this detail before returning to the fire, where the flames grow slightly more vigorous as the woman adjusts the wood. Her movements are deliberate and calm, indicating experience and comfort with the task.\n\nThe video’s style is documentary-like, with naturalistic framing and minimal editing. The shots are composed to emphasize the interplay between human activity and the natural environment. The shallow depth of field keeps the focus on the fire and the woman’s hands, while the background remains softly blurred. The camera angles are mostly eye-level, creating an intimate, immersive perspective. The overall narrative conveys a peaceful moment of survival and simplicity, capturing the essence of outdoor living and the quiet beauty of nature. The woman’s actions are unhurried, reflecting a deep appreciation for the simple pleasures of the moment.",
+    "title": "Shot 4",
+    "source_txt": "rank2-The video opens with a close-up shot of a sandy beach scene, where weathered driftwood and scattered-0_lora_prompts.txt",
+    "block_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+    ],
+    "num_blocks": 6
+}

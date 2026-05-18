@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "vintage_archival_scene/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video exhibits a muted, desaturated color tone with a grainy, vintage aesthetic, suggesting archival footage from the mid-20th century. The lighting is diffused and natural, likely from an overcast sky, casting soft shadows and contributing to a subdued, documentary-style atmosphere. The style is candid and observational, with handheld camera work that conveys immediacy and realism, capturing moments without staging.\n\nThe scene unfolds outdoors on what appears to be a military airfield or ship deck, with a large, olive-drab helicopter dominating the frame. The environment is utilitarian and functional, with visible metal structures, cables, and equipment scattered around. The setting is daytime, possibly midday, with no discernible weather effects like rain or fog, though the haze suggests either dust or atmospheric conditions typical of a tropical or arid region.\n\nTwo men are prominently featured. The first appears shirtless, wearing only shorts and a cap, likely a soldier or crew member. He is seen in the foreground, moving toward the helicopter, his posture relaxed yet purposeful. The second man, seen later, is dressed in a military uniform with boots and a cap, climbing out of the helicopter’s open side door. His actions suggest he is either disembarking or assisting with operations. Both appear to be young adult males, of indeterminate ethnicity based on visual cues, with practical hairstyles and minimal accessories.\n\nThe helicopter is metallic and weathered, with exposed wiring and mechanical components. Its rotor blades are visible, indicating readiness or recent use. The camera pans slightly from a low angle, tracking the shirtless man’s movement as he approaches the aircraft, then shifts to follow the uniformed man’s descent from the helicopter. The camera remains handheld, creating a sense of intimacy and immediacy.\n\nThe narrative is documentary in nature, focusing on routine military activity. The movement is slow and deliberate, with no dramatic action — just the mundane choreography of soldiers preparing or disembarking. There is no dialogue or emotional expression visible, reinforcing the observational tone. The depth of field is shallow, keeping the subjects in focus while blurring the background slightly, emphasizing their actions over the environment. The shot is a medium close-up, allowing viewers to observe details of clothing and expressions while maintaining context of the setting. The low camera angle enhances the sense of immersion, making the viewer feel present on the deck alongside the subjects.",
+    "title": "Shot 0",
+    "source_txt": "rank1-The video exhibits a muted, desaturated color tone with a grainy, vintage aesthetic, suggesting arch-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "num_blocks": 7
+}

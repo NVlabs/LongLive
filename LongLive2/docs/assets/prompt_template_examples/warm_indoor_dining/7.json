@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "warm_indoor_dining/7.mp4",
+    "filename": "7.mp4",
+    "caption": "The video presents a rich, appetizing close-up of a savory noodle dish, likely a Chinese-style cold or hot noodle salad, with a glossy, dark sauce coating the ingredients. The color tone is warm and inviting, dominated by golden yellows and deep browns of the sauce, contrasted with the vibrant green of chopped scallions and the pale beige of cashews. Lighting is soft and diffused, likely indoor ambient light, enhancing the glistening texture of the sauce and creating a cozy, intimate atmosphere. The style is cinematic and mouthwatering, with a shallow depth of field that keeps the foreground sharply in focus while softly blurring the background, drawing attention to the mouthful being lifted.\nThe scene is set indoors, likely at a restaurant or home dining table, as suggested by the blurred background showing additional dishes and a wooden table surface. The environment feels casual and warm, with no visible windows or outdoor elements, implying a cozy evening setting. The background contains hints of other small bowls—possibly pickled vegetables or condiments—suggesting a multi-dish meal.\n\nNo human characters are visible; the focus remains entirely on the food. The primary action is a pair of black chopsticks lifting a generous portion of the noodle dish, showcasing its texture and ingredients: thin, translucent noodles, dark sauce clumps, chopped green scallions, and scattered cashews. The chopsticks move slowly and deliberately from the plate upward, emphasizing the dish’s appeal. The camera remains steady, employing a close-up shot that follows the chopsticks’ movement slightly, maintaining a shallow depth of field to blur the background. The shot transitions from a medium close-up to an extreme close-up as the noodles are lifted, capturing the glistening sauce and the intricate mix of textures. The movement is slow and deliberate, enhancing the sensory allure of the dish. The overall narrative is one of indulgence and culinary artistry, inviting the viewer to savor the visual feast. No natural elements or weather are present, and the atmosphere remains entirely focused on the dish’s tempting presentation.",
+    "title": "Shot 7",
+    "source_txt": "rank1-The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhan-0_lora_prompts.txt",
+    "block_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 6
+}

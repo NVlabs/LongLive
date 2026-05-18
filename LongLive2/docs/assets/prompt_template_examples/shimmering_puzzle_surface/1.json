@@ -1,0 +1,19 @@
+{
+    "video_path": "",
+    "relative_path": "shimmering_puzzle_surface/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video features a festive, cartoonish 3D animation with a warm, holiday-themed color tone dominated by reds, greens, and golds. The lighting is soft and diffused, evoking a cozy indoor atmosphere, likely during the daytime, as no shadows suggest harsh sunlight or nighttime. The style is playful and exaggerated, typical of animated holiday specials, with a shallow depth of field that keeps the focus on the central character while slightly blurring the background.\nThe scene is set indoors, likely a festive workshop or living room, decorated with multiple Christmas trees adorned with colorful ornaments, candy canes, and twinkling lights. The trees are positioned behind the character, framing the background, and their vibrant decorations contrast with the muted gray floor. The environment suggests a cheerful, cluttered holiday setting, with no visible windows or natural elements.\n\nThe central character is a stylized Santa Claus, depicted as a middle-aged male with a long white beard and a jovial yet slightly weary expression. He wears a traditional red suit with white fur trim, a matching hat with a white pom-pom, and a green belt. His facial features are exaggerated, with thick eyebrows and a slightly downturned mouth, suggesting concern or fatigue. He is holding a black cordless phone to his ear, indicating he is engaged in a conversation. His body language conveys mild frustration or exhaustion, as he occasionally rubs his temples or leans back slightly, suggesting stress or overwork.\n\nIn the first shot, Santa is seen falling backward on the floor, possibly after tripping or being startled. The camera then quickly cuts to a close-up as he sits up, gripping the phone with both hands. His eyes dart around nervously, and his brow furrows in concentration or worry. The camera remains steady, maintaining a medium close-up shot focused on his face and upper torso, allowing viewers to observe his changing expressions. The background remains slightly out of focus, emphasizing his emotional state. The scene progresses with Santa’s movements being slow and deliberate, reflecting his fatigue, while the phone remains a constant focal point, underscoring the importance of the call. The overall narrative suggests a humorous or dramatic moment where Santa is overwhelmed by holiday responsibilities, possibly dealing with a difficult phone call from an impatient child or a stressed elf. The animation style enhances this tone with exaggerated facial movements and expressive gestures, creating a lighthearted yet relatable holiday scenario.",
+    "title": "Shot 1",
+    "source_txt": "rank0-The video opens with a shimmering, textured surface resembling water or snow, dotted with scattered -0_lora_prompts.txt",
+    "block_indices": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+    ],
+    "num_blocks": 8
+}

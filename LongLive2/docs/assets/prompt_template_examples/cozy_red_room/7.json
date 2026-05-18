@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "cozy_red_room/7.mp4",
+    "filename": "7.mp4",
+    "caption": "The video features a warm, indoor setting with soft, ambient lighting that casts gentle shadows, creating a cozy, lived-in atmosphere. The color tone leans toward earthy reds and browns, with floral-patterned wallpaper and wooden cabinetry adding a homey, rustic charm. The camera follows a fluffy, medium-to-large dog with a thick, cream-and-brown coat as it moves through a narrow hallway. The dog’s tail wags energetically as it navigates the space, indicating excitement or curiosity. The camera’s motion is dynamic, often shaky, suggesting handheld filming, and it tracks the dog’s movement closely, maintaining a medium close-up shot that captures its expressive face and playful demeanor.\nThe environment is clearly domestic, with visible elements including a wooden cabinet, a red-painted wall, and a white baseboard. A second dog, smaller and black-and-white, appears briefly, standing near the first dog as they interact. The second dog’s fur is fluffier, and it seems to be calmly observing or playing with the first dog. Their interaction is gentle, with the first dog nudging or sniffing the second, conveying a sense of companionship. The hallway is narrow, with limited space, forcing the dogs to move carefully.\n\nThe camera’s perspective shifts slightly as it follows the first dog’s movement, often moving from behind or beside it, creating a sense of immersion. The lighting remains consistent, suggesting the video was shot during daytime with artificial lighting supplementing natural light. The dogs’ movements are lively and spontaneous, with the first dog occasionally pausing to look around, its ears perked, while the second dog remains relatively stationary. The overall narrative is playful and intimate, capturing a candid moment of pet interaction in a warm, inviting home environment. The shallow depth of field keeps the focus on the dogs while softly blurring the background, enhancing the emotional connection to the subjects. The video’s style is candid and unpolished, reflecting the spontaneity of everyday pet life.",
+    "title": "Shot 7",
+    "source_txt": "rank0-The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unse-0_lora_prompts.txt",
+    "block_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 6
+}

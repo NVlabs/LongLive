@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "vintage_archival_scene/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video features a dimly lit, grainy interior shot of a helicopter cockpit, viewed from behind a pilot wearing a green military helmet and uniform. The color tone is muted with a vintage greenish-blue hue, evoking a sense of aged archival footage. Natural daylight filters through the cockpit windows, illuminating the scene with soft, diffused light, while the interior remains shadowed, creating a contrast that accentuates the silhouette of the pilot. The atmosphere feels tense and focused, as if capturing a moment during an active flight or mission. The camera remains steady in a medium shot, centered on the pilot’s back and head, with a shallow depth of field that blurs the background slightly.\nThe scene is set outdoors, as evidenced by the cloudy sky visible through the open cockpit windows. The weather appears overcast, with scattered white clouds drifting slowly across a pale blue sky. Outside, another helicopter can be seen flying in the distance, its rotors spinning steadily, suggesting coordinated aerial activity. The environment is clearly airborne, with no ground landmarks visible, reinforcing the impression of mid-flight operations.\n\nThe pilot, the only visible character, appears to be a male adult, likely in his 30s or 40s, based on his posture and build. His uniform is dark, possibly olive drab, with visible insignia or patches that suggest military affiliation. His helmet is standard-issue, with a rounded shape and earpieces, likely for communication. He remains seated throughout, maintaining a steady posture with minimal movement—his head slightly turned as if tracking the approaching helicopter. His facial expression is obscured, but his body language suggests concentration and alertness.\n\nKey objects include the cockpit’s interior structure: metal frames, control panels, and cables hanging from the ceiling. The windows are framed by riveted metal, and a circular porthole is visible on the left side of the frame. The pilot’s seat is a simple, utilitarian design with a headrest. The second helicopter is distant and appears as a small, metallic object against the sky, moving slowly from left to right across the frame, its rotor blades creating a slight blur due to motion. The camera remains fixed, capturing the pilot’s steady gaze and the helicopter’s steady approach, suggesting a moment of coordination or reconnaissance.\n\nThe shot is a medium close-up, with a shallow depth of field that keeps the pilot in sharp focus while blurring the background slightly. The shooting angle is from behind the pilot, at eye level, creating an immersive perspective that places the viewer in the cockpit. The pilot’s stillness contrasts with the slow, deliberate movement of the external helicopter, emphasizing the calm precision of the operation. The overall narrative conveys a sense of military procedure, with the pilot monitoring or preparing for an interaction with the other aircraft.",
+    "title": "Shot 5",
+    "source_txt": "rank1-The video exhibits a muted, desaturated color tone with a grainy, vintage aesthetic, suggesting arch-0_lora_prompts.txt",
+    "block_indices": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+    ],
+    "num_blocks": 7
+}

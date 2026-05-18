@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "warm_indoor_dining/2.mp4",
+    "filename": "2.mp4",
+    "caption": "The video features a warm, inviting color tone with a rich, reddish-brown broth, accented by vibrant green scallions and golden sesame seeds, creating a visually appetizing palette. The lighting is soft and natural, likely from indoor ambient sources, casting gentle reflections on the glossy surface of the noodles and broth. The atmosphere is cozy and intimate, suggesting a restaurant or home dining setting with a focus on traditional, comforting cuisine. The style is realistic and detailed, capturing the textures and spices of the dish with clarity and depth.\nThe scene is set indoors, likely in a traditional Chinese restaurant, with wooden tables and warm-toned decor visible in the background. The time of day appears to be daytime, with artificial lighting enhancing the ambiance. Surrounding dishes, including a plate of fried food and a small bowl of garnish, are visible in the background, slightly out of focus, reinforcing the dining context. The environment suggests a casual, communal meal, with no visible landmarks or outdoor elements.\n\nNo human characters are visible in the video. The focus remains entirely on the food and the act of eating. The main object is a large, ornate blue-and-white ceramic bowl filled with a spicy noodle dish. The noodles are wide, translucent, and glossy, coated in a rich, oily broth speckled with chili oil, scallions, and sesame seeds. The bowl’s rim features intricate blue floral patterns, adding cultural and aesthetic depth. In the foreground, a pair of black chopsticks lifts a portion of noodles, showcasing their elasticity and texture. The camera follows the chopsticks as they lift the noodles upward, slowly moving from the bowl to the center of the frame, allowing the viewer to appreciate the dish’s vibrant colors and glossy surface. The camera angle is slightly tilted upward, emphasizing the noodles’ texture and the sauce clinging to them. The movement is slow and deliberate, enhancing the sensory appeal of the dish. The depth of field is shallow, keeping the noodles and chopsticks in sharp focus while softly blurring the background elements. The shot is a close-up, capturing the intricate details of the food and the subtle interplay of light and texture, creating a mouthwatering visual experience. No natural elements or external movements are present, focusing solely on the culinary presentation.",
+    "title": "Shot 2",
+    "source_txt": "rank1-The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhan-0_lora_prompts.txt",
+    "block_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+    ],
+    "num_blocks": 6
+}

@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "aquamarine_underwater/7.mp4",
+    "filename": "7.mp4",
+    "caption": "The video presents a serene underwater scene with a cool, deep blue tone, illuminated by natural daylight filtering from the surface, creating a soft, ethereal glow. The water’s surface ripples gently above, reflecting fragmented sunlight and adding a dynamic texture to the upper frame. The atmosphere is tranquil and immersive, evoking a sense of calm wonder and natural beauty. The style is realistic and documentary-like, capturing marine life in its unspoiled habitat with a clear, crisp visual quality.\nThe setting is entirely underwater, in what appears to be a tropical or subtropical oceanic environment, with no visible land, structures, or artificial elements. The water is clear and transparent, allowing visibility of the ocean floor in the distance, though it remains blurred and indistinct. The scene is bathed in bright, diffused sunlight, suggesting midday or early afternoon conditions. There are no clouds or weather disruptions visible from the surface, implying a calm, sunny day.\n\nTwo dolphins are the central characters. The first dolphin appears in the foreground, slightly larger and closer to the camera, with a light grayish-white body speckled with darker spots. Its sleek, streamlined form glides effortlessly through the water. Its eyes are dark and alert, and its dorsal fin and pectoral fins are visible as it moves with grace. The second dolphin, slightly smaller and positioned slightly behind, mirrors the first’s movements, maintaining a synchronized trajectory. Both appear healthy and active, exhibiting natural, fluid motion.\n\nThe dolphins are engaged in a playful or exploratory interaction. The first dolphin, in a close-up shot at 0:02, opens its mouth to reveal a small, white object—possibly a fish or a piece of bait—held delicately between its teeth. The second dolphin swims alongside, occasionally gliding past the first, suggesting a social or cooperative behavior. Their movements are smooth and coordinated, with slight undulations of their bodies and fins, propelling them forward with minimal effort. The camera follows them in a steady, side-on tracking shot, maintaining a medium to close-up framing that keeps both dolphins in focus while allowing the surrounding water to provide context.\n\nThe focal length is wide enough to capture the dolphins’ full bodies and their environment, with a shallow depth of field that blurs the distant background slightly, emphasizing the subjects. The camera remains at a low angle, slightly below water level, enhancing the immersive perspective. The dolphins’ movements are slow and deliberate, with no abrupt changes in direction, creating a peaceful and harmonious visual rhythm. The gentle movement of water ripples and light reflections adds a subtle, dynamic texture to the otherwise tranquil scene. There is no human presence or artificial interference, reinforcing the natural, untouched setting. The video’s narrative is observational and documentary, celebrating the grace and intelligence of marine life in its natural habitat.",
+    "title": "Shot 7",
+    "source_txt": "rank0-The video presents a serene underwater scene bathed in a cool, aquamarine-blue tone, with natural da-0_lora_prompts.txt",
+    "block_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 6
+}

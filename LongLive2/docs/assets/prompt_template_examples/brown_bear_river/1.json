@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "brown_bear_river/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video features a natural, outdoor environment with a cool, earthy color tone dominated by muted browns, greens, and grays. The lighting is soft and diffused, suggesting an overcast or cloudy day, with no harsh shadows. The atmosphere is serene and wild, capturing the raw beauty of a wilderness setting. The style is realistic and documentary-like, with a steady, observational camera that follows the subject without intrusive manipulation.\nThe scene unfolds at the edge of a shallow, calm river bordered by a sandy and muddy bank. In the background, dense green vegetation and trees line the riverbank, indicating a forested or semi-wilderness area. The river’s surface ripples gently, reflecting the subdued light, while the surrounding terrain is dotted with scattered twigs and patches of grass. The environment appears tranquil, with no signs of human presence or urban influence.\n\nThe video’s sole subject is a large brown bear, viewed from behind as it wades through the water and exits onto the riverbank. The bear’s fur is thick and wet, glistening with droplets as it moves. It is a mature adult, with a robust, muscular build, and its back is rounded and broad. The bear’s head is slightly lowered as it navigates the shallows, and its powerful legs kick up splashes as it steps forward. Its ears are perked, indicating alertness. The bear's movement is deliberate and unhurried, suggesting a purposeful exit from the water — perhaps after foraging or cooling off. As it reaches the bank, it continues walking away from the camera, its body gradually disappearing into the vegetation.\n\nThe camera follows the bear in a medium shot, maintaining a consistent distance, allowing the viewer to observe its movements in context. The focal length remains steady, with a shallow depth of field that keeps the bear in sharp focus while softly blurring the background. The shooting angle is slightly elevated, capturing the bear’s rear and the surrounding landscape. The camera pans subtly to keep the bear centered as it moves, enhancing the sense of immersion in the natural environment.\n\nThe bear’s exit from the water is the central narrative, emphasizing its strength, adaptability, and connection to its habitat. There is no interaction with other animals or humans — the scene is solitary and peaceful. The movement is slow and steady, with the water’s gentle ripples and the bear’s deliberate steps creating a rhythmic, almost meditative quality. The video captures a moment of quiet wilderness, highlighting the bear’s grace and the untouched beauty of its surroundings.",
+    "title": "Shot 1",
+    "source_txt": "rank3-The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, capt-0_lora_prompts.txt",
+    "block_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "num_blocks": 6
+}

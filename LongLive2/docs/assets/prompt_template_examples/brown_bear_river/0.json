@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "brown_bear_river/0.mp4",
+    "filename": "0.mp4",
+    "caption": "The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, captured under natural daylight with a warm, earthy color tone that highlights the wet, glistening fur. The lighting is bright and evenly distributed, suggesting a sunny day, casting soft reflections on the water’s surface and emphasizing the bear’s muscular contours. The atmosphere is serene yet wild, with the natural sounds of flowing water and the bear’s movements enhancing the immersive feel. The camera maintains a steady, eye-level perspective, slowly panning upward and slightly to the side as the bear lifts its head, creating a medium close-up shot that focuses on its face and upper body. The water is clear and shallow, with gentle ripples and splashes around the bear’s head and shoulders, indicating movement as it emerges from the river. The bear’s fur is thick, wet, and matted, with water streaming down its muzzle and cheeks, revealing a dark brown face with alert, amber eyes and a slightly open mouth. Its ears are perked, and its expression is calm yet attentive, suggesting it is either surveying its surroundings or preparing to move. The bear’s head and shoulders dominate the foreground, while the background remains blurred, emphasizing the animal’s presence. The scene is entirely outdoors, set in a natural riverine environment, likely during midday. No human elements or artificial structures are visible, reinforcing the untamed wilderness setting. The bear’s movements are slow and deliberate, with a subtle shift in posture as it lifts its head, allowing water to cascade off its face. The camera’s movement is smooth and controlled, tracking the bear’s emergence with a shallow depth of field that keeps the focus sharp on the animal while softly blurring the water’s background. This creates a cinematic, intimate portrayal of wildlife behavior, capturing the bear’s natural grace and power in its habitat.",
+    "title": "Shot 0",
+    "source_txt": "rank3-The video features a close-up, dynamic sequence of a brown bear partially submerged in a river, capt-0_lora_prompts.txt",
+    "block_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "num_blocks": 6
+}

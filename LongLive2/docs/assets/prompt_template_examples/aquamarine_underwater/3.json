@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "aquamarine_underwater/3.mp4",
+    "filename": "3.mp4",
+    "caption": "The video opens with a cool, deep blue underwater tone, bathed in natural daylight filtering through the ocean’s surface. The lighting is soft and diffused, casting gentle highlights on the whale’s smooth, grayish skin. The atmosphere is serene and immersive, with the camera positioned close to the whale, creating a sense of intimacy and awe. The style is realistic, capturing the grace and power of marine life with minimal interference.\nThe scene transitions from underwater to the ocean’s surface, revealing a dynamic interplay between water and sky. The camera, initially submerged, tilts upward as the whale breaches, creating a dramatic splash. The whale’s body, partially above water, glistens with droplets, and its dorsal fin cuts through the surface, sending ripples outward. The environment is open ocean, with distant, hazy landforms visible under a cloudy, overcast sky. The water churns with foam and waves, suggesting a breezy, cool day. No human structures or urban elements are visible—only nature’s raw, untamed beauty.\n\nThe whale, a massive, sleek creature with a streamlined body, is the sole character in the video. It appears in the first frame in a close-up underwater shot, then transitions to a surface view at 0:02. Its skin is smooth and dark gray, with faint white speckles. Its eyes are not visible, but its powerful tail and fluke are prominent as it propels itself upward. The whale’s motion is fluid and deliberate, moving from deep water to the surface in a single, graceful arc. The camera follows its trajectory, tilting upward to capture the full breach, then stabilizing as the whale remerges.\n\nKey objects include the whale’s body, its dorsal fin, and the ocean’s surface. The whale’s body is large, elongated, and muscular, with a rounded head and a small, curved mouth. Its dorsal fin is tall and pointed, rising above the water as it breaches. The ocean’s surface is textured with waves and foam, reflecting the overcast sky. The landmasses in the background are low, rolling hills, partially obscured by mist.\n\nThe whale’s movement is the central action, transitioning from underwater to surface. The camera begins with a close-up, then pans upward to follow the breach, capturing the whale’s ascent and re-entry. The angle shifts from low, underwater, to eye-level as the whale breaks the surface. The depth of field is shallow, focusing on the whale while blurring the background. The shot is a medium close-up at the beginning, transitioning to a wide-angle as the whale breaches, emphasizing its scale and power.\n\nThe video’s narrative is one of natural wonder, capturing the whale’s majestic movement and the ocean’s vastness. The whale’s breach is a moment of awe, symbolizing freedom and strength. The overcast sky and calm ocean create a tranquil, almost spiritual atmosphere, inviting viewers to reflect on the beauty of marine life. The whale’s motion is slow and deliberate, contrasting with the turbulence of the water around it. The video ends with the whale disappearing beneath the surface, leaving only ripples and a sense of quiet majesty.",
+    "title": "Shot 3",
+    "source_txt": "rank0-The video presents a serene underwater scene bathed in a cool, aquamarine-blue tone, with natural da-0_lora_prompts.txt",
+    "block_indices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+    ],
+    "num_blocks": 6
+}

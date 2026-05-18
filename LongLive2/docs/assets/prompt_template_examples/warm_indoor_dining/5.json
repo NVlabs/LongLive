@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "warm_indoor_dining/5.mp4",
+    "filename": "5.mp4",
+    "caption": "The video presents a warm, inviting culinary experience with a rich, vibrant color tone dominated by deep reds, golden yellows, and crisp greens. The lighting is warm and ambient, suggesting an indoor dining setting with soft, diffused illumination that enhances the glossy sheen of sauces and the texture of food. The atmosphere is cozy and appetizing, evoking a sense of comfort and indulgence. The style is realistic and intimate, with a focus on sensory detail and texture, captured through close-up shots that emphasize the mouthwatering appeal of the dishes.\nThe scenes unfold indoors, likely in a traditional or casual restaurant with wooden tables and classic blue-and-white ceramic tableware. The background is softly blurred, ensuring the viewer’s attention remains on the food. The time of day is ambiguous but suggests evening dining, given the warm lighting and intimate setting. No weather conditions are visible, as the setting is entirely indoors.\n\nNo human characters appear in the video. The focus remains exclusively on the food and the act of eating. The first shot (0:00) features a close-up of a bowl of noodle soup, with thick, translucent noodles lifted by chopsticks. The broth is rich and red, flecked with green scallions and chili flakes. The second shot (0:01-0:03) shifts to a dish of golden-brown fried chicken pieces coated in glossy sauce, accompanied by bright orange carrot sticks. Chopsticks gently press and lift a piece of chicken, showcasing its crisp exterior and sticky glaze.\n\nKey objects include: a blue-and-white patterned ceramic bowl (foreground, 0:00), noodles (translucent, thick, wet, lifted by chopsticks), broth (red, oily, speckled with herbs), scallions (green, chopped, floating), and a second bowl (0:01-0:03) containing chicken (golden, crispy, sauced), carrots (bright orange, sliced), and sauce (thick, amber, glistening). The camera remains static in both shots, employing close-up framing to capture intricate textures and details. Depth of field is shallow, blurring the background to isolate the food. The shooting angle is eye-level, enhancing the viewer’s sense of participation in the meal.\n\nThe main movement is slow and deliberate: chopsticks lift noodles and chicken, emphasizing texture and sauce adherence. The camera stays fixed, allowing the viewer to savor each detail without distraction. The overall narrative is sensory and indulgent, inviting viewers to imagine the taste and aroma of the food through visual cues. The video’s purpose is to stimulate appetite and celebrate culinary artistry through meticulous close-ups and warm, inviting aesthetics.",
+    "title": "Shot 5",
+    "source_txt": "rank1-The video presents a warm, inviting indoor dining scene, bathed in soft, ambient lighting that enhan-0_lora_prompts.txt",
+    "block_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+    ],
+    "num_blocks": 6
+}

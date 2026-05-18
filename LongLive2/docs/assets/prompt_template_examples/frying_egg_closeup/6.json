@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "frying_egg_closeup/6.mp4",
+    "filename": "6.mp4",
+    "caption": "The video presents a vibrant, appetizing close-up of a freshly prepared tomato and egg dish, likely a classic Chinese-style stir-fry. The color tone is warm and rich, dominated by the golden-yellow of cooked eggs mixed with the bright red of tomato chunks, accented by the fresh green of finely sliced scallions. The lighting is soft and diffused, likely natural daylight, enhancing the glossy sheen on the sauce and the textures of the ingredients. The atmosphere is inviting and sensory, emphasizing the dish’s freshness and homemade appeal. The style is realistic and culinary-focused, with shallow depth of field drawing attention to the foreground while slightly blurring the edges to create a sense of depth.\nThe scene is entirely indoors, likely in a kitchen or dining area, though no background elements are visible—only the dish itself occupies the frame. The time of day is ambiguous, but the lighting suggests midday or early afternoon, with no indication of weather conditions since the setting is interior. The dish is presented in a shallow, possibly ceramic or metallic bowl, though only the rim is partially visible.\n\nThere are no characters or human elements in the video—only the food is the subject. The dish features fluffy, softly scrambled eggs broken into irregular clumps, interspersed with juicy, chunky tomato pieces that retain their vibrant red hue. The green scallions are thinly sliced and scattered across the top, adding a fresh contrast. The sauce appears glossy and slightly viscous, clinging to the ingredients and pooling gently in the bowl.\n\nThe camera executes a slow, subtle pan across the dish, starting from the left side and moving rightward, allowing viewers to observe the textures and colors from multiple angles. The movement is gentle and deliberate, emphasizing the dish’s visual appeal without distraction. The shot remains a close-up throughout, with a shallow depth of field ensuring sharp focus on the central elements while softly blurring the periphery. The focal length is medium to close, likely around 50–85mm, with a slightly low-angle shot to enhance the dish’s prominence. The overall effect is one of culinary indulgence, inviting the viewer to imagine the dish’s flavor and aroma. No natural elements or human movement are present, keeping the focus solely on the food’s visual and textural qualities.",
+    "title": "Shot 6",
+    "source_txt": "rank2-The video exhibits a warm, golden-yellow color tone with soft, diffused lighting, emphasizing the gl-0_lora_prompts.txt",
+    "block_indices": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+    ],
+    "num_blocks": 6
+}

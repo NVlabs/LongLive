@@ -1,0 +1,17 @@
+{
+    "video_path": "",
+    "relative_path": "cozy_red_room/1.mp4",
+    "filename": "1.mp4",
+    "caption": "The video features a warm, cozy indoor ambiance with soft, ambient lighting that enhances the comforting atmosphere. The color tone leans toward earthy and muted hues, with a reddish-brown carpet dominating the floor, complemented by wooden furniture and neutral-toned upholstery. The camera employs a handheld, close-up style, often shaky and slightly unsteady, creating an intimate, candid feel as if captured spontaneously during a quiet moment at home. The environment is clearly residential, with a sofa and wooden table legs visible, suggesting a living room or family space. The carpet’s texture is soft and plush, indicating a well-maintained, lived-in interior. A person’s leg in blue patterned pants and dark shoes briefly appears in the background, hinting at human presence without dominating the frame.\nThe central character is a fluffy, medium-to-large-sized dog, likely a Siberian Husky or similar breed, with a thick coat of cream and light brown fur, accented with darker markings around its face and ears. Its paws are white, and its ears are pointed and alert. The dog is actively engaged in playful behavior, repeatedly pawing and nudging at something on the floor—possibly a toy or object—while moving in a circular motion around the corner of the furniture. Its movements are energetic and deliberate, with a slight bobbing motion as it shifts weight between its paws. The camera follows the dog closely, panning and tilting to maintain focus as it moves, creating a dynamic, close-range perspective. The dog’s head is often lowered, indicating intense concentration or playfulness, while its body remains low to the ground, suggesting a playful, almost dance-like pattern of motion.\n\nThe narrative centers on the dog’s playful antics, capturing the joy and spontaneity of pet behavior. The shallow depth of field keeps the dog sharply in focus while softly blurring the background, emphasizing its actions. The shooting angle is mostly at eye level or slightly low, enhancing the sense of being immersed in the dog’s world. The video’s tone is lighthearted and endearing, evoking warmth and affection, as the dog’s movements convey a sense of curiosity and liveliness. There is no direct interaction with the human figure, but their presence adds context, suggesting a domestic, affectionate environment where pets are cherished companions. The overall mood is playful, gentle, and intimate, inviting viewers to share in the simple, joyful moments of a pet’s daily life.",
+    "title": "Shot 1",
+    "source_txt": "rank0-The video features a warm, cozy indoor atmosphere with soft, natural lighting filtering through unse-0_lora_prompts.txt",
+    "block_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+    ],
+    "num_blocks": 6
+}

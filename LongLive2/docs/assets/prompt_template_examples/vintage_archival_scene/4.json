@@ -1,0 +1,18 @@
+{
+    "video_path": "",
+    "relative_path": "vintage_archival_scene/4.mp4",
+    "filename": "4.mp4",
+    "caption": "The video presents a muted, desaturated color tone with an overcast, grayish-blue hue, suggesting either early morning or late afternoon under cloudy skies. The lighting is soft and diffused, with no harsh shadows, contributing to a somber, atmospheric tone. The style is documentary-like, with handheld or slightly shaky camera work, giving a raw, immersive feel. The footage is grainy, hinting at archival or vintage material, possibly from a military or historical context.\nThe scene is entirely outdoor, set over a vast, uneven landscape of forested terrain interspersed with open fields and winding rivers or streams visible below. The horizon is hazy, with distant hills or mountains faintly visible, reinforcing the sense of scale and remoteness. No urban structures or landmarks are present, emphasizing a natural, possibly rural or wilderness environment. The weather appears calm, with no visible wind or precipitation, and the sky is uniformly overcast.\n\nThe video features multiple helicopters, all military-style, painted in olive drab or gray camouflage. They are seen in formation, flying at varying altitudes and distances from the camera. The first helicopter appears in frame 0:00, flying low over water near a large naval vessel, which is partially visible on the right edge. As the camera pans upward and leftward, additional helicopters enter the frame: one appears at 0:03, another at 0:05, and a third at 0:06, forming a loose V-formation. Their rotors spin steadily, indicating continuous forward motion. No human figures or specific characters are visible inside the helicopters, so no facial expressions, clothing, or ethnicity can be determined.\n\nThe camera begins with a medium shot of a single helicopter near the ship, then transitions to an aerial wide shot that tracks the formation as it moves across the landscape. The camera pans smoothly to the left, following the helicopters’ trajectory, maintaining a consistent eye-level perspective. The depth of field is shallow, keeping the helicopters in focus while the background terrain blurs slightly. The movement is slow and deliberate, emphasizing the helicopters' coordinated flight and the vastness of the terrain below.\n\nThe overall narrative conveys a sense of military operation or reconnaissance, with the helicopters likely engaged in a coordinated mission over a remote area. The absence of visible personnel or specific actions suggests a focus on the machinery and environment rather than individual stories. The video’s steady, methodical pace and muted tones evoke a tone of seriousness and purpose, perhaps hinting at a historical military operation or training exercise.",
+    "title": "Shot 4",
+    "source_txt": "rank1-The video exhibits a muted, desaturated color tone with a grainy, vintage aesthetic, suggesting arch-0_lora_prompts.txt",
+    "block_indices": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+    ],
+    "num_blocks": 7
+}
