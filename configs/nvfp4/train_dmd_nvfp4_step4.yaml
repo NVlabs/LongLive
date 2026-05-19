@@ -44,8 +44,8 @@ model_kwargs:
   sink_size: 8
 
 checkpoints:
-  generator_ckpt: /path/to/ar_generator_checkpoint.pt
-  real_score_ckpt: /path/to/real_score_checkpoint.pt
+  generator_ckpt: null
+  real_score_ckpt: null
   fake_score_ckpt: null
 
 algorithm:
