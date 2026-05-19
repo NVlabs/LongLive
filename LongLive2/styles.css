@@ -222,6 +222,13 @@ a {
     margin: 0 0 3px;
 }
 
+.author-name sup {
+    font-size: 0.7em;
+    line-height: 0;
+    vertical-align: super;
+    margin-left: 1px;
+}
+
 .author-name a {
     color: var(--accent);
     text-decoration: none;
