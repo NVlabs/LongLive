@@ -1,5 +1,5 @@
 # Adopted from https://github.com/guandeh17/Self-Forcing
-# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# SPDX-License-Identifier: Apache-2.0
 # # Copyright 2024-2025 The Alibaba Wan Team Authors. All rights reserved.
 
 from transformers.models.x_clip.modeling_x_clip import x_clip_loss
