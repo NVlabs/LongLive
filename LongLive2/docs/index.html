@@ -395,12 +395,61 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
             and distillation data. If the <code>adapter</code> section is present,
             LoRA distillation is enabled.
           </p>
+          <p>
+            The release supports two DMD LoRA settings. Both produce LoRA
+            checkpoints that can be used for inference, but they use different
+            student and critic initialization paths. The AR mask is enabled
+            throughout DMD training with <code>algorithm.all_causal: true</code>,
+            and the two settings may produce visually different results.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Setting</th>
+                  <th>Student / generator</th>
+                  <th>Fake-score critic</th>
+                  <th>Real-score teacher</th>
+                  <th>Masking</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Direct DMD on AR model</td>
+                  <td>Initialize from the stage-1 AR-trained model.</td>
+                  <td>Initialize from the stage-1 AR-trained model.</td>
+                  <td>Use Wan2.2-TI2V-5B.</td>
+                  <td>AR mask enabled with <code>algorithm.all_causal: true</code>.</td>
+                </tr>
+                <tr>
+                  <td>Standalone LoRA injection</td>
+                  <td>Initialize from Wan2.2-TI2V-5B.</td>
+                  <td>Initialize from Wan2.2-TI2V-5B.</td>
+                  <td>Use Wan2.2-TI2V-5B.</td>
+                  <td>AR mask enabled with <code>algorithm.all_causal: true</code>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <figure>
+            <img src="assets/dmd.png" alt="Comparison of direct DMD on the AR model and standalone LoRA injection, both with the AR mask enabled">
+            <figcaption>
+              DMD LoRA settings with the AR mask enabled. The top row shows
+              direct DMD on the AR model; the bottom row shows standalone LoRA
+              injection on the diffusion model.
+            </figcaption>
+          </figure>
           <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
   --config_path configs/train_dmd.yaml \
   --logdir logs/train_dmd \
   --wandb-save-dir wandb \
   --disable-wandb</code></pre>
           <ul>
+            <li><code>checkpoints.generator_ckpt</code> initializes the student/generator. For direct DMD, point it to the stage-1 AR checkpoint; for standalone LoRA injection, keep the Wan2.2-TI2V-5B initialization.</li>
+            <li><code>checkpoints.fake_score_ckpt</code> initializes the fake-score critic when a separate critic checkpoint is used. Direct DMD initializes the critic from the same stage-1 AR model weights; standalone LoRA injection uses Wan2.2-TI2V-5B.</li>
+            <li><code>checkpoints.real_score_ckpt</code> initializes the real-score teacher when overridden. In both settings, the teacher is Wan2.2-TI2V-5B.</li>
+            <li><code>algorithm.all_causal: true</code> keeps the AR mask enabled for both DMD LoRA settings.</li>
+            <li><code>adapter.apply_to_critic: true</code> applies LoRA to the critic as well as the generator.</li>
             <li><code>algorithm.real_guidance_scale</code> and <code>algorithm.fake_guidance_scale</code> are used by score distillation.</li>
             <li><code>inference.sampling_steps</code> controls the rollout used during distillation.</li>
             <li>Auto-resume is enabled by default. Pass <code>--no-auto-resume</code> to disable it.</li>
