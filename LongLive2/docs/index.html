@@ -398,7 +398,7 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
           <p>
             The release supports two DMD LoRA settings. Both produce LoRA
             checkpoints that can be used for inference, but they use different
-            student and critic initialization paths. The AR mask is enabled
+            student, critic, and teacher initialization paths. The AR mask is enabled
             throughout DMD training with <code>algorithm.all_causal: true</code>,
             and the two settings may produce visually different results.
           </p>
@@ -418,7 +418,7 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
                   <td>Direct DMD on AR model</td>
                   <td>Initialize from the stage-1 AR-trained model.</td>
                   <td>Initialize from the stage-1 AR-trained model.</td>
-                  <td>Use Wan2.2-TI2V-5B.</td>
+                  <td>Initialize from the stage-1 AR-trained model.</td>
                   <td>AR mask enabled with <code>algorithm.all_causal: true</code>.</td>
                 </tr>
                 <tr>
@@ -447,7 +447,7 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
           <ul>
             <li><code>checkpoints.generator_ckpt</code> initializes the student/generator. For direct DMD, point it to the stage-1 AR checkpoint; for standalone LoRA injection, keep the Wan2.2-TI2V-5B initialization.</li>
             <li><code>checkpoints.fake_score_ckpt</code> initializes the fake-score critic when a separate critic checkpoint is used. Direct DMD initializes the critic from the same stage-1 AR model weights; standalone LoRA injection uses Wan2.2-TI2V-5B.</li>
-            <li><code>checkpoints.real_score_ckpt</code> initializes the real-score teacher when overridden. In both settings, the teacher is Wan2.2-TI2V-5B.</li>
+            <li><code>checkpoints.real_score_ckpt</code> initializes the real-score teacher when overridden. For direct DMD, point it to the stage-1 AR checkpoint; for standalone LoRA injection, keep the Wan2.2-TI2V-5B initialization.</li>
             <li><code>algorithm.all_causal: true</code> keeps the AR mask enabled for both DMD LoRA settings.</li>
             <li><code>adapter.apply_to_critic: true</code> applies LoRA to the critic as well as the generator.</li>
             <li><code>algorithm.real_guidance_scale</code> and <code>algorithm.fake_guidance_scale</code> are used by score distillation.</li>
