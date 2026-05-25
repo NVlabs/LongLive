@@ -30,6 +30,9 @@ setup(
                     "-O3",
                     "-std=c++17",
                     "--expt-relaxed-constexpr",
+                    # iter-37: need sm_100a (Blackwell arch-specific) for
+                    # cvt.rn.f16x2.e2m1x2 instruction. Plain sm_100 lacks it.
+                    "-gencode=arch=compute_100a,code=sm_100a",
                 ],
             },
         ),

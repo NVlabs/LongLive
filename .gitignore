@@ -1,0 +1,38 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+longlive_models/
+wan_models/
+videos/
+logs/
+wandb/
+debug_save/
+pretrained/
+.codex/
+.claude/
+
+# Local reports and generated release artifacts
+*.html
+*.log
+*.out
+*.err
+*.mp4
+*.pt
+*.pth
+
+# Optimization experiment records
+agent/logs/
+agent/runs/
+agent/profiles/
+
+# Native and build artifacts
+*.so
+*.egg-info/
+build/
+dist/
+fouroversix/build/
+utils/kernel/build/

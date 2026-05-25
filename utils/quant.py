@@ -780,6 +780,20 @@ def clone_quantized_tensor(qt):
     )
 
 
+def copy_quantized_into(slot: QuantizedTensor, src: QuantizedTensor) -> None:
+    """In-place copy a QuantizedTensor's data into a pre-allocated slot.
+
+    Keeps the slot's `values`/`scale_factors`/`amax` buffers persistent
+    (their addresses don't change) so cudagraph allocator does not see them
+    as fresh outputs that can be reused across step boundaries. Used by the
+    quantized KV cache rolling/insert paths.
+    """
+    slot.values.copy_(src.values)
+    slot.scale_factors.copy_(src.scale_factors)
+    if src.amax is not None and slot.amax is not None:
+        slot.amax.copy_(src.amax)
+
+
 def k_smooth(k: torch.Tensor) -> torch.Tensor:
     return k - k.mean(dim=-1, keepdim=True)
 

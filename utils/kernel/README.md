@@ -17,7 +17,7 @@ Build from this directory:
 ```bash
 cd utils/kernel
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 MAX_JOBS=4 \
-  /lustre/fsw/portfolios/nvr/users/weihua/miniconda3/envs/qlive/bin/python setup.py build_ext --inplace
+  python setup.py build_ext --inplace
 ```
 
 Runtime import:

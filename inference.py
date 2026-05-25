@@ -1,8 +1,39 @@
 # Adopted from https://github.com/guandeh17/Self-Forcing
 # SPDX-License-Identifier: Apache-2.0
+import os
+import sys
+
+# torchrun no longer consistently prepends the script directory to sys.path,
+# which breaks absolute project imports when launched from another cwd.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+# torchvision 0.27+ removed write_video/read_video. Several modules import the
+# symbols at module import time, so patch them before importing project code.
+import torchvision.io as _tv_io
+if not hasattr(_tv_io, "write_video"):
+    import imageio.v2 as _imageio_v2
+
+    def _shim_write_video(filename, video_array, fps, **_unused):
+        if hasattr(video_array, "detach"):
+            video_array = video_array.detach().cpu().numpy()
+        _imageio_v2.mimwrite(filename, video_array, fps=fps, codec="libx264", quality=8)
+
+    _tv_io.write_video = _shim_write_video
+if not hasattr(_tv_io, "read_video"):
+    import imageio.v3 as _imageio_v3
+    import torch as _torch_for_shim
+
+    def _shim_read_video(filename, pts_unit="sec", output_format="THWC", **_unused):
+        frames = _imageio_v3.imread(filename, plugin="pyav")
+        tensor = _torch_for_shim.from_numpy(frames)
+        if output_format == "TCHW":
+            tensor = tensor.permute(0, 3, 1, 2)
+        return tensor, None, {}
+
+    _tv_io.read_video = _shim_read_video
+
 import argparse
 import torch
-import os
 from omegaconf import OmegaConf
 from tqdm import tqdm
 from torchvision.io import write_video
@@ -253,6 +284,14 @@ import peft
 
 merge_lora = bool(getattr(config, "merge_lora", False))
 has_lora_adapter = bool(getattr(config, "adapter", None) and configure_lora_for_model is not None)
+if has_lora_adapter and bool(getattr(config, "model_quant", False)) and not merge_lora:
+    if local_rank == 0:
+        print(
+            "[NVFP4][LoRA] merge_lora=false is unsupported with model_quant=true; "
+            "forcing merge_lora=true so the LoRA is folded into the BF16 base before quantization."
+        )
+    merge_lora = True
+    config.merge_lora = True
 materialize_quantized_weights_for_inference = None
 generator_checkpoint = None
 generator_lora_state = None
@@ -522,7 +561,8 @@ for i, batch_data in tqdm(enumerate(dataloader), disable=(local_rank != 0)):
         text_prompts=prompts,
         return_latents=save_latents_only,
     )
-    generated = pipeline.inference(**inference_kwargs)
+    with torch.inference_mode():
+        generated = pipeline.inference(**inference_kwargs)
 
     if not save_latents_only:
         current_video = rearrange(generated, 'b t c h w -> b t h w c').cpu()

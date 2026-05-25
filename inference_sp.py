@@ -311,6 +311,14 @@ pipeline = CausalDiffusionInferencePipelineSP(
 
 merge_lora = bool(getattr(config, "merge_lora", False))
 has_lora_adapter = bool(getattr(config, "adapter", None) and configure_lora_for_model is not None)
+if has_lora_adapter and bool(getattr(config, "model_quant", False)) and not merge_lora:
+    if is_main_process:
+        print(
+            "[NVFP4][LoRA] merge_lora=false is unsupported with model_quant=true; "
+            "forcing merge_lora=true so the LoRA is folded into the BF16 base before quantization."
+        )
+    merge_lora = True
+    config.merge_lora = True
 materialize_quantized_weights_for_inference = None
 generator_checkpoint = None
 generator_lora_state = None

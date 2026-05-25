@@ -11,6 +11,8 @@
 #include <ATen/cuda/CUDAContext.h>
 #include <c10/cuda/CUDAException.h>
 #include <c10/cuda/CUDAGuard.h>
+#include <cuda_fp16.h>
+#include <cuda_fp4.h>
 #include <cuda_fp8.h>
 #include <cuda_runtime.h>
 #include <torch/extension.h>
@@ -27,6 +29,14 @@ __device__ __constant__ float kE2M1ToFloat[16] = {
     0.0f, 0.5f, 1.0f, 1.5f, 2.0f, 3.0f, 4.0f, 6.0f,
     -0.0f, -0.5f, -1.0f, -1.5f, -2.0f, -3.0f, -4.0f, -6.0f,
 };
+
+// iter-37: hardware FP4→FP16x2 via CUDA 12.8+ built-in API
+// __nv_cvt_fp4x2_to_halfraw2 (wraps cvt.rn.f16x2.e2m1x2 PTX instruction).
+// Returns __half2_raw with 2 fp16 values from 1 packed byte.
+__device__ __forceinline__ __half2_raw e2m1x2_to_halfraw2(uint8_t byte) {
+    return __nv_cvt_fp4x2_to_halfraw2(
+        static_cast<__nv_fp4x2_storage_t>(byte), __NV_E2M1);
+}
 
 __device__ __forceinline__ int64_t blocked_scale_index(
     const int row,
@@ -84,8 +94,11 @@ __global__ void fp4_kv_dequant_kernel(
     const float scale = static_cast<float>(scales[scale_idx]);
     const float global_scale = amax[0] * inv_global_scale_denom;
 
-    const float low = kE2M1ToFloat[packed & 0x0F] * scale * global_scale;
-    const float high = kE2M1ToFloat[(packed >> 4) & 0x0F] * scale * global_scale;
+    // iter-37: hardware FP4→FP16x2 via CUDA 12.8 built-in (wraps cvt.rn.f16x2.e2m1x2).
+    const __half2_raw f16x2 = e2m1x2_to_halfraw2(packed);
+    // __half2_raw layout: .x = low nibble's fp16 (unsigned short), .y = high nibble's.
+    const float low = __half2float(__ushort_as_half(f16x2.x)) * scale * global_scale;
+    const float high = __half2float(__ushort_as_half(f16x2.y)) * scale * global_scale;
 
     const int out_col = col_pair * 2;
     const int64_t out_base = (((int64_t)out_token * num_heads + head) * (packed_cols * 2)) + out_col;

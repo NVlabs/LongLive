@@ -18,6 +18,7 @@ from torch.nn.attention.flex_attention import create_block_mask, flex_attention
 from diffusers.configuration_utils import ConfigMixin, register_to_config
 from torch.nn.attention.flex_attention import BlockMask
 from diffusers.models.modeling_utils import ModelMixin
+import os
 import torch.nn as nn
 import torch
 import math
@@ -34,6 +35,58 @@ from utils.position_embedding_utils import (
 )
 
 
+# iter-21: cache freqs_i across causal_rope_apply calls within a chunk.
+# All ~60 layer Q/K calls in one chunk share identical (f,h,w,start_frame,
+# t_scale,temporal_offset_i,method,original_seq_len) but recompute the same
+# concatenated freqs tensor each time. LRU keeps memory bounded.
+# NOTE: this cache holds tensors across torch.compile step boundaries which
+# is incompatible with cudagraphs (mode=reduce-overhead). If cudagraphs
+# path is enabled in the future, this cache must be removed alongside
+# refactoring of the KV cache scalar tensors (global_end_index, etc.).
+_FREQS_I_CACHE: "dict[tuple, torch.Tensor]" = {}
+_FREQS_I_CACHE_MAX = 16
+# iter-21 + iter-41: cache is on by default (iter-21 win). Set
+# LLV2_FREQS_I_CACHE=0 to disable for future cudagraphs experiments (the
+# cache holds tensors created inside torch.compile that get marked as
+# cudagraph-pool memory; reading them on a later compile step crashes with
+# "accessing tensor output of CUDAGraphs that has been overwritten").
+_FREQS_I_CACHE_ENABLED = os.environ.get("LLV2_FREQS_I_CACHE", "1") == "1"
+
+# iter-42: Triton fp32 RoPE kernel (utils/rope_triton.py). Default ON.
+# Replaces the fp64 complex view_as_complex × complex_freqs × view_as_real
+# chain with a single fused Triton kernel. Quality validated bit-exact at
+# bf16 (unit test agent/rope_unit_test.py: max|Δ|=7.8e-3 = single bf16 ULP).
+# Set LLV2_TRITON_ROPE=0 to revert to the fp64 path.
+# When enabled, _FREQS_I_CACHE stores (freqs_i_complex, cos_f32, sin_f32);
+# when disabled, stores (freqs_i_complex, None, None).
+_TRITON_ROPE_ENABLED = os.environ.get("LLV2_TRITON_ROPE", "1") == "1"
+
+# Cudagraph experiment only. Default OFF because the out-of-place temp-KV
+# construction removes mutated-input skips but is materially slower than the
+# in-place temporary cache update path.
+_CGRAPH_OUTPLACE_KV_ENABLED = os.environ.get("LLV2_CGRAPH_OUTPLACE_KV", "0") == "1"
+
+# iter-43/44: Triton fused adaLN-modulate kernel (utils/adaln_triton.py).
+# Default ON after iter-44 added `@triton.autotune` over (num_warps, num_stages).
+# iter-43 (no autotune) was FLAT vs iter-42 (median -1.0%, p90 +5.8%, total
+# identical) — fixed config beat the eager median but jitter on tail.
+# iter-44 (autotuned) is WIN: median -1.7%, p90 -1.6%, total -1.5%, FPS +1.5%
+# vs iter-42, quality in run-to-run noise floor (mean|Δ|=0.68 vs noise=0.69).
+# Unit test agent/adaln_unit_test.py: max|Δ|=3.1e-2 (1 bf16 ULP), mean=1.1e-3.
+# Set LLV2_TRITON_ADALN=0 to fall back to eager nn.LayerNorm + Python modulate.
+_TRITON_ADALN_ENABLED = os.environ.get("LLV2_TRITON_ADALN", "1") == "1"
+
+# iter-31: per-chunk Python-int metadata published by CausalWanModel.forward
+# so attention forwards can read Python ints without `.item()` graph breaks.
+# Single-thread inference assumption — overwritten before each model() call.
+_CURRENT_GRID_META: "dict[str, int]" = {}
+
+# iter-35: removed (LOST). Consolidating duplicate .item() reads caused
+# p90 latency to spike +10% — dynamo apparently traced more specialized
+# paths when local vars were used in branches vs fresh .item() reads each
+# time. Restored original .item() per-use pattern.
+
+
 def causal_rope_apply(x, grid_sizes, freqs, start_frame=0, t_scale=1.0,
                       method="linear", original_seq_len=None,
                       temporal_offset=0.0):
@@ -45,31 +98,90 @@ def causal_rope_apply(x, grid_sizes, freqs, start_frame=0, t_scale=1.0,
     # loop over samples
     output = []
 
-    for i, (f, h, w) in enumerate(grid_sizes.tolist()):
+    # iter-30: accept Python list/tuple to skip the .tolist() graph break.
+    # Callers that already have Python ints (sink_grid, local_grid, window_grid_sizes)
+    # now pass a plain list instead of `torch.tensor([[..]]).expand(...)`.
+    if isinstance(grid_sizes, (list, tuple)):
+        fwh_list = grid_sizes
+    else:
+        fwh_list = grid_sizes.tolist()
+    for i, (f, h, w) in enumerate(fwh_list):
         seq_len = f * h * w
 
-        # precompute multipliers
-        x_i = torch.view_as_complex(x[i, :seq_len].to(torch.float64).reshape(
-            seq_len, n, -1, 2))
+        # precompute multipliers — only needed for the fp64 complex path.
+        # iter-42: skip the bf16→fp64 cast + view_as_complex when the Triton
+        # kernel will be used (it consumes bf16 directly).
+        if not _TRITON_ROPE_ENABLED:
+            x_i = torch.view_as_complex(x[i, :seq_len].to(torch.float64).reshape(
+                seq_len, n, -1, 2))
         temporal_offset_i = select_temporal_offset_for_sample(
             temporal_offset, i, f, start_frame=start_frame)
-        temporal_freqs = _compute_temporal_freqs(freqs[0], f, start_frame, t_scale, x.device,
-                                                  method=method, original_seq_len=original_seq_len,
-                                                  temporal_offset=temporal_offset_i)
-        freqs_i = torch.cat([
-            temporal_freqs.view(f, 1, 1, -1).expand(f, h, w, -1),
-            freqs[1][:h].view(1, h, 1, -1).expand(f, h, w, -1),
-            freqs[2][:w].view(1, 1, w, -1).expand(f, h, w, -1)
-        ],
-            dim=-1).reshape(seq_len, 1, -1)
+
+        # iter-21: cache freqs_i. iter-41: gate the cache behind
+        # LLV2_FREQS_I_CACHE=1 (default off). The cache stores tensors
+        # created inside torch.compile, which cudagraph allocator considers
+        # owned by the per-step memory pool — reading them on a later step
+        # races with the pool's reuse. Disabling the cache unblocks
+        # `mode=reduce-overhead` for cudagraphs; the recomputation cost is
+        # tiny (60 layer calls × per-chunk concat ≈ 0.5% wall) compared to
+        # the cudagraphs unlock potential.
+        if _FREQS_I_CACHE_ENABLED:
+            if torch.is_tensor(temporal_offset_i):
+                if temporal_offset_i.ndim == 0:
+                    offset_key = float(temporal_offset_i.item())
+                else:
+                    offset_key = ("tensor", id(temporal_offset_i))
+            else:
+                offset_key = float(temporal_offset_i)
+            cache_key = (
+                f, h, w, start_frame, t_scale, method,
+                original_seq_len, offset_key, x.device.type, x.device.index,
+            )
+            cache_entry = _FREQS_I_CACHE.get(cache_key)
+        else:
+            cache_entry = None
+            cache_key = None
+
+        if cache_entry is None:
+            temporal_freqs = _compute_temporal_freqs(
+                freqs[0], f, start_frame, t_scale, x.device,
+                method=method, original_seq_len=original_seq_len,
+                temporal_offset=temporal_offset_i)
+            freqs_i_complex = torch.cat([
+                temporal_freqs.view(f, 1, 1, -1).expand(f, h, w, -1),
+                freqs[1][:h].view(1, h, 1, -1).expand(f, h, w, -1),
+                freqs[2][:w].view(1, 1, w, -1).expand(f, h, w, -1),
+            ], dim=-1).reshape(seq_len, 1, -1)
+            if _TRITON_ROPE_ENABLED:
+                # iter-42: store (cos, sin) fp32 derived once; freqs_i_complex
+                # itself only kept for the legacy fp64 path.
+                from utils.rope_triton import _split_complex_to_cos_sin
+                cos_f32, sin_f32 = _split_complex_to_cos_sin(freqs_i_complex)
+                cache_entry = (freqs_i_complex, cos_f32, sin_f32)
+            else:
+                cache_entry = (freqs_i_complex, None, None)
+            if _FREQS_I_CACHE_ENABLED:
+                if len(_FREQS_I_CACHE) >= _FREQS_I_CACHE_MAX:
+                    _FREQS_I_CACHE.pop(next(iter(_FREQS_I_CACHE)))
+                _FREQS_I_CACHE[cache_key] = cache_entry
+        freqs_i, cos_f32, sin_f32 = cache_entry
 
         # apply rotary embedding
-        x_i = torch.view_as_real(x_i * freqs_i).flatten(2)
-        x_i = torch.cat([x_i, x[i, seq_len:]])
+        if _TRITON_ROPE_ENABLED:
+            # iter-42: Triton fp32 kernel — replaces the fp64 complex128 path.
+            # iter-46: kernel takes full x[i] + seq_len and emits rotated-or-
+            # passthrough output in a single launch, eliminating the
+            # `.contiguous()` slice + outer `torch.cat`. Bit-exact preserved.
+            from utils.rope_triton import rope_apply_triton
+            x_i = rope_apply_triton(x[i], cos_f32, sin_f32, seq_len=seq_len)
+        else:
+            x_i = torch.view_as_real(x_i * freqs_i).flatten(2)
+            x_i = torch.cat([x_i, x[i, seq_len:]])
 
         # append to collection
         output.append(x_i)
     return torch.stack(output).type_as(x)
+
 
 class MultiShotT2VCrossAttention(WanCrossAttention):
 
@@ -103,19 +215,13 @@ class MultiShotT2VCrossAttention(WanCrossAttention):
             # compute query, key, value
             q = self.norm_q(self.q(x_chunk)).view(b_eff, -1, n, d)
 
-            if crossattn_cache is not None:
-                if not crossattn_cache["is_init"]:
-                    crossattn_cache["is_init"] = True
-                    k = self.norm_k(self.k(context)).view(b_eff, -1, n, d)
-                    v = self.v(context).view(b_eff, -1, n, d)
-                    crossattn_cache["k"] = k
-                    crossattn_cache["v"] = v
-                else:
-                    k = crossattn_cache["k"]
-                    v = crossattn_cache["v"]
-            else:
-                k = self.norm_k(self.k(context)).view(b_eff, -1, n, d)
-                v = self.v(context).view(b_eff, -1, n, d)
+            # iter-24: Bypass crossattn_cache. Cached K/V tensors escape the
+            # cudagraph memory pool across torch.compile step boundaries and
+            # block `mode=reduce-overhead`. Per-call recompute cost is tiny
+            # (~1.7us / call in NVFP4 × ~11.5k calls/prompt ≈ 19 ms total),
+            # for cudagraphs unlock of the 28% wall-time gap.
+            k = self.norm_k(self.k(context)).view(b_eff, -1, n, d)
+            v = self.v(context).view(b_eff, -1, n, d)
 
             # compute attention
             x_attn = flash_attention(q, k, v, k_lens=context_lens)
@@ -338,20 +444,33 @@ class CausalWanSelfAttention(nn.Module):
                 x = x[:, :, :(-padded_length)] if padded_length > 0 else x
                 x = x.transpose(2, 1)
         else:
-            frame_seqlen = math.prod(grid_sizes[0][1:]).item()
-            num_new_frames = grid_sizes[0][0].item()
-            h, w = grid_sizes[0][1].item(), grid_sizes[0][2].item()
+            # iter-31: read Python ints from module-level dict (set by
+            # CausalWanModel.forward) instead of `.item()` calls on
+            # grid_sizes, removing 4 graph breaks per attention forward.
+            if _CURRENT_GRID_META:
+                frame_seqlen = _CURRENT_GRID_META["frame_seqlen"]
+                num_new_frames = _CURRENT_GRID_META["num_new_frames"]
+                h = _CURRENT_GRID_META["h"]
+                w = _CURRENT_GRID_META["w"]
+            else:
+                frame_seqlen = math.prod(grid_sizes[0][1:]).item()
+                num_new_frames = grid_sizes[0][0].item()
+                h, w = grid_sizes[0][1].item(), grid_sizes[0][2].item()
             num_new_tokens = q.shape[1]
             current_end = current_start + num_new_tokens
+            # iter-30: build Python-int grid once; pass to all rope_apply calls
+            # below so they skip the .tolist() graph break.
+            b = q.shape[0]
+            grid_py = [(num_new_frames, h, w)] * b
 
             if not use_relative_rope:
                 current_start_frame = current_start // frame_seqlen
                 roped_query = causal_rope_apply(
-                    q, grid_sizes, freqs, start_frame=current_start_frame, t_scale=t_scale,
+                    q, grid_py, freqs, start_frame=current_start_frame, t_scale=t_scale,
                     method=method, original_seq_len=original_seq_len,
                     temporal_offset=temporal_offset).type_as(v)
                 roped_key = causal_rope_apply(
-                    k, grid_sizes, freqs, start_frame=current_start_frame, t_scale=t_scale,
+                    k, grid_py, freqs, start_frame=current_start_frame, t_scale=t_scale,
                     method=method, original_seq_len=original_seq_len,
                     temporal_offset=temporal_offset).type_as(v)
                 key_to_cache = roped_key
@@ -380,13 +499,21 @@ class CausalWanSelfAttention(nn.Module):
             #     -> global_sink_tokens
             #   no pinned
             #     -> max(global_sink_tokens, sink_tokens)  # legacy compat
-            pinned_start_t = kv_cache.get("pinned_start", None)
-            pinned_len_val = 0
-            if pinned_start_t is not None and hasattr(pinned_start_t, 'item'):
-                pinned_start_val = pinned_start_t.item()
-                pinned_len_val = kv_cache["pinned_len"].item()
+            # iter-39: read pinned state from _CURRENT_GRID_META (published
+            # once per chunk in CausalWanModel._forward_inference). Falls
+            # back to `.item()` if the dict was not initialized (e.g. unit
+            # test exercising the attention block directly).
+            if _CURRENT_GRID_META and "pinned_start" in _CURRENT_GRID_META:
+                pinned_start_val = _CURRENT_GRID_META["pinned_start"]
+                pinned_len_val = _CURRENT_GRID_META["pinned_len"]
             else:
-                pinned_start_val = -1
+                pinned_start_t = kv_cache.get("pinned_start", None)
+                pinned_len_val = 0
+                if pinned_start_t is not None and hasattr(pinned_start_t, 'item'):
+                    pinned_start_val = pinned_start_t.item()
+                    pinned_len_val = kv_cache["pinned_len"].item()
+                else:
+                    pinned_start_val = -1
             has_pinned = pinned_start_val >= 0 and pinned_len_val > 0
             if has_pinned and pinned_start_val == global_sink_tokens:
                 effective_sink = global_sink_tokens + pinned_len_val
@@ -395,14 +522,25 @@ class CausalWanSelfAttention(nn.Module):
             else:
                 effective_sink = max(global_sink_tokens, sink_tokens)
 
-            cache_update_info = None
-            if self.local_attn_size != -1 and (current_end > kv_cache["global_end_index"].item()) and (
-                    num_new_tokens + kv_cache["local_end_index"].item() > kv_cache_size):
-                num_evicted_tokens = num_new_tokens + kv_cache["local_end_index"].item() - kv_cache_size
-                num_rolled_tokens = kv_cache["local_end_index"].item() - num_evicted_tokens - effective_sink
+            # iter-39: read cache indices from _CURRENT_GRID_META (published
+            # by CausalWanModel._forward_inference) to avoid 6+ `.item()`
+            # syncs per block forward. Falls back to .item() when the dict
+            # is not initialized (direct attention-block unit tests).
+            if _CURRENT_GRID_META and "global_end_index" in _CURRENT_GRID_META:
+                _cache_global_end = _CURRENT_GRID_META["global_end_index"]
+                _cache_local_end = _CURRENT_GRID_META["local_end_index"]
+            else:
+                _cache_global_end = kv_cache["global_end_index"].item()
+                _cache_local_end = kv_cache["local_end_index"].item()
 
-                local_end_index = kv_cache["local_end_index"].item() + current_end - \
-                    kv_cache["global_end_index"].item() - num_evicted_tokens
+            cache_update_info = None
+            if self.local_attn_size != -1 and (current_end > _cache_global_end) and (
+                    num_new_tokens + _cache_local_end > kv_cache_size):
+                num_evicted_tokens = num_new_tokens + _cache_local_end - kv_cache_size
+                num_rolled_tokens = _cache_local_end - num_evicted_tokens - effective_sink
+
+                local_end_index = _cache_local_end + current_end - \
+                    _cache_global_end - num_evicted_tokens
                 local_start_index = local_end_index - num_new_tokens
 
                 if is_quantized_cache:
@@ -410,25 +548,45 @@ class CausalWanSelfAttention(nn.Module):
 
                     max_blks = int(kv_cache["max_blocks"])
                     blk_sz = int(kv_cache["block_token_size"])
-                    temp_k = dequantize_kv_cache(
+                    cache_k = dequantize_kv_cache(
                         kv_cache["k"], max_blks, self.num_heads, blk_sz, v.dtype, v.device
                     )
-                    temp_v = dequantize_kv_cache(
+                    cache_v = dequantize_kv_cache(
                         kv_cache["v"], max_blks, self.num_heads, blk_sz, v.dtype, v.device
                     )
+                    new_k_for_cache = k_smooth(key_to_cache)
                 else:
-                    temp_k = kv_cache["k"].clone()
-                    temp_v = kv_cache["v"].clone()
-                
-                temp_k[:, effective_sink:effective_sink + num_rolled_tokens] = \
-                    temp_k[:, effective_sink + num_evicted_tokens:effective_sink + num_evicted_tokens + num_rolled_tokens].clone()
-                temp_v[:, effective_sink:effective_sink + num_rolled_tokens] = \
-                    temp_v[:, effective_sink + num_evicted_tokens:effective_sink + num_evicted_tokens + num_rolled_tokens].clone()
-                
-                temp_k[:, local_start_index:local_end_index] = (
-                    k_smooth(key_to_cache) if is_quantized_cache else key_to_cache
-                )
-                temp_v[:, local_start_index:local_end_index] = v
+                    cache_k = kv_cache["k"]
+                    cache_v = kv_cache["v"]
+                    new_k_for_cache = key_to_cache
+
+                if _CGRAPH_OUTPLACE_KV_ENABLED:
+                    # Cudagraph experiment: build the post-roll cache view
+                    # out-of-place. Slice assignment here forces Inductor
+                    # cudagraph partitions to mutate inputs.
+                    temp_k = torch.cat([
+                        cache_k[:, :effective_sink],
+                        cache_k[:, effective_sink + num_evicted_tokens:
+                                effective_sink + num_evicted_tokens + num_rolled_tokens],
+                        new_k_for_cache,
+                    ], dim=1)
+                    temp_v = torch.cat([
+                        cache_v[:, :effective_sink],
+                        cache_v[:, effective_sink + num_evicted_tokens:
+                                effective_sink + num_evicted_tokens + num_rolled_tokens],
+                        v,
+                    ], dim=1)
+                else:
+                    temp_k = cache_k if is_quantized_cache else cache_k.clone()
+                    temp_v = cache_v if is_quantized_cache else cache_v.clone()
+
+                    temp_k[:, effective_sink:effective_sink + num_rolled_tokens] = \
+                        temp_k[:, effective_sink + num_evicted_tokens:effective_sink + num_evicted_tokens + num_rolled_tokens].clone()
+                    temp_v[:, effective_sink:effective_sink + num_rolled_tokens] = \
+                        temp_v[:, effective_sink + num_evicted_tokens:effective_sink + num_evicted_tokens + num_rolled_tokens].clone()
+
+                    temp_k[:, local_start_index:local_end_index] = new_k_for_cache
+                    temp_v[:, local_start_index:local_end_index] = v
 
                 # When pinned is "floating" (lives outside effective_sink), the
                 # rolling shifted non-pinned data left by num_evicted_tokens;
@@ -452,31 +610,44 @@ class CausalWanSelfAttention(nn.Module):
                 }
 
             else:
-                local_end_index = kv_cache["local_end_index"].item() + current_end - kv_cache["global_end_index"].item()
+                # iter-39: reuse the dict-cached scalars from above.
+                local_end_index = _cache_local_end + current_end - _cache_global_end
                 local_start_index = local_end_index - num_new_tokens
 
                 if is_quantized_cache:
                     from utils.quant import dequantize_kv_cache, k_smooth
 
+                    new_k_for_cache = k_smooth(key_to_cache)
                     if local_start_index == 0:
-                        temp_k = k_smooth(key_to_cache)
+                        temp_k = new_k_for_cache
                         temp_v = v
                     else:
                         max_blks = int(kv_cache["max_blocks"])
                         blk_sz = int(kv_cache["block_token_size"])
-                        temp_k = dequantize_kv_cache(
+                        cache_k = dequantize_kv_cache(
                             kv_cache["k"], max_blks, self.num_heads, blk_sz, v.dtype, v.device
                         )
-                        temp_v = dequantize_kv_cache(
+                        cache_v = dequantize_kv_cache(
                             kv_cache["v"], max_blks, self.num_heads, blk_sz, v.dtype, v.device
                         )
+                        if _CGRAPH_OUTPLACE_KV_ENABLED:
+                            temp_k = torch.cat([cache_k[:, :local_start_index], new_k_for_cache], dim=1)
+                            temp_v = torch.cat([cache_v[:, :local_start_index], v], dim=1)
+                        else:
+                            temp_k = cache_k
+                            temp_v = cache_v
+                    if not _CGRAPH_OUTPLACE_KV_ENABLED:
+                        temp_k[:, local_start_index:local_end_index] = new_k_for_cache
+                        temp_v[:, local_start_index:local_end_index] = v
                 else:
-                    temp_k = kv_cache["k"].clone()
-                    temp_v = kv_cache["v"].clone()
-                temp_k[:, local_start_index:local_end_index] = (
-                    k_smooth(key_to_cache) if is_quantized_cache else key_to_cache
-                )
-                temp_v[:, local_start_index:local_end_index] = v
+                    if _CGRAPH_OUTPLACE_KV_ENABLED:
+                        temp_k = torch.cat([kv_cache["k"][:, :local_start_index], key_to_cache], dim=1)
+                        temp_v = torch.cat([kv_cache["v"][:, :local_start_index], v], dim=1)
+                    else:
+                        temp_k = kv_cache["k"].clone()
+                        temp_v = kv_cache["v"].clone()
+                        temp_k[:, local_start_index:local_end_index] = key_to_cache
+                        temp_v[:, local_start_index:local_end_index] = v
 
                 cache_update_info = {
                     "action": "direct_insert",
@@ -550,18 +721,16 @@ class CausalWanSelfAttention(nn.Module):
                     local_frame_count = local_tokens // frame_seqlen
                     combined_frames = sink_frame_count + local_frame_count
 
-                    sink_grid = torch.tensor(
-                        [[sink_frame_count, h, w]], device=q.device, dtype=torch.long
-                    ).expand(b, -1)
+                    # iter-30: pass Python list instead of expanded tensor;
+                    # causal_rope_apply skips .tolist() graph break this way.
+                    sink_grid = [(sink_frame_count, h, w)] * b
                     roped_sink_k = causal_rope_apply(
                         window_k[:, :effective_sink], sink_grid, freqs,
                         start_frame=0, t_scale=t_scale,
                         method=method, original_seq_len=original_seq_len,
                     ).type_as(v)
 
-                    local_grid = torch.tensor(
-                        [[local_frame_count, h, w]], device=q.device, dtype=torch.long
-                    ).expand(b, -1)
+                    local_grid = [(local_frame_count, h, w)] * b
                     roped_local_k = causal_rope_apply(
                         window_k[:, effective_sink:], local_grid, freqs,
                         start_frame=sink_frame_count, t_scale=t_scale,
@@ -572,7 +741,7 @@ class CausalWanSelfAttention(nn.Module):
 
                     q_start_frame = combined_frames - num_new_frames
                     roped_query = causal_rope_apply(
-                        q, grid_sizes, freqs,
+                        q, grid_py, freqs,
                         start_frame=q_start_frame, t_scale=t_scale,
                         method=method, original_seq_len=original_seq_len,
                     ).type_as(v)
@@ -580,9 +749,8 @@ class CausalWanSelfAttention(nn.Module):
                     window_tokens = window_k.shape[1]
                     window_frames = window_tokens // frame_seqlen
 
-                    window_grid_sizes = torch.tensor(
-                        [[window_frames, h, w]], device=q.device, dtype=torch.long
-                    ).expand(b, -1)
+                    # iter-30: Python list to skip .tolist() break.
+                    window_grid_sizes = [(window_frames, h, w)] * b
 
                     roped_window_k = causal_rope_apply(
                         window_k, window_grid_sizes, freqs,
@@ -592,7 +760,7 @@ class CausalWanSelfAttention(nn.Module):
 
                     q_start_frame = window_frames - num_new_frames
                     roped_query = causal_rope_apply(
-                        q, grid_sizes, freqs,
+                        q, grid_py, freqs,
                         start_frame=q_start_frame, t_scale=t_scale,
                         method=method, original_seq_len=original_seq_len,
                     ).type_as(v)
@@ -684,8 +852,17 @@ class CausalWanAttentionBlock(nn.Module):
         e = (self.modulation.unsqueeze(1) + e).chunk(6, dim=2)
 
         # self-attention
+        if _TRITON_ADALN_ENABLED:
+            # iter-43: fused LayerNorm + (1+e[1])*x + e[0] in one Triton kernel.
+            from utils.adaln_triton import adaln_modulate_triton
+            modulated_x = adaln_modulate_triton(
+                x, e[1], e[0], frame_seqlen,
+                eps=self.norm1.eps, add_one_to_scale=True,
+            )
+        else:
+            modulated_x = (self.norm1(x).unflatten(dim=1, sizes=(num_frames, frame_seqlen)) * (1 + e[1]) + e[0]).flatten(1, 2)
         self_attn_result = self.self_attn(
-            (self.norm1(x).unflatten(dim=1, sizes=(num_frames, frame_seqlen)) * (1 + e[1]) + e[0]).flatten(1, 2),
+            modulated_x,
             seq_lens, grid_sizes,
             freqs, block_mask, kv_cache, current_start, cache_start, t_scale=t_scale,
             use_relative_rope=use_relative_rope,
@@ -700,14 +877,33 @@ class CausalWanAttentionBlock(nn.Module):
         x = x + (y.unflatten(dim=1, sizes=(num_frames, frame_seqlen)) * e[2]).flatten(1, 2)
 
         # cross-attention & ffn function
-        is_tf = (x.shape[1] == seq_lens[0].item() * 2)
+        # iter-40: avoid `seq_lens[0].item()` graph break. seq_lens[0] equals
+        # num_new_frames * frame_seqlen at inference time, both of which are
+        # Python ints already in _CURRENT_GRID_META (published by iter-31).
+        # `is_tf` is True only in teacher-forcing training where x.shape[1]
+        # is the doubled (clean+noisy) sequence — never at inference.
+        if _CURRENT_GRID_META and "frame_seqlen" in _CURRENT_GRID_META:
+            seq_len_py = (
+                _CURRENT_GRID_META["frame_seqlen"]
+                * _CURRENT_GRID_META["num_new_frames"]
+            )
+            is_tf = (x.shape[1] == seq_len_py * 2)
+        else:
+            is_tf = (x.shape[1] == seq_lens[0].item() * 2)
         def cross_attn_ffn(x, context, context_lens, e, crossattn_cache=None):
             x = x + self.cross_attn(self.norm3(x), context,
                                     context_lens, crossattn_cache=crossattn_cache, is_teacher_forcing=is_tf)
-            y = self.ffn(
-                (self.norm2(x).unflatten(dim=1, sizes=(num_frames,
-                 frame_seqlen)) * (1 + e[4]) + e[3]).flatten(1, 2)
-            )
+            if _TRITON_ADALN_ENABLED:
+                # iter-43: fused LayerNorm + (1+e[4])*x + e[3] in one Triton kernel.
+                from utils.adaln_triton import adaln_modulate_triton
+                ffn_in = adaln_modulate_triton(
+                    x, e[4], e[3], frame_seqlen,
+                    eps=self.norm2.eps, add_one_to_scale=True,
+                )
+            else:
+                ffn_in = (self.norm2(x).unflatten(dim=1, sizes=(num_frames,
+                          frame_seqlen)) * (1 + e[4]) + e[3]).flatten(1, 2)
+            y = self.ffn(ffn_in)
             x = x + (y.unflatten(dim=1, sizes=(num_frames,
                      frame_seqlen)) * e[5]).flatten(1, 2)
             return x
@@ -1183,18 +1379,24 @@ class CausalWanModel(ModelMixin, ConfigMixin):
                     new_v = update_info["new_v"]
 
                     if is_quantized:
-                        from utils.quant import clone_quantized_tensor, quantize_to_fp4
+                        from utils.quant import copy_quantized_into, quantize_to_fp4
 
                         blk_sz = int(cache["block_token_size"])
                         sink_blks = sink_tokens // blk_sz
                         evict_blks = num_evicted_tokens // blk_sz
                         roll_blks = num_rolled_tokens // blk_sz
 
+                        # iter-26: in-place copy into pre-allocated cache
+                        # slots instead of replacing the QuantizedTensor
+                        # reference. Required to unblock cudagraphs (the
+                        # fresh QT returned by quantize_to_fp4 lives in
+                        # the cudagraph memory pool; copying its data into
+                        # the persistent slot buffer breaks that escape).
                         for i in range(roll_blks):
                             src = sink_blks + evict_blks + i
                             dst = sink_blks + i
-                            cache["k"][dst] = clone_quantized_tensor(cache["k"][src])
-                            cache["v"][dst] = clone_quantized_tensor(cache["v"][src])
+                            copy_quantized_into(cache["k"][dst], cache["k"][src])
+                            copy_quantized_into(cache["v"][dst], cache["v"][src])
 
                         start_blk = local_start_index // blk_sz
                         n_insert_blks = (local_end_index - local_start_index) // blk_sz
@@ -1205,8 +1407,14 @@ class CausalWanModel(ModelMixin, ConfigMixin):
                             te = ts + blk_sz
                             k_block = new_k[0, ts:te, :, :].reshape(-1, head_dim).contiguous()
                             v_block = new_v[0, ts:te, :, :].reshape(-1, head_dim).contiguous()
-                            cache["k"][blk_idx] = quantize_to_fp4(k_block, self.kv_quant_config)
-                            cache["v"][blk_idx] = quantize_to_fp4(v_block, self.kv_quant_config)
+                            copy_quantized_into(
+                                cache["k"][blk_idx],
+                                quantize_to_fp4(k_block, self.kv_quant_config),
+                            )
+                            copy_quantized_into(
+                                cache["v"][blk_idx],
+                                quantize_to_fp4(v_block, self.kv_quant_config),
+                            )
                     else:
                         # Roll cached tokens.
                         cache["k"][:, sink_tokens:sink_tokens + num_rolled_tokens] = \
@@ -1232,20 +1440,27 @@ class CausalWanModel(ModelMixin, ConfigMixin):
                     new_k = update_info["new_k"]
                     new_v = update_info["new_v"]
                     if is_quantized:
-                        from utils.quant import quantize_to_fp4
+                        from utils.quant import copy_quantized_into, quantize_to_fp4
 
                         blk_sz = int(cache["block_token_size"])
                         start_blk = local_start_index // blk_sz
                         n_insert_blks = (local_end_index - local_start_index) // blk_sz
                         head_dim = new_k.shape[-1]
+                        # iter-26: in-place copy (see note above).
                         for bi in range(n_insert_blks):
                             blk_idx = start_blk + bi
                             ts = bi * blk_sz
                             te = ts + blk_sz
                             k_block = new_k[0, ts:te, :, :].reshape(-1, head_dim).contiguous()
                             v_block = new_v[0, ts:te, :, :].reshape(-1, head_dim).contiguous()
-                            cache["k"][blk_idx] = quantize_to_fp4(k_block, self.kv_quant_config)
-                            cache["v"][blk_idx] = quantize_to_fp4(v_block, self.kv_quant_config)
+                            copy_quantized_into(
+                                cache["k"][blk_idx],
+                                quantize_to_fp4(k_block, self.kv_quant_config),
+                            )
+                            copy_quantized_into(
+                                cache["v"][blk_idx],
+                                quantize_to_fp4(v_block, self.kv_quant_config),
+                            )
                     else:
                         # Insert the new key/value tensors.
                         cache["k"][:, local_start_index:local_end_index] = new_k
@@ -1266,7 +1481,8 @@ class CausalWanModel(ModelMixin, ConfigMixin):
         kv_cache: dict = None,
         crossattn_cache: dict = None,
         current_start: int = 0,
-        cache_start: int = 0
+        cache_start: int = 0,
+        defer_cache_updates: bool = False,
     ):
         r"""
         Run the diffusion model with kv caching.
@@ -1305,6 +1521,18 @@ class CausalWanModel(ModelMixin, ConfigMixin):
 
         # embeddings
         x = [self.patch_embedding(u.unsqueeze(0)) for u in x]
+        # iter-31: publish chunk metadata as Python ints to module-level dict
+        # so deep attention forwards can avoid `.item()` graph breaks.
+        first_shape = tuple(x[0].shape[2:])
+        _CURRENT_GRID_META["frame_seqlen"] = int(first_shape[1] * first_shape[2])
+        _CURRENT_GRID_META["num_new_frames"] = int(first_shape[0])
+        _CURRENT_GRID_META["h"] = int(first_shape[1])
+        _CURRENT_GRID_META["w"] = int(first_shape[2])
+        # iter-39 v2: kv_cache scalars (global_end_index, local_end_index,
+        # pinned_start, pinned_len) are published into _CURRENT_GRID_META by
+        # the eager `_call_model` wrapper (utils/wan_5b_wrapper.py) BEFORE
+        # this compiled forward runs. Reading them here via `.item()` would
+        # trigger graph breaks; the wrapper does it in eager Python instead.
         grid_sizes = torch.stack(
             [torch.tensor(u.shape[2:], dtype=torch.long) for u in x])
         x = [u.flatten(2).transpose(1, 2) for u in x]
@@ -1398,15 +1626,20 @@ class CausalWanModel(ModelMixin, ConfigMixin):
                 else:
                     x = result
 
-        # Apply all cache updates after every block has run.
-        if kv_cache is not None and cache_update_infos:
+        # Apply all cache updates after every block has run. For cudagraphs
+        # experiments this can be deferred to the eager wrapper so cache
+        # mutation does not happen inside the compiled forward.
+        if kv_cache is not None and cache_update_infos and not defer_cache_updates:
             self._apply_cache_updates(kv_cache, cache_update_infos)
 
         # head
         x = self.head(x, e.unsqueeze(2))
         # unpatchify
         x = self.unpatchify(x, grid_sizes)
-        return torch.stack(x)
+        output = torch.stack(x)
+        if kv_cache is not None and defer_cache_updates:
+            return output, cache_update_infos
+        return output
 
     def _forward_train(
         self,

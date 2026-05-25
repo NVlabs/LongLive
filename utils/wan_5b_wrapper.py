@@ -341,9 +341,65 @@ class WanDiffusionWrapper(torch.nn.Module):
         return self._compiled_model_call is not None
 
     def _call_model(self, *args, **kwargs):
+        # iter-39 v2: publish kv_cache scalars BEFORE entering the compiled
+        # graph. The earlier version (iter-39 v1) published them inside
+        # `_forward_inference`, but that function IS compiled, so each
+        # `.item()` triggered a graph break. Moving the reads to this eager
+        # wrapper keeps the dict lookups in the compiled attention forward
+        # free of `.item()` syncs without adding any graph break.
+        kv_cache = kwargs.get("kv_cache", None)
+        if kv_cache is not None and len(kv_cache) > 0:
+            try:
+                from wan_5b.modules.causal_model import _CURRENT_GRID_META
+                first_block_cache = kv_cache[0]
+                _CURRENT_GRID_META["global_end_index"] = int(
+                    first_block_cache["global_end_index"].item()
+                )
+                _CURRENT_GRID_META["local_end_index"] = int(
+                    first_block_cache["local_end_index"].item()
+                )
+                _ps = first_block_cache.get("pinned_start", None)
+                if _ps is not None and hasattr(_ps, "item"):
+                    _CURRENT_GRID_META["pinned_start"] = int(_ps.item())
+                    _CURRENT_GRID_META["pinned_len"] = int(
+                        first_block_cache["pinned_len"].item()
+                    )
+                else:
+                    _CURRENT_GRID_META["pinned_start"] = -1
+                    _CURRENT_GRID_META["pinned_len"] = 0
+            except (KeyError, AttributeError, ImportError):
+                pass
+        defer_kv_updates = (
+            os.environ.get("LLV2_DEFER_KV_UPDATES", "0") == "1"
+            and kv_cache is not None
+        )
+        if defer_kv_updates:
+            kwargs["defer_cache_updates"] = True
+
         if self._compiled_model_call is not None:
-            return self._compiled_model_call(*args, **kwargs)
-        return self.model(*args, **kwargs)
+            # iter-25: signal cudagraph allocator that a new "step" starts.
+            # Required for mode=reduce-overhead when modules cache state
+            # (KV cache rolling buffers, fp4-quant scale tensors) so the
+            # cudagraph pool knows it can safely reuse step-N memory now
+            # that step-(N+1) is starting.
+            mark_step = getattr(torch.compiler, "cudagraph_mark_step_begin", None)
+            if mark_step is not None:
+                mark_step()
+            result = self._compiled_model_call(*args, **kwargs)
+        else:
+            result = self.model(*args, **kwargs)
+
+        if defer_kv_updates:
+            if not isinstance(result, tuple) or len(result) != 2:
+                raise RuntimeError(
+                    "LLV2_DEFER_KV_UPDATES expected model to return "
+                    "(output, cache_update_infos)."
+                )
+            output, cache_update_infos = result
+            if cache_update_infos:
+                self.model._apply_cache_updates(kv_cache, cache_update_infos)
+            return output
+        return result
 
     def _convert_flow_pred_to_x0(self, flow_pred: torch.Tensor, xt: torch.Tensor, timestep: torch.Tensor) -> torch.Tensor:
         """

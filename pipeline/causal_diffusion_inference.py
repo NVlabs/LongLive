@@ -3,9 +3,18 @@
 
 from tqdm import tqdm
 from typing import List, Optional
+import os
+import statistics
 import threading
 import torch
 import math
+
+_LLV2_TIME = os.environ.get("LLV2_TIME") == "1"
+_LLV2_DUMP_LATENT_DIR = os.environ.get("LLV2_DUMP_LATENT_DIR", "").strip()
+# LLV2_PROFILE format: "<call_idx>:<wait>:<warmup>:<active>", e.g. "0:20:2:2"
+_LLV2_PROFILE_SPEC = os.environ.get("LLV2_PROFILE", "").strip()
+_LLV2_PROFILE_OUTPUT_DIR = os.environ.get("LLV2_PROFILE_OUTPUT_DIR", "").strip()
+_LLV2_PROFILE_CALL_COUNTER = 0
 from wan_5b.utils.fm_solvers import FlowDPMSolverMultistepScheduler, get_sampling_sigmas, retrieve_timesteps
 from wan_5b.utils.fm_solvers_unipc import FlowUniPCMultistepScheduler
 from utils.wan_5b_wrapper import WanDiffusionWrapper, WanTextEncoder, build_vae_5b
@@ -31,6 +40,25 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
             **getattr(args, "model_kwargs", {}), is_causal=True) if generator is None else generator
         self.text_encoder = WanTextEncoder() if text_encoder is None else text_encoder
         self.vae = build_vae_5b(args) if vae is None else vae
+
+        # iter-33: optionally compile the VAE decoder (cuda:2). The Python
+        # `for step in range(total_steps)` wrapper in cached_decode keeps the
+        # mutating feat_cache in eager; per-step self.decoder() call hits the
+        # compiled version. Opt-in via LLV2_COMPILE_VAE=1; default off.
+        if os.environ.get("LLV2_COMPILE_VAE", "0") == "1":
+            try:
+                inner = getattr(self.vae, "model", None)
+                if inner is not None and hasattr(inner, "decoder"):
+                    inner.decoder = torch.compile(
+                        inner.decoder,
+                        backend="inductor",
+                        mode="max-autotune-no-cudagraphs",
+                        fullgraph=False,
+                        dynamic=False,
+                    )
+                    print("[torch.compile] VAE.decoder wrapped")
+            except Exception as exc:
+                print(f"[torch.compile][warn] VAE compile setup failed: {exc}")
 
         # Step 2: Initialize scheduler
         self.num_train_timesteps = getattr(args, "num_train_timestep", 1000)
@@ -441,7 +469,16 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                                     item,
                                     vae_scale,
                                 ).float().clamp_(-1, 1)
-                                vae_thread_chunks.append(decoded.cpu())
+                                # Pinned-memory DtoH: pageable copy hits ~0.2 GB/s
+                                # (1.5s per 313MB chunk → ~80s/prompt at end); pinned
+                                # path runs at PCIe limit (~25 GB/s = ~12ms / chunk).
+                                pinned = torch.empty(
+                                    decoded.shape, dtype=decoded.dtype,
+                                    device="cpu", pin_memory=True,
+                                )
+                                pinned.copy_(decoded, non_blocking=True)
+                                torch.cuda.synchronize(decoded.device)
+                                vae_thread_chunks.append(pinned)
                     except Exception as exc:
                         vae_thread_error.append(exc)
                         vae_all_done.set()
@@ -449,7 +486,44 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                 vae_bg_thread = threading.Thread(target=_vae_thread_fn, daemon=True)
                 vae_bg_thread.start()
 
+        _block_events = [] if _LLV2_TIME else None
+        global _LLV2_PROFILE_CALL_COUNTER
+        _call_idx = _LLV2_PROFILE_CALL_COUNTER
+        _LLV2_PROFILE_CALL_COUNTER += 1
+        _prof = None
+        _prof_trace_path = None
+        if _LLV2_PROFILE_SPEC and _LLV2_PROFILE_OUTPUT_DIR:
+            _parts = _LLV2_PROFILE_SPEC.split(":")
+            _target_call = int(_parts[0]) if len(_parts) > 0 else 0
+            _wait_n = int(_parts[1]) if len(_parts) > 1 else 20
+            _warmup_n = int(_parts[2]) if len(_parts) > 2 else 2
+            _active_n = int(_parts[3]) if len(_parts) > 3 else 2
+            if _call_idx == _target_call:
+                from torch.profiler import profile as _tp_profile, ProfilerActivity, schedule
+                os.makedirs(_LLV2_PROFILE_OUTPUT_DIR, exist_ok=True)
+                _prof_trace_path = os.path.join(
+                    _LLV2_PROFILE_OUTPUT_DIR, f"trace_call{_call_idx}.json"
+                )
+                _prof = _tp_profile(
+                    activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+                    schedule=schedule(
+                        wait=_wait_n, warmup=_warmup_n, active=_active_n, repeat=1
+                    ),
+                    record_shapes=False,
+                    with_stack=False,
+                )
+                _prof.start()
+                print(
+                    f"[LLV2_PROFILE] enabled for call={_call_idx} "
+                    f"wait={_wait_n} warmup={_warmup_n} active={_active_n} "
+                    f"-> {_prof_trace_path}",
+                    flush=True,
+                )
         for chunk_index, current_num_frames in enumerate(all_num_frames):
+            if _LLV2_TIME:
+                _ev_s = torch.cuda.Event(enable_timing=True)
+                _ev_e = torch.cuda.Event(enable_timing=True)
+                _ev_s.record()
             conditional_dict = conditional_dict_list[chunk_index]
             # Reset the cross-attention cache when each chunk uses a different
             # prompt; otherwise the model reuses the previous chunk's k/v and
@@ -508,8 +582,13 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                     latents,
                     return_dict=False)[0]
                 latents = temp_x0
-                print(f"kv_cache['local_end_index']: {self.kv_cache_pos[0]['local_end_index']}")
-                print(f"kv_cache['global_end_index']: {self.kv_cache_pos[0]['global_end_index']}")
+                # iter-34: removed per-step debug print of kv_cache scalar
+                # tensors (was forcing GPU→CPU sync every sampling step ×
+                # 4 steps × 48 chunks = 192 stalls per prompt). Re-enable
+                # behind LLV2_DEBUG_KV=1 if needed for debugging.
+                if os.environ.get("LLV2_DEBUG_KV", "0") == "1":
+                    print(f"kv_cache['local_end_index']: {self.kv_cache_pos[0]['local_end_index']}")
+                    print(f"kv_cache['global_end_index']: {self.kv_cache_pos[0]['global_end_index']}")
 
             # Step 3.2: record the model's output
             output[:, cache_start_frame:cache_start_frame + current_num_frames] = latents
@@ -586,6 +665,43 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
             current_start_frame += current_num_frames
             cache_start_frame += current_num_frames
 
+            if _LLV2_TIME:
+                _ev_e.record()
+                _block_events.append((_ev_s, _ev_e))
+            if _prof is not None:
+                _prof.step()
+
+        if _prof is not None:
+            _prof.stop()
+            _prof.export_chrome_trace(_prof_trace_path)
+            print(f"[LLV2_PROFILE] saved trace -> {_prof_trace_path}", flush=True)
+
+        if _LLV2_TIME and _block_events:
+            torch.cuda.synchronize()
+            _times = [_s.elapsed_time(_e) for _s, _e in _block_events]
+            _sorted = sorted(_times)
+            _n = len(_sorted)
+            _p10 = _sorted[max(0, _n // 10 - 1)]
+            _p50 = statistics.median(_sorted)
+            _p90 = _sorted[max(0, _n - _n // 10 - 1)]
+            _mean = sum(_times) / _n
+            _total = sum(_times)
+            print(
+                f"[LLV2_TIME] blocks={_n} mean_ms={_mean:.2f} p10_ms={_p10:.2f} "
+                f"median_ms={_p50:.2f} p90_ms={_p90:.2f} total_ms={_total:.2f}",
+                flush=True,
+            )
+
+        if _LLV2_DUMP_LATENT_DIR:
+            os.makedirs(_LLV2_DUMP_LATENT_DIR, exist_ok=True)
+            _existing = sum(
+                1 for _f in os.listdir(_LLV2_DUMP_LATENT_DIR)
+                if _f.startswith("latent_") and _f.endswith(".pt")
+            )
+            _path = os.path.join(_LLV2_DUMP_LATENT_DIR, f"latent_{_existing:04d}.pt")
+            torch.save(output.detach().cpu(), _path)
+            print(f"[LLV2_DUMP] saved latent {tuple(output.shape)} -> {_path}", flush=True)
+
         # Step 4: Decode the output
 
 
@@ -660,7 +776,7 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                     "global_end_index": torch.tensor([0], dtype=torch.long, device=device),
                     "local_end_index": torch.tensor([0], dtype=torch.long, device=device),
                     "pinned_start": torch.tensor([-1], dtype=torch.long, device=device),
-                    "pinned_len": torch.tensor([0], dtype=torch.long, device=device)
+                    "pinned_len": torch.tensor([0], dtype=torch.long, device=device),
                 })
                 kv_cache_neg.append({
                     "k": [clone_quantized_tensor(zero_qt) for _ in range(max_blocks)],
@@ -673,7 +789,7 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                     "global_end_index": torch.tensor([0], dtype=torch.long, device=device),
                     "local_end_index": torch.tensor([0], dtype=torch.long, device=device),
                     "pinned_start": torch.tensor([-1], dtype=torch.long, device=device),
-                    "pinned_len": torch.tensor([0], dtype=torch.long, device=device)
+                    "pinned_len": torch.tensor([0], dtype=torch.long, device=device),
                 })
             else:
                 kv_cache_pos.append({
@@ -687,7 +803,7 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                     "global_end_index": torch.tensor([0], dtype=torch.long, device=device),
                     "local_end_index": torch.tensor([0], dtype=torch.long, device=device),
                     "pinned_start": torch.tensor([-1], dtype=torch.long, device=device),
-                    "pinned_len": torch.tensor([0], dtype=torch.long, device=device)
+                    "pinned_len": torch.tensor([0], dtype=torch.long, device=device),
                 })
                 kv_cache_neg.append({
                     "k": torch.zeros([batch_size, kv_cache_size, num_heads, head_dim], dtype=dtype, device=device),
@@ -700,7 +816,7 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                     "global_end_index": torch.tensor([0], dtype=torch.long, device=device),
                     "local_end_index": torch.tensor([0], dtype=torch.long, device=device),
                     "pinned_start": torch.tensor([-1], dtype=torch.long, device=device),
-                    "pinned_len": torch.tensor([0], dtype=torch.long, device=device)
+                    "pinned_len": torch.tensor([0], dtype=torch.long, device=device),
                 })
 
         self.kv_cache_pos = kv_cache_pos  # always store the clean cache
@@ -853,14 +969,17 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
         chunk_tokens = current_num_frames * self.frame_seq_length
         copy_len = min(shot_sink_tokens, chunk_tokens)
 
+        # iter-38: local_end_index is in lockstep across all blocks (set by
+        # _apply_cache_updates with the same value). Read once → 60 syncs to 1.
+        local_end = int(kv_cache[0]["local_end_index"].item())
+        chunk_start = local_end - chunk_tokens
+        dst_start = global_sink_tokens
+        src_slice = slice(chunk_start, chunk_start + copy_len)
+        dst_slice = slice(dst_start, dst_start + copy_len)
+
         for block_cache in kv_cache:
-            local_end = block_cache["local_end_index"].item()
-            chunk_start = local_end - chunk_tokens
-            dst_start = global_sink_tokens
-            block_cache["k"][:, dst_start:dst_start + copy_len] = \
-                block_cache["k"][:, chunk_start:chunk_start + copy_len].clone()
-            block_cache["v"][:, dst_start:dst_start + copy_len] = \
-                block_cache["v"][:, chunk_start:chunk_start + copy_len].clone()
+            block_cache["k"][:, dst_slice] = block_cache["k"][:, src_slice].clone()
+            block_cache["v"][:, dst_slice] = block_cache["v"][:, src_slice].clone()
 
     def _pin_current_chunk(self, kv_cache, current_num_frames):
         """Mark the current chunk's buffer position as pinned for multi-shot sink.
@@ -872,9 +991,11 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
         chunk_tokens = current_num_frames * self.frame_seq_length
         pin_len = min(self.sink_size * self.frame_seq_length, chunk_tokens)
 
+        # iter-38: local_end_index is in lockstep across all blocks. Read once.
+        local_end = int(kv_cache[0]["local_end_index"].item())
+        chunk_start = local_end - chunk_tokens
+
         for block_cache in kv_cache:
-            local_end = block_cache["local_end_index"].item()
-            chunk_start = local_end - chunk_tokens
             block_cache["pinned_start"].fill_(chunk_start)
             block_cache["pinned_len"].fill_(pin_len)
 
