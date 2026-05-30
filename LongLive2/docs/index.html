@@ -37,9 +37,8 @@
           <summary>Training</summary>
           <a href="#configs">Configs</a>
           <a href="#training-data">Training Data</a>
-          <a href="#ar-training">AR Diffusion Training</a>
+          <a href="#t2v-training">T2V Training</a>
           <a href="#i2v-training">I2V Training</a>
-          <a href="#dmd-training">DMD Distillation</a>
           <a href="#nvfp4-training">NVFP4 Training</a>
         </details>
         <details class="nav-group" open>
@@ -63,7 +62,7 @@
         <h1>LongLive2.0 Documentation</h1>
         <p class="lead">
           Setup, training, and inference instructions for the LongLive2.0 release.
-          This release focuses on Wan2.2-TI2V-5B, chunk-level AR diffusion training,
+          This release focuses on Wan2.2-TI2V-5B, T2V/I2V chunk-level training,
           DMD distillation, and long-video inference.
         </p>
         <div class="hero-actions">
@@ -77,8 +76,8 @@
         <p>
           LongLive2.0 co-designs chunk-level autoregressive video generation with
           the training and inference infrastructure needed for long videos. The
-          release contains three primary workflows: AR diffusion training, DMD
-          distillation, and inference.
+          release contains T2V and I2V training paths, DMD distillation, and
+          inference.
         </p>
         <figure>
           <img src="assets/fig_framework_overview.png" alt="LongLive2.0 framework overview">
@@ -272,17 +271,17 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
             <tbody>
               <tr>
                 <td><code>configs/train_ar.yaml</code></td>
-                <td>AR diffusion training</td>
+                <td>T2V AR diffusion training</td>
+                <td><code>train.py</code></td>
+              </tr>
+              <tr>
+                <td><code>configs/train_dmd.yaml</code></td>
+                <td>T2V DMD distillation</td>
                 <td><code>train.py</code></td>
               </tr>
               <tr>
                 <td><code>configs/train_i2v_ar.yaml</code></td>
                 <td>I2V AR diffusion training</td>
-                <td><code>train.py</code></td>
-              </tr>
-              <tr>
-                <td><code>configs/train_dmd.yaml</code></td>
-                <td>DMD distillation</td>
                 <td><code>train.py</code></td>
               </tr>
               <tr>
@@ -328,15 +327,16 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
       <section id="training" class="card">
         <h2>Training</h2>
         <p>
-          LongLive2.0 uses a two-stage training path. The first stage trains the
-          chunk-level AR diffusion model. The second stage distills it into a
-          few-step generator with DMD and optional LoRA adapters.
+          LongLive2.0 supports both T2V and I2V training. Each modality uses the
+          same two-stage path: first train the chunk-level AR diffusion model,
+          then distill it into a few-step generator with DMD and optional LoRA
+          adapters.
         </p>
 
         <section id="training-data" class="subsection">
           <h3>Training Data Organization</h3>
           <p>
-            AR diffusion training reads paired video-caption folders through
+            T2V and I2V AR diffusion training read paired video-caption folders through
             <code>MultiVideoConcatDataset</code>. Each sample has a matching
             folder under <code>video/</code> and <code>caption/</code>. The video
             folder stores one or more clips, and the caption folder stores JSON
@@ -366,7 +366,7 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
             <li>Use <code>max_chunks_per_shot</code> in the training config if a long video should be split into shorter virtual shots.</li>
           </ul>
           <p>
-            DMD distillation uses prompt-only backward simulation by default and
+            T2V DMD distillation uses prompt-only backward simulation by default and
             reads prompts through <code>MultiTextConcatDataset</code>. Set
             <code>configs/train_dmd.yaml:data.data_path</code> to either a
             <code>.txt</code> prompt file or a JSON caption directory.
@@ -382,8 +382,14 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
       shot_durations.txt</code></pre>
         </section>
 
-        <section id="ar-training" class="subsection">
-          <h3>AR Diffusion Training</h3>
+        <section id="t2v-training" class="subsection">
+          <h3>T2V Training</h3>
+          <p>
+            T2V training is the text-conditioned path. It first trains the AR
+            teacher-forcing model, then uses that AR checkpoint as the student
+            initialization for DMD distillation.
+          </p>
+          <h4>Stage 1: AR Diffusion Training</h4>
           <p>
             Edit <code>configs/train_ar.yaml</code> to set the training dataset,
             evaluation prompt folder, SP size, and logging options.
@@ -399,47 +405,8 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
             <li><code>model_kwargs.local_attn_size</code> is kept in model kwargs to match model construction.</li>
             <li><code>inference.sampling_steps</code> and sink settings control training-time evaluation.</li>
           </ul>
-        </section>
 
-        <section id="i2v-training" class="subsection">
-          <h3>I2V Training</h3>
-          <p>
-            I2V training uses Wan2.2-TI2V-5B's native first-chunk conditioning
-            pattern. The first input frame is encoded to a clean latent, that
-            clean latent replaces the first noisy latent during denoising, and
-            the first latent is excluded from the loss.
-          </p>
-          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
-  --config_path configs/train_i2v_ar.yaml \
-  --logdir logs/train_i2v_ar \
-  --wandb-save-dir wandb \
-  --disable-wandb</code></pre>
-          <ul>
-            <li>Set <code>algorithm.i2v: true</code> and <code>algorithm.independent_first_frame: true</code>.</li>
-            <li><code>data.image_or_video_shape[1]</code> is the full generated latent sequence length, for example <code>96</code>, not <code>96 + 1</code>.</li>
-            <li>With sequence parallel AR training, the generated sequence is sharded normally; only the first SP rank keeps the clean image latent used to replace frame 0.</li>
-            <li>The i2v loss mask excludes frame 0, including rank-0 SP training.</li>
-          </ul>
-          <p>
-            After i2v AR training, use the AR checkpoint to initialize the i2v
-            DMD student. The i2v DMD config uses backward simulation by default
-            and applies the same first-chunk image conditioning to student
-            rollout, teacher inputs, and critic inputs.
-          </p>
-          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
-  --config_path configs/train_i2v_dmd.yaml \
-  --logdir logs/train_i2v_dmd \
-  --wandb-save-dir wandb \
-  --disable-wandb</code></pre>
-          <ul>
-            <li>Set <code>checkpoints.generator_ckpt</code> to the i2v AR checkpoint used as the DMD student initialization.</li>
-            <li>Keep <code>algorithm.backward_simulation: true</code> unless running an explicit off-policy ablation.</li>
-            <li>The clean first latent is not used as an extra frame; it replaces frame 0 inside the configured latent window.</li>
-          </ul>
-        </section>
-
-        <section id="dmd-training" class="subsection">
-          <h3>DMD Distillation</h3>
+          <h4>Stage 2: DMD Distillation</h4>
           <p>
             Edit <code>configs/train_dmd.yaml</code> to set initialization checkpoints
             and distillation data. If the <code>adapter</code> section is present,
@@ -503,6 +470,46 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
             <li><code>algorithm.real_guidance_scale</code> and <code>algorithm.fake_guidance_scale</code> are used by score distillation.</li>
             <li><code>inference.sampling_steps</code> controls the rollout used during distillation.</li>
             <li>Auto-resume is enabled by default. Pass <code>--no-auto-resume</code> to disable it.</li>
+          </ul>
+        </section>
+
+        <section id="i2v-training" class="subsection">
+          <h3>I2V Training</h3>
+          <p>
+            I2V training mirrors the T2V two-stage path, but each stage receives
+            an image condition through Wan2.2-TI2V-5B's native first-chunk
+            conditioning pattern. The first input frame is encoded to a clean
+            latent, that clean latent replaces the first noisy latent during
+            denoising, and the first latent is excluded from the loss.
+          </p>
+          <h4>Stage 1: I2V AR Diffusion Training</h4>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_i2v_ar.yaml \
+  --logdir logs/train_i2v_ar \
+  --wandb-save-dir wandb \
+  --disable-wandb</code></pre>
+          <ul>
+            <li>Set <code>algorithm.i2v: true</code> and <code>algorithm.independent_first_frame: true</code>.</li>
+            <li><code>data.image_or_video_shape[1]</code> is the full generated latent sequence length, for example <code>96</code>, not <code>96 + 1</code>.</li>
+            <li>With sequence parallel AR training, the generated sequence is sharded normally; only the first SP rank keeps the clean image latent used to replace frame 0.</li>
+            <li>The i2v loss mask excludes frame 0, including rank-0 SP training.</li>
+          </ul>
+          <h4>Stage 2: I2V DMD Distillation</h4>
+          <p>
+            After i2v AR training, use the AR checkpoint to initialize the i2v
+            DMD student. The i2v DMD config uses backward simulation by default
+            and applies the same first-chunk image conditioning to student
+            rollout, teacher inputs, and critic inputs.
+          </p>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_i2v_dmd.yaml \
+  --logdir logs/train_i2v_dmd \
+  --wandb-save-dir wandb \
+  --disable-wandb</code></pre>
+          <ul>
+            <li>Set <code>checkpoints.generator_ckpt</code> to the i2v AR checkpoint used as the DMD student initialization.</li>
+            <li>Keep <code>algorithm.backward_simulation: true</code> unless running an explicit off-policy ablation.</li>
+            <li>The clean first latent is not used as an extra frame; it replaces frame 0 inside the configured latent window.</li>
           </ul>
         </section>
 
