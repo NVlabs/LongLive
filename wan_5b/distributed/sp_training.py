@@ -20,7 +20,10 @@ import math
 
 import torch
 import torch.distributed as dist
-from torch.nn.attention.flex_attention import flex_attention as _flex_attention
+try:
+    from torch.nn.attention.flex_attention import flex_attention as _flex_attention
+except ModuleNotFoundError:
+    _flex_attention = None
 
 from utils.config import wan_default_config
 
@@ -32,8 +35,38 @@ _dp_group = None
 _compiled_flex_attention = None
 
 
+def sp_training_sequence_frame_count(config):
+    """Frames that are sharded by training sequence parallelism."""
+    return int(list(config.image_or_video_shape)[1])
+
+
+def validate_sequence_parallel_training_config(config, sp_size, num_frame_per_block):
+    total_frames = int(list(config.image_or_video_shape)[1])
+    train_frames = sp_training_sequence_frame_count(config)
+    if train_frames <= 0:
+        raise ValueError(
+            f"image_or_video_shape[1] ({total_frames}) must be positive."
+        )
+    if train_frames % int(num_frame_per_block) != 0:
+        raise ValueError(
+            f"training latent frames ({train_frames}) must be divisible by "
+            f"num_frame_per_block ({num_frame_per_block})."
+        )
+    if train_frames % (int(sp_size) * int(num_frame_per_block)) != 0:
+        raise ValueError(
+            f"training latent frames ({train_frames}) must be divisible "
+            f"by sequence_parallel_size ({sp_size}) * num_frame_per_block "
+            f"({num_frame_per_block})."
+        )
+
+
 def _get_compiled_flex_attention():
     global _compiled_flex_attention
+    if _flex_attention is None:
+        raise ModuleNotFoundError(
+            "torch.nn.attention.flex_attention is required for Sequence Parallel "
+            "training. Install a PyTorch build that provides FlexAttention."
+        )
     if _compiled_flex_attention is None:
         _compiled_flex_attention = torch.compile(
             _flex_attention, dynamic=False, mode="max-autotune-no-cudagraphs")
@@ -247,6 +280,15 @@ class SequenceParallelHelper:
     def _chunk_tensor(self, tensor, dim):
         return tensor.chunk(self.sp_size, dim=dim)[self.local_sp_rank()].contiguous()
 
+    def local_i2v_initial_latent(self, initial_latent):
+        if initial_latent is None:
+            return None
+        if not getattr(self.config, "i2v", False):
+            return initial_latent
+        if not self.enabled():
+            return initial_latent
+        return initial_latent if self.local_sp_rank() == 0 else None
+
     def partition_training_inputs(
         self,
         *,
@@ -302,9 +344,12 @@ class SequenceParallelHelper:
 
     def build_loss_mask(self, batch, clean_latent, clean_latent_is_sharded):
         num_valid_latent_frames = batch.get("num_valid_latent_frames", None)
-        if num_valid_latent_frames is None:
+        mask_i2v_first_frame = bool(
+            getattr(self.config, "i2v", False)
+            and getattr(self.config, "independent_first_frame", False)
+        )
+        if num_valid_latent_frames is None and not mask_i2v_first_frame:
             return None
-        num_valid_latent_frames = num_valid_latent_frames.to(device=self.device)
         _, local_or_global_frames = clean_latent.shape[:2]
         if clean_latent_is_sharded:
             frame_start = self.local_sp_rank() * local_or_global_frames
@@ -317,7 +362,18 @@ class SequenceParallelHelper:
             frame_indices = torch.arange(
                 local_or_global_frames, device=self.device
             ).unsqueeze(0)
-        return (frame_indices < num_valid_latent_frames.unsqueeze(1)).float()
+        if num_valid_latent_frames is None:
+            mask = torch.ones(
+                (clean_latent.shape[0], local_or_global_frames),
+                device=self.device,
+                dtype=torch.float32,
+            )
+        else:
+            num_valid_latent_frames = num_valid_latent_frames.to(device=self.device)
+            mask = (frame_indices < num_valid_latent_frames.unsqueeze(1)).float()
+        if mask_i2v_first_frame:
+            mask = mask * (frame_indices != 0).float()
+        return mask
 
     def partition_loss_mask(self, loss_mask, *, already_sharded=False):
         if loss_mask is None:
@@ -478,8 +534,6 @@ class SequenceParallelHelper:
                     "SP chunk-halo VAE requires sync_batch to attach sp_vae_chunk_meta."
                 )
             total_latent_frames = int(list(self.config.image_or_video_shape)[1])
-            latent_tail_shape = tuple(list(self.config.image_or_video_shape)[2:])
-            first_latent_shape = (batch_size, 1, *latent_tail_shape)
 
             with torch.no_grad():
                 frames = batch["frames"].to(
@@ -505,11 +559,8 @@ class SequenceParallelHelper:
                         f"clean_latent={tuple(clean_latent.shape)} meta={meta}"
                     )
 
-                image_latent_root = (
+                image_latent = (
                     clean_latent[:, 0:1] if int(meta["keep_start"]) == 0 else None
-                )
-                image_latent = self.broadcast_tensor_from_root(
-                    image_latent_root, shape=first_latent_shape
                 )
 
                 del chunk_latent

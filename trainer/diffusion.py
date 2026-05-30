@@ -113,8 +113,13 @@ class Trainer:
             assert world_size % self.sequence_parallel_size == 0, (
                 f"world_size ({world_size}) must be divisible by sequence_parallel_size ({self.sequence_parallel_size})"
             )
-            assert list(config.image_or_video_shape)[1] % (self.sequence_parallel_size * config.num_frame_per_block) == 0, (
-                f"image_or_video_shape[1] ({list(config.image_or_video_shape)[1]}) must be divisible by the product of sequence_parallel_size ({self.sequence_parallel_size}) and num_frame_per_block ({config.num_frame_per_block})"
+            from wan_5b.distributed.sp_training import (
+                validate_sequence_parallel_training_config,
+            )
+            validate_sequence_parallel_training_config(
+                config,
+                self.sequence_parallel_size,
+                config.num_frame_per_block,
             )
             # Create SP process groups: each DP group contains sp_size ranks,
             # and all_to_all runs only within that group.
@@ -351,6 +356,8 @@ class Trainer:
             allow_padding=allow_padding,
             min_latent_frames=min_latent_frames,
             single_video_only=single_video_only,
+            independent_first_frame=getattr(config, "independent_first_frame", False),
+            return_image=getattr(config, "i2v", False),
             max_chunks_per_shot=max_chunks_per_shot,
             sample_warning_seconds=dataset_sample_warning_seconds,
             sample_warning_interval_seconds=dataset_sample_warning_interval_seconds,
@@ -401,15 +408,37 @@ class Trainer:
         num_blocks = 1 + (eval_total_frames - first_chunk_frames) // subsequent_chunk_frames
         chunks_per_shot = getattr(config, "chunks_per_shot", 0)
         scene_cut_prefix = getattr(config, "scene_cut_prefix", "The scene transitions. ")
-        eval_dataset = MultiTextConcatDataset(
-            data_path=eval_data_path,
-            num_blocks=num_blocks,
-            chunks_per_shot=chunks_per_shot,
-            scene_cut_prefix=scene_cut_prefix,
-            deterministic=True,
-        )
+        if getattr(config, "i2v", False):
+            eval_dataset = MultiVideoConcatDataset(
+                data_dir=eval_data_path,
+                video_size=(frame_raw_height, frame_raw_width),
+                total_frames=eval_total_frames,
+                deterministic=True,
+                num_frame_per_block=num_frame_per_block,
+                temporal_compression_ratio=temporal_compression_ratio,
+                target_fps=self.fps,
+                allow_padding=allow_padding,
+                min_latent_frames=min_latent_frames,
+                single_video_only=single_video_only,
+                independent_first_frame=getattr(config, "independent_first_frame", False),
+                return_image=True,
+                max_chunks_per_shot=max_chunks_per_shot,
+                scene_cut_prefix=scene_cut_prefix,
+                sample_warning_seconds=dataset_sample_warning_seconds,
+                sample_warning_interval_seconds=dataset_sample_warning_interval_seconds,
+            )
+            eval_collate = multi_video_collate_fn
+        else:
+            eval_dataset = MultiTextConcatDataset(
+                data_path=eval_data_path,
+                num_blocks=num_blocks,
+                chunks_per_shot=chunks_per_shot,
+                scene_cut_prefix=scene_cut_prefix,
+                deterministic=True,
+            )
+            eval_collate = eval_collate_fn
         if dist.get_rank() == 0:
-            print(f"Using MultiTextConcatDataset for eval: {eval_data_path}, num_blocks={num_blocks}")
+            print(f"Using {eval_dataset.__class__.__name__} for eval: {eval_data_path}, num_blocks={num_blocks}")
         eval_sampler = torch.utils.data.distributed.DistributedSampler(
             eval_dataset, shuffle=False, drop_last=False
         )
@@ -420,7 +449,7 @@ class Trainer:
             num_workers=0,
             pin_memory=False,
             persistent_workers=False,
-            collate_fn=eval_collate_fn,
+            collate_fn=eval_collate,
         )
 
         if dist.get_rank() == 0:
@@ -754,6 +783,7 @@ class Trainer:
                     clean_latent_is_sharded=clean_latent_is_sp_sharded,
                 )
             )
+            image_latent = self.sp_helper.local_i2v_initial_latent(image_latent)
         loss_mask, loss_mask_global_valid_count = self.sp_helper.partition_loss_mask(
             loss_mask,
             already_sharded=clean_latent_is_sp_sharded,
@@ -898,6 +928,7 @@ class Trainer:
         for eval_batch in self.eval_dataloader:
             eval_prompts = eval_batch["prompts"]
             eval_idx = eval_batch["idx"]
+            eval_images = eval_batch.get("image", None)
 
             batch_size_eval = len(eval_prompts)
             for b in range(batch_size_eval):
@@ -930,7 +961,7 @@ class Trainer:
                     generated_video = self.generate_video(
                         self.model.inference_pipeline,
                         [prompts_for_sample],
-                        None,
+                        eval_images[b:b + 1] if eval_images is not None else None,
                         use_ema=use_ema,
                     )
 
@@ -999,6 +1030,21 @@ class Trainer:
                 inference_num_frames = inference_num_frames[0] if len(inference_num_frames) > 0 else 0
             if inference_num_frames > 0:
                 noise_shape[0] = inference_num_frames
+            initial_latent = None
+            if image is not None:
+                image = image.to(device="cuda", dtype=self.dtype)
+                if image.ndim == 4:
+                    image = image.unsqueeze(2)
+                elif image.ndim != 5:
+                    raise ValueError(f"Expected i2v image with shape [B,C,H,W] or [B,C,T,H,W], got {tuple(image.shape)}")
+                initial_latent = pipeline.vae.encode_to_latent(image).to(device="cuda", dtype=self.dtype)
+                if initial_latent.shape[0] != batch_size:
+                    initial_latent = initial_latent.repeat(batch_size, 1, 1, 1, 1)
+                if noise_shape[0] <= initial_latent.shape[1]:
+                    raise ValueError(
+                        f"evaluation.num_frames must exceed the i2v conditioning frames; "
+                        f"got {inference_num_frames} and {initial_latent.shape[1]}"
+                    )
             sampled_noise = torch.randn(
                 [batch_size] + noise_shape, device="cuda", dtype=self.dtype
             )
@@ -1013,6 +1059,7 @@ class Trainer:
             video = pipeline.inference(
                 noise=sampled_noise,
                 text_prompts=prompts,
+                initial_latent=initial_latent,
                 return_latents=save_latents_only
             )
             if not save_latents_only:
@@ -1068,3 +1115,6 @@ class Trainer:
                     if not self.disable_wandb:
                         wandb.log({"per iteration time": current_time - self.previous_time}, step=self.step)
                     self.previous_time = current_time
+
+            if self.step >= self.config.max_iters:
+                break

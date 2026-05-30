@@ -124,7 +124,7 @@ class BaseModel(nn.Module):
                 dtype=torch.long
             )
             # make the noise level the same within every block
-            if self.independent_first_frame:
+            if self.independent_first_frame and not getattr(self.args, "i2v", False):
                 # the first frame is always kept the same
                 timestep_from_second = timestep[:, 1:]
                 timestep_from_second = timestep_from_second.reshape(
@@ -236,7 +236,7 @@ class SelfForcingModel(BaseModel):
             index = torch.randint(0, num_steps, [batch_size, num_frame],
                                   device=self.device, dtype=torch.long)
             # Make the index the same within every block
-            if self.independent_first_frame:
+            if self.independent_first_frame and not getattr(self.args, "i2v", False):
                 idx_rest = index[:, 1:]
                 idx_rest = idx_rest.reshape(batch_size, -1, self.num_frame_per_block)
                 idx_rest[:, :, 1:] = idx_rest[:, :, 0:1]
@@ -254,6 +254,17 @@ class SelfForcingModel(BaseModel):
         ).squeeze(1)  # [B, F, C, H, W]
 
         timestep = denoising_step_list[index]  # [B, F]
+        context_frames = int(initial_latent.shape[1]) if initial_latent is not None else 0
+        if context_frames > 0:
+            if context_frames >= num_frame:
+                raise ValueError(
+                    f"initial_latent has {context_frames} frames but training clip has {num_frame}."
+                )
+            noisy_input[:, :context_frames] = initial_latent.to(
+                device=noisy_input.device,
+                dtype=noisy_input.dtype,
+            )
+            timestep[:, :context_frames] = 0
 
         # Single forward pass through the generator
         _, pred_x0 = self.generator(
@@ -274,6 +285,13 @@ class SelfForcingModel(BaseModel):
             denoised_timestep_to = 0
 
         gradient_mask = None
+        if context_frames > 0:
+            pred_x0[:, :context_frames] = initial_latent.to(
+                device=pred_x0.device,
+                dtype=pred_x0.dtype,
+            )
+            gradient_mask = torch.ones_like(pred_x0, dtype=torch.bool)
+            gradient_mask[:, :context_frames] = False
         return pred_x0, gradient_mask, denoised_timestep_from, denoised_timestep_to
 
     def _run_generator_backward_simulation(
@@ -289,13 +307,11 @@ class SelfForcingModel(BaseModel):
         """
         if initial_latent is not None:
             conditional_dict["initial_latent"] = initial_latent
-        if self.args.i2v:
-            noise_shape = [image_or_video_shape[0], image_or_video_shape[1] - 1, *image_or_video_shape[2:]]
-        else:
-            noise_shape = image_or_video_shape.copy()
+        noise_shape = image_or_video_shape.copy()
 
-        min_num_frames = (self.min_num_training_frames - 1) if self.independent_first_frame else self.min_num_training_frames
-        max_num_frames = self.num_training_frames - 1 if self.independent_first_frame else self.num_training_frames
+        separate_first_frame = self.independent_first_frame and not getattr(self.args, "i2v", False)
+        min_num_frames = (self.min_num_training_frames - 1) if separate_first_frame else self.min_num_training_frames
+        max_num_frames = self.num_training_frames - 1 if separate_first_frame else self.num_training_frames
         assert max_num_frames % self.num_frame_per_block == 0
         assert min_num_frames % self.num_frame_per_block == 0
         max_num_blocks = max_num_frames // self.num_frame_per_block
@@ -304,7 +320,7 @@ class SelfForcingModel(BaseModel):
         dist.broadcast(num_generated_blocks, src=0)
         num_generated_blocks = num_generated_blocks.item()
         num_generated_frames = num_generated_blocks * self.num_frame_per_block
-        if self.independent_first_frame and initial_latent is None:
+        if separate_first_frame and initial_latent is None:
             num_generated_frames += 1
             min_num_frames += 1
         noise_shape[1] = num_generated_frames

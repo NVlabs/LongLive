@@ -20,6 +20,10 @@ from wan_5b.utils.fm_solvers_unipc import FlowUniPCMultistepScheduler
 from utils.wan_5b_wrapper import WanDiffusionWrapper, WanTextEncoder, build_vae_5b
 from utils.dataset import DEFAULT_SCENE_CUT_PREFIX
 from utils.config import section_get, wan_default_config
+from utils.i2v_conditioning import (
+    _overwrite_i2v_context,
+    _zero_i2v_context_timestep,
+)
 
 
 class CausalDiffusionInferencePipeline(torch.nn.Module):
@@ -185,7 +189,14 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                 (batch_size, num_frames, num_channels, height, width). It is normalized to be in the range [0, 1].
         """
         batch_size, num_frames, num_channels, height, width = noise.shape
-        if not self.independent_first_frame or (self.independent_first_frame and initial_latent is not None):
+        num_input_frames = initial_latent.shape[1] if initial_latent is not None else 0
+        clamp_i2v_first_chunk = self.independent_first_frame and initial_latent is not None
+        if clamp_i2v_first_chunk and num_input_frames != 1:
+            raise ValueError(
+                f"i2v first-chunk clamp expects one conditioning latent frame, got {num_input_frames}."
+            )
+
+        if not self.independent_first_frame or clamp_i2v_first_chunk:
             # If the first frame is independent and the first frame is provided, then the number of frames in the
             # noise should still be a multiple of num_frame_per_block
             assert num_frames % self.num_frame_per_block == 0
@@ -194,8 +205,9 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
             # Using a [1, 4, 4, 4, 4, 4] model to generate a video without image conditioning
             assert (num_frames - 1) % self.num_frame_per_block == 0
             num_blocks = (num_frames - 1) // self.num_frame_per_block
-        num_input_frames = initial_latent.shape[1] if initial_latent is not None else 0
-        num_output_frames = num_frames + num_input_frames  # add the initial latent frames
+        num_output_frames = (
+            num_frames if clamp_i2v_first_chunk else num_frames + num_input_frames
+        )
         conditional_dict = self.text_encoder(
             text_prompts=text_prompts[0]
         )
@@ -324,6 +336,7 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                 conditional_dict_list=conditional_dict_list,
                 unconditional_dict=unconditional_dict,
                 use_cfg=use_cfg, initial_latent=initial_latent,
+                clamp_i2v_first_chunk=clamp_i2v_first_chunk,
                 return_latents=return_latents,
                 current_start_frame=current_start_frame,
                 cache_start_frame=cache_start_frame,
@@ -357,12 +370,12 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
         self, noise, batch_size, num_frames, num_channels, height, width,
         num_blocks, num_input_frames, num_output_frames, output,
         conditional_dict, conditional_dict_list, unconditional_dict,
-        use_cfg, initial_latent, return_latents,
+        use_cfg, initial_latent, clamp_i2v_first_chunk, return_latents,
         current_start_frame, cache_start_frame,
         raw_prompts=None,
     ):
 
-        if initial_latent is not None:
+        if initial_latent is not None and not clamp_i2v_first_chunk:
             timestep = torch.ones([batch_size, 1], device=noise.device, dtype=torch.int64) * 0
             if self.independent_first_frame:
                 # Assume num_input_frames is 1 + self.num_frame_per_block * num_input_blocks
@@ -540,17 +553,32 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                 print(f"[inference] multi-shot RoPE: shot_index={current_shot_index}, "
                       f"temporal_offset={self._dit_model.rope_temporal_offset:.4f}")
 
+            first_i2v_block = clamp_i2v_first_chunk and chunk_index == 0
+            noise_start_frame = (
+                cache_start_frame
+                if clamp_i2v_first_chunk
+                else cache_start_frame - num_input_frames
+            )
             noisy_input = noise[
-                :, cache_start_frame - num_input_frames:cache_start_frame + current_num_frames - num_input_frames]
+                :,
+                noise_start_frame:noise_start_frame + current_num_frames,
+            ]
             latents = noisy_input
 
             # Step 3.1: Spatial denoising loop
             sample_scheduler = self._initialize_sample_scheduler(noise)
             for _, t in enumerate(tqdm(sample_scheduler.timesteps)):
-                latent_model_input = latents
                 timestep = t * torch.ones(
                     [batch_size, current_num_frames], device=noise.device, dtype=torch.float32
                 )
+                if first_i2v_block:
+                    latents = _overwrite_i2v_context(
+                        latents, initial_latent, num_input_frames
+                    )
+                    timestep = _zero_i2v_context_timestep(
+                        timestep, num_input_frames
+                    )
+                latent_model_input = latents
 
                 flow_pred_cond, _ = self.generator(
                     noisy_image_or_video=latent_model_input,
@@ -582,6 +610,10 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                     latents,
                     return_dict=False)[0]
                 latents = temp_x0
+                if first_i2v_block:
+                    latents = _overwrite_i2v_context(
+                        latents, initial_latent, num_input_frames
+                    )
                 # iter-34: removed per-step debug print of kv_cache scalar
                 # tensors (was forcing GPU→CPU sync every sampling step ×
                 # 4 steps × 48 chunks = 192 stalls per prompt). Re-enable
@@ -591,6 +623,10 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
                     print(f"kv_cache['global_end_index']: {self.kv_cache_pos[0]['global_end_index']}")
 
             # Step 3.2: record the model's output
+            if first_i2v_block:
+                latents = _overwrite_i2v_context(
+                    latents, initial_latent, num_input_frames
+                )
             output[:, cache_start_frame:cache_start_frame + current_num_frames] = latents
 
             # Step 3.3: rerun with timestep zero to update KV cache using clean context

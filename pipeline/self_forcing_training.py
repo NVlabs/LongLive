@@ -2,6 +2,10 @@
 # SPDX-License-Identifier: Apache-2.0
 from utils.wan_5b_wrapper import WanDiffusionWrapper
 from utils.scheduler import SchedulerInterface
+from utils.i2v_conditioning import (
+    _overwrite_i2v_context,
+    _zero_i2v_context_timestep,
+)
 from typing import List, Optional, Tuple
 import torch
 import torch.distributed as dist
@@ -414,7 +418,14 @@ class SelfForcingTrainingPipeline:
         from wan_5b.utils.fm_solvers_unipc import FlowUniPCMultistepScheduler
 
         batch_size, num_frames, num_channels, height, width = noise.shape
-        if not self.independent_first_frame or (self.independent_first_frame and initial_latent is not None):
+        num_input_frames = initial_latent.shape[1] if initial_latent is not None else 0
+        clamp_i2v_first_chunk = self.independent_first_frame and initial_latent is not None
+        if clamp_i2v_first_chunk and num_input_frames != 1:
+            raise ValueError(
+                f"i2v first-chunk clamp expects one conditioning latent frame, got {num_input_frames}."
+            )
+
+        if not self.independent_first_frame or clamp_i2v_first_chunk:
             # If the first frame is independent and the first frame is provided, then the number of frames in the
             # noise should still be a multiple of num_frame_per_block
             assert num_frames % self.num_frame_per_block == 0
@@ -423,8 +434,9 @@ class SelfForcingTrainingPipeline:
             # Using a [1, 4, 4, 4, 4, 4, ...] model to generate a video without image conditioning
             assert (num_frames - 1) % self.num_frame_per_block == 0
             num_blocks = (num_frames - 1) // self.num_frame_per_block
-        num_input_frames = initial_latent.shape[1] if initial_latent is not None else 0
-        num_output_frames = num_frames + num_input_frames  # add the initial latent frames
+        num_output_frames = (
+            num_frames if clamp_i2v_first_chunk else num_frames + num_input_frames
+        )
         output = torch.zeros(
             [batch_size, num_output_frames, num_channels, height, width],
             device=noise.device,
@@ -455,7 +467,7 @@ class SelfForcingTrainingPipeline:
 
         # Step 2: Cache context feature
         current_start_frame = 0
-        if initial_latent is not None:
+        if initial_latent is not None and not clamp_i2v_first_chunk:
             timestep = torch.ones([batch_size, 1], device=noise.device, dtype=torch.int64) * 0
             # Assume num_input_frames is 1 + self.num_frame_per_block * num_input_blocks
             output[:, :1] = initial_latent
@@ -518,8 +530,16 @@ class SelfForcingTrainingPipeline:
             else:
                 block_cond = conditional_dict
 
+            first_i2v_block = clamp_i2v_first_chunk and block_index == 0
+            noise_start_frame = (
+                current_start_frame
+                if clamp_i2v_first_chunk
+                else current_start_frame - num_input_frames
+            )
             latents = noise[
-                :, current_start_frame - num_input_frames:current_start_frame + current_num_frames - num_input_frames]
+                :,
+                noise_start_frame:noise_start_frame + current_num_frames,
+            ]
 
             # re-init scheduler per chunk (internal state is consumed during stepping)
             sample_scheduler = FlowUniPCMultistepScheduler(
@@ -536,6 +556,13 @@ class SelfForcingTrainingPipeline:
                     [batch_size, current_num_frames],
                     device=noise.device,
                     dtype=torch.float32)
+                if first_i2v_block:
+                    latents = _overwrite_i2v_context(
+                        latents, initial_latent, num_input_frames
+                    )
+                    timestep = _zero_i2v_context_timestep(
+                        timestep, num_input_frames
+                    )
                 if not exit_flag:
                     with torch.no_grad():
                         flow_pred, _ = self.generator(
@@ -548,6 +575,10 @@ class SelfForcingTrainingPipeline:
                         )
                         latents = sample_scheduler.step(
                             flow_pred, t, latents, return_dict=False)[0]
+                        if first_i2v_block:
+                            latents = _overwrite_i2v_context(
+                                latents, initial_latent, num_input_frames
+                            )
                 else:
                     if current_start_frame < start_gradient_frame_index:
                         grad_enable_mask[:, current_start_frame:current_start_frame + current_num_frames] = False
@@ -570,6 +601,10 @@ class SelfForcingTrainingPipeline:
                             crossattn_cache=self.crossattn_cache,
                             current_start=current_start_frame * self.frame_seq_length
                         )
+                    if first_i2v_block:
+                        denoised_pred = _overwrite_i2v_context(
+                            denoised_pred, initial_latent, num_input_frames
+                        )
                     break
 
             # Step 3.2: record the model's output
@@ -578,13 +613,26 @@ class SelfForcingTrainingPipeline:
             # Step 3.3: rerun with context noise to update the cache
             context_timestep = torch.ones(
                 [batch_size, current_num_frames], device=noise.device, dtype=torch.long) * self.context_noise
+            if first_i2v_block:
+                context_timestep = _zero_i2v_context_timestep(
+                    context_timestep, num_input_frames
+                )
             # add context noise
+            context_noise = torch.randn_like(denoised_pred.flatten(0, 1))
+            if first_i2v_block:
+                context_noise = context_noise.unflatten(0, denoised_pred.shape[:2])
+                context_noise[:, :num_input_frames] = 0
+                context_noise = context_noise.flatten(0, 1)
             denoised_pred = self.scheduler.add_noise(
                 denoised_pred.flatten(0, 1),
-                torch.randn_like(denoised_pred.flatten(0, 1)),
+                context_noise,
                 context_timestep.reshape(1, -1) * torch.ones(
                     [batch_size * current_num_frames], device=noise.device, dtype=torch.long)
             ).unflatten(0, denoised_pred.shape[:2])
+            if first_i2v_block:
+                denoised_pred = _overwrite_i2v_context(
+                    denoised_pred, initial_latent, num_input_frames
+                )
             with torch.no_grad():
                 self.generator(
                     noisy_image_or_video=denoised_pred,

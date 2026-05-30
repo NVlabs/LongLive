@@ -43,9 +43,9 @@ from torch.utils.data import DataLoader, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler
 
 from pipeline import CausalDiffusionInferencePipeline
-from utils.dataset import MultiTextConcatDataset, eval_collate_fn
+from utils.dataset import MultiTextConcatDataset, MultiVideoConcatDataset, eval_collate_fn, multi_video_collate_fn
 from utils.misc import set_seed
-from utils.config import normalize_config, section_get
+from utils.config import normalize_config, section_get, wan_default_config
 from utils.nvfp4_checkpoint import (
     clean_fsdp_state_dict_keys,
     drop_fouroversix_master_weights,
@@ -119,8 +119,6 @@ config.num_samples = section_get(config, "inference", "num_samples", getattr(con
 config.num_output_frames = getattr(config, "num_output_frames", config.image_or_video_shape[1])
 config.save_with_index = getattr(config, "save_with_index", False)
 config.inference_iter = getattr(config, "inference_iter", -1)
-if getattr(config, "i2v", False):
-    raise NotImplementedError("I2V inference is not included in this release path.")
 
 
 def _maybe_to_dict(value):
@@ -479,21 +477,45 @@ else:
 
 # Create dataset
 nfpb = getattr(config, 'num_frame_per_block', 8)
-num_blocks = config.num_output_frames // nfpb
-
 data_path = config.data_path
 chunks_per_shot = getattr(config, 'chunks_per_shot', 0)
 scene_cut_prefix = getattr(config, 'scene_cut_prefix', "The scene transitions. ")
-dataset = MultiTextConcatDataset(
-    data_path=data_path,
-    num_blocks=num_blocks,
-    chunks_per_shot=chunks_per_shot,
-    scene_cut_prefix=scene_cut_prefix,
-    deterministic=True,
-)
-collate_fn = eval_collate_fn
+if getattr(config, "i2v", False):
+    model_name = config.model_kwargs.model_name
+    frame_raw_height = list(config.image_or_video_shape)[3] * wan_default_config[model_name]["spatial_compression_ratio"]
+    frame_raw_width = list(config.image_or_video_shape)[4] * wan_default_config[model_name]["spatial_compression_ratio"]
+    temporal_compression_ratio = wan_default_config[model_name]["temporal_compression_ratio"]
+    total_frames = (config.num_output_frames - 1) * temporal_compression_ratio + 1
+    dataset = MultiVideoConcatDataset(
+        data_dir=data_path,
+        video_size=(frame_raw_height, frame_raw_width),
+        total_frames=total_frames,
+        deterministic=True,
+        num_frame_per_block=nfpb,
+        temporal_compression_ratio=temporal_compression_ratio,
+        target_fps=24 if "5B" in model_name else 16,
+        allow_padding=getattr(config, "allow_padding", False),
+        min_latent_frames=getattr(config, "min_latent_frames", 0),
+        single_video_only=getattr(config, "uniform_prompt", False),
+        independent_first_frame=getattr(config, "independent_first_frame", False),
+        return_image=True,
+        max_chunks_per_shot=getattr(config, "max_chunks_per_shot", 0),
+        scene_cut_prefix=scene_cut_prefix,
+    )
+    collate_fn = multi_video_collate_fn
+    num_blocks = config.num_output_frames // nfpb
+else:
+    num_blocks = config.num_output_frames // nfpb
+    dataset = MultiTextConcatDataset(
+        data_path=data_path,
+        num_blocks=num_blocks,
+        chunks_per_shot=chunks_per_shot,
+        scene_cut_prefix=scene_cut_prefix,
+        deterministic=True,
+    )
+    collate_fn = eval_collate_fn
 if local_rank == 0:
-    print(f"[data] data_path={data_path}, mode={dataset._mode}, num_blocks={num_blocks}")
+    print(f"[data] data_path={data_path}, mode={getattr(dataset, '_mode', dataset.__class__.__name__)}, num_blocks={num_blocks}")
 num_prompts = len(dataset)
 print(f"Number of prompts: {num_prompts}")
 
@@ -546,6 +568,21 @@ for i, batch_data in tqdm(enumerate(dataloader), disable=(local_rank != 0)):
     sampled_noise = torch.randn(
         [config.num_samples, config.num_output_frames, shape[2], shape[3], shape[4]], device=device, dtype=torch.bfloat16
     )
+    initial_latent = None
+    if getattr(config, "i2v", False):
+        image = batch["image"].to(device=device, dtype=torch.bfloat16)
+        if image.ndim == 4:
+            image = image.unsqueeze(2)
+        elif image.ndim != 5:
+            raise ValueError(f"Expected i2v image with shape [B,C,H,W] or [B,C,T,H,W], got {tuple(image.shape)}")
+        initial_latent = pipeline.vae.encode_to_latent(image).to(device=device, dtype=torch.bfloat16)
+        if initial_latent.shape[0] != config.num_samples:
+            initial_latent = initial_latent.repeat(config.num_samples, 1, 1, 1, 1)
+        if config.num_output_frames <= initial_latent.shape[1]:
+            raise ValueError(
+                f"num_output_frames must exceed the i2v conditioning frames; "
+                f"got {config.num_output_frames} and {initial_latent.shape[1]}"
+            )
     print("sampled_noise.device", sampled_noise.device)
     print("prompts", prompts)
     print('sampled_noise.shape', sampled_noise.shape, 'prompts', prompts)
@@ -561,6 +598,8 @@ for i, batch_data in tqdm(enumerate(dataloader), disable=(local_rank != 0)):
         text_prompts=prompts,
         return_latents=save_latents_only,
     )
+    if initial_latent is not None:
+        inference_kwargs["initial_latent"] = initial_latent
     with torch.inference_mode():
         generated = pipeline.inference(**inference_kwargs)
 

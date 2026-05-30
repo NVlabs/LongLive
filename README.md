@@ -69,6 +69,7 @@
 - [Installation](https://nvlabs.github.io/LongLive/LongLive2/docs/#installation)
 - [NVFP4 Setup](https://nvlabs.github.io/LongLive/LongLive2/docs/#nvfp4-installation)
 - [Training](https://nvlabs.github.io/LongLive/LongLive2/docs/#training)
+- [I2V Training](https://nvlabs.github.io/LongLive/LongLive2/docs/#i2v-training)
 - [Inference](https://nvlabs.github.io/LongLive/LongLive2/docs/#inference)
 - [Data Organization](https://nvlabs.github.io/LongLive/LongLive2/docs/#training-data)
 
@@ -140,6 +141,26 @@ noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
 video = pipe.inference(noise=noise, text_prompts=prompts)
 save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)
 ```
+
+## I2V Training
+
+LongLive2.0 includes BF16 i2v configs for both AR teacher-forcing training and DMD distillation:
+
+```bash
+torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_i2v_ar.yaml \
+  --logdir logs/train_i2v_ar \
+  --wandb-save-dir wandb \
+  --disable-wandb
+
+torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_i2v_dmd.yaml \
+  --logdir logs/train_i2v_dmd \
+  --wandb-save-dir wandb \
+  --disable-wandb
+```
+
+Set `algorithm.i2v: true` and `algorithm.independent_first_frame: true`. `data.image_or_video_shape[1]` is the full latent sequence length, for example `96`, not `96 + 1`: the clean image latent replaces the first latent during denoising and that first latent is masked out of the training loss. For i2v DMD, set `checkpoints.generator_ckpt` to the i2v AR checkpoint used to initialize the student.
 
 ## Models
 

@@ -4,17 +4,20 @@ from torch.utils.data import Dataset
 import numpy as np
 import torch
 import random
-import lmdb
 import json
 from pathlib import Path
 from PIL import Image
 import os
+import subprocess
 import time
 import warnings
-import datasets
-import decord
 import torchvision.transforms as transforms
 import torchvision.transforms.functional as F
+
+try:
+    import decord
+except ModuleNotFoundError:
+    decord = None
 
 DEFAULT_SCENE_CUT_PREFIX = "The scene transitions. "
 
@@ -61,6 +64,14 @@ class MultiTextDataset(Dataset):
     """
 
     def __init__(self, prompt_path: str, field: str = "prompts", cache_dir: str | None = None):
+        try:
+            import datasets
+        except ModuleNotFoundError as exc:
+            raise ModuleNotFoundError(
+                "The 'datasets' package is required for MultiTextDataset. "
+                "Use MultiTextConcatDataset for plain txt/json-caption directories "
+                "or install datasets."
+            ) from exc
         self.ds = datasets.load_dataset(
             "json",
             data_files=prompt_path,
@@ -281,6 +292,8 @@ class MultiVideoConcatDataset(Dataset):
         allow_padding: bool = False,
         min_latent_frames: int = 0,
         single_video_only: bool = False,
+        independent_first_frame: bool = False,
+        return_image: bool = False,
         max_chunks_per_shot: int = 0,
         scene_cut_prefix: str = DEFAULT_SCENE_CUT_PREFIX,
         sample_warning_seconds: float = 60.0,
@@ -292,7 +305,21 @@ class MultiVideoConcatDataset(Dataset):
         self.video_size = video_size
         self.total_frames = total_frames
 
-        first_chunk_frames = 1 + (num_frame_per_block - 1) * temporal_compression_ratio
+        total_latent_frames = 1 + (total_frames - 1) // temporal_compression_ratio
+        separate_first_latent = (
+            independent_first_frame
+            and total_latent_frames % num_frame_per_block != 0
+        )
+        if separate_first_latent:
+            assert (total_latent_frames - 1) % num_frame_per_block == 0, (
+                f"total latent frames ({total_latent_frames}) must be divisible by "
+                f"num_frame_per_block ({num_frame_per_block}) or equal to "
+                f"1 + N * num_frame_per_block when independent_first_frame=True"
+            )
+        first_chunk_latent_frames = (
+            num_frame_per_block + 1 if separate_first_latent else num_frame_per_block
+        )
+        first_chunk_frames = 1 + (first_chunk_latent_frames - 1) * temporal_compression_ratio
         subsequent_chunk_frames = num_frame_per_block * temporal_compression_ratio
 
         self.first_chunk_frames = first_chunk_frames
@@ -304,6 +331,9 @@ class MultiVideoConcatDataset(Dataset):
         self.deterministic = deterministic
         self.allow_padding = allow_padding
         self.num_frame_per_block = num_frame_per_block
+        self.independent_first_frame = independent_first_frame
+        self.first_chunk_latent_frames = first_chunk_latent_frames
+        self.return_image = return_image
         if min_latent_frames > 0:
             assert min_latent_frames % num_frame_per_block == 0, (
                 f"min_latent_frames ({min_latent_frames}) must be a multiple of "
@@ -367,8 +397,8 @@ class MultiVideoConcatDataset(Dataset):
         self._video_info_cache = {}   # video_path -> (total_frames, fps)
         self._folder_files_cache = {} # folder_path -> list of video paths
         
-        # Setup decord
-        decord.bridge.set_bridge('torch')
+        if decord is not None:
+            decord.bridge.set_bridge('torch')
     
     def _get_caption_folder(self, folder_name):
         """Return the caption directory path for a given folder (sample)."""
@@ -449,6 +479,10 @@ class MultiVideoConcatDataset(Dataset):
         key = str(video_path)
         if key in self._video_info_cache:
             return self._video_info_cache[key]
+        if decord is None:
+            info = self._get_video_info_ffprobe(video_path)
+            self._video_info_cache[key] = info
+            return info
         try:
             vr = decord.VideoReader(key, width=self.video_size[1], height=self.video_size[0])
         except:
@@ -456,6 +490,45 @@ class MultiVideoConcatDataset(Dataset):
         info = (len(vr), vr.get_avg_fps())
         self._video_info_cache[key] = info
         return info
+
+    @staticmethod
+    def _parse_fps(value):
+        if not value or value == "0/0":
+            return 0.0
+        if "/" in value:
+            num, den = value.split("/", 1)
+            den_f = float(den)
+            return float(num) / den_f if den_f != 0 else 0.0
+        return float(value)
+
+    def _get_video_info_ffprobe(self, video_path):
+        cmd = [
+            "ffprobe",
+            "-v",
+            "error",
+            "-select_streams",
+            "v:0",
+            "-count_frames",
+            "-show_entries",
+            "stream=nb_read_frames,nb_frames,avg_frame_rate,r_frame_rate,duration",
+            "-of",
+            "json",
+            str(video_path),
+        ]
+        try:
+            proc = subprocess.run(cmd, check=True, capture_output=True, text=True)
+            stream = json.loads(proc.stdout)["streams"][0]
+            fps = self._parse_fps(stream.get("avg_frame_rate")) or self._parse_fps(stream.get("r_frame_rate"))
+            frames_raw = stream.get("nb_read_frames") or stream.get("nb_frames")
+            if frames_raw and str(frames_raw).isdigit():
+                total_frames = int(frames_raw)
+            else:
+                total_frames = int(round(float(stream.get("duration", 0.0)) * fps))
+            if total_frames <= 0 or fps <= 0:
+                raise ValueError(f"Could not infer frames/fps from ffprobe output for {video_path}")
+            return total_frames, fps
+        except (subprocess.CalledProcessError, KeyError, IndexError, ValueError, json.JSONDecodeError) as exc:
+            raise RuntimeError(f"ffprobe failed to read video metadata for {video_path}: {exc}") from exc
     
     def _can_sample_from_position(self, total_frames, original_fps, num_frames, start_frame):
         """Check if we can sample num_frames starting from start_frame.
@@ -564,6 +637,9 @@ class MultiVideoConcatDataset(Dataset):
         Returns:
             tuple: (frames_tensor, total_frames_in_video, original_fps)
         """
+        if decord is None:
+            return self._sample_frames_from_video_ffmpeg(video_path, num_frames, start_frame)
+
         try:
             vr = decord.VideoReader(str(video_path), width=self.video_size[1], height=self.video_size[0])
         except:
@@ -615,6 +691,53 @@ class MultiVideoConcatDataset(Dataset):
         video_tensor = self.normalize(video_tensor)
         video_tensor = video_tensor.to(torch.float16)
         
+        return video_tensor, total_frames, original_fps
+
+    def _sample_frames_from_video_ffmpeg(self, video_path, num_frames, start_frame=0):
+        total_frames, original_fps = self._get_video_info(video_path)
+        start_time = max(0.0, float(start_frame) / max(original_fps, 1e-6))
+        height, width = self.video_size
+        cmd = [
+            "ffmpeg",
+            "-v",
+            "error",
+            "-ss",
+            f"{start_time:.6f}",
+            "-i",
+            str(video_path),
+            "-vf",
+            f"fps={self.target_fps},scale={width}:{height}",
+            "-frames:v",
+            str(num_frames),
+            "-f",
+            "rawvideo",
+            "-pix_fmt",
+            "rgb24",
+            "pipe:1",
+        ]
+        try:
+            proc = subprocess.run(cmd, check=True, capture_output=True)
+        except subprocess.CalledProcessError as exc:
+            stderr = exc.stderr.decode("utf-8", errors="replace") if exc.stderr else ""
+            raise RuntimeError(f"ffmpeg failed to sample {video_path}: {stderr}") from exc
+
+        frame_bytes = height * width * 3
+        decoded_frames = len(proc.stdout) // frame_bytes
+        if decoded_frames <= 0:
+            raise RuntimeError(f"ffmpeg produced no frames for {video_path}")
+
+        video_frames = np.frombuffer(proc.stdout[: decoded_frames * frame_bytes], dtype=np.uint8)
+        video_frames = video_frames.reshape(decoded_frames, height, width, 3)
+        video_tensor = torch.from_numpy(video_frames.copy()).permute(0, 3, 1, 2).contiguous()
+        video_tensor = video_tensor.float() / 255.0
+        if decoded_frames < num_frames:
+            pad = video_tensor[-1:].repeat(num_frames - decoded_frames, 1, 1, 1)
+            video_tensor = torch.cat([video_tensor, pad], dim=0)
+        elif decoded_frames > num_frames:
+            video_tensor = video_tensor[:num_frames]
+
+        video_tensor = self.normalize(video_tensor)
+        video_tensor = video_tensor.to(torch.float16)
         return video_tensor, total_frames, original_fps
     
     def __len__(self):
@@ -783,7 +906,13 @@ class MultiVideoConcatDataset(Dataset):
                     current_start_frame = int(np.round(next_start_frame))
 
             num_filled_segments = len(all_segments)
-            num_valid_latent_frames = num_filled_segments * self.num_frame_per_block
+            if num_filled_segments == 0:
+                num_valid_latent_frames = 0
+            else:
+                num_valid_latent_frames = (
+                    self.first_chunk_latent_frames
+                    + (num_filled_segments - 1) * self.num_frame_per_block
+                )
 
             # Reject if below minimum latent frame threshold
             if self.allow_padding and self.min_latent_frames > 0:
@@ -816,6 +945,8 @@ class MultiVideoConcatDataset(Dataset):
                 'prompts': prompts_list,
                 'idx': folder_idx
             }
+            if self.return_image:
+                result['image'] = concatenated_video[0]
             if self.allow_padding:
                 result['num_valid_latent_frames'] = num_valid_latent_frames
             return True, result
@@ -917,6 +1048,9 @@ def multi_video_collate_fn(batch):
         "prompts": prompts_list,
         "idx": idx,
     }
+
+    if "image" in batch[0]:
+        result["image"] = torch.stack([b["image"] for b in batch], dim=0)
 
     if "num_valid_latent_frames" in batch[0]:
         result["num_valid_latent_frames"] = torch.tensor(

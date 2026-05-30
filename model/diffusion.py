@@ -7,6 +7,7 @@ import torch
 
 from model.base import BaseModel
 from pipeline import CausalDiffusionInferencePipeline
+from utils.i2v_conditioning import _overwrite_i2v_context, _zero_i2v_context_timestep
 from utils.wan_5b_wrapper import WanDiffusionWrapper, WanTextEncoder, WanVAEWrapper
 
 
@@ -20,7 +21,7 @@ class CausalDiffusion(BaseModel):
         if self.num_frame_per_block > 1:
             self.generator.model.num_frame_per_block = self.num_frame_per_block
         self.independent_first_frame = getattr(args, "independent_first_frame", False)
-        if self.independent_first_frame:
+        if self.independent_first_frame and not getattr(args, "i2v", False):
             self.generator.model.independent_first_frame = True
 
         if args.gradient_checkpointing:
@@ -177,6 +178,18 @@ class CausalDiffusion(BaseModel):
             uniform_timestep=False
         )
         timestep = self.scheduler.timesteps[index].to(dtype=self.dtype, device=self.device)
+        context_latent = (
+            initial_latent
+            if getattr(self.args, "i2v", False) and initial_latent is not None
+            else None
+        )
+        context_frames = int(context_latent.shape[1]) if context_latent is not None else 0
+        if context_frames > 0:
+            if context_frames >= num_frame:
+                raise ValueError(
+                    f"initial_latent has {context_frames} frames but training clip has {num_frame}."
+                )
+            timestep[:, :context_frames] = 0
 
         # Step 2.5 & 3.5: Error recycling — clean_prob acts as a master switch.
         # When clean_prob fires, skip ALL error injection and use pristine input;
@@ -235,6 +248,12 @@ class CausalDiffusion(BaseModel):
             timestep.flatten(0, 1)
         ).unflatten(0, (batch_size, num_frame))
         training_target = self.scheduler.training_target(clean_latent, noise_for_train, timestep)
+        if context_frames > 0:
+            noisy_latents[:, :context_frames] = context_latent.to(
+                device=noisy_latents.device,
+                dtype=noisy_latents.dtype,
+            )
+            training_target[:, :context_frames] = 0
 
         # Step 3: Noise augmentation, also add small noise to clean context latents
         if self.noise_augmentation_max_timestep > 0:
@@ -268,6 +287,15 @@ class CausalDiffusion(BaseModel):
             )
             er_injected = True
 
+        if context_frames > 0:
+            clean_latent_aug = _overwrite_i2v_context(
+                clean_latent_aug, context_latent, context_frames
+            )
+            if timestep_clean_aug is not None:
+                timestep_clean_aug = _zero_i2v_context_timestep(
+                    timestep_clean_aug, context_frames
+                )
+
         # Compute loss
         flow_pred, x0_pred = self.generator(
             noisy_image_or_video=noisy_latents,
@@ -280,6 +308,14 @@ class CausalDiffusion(BaseModel):
             flow_pred.float(), training_target.float(), reduction='none'
         ).mean(dim=(2, 3, 4))
         loss = loss * self.scheduler.training_weight(timestep).unflatten(0, (batch_size, num_frame))
+        if context_frames > 0:
+            if loss_mask is None:
+                loss_mask = torch.ones(
+                    (batch_size, num_frame),
+                    device=loss.device,
+                    dtype=loss.dtype,
+                )
+            loss_mask[:, :context_frames] = 0
         if loss_mask is not None:
             loss = loss * loss_mask
             valid_count = loss_mask_global_valid_count if loss_mask_global_valid_count is not None else loss_mask.sum()

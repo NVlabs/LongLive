@@ -142,6 +142,9 @@ def normalize_config(config):
     if "wandb_host" not in config:
         config.wandb_host = "https://api.wandb.ai"
 
+    if "negative_prompt" not in config:
+        config.negative_prompt = DEFAULT_NEGATIVE_PROMPT
+
     if config.get("trainer", None) == "score_distillation":
         dmd_defaults = {
             "i2v": False,
@@ -152,7 +155,6 @@ def normalize_config(config):
             "denoising_loss_type": "flow",
             "real_guidance_scale": 3.0,
             "fake_guidance_scale": 0.0,
-            "negative_prompt": DEFAULT_NEGATIVE_PROMPT,
         }
         for key, value in dmd_defaults.items():
             if key not in config:

@@ -850,9 +850,10 @@ class CausalWanAttentionBlock(nn.Module):
         """
         num_frames, frame_seqlen = e.shape[1], x.shape[1] // e.shape[1]
         e = (self.modulation.unsqueeze(1) + e).chunk(6, dim=2)
+        use_triton_adaln = _TRITON_ADALN_ENABLED and not torch.is_grad_enabled()
 
         # self-attention
-        if _TRITON_ADALN_ENABLED:
+        if use_triton_adaln:
             # iter-43: fused LayerNorm + (1+e[1])*x + e[0] in one Triton kernel.
             from utils.adaln_triton import adaln_modulate_triton
             modulated_x = adaln_modulate_triton(
@@ -893,7 +894,7 @@ class CausalWanAttentionBlock(nn.Module):
         def cross_attn_ffn(x, context, context_lens, e, crossattn_cache=None):
             x = x + self.cross_attn(self.norm3(x), context,
                                     context_lens, crossattn_cache=crossattn_cache, is_teacher_forcing=is_tf)
-            if _TRITON_ADALN_ENABLED:
+            if use_triton_adaln:
                 # iter-43: fused LayerNorm + (1+e[4])*x + e[3] in one Triton kernel.
                 from utils.adaln_triton import adaln_modulate_triton
                 ffn_in = adaln_modulate_triton(

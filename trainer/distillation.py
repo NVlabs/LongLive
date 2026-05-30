@@ -447,87 +447,82 @@ class Trainer:
         # Step 5: Initialize the dataloader
         self.use_backward_simulation = getattr(config, "backward_simulation", True)
 
-        if self.config.i2v:
-            dataset = ShardingLMDBDataset(config.data_path, max_pair=int(1e8))
-            random_seed = int(time.time()) % (2**31) * dist.get_rank()
-            sampler = torch.utils.data.distributed.DistributedSampler(
-                dataset, shuffle=True, drop_last=True, seed=random_seed)
-            dataloader = torch.utils.data.DataLoader(
-                dataset, batch_size=config.batch_size, sampler=sampler, num_workers=8)
-        else:
-            model_name = config.model_kwargs.model_name
-            frame_raw_height = list(config.image_or_video_shape)[3] * wan_default_config[model_name]["spatial_compression_ratio"]
-            frame_raw_width = list(config.image_or_video_shape)[4] * wan_default_config[model_name]["spatial_compression_ratio"]
-            num_frame_per_block = getattr(config, "num_frame_per_block", 1)
-            self.fps = wan_default_config[model_name].get("fps", 16)
+        model_name = config.model_kwargs.model_name
+        frame_raw_height = list(config.image_or_video_shape)[3] * wan_default_config[model_name]["spatial_compression_ratio"]
+        frame_raw_width = list(config.image_or_video_shape)[4] * wan_default_config[model_name]["spatial_compression_ratio"]
+        num_frame_per_block = getattr(config, "num_frame_per_block", 1)
+        self.fps = wan_default_config[model_name].get("fps", 16)
 
-            latent_frames_for_dataset = list(config.image_or_video_shape)[1]
-            num_training_frames = getattr(config, "num_training_frames", latent_frames_for_dataset)
-            assert latent_frames_for_dataset >= num_training_frames, (
-                f"image_or_video_shape[1] ({latent_frames_for_dataset}) must be >= "
-                f"num_training_frames ({num_training_frames}), otherwise the dataset "
-                f"will not provide enough prompts for the rollout."
+        latent_frames_for_dataset = list(config.image_or_video_shape)[1]
+        num_training_frames = getattr(config, "num_training_frames", latent_frames_for_dataset)
+        assert latent_frames_for_dataset >= num_training_frames, (
+            f"image_or_video_shape[1] ({latent_frames_for_dataset}) must be >= "
+            f"num_training_frames ({num_training_frames}), otherwise the dataset "
+            f"will not provide enough prompts for the rollout."
+        )
+        total_frames = (latent_frames_for_dataset - 1) * wan_default_config[model_name]["temporal_compression_ratio"] + 1
+        if dist.get_rank() == 0:
+            print(f"[Dataset] latent_frames_for_dataset={latent_frames_for_dataset}, total_frames={total_frames}")
+
+        temporal_compression_ratio = wan_default_config[model_name]["temporal_compression_ratio"]
+        first_chunk_frames = 1 + (num_frame_per_block - 1) * temporal_compression_ratio
+        subsequent_chunk_frames = num_frame_per_block * temporal_compression_ratio
+        num_blocks = 1 + (total_frames - first_chunk_frames) // subsequent_chunk_frames
+        if not getattr(config, "generator_is_causal", True):
+            num_blocks = 1
+
+        chunks_per_shot = getattr(config, "chunks_per_shot", 0)
+        scene_cut_prefix = getattr(config, "scene_cut_prefix", DEFAULT_SCENE_CUT_PREFIX)
+        single_video_only = getattr(config, "uniform_prompt", False)
+        allow_padding = getattr(config, "allow_padding", False)
+        min_latent_frames = getattr(config, "min_latent_frames", 0)
+        dataset_sample_warning_seconds = getattr(config, "dataset_sample_warning_seconds", 60.0)
+        dataset_sample_warning_interval_seconds = getattr(
+            config, "dataset_sample_warning_interval_seconds", 60.0
+        )
+
+        if self.use_backward_simulation and not self.config.i2v:
+            dataset = MultiTextConcatDataset(
+                data_path=config.data_path,
+                num_blocks=num_blocks,
+                chunks_per_shot=chunks_per_shot,
+                scene_cut_prefix=scene_cut_prefix,
             )
-            total_frames = (latent_frames_for_dataset - 1) * wan_default_config[model_name]["temporal_compression_ratio"] + 1
+            collate_fn = eval_collate_fn
             if dist.get_rank() == 0:
-                print(f"[Dataset] latent_frames_for_dataset={latent_frames_for_dataset}, total_frames={total_frames}")
-
-            temporal_compression_ratio = wan_default_config[model_name]["temporal_compression_ratio"]
-            first_chunk_frames = 1 + (num_frame_per_block - 1) * temporal_compression_ratio
-            subsequent_chunk_frames = num_frame_per_block * temporal_compression_ratio
-            num_blocks = 1 + (total_frames - first_chunk_frames) // subsequent_chunk_frames
-            if not getattr(config, "generator_is_causal", True):
-                num_blocks = 1
-
-            chunks_per_shot = getattr(config, "chunks_per_shot", 0)
-            scene_cut_prefix = getattr(config, "scene_cut_prefix", DEFAULT_SCENE_CUT_PREFIX)
-
-            if self.use_backward_simulation:
-                dataset = MultiTextConcatDataset(
-                    data_path=config.data_path,
-                    num_blocks=num_blocks,
-                    chunks_per_shot=chunks_per_shot,
-                    scene_cut_prefix=scene_cut_prefix,
-                )
-                if dist.get_rank() == 0:
-                    print(f"[backward_simulation] Using MultiTextConcatDataset: "
-                          f"data_path={config.data_path}, num_blocks={num_blocks}, "
-                          f"chunks_per_shot={chunks_per_shot}")
-            else:
-                single_video_only = getattr(config, "uniform_prompt", False)
-                allow_padding = getattr(config, "allow_padding", False)
-                min_latent_frames = getattr(config, "min_latent_frames", 0)
-                dataset_sample_warning_seconds = getattr(config, "dataset_sample_warning_seconds", 60.0)
-                dataset_sample_warning_interval_seconds = getattr(
-                    config, "dataset_sample_warning_interval_seconds", 60.0
-                )
-                dataset = MultiVideoConcatDataset(
-                    data_dir=config.data_path,
-                    video_size=(frame_raw_height, frame_raw_width),
-                    total_frames=total_frames,
-                    deterministic=False,
-                    num_frame_per_block=num_frame_per_block,
-                    temporal_compression_ratio=temporal_compression_ratio,
-                    target_fps=self.fps,
-                    allow_padding=allow_padding,
-                    min_latent_frames=min_latent_frames,
-                    single_video_only=single_video_only,
-                    max_chunks_per_shot=chunks_per_shot,
-                    scene_cut_prefix=scene_cut_prefix,
-                    sample_warning_seconds=dataset_sample_warning_seconds,
-                    sample_warning_interval_seconds=dataset_sample_warning_interval_seconds,
-                )
-                if dist.get_rank() == 0 and single_video_only:
-                    print(f"[uniform_prompt] single_video_only enabled: each sample uses one video only")
-            collate_fn = eval_collate_fn if self.use_backward_simulation else multi_video_collate_fn
-            random_seed = int(time.time()) % (2**31) * dist.get_rank()
-            sampler = torch.utils.data.distributed.DistributedSampler(
-                dataset, shuffle=True, drop_last=True, seed=random_seed)
-            dataloader = torch.utils.data.DataLoader(
-                dataset, batch_size=config.batch_size, sampler=sampler,
-                num_workers=2, prefetch_factor=1, pin_memory=False,
-                persistent_workers=False, collate_fn=collate_fn,
+                print(f"[backward_simulation] Using MultiTextConcatDataset: "
+                      f"data_path={config.data_path}, num_blocks={num_blocks}, "
+                      f"chunks_per_shot={chunks_per_shot}")
+        else:
+            dataset = MultiVideoConcatDataset(
+                data_dir=config.data_path,
+                video_size=(frame_raw_height, frame_raw_width),
+                total_frames=total_frames,
+                deterministic=False,
+                num_frame_per_block=num_frame_per_block,
+                temporal_compression_ratio=temporal_compression_ratio,
+                target_fps=self.fps,
+                allow_padding=allow_padding,
+                min_latent_frames=min_latent_frames,
+                single_video_only=single_video_only,
+                independent_first_frame=getattr(config, "independent_first_frame", False),
+                return_image=getattr(config, "i2v", False),
+                max_chunks_per_shot=chunks_per_shot,
+                scene_cut_prefix=scene_cut_prefix,
+                sample_warning_seconds=dataset_sample_warning_seconds,
+                sample_warning_interval_seconds=dataset_sample_warning_interval_seconds,
             )
+            collate_fn = multi_video_collate_fn
+            if dist.get_rank() == 0 and single_video_only:
+                print(f"[uniform_prompt] single_video_only enabled: each sample uses one video only")
+        random_seed = int(time.time()) % (2**31) * dist.get_rank()
+        sampler = torch.utils.data.distributed.DistributedSampler(
+            dataset, shuffle=True, drop_last=True, seed=random_seed)
+        dataloader = torch.utils.data.DataLoader(
+            dataset, batch_size=config.batch_size, sampler=sampler,
+            num_workers=2, prefetch_factor=1, pin_memory=False,
+            persistent_workers=False, collate_fn=collate_fn,
+        )
 
         if dist.get_rank() == 0:
             print("DATASET SIZE %d" % len(dataset))
@@ -555,7 +550,25 @@ class Trainer:
             )
 
             if self.config.i2v:
-                val_dataset = ShardingLMDBDataset(val_data_path, max_pair=int(1e8))
+                val_dataset = MultiVideoConcatDataset(
+                    data_dir=val_data_path,
+                    video_size=(frame_raw_height, frame_raw_width),
+                    total_frames=total_frames,
+                    deterministic=True,
+                    num_frame_per_block=num_frame_per_block,
+                    temporal_compression_ratio=temporal_compression_ratio,
+                    target_fps=self.fps,
+                    allow_padding=allow_padding,
+                    min_latent_frames=min_latent_frames,
+                    single_video_only=single_video_only,
+                    independent_first_frame=getattr(config, "independent_first_frame", False),
+                    return_image=True,
+                    max_chunks_per_shot=chunks_per_shot,
+                    scene_cut_prefix=scene_cut_prefix,
+                    sample_warning_seconds=dataset_sample_warning_seconds,
+                    sample_warning_interval_seconds=dataset_sample_warning_interval_seconds,
+                )
+                val_collate_fn = multi_video_collate_fn
             else:
                 val_dataset = MultiTextConcatDataset(
                     data_path=val_data_path,
@@ -564,6 +577,7 @@ class Trainer:
                     scene_cut_prefix=scene_cut_prefix,
                     deterministic=True,
                 )
+                val_collate_fn = eval_collate_fn
 
             if dist.get_rank() == 0:
                 print("VAL DATASET SIZE %d" % len(val_dataset))
@@ -574,8 +588,8 @@ class Trainer:
                 val_dataset,
                 batch_size=section_get(config, "evaluation", "val_batch_size", getattr(config, "val_batch_size", 1)),
                 sampler=sampler,
-                num_workers=8,
-                collate_fn=eval_collate_fn,
+                num_workers=0,
+                collate_fn=val_collate_fn,
             )
 
             # Take the first batch as fixed visualization batch
@@ -1006,7 +1020,22 @@ class Trainer:
                 with torch.no_grad():
                     clean_latent = self.model.vae.encode_to_latent(frames).to(
                         device=self.device, dtype=self.dtype)
-            initial_latent = clean_latent[:, 0:1]
+            if getattr(self.config, "i2v", False):
+                initial_latent = clean_latent[:, 0:1]
+        elif getattr(self.config, "i2v", False):
+            image = batch.get("image", None)
+            if image is None:
+                raise ValueError("DMD i2v backward-simulation requires batch['image'].")
+            image = image.to(device=self.device, dtype=self.dtype)
+            if image.ndim == 4:
+                image = image.unsqueeze(2)
+            elif image.ndim != 5:
+                raise ValueError(
+                    f"Expected i2v image with shape [B,C,H,W] or [B,C,T,H,W], got {tuple(image.shape)}"
+                )
+            with torch.no_grad():
+                initial_latent = self.model.vae.encode_to_latent(image).to(
+                    device=self.device, dtype=self.dtype)
 
         # Step 2: Extract the conditional infos
         with torch.no_grad():
@@ -1078,14 +1107,25 @@ class Trainer:
     def generate_video(self, pipeline, num_frames, prompts, image=None, latents_only=False):
         batch_size = len(prompts)
         if image is not None:
-            image = image.squeeze(0).unsqueeze(0).unsqueeze(2).to(device="cuda", dtype=torch.bfloat16)
+            image = image.to(device=self.device, dtype=self.dtype)
+            if image.ndim == 4:
+                image = image.unsqueeze(2)
+            elif image.ndim != 5:
+                raise ValueError(f"Expected i2v image with shape [B,C,H,W] or [B,C,T,H,W], got {tuple(image.shape)}")
 
             # Encode the input image as the first latent
-            initial_latent = pipeline.vae.encode_to_latent(image).to(device="cuda", dtype=torch.bfloat16)
-            initial_latent = initial_latent.repeat(batch_size, 1, 1, 1, 1)
+            initial_latent = pipeline.vae.encode_to_latent(image).to(device=self.device, dtype=self.dtype)
+            if initial_latent.shape[0] != batch_size:
+                initial_latent = initial_latent.repeat(batch_size, 1, 1, 1, 1)
+            num_noise_frames = num_frames
+            if num_noise_frames <= initial_latent.shape[1]:
+                raise ValueError(
+                    f"num_frames must exceed the i2v conditioning frames; "
+                    f"got {num_frames} and {initial_latent.shape[1]}"
+                )
             sampled_noise = torch.randn(
-                [batch_size, num_frames - 1, self.config.image_or_video_shape[2], self.config.image_or_video_shape[3], self.config.image_or_video_shape[4]],
-                device="cuda",
+                [batch_size, num_noise_frames, self.config.image_or_video_shape[2], self.config.image_or_video_shape[3], self.config.image_or_video_shape[4]],
+                device=self.device,
                 dtype=self.dtype
             )
         else:
@@ -1219,7 +1259,7 @@ class Trainer:
                 if self.vis_interval > 0 and (self.step % self.vis_interval == 0):
                     self._visualize()
                 
-                if self.step > self.config.max_iters:
+                if self.step >= self.config.max_iters:
                     break
         
         except Exception as e:
