@@ -42,8 +42,8 @@
 
 **LongLive 2.0**: an NVFP4 Parallel Infrastructure for Long Video Generation
 - For training, it supports
-  - [x] Balanced sequence parallel for AR training (teacher-forcing).
-  - [x] AR training on multi-shot (or single-shot) videos. 
+  - [x] Balanced sequence parallel for T2V/I2V AR training (teacher-forcing).
+  - [x] T2V/I2V AR training on multi-shot (or single-shot) videos.
   - [x] NVFP4 (or BF16) for both AR training and few-step distillation.
 - For inference, it supports
   - [x] NVFP4 inference (W4A4) and NVFP4 KV Cache.
@@ -69,8 +69,7 @@
 - [Full Documentation](https://nvlabs.github.io/LongLive/LongLive2/docs/)
 - [Installation](https://nvlabs.github.io/LongLive/LongLive2/docs/#installation)
 - [NVFP4 Setup](https://nvlabs.github.io/LongLive/LongLive2/docs/#nvfp4-installation)
-- [Training](https://nvlabs.github.io/LongLive/LongLive2/docs/#training)
-- [I2V Training](https://nvlabs.github.io/LongLive/LongLive2/docs/#i2v-training)
+- [Training Modes](https://nvlabs.github.io/LongLive/LongLive2/docs/#training)
 - [Inference](https://nvlabs.github.io/LongLive/LongLive2/docs/#inference)
 - [Data Organization](https://nvlabs.github.io/LongLive/LongLive2/docs/#training-data)
 
@@ -143,9 +142,27 @@ video = pipe.inference(noise=noise, text_prompts=prompts)
 save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)
 ```
 
-## I2V Training
+## Training Modes
 
-LongLive2.0 includes BF16 i2v configs for both AR teacher-forcing training and DMD distillation:
+LongLive2.0 supports both T2V and I2V training. Each modality follows the same two-stage recipe: AR teacher-forcing training first, then DMD distillation from the AR checkpoint.
+
+### T2V Training
+
+```bash
+torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_ar.yaml \
+  --logdir logs/train_ar \
+  --wandb-save-dir wandb \
+  --disable-wandb
+
+torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_dmd.yaml \
+  --logdir logs/train_dmd \
+  --wandb-save-dir wandb \
+  --disable-wandb
+```
+
+### I2V Training
 
 ```bash
 torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
@@ -161,7 +178,7 @@ torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
   --disable-wandb
 ```
 
-Set `algorithm.i2v: true` and `algorithm.independent_first_frame: true`. `data.image_or_video_shape[1]` is the full latent sequence length, for example `96`, not `96 + 1`: the clean image latent replaces the first latent during denoising and that first latent is masked out of the training loss. For i2v DMD, set `checkpoints.generator_ckpt` to the i2v AR checkpoint used to initialize the student.
+For I2V configs, set `algorithm.i2v: true` and `algorithm.independent_first_frame: true`. `data.image_or_video_shape[1]` is the full latent sequence length, for example `96`, not `96 + 1`: the clean image latent replaces the first latent during denoising and that first latent is masked out of the training loss. For I2V DMD, set `checkpoints.generator_ckpt` to the I2V AR checkpoint used to initialize the student.
 
 ## Models
 
