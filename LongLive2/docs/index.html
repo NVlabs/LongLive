@@ -38,6 +38,7 @@
           <a href="#configs">Configs</a>
           <a href="#training-data">Training Data</a>
           <a href="#ar-training">AR Diffusion Training</a>
+          <a href="#i2v-training">I2V Training</a>
           <a href="#dmd-training">DMD Distillation</a>
           <a href="#nvfp4-training">NVFP4 Training</a>
         </details>
@@ -275,8 +276,18 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
                 <td><code>train.py</code></td>
               </tr>
               <tr>
+                <td><code>configs/train_i2v_ar.yaml</code></td>
+                <td>I2V AR diffusion training</td>
+                <td><code>train.py</code></td>
+              </tr>
+              <tr>
                 <td><code>configs/train_dmd.yaml</code></td>
                 <td>DMD distillation</td>
+                <td><code>train.py</code></td>
+              </tr>
+              <tr>
+                <td><code>configs/train_i2v_dmd.yaml</code></td>
+                <td>I2V DMD distillation</td>
                 <td><code>train.py</code></td>
               </tr>
               <tr>
@@ -359,6 +370,8 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
             reads prompts through <code>MultiTextConcatDataset</code>. Set
             <code>configs/train_dmd.yaml:data.data_path</code> to either a
             <code>.txt</code> prompt file or a JSON caption directory.
+            I2V DMD uses the same paired video-caption folder format as AR
+            training so the first frame can be encoded as the image condition.
           </p>
           <pre><code>dmd_distillation/
   prompts.txt
@@ -385,6 +398,43 @@ save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)</code></pre>
             <li><code>infra.vae_halo_latents</code> controls chunk-halo VAE preparation.</li>
             <li><code>model_kwargs.local_attn_size</code> is kept in model kwargs to match model construction.</li>
             <li><code>inference.sampling_steps</code> and sink settings control training-time evaluation.</li>
+          </ul>
+        </section>
+
+        <section id="i2v-training" class="subsection">
+          <h3>I2V Training</h3>
+          <p>
+            I2V training uses Wan2.2-TI2V-5B's native first-chunk conditioning
+            pattern. The first input frame is encoded to a clean latent, that
+            clean latent replaces the first noisy latent during denoising, and
+            the first latent is excluded from the loss.
+          </p>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_i2v_ar.yaml \
+  --logdir logs/train_i2v_ar \
+  --wandb-save-dir wandb \
+  --disable-wandb</code></pre>
+          <ul>
+            <li>Set <code>algorithm.i2v: true</code> and <code>algorithm.independent_first_frame: true</code>.</li>
+            <li><code>data.image_or_video_shape[1]</code> is the full generated latent sequence length, for example <code>96</code>, not <code>96 + 1</code>.</li>
+            <li>With sequence parallel AR training, the generated sequence is sharded normally; only the first SP rank keeps the clean image latent used to replace frame 0.</li>
+            <li>The i2v loss mask excludes frame 0, including rank-0 SP training.</li>
+          </ul>
+          <p>
+            After i2v AR training, use the AR checkpoint to initialize the i2v
+            DMD student. The i2v DMD config uses backward simulation by default
+            and applies the same first-chunk image conditioning to student
+            rollout, teacher inputs, and critic inputs.
+          </p>
+          <pre><code>torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py \
+  --config_path configs/train_i2v_dmd.yaml \
+  --logdir logs/train_i2v_dmd \
+  --wandb-save-dir wandb \
+  --disable-wandb</code></pre>
+          <ul>
+            <li>Set <code>checkpoints.generator_ckpt</code> to the i2v AR checkpoint used as the DMD student initialization.</li>
+            <li>Keep <code>algorithm.backward_simulation: true</code> unless running an explicit off-policy ablation.</li>
+            <li>The clean first latent is not used as an extra frame; it replaces frame 0 inside the configured latent window.</li>
           </ul>
         </section>
 
@@ -920,6 +970,12 @@ python scripts/decode_lightvae_latents.py --help</code></pre>
           <strong>GPU count.</strong>
           Make sure <code>--nproc_per_node</code> matches the available GPUs and is
           compatible with <code>infra.sequence_parallel_size</code> for AR training.
+        </div>
+        <div class="callout">
+          <strong>I2V frame count.</strong>
+          For i2v AR/SP training, set <code>data.image_or_video_shape[1]</code>
+          to the generated latent count such as <code>96</code>. Do not add an
+          extra context frame such as <code>97</code>.
         </div>
         <div class="callout">
           <strong>FlashAttention.</strong>
