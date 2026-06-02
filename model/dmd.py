@@ -219,7 +219,9 @@ class DMD(SelfForcingModel):
                 batch_size,
                 num_frame,
                 self.num_frame_per_block,
-                uniform_timestep=False
+                # t2v keeps the original NVFP4 behavior (one shared timestep across
+                # all frames); i2v uses per-block timesteps.
+                uniform_timestep=not getattr(self.args, "i2v", False)
             )
 
             # TODO:should we change it to `timestep = self.scheduler.timesteps[timestep]`?
@@ -414,7 +416,9 @@ class DMD(SelfForcingModel):
             batch_size,
             num_frame,
             self.num_frame_per_block,
-            uniform_timestep=False
+            # t2v keeps the original NVFP4 behavior (one shared timestep across
+            # all frames); i2v uses per-block timesteps.
+            uniform_timestep=not getattr(self.args, "i2v", False)
         )
 
         if self.timestep_shift > 1:
