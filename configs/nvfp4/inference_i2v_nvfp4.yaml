@@ -1,0 +1,94 @@
+# NVFP4 i2v inference with optional KV cache quantization and streaming VAE.
+# = configs/nvfp4/inference_nvfp4.yaml + i2v conditioning.
+# The first latent frame is encoded from the source image (provided by the
+# video dataset), kept clean during denoising, and the rollout continues from it.
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: 32
+  sink_size: 8
+
+# Enable i2v: build the video dataset, encode the first frame to a clean latent,
+# and clamp it as the first-chunk conditioning during inference.
+i2v: true
+
+use_ema: false
+output_folder: videos/longlive2_i2v_nvfp4
+num_samples: 1
+save_latents_only: false
+save_with_index: true
+inference_iter: -1
+num_output_frames: 384
+merge_lora: false
+
+# i2v dataset / first-frame handling (read by MultiVideoConcatDataset in inference.py).
+allow_padding: false
+min_latent_frames: 0
+max_chunks_per_shot: 0
+uniform_prompt: false
+
+data:
+  # For i2v the data_path points at a video/image dataset; the first frame of
+  # each clip is used as the conditioning image.
+  data_path: /path/to/longlive2/inference_video_dataset
+  image_or_video_shape:
+  - 1
+  - 384
+  - 48
+  - 44
+  - 80
+
+inference:
+  sampling_steps: 4
+  # i2v conditioning: keep the first latent frame independent and clean.
+  independent_first_frame: true
+  # i2v training-time eval uses sink_size: 0; sink_size: 8 here matches the
+  # long-context streaming NVFP4 t2v setup. Tune as needed.
+  sink_size: 8
+  guidance_scale: 1.0
+  multi_shot_sink: true
+  multi_shot_rope_offset: 8
+  kv_quant: true
+  kv_quant_scale_rule: mse
+  kv_quant_backend: cuda
+  streaming_vae: false
+  async_vae: false
+  vae_type: wan # wan, mg_lightvae, mg_lightvae_v2
+  vae_device: "cuda:2"
+  negative_prompt: '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走'
+
+checkpoints:
+  generator_ckpt: /path/to/model_te.pt
+  # generator_ckpt: /path/to/model_4o6.pt # only set this if you are using FourOverSix (ckpt) for NVFP4
+
+model_quant: true
+model_quant_use_transformer_engine: true # only set this to true if you are using Transformer Engine (ckpt) for NVFP4; otherwise, set it to false (4o6)
+model_quant_te_inference_only: true
+model_quant_te_low_precision_weights: true
+model_quant_te_fallback_to_fouroversix: false # only set this to false if you are using FourOverSix (ckpt) for NVFP4; otherwise, set it to true (TE)
+model_quant_scale_rule: mse
+model_quant_activation_scale_rule: mse
+model_quant_weight_scale_rule: mse
+model_quant_gradient_scale_rule: mse
+
+torch_compile: auto
+torch_compile_min_samples: 2
+torch_compile_target: generator_model
+torch_compile_backend: inductor
+torch_compile_mode: max-autotune-no-cudagraphs
+torch_compile_fullgraph: false
+torch_compile_dynamic: false
+torch_compile_suppress_errors: true
+
+adapter:
+  type: lora
+  rank: 128
+  alpha: 128
+  dropout: 0.0
+  dtype: bfloat16
+  apply_to_critic: true
+  verbose: true
+
+logging:
+  seed: 0

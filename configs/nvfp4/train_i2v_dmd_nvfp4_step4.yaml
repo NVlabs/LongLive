@@ -1,0 +1,142 @@
+# NVFP4 i2v DMD LoRA distillation, 4-step rollout.
+# = configs/train_i2v_dmd.yaml + the NVFP4 quant infra and 4-step denoising
+#   schedule from configs/nvfp4/train_dmd_nvfp4_step4.yaml.
+infra:
+  sharding_strategy: hybrid_full
+  mixed_precision: true
+  gradient_checkpointing: true
+  generator_fsdp_wrap_strategy: size
+  real_score_fsdp_wrap_strategy: size
+  fake_score_fsdp_wrap_strategy: size
+  text_encoder_fsdp_wrap_strategy: size
+  generator_quant: true
+  real_score_quant: true
+  fake_score_quant: false
+  real_score_quant_materialize: true
+  generator_quant_scale_rule: mse
+  generator_quant_activation_scale_rule: mse
+  generator_quant_weight_scale_rule: mse
+  generator_quant_gradient_scale_rule: mse
+  generator_quant_use_default_filtered_modules: false
+  real_score_quant_scale_rule: mse
+  real_score_quant_activation_scale_rule: mse
+  real_score_quant_weight_scale_rule: mse
+  real_score_quant_use_default_filtered_modules: false
+  generator_quant_filtered_modules: &nvfp4_filtered_modules
+  - text_embedding.0
+  - text_embedding.2
+  - patch_embedding
+  - time_projection.1
+  - time_embedding.0
+  - time_embedding.2
+  - head.head
+  - head.modulation
+  - re:.*norm_k$
+  - re:.*norm_q$
+  - re:.*norm1$
+  - re:.*norm2$
+  - re:.*norm3$
+  real_score_quant_filtered_modules: *nvfp4_filtered_modules
+
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: 32
+  sink_size: 8
+
+# Optional initialization checkpoints. In practice, set generator_ckpt to the
+# i2v AR checkpoint used as the DMD student initialization.
+checkpoints:
+  generator_ckpt: null
+  real_score_ckpt: null
+  fake_score_ckpt: null
+
+# I2V DMD objective. Backward simulation uses the same first-chunk image
+# conditioning rule as i2v inference: the clean first latent is injected during
+# denoising and excluded from generator/critic losses.
+algorithm:
+  trainer: score_distillation
+  distribution_loss: dmd
+  i2v: true
+  all_causal: true
+  ts_schedule: false
+  num_train_timestep: 1000
+  denoising_loss_type: flow
+  warp_denoising_step: false
+  denoising_step_list: [1000, 946, 854, 681, 0]
+  teacher_forcing: false
+  backward_simulation: true
+  independent_first_frame: true
+  real_guidance_scale: 3.0
+  fake_guidance_scale: 0.0
+
+training:
+  lr: 1.0e-05
+  lr_critic: 2.0e-06
+  weight_decay: 0.0
+  beta1: 0.0
+  beta2: 0.999
+  beta1_critic: 0.0
+  beta2_critic: 0.999
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  ema_weight: 0.99
+  ema_start_step: 200
+  log_iters: 50
+  max_checkpoints: 50
+  max_iters: 5000
+  gc_interval: 100
+  dfake_gen_update_ratio: 5
+  # Backward simulation samples a rollout length in [min_num_training_frames, num_training_frames].
+  # Setting both to 32 gives a fixed 32-latent DMD rollout.
+  min_num_training_frames: 32
+  num_training_frames: 32
+  # Keep this many tail latents for the DMD/critic losses after backward simulation.
+  # With a 32-latent rollout, 32 keeps the full generated window.
+  slice_last_frames: 32
+  chunks_per_shot: 2
+
+data:
+  data_path: /path/to/longlive2/train_video_dataset
+  eval_data_path: /path/to/longlive2/eval_video_dataset
+  image_or_video_shape:
+  - 1
+  - 32
+  - 48
+  - 44
+  - 80
+  load_raw_video: true
+
+# The distillation loop generates i2v trajectories, then computes DMD losses.
+inference:
+  sampling_steps: 4
+  sink_size: 0
+  multi_shot_sink: true
+  multi_shot_rope_offset: 8
+  independent_first_frame: true
+  negative_prompt: '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走'
+
+# Optional validation generation from the distilled model. Uses inference sampling/cache settings by default.
+evaluation:
+  interval: 99999999999
+  num_frames: 32
+  use_ema: false
+  val_batch_size: 1
+  save_latents_only: true
+
+# Presence of this section enables LoRA distillation; remove it for full fine-tuning.
+adapter:
+  type: lora
+  rank: 128
+  alpha: 128
+  dropout: 0.0
+  dtype: bfloat16
+  apply_to_critic: true
+  verbose: true
+
+logging:
+  seed: 0
+  wandb_key: null
+  wandb_entity: null
+  wandb_project: LongLive2-I2V-DMD-NVFP4
