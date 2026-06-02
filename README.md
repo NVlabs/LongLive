@@ -200,7 +200,7 @@ Please consider citing our work if you find them useful:
 @article{longlive_2.0,
   title={LongLive2.0: An NVFP4 Parallel Infrastructure for Long Video Generation},
   author={Chen, Yukang and Wang, Luozhou and Huang, Wei and Yang, Shuai and Zhang, Bohan and Xiao, Yicheng and Chu, Ruihang and Mao, Weian and Hu, Qixin and Liu, Shaoteng and Zhao, Yuyang and Mao, Huizi and Chen, Ying-Cong and Xie, Enze and Qi, Xiaojuan and Han, Song},
-  journal={arXiv preprint arXiv},
+  journal={arXiv preprint arXiv: 2605.18739},
   year={2026}
 }
 ```
@@ -211,6 +211,15 @@ Please consider citing our work if you find them useful:
     author={Yang, Shuai and Huang, Wei and Chu, Ruihang and Xiao, Yicheng and Zhao, Yuyang and Wang, Xianbang and Li, Muyang and Xie, Enze and Chen, Yingcong and Lu, Yao and others},
     booktitle={ICLR},
     year={2026},
+}
+```
+
+```bibtex
+@article{longlive_rag,
+  title         = {LongLive-RAG: A General Retrieval-Augmented Framework for Long Video Generation},
+  author        = {Hu, Qixin and Yang, Shuai and Huang, Wei and Han, Song and Chen, Yukang},
+  journal       = {arXiv preprint arXiv:2606.02553},
+  year          = {2026}
 }
 ```
 
