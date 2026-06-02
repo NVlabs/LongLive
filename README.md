@@ -7,10 +7,10 @@
 [![Paper](https://img.shields.io/badge/ArXiv-Paper-brown)](https://arxiv.org/abs/2605.18739)
 [![Code](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/NVlabs/LongLive)
 [![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=7oQALy32fiU)
-[![Models](https://img.shields.io/badge/Model-BF16-yellow)](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B)
-[![Models](https://img.shields.io/badge/Model-NVFP4-orange)](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4)
-[![Demo](https://img.shields.io/badge/Demo-Page-brightgreen)](https://nvlabs.github.io/LongLive/LongLive2/)
-[![Docs](https://img.shields.io/badge/Full-Documentation-green)](https://nvlabs.github.io/LongLive/LongLive2/docs/)
+[![Demo](https://img.shields.io/badge/Demo-Page-yellow)](https://nvlabs.github.io/LongLive/LongLive2/)
+[![Docs](https://img.shields.io/badge/Full-Documentation-orange)](https://nvlabs.github.io/LongLive/LongLive2/docs/)
+[![Work](https://img.shields.io/badge/LongLive-1.0-brightgreen)](https://github.com/NVlabs/LongLive/tree/v1.0)
+[![Work](https://img.shields.io/badge/LongLive-RAG-green)](https://github.com/qixinhu11/LongLive-RAG)
 
 <div align="center">
 
