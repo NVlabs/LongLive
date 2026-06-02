@@ -5,8 +5,8 @@
 # 🎬 LongLive 2.0: An NVFP4 Parallel Infrastructure for Long Video Generation
 
 [![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-brown)](https://arxiv.org/abs/2605.18739)
-[![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-yellow)](https://github.com/NVlabs/LongLive/tree/v1.0)
-[![Paper](https://img.shields.io/badge/Paper-LongLive_RAG-orange)](https://github.com/qixinhu11/LongLive-RAG)
+[![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://github.com/NVlabs/LongLive/tree/v1.0)
+[![Paper](https://img.shields.io/badge/Paper-LongLive_RAG-yellow)](https://github.com/qixinhu11/LongLive-RAG)
 [![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=7oQALy32fiU)
 [![Code](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/NVlabs/LongLive)
 [![Demo](https://img.shields.io/badge/Demo-Page-green)](https://nvlabs.github.io/LongLive/LongLive2/)
