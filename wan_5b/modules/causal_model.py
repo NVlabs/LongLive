@@ -98,6 +98,14 @@ def causal_rope_apply(x, grid_sizes, freqs, start_frame=0, t_scale=1.0,
     # loop over samples
     output = []
 
+    # iter-47 (grad-safety fix): the Triton RoPE kernel (rope_apply_triton) is a
+    # raw @triton.jit op with NO autograd backward — its output is graph-detached
+    # (requires_grad=False). Running it under grad would silently sever gradients
+    # to q/k (and their LoRA). Mirror the adaLN gate (see `use_triton_adaln`):
+    # use Triton only when grad is OFF (inference / no_grad rollout steps); fall
+    # back to the differentiable fp64-complex path whenever grad is ON (training).
+    use_triton_rope = _TRITON_ROPE_ENABLED and not torch.is_grad_enabled()
+
     # iter-30: accept Python list/tuple to skip the .tolist() graph break.
     # Callers that already have Python ints (sink_grid, local_grid, window_grid_sizes)
     # now pass a plain list instead of `torch.tensor([[..]]).expand(...)`.
@@ -111,7 +119,9 @@ def causal_rope_apply(x, grid_sizes, freqs, start_frame=0, t_scale=1.0,
         # precompute multipliers — only needed for the fp64 complex path.
         # iter-42: skip the bf16→fp64 cast + view_as_complex when the Triton
         # kernel will be used (it consumes bf16 directly).
-        if not _TRITON_ROPE_ENABLED:
+        # iter-47: gate on use_triton_rope (not the raw flag) so the complex x_i
+        # IS precomputed whenever we fall back to the differentiable path (training).
+        if not use_triton_rope:
             x_i = torch.view_as_complex(x[i, :seq_len].to(torch.float64).reshape(
                 seq_len, n, -1, 2))
         temporal_offset_i = select_temporal_offset_for_sample(
@@ -136,6 +146,7 @@ def causal_rope_apply(x, grid_sizes, freqs, start_frame=0, t_scale=1.0,
             cache_key = (
                 f, h, w, start_frame, t_scale, method,
                 original_seq_len, offset_key, x.device.type, x.device.index,
+                use_triton_rope,  # iter-47: separate cached repr for grad/no-grad
             )
             cache_entry = _FREQS_I_CACHE.get(cache_key)
         else:
@@ -152,7 +163,7 @@ def causal_rope_apply(x, grid_sizes, freqs, start_frame=0, t_scale=1.0,
                 freqs[1][:h].view(1, h, 1, -1).expand(f, h, w, -1),
                 freqs[2][:w].view(1, 1, w, -1).expand(f, h, w, -1),
             ], dim=-1).reshape(seq_len, 1, -1)
-            if _TRITON_ROPE_ENABLED:
+            if use_triton_rope:
                 # iter-42: store (cos, sin) fp32 derived once; freqs_i_complex
                 # itself only kept for the legacy fp64 path.
                 from utils.rope_triton import _split_complex_to_cos_sin
@@ -167,7 +178,7 @@ def causal_rope_apply(x, grid_sizes, freqs, start_frame=0, t_scale=1.0,
         freqs_i, cos_f32, sin_f32 = cache_entry
 
         # apply rotary embedding
-        if _TRITON_ROPE_ENABLED:
+        if use_triton_rope:
             # iter-42: Triton fp32 kernel — replaces the fp64 complex128 path.
             # iter-46: kernel takes full x[i] + seq_len and emits rotated-or-
             # passthrough output in a single launch, eliminating the
