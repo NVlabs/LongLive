@@ -66,10 +66,6 @@
   <img src="assets/longlive2/LongLive1_teaser.png" width="80%" alt="LongLive1.0 framework overview"/>
 </p>
 
-The large clone size is mainly because the default git clone fetches objects from all branches, including our demopage branch, which contains large assets. For normal use, only the main branch is needed. Please clone only main with:
-
-```git clone --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git```
-
 ## Getting Started
 - [Full Documentation](https://nvlabs.github.io/LongLive/LongLive2/docs/)
 - [Installation](https://nvlabs.github.io/LongLive/LongLive2/docs/#installation)
@@ -79,6 +75,10 @@ The large clone size is mainly because the default git clone fetches objects fro
 - [Data Organization](https://nvlabs.github.io/LongLive/LongLive2/docs/#training-data)
 
 ### Quick Start
+
+The large clone size is mainly because the default git clone fetches objects from all branches, including our demopage branch, which contains large assets. For normal use, only the main branch is needed. Please clone only main with:
+
+```git clone --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git```
 
 #### BF16
 
