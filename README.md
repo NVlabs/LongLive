@@ -76,7 +76,7 @@
 
 ### Quick Start
 
-The large clone size is mainly because the default git clone fetches objects from all branches, including our demopage branch, which contains large assets. For normal use, only the main branch is needed. Please clone only main with:
+The default git clone fetches objects from all branches, including our demopage branch, which contains large assets. For normal use, only the main branch is needed. Please clone only main with:
 
 ```git clone --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git```
 
