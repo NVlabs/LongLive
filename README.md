@@ -49,6 +49,7 @@
   - [x] NVFP4 (or BF16) for both AR training and few-step distillation.
 - For inference, it supports
   - [x] NVFP4 inference (W4A4) and NVFP4 KV Cache.
+  - [x] TorchAO FP8 PTQ inference (W8A8) from the BF16 checkpoint.
   - [x] Multi-shot attention sink.
   - [x] Sequence parallel inference.
   - [x] Async decoding.
@@ -115,6 +116,33 @@ save_video(video[0], "videos/quickstart/sample.mp4", fps=24)
 ```
 
 `place_vae_for_streaming` is a no-op unless `inference.streaming_vae` is true and `inference.vae_device` is set, so toggling streaming-pipeline decode in your yaml is enough — the script does not need to change.
+
+#### FP8 PTQ
+
+Download `model_bf16.pt` from
+[`Efficient-Large-Model/LongLive-2.0-5B`](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B),
+set `checkpoints.generator_ckpt` in `configs/fp8/inference_fp8.yaml`, and run:
+
+```bash
+python inference.py --config_path configs/fp8/inference_fp8.yaml
+```
+
+This loads the BF16 generator, applies TorchAO row-wise dynamic FP8 W8A8 PTQ,
+and then enables the existing `torch.compile` path. With the provided 5B model,
+300 eligible core Linear layers use FP8; six small conditioning/output
+projections stay in BF16 for stability and to avoid FP8 overhead.
+
+The validated stack is Python 3.10, PyTorch 2.8.0+cu128, and TorchAO 0.13.0 on
+H100 (SM90); compute capability 8.9 or newer is required. The supplied config
+uses `torch_compile: auto`. Its `max-autotune` warm-up can take several minutes
+while guard/shape variants are compiled, so use repeated inference and exclude
+all compile/warm-up samples when measuring steady-state performance. Set
+`torch_compile: false` for a short eager-mode smoke test.
+
+The supplied config uses the single 8-latent-frame block validated on H100.
+Longer generation introduces additional KV-cache shapes and may trigger more
+compilation or eager fallback; validate the intended frame count before
+benchmarking or deployment.
 
 #### NVFP4
 

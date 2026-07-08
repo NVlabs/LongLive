@@ -1,0 +1,51 @@
+# TorchAO FP8 PTQ inference from the merged BF16 LongLive checkpoint.
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: 32
+
+use_ema: false
+output_folder: videos/longlive2_fp8
+num_samples: 1
+num_output_frames: 8
+save_latents_only: false
+inference_iter: -1
+
+data:
+  data_path: example/long_example.txt
+  image_or_video_shape:
+  - 1
+  - 8
+  - 48
+  - 44
+  - 80
+
+inference:
+  sampling_steps: 4
+  sink_size: 8
+  guidance_scale: 1.0
+  multi_shot_sink: true
+  multi_shot_rope_offset: 8
+  streaming_vae: false
+  async_vae: false
+  vae_type: wan
+
+checkpoints:
+  generator_ckpt: /path/to/LongLive-2.0-5B/model_bf16.pt
+
+# Load the checkpoint in BF16, then quantize compatible generator Linear layers
+# to row-wise dynamic FP8 (W8A8) before torch.compile.
+fp8_quant: true
+
+torch_compile: auto
+torch_compile_min_samples: 3
+torch_compile_target: generator_model
+torch_compile_backend: inductor
+torch_compile_mode: max-autotune-no-cudagraphs
+torch_compile_fullgraph: false
+torch_compile_dynamic: false
+torch_compile_suppress_errors: false
+
+logging:
+  seed: 0

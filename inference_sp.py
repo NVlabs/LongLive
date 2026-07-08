@@ -217,6 +217,8 @@ config.num_samples = section_get(config, "inference", "num_samples", getattr(con
 config.num_output_frames = getattr(config, "num_output_frames", config.image_or_video_shape[1])
 config.save_with_index = getattr(config, "save_with_index", False)
 config.inference_iter = getattr(config, "inference_iter", -1)
+if bool(getattr(config, "fp8_quant", False)):
+    raise NotImplementedError("TorchAO FP8 PTQ is currently supported by inference.py only.")
 if getattr(config, "i2v", False):
     raise NotImplementedError("I2V inference is not included in this SP release path.")
 if getattr(config, "kv_quant", False):

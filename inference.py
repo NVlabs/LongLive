@@ -120,6 +120,11 @@ config.num_output_frames = getattr(config, "num_output_frames", config.image_or_
 config.save_with_index = getattr(config, "save_with_index", False)
 config.inference_iter = getattr(config, "inference_iter", -1)
 
+if bool(getattr(config, "fp8_quant", False)) and bool(
+    getattr(config, "model_quant", False)
+):
+    raise ValueError("fp8_quant and model_quant (NVFP4) are mutually exclusive.")
+
 
 def _maybe_to_dict(value):
     if value is None:
@@ -147,8 +152,11 @@ def _expected_inference_samples(config):
 def _resolve_torch_compile(config):
     setting = getattr(config, "torch_compile", False)
     if isinstance(setting, str) and setting.strip().lower() == "auto":
-        if not bool(getattr(config, "model_quant", False)):
-            return False, "auto disabled because model_quant is false"
+        if not (
+            bool(getattr(config, "model_quant", False))
+            or bool(getattr(config, "fp8_quant", False))
+        ):
+            return False, "auto disabled because quantization is false"
         min_samples = int(getattr(config, "torch_compile_min_samples", 2))
         expected_samples = _expected_inference_samples(config)
         if expected_samples is not None and expected_samples < min_samples:
@@ -282,10 +290,13 @@ import peft
 
 merge_lora = bool(getattr(config, "merge_lora", False))
 has_lora_adapter = bool(getattr(config, "adapter", None) and configure_lora_for_model is not None)
-if has_lora_adapter and bool(getattr(config, "model_quant", False)) and not merge_lora:
+if has_lora_adapter and (
+    bool(getattr(config, "model_quant", False))
+    or bool(getattr(config, "fp8_quant", False))
+) and not merge_lora:
     if local_rank == 0:
         print(
-            "[NVFP4][LoRA] merge_lora=false is unsupported with model_quant=true; "
+            "[quant][LoRA] merge_lora=false is unsupported with quantization; "
             "forcing merge_lora=true so the LoRA is folded into the BF16 base before quantization."
         )
     merge_lora = True
@@ -457,6 +468,10 @@ elif loaded_prequantized_generator and local_rank == 0:
     print(f"[NVFP4] Using pre-saved {prequantized_generator_backend} generator weights from checkpoint")
 
 pipeline.generator.model.eval().requires_grad_(False)
+if bool(getattr(config, "fp8_quant", False)):
+    from utils.fp8 import quantize_model_fp8
+
+    quantize_model_fp8(pipeline.generator.model, verbose=(local_rank == 0))
 configure_generator_torch_compile(pipeline, config)
 
 vae_device_str = getattr(config, "vae_device", None)

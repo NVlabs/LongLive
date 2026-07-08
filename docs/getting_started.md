@@ -62,6 +62,7 @@ pip install -r requirements.txt
 
 pip install --upgrade --index-url https://download.pytorch.org/whl/cu128 \
   torch==2.10.0 torchvision==0.25.0
+pip install --upgrade torchao==0.16.0
 ```
 
 If you already have a working `qlive` environment from LongLive_Sage, you can
@@ -132,6 +133,12 @@ The release keeps three main configs:
 configs/train_ar.yaml       # AR diffusion training
 configs/train_dmd.yaml      # DMD distillation
 configs/inference.yaml      # inference
+```
+
+TorchAO FP8 PTQ inference has a separate config:
+
+```text
+configs/fp8/inference_fp8.yaml
 ```
 
 The NVFP4 path keeps its configs separate from the default BF16 release path:
@@ -298,6 +305,39 @@ Inference notes:
 - `inference.sink_size` controls the standard attention sink size.
 - `inference.multi_shot_sink` enables the multi-shot attention sink.
 - `inference.multi_shot_rope_offset` controls the multi-shot RoPE offset.
+
+### FP8 PTQ Inference
+
+Set `checkpoints.generator_ckpt` in `configs/fp8/inference_fp8.yaml` to the
+downloaded merged BF16 `model_bf16.pt`, then run:
+
+```bash
+python inference.py --config_path configs/fp8/inference_fp8.yaml
+```
+
+`fp8_quant: true` applies TorchAO row-wise dynamic W8A8 quantization after the
+generator has been loaded and converted to BF16, and before `torch.compile`.
+It cannot be combined with `model_quant: true`, which selects the NVFP4 path.
+With the provided 5B model, 300 eligible core Linear layers use FP8 while six
+small conditioning/output projections remain BF16 for stability and to avoid
+FP8 overhead.
+
+The validated stack is Python 3.10, PyTorch 2.8.0+cu128, and TorchAO 0.13.0 on
+H100 (SM90); compute capability 8.9 or newer is required. The supplied config
+uses `torch_compile: auto`: it skips compilation when `inference_iter`
+explicitly limits the run to fewer than three samples, and enables it when all
+prompts are requested. Its `max-autotune` warm-up can take several minutes
+while guard/shape variants are compiled. Use repeated inference and discard all
+compile/warm-up samples when measuring steady-state performance; set
+`torch_compile: false` for a short eager-mode smoke test.
+
+The supplied config uses the single 8-latent-frame block validated on H100.
+Longer generation introduces additional KV-cache shapes and may trigger more
+compilation or eager fallback; validate the intended frame count before
+benchmarking or deployment.
+
+The initial FP8 path targets `inference.py`; `inference_sp.py` rejects the flag
+until TorchAO tensor-subclass behavior is validated with Ulysses collectives.
 
 ### NVFP4 Inference
 

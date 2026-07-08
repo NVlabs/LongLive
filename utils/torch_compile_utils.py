@@ -43,9 +43,9 @@ class SafeCompiledCallable:
 
         if suppress_errors:
             try:
-                import torch._dynamo
+                import torch._dynamo as torch_dynamo
 
-                torch._dynamo.config.suppress_errors = True
+                torch_dynamo.config.suppress_errors = True
             except Exception as exc:
                 _log_once(f"[torch.compile] Could not enable suppress_errors: {exc}")
 

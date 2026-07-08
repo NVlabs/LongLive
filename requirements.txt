@@ -1,6 +1,6 @@
 opencv-python>=4.9.0.80
 diffusers==0.31.0
-transformers>=4.49.0
+transformers>=4.49.0,<5
 tokenizers>=0.20.3
 accelerate>=1.1.1
 tqdm
@@ -38,5 +38,5 @@ onnxscript
 onnxconverter_common
 flask
 flask-socketio
-torchao
+torchao==0.13.0  # paired with the documented PyTorch 2.8.0 environment
 peft
