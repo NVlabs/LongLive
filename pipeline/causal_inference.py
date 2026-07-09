@@ -205,7 +205,7 @@ class CausalInferencePipeline(torch.nn.Module):
                 block_time = block_start.elapsed_time(block_end)
                 block_times.append(block_time)
 
-            # Step 3.4: update the start and end frame indices
+            # Step 2.4: update the start and end frame indices
             current_start_frame += current_num_frames
 
         if profile:
