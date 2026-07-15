@@ -24,6 +24,7 @@ from utils.i2v_conditioning import (
     _overwrite_i2v_context,
     _zero_i2v_context_timestep,
 )
+from utils.prompt_conditioning import encode_prompt_blocks
 
 
 class CausalDiffusionInferencePipeline(torch.nn.Module):
@@ -167,7 +168,7 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
     def inference(
         self,
         noise: torch.Tensor,
-        text_prompts: List[str],
+        text_prompts: List[List[str]],
         initial_latent: Optional[torch.Tensor] = None,
         return_latents: bool = False,
         start_frame_index: Optional[int] = 0
@@ -177,7 +178,7 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
         Inputs:
             noise (torch.Tensor): The input noise tensor of shape
                 (batch_size, num_output_frames, num_channels, height, width).
-            text_prompts (List[str]): The list of text prompts.
+            text_prompts (List[List[str]]): Per-sample text prompts for each block.
             initial_latent (torch.Tensor): The initial latent tensor of shape
                 (batch_size, num_input_frames, num_channels, height, width).
                 If num_input_frames is 1, perform image to video.
@@ -208,13 +209,9 @@ class CausalDiffusionInferencePipeline(torch.nn.Module):
         num_output_frames = (
             num_frames if clamp_i2v_first_chunk else num_frames + num_input_frames
         )
-        conditional_dict = self.text_encoder(
-            text_prompts=text_prompts[0]
+        conditional_dict, conditional_dict_list = encode_prompt_blocks(
+            self.text_encoder, text_prompts, batch_size
         )
-        conditional_dict_list = [
-            {"prompt_embeds": conditional_dict["prompt_embeds"][i:i+1]}
-            for i in range(conditional_dict["prompt_embeds"].shape[0])
-        ]
         use_cfg = self.guidance_scale != 1.0
         if use_cfg:
             unconditional_dict = self.text_encoder(
