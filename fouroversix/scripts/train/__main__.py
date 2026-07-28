@@ -172,7 +172,7 @@ class ModalTrainer:
 
 
 @click.command()
-@click.option("--batch-size", type=float, default=16)
+@click.option("--batch-size", type=int, default=16)
 @click.option("--checkpoint-interval", type=int, default=1000)
 @click.option("--checkpoint-keep-latest-k", type=int, default=0)
 @click.option("--checkpoint-load-step", type=int, default=-1)
