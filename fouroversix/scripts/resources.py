@@ -91,10 +91,15 @@ class Submodule(str, Enum):
         config = configparser.ConfigParser()
         config.read_string(gitmodules_contents)
 
+        url = None
         for section in config.sections():
             if config[section]["path"] == self.get_local_path():
                 url = config[section]["url"]
                 break
+
+        if url is None:
+            msg = f"Submodule {self.get_local_path()} not found in .gitmodules"
+            raise ValueError(msg)
 
         if url.startswith("https://"):
             return url
