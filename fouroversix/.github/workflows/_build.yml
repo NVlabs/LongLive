@@ -195,6 +195,7 @@ jobs:
           ls dist
 
       - name: Get Release with tag
+        if: inputs.upload-to-release
         id: get_current_release
         uses: joutvhu/get-release@v1
         with:
