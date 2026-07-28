@@ -66,12 +66,7 @@ def run_speedtest(
             print("Not supported")
             continue
 
-        config = QuantizationConfig(
-            backend=backend,
-            rht=rht,
-            round_style=RoundStyle(round_style),
-            scale_rule=ScaleRule(scale_rule),
-        )
+        # Use the config already created above.
 
         t = benchmark.Timer(
             setup="from fouroversix import quantize_to_fp4",
