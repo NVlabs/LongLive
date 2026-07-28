@@ -113,6 +113,8 @@ class ModalEvaluationCoordinator(BaseEvaluationCoordinator):
         self.run_calibration_tasks(model_names, ptq_methods, tasks, modal_gpu, **kwargs)
 
         models_and_ptq_methods = list(itertools.product(model_names, ptq_methods))
+        evaluated_models_and_ptq_methods = []
+        evaluated_kwargs = []
         function_calls = []
 
         for model_name, ptq_method in models_and_ptq_methods:
@@ -125,6 +127,8 @@ class ModalEvaluationCoordinator(BaseEvaluationCoordinator):
             if len(tasks_to_evaluate) == 0:
                 continue
 
+            evaluated_models_and_ptq_methods.append((model_name, ptq_method))
+
             evaluator_cls = get_evaluator(ptq_method).with_options(gpu=modal_gpu)
 
             calibrated_kwargs = evaluator_cls.get_calibrated_kwargs(
@@ -133,20 +137,24 @@ class ModalEvaluationCoordinator(BaseEvaluationCoordinator):
                 **kwargs,
             )
 
+            merged_kwargs = {**kwargs, **calibrated_kwargs}
+            evaluated_kwargs.append(merged_kwargs)
+
             function_calls.append(
                 evaluator_cls().evaluate_on_modal.spawn(
                     model_name=model_name,
                     tasks=tasks_to_evaluate,
                     save_path=FOUROVERSIX_CACHE_PATH / "ptq",
-                    **{**kwargs, **calibrated_kwargs},
+                    **merged_kwargs,
                 ),
             )
 
         all_results = modal.FunctionCall.gather(*function_calls)
 
-        for (model_name, ptq_method), results in zip(
-            models_and_ptq_methods,
+        for (model_name, ptq_method), merged_kwargs, results in zip(
+            evaluated_models_and_ptq_methods,
+            evaluated_kwargs,
             all_results,
             strict=True,
         ):
-            self.save_results(model_name, ptq_method, kwargs, results)
+            self.save_results(model_name, ptq_method, merged_kwargs, results)
