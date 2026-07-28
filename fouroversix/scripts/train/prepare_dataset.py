@@ -1,3 +1,5 @@
+import os
+
 from ..resources import FOUROVERSIX_CACHE_PATH, app, cache_volume, get_image
 
 img = get_image(dependencies=[], extra_pip_dependencies=["datasets"])
@@ -12,4 +14,5 @@ with img.imports():
     volumes={FOUROVERSIX_CACHE_PATH: cache_volume},
 )
 def prepare_dataset(path: str, name: str) -> None:
-    load_dataset(path, name)
+    dataset = load_dataset(path, name)
+    dataset.save_to_disk(os.path.join(FOUROVERSIX_CACHE_PATH, name))
