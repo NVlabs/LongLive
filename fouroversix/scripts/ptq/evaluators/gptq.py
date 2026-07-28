@@ -64,7 +64,7 @@ class GPTQEvaluator(PTQEvaluator):
         from model_quant import main
         from transformers import AutoModelForCausalLM
 
-        save_path = save_path / "gptq" / model_name / quantization_config.__hash__()
+        save_path = save_path / "gptq" / model_name / str(quantization_config.__hash__())
 
         if not save_path.exists():
             sys.argv = [
