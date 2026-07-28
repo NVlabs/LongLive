@@ -158,12 +158,12 @@ class PTQEvaluator(ABC):
                 from inspect_ai.model import Model
                 from inspect_ai.model._generate_config import GenerateConfig
 
-                from .utils import local_hf
+                from .utils import LocalHuggingFaceAPI
 
                 config = GenerateConfig()
                 full_results = inspect_ai.eval(
                     tasks=tasks,
-                    model=Model(local_hf(model_name, model, config), config, None),
+                    model=Model(LocalHuggingFaceAPI(model_name, model, config), config, None),
                     limit=limit,
                     log_dir=(save_path / "inspect_ai_logs").as_posix(),
                     display="none",
