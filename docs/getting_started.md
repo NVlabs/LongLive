@@ -135,6 +135,13 @@ configs/train_dmd.yaml      # DMD distillation
 configs/inference.yaml      # inference
 ```
 
+Image-to-video uses its own config on both precision paths:
+
+```text
+configs/inference_i2v.yaml             # BF16 i2v inference
+configs/nvfp4/inference_i2v_nvfp4.yaml # NVFP4 i2v inference
+```
+
 TorchAO FP8 PTQ inference has a separate config:
 
 ```text
@@ -305,6 +312,74 @@ Inference notes:
 - `inference.sink_size` controls the standard attention sink size.
 - `inference.multi_shot_sink` enables the multi-shot attention sink.
 - `inference.multi_shot_rope_offset` controls the multi-shot RoPE offset.
+
+### Image-to-Video (I2V) Inference
+
+I2V conditions the rollout on a single image: its latent is held clean
+(timestep 0) at every denoising step of the first chunk, and the autoregressive
+rollout continues from it.
+
+Use `configs/inference_i2v.yaml` (BF16) or `configs/nvfp4/inference_i2v_nvfp4.yaml`
+(NVFP4). Both set the two flags that turn I2V on:
+
+```yaml
+i2v: true
+inference:
+  independent_first_frame: true   # required, so the first latent can be clamped
+```
+
+`data.data_path` accepts either of two layouts, detected automatically.
+
+**Image + prompt** — use this for plain image-to-video:
+
+```text
+data_path/
+├── images/
+│   ├── cat.png
+│   └── dog.jpg
+└── prompts/
+    ├── cat.txt
+    └── dog.txt
+```
+
+A flat folder with `cat.png` and `cat.txt` side by side works too. Supported
+image formats: `.png`, `.jpg`, `.jpeg`, `.webp`, `.bmp`. Each `.txt` holds the
+caption; if it contains several non-empty lines they are treated as consecutive
+shots, spread evenly over the generated blocks with the scene-cut prefix
+inserted at each boundary:
+
+```text
+A dog runs on the beach.
+The dog jumps into the water.
+```
+
+**Video dataset** — a folder containing a `video/` subdirectory keeps the
+original behaviour, taking the *first frame* of each clip as the conditioning
+image. This is the same layout as the training data:
+
+```text
+data_path/
+├── video/
+│   └── sample_0001/
+│       ├── 000001.mp4
+│       └── 000002.mp4
+└── caption/
+    └── sample_0001/
+        ├── 000001.json     # {"caption": "..."}
+        └── 000002.json
+```
+
+Run:
+
+```bash
+torchrun --standalone --nnodes=1 --nproc_per_node=8 inference.py \
+  --config_path configs/inference_i2v.yaml
+```
+
+The conditioning image is resized to the resolution implied by
+`data.image_or_video_shape` (H and W are the latent dims times the model's
+spatial compression ratio, e.g. `44 x 80` latents at ratio 16 gives
+`704 x 1280`) and normalised exactly like training video frames.
 
 ### FP8 PTQ Inference
 

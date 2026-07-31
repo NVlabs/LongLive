@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 import os
 import sys
+from pathlib import Path
 
 # torchrun no longer consistently prepends the script directory to sys.path,
 # which breaks absolute project imports when launched from another cwd.
@@ -43,7 +44,14 @@ from torch.utils.data import DataLoader, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler
 
 from pipeline import CausalDiffusionInferencePipeline
-from utils.dataset import MultiTextConcatDataset, MultiVideoConcatDataset, eval_collate_fn, multi_video_collate_fn
+from utils.dataset import (
+    ImagePromptDataset,
+    MultiTextConcatDataset,
+    MultiVideoConcatDataset,
+    eval_collate_fn,
+    image_prompt_collate_fn,
+    multi_video_collate_fn,
+)
 from utils.misc import set_seed
 from utils.config import normalize_config, section_get, wan_default_config
 from utils.nvfp4_checkpoint import (
@@ -501,24 +509,40 @@ if getattr(config, "i2v", False):
     frame_raw_width = list(config.image_or_video_shape)[4] * wan_default_config[model_name]["spatial_compression_ratio"]
     temporal_compression_ratio = wan_default_config[model_name]["temporal_compression_ratio"]
     total_frames = (config.num_output_frames - 1) * temporal_compression_ratio + 1
-    dataset = MultiVideoConcatDataset(
-        data_dir=data_path,
-        video_size=(frame_raw_height, frame_raw_width),
-        total_frames=total_frames,
-        deterministic=True,
-        num_frame_per_block=nfpb,
-        temporal_compression_ratio=temporal_compression_ratio,
-        target_fps=24 if "5B" in model_name else 16,
-        allow_padding=getattr(config, "allow_padding", False),
-        min_latent_frames=getattr(config, "min_latent_frames", 0),
-        single_video_only=getattr(config, "uniform_prompt", False),
-        independent_first_frame=getattr(config, "independent_first_frame", False),
-        return_image=True,
-        max_chunks_per_shot=getattr(config, "max_chunks_per_shot", 0),
-        scene_cut_prefix=scene_cut_prefix,
-    )
-    collate_fn = multi_video_collate_fn
     num_blocks = config.num_output_frames // nfpb
+    # I2V only needs ONE conditioning frame, so accept a plain image folder in
+    # addition to the video-dataset layout. A folder holding images (either
+    # directly or under images/) is treated as image+prompt input; a folder with
+    # a video/ subdirectory keeps the original behaviour of taking the first
+    # frame of each video.
+    _i2v_root = Path(data_path)
+    _has_video_layout = (_i2v_root / "video").is_dir()
+    if not _has_video_layout:
+        dataset = ImagePromptDataset(
+            data_path=data_path,
+            image_size=(frame_raw_height, frame_raw_width),
+            num_blocks=num_blocks,
+            scene_cut_prefix=scene_cut_prefix,
+        )
+        collate_fn = image_prompt_collate_fn
+    else:
+        dataset = MultiVideoConcatDataset(
+            data_dir=data_path,
+            video_size=(frame_raw_height, frame_raw_width),
+            total_frames=total_frames,
+            deterministic=True,
+            num_frame_per_block=nfpb,
+            temporal_compression_ratio=temporal_compression_ratio,
+            target_fps=24 if "5B" in model_name else 16,
+            allow_padding=getattr(config, "allow_padding", False),
+            min_latent_frames=getattr(config, "min_latent_frames", 0),
+            single_video_only=getattr(config, "uniform_prompt", False),
+            independent_first_frame=getattr(config, "independent_first_frame", False),
+            return_image=True,
+            max_chunks_per_shot=getattr(config, "max_chunks_per_shot", 0),
+            scene_cut_prefix=scene_cut_prefix,
+        )
+        collate_fn = multi_video_collate_fn
 else:
     num_blocks = config.num_output_frames // nfpb
     dataset = MultiTextConcatDataset(

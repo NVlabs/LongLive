@@ -266,6 +266,122 @@ class MultiTextConcatDataset(Dataset):
         return prompts
 
 
+class ImagePromptDataset(Dataset):
+    """I2V inference from single images + text prompts (no source video needed).
+
+    ``MultiVideoConcatDataset`` can also drive I2V, but it takes the conditioning
+    frame from the *first frame of a video*, so it requires a full video dataset
+    laid out as ``video/<folder>/*.mp4`` + ``caption/<folder>/*.json``. For plain
+    image-to-video inference the user only has an image, which this dataset
+    accepts directly.
+
+    Two layouts are recognised under ``data_path``:
+
+    **split** (preferred)::
+
+        data_path/
+          images/   cat.png   dog.jpg   ...
+          prompts/  cat.txt   dog.txt   ...
+
+    **flat** — image and prompt side by side, matched by stem::
+
+        data_path/
+          cat.png   cat.txt
+          dog.jpg   dog.txt
+
+    Each ``.txt`` holds the caption. A single line is used for the whole clip; if
+    it contains several non-empty lines they are treated as consecutive shots,
+    spread evenly over the blocks with ``scene_cut_prefix`` prepended at each
+    shot boundary — matching :class:`MultiTextConcatDataset`. Output is always
+    exactly ``num_blocks`` prompts.
+
+    The image is preprocessed identically to video frames in
+    ``MultiVideoConcatDataset`` (``/255`` → resize with antialias → normalise to
+    ``[-1, 1]`` → fp16) so the conditioning latent matches what the model saw in
+    training.
+    """
+
+    IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".webp", ".bmp")
+
+    def __init__(
+        self,
+        data_path: str,
+        image_size,
+        num_blocks: int,
+        scene_cut_prefix: str = DEFAULT_SCENE_CUT_PREFIX,
+    ):
+        self.image_size = tuple(image_size)
+        self.num_blocks = int(num_blocks)
+        self.scene_cut_prefix = scene_cut_prefix
+        self.resize_transform = transforms.Resize(self.image_size, antialias=True)
+        self.normalize = transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+
+        root = Path(data_path)
+        if not root.is_dir():
+            raise ValueError(f"i2v image data_path is not a directory: {root}")
+
+        image_dir = root / "images" if (root / "images").is_dir() else root
+        self.prompt_dir = root / "prompts" if (root / "prompts").is_dir() else image_dir
+
+        images = []
+        for ext in self.IMAGE_EXTENSIONS:
+            images.extend(image_dir.glob(f"*{ext}"))
+            images.extend(image_dir.glob(f"*{ext.upper()}"))
+        self.images = sorted(set(images), key=lambda p: p.name)
+        if not self.images:
+            raise ValueError(
+                f"No images ({', '.join(self.IMAGE_EXTENSIONS)}) found in {image_dir}. "
+                f"Expected either {root}/images/ or images directly under {root}."
+            )
+        self._mode = "image+prompt"
+
+    def __len__(self):
+        return len(self.images)
+
+    def _load_prompts(self, image_path: Path):
+        txt = self.prompt_dir / f"{image_path.stem}.txt"
+        if not txt.exists():
+            raise ValueError(
+                f"No prompt file for image {image_path.name}: expected {txt}"
+            )
+        with open(txt, encoding="utf-8") as f:
+            shots = [line.strip() for line in f if line.strip()]
+        if not shots:
+            raise ValueError(f"Prompt file is empty: {txt}")
+
+        # Spread the shots evenly over num_blocks, mirroring MultiTextConcatDataset.
+        base, extra = divmod(self.num_blocks, len(shots))
+        prompts: list[str] = []
+        for shot_idx, caption in enumerate(shots):
+            duration = base + (1 if shot_idx < extra else 0)
+            for block_in_shot in range(duration):
+                if shot_idx > 0 and block_in_shot == 0 and self.scene_cut_prefix:
+                    prompts.append(self.scene_cut_prefix + caption)
+                else:
+                    prompts.append(caption)
+        if len(prompts) > self.num_blocks:
+            prompts = prompts[: self.num_blocks]
+        elif len(prompts) < self.num_blocks:
+            prompts.extend([prompts[-1] if prompts else ""] * (self.num_blocks - len(prompts)))
+        return prompts
+
+    def _load_image(self, image_path: Path):
+        with Image.open(image_path) as img:
+            array = np.array(img.convert("RGB"))
+        tensor = torch.from_numpy(array).permute(2, 0, 1).contiguous().float() / 255.0
+        if tensor.shape[1] != self.image_size[0] or tensor.shape[2] != self.image_size[1]:
+            tensor = self.resize_transform(tensor)
+        return self.normalize(tensor).to(torch.float16)
+
+    def __getitem__(self, idx):
+        image_path = self.images[idx % len(self.images)]
+        return {
+            "image": self._load_image(image_path),
+            "prompts": self._load_prompts(image_path),
+            "idx": idx,
+        }
+
+
 class MultiVideoConcatDataset(Dataset):
     """Dataset that concatenates multiple videos from a folder into a fixed-length video.
     
@@ -1070,4 +1186,11 @@ def eval_collate_fn(batch):
     }
     if "shot_durations" in batch[0]:
         result["shot_durations"] = [b["shot_durations"] for b in batch]
+    return result
+
+
+def image_prompt_collate_fn(batch):
+    """Collate for :class:`ImagePromptDataset` (prompts + one conditioning image)."""
+    result = eval_collate_fn(batch)
+    result["image"] = torch.stack([b["image"] for b in batch], dim=0)  # (B, C, H, W)
     return result

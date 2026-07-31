@@ -1,7 +1,13 @@
 # NVFP4 i2v inference with optional KV cache quantization and streaming VAE.
 # = configs/nvfp4/inference_nvfp4.yaml + i2v conditioning.
-# The first latent frame is encoded from the source image (provided by the
-# video dataset), kept clean during denoising, and the rollout continues from it.
+# The first latent frame is encoded from the conditioning image, kept clean
+# during denoising, and the rollout continues from it.
+#
+# data.data_path accepts EITHER layout (detected automatically):
+#   1) images/*.png + prompts/*.txt  (or a flat folder of image+txt pairs)
+#   2) a folder with a video/ subdirectory, in which case the first frame of
+#      each clip is used as the conditioning image
+# See docs/getting_started.md -> "Image-to-Video (I2V) Inference".
 model_kwargs:
   model_name: Wan2.2-TI2V-5B
   timestep_shift: 5.0
@@ -9,8 +15,8 @@ model_kwargs:
   local_attn_size: 32
   sink_size: 8
 
-# Enable i2v: build the video dataset, encode the first frame to a clean latent,
-# and clamp it as the first-chunk conditioning during inference.
+# Enable i2v: encode the conditioning image to a clean latent and clamp it as
+# the first-chunk conditioning during inference.
 i2v: true
 
 use_ema: false
@@ -22,16 +28,17 @@ inference_iter: -1
 num_output_frames: 384
 merge_lora: false
 
-# i2v dataset / first-frame handling (read by MultiVideoConcatDataset in inference.py).
+# Only used by the video-dataset layout (MultiVideoConcatDataset); ignored for
+# the image+prompt layout.
 allow_padding: false
 min_latent_frames: 0
 max_chunks_per_shot: 0
 uniform_prompt: false
 
 data:
-  # For i2v the data_path points at a video/image dataset; the first frame of
-  # each clip is used as the conditioning image.
-  data_path: /path/to/longlive2/inference_video_dataset
+  # Either an image+prompt folder (images/*.png + prompts/*.txt) or a video
+  # dataset folder containing video/ + caption/.
+  data_path: /path/to/longlive2/i2v_images
   image_or_video_shape:
   - 1
   - 384

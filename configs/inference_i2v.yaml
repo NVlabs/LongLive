@@ -1,0 +1,77 @@
+# BF16 image-to-video inference.
+# = configs/inference.yaml + i2v conditioning.
+#
+# The first latent frame is encoded from the conditioning image, held clean
+# (timestep 0) throughout the first chunk's denoising, and the autoregressive
+# rollout continues from it.
+#
+# data.data_path accepts EITHER of two layouts:
+#
+#   1) image + prompt (what you want for plain image-to-video):
+#        data_path/
+#          images/   cat.png   dog.jpg   ...
+#          prompts/  cat.txt   dog.txt   ...
+#      A flat folder with `cat.png` and `cat.txt` side by side also works.
+#      Each .txt holds the caption; several non-empty lines are treated as
+#      consecutive shots and spread evenly over the generated blocks.
+#
+#   2) video dataset (the original behaviour) — a folder containing a `video/`
+#      subdirectory, laid out as video/<name>/*.mp4 + caption/<name>/*.json.
+#      The FIRST FRAME of each clip is used as the conditioning image.
+#
+# The layout is detected automatically: a `video/` subdirectory selects (2),
+# anything else is read as (1).
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: 32
+
+# Enable i2v conditioning.
+i2v: true
+
+use_ema: false
+output_folder: videos/longlive2_i2v
+num_samples: 1
+save_latents_only: false
+num_output_frames: 128
+
+data:
+  data_path: /path/to/longlive2/i2v_images
+  # Latent tensor shape [B, F, C, H, W]. F is also the number of generated
+  # latent frames unless num_output_frames is provided.
+  image_or_video_shape:
+  - 1
+  - 128
+  - 48
+  - 44
+  - 80
+
+inference:
+  sampling_steps: 4
+  # Required for i2v: keeps the first latent frame independent so it can be
+  # clamped to the clean conditioning latent at every denoising step.
+  independent_first_frame: true
+  sink_size: 8
+  guidance_scale: 1.0
+  multi_shot_sink: true
+  multi_shot_rope_offset: 8
+  streaming_vae: false
+  async_vae: false
+  vae_type: wan # wan, mg_lightvae, mg_lightvae_v2
+  negative_prompt: '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走'
+
+checkpoints:
+  generator_ckpt: /path/to/longlive2/generator_checkpoint.pt
+  lora_ckpt: /path/to/longlive2/lora_checkpoint.pt
+
+# Presence of this section enables LoRA inference; remove it for full-generator inference.
+adapter:
+  type: lora
+  rank: 128
+  alpha: 128
+  dropout: 0.0
+  verbose: true
+
+logging:
+  seed: 0
