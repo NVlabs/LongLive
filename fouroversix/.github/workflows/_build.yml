@@ -98,9 +98,9 @@ jobs:
           pip install typing-extensions==4.12.2
           # detect if we're on ARM
           if [ "$(uname -m)" = "aarch64" ] || [ "$(uname -m)" = "arm64" ]; then
-              PLAT=linux_aarch64
+              PLAT=manylinux_2_28_aarch64
           else
-              PLAT=manylinux_2_27_x86_64.manylinux_2_28_x86_64
+              PLAT=manylinux_2_28_x86_64
           fi
           echo "PLAT=$PLAT" >> $GITHUB_ENV
           if [[ ${{ inputs.torch-version }} == *"dev"* ]]; then
