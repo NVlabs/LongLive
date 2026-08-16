@@ -181,7 +181,7 @@ class NinjaBuildExtension(BuildExtension):
                 import psutil
 
                 # calculate the maximum allowed NUM_JOBS based on cores
-                max_num_jobs_cores = max(1, os.cpu_count() // 2)
+                max_num_jobs_cores = max(1, (os.cpu_count() or 1) // 2)
 
                 # calculate the maximum allowed NUM_JOBS based on free memory
                 free_memory_gb = psutil.virtual_memory().available / (
