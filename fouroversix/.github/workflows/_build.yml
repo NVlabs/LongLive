@@ -212,4 +212,4 @@ jobs:
           upload_url: ${{ steps.get_current_release.outputs.upload_url }}
           asset_path: ./dist/${{env.wheel_name}}
           asset_name: ${{env.wheel_name}}
-          asset_content_type: application/*
+          asset_content_type: application/octet-stream
