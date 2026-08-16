@@ -88,7 +88,7 @@ class AWQEvaluator(RTNEvaluatorImpl):
             replace_existing_modules_in_registry=True,
         )(FourOverSixLinearForAWQ)
 
-        save_path = save_path / "awq" / model_name / quantization_config.__hash__()
+        save_path = save_path / "awq" / model_name / str(quantization_config.__hash__())
 
         if not save_path.exists():
             model = AutoModelForCausalLM.from_pretrained(
