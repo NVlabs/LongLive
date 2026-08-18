@@ -104,16 +104,16 @@ merged_checkpoint_path = "LongLive-2.0-5B/model_bf16.pt"
 config = normalize_config(OmegaConf.load("configs/inference.yaml"))
 device = torch.device("cuda")
 
-torch.set_grad_enabled(False)
-pipe = CausalDiffusionInferencePipeline(config, device=device)
-load_generator_checkpoint(pipe.generator, merged_checkpoint_path)
-pipe = pipe.to(device=device, dtype=torch.bfloat16)
-place_vae_for_streaming(pipe, config)  # honor streaming_vae + vae_device when set
-pipe.generator.model.eval().requires_grad_(False)
+with torch.inference_mode():
+    pipe = CausalDiffusionInferencePipeline(config, device=device)
+    load_generator_checkpoint(pipe.generator, merged_checkpoint_path)
+    pipe = pipe.to(device=device, dtype=torch.bfloat16)
+    place_vae_for_streaming(pipe, config)  # honor streaming_vae + vae_device when set
+    pipe.generator.model.eval().requires_grad_(False)
 
-noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
-video = pipe.inference(noise=noise, text_prompts=prompts)
-save_video(video[0], "videos/quickstart/sample.mp4", fps=24)
+    noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
+    video = pipe.inference(noise=noise, text_prompts=prompts)
+    save_video(video[0], "videos/quickstart/sample.mp4", fps=24)
 ```
 
 `place_vae_for_streaming` is a no-op unless `inference.streaming_vae` is true and `inference.vae_device` is set, so toggling streaming-pipeline decode in your yaml is enough — the script does not need to change.
@@ -167,14 +167,14 @@ prompt = "A compact silver robot walks through a clean robotics lab."
 config = normalize_config(OmegaConf.load("configs/nvfp4/inference_nvfp4.yaml"))
 device = torch.device("cuda")
 
-torch.set_grad_enabled(False)
-pipe = CausalDiffusionInferencePipeline(config, device=device)
-setup_nvfp4_pipeline(pipe, config, device)
-pipe.generator.model.eval().requires_grad_(False)
+with torch.inference_mode():
+    pipe = CausalDiffusionInferencePipeline(config, device=device)
+    setup_nvfp4_pipeline(pipe, config, device)
+    pipe.generator.model.eval().requires_grad_(False)
 
-noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
-video = pipe.inference(noise=noise, text_prompts=prompts)
-save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)
+    noise, prompts = prepare_single_prompt_inputs(config, prompt, device)
+    video = pipe.inference(noise=noise, text_prompts=prompts)
+    save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)
 ```
 
 ## Training Modes
