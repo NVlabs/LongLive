@@ -43,6 +43,8 @@
 
 **LongLive 1.0**: Real-time Interactive Long Video Generation. [You can find it here](https://github.com/NVlabs/LongLive/tree/v1.0) in our V1.0 branch.
 
+**LongLive 1.0 leaderboard:** [![Papers with Code: #2 on VBench](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge.svg?eval=19478&live=1)](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge-link?eval=19478)
+
 **LongLive 2.0**: an NVFP4 Parallel Infrastructure for Long Video Generation
 - For training, it supports
   - [x] Balanced sequence parallel for T2V/I2V AR training (teacher-forcing).
