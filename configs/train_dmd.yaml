@@ -75,6 +75,7 @@ data:
 inference:
   sampling_steps: 4
   sink_size: 0
+  multi_shot_sink: true
   multi_shot_rope_offset: 8
 
 # Optional validation generation from the distilled model. Uses inference sampling/cache settings by default.
