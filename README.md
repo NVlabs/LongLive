@@ -8,7 +8,7 @@
 generations of the project, each in its own directory with its own code,
 documentation and model weights.
 
-![Paper](https://img.shields.io/badge/Paper-LongLive--Plug_(coming_soon)-brown)
+![Paper](https://img.shields.io/badge/Paper-LongLive--Plug-brown)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-red)](https://arxiv.org/abs/2605.18739)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://arxiv.org/abs/2509.22622)
 
