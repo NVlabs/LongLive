@@ -75,12 +75,18 @@ cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
 
 ## Models
 
-| LongLive-Plug | Directory | Task Category |
-| --- | --- | ---: |
-| LongLive-Plug-Wan2.2-TI2V-5B | [`LongLive-Plug/`](LongLive-Plug) | xxx |
-| LongLive-Plug-Wan2.2-TI2V-5B-cfg | [`LongLive-Plug/`](LongLive-Plug) | xxx |
-| xxx | [`LongLive-Plug/`](LongLive-Plug) | xxx |
+[LongLive-Plug model collection](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug)
 
+| LongLive-Plug | Directory | Task Category |
+| --- | --- | --- |
+| [LongLive-Plug-MiniMax-H3-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step) | [`LongLive-Plug/`](LongLive-Plug) | World models; ControlNet / structure; Camera / trajectory; Editing / restoration; Subject / avatar |
+| [LongLive-Plug-MiniMax-H3-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-cfg) | [`LongLive-Plug/`](LongLive-Plug) | Audio-video generation (CFG-only guidance control) |
+| [LongLive-Plug-Wan2.1-T2V-14B-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.1-T2V-14B-few-step) | [`LongLive-Plug/`](LongLive-Plug) | World models; Robotics; ControlNet / structure; Camera / trajectory; Editing / restoration; Subject / avatar; Audio / RGBA outputs; Domain / style / quality |
+| [LongLive-Plug-Wan2.1-T2V-14B-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.1-T2V-14B-cfg) | [`LongLive-Plug/`](LongLive-Plug) | World models; Robotics; ControlNet / structure; Camera / trajectory; Editing / restoration; Subject / avatar; Audio / RGBA outputs; Domain / style / quality |
+| [LongLive-Plug-Wan2.2-TI2V-5B-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.2-TI2V-5B-few-step) | [`LongLive-Plug/`](LongLive-Plug) | World models; Robotics; ControlNet / structure; Camera / trajectory; Editing / restoration; Subject / avatar; Audio / RGBA outputs; Domain / style / quality |
+| [LongLive-Plug-Wan2.2-TI2V-5B-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.2-TI2V-5B-cfg) | [`LongLive-Plug/`](LongLive-Plug) | World models; Robotics; ControlNet / structure; Camera / trajectory; Editing / restoration; Subject / avatar; Audio / RGBA outputs; Domain / style / quality |
+
+Task categories follow the paper appendix, **Complete Transfer Coverage and Additional Cases**. Wan coverage includes both few-step and CFG transfer. MiniMax-H3 downstream coverage uses the few-step adapter; its CFG adapter is evaluated separately on the base model for adjustable guidance.
 
 | Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
 | --- | --- | ---: | ---: | ---: | :---: |
