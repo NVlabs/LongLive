@@ -8,12 +8,12 @@
 generations of the project, each in its own directory with its own code,
 documentation and model weights.
 
-![Paper](https://img.shields.io/badge/Paper-LongLive--Plug_(coming_soon)-red)
-[![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-brown)](https://arxiv.org/abs/2605.18739)
+![Paper](https://img.shields.io/badge/Paper-LongLive--Plug_(coming_soon)-brown)
+[![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-red)](https://arxiv.org/abs/2605.18739)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://arxiv.org/abs/2509.22622)
 
-[![Demo LongLive-Plug](https://img.shields.io/badge/Demo-LongLive--Plug-red)](https://nvlabs.github.io/LongLive/LongLive-Plug/)
-[![Demo LongLive 2.0](https://img.shields.io/badge/Demo-LongLive_2.0-brown)](https://nvlabs.github.io/LongLive/LongLive2/)
+[![Demo LongLive-Plug](https://img.shields.io/badge/Demo-LongLive--Plug-brown)](https://nvlabs.github.io/LongLive/LongLive-Plug/)
+[![Demo LongLive 2.0](https://img.shields.io/badge/Demo-LongLive_2.0-red)](https://nvlabs.github.io/LongLive/LongLive2/)
 [![Demo LongLive 1.0](https://img.shields.io/badge/Demo-LongLive_1.0-orange)](https://nvlabs.github.io/LongLive/)
 
 ## What's in this repository
