@@ -42,10 +42,6 @@ Model downloads are available in the [Hugging Face collection](https://huggingfa
 
 Adapters are trained separately for each backbone and reused across compatible downstream models within that family.
 
-## News
-
-- **2026.09.28** — We release LongLive-Plug training and inference code with four recipes covering CFG and few-step distillation.
-
 ## Highlights
 
 - **Once-for-all distillation.** Learn a capability on a base model and reuse it across compatible descendants, including models with added conditioning branches or expanded output channels.
