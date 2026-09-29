@@ -40,7 +40,7 @@ Weian Mao, Bryan Chu, Song Han, Yukang Chen
 
 Model downloads are available in the [Hugging Face collection](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug). **Training code for MiniMax-H3 will be released later.**
 
-Adapters are trained separately for each backbone and reused across compatible downstream models within that family. The video gallery below shows **eight selected downstream examples across the three backbones**.
+Adapters are trained separately for each backbone and reused across compatible downstream models within that family.
 
 ## News
 
@@ -64,8 +64,6 @@ Specialized video models often repeat distillation for each new task. **LongLive
 CFG and few-step distillation are decoupled, so guidance strength can be adjusted without rescaling the few-step adapter. Long-context distillation learns to correct errors accumulated during autoregressive rollouts. Reuse is scoped to compatible models within each backbone family; long-context transfer additionally requires causal autoregressive inference.
 
 ## Video gallery
-
-**8 selected cases** from our [project page](https://nvlabs.github.io/LongLive/LongLive-Plug/), with the original native / LongLive-Plug video pair for each case. Click a thumbnail to open its video.
 
 <details open>
 <summary><strong>Wan2.1 · 14B — 3 selected cases</strong></summary>
@@ -133,21 +131,6 @@ python scripts/download_assets.py
 ```
 
 ### How to run inference
-
-For a base-model smoke test, download a CFG-only LoRA adapter and generate a video with its original 50-step schedule. For **4-step downstream inference**, see [transfer inference](#transfer-inference-on-downstream-video-models) below.
-
-```bash
-hf download Perflow-Shuai/Reproduce-Wan2.2-5B-CFG5-to-CFG1-50Step-LoRA-r64-iter500 \
-  adapter_model.safetensors --local-dir adapters/wan22_cfg
-
-python inference.py \
-  --config configs/wan22_cfg.yaml \
-  --checkpoint adapters/wan22_cfg/adapter_model.safetensors \
-  --prompt "A compact silver robot walks through a clean robotics lab." \
-  --output outputs/robot
-```
-
-Use the matching config and adapter for other models. Videos are saved to the output directory.
 
 #### Transfer inference on downstream video models
 
