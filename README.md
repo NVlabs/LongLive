@@ -77,9 +77,9 @@ cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
 
 | LongLive-Plug | Directory | Task Category |
 | --- | --- | ---: |
-| MiniMax-H3 | [`LongLive-Plug/`](LongLive-Plug) | xxx |
-| Wan2.2-TI2V-5B | [`LongLive-Plug/`](LongLive-Plug) | xxx |
-| Wan2.1-14B | [`LongLive-Plug/`](LongLive-Plug) | xxx |
+| LongLive-Plug-Wan2.2-TI2V-5B | [`LongLive-Plug/`](LongLive-Plug) | xxx |
+| LongLive-Plug-Wan2.2-TI2V-5B-cfg | [`LongLive-Plug/`](LongLive-Plug) | xxx |
+| xxx | [`LongLive-Plug/`](LongLive-Plug) | xxx |
 
 
 | Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
