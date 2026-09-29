@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f4f2">
+<meta name="description" content="LongLive-Plug: reusable few-step, CFG and long-context LoRAs. Explore the idea, interactive guidance sweeps, long rollouts and 18 selected paired examples across three backbone families.">
+<title>LongLive-Plug: Once-for-All Distillation for Video Generation</title>
+<link rel="icon" href="assets/plug.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="overview.css"><link rel="stylesheet" href="method.css"><link rel="stylesheet" href="release.css">
+<script src="release.js" defer></script><script src="catalog.js" defer></script><script src="story.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#overview">Skip to content</a>
+<aside class="sidebar">
+ <a class="brand" href="#publication"><span class="brand-icon">↳</span><span>LongLive<span class="brand-suffix">-Plug</span></span></a>
+ <p class="sidebar-caption">SMALL ADAPTERS.<br>MORE POSSIBILITIES.</p>
+ <nav aria-label="Chapters">
+  <a href="#overview" class="active"><span>01</span> Overview</a><a href="#method"><span>02</span> The method</a><a href="#transfer"><span>03</span> Downstream transfer</a><a href="#coverage"><span>04</span> Transfer coverage</a><a href="#long-context"><span>05</span> Long context</a><a href="#comparison"><span>06</span> Comparison</a><a href="#bibtex"><span>07</span> BibTeX</a>
+ </nav>
+ <div class="sidebar-bottom"><button id="motion-toggle" class="motion-toggle" aria-pressed="false">Ⅱ <span>Pause motion</span></button><button class="film-trigger text-link">Watch the demo film ↗</button><p>Train per backbone.<br>Reuse within its family.</p><span class="edition">RESEARCH DEMO / 2026</span></div>
+</aside>
+<main>
+ <header class="publication-header" id="publication" aria-labelledby="publication-title">
+  <h1 id="publication-title"><span class="publication-name">LongLive-Plug:</span> Once-for-All Distillation for Video Generation</h1>
+  <div class="publication-authors" aria-label="Authors">
+    <span>Shuai Yang<sup>*</sup></span>
+    <span>Luozhou Wang<sup>*</sup></span>
+    <span>Wei Huang</span>
+    <span>ZhiFei Chen</span>
+    <span>Bohan Zhang</span>
+    <span>Xiao Fu</span>
+    <span>Qianli Ma</span>
+    <span>Chen-Hsuan Lin</span>
+    <span>Weian Mao</span>
+    <span>Bryan Chu</span>
+    <span>Song Han</span>
+    <span>Yukang Chen</span>
+  </div>
+  <p class="publication-affiliation">NVIDIA</p>
+  <p class="publication-contribution"><sup>*</sup> Equal contribution</p>
+  <nav class="publication-links" aria-label="Paper and code">
+   <a id="paper-link" class="publication-link" role="link" aria-disabled="true" title="Paper link coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z M14 3v5h4 M9 12h6 M9 16h6"/></svg>Paper</a>
+   <a id="code-link" class="publication-link" role="link" aria-disabled="true" title="Code link coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6 M16 6l6 6-6 6 M14 3l-4 18"/></svg>Code</a>
+  </nav>
+ </header>
+
+ <section id="overview" class="chapter overview">
+  <div class="eyebrow"><span class="green-dot"></span> LONG LIVE THE MODELS YOU BUILD.</div>
+  <div class="hero-heading"><h2>Distill once. <span>Unlock every task.</span></h2><div class="hero-side"><p>Developers build specialized video models on top of a shared backbone. Why should every downstream task need its own distillation?</p><a href="#method" class="text-link">Meet LongLive-Plug <span>↓</span></a></div></div>
+  <div class="overview-board overview-v3 overview-compact overview-flow" id="overview-animation" aria-label="Foundation model to downstream specialization and per-task distillation, versus reusable LoRAs transferred from each foundation model">
+   <div class="overview-lane traditional">
+    <div class="lane-heading"><h3>Task-specific distillation</h3><span class="sr-only" id="serial-count">0 / 3 ready</span></div>
+    <div class="ov-foundation"><strong>Foundation models</strong></div>
+    <div class="ov-development" id="overview-development"><span class="ov-stage-arrow" aria-hidden="true">↓</span><div><strong>Fine-tune for each task</strong><small class="sr-only" id="development-status">Developing downstream models…</small></div></div>
+    <div class="ov-fanout serial-fanout" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div id="serial-tasks" class="serial-tasks"></div>
+    <div class="more-tasks"><b>···</b></div>
+    <p class="lane-summary" id="serial-status">Train every task</p>
+   </div>
+   <div class="overview-lane plug-route">
+    <div class="lane-heading"><h3>LongLive-Plug</h3><span class="sr-only" id="parallel-count">0 / 6 ready</span></div>
+    <div class="ov-foundation"><strong>Foundation models</strong></div>
+    <div class="ov-distill-once"><span class="ov-stage-arrow" aria-hidden="true">↓</span><div><strong>Distill once</strong><small class="sr-only" id="backbone-training">Train reusable capabilities · 0%</small><div id="backbone-progress" class="ov-training-progress backbone-progress" role="progressbar" aria-label="Base-model distillation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div></div></div>
+    <div class="ov-lora-bank"><div class="three-plugs" id="overview-plugs"><span class="lora-chip step"><strong>Few-step LoRA</strong></span><span class="lora-chip cfg"><strong>CFG LoRA</strong></span><span class="lora-chip long"><strong>Long-context LoRA</strong></span></div></div>
+    <div class="transfer-caption"><span>↓</span> Plug &amp; play</div>
+    <div class="overview-flight-layer" id="overview-flight-layer" aria-hidden="true"></div>
+    <div class="parallel-tasks" id="parallel-tasks"></div>
+    <div class="more-tasks"><b>···</b></div>
+    <p class="lane-summary" id="parallel-status">No downstream training</p>
+   </div>
+  </div>
+  <div class="board-footer"><span class="sr-only">Illustrative workflows · recorded task previews · adapters are specific to each backbone</span><div><button id="overview-sound" class="overview-sound" aria-pressed="false">♪ Speech sound off</button><button id="overview-replay" class="text-link">↺ Replay</button></div></div>
+ </section>
+ <section id="method" class="chapter">
+  <header class="section-heading"><div><p class="eyebrow">02 / THE METHOD</p><h2>One backbone.<br>Three reusable capabilities.</h2></div><p>Distill guidance, sampling and long-context behavior into separate LoRAs. Compose the capabilities you need.</p></header>
+  <div class="training-map" id="training-map"><div class="base-node"><span class="node-icon">◈</span><div><strong>Base video model</strong><small>Train a separate adapter set for each backbone</small></div></div><svg class="training-lines" viewBox="0 0 900 48" preserveAspectRatio="none" aria-hidden="true"><path d="M450 0 V22 H150 V48 M450 22 V48 M450 22 H750 V48"/></svg><div class="capability-grid"><div class="capability step"><span>01</span><strong>Few-step LoRA</strong><p>Fewer sampling steps.</p></div><div class="capability cfg"><span>02</span><strong>CFG LoRA</strong><p>Guidance you can adjust.</p></div><div class="capability long"><span>03</span><strong>Long-context LoRA</strong><p>Quality that lasts longer.</p></div></div></div>
+  <div class="method-demo cfg-comparison" id="method-demo">
+   <div class="cfg-explanation"><div><span class="mini-label">DISTILLED GUIDANCE</span><h3>One adapter. Three strengths.</h3></div><p><strong>λ<sub>cfg</sub> is the CFG LoRA weight.</strong> Guidance is distilled into <strong>one conditional forward per sampling step</strong>. The scales below show adapter weights, not the model’s native CFG setting.</p></div>
+   <div id="base-cases"></div>
+   <div class="fewstep-composition"><span class="lora-chip cfg">CFG LoRA</span><b>+</b><span class="lora-chip step">Few-step LoRA</span><span class="equation-arrow">→</span><div><strong>50 → 4 steps</strong><small>12.5× fewer sampling steps</small></div><p>Compose the two adapters.<br>See the measured downstream outputs below.</p></div>
+  </div>
+ </section>
+ <section id="transfer" class="chapter">
+  <header class="section-heading"><div><p class="eyebrow">03 / DOWNSTREAM TRANSFER</p><h2>Same adapters.<br>New worlds to control.</h2></div><p>Move the few-step and CFG LoRAs into a downstream model in the same family. Keep sampling fast; adjust guidance independently.</p></header>
+  <div class="transfer-equation"><span class="model-chip">Downstream model</span><b>+</b><span class="lora-chip step">Few-step <small>λ<sub>step</sub> = 1</small></span><b>+</b><span class="lora-chip cfg">CFG <small>λ<sub>cfg</sub> adjustable</small></span><span class="equation-arrow">→</span><strong>Fast & controllable</strong></div>
+  <div id="transfer-demos"></div>
+  <div class="callout"><span>↳</span><p><strong>No downstream retraining.</strong> These adapters are reused from the base model. All three results are shown together: only the distilled CFG LoRA weight changes, while the few-step weight stays fixed at 1.</p></div>
+ </section>
+ <section id="coverage" class="chapter">
+  <header class="section-heading"><div><p class="eyebrow">04 / TRANSFER COVERAGE</p><h2>A little plug.<br>A much wider world.</h2></div><p>18 selected downstream models. Three backbone families.<br>One adapter set per backbone, reused across its family’s tasks.</p></header>
+  <div class="coverage-toolbar"><div class="family-jumps"><a href="#family-wan21">Wan2.1 · 14B <span>6</span></a><a href="#family-wan22">Wan2.2 · 5B <span>6</span></a><a href="#family-h3">MiniMax-H3 <span>6</span></a></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a model or task…" aria-label="Search supported models"></label></div>
+  <div id="coverage-families"></div><p class="caption">Each pair preserves the source task’s settings. Each family shows six selected models, with one paired example per model. Open a card for its prompt, sampling settings and notes. Native schedules vary; MiniMax-H3 uses its published four-forward configuration.</p>
+ </section>
+ <section id="long-context" class="chapter">
+  <header class="section-heading"><div><p class="eyebrow">05 / LONG CONTEXT</p><h2>Keep the detail.<br>Long after the first frame.</h2></div><p>For causal autoregressive models, transfer the long-context LoRA to reduce quality degradation over extended rollouts.</p></header>
+  <div id="long-tabs" class="tabs large-tabs" role="group" aria-label="Long-context model"></div><div id="long-demo"></div>
+  <p class="caption">Selected late-rollout excerpts from the paper. Scores average seven VBench dimensions across all evaluation cases; this is not the official VBench overall score. Long-context transfer uses models that already support causal autoregressive generation.</p>
+ </section>
+ <section id="comparison" class="chapter">
+  <header class="section-heading"><div><p class="eyebrow">06 / COMPARISON</p><h2>Task-specific quality.<br>Without task-specific training.</h2></div><p>Compare recorded outputs and benchmark results against per-task distillation. LongLive-Plug transfers directly from the backbone.</p></header>
+  <div id="comparison-demos"></div>
+  <div class="closing-statement"><span class="brand-icon">↳</span><p>Train once.<br><strong>Let your models do more.</strong></p><a href="#overview" class="round-button" aria-label="Back to overview">↑</a></div>
+ </section>
+ <section id="bibtex" class="chapter" aria-labelledby="bibtex-title">
+  <header class="section-heading"><div><p class="eyebrow">07 / CITATION</p><h2 id="bibtex-title">BibTeX</h2></div></header>
+  <pre class="bibtex-block" aria-label="BibTeX citation"><code id="bibtex-content"></code></pre>
+ </section>
+ <footer><span>LongLive-Plug / Interactive research demo</span></footer>
+</main>
+<dialog id="case-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><button class="close-button" id="close-case" aria-label="Close comparison">×</button><p class="eyebrow" id="dialog-family"></p><h2 id="dialog-title"></h2><p id="dialog-task"></p><div id="dialog-pair" class="dialog-pair"></div><div class="player-controls"><button id="pair-play">Ⅱ Pause</button><label><span class="sr-only">Seek comparison</span><input id="pair-seek" type="range" min="0" max="1000" value="0"></label><span id="pair-time">0:00</span><select id="pair-rate" aria-label="Playback speed"><option value="1">1×</option><option value="1.25">1.25×</option><option value="2">2×</option></select><button id="pair-fullscreen" aria-label="Fullscreen comparison">⛶</button></div><p id="pair-status" class="caption" role="status"></p><details><summary>Prompt & inference details</summary><p id="case-prompt"></p><p id="case-protocol"></p><p id="case-note"></p></details></div></dialog>
+<dialog id="film-dialog" aria-labelledby="film-title"><div class="dialog-shell"><button id="close-film" class="close-button" aria-label="Close film">×</button><p class="eyebrow">THE DEMO FILM</p><h2 id="film-title">LongLive-Plug in motion.</h2><video id="film" controls playsinline preload="none" poster="posters/film.jpg" src="media/longlive-plug-film.mp4"></video></div></dialog>
+<noscript><p class="noscript">Please enable JavaScript to play the research animations and explore the paired examples.</p></noscript>
+</body>
+</html>
