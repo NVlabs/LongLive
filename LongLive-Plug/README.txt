@@ -3,7 +3,7 @@ LongLive-Plug — Release demo
 Publish this entire folder on a static web host, or open index.html locally in a current Chrome, Edge, Firefox or Safari browser.
 All media, animations and styles are included. No internet connection, installation or web server is required.
 
-Coverage: 3 backbone families, 6 selected downstream models per family, 1 paired example per model.
+Coverage: 53 downstream models across 3 backbone families (MiniMax-H3: 6; Wan2.2: 24; Wan2.1: 23), with 1 paired example per model.
 Method: Milk splash. Downstream guidance: SCOPE Autumn Temple and Video Continuation Pink Lotus.
 Each retained example shows all three CFG LoRA weights. Long-context excerpts and qualitative/quantitative comparisons are also included.
 Use the “Watch the demo film” link to watch the narrated film on YouTube (internet connection required). Use “Speech sound off/on” to hear the overview audio example.

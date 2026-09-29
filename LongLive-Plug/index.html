@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f4f2">
-<meta name="description" content="LongLive-Plug: reusable few-step, CFG and long-context LoRAs. Explore the idea, interactive guidance sweeps, long rollouts and 18 selected paired examples across three backbone families.">
+<meta name="description" content="LongLive-Plug: reusable few-step, CFG and long-context LoRAs. Explore the idea, interactive guidance sweeps, long rollouts and 53 selected paired examples across three backbone families.">
 <title>LongLive-Plug: Once-for-All Distillation for Video Generation</title>
 <link rel="icon" href="assets/plug.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="overview.css"><link rel="stylesheet" href="method.css"><link rel="stylesheet" href="release.css">
 <script src="release.js" defer></script><script src="catalog.js" defer></script><script src="story.js" defer></script><script src="app.js" defer></script>
@@ -70,9 +70,9 @@
   <div class="board-footer"><span class="sr-only">Illustrative workflows · recorded task previews · adapters are specific to each backbone</span><div><button id="overview-sound" class="overview-sound" aria-pressed="false">♪ Speech sound off</button><button id="overview-replay" class="text-link">↺ Replay</button></div></div>
  </section>
  <section id="coverage" class="chapter">
-  <header class="section-heading"><div><p class="eyebrow">02 / TRANSFER COVERAGE</p><h2>A little plug.<br>A much wider world.</h2></div><p>18 selected downstream models. Three backbone families.<br>One adapter set per backbone, reused across its family’s tasks.</p></header>
-  <div class="coverage-toolbar"><div class="family-jumps"><a href="#family-h3">MiniMax-H3 <span>6</span></a><a href="#family-wan22">Wan2.2 · 5B <span>6</span></a><a href="#family-wan21">Wan2.1 · 14B <span>6</span></a></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a model or task…" aria-label="Search supported models"></label></div>
-  <div id="coverage-families"></div><p class="caption">Each pair preserves the source task’s settings. Each family shows six selected models, with one paired example per model. Open a card for its prompt, sampling settings and notes. Native schedules vary; MiniMax-H3 uses its published four-forward configuration.</p>
+  <header class="section-heading"><div><p class="eyebrow">02 / TRANSFER COVERAGE</p><h2>A little plug.<br>A much wider world.</h2></div><p>53 downstream models. Three backbone families.<br>One adapter set per backbone, reused across its family’s tasks.</p></header>
+  <div class="coverage-toolbar"><div class="family-jumps"><a href="#family-h3">MiniMax-H3 <span>6</span></a><a href="#family-wan22">Wan2.2 · 5B <span>24</span></a><a href="#family-wan21">Wan2.1 · 14B <span>23</span></a></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a model or task…" aria-label="Search supported models"></label></div>
+  <div id="coverage-families"></div><p class="caption">Each pair preserves the source task’s settings. MiniMax-H3 shows 6 models, Wan2.2 shows 24, and Wan2.1 shows 23, with one paired example per model. Open a card for its prompt, sampling settings and notes. Native schedules vary; MiniMax-H3 uses its published four-forward configuration.</p>
  </section>
  <section id="method" class="chapter">
   <header class="section-heading"><div><p class="eyebrow">03 / THE METHOD</p><h2>One backbone.<br>Three reusable capabilities.</h2></div><p>Distill guidance, sampling and long-context behavior into separate LoRAs. Compose the capabilities you need.</p></header>
