@@ -15,7 +15,7 @@
  <nav aria-label="Chapters">
   <a href="#overview" class="active"><span>01</span> Overview</a><a href="#method"><span>02</span> The method</a><a href="#transfer"><span>03</span> Downstream transfer</a><a href="#coverage"><span>04</span> Transfer coverage</a><a href="#long-context"><span>05</span> Long context</a><a href="#comparison"><span>06</span> Comparison</a><a href="#bibtex"><span>07</span> BibTeX</a>
  </nav>
- <div class="sidebar-bottom"><button id="motion-toggle" class="motion-toggle" aria-pressed="false">Ⅱ <span>Pause motion</span></button><button class="film-trigger text-link">Watch the demo film ↗</button><p>Train per backbone.<br>Reuse within its family.</p><span class="edition">RESEARCH DEMO / 2026</span></div>
+ <div class="sidebar-bottom"><button id="motion-toggle" class="motion-toggle" aria-pressed="false">Ⅱ <span>Pause motion</span></button><a class="film-trigger text-link" href="https://youtu.be/pXNrJvBZvZU" target="_blank" rel="noopener noreferrer">Watch the demo film ↗</a><p>Train per backbone.<br>Reuse within its family.</p><span class="edition">RESEARCH DEMO / 2026</span></div>
 </aside>
 <main>
  <header class="publication-header" id="publication" aria-labelledby="publication-title">
@@ -106,7 +106,6 @@
  <footer><span>LongLive-Plug / Interactive research demo</span></footer>
 </main>
 <dialog id="case-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><button class="close-button" id="close-case" aria-label="Close comparison">×</button><p class="eyebrow" id="dialog-family"></p><h2 id="dialog-title"></h2><p id="dialog-task"></p><div id="dialog-pair" class="dialog-pair"></div><div class="player-controls"><button id="pair-play">Ⅱ Pause</button><label><span class="sr-only">Seek comparison</span><input id="pair-seek" type="range" min="0" max="1000" value="0"></label><span id="pair-time">0:00</span><select id="pair-rate" aria-label="Playback speed"><option value="1">1×</option><option value="1.25">1.25×</option><option value="2">2×</option></select><button id="pair-fullscreen" aria-label="Fullscreen comparison">⛶</button></div><p id="pair-status" class="caption" role="status"></p><details><summary>Prompt & inference details</summary><p id="case-prompt"></p><p id="case-protocol"></p><p id="case-note"></p></details></div></dialog>
-<dialog id="film-dialog" aria-labelledby="film-title"><div class="dialog-shell"><button id="close-film" class="close-button" aria-label="Close film">×</button><p class="eyebrow">THE DEMO FILM</p><h2 id="film-title">LongLive-Plug in motion.</h2><video id="film" controls playsinline preload="none" poster="posters/film.jpg" src="media/longlive-plug-film.mp4"></video></div></dialog>
 <noscript><p class="noscript">Please enable JavaScript to play the research animations and explore the paired examples.</p></noscript>
 </body>
 </html>
