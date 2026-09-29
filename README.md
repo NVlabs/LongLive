@@ -220,4 +220,6 @@ Related project:
 ## Acknowledgement
 
 - [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the AR training codebase and formulation we build upon.
+- [Wan2.1](https://github.com/Wan-Video/Wan2.1): the video diffusion backbone used in LongLive 1.0 and LongLive-Plug.
 - [Wan2.2](https://github.com/Wan-Video/Wan2.2): the base video diffusion model components used in this release.
+- [MiniMax-H3](https://github.com/MiniMax-AI/MiniMax-H3): the audio-video generation backbone used in LongLive-Plug.
