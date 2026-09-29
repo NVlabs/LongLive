@@ -8,7 +8,7 @@ const familyName = id => ({wan21:'Wan2.1 · 14B',wan22:'Wan2.2 · TI2V-5B',h3:'M
 const groups = new Set();
 const modal = $('case-dialog');
 let currentDialog = null, dialogGroup = null, opener = null;
-const canPlay = () => !state.paused && !document.hidden && !modal.open && !$('film-dialog').open;
+const canPlay = () => !state.paused && !document.hidden && !modal.open;
 function video(a, extra='') { return `<video muted playsinline preload="none" poster="${esc(a.poster)}" data-src="${esc(a.src)}" ${extra}></video>`; }
 function tile(a,label,detail='',featured=false,caption='') {return `<div class="video-tile ${featured?'featured':''}"><div class="tile-label"><span>${esc(label)}</span><small>${esc(detail)}</small></div>${video(a)}${caption?`<p class="tile-caption">${esc(caption)}</p>`:''}</div>`;}
 function media(c,ours=true){return {src:ours?c.ours:c.native,poster:ours?c.poster:c.nativePoster};}
@@ -22,7 +22,7 @@ function attachGroup(root, {sync=true,dialog=false}={}){
 }
 const groupObserver=new IntersectionObserver(entries=>entries.forEach(({target,isIntersecting})=>{const g=target._group;if(!g)return;g.visible=isIntersecting;if(isIntersecting){loadGroup(g);if(target.classList.contains('transfer-stage'))target.classList.add('transfer-ready');}refreshGroup(g);if(isIntersecting&&target.classList.contains('coverage-card'))revealCard(target);}),{threshold:.12});
 function loadGroup(g){g.videos.forEach(v=>{if(!v.getAttribute('src')){v.src=v.dataset.src;v.load();}});}
-function playingAllowed(g){return g.visible&&!g.paused&&!document.hidden&&(g.dialog?!$('film-dialog').open:canPlay());}
+function playingAllowed(g){return g.visible&&!g.paused&&!document.hidden&&(g.dialog||canPlay());}
 function refreshGroup(g){
  const allowed=playingAllowed(g);const ready=!g.sync||g.videos.every(v=>v.readyState>=2);
  g.videos.forEach(v=>{if(allowed&&ready&&v.paused)v.play().catch(()=>{});else if(!allowed||!ready)v.pause();});
@@ -282,10 +282,8 @@ function closeModel(){destroyGroup($('dialog-pair'));dialogGroup=null;currentDia
 $('close-case').onclick=closeModel;modal.addEventListener('cancel',e=>{e.preventDefault();closeModel();});$('pair-play').onclick=()=>{if(!dialogGroup)return;dialogGroup.paused=!dialogGroup.paused;$('pair-play').textContent=dialogGroup.paused?'▷ Play':'Ⅱ Pause';refreshGroup(dialogGroup);};$('pair-seek').oninput=()=>{if(!dialogGroup)return;const d=Math.min(...dialogGroup.videos.map(v=>v.duration));if(Number.isFinite(d))dialogGroup.videos.forEach(v=>v.currentTime=Number($('pair-seek').value)/1000*d);};$('pair-rate').onchange=()=>dialogGroup?.videos.forEach(v=>v.playbackRate=Number($('pair-rate').value));$('pair-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('dialog-pair').requestFullscreen();}catch{$('pair-status').textContent='Fullscreen is unavailable here; the comparison remains playable.';}};
 function fromHash(){if(location.hash.startsWith('#model=')){const p=new URLSearchParams(location.hash.slice(1));openModel(p.get('model'),p.get('case'),false);}}
 window.addEventListener('hashchange',fromHash);window.addEventListener('popstate',fromHash);
-function closeFilm(){$('film').pause();$('film-dialog').close();document.body.classList.remove('modal-open');refreshAll();}
-document.querySelectorAll('.film-trigger').forEach(b=>b.onclick=()=>{$('film-dialog').showModal();document.body.classList.add('modal-open');refreshAll();$('film').play().catch(()=>{});});$('close-film').onclick=closeFilm;$('film-dialog').addEventListener('cancel',e=>{e.preventDefault();closeFilm();});
-for(const d of [modal,$('film-dialog')])d.addEventListener('click',e=>{if(e.target!==d)return;const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d===modal?closeModel():closeFilm();});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)$('film').pause();refreshAll();});reduced.addEventListener('change',e=>{state.paused=e.matches;refreshAll();});
+modal.addEventListener('click',e=>{if(e.target!==modal)return;const r=modal.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeModel();});
+document.addEventListener('visibilitychange',()=>{refreshAll();});reduced.addEventListener('change',e=>{state.paused=e.matches;refreshAll();});
 const sections=[...document.querySelectorAll('main>.chapter')];let navTick=false;
 window.addEventListener('scroll',()=>{if(navTick)return;navTick=true;requestAnimationFrame(()=>{navTick=false;let active=sections[0];for(const s of sections)if(s.getBoundingClientRect().top<innerHeight*.35)active=s;document.querySelectorAll('.sidebar nav a').forEach(a=>{const on=a.hash==='#'+active.id;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});});},{passive:true});
 initOverview();refreshAll();fromHash();requestAnimationFrame(syncGroups);
