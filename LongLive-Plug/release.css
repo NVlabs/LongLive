@@ -7,7 +7,7 @@
 .publication-authors sup { font-size: 11px; margin-left: 2px; }
 .publication-affiliation { margin-top: 18px; font-size: 21px; font-weight: 600; letter-spacing: .03em; color: var(--ink); }
 .publication-contribution { margin-top: 7px; font-size: 12px; }
-.publication-links { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
+.publication-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
 .publication-link { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-width: 112px; padding: 10px 22px; border-radius: 24px; background: #26342b; color: white; font-size: 15px; font-weight: 550; }
 .publication-link svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
 .publication-link[aria-disabled="true"] { cursor: default; }
