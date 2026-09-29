@@ -9,7 +9,7 @@
 
 #### Coding Guidelines
 
-- All source code contributions must strictly adhere to the [LongLive Coding Guidelines](CODING-GUIDELINES.md).
+- All source code contributions must strictly adhere to the LongLive Coding Guidelines.
 
 - In addition, please follow the existing conventions in the relevant file, submodule, module, and project when you add new code or when you extend/fix existing functionality.
 
