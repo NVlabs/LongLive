@@ -26,6 +26,10 @@
 
 
 ## TABLE OF CONTENTS
+
+> **Note** — LongLive 1.0 lives in the `LongLive1.0/` directory of this repository.
+> All paths on this page are relative to it.
+
 1. [News](#news)
 2. [Highlights](#highlights)
 3. [Introduction](#introduction)

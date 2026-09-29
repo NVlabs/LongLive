@@ -11,11 +11,10 @@ Weian Mao, Bryan Chu, Song Han, Yukang Chen
 
 **NVIDIA** · <sup>&#42;</sup>Equal contribution
 
-<!-- PUBLICATION LINKS: Replace each unlinked Coming soon badge with [![Label](badge URL)](actual URL) when ready. -->
 ![Paper — coming soon](https://img.shields.io/badge/Paper-Coming_soon-B31B1B?style=flat-square)
-[![Code](https://img.shields.io/badge/GitHub-Code-181717?style=flat-square&logo=github)](https://github.com/AndysonYs/LongLive-LoRA/tree/release/longlive-plug)
+[![Code](https://img.shields.io/badge/GitHub-Code-181717?style=flat-square&logo=github)](https://github.com/NVlabs/LongLive/tree/main/LongLive-Plug)
 [![Hugging Face Models](https://img.shields.io/badge/🤗_Hugging_Face-Models-FFD21E?style=flat-square)](https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5)
-![Project page — coming soon](https://img.shields.io/badge/Project_Page-Coming_soon-4B8BBE?style=flat-square)
+[![Project page](https://img.shields.io/badge/Project_Page-Online-4B8BBE?style=flat-square)](https://nvlabs.github.io/LongLive/LongLive-Plug/)
 [![Video](https://img.shields.io/badge/▶_Video-Watch_demo-8E44AD?style=flat-square)](https://youtu.be/pXNrJvBZvZU)
 
 </div>
@@ -128,6 +127,9 @@ Each pair preserves the project page’s selected case, original video, poster a
 
 ## Getting Started
 
+> **Note** — LongLive-Plug lives in the `LongLive-Plug/` directory of this repository.
+> All commands on this page assume it is your working directory.
+
 ### How to install
 
 Use Python 3.12 with CUDA-enabled PyTorch 2.9.1 and torchvision 0.24.1. Install the dependencies and download the base models and training prompts:
@@ -200,8 +202,6 @@ If you find this work useful, please consider citing:
   year   = {2026}
 }
 ```
-
-<!-- Add the paper URL / arXiv identifier to the citation once available. -->
 
 ## License and Acknowledgements
 

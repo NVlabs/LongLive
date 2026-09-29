@@ -5,7 +5,7 @@
 # 🎬 LongLive 2.0: An NVFP4 Parallel Infrastructure for Long Video Generation
 
 [![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-brown)](https://arxiv.org/abs/2605.18739)
-[![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://github.com/NVlabs/LongLive/tree/v1.0)
+[![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](../LongLive1.0)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_RAG-yellow)](https://github.com/qixinhu11/LongLive-RAG)
 [![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=7oQALy32fiU)
 [![Code](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/NVlabs/LongLive)
@@ -14,8 +14,6 @@
 
 
 <div align="center">
-
-<!-- TODO: replace this text block with the final project-page video/demo embed. -->
 
 [![Watch the video](assets/longlive2/first-video-frame.png)](https://www.youtube.com/watch?v=7oQALy32fiU)
 
@@ -28,11 +26,11 @@
 </p>
 
 ## News
-- 🔥 [2026.07.08] We support FP8 inference on LongLive 2.0. Please refer to [here](https://github.com/NVlabs/LongLive#fp8-ptq).
+- 🔥 [2026.07.08] We support FP8 inference on LongLive 2.0. Please refer to [here](#fp8-ptq).
 - 🔥 [2026.06.01] We released [LongLive-RAG](https://github.com/qixinhu11/LongLive-RAG), a general retrieval-augmented framework for long video gen.
 - 🔥 [2026.05.30] LongLive2.0 now supports I2V AR teacher-forcing training and I2V DMD distillation for Wan2.2-TI2V-5B.
 - ⚡ [2026.05.25] We optimized the NVFP4 inference path with fused Triton RoPE/adaLN kernels, reduced KV-cache synchronization overhead, in-place quantized KV-cache updates, faster FP4 KV dequantization, pinned VAE transfers, and safer LoRA-before-quantization setup, improving overall throughput by **18.6%**.
-- 🔥 [2026.05.13] We release **LongLive 2.0**, infra with NVFP4, parallelism and multi-shot for AR training, DMD distillation, and inference (⚡45.7 FPS). The original LongLive 1.0 is now in the [v1.0](https://github.com/NVlabs/LongLive/tree/v1.0) branch.
+- 🔥 [2026.05.13] We release **LongLive 2.0**, infra with NVFP4, parallelism and multi-shot for AR training, DMD distillation, and inference (⚡45.7 FPS). The original LongLive 1.0 now lives in [`LongLive1.0/`](../LongLive1.0).
 - 🔥 [2026.04.12] LongLive supports kv cache compression with [TriAttention](https://github.com/WeianMao/triattention), with 50% KV reduction and no quality drop. Check it [here](https://github.com/WeianMao/triattention/tree/main/longlive)
 - 🎉 [2026.1.27] LongLive is accepted by **ICLR-2026**.
 - 🔥 [2026.1.11] LongLive supports adapting LongLive's original RoPE into KV-cache relative RoPE and generates infinite long videos!
@@ -41,7 +39,7 @@
 
 ## Introduction
 
-**LongLive 1.0**: Real-time Interactive Long Video Generation. [You can find it here](https://github.com/NVlabs/LongLive/tree/v1.0) in our V1.0 branch.
+**LongLive 1.0**: Real-time Interactive Long Video Generation. [You can find it here](../LongLive1.0).
 
 **LongLive 1.0 leaderboard (VBench Quality Score):** [![Papers with Code: #2 on VBench](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge.svg?eval=19478&live=1)](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge-link?eval=19478)
 
@@ -74,6 +72,10 @@
 </p>
 
 ## Getting Started
+
+> **Note** — LongLive 2.0 lives in the `LongLive2.0/` directory of this repository.
+> All commands on this page assume it is your working directory.
+
 - [Full Documentation](https://nvlabs.github.io/LongLive/LongLive2/docs/)
 - [Installation](https://nvlabs.github.io/LongLive/LongLive2/docs/#installation)
 - [NVFP4 Setup](https://nvlabs.github.io/LongLive/LongLive2/docs/#nvfp4-installation)
@@ -84,7 +86,10 @@
 
 The default git clone fetches objects from all branches, including our demopage branch, which contains large assets. For normal use, only the main branch is needed. Please clone only main with:
 
-```git clone --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git```
+```bash
+git clone --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git
+cd LongLive/LongLive2.0
+```
 
 ### Quick Start
 

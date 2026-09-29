@@ -1,0 +1,22 @@
+# Repository-wide ignores only.
+# LongLive1.0/, LongLive2.0/ and LongLive-Plug/ each keep their own
+# .gitignore for rules specific to that codebase.
+
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.venv/
+.env
+.env.*
+*.egg-info/
+build/
+dist/
+*.so
+
+.vscode/
+.idea/
+.DS_Store
