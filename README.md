@@ -137,8 +137,6 @@ Accepts sequential user prompts and generates the corresponding video in real
 time, so a person can steer a long video while it is being produced. The key
 ideas are the attention sink, KV-recache, and streaming long tuning.
 
-**Leaderboard (VBench Quality Score):** [![Papers with Code: #2 on VBench](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge.svg?eval=19478&live=1)](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge-link?eval=19478)
-
 <p align="left" style="border-radius: 10px">
   <img src="LongLive2.0/assets/longlive2/LongLive1_teaser.png" width="80%" alt="LongLive 1.0 overview"/>
 </p>
