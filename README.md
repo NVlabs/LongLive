@@ -18,34 +18,60 @@ documentation and model weights.
 
 | Directory | What it is | Use it when you want to | Venue |
 | --- | --- | --- | --- |
-| [**`LongLive1.0/`**](LongLive1.0) | Real-time interactive long video generation | Type prompts and watch a long video appear in real time, steered as you go | ICLR 2026 |
-| [**`LongLive2.0/`**](LongLive2.0) | An NVFP4 parallel infrastructure for long video generation | Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism | arXiv |
 | [**`LongLive-Plug/`**](LongLive-Plug) | Once-for-all distillation for video generation | Distill a capability once on a base model and reuse it across downstream models, without retraining | Coming soon |
+| [**`LongLive2.0/`**](LongLive2.0) | An NVFP4 parallel infrastructure for long video generation | Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism | arXiv |
+| [**`LongLive1.0/`**](LongLive1.0) | Real-time interactive long video generation | Type prompts and watch a long video appear in real time, steered as you go | ICLR 2026 |
 
 Each directory is self-contained: clone the repository, `cd` into the one you
 need, and follow its own README.
 
 ```bash
 git clone --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git
-cd LongLive/LongLive2.0   # or LongLive1.0, or LongLive-Plug
+cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
 ```
+
+## Demo videos
+
+<table>
+<tr>
+<th width="33%" align="center">LongLive-Plug</th>
+<th width="33%" align="center">LongLive 2.0</th>
+<th width="33%" align="center">LongLive 1.0</th>
+</tr>
+<tr>
+<td width="33%" align="center">
+  <a href="https://youtu.be/pXNrJvBZvZU"><img src="LongLive-Plug/assets/readme/overview-first-frame.png" width="100%" alt="LongLive-Plug overview video — watch on YouTube"></a>
+</td>
+<td width="33%" align="center">
+  <a href="https://www.youtube.com/watch?v=7oQALy32fiU"><img src="LongLive2.0/assets/longlive2/first-video-frame.png" width="100%" alt="LongLive 2.0 overview video — watch on YouTube"></a>
+</td>
+<td width="33%" align="center">
+  <a href="https://www.youtube.com/watch?v=CO1QC7BNvig"><img src="LongLive1.0/assets/video-first-frame.png" width="100%" alt="LongLive 1.0 overview video — watch on YouTube"></a>
+</td>
+</tr>
+<tr>
+<td width="33%" align="center"><sub>Once-for-all distillation: train a capability once, reuse it downstream</sub></td>
+<td width="33%" align="center"><sub>NVFP4 parallel infrastructure for training and inference</sub></td>
+<td width="33%" align="center"><sub>Real-time interactive long video generation</sub></td>
+</tr>
+</table>
+
+<p align="center"><sub>Click a thumbnail to watch on YouTube.</sub></p>
 
 ## Introduction
 
-### LongLive 1.0 — Real-time Interactive Long Video Generation
+### LongLive-Plug — Once-for-All Distillation for Video Generation
 
-Accepts sequential user prompts and generates the corresponding video in real
-time, so a person can steer a long video while it is being produced. The key
-ideas are the attention sink, KV-recache, and streaming long tuning.
-
-**Leaderboard (VBench Quality Score):** [![Papers with Code: #2 on VBench](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge.svg?eval=19478&live=1)](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge-link?eval=19478)
+Separates reusable capabilities from task-specific customization: train
+functional LoRAs on a base model, then attach them to compatible downstream
+models while keeping those models' task-specific weights. Supports
+Wan2.1-14B, Wan2.2-TI2V-5B and MiniMax-H3.
 
 <p align="left" style="border-radius: 10px">
-  <img src="LongLive2.0/assets/longlive2/LongLive1_teaser.png" width="80%" alt="LongLive 1.0 overview"/>
+  <img src="LongLive-Plug/assets/readme/method.png" width="80%" alt="LongLive-Plug method overview"/>
 </p>
 
-→ Code and documentation in [`LongLive1.0/`](LongLive1.0)
-
+→ Code and documentation in [`LongLive-Plug/`](LongLive-Plug)
 ### LongLive 2.0 — An NVFP4 Parallel Infrastructure for Long Video Generation
 
 Training and inference infrastructure built around NVFP4 quantization and
@@ -70,18 +96,20 @@ sequence parallelism.
 
 → Code and documentation in [`LongLive2.0/`](LongLive2.0)
 
-### LongLive-Plug — Once-for-All Distillation for Video Generation
+### LongLive 1.0 — Real-time Interactive Long Video Generation
 
-Separates reusable capabilities from task-specific customization: train
-functional LoRAs on a base model, then attach them to compatible downstream
-models while keeping those models' task-specific weights. Supports
-Wan2.1-14B, Wan2.2-TI2V-5B and MiniMax-H3.
+Accepts sequential user prompts and generates the corresponding video in real
+time, so a person can steer a long video while it is being produced. The key
+ideas are the attention sink, KV-recache, and streaming long tuning.
+
+**Leaderboard (VBench Quality Score):** [![Papers with Code: #2 on VBench](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge.svg?eval=19478&live=1)](https://paperswithcode.co/api/v1/papers/2509.22622/leaderboard-badge-link?eval=19478)
 
 <p align="left" style="border-radius: 10px">
-  <img src="LongLive-Plug/assets/readme/method.png" width="80%" alt="LongLive-Plug method overview"/>
+  <img src="LongLive2.0/assets/longlive2/LongLive1_teaser.png" width="80%" alt="LongLive 1.0 overview"/>
 </p>
 
-→ Code and documentation in [`LongLive-Plug/`](LongLive-Plug)
+→ Code and documentation in [`LongLive1.0/`](LongLive1.0)
+
 
 ## News
 
@@ -101,10 +129,10 @@ Wan2.1-14B, Wan2.2-TI2V-5B and MiniMax-H3.
 
 | Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
 | --- | --- | ---: | ---: | ---: | :---: |
-| [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | [`LongLive1.0/`](LongLive1.0) | 20.7 | 1.3B | 84.87 |  |
 | [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
 | [LongLive-2.0-5B-NVFP4-4Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4) | [`LongLive2.0/`](LongLive2.0) | 29.7 | 5B | 84.51 | ✅ |
 | [LongLive-2.0-5B-NVFP4-2Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2) | [`LongLive2.0/`](LongLive2.0) | 45.7 | 5B | 83.14 | ✅ |
+| [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | [`LongLive1.0/`](LongLive1.0) | 20.7 | 1.3B | 84.87 |  |
 
 LongLive-Plug adapters are published in a separate [Hugging Face collection](https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5).
 
