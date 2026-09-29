@@ -75,11 +75,11 @@ cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
 
 ## Models
 
-| LongLive-Plug | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
-| --- | --- | ---: | ---: | ---: | :---: |
-| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
-| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
-| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
+| LongLive-Plug | Directory | Task Category |
+| --- | --- | ---: |
+| MiniMax-H3 | [`LongLive-Plug/`](LongLive-Plug) | xxx |
+| Wan2.2-TI2V-5B | [`LongLive-Plug/`](LongLive-Plug) | xxx |
+| Wan2.1-14B | [`LongLive-Plug/`](LongLive-Plug) | xxx |
 
 
 | Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
