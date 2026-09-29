@@ -13,7 +13,7 @@ Weian Mao, Bryan Chu, Song Han, Yukang Chen
 
 ![Paper — coming soon](https://img.shields.io/badge/Paper-Coming_soon-B31B1B?style=flat-square)
 [![Code](https://img.shields.io/badge/GitHub-Code-181717?style=flat-square&logo=github)](https://github.com/NVlabs/LongLive/tree/main/LongLive-Plug)
-[![Hugging Face Models](https://img.shields.io/badge/🤗_Hugging_Face-Models-FFD21E?style=flat-square)](https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5)
+[![Hugging Face Models](https://img.shields.io/badge/🤗_Hugging_Face-Models-FFD21E?style=flat-square)](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug)
 [![Project page](https://img.shields.io/badge/Project_Page-Online-4B8BBE?style=flat-square)](https://nvlabs.github.io/LongLive/LongLive-Plug/)
 [![Video](https://img.shields.io/badge/▶_Video-Watch_demo-8E44AD?style=flat-square)](https://youtu.be/pXNrJvBZvZU)
 
@@ -38,7 +38,7 @@ Weian Mao, Bryan Chu, Song Han, Yukang Chen
 2. **Wan2.2-TI2V-5B**
 3. **MiniMax-H3**
 
-Model downloads are available in the [Hugging Face collection](https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5). **Training code for MiniMax-H3 will be released later.**
+Model downloads are available in the [Hugging Face collection](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug). **Training code for MiniMax-H3 will be released later.**
 
 Adapters are trained separately for each backbone and reused across compatible downstream models within that family. The video gallery below shows **eight selected downstream examples across the three backbones**.
 
@@ -153,7 +153,7 @@ Use the matching config and adapter for other models. Videos are saved to the ou
 
 Merge our **Few-Step LoRA at weight `1.0`** and **CFG LoRA at weight `0.5`** into a compatible downstream model, then run **4-step, CFG-free inference**. The CFG LoRA weight controls distilled guidance; the downstream sampler's native guidance scale should be **`1.0`**, with only the conditional forward pass at each step.
 
-For example, use the Wan2.2-TI2V-5B adapters with [SCOPE](https://github.com/z2tong/SCOPE) for action-controlled worlds or FlashMotion for trajectory-controlled generation. Wan2.1-14B adapters can transfer to compatible models such as MagicTryOn and TheDenk Dilated ControlNet. Keep each model's task-specific inputs and conditioning, and select adapters from the **same backbone family** in our [model collection](https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5).
+For example, use the Wan2.2-TI2V-5B adapters with [SCOPE](https://github.com/z2tong/SCOPE) for action-controlled worlds or FlashMotion for trajectory-controlled generation. Wan2.1-14B adapters can transfer to compatible models such as MagicTryOn and TheDenk Dilated ControlNet. Keep each model's task-specific inputs and conditioning, and select adapters from the **same backbone family** in our [model collection](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug).
 
 #### For agent
 
@@ -163,7 +163,7 @@ Copy this instruction into your coding agent in the downstream repository, repla
 Integrate LongLive-Plug into SCOPE (https://github.com/z2tong/SCOPE).
 Use the Wan2.2-TI2V-5B Few-Step and CFG LoRAs from the LongLive-Plug
 model collection:
-https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5
+https://huggingface.co/collections/Efficient-Large-Model/longlive-plug
 
 Merge the Few-Step LoRA with weight 1.0 and the CFG LoRA with weight 0.5
 into the SCOPE DiT checkpoint. Check adapter key mapping, alpha/r scaling,
