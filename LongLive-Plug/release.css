@@ -1,0 +1,33 @@
+/* Release publication masthead and restrained section typography. */
+.publication-header { container-type: inline-size; text-align: center; padding: 38px 24px 46px; max-width: 1120px; margin: 0 auto; }
+.publication-header h1 { font-size: min(3.15cqw, 36px); white-space: nowrap; font-weight: 650; line-height: 1.15; letter-spacing: -.045em; }
+.publication-header .publication-name { color: var(--green-dark); }
+.publication-authors { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 22px; row-gap: 8px; max-width: 820px; margin: 28px auto 0; font-size: 18px; line-height: 1.7; color: #405d32; }
+.publication-authors > span { white-space: nowrap; }
+.publication-authors sup { font-size: 11px; margin-left: 2px; }
+.publication-affiliation { margin-top: 18px; font-size: 21px; font-weight: 600; letter-spacing: .03em; color: var(--ink); }
+.publication-contribution { margin-top: 7px; font-size: 12px; }
+.publication-links { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
+.publication-link { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-width: 112px; padding: 10px 22px; border-radius: 24px; background: #26342b; color: white; font-size: 15px; font-weight: 550; }
+.publication-link svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
+.publication-link[aria-disabled="true"] { cursor: default; }
+.publication-link[href]:hover { background: var(--green-dark); }
+.chapter h2 { font-size: clamp(26px, 2.45vw, 35px); line-height: 1.18; letter-spacing: -.04em; }
+#overview .hero-heading { gap: 14px; margin-bottom: 26px; }
+#overview .hero-heading h2 { font-size: clamp(26px, 2.6vw, 37px); }
+#overview .hero-heading h2 span { color: var(--green-dark); }
+#overview .eyebrow { margin-bottom: 14px; }
+#overview .hero-side p { font-size: 14px; margin-bottom: 10px; }
+.overview-v3.overview-flow .lane-heading h3 { font-size: 21px; }
+@media (max-width: 620px) {
+ .publication-header { padding: 25px 4px 32px; }
+ .publication-header h1 { font-size: clamp(24px, 6vw, 30px); white-space: normal; }
+ .publication-authors { font-size: 15px; gap: 6px 16px; margin-top: 22px; }
+ .publication-affiliation { font-size: 19px; }
+ .publication-links { margin-top: 20px; }
+ .publication-link { padding: 9px 18px; min-width: 105px; }
+ .overview-v3.overview-flow .lane-heading h3 { font-size: 20px; }
+}
+
+/* Citation content will be supplied later. */
+.bibtex-block { margin: 0; min-height: 100px; padding: 22px; border: 1px solid var(--line); border-radius: 10px; background: #f7f8f5; color: var(--ink); font: 13px/1.7 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }

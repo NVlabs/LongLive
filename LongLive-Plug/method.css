@@ -1,0 +1,183 @@
+/* Paired case studies: a larger native preview feeds three compact guidance results. */
+:is(#base-cases, #transfer-demos) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 25px; }
+:is(#base-cases, #transfer-demos) .cfg-case { min-width: 0; margin: 0; padding: 20px 17px; background: #fff; }
+:is(#base-cases, #transfer-demos) .cfg-case-heading { display: block; margin-bottom: 20px; }
+:is(#base-cases, #transfer-demos) .cfg-case-heading h3 { font-size: 24px; letter-spacing: -.6px; }
+:is(#base-cases, #transfer-demos) .cfg-case-heading > span { display: block; margin-top: 7px; font-size: 9px; letter-spacing: .05px; }
+:is(#base-cases, #transfer-demos) .cfg-case-stage { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: 22px; align-items: center; }
+:is(#base-cases, #transfer-demos) .cfg-native { min-width: 0; }
+:is(#base-cases, #transfer-demos) .cfg-native > .mini-label { font-size: 9px; margin-bottom: 9px; letter-spacing: .6px; }
+:is(#base-cases, #transfer-demos) .cfg-native .tile-label { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-height: 45px; padding: 8px 9px; font-size: 10px; }
+:is(#base-cases, #transfer-demos) .cfg-native .tile-label small { font-size: 9px; }
+:is(#base-cases, #transfer-demos) .cfg-native .tile-caption { min-height: 34px; padding: 7px 9px; font-size: 9px; line-height: 1.45; }
+:is(#base-cases, #transfer-demos) .cfg-native video,
+:is(#base-cases, #transfer-demos) .cfg-branch video { width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 9; object-fit: contain; }
+:is(#base-cases, #transfer-demos) .native-guidance-note { margin-top: 9px; font-size: 9px; line-height: 1.5; }
+:is(#base-cases, #transfer-demos) .cfg-insertion { justify-content: flex-end; gap: 7px; margin-top: 15px; }
+:is(#base-cases, #transfer-demos) .cfg-insertion .lora-chip { font-size: 10px; padding: 8px 9px; gap: 4px; }
+:is(#base-cases, #transfer-demos) .cfg-insertion > span:last-child { font-size: 21px; transform: none; }
+:is(#base-cases, #transfer-demos) .cfg-insertion:after { display: block; width: 22px; height: 32px; top: auto; bottom: 50%; border-top: 0; border-bottom: 1px solid #b8cd9f; border-right: 1px solid #b8cd9f; border-bottom-right-radius: 5px; }
+:is(#base-cases, #transfer-demos) .cfg-branches { min-width: 0; gap: 15px; }
+:is(#base-cases, #transfer-demos) .cfg-branches:before { left: 0; top: 12px; bottom: calc((100% - 30px) / 3 - 12px); }
+:is(#base-cases, #transfer-demos) .cfg-branch { display: grid; grid-template-columns: minmax(0, 1fr); gap: 7px; padding-left: 15px; }
+:is(#base-cases, #transfer-demos) .weight-route { display: grid; grid-template-columns: auto minmax(20px, 1fr) auto; gap: 7px; align-items: center; height: 24px; padding: 0; }
+:is(#base-cases, #transfer-demos) .weight-route > strong { font-size: 9px; font-weight: 550; white-space: nowrap; }
+:is(#base-cases, #transfer-demos) .weight-number { font-size: 10px; white-space: nowrap; }
+:is(#base-cases, #transfer-demos) .fixed-scale { margin: 0 4px; height: 3px; }
+:is(#base-cases, #transfer-demos) .fixed-scale > span { width: 7px; height: 7px; box-shadow: 0 0 0 2px #edf4e2; }
+:is(#base-cases, #transfer-demos) .branch-arrow { position: absolute; left: -15px; top: 4px; width: 11px; height: 16px; padding: 0; margin: 0; border: 0; font-size: 17px; text-align: right; }
+:is(#base-cases, #transfer-demos) .branch-arrow:before { left: 0; right: 0; top: 7px; }
+:is(#base-cases, #transfer-demos) .cfg-branch .video-tile { min-width: 0; }
+:is(#base-cases, #transfer-demos) .cfg-branch .tile-label { display: none; }
+:is(#base-cases, #transfer-demos) .cfg-branch .tile-caption { min-height: 31px; font-size: 9px; line-height: 1.4; padding: 6px 7px; }
+@media (min-width: 1550px) {
+ :is(#base-cases, #transfer-demos) { gap: 25px; }
+ :is(#base-cases, #transfer-demos) .cfg-case { padding: 23px; }
+ :is(#base-cases, #transfer-demos) .cfg-case-stage { gap: 26px; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion:after { width: 26px; }
+ :is(#base-cases, #transfer-demos) .cfg-native .tile-label { font-size: 11px; }
+ :is(#base-cases, #transfer-demos) .cfg-native .tile-label small,
+ :is(#base-cases, #transfer-demos) .cfg-native .tile-caption,
+ :is(#base-cases, #transfer-demos) .cfg-branch .tile-caption,
+ :is(#base-cases, #transfer-demos) .weight-route > strong { font-size: 10px; }
+}
+@media (max-width: 1250px) and (min-width: 1101px) {
+ :is(#base-cases, #transfer-demos) { gap: 14px; }
+ :is(#base-cases, #transfer-demos) .cfg-case { padding: 17px 12px; }
+ :is(#base-cases, #transfer-demos) .cfg-case-stage { gap: 15px; }
+ :is(#base-cases, #transfer-demos) .cfg-case-heading h3 { font-size: 22px; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion:after { width: 15px; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion .lora-chip { font-size: 9px; padding: 7px 6px; }
+ :is(#base-cases, #transfer-demos) .cfg-branch { padding-left: 11px; }
+ :is(#base-cases, #transfer-demos) .branch-arrow { left: -11px; width: 9px; }
+ :is(#base-cases, #transfer-demos) .weight-route { gap: 4px; grid-template-columns: auto minmax(15px, 1fr) auto; }
+ :is(#base-cases, #transfer-demos) .weight-route > strong { font-size: 8px; }
+ :is(#base-cases, #transfer-demos) .weight-number { font-size: 9px; }
+ :is(#base-cases, #transfer-demos) .cfg-branch .tile-caption { font-size: 8px; }
+}
+@media (max-width: 1100px) {
+ :is(#base-cases, #transfer-demos) { grid-template-columns: 1fr; gap: 20px; }
+ :is(#base-cases, #transfer-demos) .cfg-case { padding: 22px; }
+ :is(#base-cases, #transfer-demos) .cfg-case-stage { grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr); gap: 28px; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion:after { width: 28px; }
+ :is(#base-cases, #transfer-demos) .cfg-native .tile-label { font-size: 12px; }
+ :is(#base-cases, #transfer-demos) .cfg-native .tile-caption,
+ :is(#base-cases, #transfer-demos) .cfg-native .tile-label small,
+ :is(#base-cases, #transfer-demos) .weight-route > strong,
+ :is(#base-cases, #transfer-demos) .weight-number { font-size: 11px; }
+ :is(#base-cases, #transfer-demos) .cfg-branch .tile-caption { font-size: 10px; }
+}
+@media (max-width: 620px) {
+ :is(#base-cases, #transfer-demos) .cfg-case { padding: 18px 12px; }
+ :is(#base-cases, #transfer-demos) .cfg-case-heading h3 { font-size: 23px; }
+ :is(#base-cases, #transfer-demos) .cfg-case-stage { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+ :is(#base-cases, #transfer-demos) .cfg-native { width: 100%; }
+ :is(#base-cases, #transfer-demos) .cfg-native .tile-label { flex-direction: row; align-items: center; justify-content: space-between; min-height: 38px; }
+ :is(#base-cases, #transfer-demos) .cfg-native .tile-caption { min-height: 0; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion { justify-content: center; margin-top: 13px; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion .lora-chip { font-size: 12px; padding: 8px 12px; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion > span:last-child { transform: rotate(90deg); }
+ :is(#base-cases, #transfer-demos) .cfg-insertion:after { display: none; }
+ :is(#base-cases, #transfer-demos) .cfg-branches:before { display: none; }
+ :is(#base-cases, #transfer-demos) .cfg-branch { grid-template-columns: 88px minmax(0, 1fr); gap: 13px; padding-left: 0; }
+ :is(#base-cases, #transfer-demos) .weight-route { display: flex; flex-direction: column; align-items: stretch; gap: 9px; height: auto; padding: 0 4px; }
+ :is(#base-cases, #transfer-demos) .fixed-scale { margin: 3px 5px; }
+ :is(#base-cases, #transfer-demos) .branch-arrow { display: none; }
+ :is(#base-cases, #transfer-demos) .cfg-branch .tile-caption { font-size: 8px; min-height: 25px; }
+}
+
+/* Downstream transfer uses the same native-to-three-results composition. */
+#transfer-demos .transfer-heading { margin-bottom: 12px; }
+#transfer-demos .transfer-heading > .mini-label { margin: 0 0 8px; font-size: 8px; letter-spacing: .6px; }
+#transfer-demos .tabs { min-height: 35px; margin-bottom: 15px; }
+#transfer-demos .tabs button { padding: 6px 9px; font-size: 9px; }
+#transfer-demos .transfer-case-caption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 5px 10px; min-height: 25px; margin-bottom: 15px; }
+#transfer-demos .transfer-case-caption strong { font-size: 12px; font-weight: 500; }
+#transfer-demos .transfer-case-caption > span { font-size: 9px; color: #8a967c; }
+#transfer-demos .transfer-adapters { display: flex; flex-direction: column; gap: 7px; align-items: stretch; }
+#transfer-demos .transfer-adapters .lora-chip { display: flex; justify-content: center; gap: 6px; }
+#transfer-demos .transfer-adapters small { font-size: 8px; font-weight: 400; white-space: nowrap; }
+#transfer-demos .transfer-insertion:after { height: 56px; }
+#transfer-demos .native-guidance-note { margin-top: 11px; }
+#transfer-demos .transfer-footnote { margin-top: 20px; padding-top: 13px; border-top: 1px solid #e9eddf; font-size: 9px; line-height: 1.7; }
+#transfer-demos details { margin-top: 11px; padding: 12px 0 0; font-size: 10px; }
+#transfer-demos details p { font-size: 10px; }
+@media (max-width: 620px) {
+ #transfer-demos .transfer-heading > .mini-label { font-size: 8px; }
+ #transfer-demos .tabs { width: 100%; }
+ #transfer-demos .tabs button { flex: 1; padding: 7px 5px; font-size: 9px; }
+ #transfer-demos .transfer-case-caption { margin-bottom: 18px; }
+ #transfer-demos .transfer-case-caption strong { font-size: 12px; }
+ #transfer-demos .transfer-adapters { flex-direction: row; gap: 7px; }
+ #transfer-demos .transfer-adapters .lora-chip { font-size: 10px; padding: 7px 9px; }
+ #transfer-demos .transfer-adapters small { font-size: 8px; }
+ #transfer-demos .transfer-insertion { gap: 9px; }
+ #transfer-demos .transfer-footnote { font-size: 9px; }
+}
+
+/* Connections are drawn from the actual rendered node positions. */
+:is(#base-cases, #transfer-demos) .cfg-case-stage { position: relative; gap: 34px; }
+:is(#base-cases, #transfer-demos) .guidance-flow { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 1; fill: none; color: #608536; }
+:is(#base-cases, #transfer-demos) .guidance-flow path { stroke: currentColor; stroke-width: 2.25px; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+:is(#base-cases, #transfer-demos) .guidance-flow .flow-heads { stroke-width: 2.6px; }
+:is(#base-cases, #transfer-demos) .cfg-insertion:after,
+:is(#base-cases, #transfer-demos) .cfg-branches:before,
+:is(#base-cases, #transfer-demos) .branch-arrow,
+:is(#base-cases, #transfer-demos) .cfg-insertion > span:last-child:not(.lora-chip) { display: none; }
+:is(#base-cases, #transfer-demos) .cfg-branches { gap: 18px; }
+:is(#base-cases, #transfer-demos) .cfg-branch { padding-left: 24px; gap: 9px; }
+:is(#base-cases, #transfer-demos) .weight-route { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto; height: auto; min-height: 48px; gap: 6px 8px; padding: 0; }
+:is(#base-cases, #transfer-demos) .weight-route > strong { grid-area: 1 / 1; font-size: 12px; color: #425d2d; line-height: 1.3; }
+:is(#base-cases, #transfer-demos) .weight-number { grid-area: 1 / 2; font-size: 13px; font-weight: 550; color: #476b24; }
+:is(#base-cases, #transfer-demos) .fixed-scale { grid-area: 2 / 1 / 3 / -1; height: 6px; margin: 6px 10px 8px; background: #c6d9b2; }
+:is(#base-cases, #transfer-demos) .fixed-scale > span { width: 16px; height: 16px; background: #548827; border: 2px solid #fff; box-shadow: 0 0 0 3px #d6e8c4; }
+:is(#base-cases, #transfer-demos) .cfg-case-heading > span { font-size: 11px; color: #6b7763; }
+:is(#base-cases, #transfer-demos) .cfg-native > .mini-label { font-size: 10px; color: #536348; }
+:is(#base-cases, #transfer-demos) .cfg-native .tile-label { font-size: 12px; min-height: 51px; color: #3e5036; }
+:is(#base-cases, #transfer-demos) .cfg-native .tile-label small { font-size: 11px; color: #67745b; }
+:is(#base-cases, #transfer-demos) .cfg-native .tile-caption,
+:is(#base-cases, #transfer-demos) .cfg-branch .tile-caption { font-size: 10px; line-height: 1.5; color: #58644f; min-height: 33px; }
+:is(#base-cases, #transfer-demos) .native-guidance-note { font-size: 10px; color: #65735a; }
+:is(#base-cases, #transfer-demos) .cfg-insertion .lora-chip { font-size: 12px; padding: 10px 11px; }
+#transfer-demos .transfer-adapters small { font-size: 10px; }
+#transfer-demos .transfer-heading > .mini-label { font-size: 10px; color: #69795a; }
+#transfer-demos .tabs button { font-size: 11px; }
+#transfer-demos .transfer-case-caption strong { font-size: 13px; }
+#transfer-demos .transfer-case-caption > span { font-size: 10px; color: #6b795e; }
+#transfer-demos .transfer-footnote { font-size: 10px; color: #728064; }
+#method .base-node strong { font-size: 15px; }
+#method .base-node small { font-size: 11px; color: #64745a; }
+#method .training-lines { stroke: #779456; stroke-width: 2.2; }
+#method .capability strong { font-size: 14px; }
+#method .capability p { font-size: 12px; color: #66745c; }
+#method .cfg-explanation > p { font-size: 14px; color: #637653; }
+#method .fewstep-composition > .equation-arrow { font-size: 32px; color: #608536; }
+
+@media (max-width: 1250px) and (min-width: 1101px) {
+ :is(#base-cases, #transfer-demos) .cfg-case-stage { gap: 28px; }
+ :is(#base-cases, #transfer-demos) .cfg-branch { padding-left: 20px; }
+ :is(#base-cases, #transfer-demos) .weight-route > strong { font-size: 11px; }
+ :is(#base-cases, #transfer-demos) .weight-number { font-size: 12px; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion .lora-chip { padding: 9px 8px; font-size: 11px; }
+ #transfer-demos .transfer-adapters small { font-size: 9px; }
+}
+@media (max-width: 620px) {
+ :is(#base-cases, #transfer-demos) .cfg-case-stage { gap: 30px; }
+ :is(#base-cases, #transfer-demos) .cfg-branch { grid-template-columns: 96px minmax(0, 1fr); gap: 28px; padding-left: 0; }
+ :is(#base-cases, #transfer-demos) .weight-route { display: flex; flex-direction: column; gap: 11px; padding: 0 4px; }
+ :is(#base-cases, #transfer-demos) .weight-route > strong { font-size: 12px; }
+ :is(#base-cases, #transfer-demos) .weight-number { font-size: 12px; }
+ :is(#base-cases, #transfer-demos) .fixed-scale { margin: 5px 9px; }
+ :is(#base-cases, #transfer-demos) .cfg-insertion .lora-chip { font-size: 12px; }
+ #transfer-demos .transfer-adapters .lora-chip { font-size: 11px; padding: 8px; }
+ #transfer-demos .transfer-adapters small { font-size: 9px; }
+ #transfer-demos .tabs button { font-size: 10px; }
+ #method .base-node strong { font-size: 14px; }
+ #method .base-node small { font-size: 10px; }
+ #method .capability strong { font-size: 12px; }
+ #method .capability p { font-size: 10px; }
+ #method .cfg-explanation > p { font-size: 12px; }
+}
+
+/* Center the single method example. */
+#base-cases { grid-template-columns: minmax(0, 1fr); max-width: 680px; margin-inline: auto; }
