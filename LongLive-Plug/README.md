@@ -28,7 +28,7 @@ Weian Mao, Bryan Chu, Song Han, Yukang Chen
   <em>Watch LongLive-Plug on YouTube.</em>
 </p>
 
-[Supported backbones](#supported-backbones) · [Highlights](#highlights) · [Introduction](#introduction) · [Getting started](#getting-started) · [Video gallery](#video-gallery) · [Qualitative results](#qualitative-results) · [Citation](#citation)
+[Supported backbones](#supported-backbones) · [Highlights](#highlights) · [Introduction](#introduction) · [Getting started](#getting-started) · [Inference](#how-to-run-inference) · [Training](#how-to-train) · [Video gallery](#video-gallery) · [Qualitative results](#qualitative-results) · [Citation](#citation)
 
 ## Supported backbones
 
@@ -40,7 +40,7 @@ Weian Mao, Bryan Chu, Song Han, Yukang Chen
 
 Model downloads are available in the [Hugging Face collection](https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5). **Training code for MiniMax-H3 will be released later.**
 
-Adapters are trained separately for each backbone and reused across compatible downstream models within that family. The video gallery below shows **five selected downstream examples per backbone**.
+Adapters are trained separately for each backbone and reused across compatible downstream models within that family. The video gallery below shows **eight selected downstream examples across the three backbones**.
 
 ## News
 
@@ -65,51 +65,44 @@ CFG and few-step distillation are decoupled, so guidance strength can be adjuste
 
 ## Video gallery
 
-**15 selected cases** from our project page: five downstream examples for each supported backbone, with the original native / LongLive-Plug video pair for each case. Click a thumbnail to open its video.
+**8 selected cases** from our [project page](https://nvlabs.github.io/LongLive/LongLive-Plug/), with the original native / LongLive-Plug video pair for each case. Click a thumbnail to open its video.
 
 <details open>
-<summary><strong>Wan2.1 · 14B — 5 selected cases</strong></summary>
+<summary><strong>Wan2.1 · 14B — 3 selected cases</strong></summary>
 
 <table>
 <tr><th>Model / task</th><th>Native</th><th>LongLive-Plug</th></tr>
 <tr><td width="28%"><strong>ABot-PhysWorld</strong><br><sub>Video prediction for robotic manipulation</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-abot-physworld-native.mp4"><img src="assets/readme/project-page/wan21-abot-physworld-nativePoster.jpg" width="280" alt="ABot-PhysWorld — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-abot-physworld-ours.mp4"><img src="assets/readme/project-page/wan21-abot-physworld-poster.jpg" width="280" alt="ABot-PhysWorld — LongLive-Plug: Selected example"></a></td></tr>
-<tr><td width="28%"><strong>Wan-Alpha v1/v2</strong><br><sub>Transparent and semi-transparent video generation</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-wan-alpha-v1-v2-native.mp4"><img src="assets/readme/project-page/wan21-wan-alpha-v1-v2-nativePoster.jpg" width="280" alt="Wan-Alpha v1/v2 — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-wan-alpha-v1-v2-ours.mp4"><img src="assets/readme/project-page/wan21-wan-alpha-v1-v2-poster.jpg" width="280" alt="Wan-Alpha v1/v2 — LongLive-Plug: Selected example"></a></td></tr>
 <tr><td width="28%"><strong>MagicTryOn</strong><br><sub>garment-preserving video virtual try-on</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-magictryon-14b-v1-native.mp4"><img src="assets/readme/project-page/wan21-magictryon-14b-v1-nativePoster.jpg" width="280" alt="MagicTryOn — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-magictryon-14b-v1-ours.mp4"><img src="assets/readme/project-page/wan21-magictryon-14b-v1-poster.jpg" width="280" alt="MagicTryOn — LongLive-Plug: Selected example"></a></td></tr>
-<tr><td width="28%"><strong>Fun-V1.1 Control-Camera</strong><br><sub>discrete camera-direction control</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-wan2-1-fun-v1-1-14b-control-camera-native.mp4"><img src="assets/readme/project-page/wan21-wan2-1-fun-v1-1-14b-control-camera-nativePoster.jpg" width="280" alt="Fun-V1.1 Control-Camera — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-wan2-1-fun-v1-1-14b-control-camera-ours.mp4"><img src="assets/readme/project-page/wan21-wan2-1-fun-v1-1-14b-control-camera-poster.jpg" width="280" alt="Fun-V1.1 Control-Camera — LongLive-Plug: Selected example"></a></td></tr>
 <tr><td width="28%"><strong>TheDenk Dilated ControlNet</strong><br><sub>video-to-video structural control</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-thedenk-wan2-1-dilated-controlnet-canny-depth-hed-native.mp4"><img src="assets/readme/project-page/wan21-thedenk-wan2-1-dilated-controlnet-canny-depth-hed-nativePoster.jpg" width="280" alt="TheDenk Dilated ControlNet — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan21-thedenk-wan2-1-dilated-controlnet-canny-depth-hed-ours.mp4"><img src="assets/readme/project-page/wan21-thedenk-wan2-1-dilated-controlnet-canny-depth-hed-poster.jpg" width="280" alt="TheDenk Dilated ControlNet — LongLive-Plug: Selected example"></a></td></tr>
 </table>
 
 </details>
 
 <details open>
-<summary><strong>Wan2.2 · TI2V-5B — 5 selected cases</strong></summary>
+<summary><strong>Wan2.2 · TI2V-5B — 3 selected cases</strong></summary>
 
 <table>
 <tr><th>Model / task</th><th>Native</th><th>LongLive-Plug</th></tr>
 <tr><td width="28%"><strong>SCOPE</strong><br><sub>Action-controlled interactive worlds</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-scope-native.mp4"><img src="assets/readme/project-page/wan22-scope-nativePoster.jpg" width="280" alt="SCOPE — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-scope-ours.mp4"><img src="assets/readme/project-page/wan22-scope-poster.jpg" width="280" alt="SCOPE — LongLive-Plug: Selected example"></a></td></tr>
 <tr><td width="28%"><strong>FlashMotion</strong><br><sub>Trajectory-controlled image-to-video generation</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-flashmotion-native.mp4"><img src="assets/readme/project-page/wan22-flashmotion-nativePoster.jpg" width="280" alt="FlashMotion — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-flashmotion-ours.mp4"><img src="assets/readme/project-page/wan22-flashmotion-poster.jpg" width="280" alt="FlashMotion — LongLive-Plug: Selected example"></a></td></tr>
-<tr><td width="28%"><strong>Kiwi-Edit</strong><br><sub>Instruction and reference-guided video editing</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-kiwi-edit-native.mp4"><img src="assets/readme/project-page/wan22-kiwi-edit-nativePoster.jpg" width="280" alt="Kiwi-Edit — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-kiwi-edit-ours.mp4"><img src="assets/readme/project-page/wan22-kiwi-edit-poster.jpg" width="280" alt="Kiwi-Edit — LongLive-Plug: Selected example"></a></td></tr>
 <tr><td width="28%"><strong>Matrix-Game 3.0</strong><br><sub>Long-horizon keyboard/mouse world model</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-matrix-game-3-0-native.mp4"><img src="assets/readme/project-page/wan22-matrix-game-3-0-nativePoster.jpg" width="280" alt="Matrix-Game 3.0 — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-matrix-game-3-0-ours.mp4"><img src="assets/readme/project-page/wan22-matrix-game-3-0-poster.jpg" width="280" alt="Matrix-Game 3.0 — LongLive-Plug: Selected example"></a></td></tr>
-<tr><td width="28%"><strong>Fun Control</strong><br><sub>Pose, Canny, depth, MLSD, trajectory control</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-wan2-2-fun-5b-control-native.mp4"><img src="assets/readme/project-page/wan22-wan2-2-fun-5b-control-nativePoster.jpg" width="280" alt="Fun Control — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/wan22-wan2-2-fun-5b-control-ours.mp4"><img src="assets/readme/project-page/wan22-wan2-2-fun-5b-control-poster.jpg" width="280" alt="Fun Control — LongLive-Plug: Selected example"></a></td></tr>
 </table>
 
 </details>
 
 <details open>
-<summary><strong>MiniMax-H3 · Audio-video — 5 selected cases</strong></summary>
+<summary><strong>MiniMax-H3 · Audio-video — 2 selected cases</strong></summary>
 
 <table>
 <tr><th>Model / task</th><th>Native</th><th>LongLive-Plug</th></tr>
 <tr><td width="28%"><strong>H3 ControlNet-Union</strong><br><sub>Structure-conditioned video generation</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-controlnet-native.mp4"><img src="assets/readme/project-page/h3-controlnet-nativePoster.jpg" width="280" alt="H3 ControlNet-Union — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-controlnet-ours.mp4"><img src="assets/readme/project-page/h3-controlnet-poster.jpg" width="280" alt="H3 ControlNet-Union — LongLive-Plug: Selected example"></a></td></tr>
 <tr><td width="28%"><strong>SolarWM-H3</strong><br><sub>Camera-controlled world generation</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-solarwm-native.mp4"><img src="assets/readme/project-page/h3-solarwm-nativePoster.jpg" width="280" alt="SolarWM-H3 — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-solarwm-ours.mp4"><img src="assets/readme/project-page/h3-solarwm-poster.jpg" width="280" alt="SolarWM-H3 — LongLive-Plug: Selected example"></a></td></tr>
-<tr><td width="28%"><strong>Viggle-Animate</strong><br><sub>Character animation from a driving video</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-viggle-native.mp4"><img src="assets/readme/project-page/h3-viggle-nativePoster.jpg" width="280" alt="Viggle-Animate — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-viggle-ours.mp4"><img src="assets/readme/project-page/h3-viggle-poster.jpg" width="280" alt="Viggle-Animate — LongLive-Plug: Selected example"></a></td></tr>
-<tr><td width="28%"><strong>H3-World</strong><br><sub>Interactive world modeling</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-h3world-native.mp4"><img src="assets/readme/project-page/h3-h3world-nativePoster.jpg" width="280" alt="H3-World — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-h3world-ours.mp4"><img src="assets/readme/project-page/h3-h3world-poster.jpg" width="280" alt="H3-World — LongLive-Plug: Selected example"></a></td></tr>
-<tr><td width="28%"><strong>Code World Model</strong><br><sub>Multi-view world generation</sub></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-cwm-native.mp4"><img src="assets/readme/project-page/h3-cwm-nativePoster.jpg" width="280" alt="Code World Model — Native: Selected example"></a></td><td align="center" width="36%"><a href="assets/readme/project-page/h3-cwm-ours.mp4"><img src="assets/readme/project-page/h3-cwm-poster.jpg" width="280" alt="Code World Model — LongLive-Plug: Selected example"></a></td></tr>
 </table>
 
 </details>
 
-Each pair preserves the project page’s selected case, original video, poster and sampling setup. Native schedules vary. MiniMax-H3 uses its four-forward configuration; native Viggle-Animate already uses three forwards, so that case demonstrates transfer rather than acceleration. The paper evaluates 54 downstream models in total.
+Each pair preserves the project page’s selected case, original video, poster and sampling setup. Native schedules vary. MiniMax-H3 uses its four-forward configuration. The paper evaluates 54 downstream models in total.
 
 ## Qualitative results
 
@@ -139,6 +132,97 @@ python -m pip install -r requirements.txt
 python scripts/download_assets.py
 ```
 
+### How to run inference
+
+For a base-model smoke test, download a CFG-only LoRA adapter and generate a video with its original 50-step schedule. For **4-step downstream inference**, see [transfer inference](#transfer-inference-on-downstream-video-models) below.
+
+```bash
+hf download Perflow-Shuai/Reproduce-Wan2.2-5B-CFG5-to-CFG1-50Step-LoRA-r64-iter500 \
+  adapter_model.safetensors --local-dir adapters/wan22_cfg
+
+python inference.py \
+  --config configs/wan22_cfg.yaml \
+  --checkpoint adapters/wan22_cfg/adapter_model.safetensors \
+  --prompt "A compact silver robot walks through a clean robotics lab." \
+  --output outputs/robot
+```
+
+Use the matching config and adapter for other models. Videos are saved to the output directory.
+
+#### Transfer inference on downstream video models
+
+Merge our **Few-Step LoRA at weight `1.0`** and **CFG LoRA at weight `0.5`** into a compatible downstream model, then run **4-step, CFG-free inference**. The CFG LoRA weight controls distilled guidance; the downstream sampler's native guidance scale should be **`1.0`**, with only the conditional forward pass at each step.
+
+For example, use the Wan2.2-TI2V-5B adapters with [SCOPE](https://github.com/z2tong/SCOPE) for action-controlled worlds or FlashMotion for trajectory-controlled generation. Wan2.1-14B adapters can transfer to compatible models such as MagicTryOn and TheDenk Dilated ControlNet. Keep each model's task-specific inputs and conditioning, and select adapters from the **same backbone family** in our [model collection](https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5).
+
+#### For agent
+
+Copy this instruction into your coding agent in the downstream repository, replacing the local paths as needed:
+
+```text
+Integrate LongLive-Plug into SCOPE (https://github.com/z2tong/SCOPE).
+Use the Wan2.2-TI2V-5B Few-Step and CFG LoRAs from the LongLive-Plug
+model collection:
+https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5
+
+Merge the Few-Step LoRA with weight 1.0 and the CFG LoRA with weight 0.5
+into the SCOPE DiT checkpoint. Check adapter key mapping, alpha/r scaling,
+and tensor shapes; preserve SCOPE's action-conditioning weights.
+Then update inference to use 4 denoising steps and cfg_scale=1.0,
+skipping the unconditional forward pass. Keep image, keyboard/mouse
+controls, and other task-specific inputs intact. Check the scheduler
+against the matching LongLive-Plug few-step recipe.
+Use LongLive-Plug/scripts/merge_lora.py for compatible Wan-named weights.
+Save the merged checkpoint to a new path and provide the exact inference
+command. Run a smoke test with an existing SCOPE example if a GPU and
+weights are available; otherwise state what remains untested.
+```
+
+For another downstream model, replace SCOPE with its repository and select the matching backbone's adapters.
+
+#### For manually merge
+
+Download the matching **Few-Step** and **CFG** `adapter_model.safetensors` files from the model collection into `adapters/wan22_few_step/` and `adapters/wan22_cfg/`. Use [`scripts/merge_lora.py`](scripts/merge_lora.py) to merge them into the downstream DiT:
+
+```bash
+python scripts/merge_lora.py \
+  --base /path/to/downstream/dit.safetensors \
+  --few-step adapters/wan22_few_step/adapter_model.safetensors \
+  --cfg adapters/wan22_cfg/adapter_model.safetensors \
+  --few-step-weight 1.0 \
+  --cfg-weight 0.5 \
+  --output /path/to/merged/dit.safetensors
+```
+
+`--few-step-weight 1.0` and `--cfg-weight 0.5` are the defaults. The script applies `W_merged = W_downstream + 1.0 × ΔW_few_step + 0.5 × ΔW_cfg`, with `ΔW = (alpha / rank) × B @ A`. Released recipes use `alpha = rank`; for other adapters, pass their training values with `--few-step-alpha` and `--cfg-alpha`.
+
+The script accepts one or more unquantized DiT safetensors files with native Wan parameter names, strips the PEFT `base_model.model.` adapter prefix, and checks every adapter target and shape. Downstream-only parameters are retained. It loads the DiT and adapters in CPU memory and writes a single safetensors file; allow enough RAM for those weights and FP32 per-layer merging. For renamed or reshaped backbones, convert the adapter keys/layout first. This helper targets the released Wan recipes.
+
+**SCOPE example.** Merge its DiT shards into a new model directory:
+
+```bash
+python scripts/merge_lora.py \
+  --base /path/to/SCOPE/model-*-of-*.safetensors \
+  --few-step adapters/wan22_few_step/adapter_model.safetensors \
+  --cfg adapters/wan22_cfg/adapter_model.safetensors \
+  --output /path/to/SCOPE-LongLive-Plug/SCOPE.safetensors
+```
+
+Copy or symlink SCOPE's text encoder, VAE, and tokenizer into the new directory using its original layout. Keep only the merged `SCOPE.safetensors` as the SCOPE DiT there, because SCOPE's loader prefers `model-*-of-*.safetensors` if present.
+
+In SCOPE's `inference.py`, add `cfg_scale=1.0` to the existing `video = pipe(...)` call. Its pipeline skips the unconditional branch at this value. Then run the following from the **SCOPE repository**:
+
+```bash
+python inference.py \
+  --model_dir /path/to/SCOPE-LongLive-Plug \
+  --input_image examples/example_0/image.png \
+  --action_path examples/example_0/action.parquet \
+  --prompt "First-person shooter perspective in a toy garden" \
+  --num_inference_steps 4
+```
+
+Use the downstream model's own inference pipeline to load the merged checkpoint. LongLive-Plug's `inference.py --checkpoint` expects an adapter, not a merged model. The SCOPE instructions follow its [inference entry point](https://github.com/z2tong/SCOPE/blob/main/inference.py) and [pipeline](https://github.com/z2tong/SCOPE/blob/main/diffsynth/pipelines/scope_pipeline.py); they are an integration example, not an end-to-end GPU validation. Verify the downstream scheduler against the matching few-step recipe when adapting other pipelines.
+
 ### How to train
 
 The following examples use the 5B recipe on a single machine with 16 GPUs.
@@ -167,27 +251,6 @@ torchrun --standalone --nproc_per_node=16 train.py \
 ```
 
 Choose from the four recipes in [`configs/`](configs/). For multi-machine training, see the [training guide](docs/recipes.md#launch-training).
-
-### How to run inference
-
-Download a LoRA adapter and generate a video:
-
-```bash
-hf download Perflow-Shuai/Reproduce-Wan2.2-5B-CFG5-to-CFG1-50Step-LoRA-r64-iter500 \
-  adapter_model.safetensors --local-dir adapters/wan22_cfg
-
-python inference.py \
-  --config configs/wan22_cfg.yaml \
-  --checkpoint adapters/wan22_cfg/adapter_model.safetensors \
-  --prompt "A compact silver robot walks through a clean robotics lab." \
-  --output outputs/robot
-```
-
-Use the matching config and adapter for other models. Videos are saved to the output directory.
-
-### Inference on downstream video models
-
-Plug the Few-Step and CFG LoRA adapters into a downstream video model built on the same base model. **For downstream transfer, set the Few-Step LoRA weight to `1.0` and the CFG LoRA weight to `0.5` (Few-Step : CFG = `1 : 0.5`).** These are the adapter weights, not the model’s native CFG guidance scale.
 
 ## Citation
 
