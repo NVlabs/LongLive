@@ -72,9 +72,26 @@ cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
 - 🔥 [2025.11.03] We implement LongLive on linear attention model [SANA-Video](https://nvlabs.github.io/Sana/Video/)! Now SANA-Video can generate 60s interactive videos in real-time.
 - 🔥 [2025.09.29] We release [Paper](https://arxiv.org/abs/2509.22622), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive).
 
-## Introduction
 
-### LongLive-Plug — Once-for-All Distillation for Video Generation
+## Models
+
+| LongLive-Plug | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
+| --- | --- | ---: | ---: | ---: | :---: |
+| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
+| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
+| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
+
+
+| Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
+| --- | --- | ---: | ---: | ---: | :---: |
+| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
+| [LongLive-2.0-5B-NVFP4-4Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4) | [`LongLive2.0/`](LongLive2.0) | 29.7 | 5B | 84.51 | ✅ |
+| [LongLive-2.0-5B-NVFP4-2Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2) | [`LongLive2.0/`](LongLive2.0) | 45.7 | 5B | 83.14 | ✅ |
+| [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | [`LongLive1.0/`](LongLive1.0) | 20.7 | 1.3B | 84.87 |  |
+
+
+
+## LongLive-Plug — Once-for-All Distillation for Video Generation
 
 Separates reusable capabilities from task-specific customization: train
 functional LoRAs on a base model, then attach them to compatible downstream
@@ -86,12 +103,10 @@ Wan2.1-14B, Wan2.2-TI2V-5B and MiniMax-H3.
 </p>
 
 → Code and documentation in [`LongLive-Plug/`](LongLive-Plug)
-### LongLive 2.0 — An NVFP4 Parallel Infrastructure for Long Video Generation
+## LongLive 2.0 — An NVFP4 Parallel Infrastructure for Long Video Generation
 
 Training and inference infrastructure built around NVFP4 quantization and
 sequence parallelism.
-
-**Leaderboard (VBench Total Score):** [![Papers with Code: #5 on VBench](https://paperswithcode.co/api/v1/papers/2605.18739/leaderboard-badge.svg?eval=23261&live=1)](https://paperswithcode.co/api/v1/papers/2605.18739/leaderboard-badge-link?eval=23261)
 
 - For training, it supports
   - [x] Balanced sequence parallel for T2V/I2V AR training (teacher-forcing).
@@ -110,7 +125,7 @@ sequence parallelism.
 
 → Code and documentation in [`LongLive2.0/`](LongLive2.0)
 
-### LongLive 1.0 — Real-time Interactive Long Video Generation
+## LongLive 1.0 — Real-time Interactive Long Video Generation
 
 Accepts sequential user prompts and generates the corresponding video in real
 time, so a person can steer a long video while it is being produced. The key
@@ -123,18 +138,6 @@ ideas are the attention sink, KV-recache, and streaming long tuning.
 </p>
 
 → Code and documentation in [`LongLive1.0/`](LongLive1.0)
-
-
-## Models
-
-| Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
-| --- | --- | ---: | ---: | ---: | :---: |
-| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
-| [LongLive-2.0-5B-NVFP4-4Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4) | [`LongLive2.0/`](LongLive2.0) | 29.7 | 5B | 84.51 | ✅ |
-| [LongLive-2.0-5B-NVFP4-2Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2) | [`LongLive2.0/`](LongLive2.0) | 45.7 | 5B | 83.14 | ✅ |
-| [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | [`LongLive1.0/`](LongLive1.0) | 20.7 | 1.3B | 84.87 |  |
-
-LongLive-Plug adapters are published in a separate [Hugging Face collection](https://huggingface.co/collections/Perflow-Shuai/reproduce-6aba47aafb31d5ee159f45f5).
 
 ## Awesome work using LongLive
 
