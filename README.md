@@ -175,12 +175,14 @@ its own copy of the license and, where applicable, its own third-party notices.
 
 Please consider citing our work if you find it useful:
 
+
 ```bibtex
-@inproceedings{longlive,
-    title={Longlive: Real-time interactive long video generation},
-    author={Yang, Shuai and Huang, Wei and Chu, Ruihang and Xiao, Yicheng and Zhao, Yuyang and Wang, Xianbang and Li, Muyang and Xie, Enze and Chen, Yingcong and Lu, Yao and others},
-    booktitle={ICLR},
-    year={2026},
+@misc{yang2026longliveplug,
+  title  = {LongLive-Plug: Once-for-All Distillation for Video Generation},
+  author = {Shuai Yang and Luozhou Wang and Wei Huang and ZhiFei Chen and
+            Bohan Zhang and Xiao Fu and Qianli Ma and Chen-Hsuan Lin and
+            Weian Mao and Bryan Chu and Song Han and Yukang Chen},
+  year   = {2026}
 }
 ```
 
@@ -193,15 +195,16 @@ Please consider citing our work if you find it useful:
 }
 ```
 
+
 ```bibtex
-@misc{yang2026longliveplug,
-  title  = {LongLive-Plug: Once-for-All Distillation for Video Generation},
-  author = {Shuai Yang and Luozhou Wang and Wei Huang and ZhiFei Chen and
-            Bohan Zhang and Xiao Fu and Qianli Ma and Chen-Hsuan Lin and
-            Weian Mao and Bryan Chu and Song Han and Yukang Chen},
-  year   = {2026}
+@inproceedings{longlive,
+    title={Longlive: Real-time interactive long video generation},
+    author={Yang, Shuai and Huang, Wei and Chu, Ruihang and Xiao, Yicheng and Zhao, Yuyang and Wang, Xianbang and Li, Muyang and Xie, Enze and Chen, Yingcong and Lu, Yao and others},
+    booktitle={ICLR},
+    year={2026},
 }
 ```
+
 
 Related project:
 
