@@ -1,0 +1,20 @@
+# Install CUDA-enabled torch==2.9.1 and torchvision==0.24.1 for your architecture first.
+# Tested with PyTorch 2.9.1+cu128.
+diffusers==0.35.1
+transformers==4.51.3
+peft==0.17.1
+accelerate==1.10.1
+huggingface-hub==0.34.4
+omegaconf==2.3.1
+safetensors==0.8.0
+numpy>=1.26,<3
+scipy>=1.12,<2
+ftfy==6.3.1
+einops==0.8.2
+sentencepiece==0.2.2
+imageio==2.37.4
+imageio-ffmpeg==0.6.0
+av>=13,<19
+Pillow>=10,<13
+wandb>=0.19,<1
+tqdm>=4.66

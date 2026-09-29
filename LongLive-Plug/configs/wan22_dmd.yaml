@@ -1,0 +1,69 @@
+infra:
+  sharding_strategy: hybrid_full
+  mixed_precision: true
+  vae_dtype: float32
+  gradient_checkpointing: true
+  generator_fsdp_wrap_strategy: size
+  real_score_fsdp_wrap_strategy: size
+  fake_score_fsdp_wrap_strategy: size
+  text_encoder_fsdp_wrap_strategy: size
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  model_dir: ${oc.env:WAN_MODEL_ROOT,wan_models}/Wan2.2-TI2V-5B
+algorithm:
+  trainer: score_distillation
+  distribution_loss: dmd
+  ts_schedule: false
+  real_guidance_scale: 3.0
+  fake_guidance_scale: 0.0
+  backward_simulation: true
+training:
+  lr: 1.0e-05
+  lr_critic: 2.0e-06
+  weight_decay: 0.0
+  beta1: 0.0
+  beta2: 0.999
+  beta1_critic: 0.0
+  beta2_critic: 0.999
+  batch_size: 2
+  gradient_accumulation_steps: 1
+  log_iters: 50
+  max_checkpoints: 8
+  max_iters: 1000
+  gc_interval: 100
+  dfake_gen_update_ratio: 5
+  min_num_training_frames: 32
+  num_training_frames: 32
+  slice_last_frames: 32
+data:
+  data_path: ${oc.env:LONGLIVE_DATA_ROOT,data}/train.txt
+  eval_data_path: ${oc.env:LONGLIVE_DATA_ROOT,data}/heldout.txt
+  image_or_video_shape:
+  - 2
+  - 32
+  - 48
+  - 44
+  - 80
+  data_num_workers: 0
+inference:
+  sampling_steps: 4
+  guidance_scale: 1.0
+evaluation:
+  interval: -1
+  num_frames: 32
+  val_batch_size: 1
+  save_latents_only: false
+  before_train: false
+adapter:
+  type: lora
+  rank: 128
+  alpha: 128
+  dropout: 0.0
+  apply_to_critic: true
+  verbose: false
+logging:
+  seed: 2
+  wandb_entity: null
+  wandb_project: LongLive-Plug

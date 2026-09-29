@@ -1,0 +1,94 @@
+{
+  "wan21_cfg": {
+    "flow": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "x0": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "gradients": {
+      "max_abs_difference": 3.814697265625e-06,
+      "equal": false,
+      "relative_l2": 0.00042021507397294044
+    },
+    "latent": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "pixels": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    }
+  },
+  "wan22_cfg": {
+    "flow": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "x0": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "gradients": {
+      "max_abs_difference": 1.52587890625e-05,
+      "equal": false,
+      "relative_l2": 0.0011620114091783762
+    },
+    "latent": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "pixels": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    }
+  },
+  "wan21_dmd": {
+    "flow": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "x0": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "gradients": {
+      "max_abs_difference": 3.814697265625e-06,
+      "equal": false,
+      "relative_l2": 0.0004089957510586828
+    },
+    "latent": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "pixels": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    }
+  },
+  "wan22_dmd": {
+    "flow": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "x0": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "gradients": {
+      "max_abs_difference": 3.814697265625e-06,
+      "equal": false,
+      "relative_l2": 0.00025813831598497927
+    },
+    "latent": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "pixels": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    }
+  }
+}

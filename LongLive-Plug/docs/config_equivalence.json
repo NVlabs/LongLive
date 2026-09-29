@@ -1,0 +1,82 @@
+{
+  "checked_runtime_fields": [
+    "distribution_loss",
+    "sampling_steps",
+    "timestep_shift",
+    "batch_size",
+    "gradient_accumulation_steps",
+    "lr",
+    "lr_critic",
+    "weight_decay",
+    "beta1",
+    "beta2",
+    "beta1_critic",
+    "beta2_critic",
+    "dfake_gen_update_ratio",
+    "sfp_training",
+    "seed",
+    "randomize_seed",
+    "data_seed",
+    "image_or_video_shape",
+    "num_frame_per_block",
+    "teacher_guidance_scale",
+    "teacher_sampling_steps",
+    "cfg_distill_loss_weighting",
+    "cfg_relative_guidance_epsilon",
+    "cfg_relative_guidance_max_weight",
+    "real_guidance_scale",
+    "fake_guidance_scale",
+    "max_iters",
+    "log_iters",
+    "sharding_strategy",
+    "mixed_precision"
+  ],
+  "recipes": {
+    "wan21_cfg": {
+      "runtime_fields_equal": false,
+      "adapter_equal": true,
+      "intended_differences": {
+        "max_iters": {
+          "before": 500,
+          "current": 250
+        }
+      },
+      "other_checked_fields_equal": true
+    },
+    "wan21_dmd": {
+      "runtime_fields_equal": false,
+      "adapter_equal": true,
+      "intended_differences": {
+        "max_iters": {
+          "before": 1000,
+          "current": 600
+        }
+      },
+      "other_checked_fields_equal": true
+    },
+    "wan22_cfg": {
+      "runtime_fields_equal": false,
+      "adapter_equal": true,
+      "intended_differences": {
+        "max_iters": {
+          "before": 500,
+          "current": 250
+        }
+      },
+      "other_checked_fields_equal": true
+    },
+    "wan22_dmd": {
+      "runtime_fields_equal": false,
+      "adapter_equal": true,
+      "intended_differences": {
+        "max_iters": {
+          "before": 1500,
+          "current": 1000
+        }
+      },
+      "other_checked_fields_equal": true
+    }
+  },
+  "reference_commit": "7553e15",
+  "note": "Training limits were shortened on 2026-09-29; all other checked parameters retain their cleanup baseline values."
+}

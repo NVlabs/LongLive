@@ -1,0 +1,44 @@
+{
+  "wan21_cfg": {
+    "recipe": "wan21_cfg",
+    "steps": 2,
+    "world_size": 4,
+    "resumed_from": 1,
+    "optimizer_files": {
+      "generator": "generator_optimizer.pt",
+      "training": "training_state.pt"
+    }
+  },
+  "wan22_cfg": {
+    "recipe": "wan22_cfg",
+    "steps": 2,
+    "world_size": 4,
+    "resumed_from": 1,
+    "optimizer_files": {
+      "generator": "generator_optimizer.pt",
+      "training": "training_state.pt"
+    }
+  },
+  "wan21_dmd": {
+    "recipe": "wan21_dmd",
+    "steps": 2,
+    "world_size": 4,
+    "resumed_from": 1,
+    "optimizer_files": {
+      "generator": "generator_optimizer.pt",
+      "training": "training_state.pt",
+      "critic": "critic_optimizer.pt"
+    }
+  },
+  "wan22_dmd": {
+    "recipe": "wan22_dmd",
+    "steps": 2,
+    "world_size": 4,
+    "resumed_from": 1,
+    "optimizer_files": {
+      "generator": "generator_optimizer.pt",
+      "training": "training_state.pt",
+      "critic": "critic_optimizer.pt"
+    }
+  }
+}

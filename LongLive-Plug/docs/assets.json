@@ -1,0 +1,20 @@
+{
+  "prompt_repo": "Efficient-Large-Model/LongLive-1.3B",
+  "prompt_revision": "cda9138d93872ef109d9a74c270184eb3a5acc6e",
+  "prompt_file": "prompts/vidprom_filtered_extended.txt",
+  "prompt_sha256": "7896742f468bc8aef9e4547424d1ce0a951acdb2a82233790155401a99bf5aa5",
+  "nonempty_lines": 248221,
+  "unique_prompts": 248219,
+  "train_count": 248203,
+  "heldout_count": 16,
+  "models": {
+    "Wan2.1-T2V-14B": {
+      "repo": "Wan-AI/Wan2.1-T2V-14B",
+      "revision": "a064a6c71f5be440641209c07bf2a5ce7a2ff5e4"
+    },
+    "Wan2.2-TI2V-5B": {
+      "repo": "Wan-AI/Wan2.2-TI2V-5B",
+      "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e"
+    }
+  }
+}
