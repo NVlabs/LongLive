@@ -2,7 +2,7 @@
 const C = window.CATALOG, S = window.STORY;
 const $ = id => document.getElementById(id);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-const state = { paused: reduced.matches, query: '', limits: Object.fromEntries(C.families.map(f=>[f.id,f.count])) };
+const state = { paused: reduced.matches, query: '', limits: {wan21:6,wan22:6,h3:6} };
 const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const familyName = id => ({wan21:'Wan2.1 · 14B',wan22:'Wan2.2 · TI2V-5B',h3:'MiniMax-H3'}[id]);
 const groups = new Set();
