@@ -11,7 +11,7 @@ Weian Mao, Bryan Chu, Song Han, Yukang Chen
 
 **NVIDIA** · <sup>&#42;</sup>Equal contribution
 
-![Paper — coming soon](https://img.shields.io/badge/Paper-Coming_soon-B31B1B?style=flat-square)
+[![Paper](https://img.shields.io/badge/arXiv-2609.38154-B31B1B?style=flat-square)](https://arxiv.org/abs/2609.38154)
 [![Code](https://img.shields.io/badge/GitHub-Code-181717?style=flat-square&logo=github)](https://github.com/NVlabs/LongLive/tree/main/LongLive-Plug)
 [![Hugging Face Models](https://img.shields.io/badge/🤗_Hugging_Face-Models-FFD21E?style=flat-square)](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug)
 [![Project page](https://img.shields.io/badge/Project_Page-Online-4B8BBE?style=flat-square)](https://nvlabs.github.io/LongLive/LongLive-Plug/)

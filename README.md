@@ -8,7 +8,7 @@
 generations of the project, each in its own directory with its own code,
 documentation and model weights.
 
-![Paper](https://img.shields.io/badge/Paper-LongLive--Plug-brown)
+[![Paper](https://img.shields.io/badge/Paper-LongLive--Plug-brown)](https://arxiv.org/abs/2609.38154)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-red)](https://arxiv.org/abs/2605.18739)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://arxiv.org/abs/2509.22622)
 
@@ -20,7 +20,7 @@ documentation and model weights.
 
 | Directory | What it is | Use it when you want to | Venue |
 | --- | --- | --- | --- |
-| [**`LongLive-Plug/`**](LongLive-Plug) | Once-for-all distillation for video generation | Distill a capability once on a base model and reuse it across downstream models, without retraining | Coming soon |
+| [**`LongLive-Plug/`**](LongLive-Plug) | Once-for-all distillation for video generation | Distill a capability once on a base model and reuse it across downstream models, without retraining | [arXiv](https://arxiv.org/abs/2609.38154) |
 | [**`LongLive2.0/`**](LongLive2.0) | An NVFP4 parallel infrastructure for long video generation | Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism | arXiv |
 | [**`LongLive1.0/`**](LongLive1.0) | Real-time interactive long video generation | Type prompts and watch a long video appear in real time, steered as you go | ICLR 2026 |
 
