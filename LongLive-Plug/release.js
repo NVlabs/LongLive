@@ -1,6 +1,6 @@
-// Fill these URLs when the paper and code are ready.
+// Publication links; leave unreleased resources empty.
 const PUBLICATION_URLS = {
-  paper: "",
+  paper: "https://arxiv.org/abs/2609.38154",
   code: "",
 };
 for (const [kind, url] of Object.entries(PUBLICATION_URLS)) {
