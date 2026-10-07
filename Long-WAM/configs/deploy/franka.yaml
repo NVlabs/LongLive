@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Original Long-WAM deployment example.
+# Licensed under the Apache License, Version 2.0; see LICENSE at the repository root.
+
+# Inference only. No released checkpoint or training recipe is selected here.
+task: null
+control_hz: null  # Must match the sampling rate used for your own training data.
+max_steps: 300
+max_action_age_s: null  # Required for motion; calibrate for your controller/watchdog.
+driver:
+  factory: null  # your_driver_module:create_driver; accepts adapter= and **options.
+  options: {}
+policy:
+  robot: franka
+  benchmark: null
+  checkpoint: null
+  model_config: null
+  stats: null
+  text_cache: null
+  adapter_options:
+    action_mode: cartesian_delta
+    position_scale: null
+    rotation_scale: null
+    gripper_open_width: null
+  execution: sync
+  action_horizon: null  # Derived from your checkpoint config.
+  execute_steps: 24
+  trigger_stride: null
+  streaming_vae: false
+  hardware: reference
+  optimization: {}
+  device: cuda
+  seed: 0
+  num_inference_steps: 10
+  policy_options: {}

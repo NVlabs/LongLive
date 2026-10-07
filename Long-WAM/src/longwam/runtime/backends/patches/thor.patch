@@ -1,0 +1,1053 @@
+diff --git a/src/fouroversix/csrc/bindings.cpp b/src/fouroversix/csrc/bindings.cpp
+index 4e3cdeb..044c00b 100644
+--- a/src/fouroversix/csrc/bindings.cpp
++++ b/src/fouroversix/csrc/bindings.cpp
+@@ -35,11 +35,12 @@ namespace fouroversix
+ {
+     TORCH_LIBRARY(fouroversix, m)
+     {
+-        m.def("quantize_to_fp4(Tensor x, bool is_nvfp4, bool is_rtn, bool is_rht, bool is_2d, bool is_transpose, int selection_rule, int rbits) -> (Tensor, Tensor, Tensor)");
++        m.def("quantize_to_fp4(Tensor x, bool is_nvfp4, bool is_rtn, bool is_rht, bool is_2d, bool is_transpose, int selection_rule, int rbits, Tensor? alpha_other_amax=None, float alpha_multiplier=1.0) -> (Tensor, Tensor, Tensor, Tensor)");
+         m.def("gemm_mxfp4mxfp4_accum_fp32_out_bf16_tnt(Tensor A, Tensor B, Tensor A_sf, Tensor B_sf, Tensor alpha) -> Tensor");
+         m.def("gemm_mxfp4mxfp4_accum_fp32_out_bf16_tnt_sm120(Tensor A, Tensor B, Tensor A_sf, Tensor B_sf, Tensor alpha) -> Tensor");
+         m.def("gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt(Tensor A, Tensor B, Tensor A_sf, Tensor B_sf, Tensor alpha) -> Tensor");
+         m.def("gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt_sm120(Tensor A, Tensor B, Tensor A_sf, Tensor B_sf, Tensor alpha) -> Tensor");
++        m.def("gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt_bias(Tensor A, Tensor B, Tensor A_sf, Tensor B_sf, Tensor alpha, Tensor bias) -> Tensor");
+         m.def("gemm_nvfp4nvfp4_accum_fp32_out_fp16_tnt(Tensor A, Tensor B, Tensor A_sf, Tensor B_sf, Tensor alpha) -> Tensor");
+         m.def("gemm_nvfp4nvfp4_accum_fp32_out_fp16_tnt_sm120(Tensor A, Tensor B, Tensor A_sf, Tensor B_sf, Tensor alpha) -> Tensor");
+     }
+diff --git a/src/fouroversix/csrc/fp4_gemm.cu b/src/fouroversix/csrc/fp4_gemm.cu
+index 695571b..e8193f8 100644
+--- a/src/fouroversix/csrc/fp4_gemm.cu
++++ b/src/fouroversix/csrc/fp4_gemm.cu
+@@ -157,10 +157,10 @@ namespace fouroversix
+         // Check if the problem size is supported or not
+         CUTLASS_CHECK(gemm.can_implement(args));
+ 
+-        // Initialize CUTLASS kernel with arguments and workspace pointer
+-        CUTLASS_CHECK(gemm.initialize(args));
+-
+-        CUTLASS_CHECK(gemm.run(args));
++        // Keep the generic SM100-family GEMM on PyTorch's current stream.
++        auto stream = at::cuda::getCurrentCUDAStream(A.get_device()).stream();
++        CUTLASS_CHECK(gemm.initialize(args, nullptr, stream));
++        CUTLASS_CHECK(gemm.run(stream));
+ 
+         return D;
+     }
+diff --git a/src/fouroversix/csrc/fp4_gemm_bias.cu b/src/fouroversix/csrc/fp4_gemm_bias.cu
+new file mode 100644
+index 0000000..75034b5
+--- /dev/null
++++ b/src/fouroversix/csrc/fp4_gemm_bias.cu
+@@ -0,0 +1,149 @@
++#include "cutlass/cutlass.h"
++
++#include "cute/tensor.hpp"
++#include "cutlass/detail/sm100_blockscaled_layout.hpp"
++#include "cutlass/epilogue/collective/collective_builder.hpp"
++#include "cutlass/epilogue/fusion/operations.hpp"
++#include "cutlass/epilogue/thread/activation.h"
++#include "cutlass/gemm/collective/collective_builder.hpp"
++#include "cutlass/gemm/device/gemm_universal_adapter.h"
++#include "cutlass/gemm/dispatch_policy.hpp"
++#include "cutlass/gemm/kernel/gemm_universal.hpp"
++#include "cutlass/util/packed_stride.hpp"
++#include "helper.h"
++
++#include <ATen/ATen.h>
++#include <ATen/cuda/CUDAContext.h>
++#include <c10/cuda/CUDAGuard.h>
++#include <torch/all.h>
++
++#include "element_traits.hpp"
++
++namespace fouroversix
++{
++    using namespace cute;
++
++    torch::Tensor gemm_nvfp4_bias(
++        torch::Tensor const &A,
++        torch::Tensor const &B,
++        torch::Tensor const &A_sf,
++        torch::Tensor const &B_sf,
++        torch::Tensor const &alpha,
++        torch::Tensor const &bias)
++    {
++        at::cuda::CUDAGuard device_guard(A.device());
++
++        using ElementA = cutlass::nv_float4_t<cutlass::float_e2m1_t>;
++        using ElementB = ElementA;
++        using ElementC = void;
++        using ElementD = cutlass::bfloat16_t;
++        using ElementAccumulator = float;
++        using ElementCompute = float;
++        using ElementBias = cutlass::bfloat16_t;
++        using LayoutATag = cutlass::layout::RowMajor;
++        using LayoutBTag = cutlass::layout::ColumnMajor;
++        using LayoutCTag = cutlass::layout::RowMajor;
++        using LayoutDTag = cutlass::layout::RowMajor;
++        using ArchTag = cutlass::arch::Sm100;
++        using OperatorClass = cutlass::arch::OpClassBlockScaledTensorOp;
++        using MmaTileShape = Shape<_256, _256, _256>;
++        using ClusterShape = Shape<_4, _1, _1>;
++        constexpr int AlignmentA = 32;
++        constexpr int AlignmentB = 32;
++        constexpr int AlignmentC = 1;
++        constexpr int AlignmentD = 128 / cutlass::sizeof_bits<ElementD>::value;
++
++        using FusionOperation =
++            cutlass::epilogue::fusion::LinCombPerColBiasEltAct<
++                cutlass::epilogue::thread::Identity,
++                ElementD,
++                ElementCompute,
++                ElementBias,
++                ElementC,
++                ElementCompute>;
++        using CollectiveEpilogue =
++            typename cutlass::epilogue::collective::CollectiveBuilder<
++                ArchTag, OperatorClass, MmaTileShape, ClusterShape,
++                Shape<_64, _128>,
++                ElementAccumulator, ElementCompute,
++                ElementC, LayoutCTag, AlignmentC,
++                ElementD, LayoutDTag, AlignmentD,
++                cutlass::epilogue::TmaWarpSpecialized2Sm,
++                FusionOperation>::CollectiveOp;
++        using CollectiveMainloop =
++            typename cutlass::gemm::collective::CollectiveBuilder<
++                ArchTag, OperatorClass,
++                ElementA, LayoutATag, AlignmentA,
++                ElementB, LayoutBTag, AlignmentB,
++                ElementAccumulator, MmaTileShape, ClusterShape,
++                cutlass::gemm::collective::StageCountAutoCarveout<
++                    static_cast<int>(sizeof(typename CollectiveEpilogue::SharedStorage))>,
++                cutlass::gemm::KernelTmaWarpSpecialized2SmNvf4Sm100>::CollectiveOp;
++        using GemmKernel = cutlass::gemm::kernel::GemmUniversal<
++            Shape<int, int, int, int>, CollectiveMainloop, CollectiveEpilogue, void>;
++        using Gemm = cutlass::gemm::device::GemmUniversalAdapter<GemmKernel>;
++        using StrideA = typename GemmKernel::StrideA;
++        using StrideB = typename GemmKernel::StrideB;
++        using StrideC = typename GemmKernel::StrideC;
++        using StrideD = typename GemmKernel::StrideD;
++        using LayoutSFA = typename CollectiveMainloop::LayoutSFA;
++        using LayoutSFB = typename CollectiveMainloop::LayoutSFB;
++        using ScaleConfig = typename CollectiveMainloop::Sm1xxBlkScaledConfig;
++
++        torch::checkAllContiguous(
++            "gemm_nvfp4_bias",
++            {{A, "A", 0}, {B, "B", 1}, {A_sf, "A_sf", 2},
++             {B_sf, "B_sf", 3}, {alpha, "alpha", 4}, {bias, "bias", 5}});
++        torch::checkDeviceType(
++            "gemm_nvfp4_bias", {A, B, A_sf, B_sf, alpha, bias},
++            at::DeviceType::CUDA);
++        torch::checkAllSameGPU(
++            "gemm_nvfp4_bias",
++            {{A, "A", 0}, {B, "B", 1}, {A_sf, "A_sf", 2},
++             {B_sf, "B_sf", 3}, {alpha, "alpha", 4}, {bias, "bias", 5}});
++        check_block_scale_factor_type<ElementA>(A_sf, "A_sf");
++        check_block_scale_factor_type<ElementB>(B_sf, "B_sf");
++        TORCH_CHECK(alpha.scalar_type() == at::kFloat, "alpha must be float32");
++        TORCH_CHECK(alpha.numel() == 1, "alpha must be scalar");
++        TORCH_CHECK(bias.scalar_type() == at::kBFloat16, "bias must be bfloat16");
++
++        auto [M, N, K] = check_and_get_fp4_matmul_dims<
++            ElementA, LayoutATag, ElementB, LayoutBTag>(A, B, A_sf, B_sf);
++        TORCH_CHECK(bias.numel() == N, "bias must contain one value per output column");
++        auto D = torch::empty({M, N}, torch::dtype(at::kBFloat16).device(A.device()));
++        StrideA stride_A = cutlass::make_cute_packed_stride(StrideA{}, {M, K, 1});
++        StrideB stride_B = cutlass::make_cute_packed_stride(StrideB{}, {N, K, 1});
++        StrideC stride_C = cutlass::make_cute_packed_stride(StrideC{}, {M, N, 1});
++        StrideD stride_D = cutlass::make_cute_packed_stride(StrideD{}, {M, N, 1});
++        LayoutSFA layout_SFA = ScaleConfig::tile_atom_to_shape_SFA(
++            make_shape(M, N, K, 1));
++        LayoutSFB layout_SFB = ScaleConfig::tile_atom_to_shape_SFB(
++            make_shape(M, N, K, 1));
++
++        typename Gemm::Arguments args{
++            cutlass::gemm::GemmUniversalMode::kGemm,
++            {M, N, K, 1},
++            {static_cast<ElementA::DataType const *>(A.data_ptr()), stride_A,
++             static_cast<ElementB::DataType const *>(B.data_ptr()), stride_B,
++             static_cast<ElementA::ScaleFactorType const *>(A_sf.data_ptr()), layout_SFA,
++             static_cast<ElementB::ScaleFactorType const *>(B_sf.data_ptr()), layout_SFB},
++            {{}, nullptr, stride_C,
++             static_cast<ElementD *>(D.data_ptr()), stride_D}};
++        args.epilogue.thread.alpha = 1.0f;
++        args.epilogue.thread.alpha_ptr = static_cast<float const *>(alpha.data_ptr());
++        args.epilogue.thread.bias_ptr =
++            static_cast<ElementBias const *>(bias.data_ptr());
++
++        Gemm gemm;
++        auto stream = at::cuda::getCurrentCUDAStream(A.get_device()).stream();
++        CUTLASS_CHECK(gemm.can_implement(args));
++        CUTLASS_CHECK(gemm.initialize(args, nullptr, stream));
++        CUTLASS_CHECK(gemm.run(stream));
++        return D;
++    }
++
++    TORCH_LIBRARY_IMPL(fouroversix, CUDA, m)
++    {
++        m.impl("gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt_bias", &gemm_nvfp4_bias);
++    }
++}
+diff --git a/src/fouroversix/csrc/include/fp4_quant.h b/src/fouroversix/csrc/include/fp4_quant.h
+index b4b5145..e92a738 100644
+--- a/src/fouroversix/csrc/include/fp4_quant.h
++++ b/src/fouroversix/csrc/include/fp4_quant.h
+@@ -37,6 +37,9 @@ namespace fouroversix
+         void *__restrict__ x_sf_ptr;
+         void *__restrict__ x_sft_ptr;
+         void *__restrict__ amax_ptr;
++        void *__restrict__ matmul_alpha_ptr;
++        const void *__restrict__ alpha_other_amax_ptr;
++        float alpha_multiplier;
+ 
+         int x_row_stride;
+         int x_col_stride;
+diff --git a/src/fouroversix/csrc/include/fp4_quant_kernel.h b/src/fouroversix/csrc/include/fp4_quant_kernel.h
+index 4cfe797..23d4b99 100644
+--- a/src/fouroversix/csrc/include/fp4_quant_kernel.h
++++ b/src/fouroversix/csrc/include/fp4_quant_kernel.h
+@@ -232,13 +232,11 @@ namespace fouroversix
+         // Write Back SFT (Shared -> Global)
+         // -------------------------------------------------------------------------
+ 
+-        for (int r_idx = tidx; r_idx < kBlockM; r_idx += blockDim.x)
++        for (int g_idx = tidx; g_idx < num_groups; g_idx += blockDim.x)
+         {
+-#pragma unroll
+-            for (int i = 0; i < int(kBlockN / kGroupN); i += kVecSizeSFT)
+-            {
+-                *reinterpret_cast<VecTypeSFT *>(&gSFT(r_idx, i)) = *reinterpret_cast<VecTypeSFT *>(&sSFT(r_idx, i));
+-            }
++            const int g_row = g_idx / kNumGroupsInRow;
++            const int g_col = g_idx % kNumGroupsInRow;
++            gSFT(g_row, g_col) = sSFT(g_row, g_col);
+         }
+     }
+ 
+@@ -276,6 +274,8 @@ namespace fouroversix
+         constexpr bool Is_4o6 = kRule == AdaptiveBlockScalingRuleType::MAE_4o6 ||
+                                 kRule == AdaptiveBlockScalingRuleType::MSE_4o6 ||
+                                 kRule == AdaptiveBlockScalingRuleType::ABS_MAX_4o6;
++        constexpr bool DirectNvf4Values = Is_nvfp4 && !Is_rht && !Is_2d &&
++                                          !Is_transpose && Is_rtn && Is_4o6;
+         constexpr float E4M3_SCALE_4 = Is_4o6 ? Kernel_traits::E4M3_MAX_FOUROVERSIX : E4M3_MAX_VALUE;
+         constexpr float E4M3_SCALE_6 = Is_4o6 ? Kernel_traits::E4M3_MAX_FOUROVERSIX : E4M3_MAX_VALUE;
+         constexpr float E2M1_SCALE_4 = Is_4o6 ? 6.0f : 4.0f;
+@@ -285,6 +285,7 @@ namespace fouroversix
+         constexpr int kSmemBlockInCol = int(kBlockM / 128);
+ 
+         using VecTypeXe2m1 = std::conditional_t<Is_nvfp4, cutlass::Array<uint8_t, 8>, cutlass::Array<uint8_t, 16>>;
++        using VecTypeX = cutlass::Array<Element, kGroupN>;
+         using VecTypeSFT = cutlass::Array<float, 4>;
+         using VecTypeSF = cutlass::Array<ScaleFactor, 16>;
+         using OutputType = cutlass::Array<cutlass::float_e2m1_t, 8>;
+@@ -300,10 +301,11 @@ namespace fouroversix
+         const int num_groups = kNumGroupsInRow * kBlockM;
+         // JXGuo: assure amax is not zero before calling this kernel
+         const float amax = *reinterpret_cast<float *>(params.amax_ptr);
+-
+-        if (amax == 0.0f)
++        if (params.matmul_alpha_ptr != nullptr && blockIdx.x == 0 && blockIdx.y == 0 && threadIdx.x == 0)
+         {
+-            return;
++            const float other_amax = *reinterpret_cast<const float *>(params.alpha_other_amax_ptr);
++            *reinterpret_cast<float *>(params.matmul_alpha_ptr) =
++                __fmul_rn(__fmul_rn(amax, other_amax), params.alpha_multiplier);
+         }
+ 
+         // -------------------------------------------------------------------------
+@@ -345,58 +347,98 @@ namespace fouroversix
+                                 typename Kernel_traits::SmemLayoutX{});
+ 
+         // SFT in Shared Memory (placed after X)
+-        Tensor sSFT = make_tensor(make_smem_ptr(reinterpret_cast<float *>(reinterpret_cast<char *>(sX.data().get()) + sizeof(Element) * size(sX))),
++        constexpr size_t kXSmemSize = DirectNvf4Values ? 0 : sizeof(Element) * size(sX);
++        Tensor sSFT = make_tensor(make_smem_ptr(reinterpret_cast<float *>(reinterpret_cast<char *>(sX.data().get()) + kXSmemSize)),
+                                   typename Kernel_traits::SmemLayoutSFT{});
+ 
+         Tensor sXe2m1 = make_tensor(make_smem_ptr(reinterpret_cast<uint8_t *>(reinterpret_cast<char *>(sSFT.data().get()) + sizeof(float) * size(sSFT))),
+                                     Shape<Int<kBlockM>, Int<kBlockN / 2>>{},
+                                     Stride<Int<kBlockN / 2>, _1>{});
+ 
+-        Tensor sSF = make_tensor(make_smem_ptr(reinterpret_cast<ScaleFactor *>(reinterpret_cast<char *>(sXe2m1.data().get()) + sizeof(uint8_t) * size(sXe2m1))),
++        constexpr size_t kXe2m1SmemSize = DirectNvf4Values ? 0 : sizeof(uint8_t) * size(sXe2m1);
++        Tensor sSF = make_tensor(make_smem_ptr(reinterpret_cast<ScaleFactor *>(reinterpret_cast<char *>(sXe2m1.data().get()) + kXe2m1SmemSize)),
+                                  typename Kernel_traits::SmemLayoutSF{});
+ 
++        // Output allocation is intentionally uninitialized. The normal body
++        // overwrites every rounded tile. Preserve the all-zero-input contract,
++        // which cannot enter the divide-by-amax path, with explicit tile writes.
++        if (amax == 0.0f)
++        {
++            constexpr int kXe2m1Cols = kBlockN / 2;
++            constexpr int kXe2m1VecsPerRow = kXe2m1Cols / kVecSizeXe2m1;
++            constexpr int kXe2m1Vecs = kBlockM * kXe2m1VecsPerRow;
++            const VecTypeXe2m1 zero_values{};
++            for (int vec_idx = tidx; vec_idx < kXe2m1Vecs; vec_idx += blockDim.x)
++            {
++                const int row = vec_idx / kXe2m1VecsPerRow;
++                const int col = (vec_idx % kXe2m1VecsPerRow) * kVecSizeXe2m1;
++                *reinterpret_cast<VecTypeXe2m1 *>(&gXe2m1(row, col)) = zero_values;
++            }
++
++            const int gbl_blk_row_stride = int(params.N_rounded / (kGroupN * 4));
++            const int gbl_blk_idx_base = (m_block * kSmemBlockInCol) * gbl_blk_row_stride +
++                                         n_block * kSmemBlockInRow;
++            const VecTypeSF zero_scales{};
++            for (int r_idx = tidx; r_idx < kBlockMSF; r_idx += blockDim.x)
++            {
++                const int loc_blk_idx = int(r_idx / 32);
++                const int loc_row = r_idx % 32;
++                const int loc_blk_row = int(loc_blk_idx / kSmemBlockInRow);
++                const int loc_blk_col = int(loc_blk_idx % kSmemBlockInRow);
++                const int gbl_blk_idx = gbl_blk_idx_base +
++                                        loc_blk_row * gbl_blk_row_stride + loc_blk_col;
++                const index_t gbl_row = index_t(32) * gbl_blk_idx + loc_row;
++                *reinterpret_cast<VecTypeSF *>(&gSF(gbl_row, 0)) = zero_scales;
++            }
++            return;
++        }
++
+         // -------------------------------------------------------------------------
+         // Data Loading (X -> Shared)
+         // -------------------------------------------------------------------------
+ 
+-        typename Kernel_traits::GmemTiledCopyX gmem_tiled_copy_X;
+-        auto gmem_thr_copy_X = gmem_tiled_copy_X.get_thread_slice(tidx);
++        if constexpr (!DirectNvf4Values)
++        {
++            typename Kernel_traits::GmemTiledCopyX gmem_tiled_copy_X;
++            auto gmem_thr_copy_X = gmem_tiled_copy_X.get_thread_slice(tidx);
+ 
+-        Tensor tXgX = gmem_thr_copy_X.partition_S(gX);
+-        Tensor tXsX = gmem_thr_copy_X.partition_D(sX);
++            Tensor tXgX = gmem_thr_copy_X.partition_S(gX);
++            Tensor tXsX = gmem_thr_copy_X.partition_D(sX);
+ 
+-        // Construct predicates for bounds checking
+-        Tensor cX = make_identity_tensor(make_shape(size<0>(sX), size<1>(sX)));
+-        Tensor tXcX = gmem_thr_copy_X.partition_S(cX);
+-        Tensor tXpX = make_tensor<bool>(make_shape(size<2>(tXcX)));
++            // Construct predicates for bounds checking
++            Tensor cX = make_identity_tensor(make_shape(size<0>(sX), size<1>(sX)));
++            Tensor tXcX = gmem_thr_copy_X.partition_S(cX);
++            Tensor tXpX = make_tensor<bool>(make_shape(size<2>(tXcX)));
+ 
+-        for (int i = 0; i < size(tXpX); ++i)
+-        {
+-            tXpX(i) = get<1>(tXcX(0, 0, i)) < params.N - n_block * kBlockN;
+-        }
++            for (int i = 0; i < size(tXpX); ++i)
++            {
++                tXpX(i) = get<1>(tXcX(0, 0, i)) < params.N - n_block * kBlockN;
++            }
+ 
+-        __syncthreads();
++            __syncthreads();
+ 
+-        // Async copy from Global to Shared
+-        fouroversix::copy<false, false, true /*Clear_OOB_MN*/, true /*Clear_OOB_K*/>(
+-            gmem_tiled_copy_X, tXgX, tXsX, tXcX, tXpX, params.M - m_block * kBlockM);
++            // Async copy from Global to Shared
++            fouroversix::copy<false, false, true /*Clear_OOB_MN*/, true /*Clear_OOB_K*/>(
++                gmem_tiled_copy_X, tXgX, tXsX, tXcX, tXpX, params.M - m_block * kBlockM);
+ 
+-        cute::cp_async_fence();
++            cute::cp_async_fence();
++        }
+ 
+         // -------------------------------------------------------------------------
+         // Data Loading (SFT -> Shared)
+         // -------------------------------------------------------------------------
+ 
+-        for (int r_idx = tidx; r_idx < kBlockM; r_idx += blockDim.x)
++        for (int g_idx = tidx; g_idx < num_groups; g_idx += blockDim.x)
+         {
+-#pragma unroll
+-            for (int i = 0; i < int(kBlockN / kGroupN); i += kVecSizeSFT)
+-            {
+-                *reinterpret_cast<VecTypeSFT *>(&sSFT(r_idx, i)) = *reinterpret_cast<VecTypeSFT *>(&gSFT(r_idx, i));
+-            }
++            const int g_row = g_idx / kNumGroupsInRow;
++            const int g_col = g_idx % kNumGroupsInRow;
++            sSFT(g_row, g_col) = gSFT(g_row, g_col);
+         }
+ 
+-        fouroversix::cp_async_wait<0>();
++        if constexpr (!DirectNvf4Values)
++        {
++            fouroversix::cp_async_wait<0>();
++        }
+         __syncthreads();
+ 
+         // -------------------------------------------------------------------------
+@@ -405,15 +447,73 @@ namespace fouroversix
+ 
+         for (int g_idx = tidx; g_idx < num_groups; g_idx += blockDim.x)
+         {
+-            const int g_row = g_idx % kNumGroupsInCol;
+-            const int g_col = g_idx / kNumGroupsInCol;
++            const int g_row = DirectNvf4Values ? g_idx / kNumGroupsInRow :
++                                                g_idx % kNumGroupsInCol;
++            const int g_col = DirectNvf4Values ? g_idx % kNumGroupsInRow :
++                                                g_idx / kNumGroupsInCol;
+             const float g_max = sSFT(g_row, g_col);
+ 
+-            const Tensor sGX = make_tensor(make_smem_ptr(sX.data() + g_row * kBlockN + g_col * kGroupN),
+-                                           Shape<Int<1>, Int<kGroupN>>{},
+-                                           Stride<Int<kGroupN>, _1>{});
++            alignas(32) VecTypeX x_vec{};
++            if constexpr (DirectNvf4Values)
++            {
++                static_assert(kGroupN * sizeof(Element) == 32,
++                              "direct NVFP4 group load must be exactly 256 bits");
++                const int global_row = m_block * kBlockM + g_row;
++                const int global_col = n_block * kBlockN + g_col * kGroupN;
++                if (global_row < params.M && params.N % kGroupN == 0)
++                {
++                    uint64_t word0, word1, word2, word3;
++                    const Element *group_ptr = &gX(g_row, g_col * kGroupN);
++#if __CUDACC_VER_MAJOR__ > 12 || (__CUDACC_VER_MAJOR__ == 12 && __CUDACC_VER_MINOR__ >= 9)
++                    asm volatile(
++                        "ld.global.L2::256B.v4.u64 {%0, %1, %2, %3}, [%4];"
++                        : "=l"(word0), "=l"(word1), "=l"(word2), "=l"(word3)
++                        : "l"(group_ptr));
++#else
++                    // PTX before 8.8 supports vectors of at most 128 bits.
++                    asm volatile(
++                        "ld.global.L2::256B.v2.u64 {%0, %1}, [%2];"
++                        : "=l"(word0), "=l"(word1) : "l"(group_ptr));
++                    asm volatile(
++                        "ld.global.L2::256B.v2.u64 {%0, %1}, [%2];"
++                        : "=l"(word2), "=l"(word3)
++                        : "l"(reinterpret_cast<const uint64_t *>(group_ptr) + 2));
++#endif
++                    uint64_t *words = reinterpret_cast<uint64_t *>(&x_vec);
++                    words[0] = word0;
++                    words[1] = word1;
++                    words[2] = word2;
++                    words[3] = word3;
++                }
++                else if (global_row < params.M)
++                {
++#pragma unroll
++                    for (int element_idx = 0; element_idx < kGroupN; ++element_idx)
++                    {
++                        if (global_col + element_idx < params.N)
++                        {
++                            x_vec[element_idx] = gX(g_row, g_col * kGroupN + element_idx);
++                        }
++                    }
++                }
++            }
++            const auto sGX = [&]()
++            {
++                if constexpr (DirectNvf4Values)
++                {
++                    return make_tensor(make_rmem_ptr(x_vec.data()),
++                                       Shape<Int<1>, Int<kGroupN>>{},
++                                       Stride<Int<kGroupN>, _1>{});
++                }
++                else
++                {
++                    return make_tensor(make_smem_ptr(sX.data() + g_row * kBlockN + g_col * kGroupN),
++                                       Shape<Int<1>, Int<kGroupN>>{},
++                                       Stride<Int<kGroupN>, _1>{});
++                }
++            }();
+ 
+-            OutputType res[int(kGroupN / 8)];
++            alignas(8) OutputType res[int(kGroupN / 8)];
+             float encode_scale;
+             float sf;
+ 
+@@ -452,10 +541,21 @@ namespace fouroversix
+                 sf = fp4_conversion<Is_nvfp4, false, false, Is_rtn, kRule>(sGX, amax, &sf_val, res, params.rbits);
+             }
+ 
+-            // Write quantized data
+-            for (int i = 0; i < int(kGroupN / 8); ++i)
++            // The production NVFP4 path assigns adjacent lanes to adjacent
++            // groups, so one aligned 64-bit global store is coalesced.
++            if constexpr (DirectNvf4Values)
+             {
+-                *reinterpret_cast<OutputType *>(&sXe2m1(g_row, g_col * (kGroupN / 2) + i * 4)) = res[i];
++                static_assert(sizeof(res) == sizeof(uint64_t), "NVFP4 group must pack to 64 bits");
++                const uint64_t packed = *reinterpret_cast<const uint64_t *>(res);
++                *reinterpret_cast<uint64_t *>(&gXe2m1(g_row, g_col * (kGroupN / 2))) = packed;
++            }
++            else
++            {
++#pragma unroll
++                for (int i = 0; i < int(kGroupN / 8); ++i)
++                {
++                    *reinterpret_cast<OutputType *>(&sXe2m1(g_row, g_col * (kGroupN / 2) + i * 4)) = res[i];
++                }
+             }
+ 
+             // Write scale factor (layout: 128x4 blocks, 32 rows per block)
+@@ -475,12 +575,17 @@ namespace fouroversix
+ 
+         __syncthreads();
+ 
+-        for (int r_idx = tidx; r_idx < kBlockM; r_idx += blockDim.x)
++        if constexpr (!DirectNvf4Values)
+         {
+-#pragma unroll
+-            for (int i = 0; i < int(kBlockN / 2); i += kVecSizeXe2m1)
++            constexpr int kXe2m1Cols = kBlockN / 2;
++            constexpr int kXe2m1VecsPerRow = kXe2m1Cols / kVecSizeXe2m1;
++            constexpr int kXe2m1Vecs = kBlockM * kXe2m1VecsPerRow;
++            for (int vec_idx = tidx; vec_idx < kXe2m1Vecs; vec_idx += blockDim.x)
+             {
+-                *reinterpret_cast<VecTypeXe2m1 *>(&gXe2m1(r_idx, i)) = *reinterpret_cast<VecTypeXe2m1 *>(&sXe2m1(r_idx, i));
++                const int row = vec_idx / kXe2m1VecsPerRow;
++                const int col = (vec_idx % kXe2m1VecsPerRow) * kVecSizeXe2m1;
++                *reinterpret_cast<VecTypeXe2m1 *>(&gXe2m1(row, col)) =
++                    *reinterpret_cast<VecTypeXe2m1 *>(&sXe2m1(row, col));
+             }
+         }
+ 
+diff --git a/src/fouroversix/csrc/include/fp4_quant_launch_template.h b/src/fouroversix/csrc/include/fp4_quant_launch_template.h
+index 4168b3e..3028344 100644
+--- a/src/fouroversix/csrc/include/fp4_quant_launch_template.h
++++ b/src/fouroversix/csrc/include/fp4_quant_launch_template.h
+@@ -95,8 +95,6 @@ namespace fouroversix
+     template <typename Kernel_traits, bool Is_nvfp4, bool Is_rht, bool Is_transpose>
+     void launch_fp4_quant(FP4_quant_params &params, cudaStream_t stream)
+     {
+-        constexpr size_t smem_size = Kernel_traits::kSmemSize;
+-
+         const int num_m_block = (params.M + Kernel_traits::kBlockM - 1) / Kernel_traits::kBlockM;
+         const int num_n_block = (params.N + Kernel_traits::kBlockN - 1) / Kernel_traits::kBlockN;
+         dim3 grid(num_m_block, num_n_block);
+@@ -106,6 +104,16 @@ namespace fouroversix
+             {
+                 SELECTION_RULE_SWITCH(params.selection_rule, kSelectionRule, [&]
+                 {
++                    constexpr AdaptiveBlockScalingRuleType kRule =
++                        static_cast<AdaptiveBlockScalingRuleType>(kSelectionRule);
++                    constexpr bool Is_4o6 = kRule == AdaptiveBlockScalingRuleType::MAE_4o6 ||
++                                            kRule == AdaptiveBlockScalingRuleType::MSE_4o6 ||
++                                            kRule == AdaptiveBlockScalingRuleType::ABS_MAX_4o6;
++                    constexpr bool DirectNvf4Values = Is_nvfp4 && !Is_rht && !Is_2d &&
++                                                      !Is_transpose && Is_rtn && Is_4o6;
++                    constexpr size_t smem_size = DirectNvf4Values
++                        ? Kernel_traits::kSmemSFTSize + Kernel_traits::kSmemSFSize
++                        : Kernel_traits::kSmemSize;
+                     auto kernel = &fp4_quant_kernel<Kernel_traits, Is_nvfp4, Is_rht, Is_2d, Is_transpose, Is_rtn, kSelectionRule>;
+                     if (smem_size >= 48 * 1024) {
+                         C10_CUDA_CHECK(cudaFuncSetAttribute(
+@@ -144,8 +152,8 @@ namespace fouroversix
+     {
+         constexpr bool Is_nvfp4 = true;
+         constexpr bool Is_rht = false;
+-        launch_fp4_quant_prologue<FP4_quant_kernel_traits<128, 64, 4, Is_nvfp4, Is_transpose, T>, Is_nvfp4, Is_rht, Is_transpose>(params, stream);
+-        launch_fp4_quant<FP4_quant_kernel_traits<128, 64, 4, Is_nvfp4, Is_transpose, T>, Is_nvfp4, Is_rht, Is_transpose>(params, stream);
++        launch_fp4_quant_prologue<FP4_quant_kernel_traits<128, 64, 8, Is_nvfp4, Is_transpose, T>, Is_nvfp4, Is_rht, Is_transpose>(params, stream);
++        launch_fp4_quant<FP4_quant_kernel_traits<128, 64, 8, Is_nvfp4, Is_transpose, T>, Is_nvfp4, Is_rht, Is_transpose>(params, stream);
+     }
+ 
+     template <typename T, bool Is_transpose>
+diff --git a/src/fouroversix/csrc/quantize/fp4_quant.cu b/src/fouroversix/csrc/quantize/fp4_quant.cu
+index 2eb1682..b657ddb 100644
+--- a/src/fouroversix/csrc/quantize/fp4_quant.cu
++++ b/src/fouroversix/csrc/quantize/fp4_quant.cu
+@@ -106,7 +106,7 @@ namespace fouroversix
+                                                               { run_fp4_quant_<fp16_type, Is_nvfp4, Is_rht, Is_transpose>(params, stream); }); }); }); });
+     }
+ 
+-    std::tuple<at::Tensor, at::Tensor, at::Tensor> quantize_to_fp4(
++    std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor> quantize_to_fp4(
+         const at::Tensor &x,
+         const bool is_nvfp4,
+         const bool is_rtn,
+@@ -115,7 +115,9 @@ namespace fouroversix
+         const bool is_2d,
+         const bool is_transpose,
+         const int64_t selection_rule,
+-        const int64_t rbits)
++        const int64_t rbits,
++        const c10::optional<at::Tensor> &alpha_other_amax,
++        const double alpha_multiplier)
+     {
+ 
+         /*******
+@@ -146,6 +148,15 @@ namespace fouroversix
+                     "FP4Quant only supports fp16 and bf16 data types");
+         // TORCH_CHECK(km.dtype() == dtype, "q and km must have the same dtype");
+         CHECK_DEVICE(x);
++        if (alpha_other_amax.has_value())
++        {
++            CHECK_DEVICE(alpha_other_amax.value());
++            CHECK_CONTIGUOUS(alpha_other_amax.value());
++            TORCH_CHECK(alpha_other_amax.value().dtype() == torch::kFloat32,
++                        "alpha_other_amax must have float32 dtype");
++            TORCH_CHECK(alpha_other_amax.value().numel() == 1,
++                        "alpha_other_amax must contain one element");
++        }
+         // Layout / contiguity checks
+         TORCH_CHECK(x.stride(-1) == 1, "x must be contiguous on the last dim");
+ 
+@@ -190,7 +201,9 @@ namespace fouroversix
+         /**********************
+          * 5. Output buffers  *
+          *********************/
+-        at::Tensor x_e2m1 = torch::zeros({M_rounded, int(N_rounded / 2)}, x.options().dtype(torch::kUInt8));
++        // The quant kernels cover every rounded output tile. Avoid fill kernels
++        // for buffers that the prologue or body overwrites completely.
++        at::Tensor x_e2m1 = torch::empty({M_rounded, int(N_rounded / 2)}, x.options().dtype(torch::kUInt8));
+         at::Tensor x_sf, x_sft;
+         int M_sf, N_sf;
+         if (is_nvfp4)
+@@ -198,22 +211,25 @@ namespace fouroversix
+             M_sf = int(M_rounded / 128 * 32) * int(N_rounded / 64);
+             N_sf = 16;
+             // N_sf = int(N_rounded / 16 * 4);
+-            x_sf = torch::zeros({M_sf, N_sf}, x.options().dtype(torch::kFloat8_e4m3fn));
+-            x_sft = torch::zeros({M_rounded, int(N_rounded / 16)}, x.options().dtype(torch::kFloat32));
++            x_sf = torch::empty({M_sf, N_sf}, x.options().dtype(torch::kFloat8_e4m3fn));
++            x_sft = torch::empty({M_rounded, int(N_rounded / 16)}, x.options().dtype(torch::kFloat32));
+         }
+         else
+         {
+             M_sf = int(M_rounded / 128 * 32) * int(N_rounded / 128);
+             N_sf = 16;
+-            x_sf = torch::zeros({M_sf, N_sf}, x.options().dtype(torch::kUInt8));
+-            x_sft = torch::zeros({M_rounded, int(N_rounded / 32)}, x.options().dtype(torch::kFloat32));
++            x_sf = torch::empty({M_sf, N_sf}, x.options().dtype(torch::kUInt8));
++            x_sft = torch::empty({M_rounded, int(N_rounded / 32)}, x.options().dtype(torch::kFloat32));
+         }
+         at::Tensor amax = torch::zeros({1}, x.options().dtype(torch::kFloat32));
++        at::Tensor matmul_alpha = torch::empty(
++            {alpha_other_amax.has_value() ? 1 : 0},
++            x.options().dtype(torch::kFloat32));
+ 
+         /**********************
+          * 5. Param struct    *
+          *********************/
+-        FP4_quant_params params;
++        FP4_quant_params params{};
+         // const at::Tensor x,
+         // at::Tensor x_rht,
+         // at::Tensor x_e2m1,
+@@ -231,6 +247,12 @@ namespace fouroversix
+             /*-------------- tensors ---------------*/
+             x, x_rht, x_e2m1, x_sf, x_sft, amax, M, N, M_rounded, N_rounded, M_sf, N_sf,
+             is_nvfp4, is_rtn, is_rht, is_2d, is_transpose, selection_rule, rbits);
++        if (alpha_other_amax.has_value())
++        {
++            params.matmul_alpha_ptr = matmul_alpha.data_ptr();
++            params.alpha_other_amax_ptr = alpha_other_amax.value().data_ptr();
++            params.alpha_multiplier = static_cast<float>(alpha_multiplier);
++        }
+ 
+         /**********************
+          * 6. Kernel launch   *
+@@ -243,13 +265,17 @@ namespace fouroversix
+         else
+         {
+             amax.fill_(0);
++            if (alpha_other_amax.has_value())
++            {
++                matmul_alpha.fill_(0);
++            }
+         }
+ 
+-        return std::make_tuple(x_e2m1, x_sf.flatten(), amax);
++        return std::make_tuple(x_e2m1, x_sf.flatten(), amax, matmul_alpha);
+     }
+ 
+     TORCH_LIBRARY_IMPL(fouroversix, CUDA, m)
+     {
+         m.impl("quantize_to_fp4", &quantize_to_fp4);
+     }
+-}
++}
+diff --git a/src/fouroversix/matmul/cutlass/backend.py b/src/fouroversix/matmul/cutlass/backend.py
+index 7c3d3cc..792551c 100644
+--- a/src/fouroversix/matmul/cutlass/backend.py
++++ b/src/fouroversix/matmul/cutlass/backend.py
+@@ -13,7 +13,7 @@ import functools
+ import torch
+ from fouroversix.matmul.backend import MatmulBackendBase
+ from fouroversix.quantize import QuantizedTensor
+-from fouroversix.utils import BLACKWELL_SM_IDS, SM_100, SM_120, DataType
++from fouroversix.utils import BLACKWELL_SM_IDS, SM_100, SM_110, SM_120, DataType
+ 
+ 
+ class CUTLASSMatmulBackend(MatmulBackendBase):
+@@ -82,6 +82,18 @@ class CUTLASSMatmulBackend(MatmulBackendBase):
+ 
+         out_shape = (input.original_shape[0], other.original_shape[0])
+ 
++        # A zero-sized output has no legal TMA descriptor, while an empty K
++        # dimension has the exact additive-identity result. Handle both
++        # contracts before constructing CUTLASS arguments.
++        output_options = {
++            "device": input.values.device,
++            "dtype": out_dtype.torch_dtype(),
++        }
++        if 0 in out_shape:
++            return torch.empty(out_shape, **output_options)
++        if input.original_shape[1] == 0:
++            return torch.zeros(out_shape, **output_options)
++
+         if input.dtype == DataType.mxfp4:
+             alpha = torch.ones(
+                 1,
+@@ -115,6 +127,11 @@ class CUTLASSMatmulBackend(MatmulBackendBase):
+                 DataType.nvfp4,
+                 DataType.bfloat16,
+             ): gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt,
++            (
++                SM_110,
++                DataType.nvfp4,
++                DataType.bfloat16,
++            ): gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt,
+             (
+                 SM_120,
+                 DataType.nvfp4,
+@@ -132,9 +149,14 @@ class CUTLASSMatmulBackend(MatmulBackendBase):
+             ): gemm_nvfp4nvfp4_accum_fp32_out_fp16_tnt_sm120,
+         }
+ 
+-        gemm_fn = gemm_fns.get(
+-            (torch.cuda.get_device_capability()[0], input.dtype, out_dtype),
++        # Thor experimental P4 compile profile are guarded to CC 11.0 before model capture. Avoid
++        # tracing the host-side CUDA capability query through Dynamo.
++        device_major = (
++            SM_110
++            if torch.compiler.is_compiling()
++            else torch.cuda.get_device_capability()[0]
+         )
++        gemm_fn = gemm_fns.get((device_major, input.dtype, out_dtype))
+ 
+         if gemm_fn is None:
+             msg = (
+diff --git a/src/fouroversix/matmul/cutlass/ops.py b/src/fouroversix/matmul/cutlass/ops.py
+index c2ea6ba..aa86d27 100644
+--- a/src/fouroversix/matmul/cutlass/ops.py
++++ b/src/fouroversix/matmul/cutlass/ops.py
+@@ -133,6 +133,40 @@ def _(
+     return torch.empty(m, n, dtype=torch.bfloat16, device=a.device)
+ 
+ 
++def gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt_bias(
++    a: torch.Tensor,
++    b: torch.Tensor,
++    a_sf: torch.Tensor,
++    b_sf: torch.Tensor,
++    alpha: torch.Tensor,
++    bias: torch.Tensor,
++) -> torch.Tensor:
++    return torch.ops.fouroversix.gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt_bias.default(
++        a,
++        b,
++        a_sf,
++        b_sf,
++        alpha,
++        bias,
++    )
++
++
++@torch.library.register_fake(
++    "fouroversix::gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt_bias",
++)
++def _(
++    a: torch.Tensor,
++    b: torch.Tensor,
++    a_sf: torch.Tensor,  # noqa: ARG001
++    b_sf: torch.Tensor,  # noqa: ARG001
++    alpha: torch.Tensor,  # noqa: ARG001
++    bias: torch.Tensor,  # noqa: ARG001
++) -> torch.Tensor:
++    m = a.shape[0]
++    n = b.shape[0]
++    return torch.empty(m, n, dtype=torch.bfloat16, device=a.device)
++
++
+ def gemm_nvfp4nvfp4_accum_fp32_out_fp16_tnt(
+     a: torch.Tensor,
+     b: torch.Tensor,
+diff --git a/src/fouroversix/matmul/frontend.py b/src/fouroversix/matmul/frontend.py
+index bf96062..83f3ca6 100644
+--- a/src/fouroversix/matmul/frontend.py
++++ b/src/fouroversix/matmul/frontend.py
+@@ -116,10 +116,4 @@ def fp4_matmul(
+             msg = "No backend found that supports the given parameters"
+             raise ValueError(msg)
+ 
+-    elif not AVAILABLE_BACKENDS[backend].is_supported(
+-        input, other, out_dtype=out_dtype,
+-    ):
+-        msg = f"Backend {backend} does not support the given parameters"
+-        raise ValueError(msg)
+-
+     return AVAILABLE_BACKENDS[backend].fp4_matmul(input, other, out_dtype=out_dtype)
+diff --git a/src/fouroversix/model/modules/__init__.py b/src/fouroversix/model/modules/__init__.py
+index 5ea6e3d..f156665 100644
+--- a/src/fouroversix/model/modules/__init__.py
++++ b/src/fouroversix/model/modules/__init__.py
+@@ -11,5 +11,3 @@
+-from .gpt_oss import FourOverSixGptOssMLP
+ from .linear import FourOverSixLinear
+-from .qwen import FourOverSixQwenExperts
+ 
+-__all__ = ["FourOverSixGptOssMLP", "FourOverSixLinear", "FourOverSixQwenExperts"]
++__all__ = ["FourOverSixLinear"]
+diff --git a/src/fouroversix/model/modules/linear.py b/src/fouroversix/model/modules/linear.py
+index 5e313e6..5493419 100644
+--- a/src/fouroversix/model/modules/linear.py
++++ b/src/fouroversix/model/modules/linear.py
+@@ -264,12 +264,59 @@ class FourOverSixLinear(nn.Linear):
+ 
+         return self._quantized_weight
+ 
++    def enable_nvfp4_bias_epilogue(self) -> None:
++        self._edge_nvfp4_bias_epilogue = True
++
+     def forward(self, input: torch.Tensor) -> torch.Tensor:
+         """Forward pass for the FP4 linear layer."""
+ 
+-        return FourOverSixLinearFunction.apply(
+-            self.config,
+-            input,
+-            self.quantized_weight(),
+-            self.bias,
++        if (
++            not getattr(self, "_edge_nvfp4_bias_epilogue", False)
++            or self.training
++            or self.bias is None
++            or input.numel() == 0
++        ):
++            return FourOverSixLinearFunction.apply(
++                self.config,
++                input,
++                self.quantized_weight(),
++                self.bias,
++            )
++
++        from fouroversix.matmul.cutlass.ops import (
++            gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt_bias,
++        )
++        from fouroversix.quantize import quantize_to_fp4
++        from fouroversix.utils import DataType
++
++        weight = self.quantized_weight()
++        activation_config = self.config.get_activation_config()
++        if (
++            weight.dtype != DataType.nvfp4
++            or self.config.output_dtype != DataType.bfloat16
++        ):
++            raise RuntimeError("NVFP4 bias epilogue requires NVFP4/BF16 CUTLASS")
++        denominator = (
++            activation_config.scale_rule.max_allowed_e2m1_value()
++            * activation_config.scale_rule.max_allowed_e4m3_value()
++            * weight.scale_rule.max_allowed_e2m1_value()
++            * weight.scale_rule.max_allowed_e4m3_value()
++        )
++        quantized = quantize_to_fp4(
++            input.reshape(-1, input.shape[-1]),
++            activation_config,
++            alpha_other_amax=weight.amax,
++            alpha_multiplier=1.0 / denominator,
++        )
++        alpha = quantized.matmul_alpha
++        if alpha is None:
++            raise RuntimeError("NVFP4 bias epilogue requires fused matmul alpha")
++        result = gemm_nvfp4nvfp4_accum_fp32_out_bf16_tnt_bias(
++            quantized.values, weight.values,
++            quantized.scale_factors, weight.scale_factors,
++            alpha, self.bias,
++        )
++        rows = quantized.original_shape[0]
++        return result[:rows, : weight.original_shape[0]].reshape(
++            *input.shape[:-1], weight.original_shape[0]
+         )
+diff --git a/src/fouroversix/quantize/config.py b/src/fouroversix/quantize/config.py
+index cc5d1ee..42fd2e2 100644
+--- a/src/fouroversix/quantize/config.py
++++ b/src/fouroversix/quantize/config.py
+@@ -48,14 +48,14 @@ class QuantizationConfig:
+     def __post_init__(self) -> None:
+         """Convert string values to enums."""
+ 
+-        if isinstance(self.backend, str):
++        if type(self.backend) is str:
+             self.backend = QuantizeBackend(self.backend)
+ 
+-        if isinstance(self.dtype, str):
++        if type(self.dtype) is str:
+             self.dtype = DataType(self.dtype)
+ 
+-        if isinstance(self.round_style, str):
++        if type(self.round_style) is str:
+             self.round_style = RoundStyle(self.round_style)
+ 
+-        if isinstance(self.scale_rule, str):
++        if type(self.scale_rule) is str:
+             self.scale_rule = ScaleRule(self.scale_rule)
+diff --git a/src/fouroversix/quantize/cuda/backend.py b/src/fouroversix/quantize/cuda/backend.py
+index fc6f0d1..351f335 100644
+--- a/src/fouroversix/quantize/cuda/backend.py
++++ b/src/fouroversix/quantize/cuda/backend.py
+@@ -65,6 +65,9 @@ class CUDAQuantizeBackend(QuantizeBackendBase):
+         cls,
+         x: torch.Tensor,
+         config: QuantizationConfig,
++        *,
++        alpha_other_amax: torch.Tensor | None = None,
++        alpha_multiplier: float = 1.0,
+     ) -> QuantizedTensor:
+         """
+         Quantize a tensor to FP4 using the CUDA backend.
+@@ -80,7 +83,7 @@ class CUDAQuantizeBackend(QuantizeBackendBase):
+ 
+         from .ops import quantize_to_fp4
+ 
+-        values, scale_factors, amax = quantize_to_fp4(
++        values, scale_factors, amax, matmul_alpha = quantize_to_fp4(
+             x,
+             config.dtype == DataType.nvfp4,
+             config.round_style == RoundStyle.nearest,
+@@ -89,6 +92,8 @@ class CUDAQuantizeBackend(QuantizeBackendBase):
+             config.transpose,
+             config.scale_rule.cuda_id(),
+             0,
++            alpha_other_amax,
++            alpha_multiplier,
+         )
+ 
+         return QuantizedTensor(
+@@ -98,4 +103,5 @@ class CUDAQuantizeBackend(QuantizeBackendBase):
+             config.dtype,
+             (x.shape[1], x.shape[0]) if config.transpose else x.shape,
+             config.scale_rule,
++            matmul_alpha=matmul_alpha if matmul_alpha.numel() else None,
+         )
+diff --git a/src/fouroversix/quantize/cuda/ops.py b/src/fouroversix/quantize/cuda/ops.py
+index a07efda..78ed414 100644
+--- a/src/fouroversix/quantize/cuda/ops.py
++++ b/src/fouroversix/quantize/cuda/ops.py
+@@ -22,7 +22,9 @@ def quantize_to_fp4(
+     is_transpose: bool,  # noqa: FBT001
+     selection_rule: int,
+     rbits: int,
+-) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
++    alpha_other_amax: torch.Tensor | None = None,
++    alpha_multiplier: float = 1.0,
++) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+     return torch.ops.fouroversix.quantize_to_fp4.default(
+         x,
+         is_nvfp4,
+@@ -32,6 +34,8 @@ def quantize_to_fp4(
+         is_transpose,
+         selection_rule,
+         rbits,
++        alpha_other_amax,
++        alpha_multiplier,
+     )
+ 
+ 
+@@ -45,13 +49,34 @@ def _(
+     is_transpose: bool,  # noqa: ARG001, FBT001
+     selection_rule: int,  # noqa: ARG001
+     rbits: int,  # noqa: ARG001
+-) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
++    alpha_other_amax: torch.Tensor | None = None,  # noqa: ARG001
++    alpha_multiplier: float = 1.0,  # noqa: ARG001
++) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
++    m = x.shape[1] if is_transpose else x.shape[0]
++    n = x.shape[0] if is_transpose else x.shape[1]
++    n_round = 64 if is_nvfp4 else 128
++    m_rounded = ((m + 127) // 128) * 128
++    n_rounded = ((n + n_round - 1) // n_round) * n_round
++    m_sf = (
++        (m_rounded // 128 * 32)
++        * (n_rounded // (64 if is_nvfp4 else 128))
++    )
+     return (
+-        torch.empty(x.shape[0], x.shape[1] // 2, dtype=torch.uint8, device=x.device),
+         torch.empty(
+-            x.shape[0] * x.shape[1] // (16 if is_nvfp4 else 32),
+-            dtype=torch.float8_e4m3fn if is_nvfp4 else torch.float8_e8m0fnu,
++            m_rounded,
++            n_rounded // 2,
++            dtype=torch.uint8,
++            device=x.device,
++        ),
++        torch.empty(
++            m_sf * 16,
++            dtype=torch.float8_e4m3fn if is_nvfp4 else torch.uint8,
+             device=x.device,
+         ),
+         torch.empty(1, dtype=torch.float32, device=x.device),
++        torch.empty(
++            1 if alpha_other_amax is not None else 0,
++            dtype=torch.float32,
++            device=x.device,
++        ),
+     )
+diff --git a/src/fouroversix/quantize/frontend.py b/src/fouroversix/quantize/frontend.py
+index f5b9f00..758f1f6 100644
+--- a/src/fouroversix/quantize/frontend.py
++++ b/src/fouroversix/quantize/frontend.py
+@@ -29,6 +29,9 @@ AVAILABLE_BACKENDS = {
+ def quantize_to_fp4(
+     x: torch.Tensor,
+     config: QuantizationConfig | None = None,
++    *,
++    alpha_other_amax: torch.Tensor | None = None,
++    alpha_multiplier: float = 1.0,
+ ) -> QuantizedTensor:
+     """
+     Quantize a tensor to FP4.
+@@ -125,8 +128,13 @@ def quantize_to_fp4(
+             msg = "No backend found that supports the given parameters"
+             raise ValueError(msg)
+ 
+-    elif not AVAILABLE_BACKENDS[selected_backend].is_supported(x, config):
+-        msg = f"Backend {selected_backend} does not support the given parameters"
+-        raise ValueError(msg)
+-
++    if alpha_other_amax is not None:
++        if selected_backend != QuantizeBackend.cuda:
++            raise ValueError("Fused matmul alpha output requires the CUDA quantizer")
++        return CUDAQuantizeBackend.quantize_to_fp4(
++            x,
++            config,
++            alpha_other_amax=alpha_other_amax,
++            alpha_multiplier=alpha_multiplier,
++        )
+     return AVAILABLE_BACKENDS[selected_backend].quantize_to_fp4(x, config)
+diff --git a/src/fouroversix/quantize/quantized_tensor.py b/src/fouroversix/quantize/quantized_tensor.py
+index ff0c653..dde7afb 100644
+--- a/src/fouroversix/quantize/quantized_tensor.py
++++ b/src/fouroversix/quantize/quantized_tensor.py
+@@ -70,6 +70,7 @@ class QuantizedTensor:
+     values: torch.Tensor
+     scale_factors: torch.Tensor
+     amax: torch.Tensor
++    matmul_alpha: torch.Tensor | None
+ 
+     dtype: DataType
+     original_shape: tuple[int, int]
+@@ -86,6 +87,7 @@ class QuantizedTensor:
+         original_shape: tuple[int, int],
+         scale_rule: ScaleRule,
+         padded_shape: tuple[int, int] | None = None,
++        matmul_alpha: torch.Tensor | None = None,
+     ) -> None:
+         super().__init__()
+ 
+@@ -176,6 +178,7 @@ class QuantizedTensor:
+         self.values = values
+         self.scale_factors = scale_factors
+         self.amax = amax
++        self.matmul_alpha = matmul_alpha
+ 
+     def dequantize(self, dtype: torch.dtype = torch.bfloat16) -> torch.Tensor:
+         """Return a high-precision tensor with the dequantized values."""

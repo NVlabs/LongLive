@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Original Long-WAM deployment example.
+# Licensed under the Apache License, Version 2.0; see LICENSE at the repository root.
+
+# Inference only. No released checkpoint or training recipe is selected here.
+task: null
+control_hz: 30  # Must match the sampling rate used for your own training data.
+max_steps: 300
+max_action_age_s: null  # Required for motion; calibrate for your controller/watchdog.
+driver:
+  factory: longwam.runtime.robots.g1_driver:create_driver
+  options:
+    deployment_file: null  # Your reviewed bridge/camera YAML; see infra/README.md.
+    max_arm_delta: null  # Calibrated radians relative to fresh measured joints.
+    max_gripper_delta: null  # Calibrated native Dex1 units.
+policy:
+  robot: g1
+  benchmark: null
+  checkpoint: null
+  model_config: null
+  stats: null
+  text_cache: null
+  adapter_options:
+    control_side: both
+  execution: sync
+  action_horizon: null  # Derived from your checkpoint config.
+  execute_steps: 24
+  trigger_stride: null
+  streaming_vae: false
+  hardware: reference
+  optimization: {}
+  device: cuda
+  seed: 0
+  num_inference_steps: 10
+  policy_options: {}

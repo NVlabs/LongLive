@@ -1,0 +1,177 @@
+diff --git a/script/eval_policy.py b/script/eval_policy.py
+--- a/script/eval_policy.py
++++ b/script/eval_policy.py
+@@ -1,6 +1,11 @@
+ import sys
+ import os
+ import subprocess
+ 
++# Avoid a slow setuptools-scm walk over the vendored Curobo repository, and
++# load PyTorch before SAPIEN's bundled C++ runtime on aarch64.
++os.environ.setdefault("SETUPTOOLS_SCM_PRETEND_VERSION", "0.7.0")
++import torch
++
+ sys.path.append("./")
+ sys.path.append(f"./policy")
+ sys.path.append("./description/utils")
+diff --git a/envs/camera/camera.py b/envs/camera/camera.py
+--- a/envs/camera/camera.py
++++ b/envs/camera/camera.py
+@@ -2,7 +2,6 @@ import sapien.core as sapien
+ import numpy as np
+ import pdb
+ from PIL import Image, ImageColor
+-import open3d as o3d
+ import json
+ import transforms3d as t3d
+ import cv2
+diff --git a/envs/robot/planner.py b/envs/robot/planner.py
+--- a/envs/robot/planner.py
++++ b/envs/robot/planner.py
+@@ -1,14 +1,22 @@
+-import mplib.planner
+-import mplib
++try:
++    import mplib.planner
++    import mplib
++    from mplib.sapien_utils import SapienPlanner, SapienPlanningWorld
++except ImportError:
++    mplib = None
++    SapienPlanner = SapienPlanningWorld = None
+ import numpy as np
+ import pdb
+ import traceback
+-import numpy as np
+ import toppra as ta
+-from mplib.sapien_utils import SapienPlanner, SapienPlanningWorld
++import toppra.algorithm as ta_algo
++import toppra.constraint as ta_constraint
+ import transforms3d as t3d
+ import envs._GLOBAL_CONFIGS as CONFIGS
+ 
++TOPPRA_VEL_LIMIT = 3.0
++TOPPRA_ACC_LIMIT = 10.0
++
+ 
+ try:
+     # ********************** CuroboPlanner (optional) **********************
+@@ -295,6 +303,13 @@ class MplibPlanner:
+         links = [link.get_name() for link in robot_entity.get_links()]
+         joints = [joint.get_name() for joint in robot_entity.get_active_joints()]
+ 
++        if mplib is None:
++            self.planner = None
++            self.planner_type = planner_type
++            self.plan_step_lim = 2500
++            self.TOPP = self._toppra_topp
++            return
++
+         if scene is None:
+             self.planner = mplib.Planner(
+                 urdf=urdf_path,
+@@ -313,6 +328,62 @@ class MplibPlanner:
+         self.plan_step_lim = 2500
+         self.TOPP = self.planner.TOPP
+ 
++    @staticmethod
++    def _toppra_topp(path, step=1.0 / 250, verbose=False):
++        path = np.asarray(path, dtype=float)
++        if path.ndim == 1:
++            path = path[None, :]
++        if len(path) < 2:
++            zeros = np.zeros_like(path)
++            return np.zeros(len(path)), path, zeros, zeros, 0.0
++        try:
++            keep = [0]
++            for index in range(1, len(path)):
++                if np.max(np.abs(path[index] - path[keep[-1]])) > 1e-6:
++                    keep.append(index)
++            waypoints = path[keep]
++            if len(waypoints) < 2:
++                zeros = np.zeros_like(path)
++                return np.zeros(len(path)), path, zeros, zeros, 0.0
++            grid = np.linspace(0.0, 1.0, len(waypoints))
++            spline = ta.SplineInterpolator(grid, waypoints)
++            dof = path.shape[1]
++            velocity_limits = np.tile([-TOPPRA_VEL_LIMIT, TOPPRA_VEL_LIMIT], (dof, 1))
++            acceleration_limits = np.tile([-TOPPRA_ACC_LIMIT, TOPPRA_ACC_LIMIT], (dof, 1))
++            instance = ta_algo.TOPPRA(
++                [
++                    ta_constraint.JointVelocityConstraint(velocity_limits),
++                    ta_constraint.JointAccelerationConstraint(acceleration_limits),
++                ],
++                spline,
++            )
++            trajectory = instance.compute_trajectory()
++            if trajectory is None:
++                raise RuntimeError("toppra returned no trajectory")
++            duration = float(trajectory.duration)
++            times = np.arange(0.0, duration, step)
++            if len(times) == 0 or times[-1] < duration - 1e-9:
++                times = np.append(times, duration)
++            return times, trajectory(times), trajectory(times, 1), trajectory(times, 2), duration
++        except Exception as error:
++            if verbose:
++                print(f"toppra failed; using interpolation fallback: {error}")
++            return MplibPlanner._interp_topp(path, step=step)
++
++    @staticmethod
++    def _interp_topp(path, step=1.0 / 250, vmax=1.0):
++        positions = [path[0]]
++        for start, end in zip(path[:-1], path[1:]):
++            delta = end - start
++            steps = max(int(np.ceil(max(float(np.max(np.abs(delta))) / vmax, step) / step)), 1)
++            positions.extend(start + delta * (index / steps) for index in range(1, steps + 1))
++        positions = np.asarray(positions)
++        velocity = np.zeros_like(positions)
++        velocity[1:] = np.diff(positions, axis=0) / step
++        times = np.arange(len(positions), dtype=float) * step
++        acceleration = np.zeros_like(positions)
++        return times, positions, velocity, acceleration, float(times[-1])
++
+     def show_info(self):
+         print("joint_limits", self.planner.joint_limits)
+         print("joint_acc_limits", self.planner.joint_acc_limits)
+diff --git a/envs/utils/save_file.py b/envs/utils/save_file.py
+--- a/envs/utils/save_file.py
++++ b/envs/utils/save_file.py
+@@ -5,7 +5,6 @@ import json
+ 
+ import os
+ import pickle
+-import open3d as o3d
+ 
+ 
+ def ensure_dir(file_path):
+@@ -33,6 +32,8 @@ def save_pkl(save_path, dic_file):
+ 
+ 
+ def save_pcd(save_path, pcd_arr, color=False):
++    import open3d as o3d
++
+     ensure_dir(save_path)
+     point_cloud = o3d.geometry.PointCloud()
+     point_arr = pcd_arr[:, :3]
+diff --git a/envs/move_can_pot.py b/envs/move_can_pot.py
+--- a/envs/move_can_pot.py
++++ b/envs/move_can_pot.py
+@@ -205,7 +205,11 @@ class move_can_pot(Base_Task):
+             return False
+         pot_pose = self.pot.get_pose().p
+         can_pose = self.can.get_pose().p
+-        can_pose_rpy = t3d.euler.quat2euler(self.can.get_pose().q)
++        # transforms3d 0.4.2 passes copy=False to NumPy internally.  NumPy 2
++        # rejects that when SAPIEN supplies a float32 quaternion, so provide
++        # the float64 input transforms3d expects before converting to Euler.
++        can_quat = np.asarray(self.can.get_pose().q, dtype=np.float64)
++        can_pose_rpy = t3d.euler.quat2euler(can_quat)
+         x_rotate = can_pose_rpy[0] * 180 / np.pi
+         y_rotate = can_pose_rpy[1] * 180 / np.pi
+         eps = np.array([0.2, 0.035, 15, 15])
+@@ -260,4 +264,4 @@ class move_can_pot(Base_Task):
+         for actor in actors_list:
+             actors_pose_list.append([actor.get_pose()])
+         check(500)
+-        return is_stable, unstable_list
+\ No newline at end of file
++        return is_stable, unstable_list

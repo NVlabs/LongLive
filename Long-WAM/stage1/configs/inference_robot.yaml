@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Modified from the author-provided longlive2.0-robot/config.yaml.
+# Source: stage1/configs/validation_s.yaml; author-provided Robot S demo.
+# Changes: Standalone inference config; original sampling/model settings retained.
+# Licensed under the Apache License, Version 2.0; see LICENSE.
+
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  initialize_from_config: true
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: 64
+  sink_size: 0
+  t_scale: 1.0
+  rope_method: linear
+
+num_train_timestep: 1000
+image_or_video_shape: [1, 32, 48, 44, 80]
+inference:
+  sampling_steps: 50
+  guidance_scale: 3.0
+  independent_first_frame: true
+  local_attn_size: 64
+  sink_size: 0
+  multi_shot_sink: false
+  multi_shot_rope_offset: 0
+  streaming_vae: false
+  async_vae: false
+  vae_type: wan

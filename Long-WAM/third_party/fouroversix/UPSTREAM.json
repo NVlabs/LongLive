@@ -1,0 +1,12 @@
+{
+  "fouroversix": {
+    "repository": "https://github.com/mit-han-lab/fouroversix",
+    "revision": "4c0db4bf3027272c61e32ca7e2cdb9c7fa5bcecb"
+  },
+  "cutlass": {
+    "repository": "https://github.com/NVIDIA/cutlass",
+    "revision": "ec8daf642d69fc31352ac6fa6e14a0de9019604b"
+  },
+  "unattributed_source_sha256": "0f954494fe3f59752cd4684da5089048855f6da3ffc91f1f7fc55df4a2751dd9",
+  "source_sha256": "4cbbb773094e7192c125ac74ab9858b9163b6059ff133818a8a0fdfb8c6d01b1"
+}

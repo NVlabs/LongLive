@@ -1,0 +1,8 @@
+Long-WAM file attribution; existing upstream notices are retained below.
+SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-FileCopyrightText: Copyright (c) 2025 Tianxing Chen (陈天行)
+SPDX-License-Identifier: Apache-2.0 AND MIT
+Provenance: Modified upstream code: patch context retains upstream rights; new integration changes are NVIDIA-authored.
+Source: https://github.com/RoboTwin-Platform/RoboTwin
+License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+End Long-WAM attribution.

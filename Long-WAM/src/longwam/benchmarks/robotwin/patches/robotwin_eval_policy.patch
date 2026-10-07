@@ -1,0 +1,95 @@
+diff --git a/script/eval_policy.py b/script/eval_policy.py
+index eded198..ef971a4 100644
+--- a/script/eval_policy.py
++++ b/script/eval_policy.py
+@@ -78,6 +78,11 @@ def main(usr_args):
+     with open(f"./task_config/{task_config}.yml", "r", encoding="utf-8") as f:
+         args = yaml.load(f.read(), Loader=yaml.FullLoader)
+
++    # The LongWAMBase wrapper owns result placement and video policy. Keep the official
++    # simulator/seed loop unchanged, but honor these explicit orchestration overrides.
++    if "eval_video_log" in usr_args and usr_args["eval_video_log"] is not None:
++        args["eval_video_log"] = bool(usr_args["eval_video_log"])
++
+     args['task_name'] = task_name
+     args["task_config"] = task_config
+     args["ckpt_setting"] = ckpt_setting
+@@ -121,7 +126,11 @@ def main(usr_args):
+     else:
+         embodiment_name = str(embodiment_type[0]) + "+" + str(embodiment_type[1])
+
+-    save_dir = Path(f"eval_result/{task_name}/{policy_name}/{task_config}/{ckpt_setting}/{current_time}")
++    eval_output_dir = usr_args.get("eval_output_dir")
++    if eval_output_dir is None or str(eval_output_dir).strip() == "":
++        save_dir = Path(f"eval_result/{task_name}/{policy_name}/{task_config}/{ckpt_setting}/{current_time}")
++    else:
++        save_dir = Path(str(eval_output_dir)).expanduser().resolve()
+     save_dir.mkdir(parents=True, exist_ok=True)
+
+     if args["eval_video_log"]:
+@@ -157,9 +166,20 @@ def main(usr_args):
+
+     seed = usr_args["seed"]
+
+-    st_seed = 100000 * (1 + seed)
++    default_st_seed = 100000 * (1 + seed)
++    st_seed = int(usr_args.get("eval_start_seed", default_st_seed))
++    if st_seed < default_st_seed:
++        raise ValueError(
++            f"eval_start_seed must be >= the namespace start {default_st_seed}, got {st_seed}"
++        )
+     suc_nums = []
+-    test_num = 100
++    test_num = int(usr_args.get("eval_num_episodes", 100))
++    if test_num <= 0:
++        raise ValueError(f"eval_num_episodes must be positive, got {test_num}")
++    print(
++        f"[robotwin-eval-seed-range] start={st_seed} "
++        f"episodes={test_num} namespace_start={default_st_seed}"
++    )
+     topk = 1
+
+     model = get_model(usr_args)
+@@ -175,7 +195,10 @@ def main(usr_args):
+
+     topk_success_rate = sorted(suc_nums, reverse=True)[:topk]
+
+-    file_path = os.path.join(save_dir, f"_result.txt")
++    result_filename = str(usr_args.get("eval_result_filename", "_result.txt"))
++    if Path(result_filename).name != result_filename:
++        raise ValueError(f"eval_result_filename must be a basename, got: {result_filename}")
++    file_path = os.path.join(save_dir, result_filename)
+     with open(file_path, "w") as file:
+         file.write(f"Timestamp: {current_time}\n\n")
+         file.write(f"Instruction Type: {instruction_type}\n\n")
+@@ -243,17 +266,25 @@ def eval_policy(task_name,
+                 print("error occurs !")
+                 continue
+
+-        if (not expert_check) or (TASK_ENV.plan_success and TASK_ENV.check_success()):
+-            succ_seed += 1
+-            suc_test_seed_list.append(now_seed)
+-        else:
++        if expert_check and not (TASK_ENV.plan_success and TASK_ENV.check_success()):
+             now_seed += 1
+             args["render_freq"] = render_freq
+             continue
+
+         args["render_freq"] = render_freq
+
+-        TASK_ENV.setup_demo(now_ep_num=now_id, seed=now_seed, is_test=True, **args)
++        # Physics stability can differ on the second construction of the same seed even
++        # after the expert construction passed. Treat only this simulator-level
++        # UnStableError like the identical expert precheck case; model failures remain
++        # scored normally and all other exceptions still fail loudly.
++        try:
++            TASK_ENV.setup_demo(now_ep_num=now_id, seed=now_seed, is_test=True, **args)
++        except UnStableError:
++            TASK_ENV.close_env()
++            now_seed += 1
++            continue
++        succ_seed += 1
++        suc_test_seed_list.append(now_seed)
+         episode_info_list = [episode_info["info"]]
+         results = generate_episode_descriptions(args["task_name"], episode_info_list, test_num)
+         instruction = np.random.choice(results[0][instruction_type])

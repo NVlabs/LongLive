@@ -1,0 +1,26 @@
+SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+Provenance: Original Long-WAM release documentation.
+
+Long-WAM
+
+Original Long-WAM code and NVIDIA-authored modifications are distributed under
+the Apache License, Version 2.0. Copyright statements for NVIDIA modifications
+do not claim ownership of underlying third-party code.
+
+Third-party files and incorporated portions retain their original licenses and
+copyright notices. See THIRD_PARTY_NOTICES.md and per-file headers (or adjacent
+.license files for formats that cannot safely contain comments). Where a file
+combines Apache-2.0 changes with MIT/BSD code, the SPDX AND expression records
+the combined obligations; it is not an alternative-license choice.
+
+This distribution includes work from FastWAM, LongLive 2.0, DiffSynth-Studio, Wan, Self-Forcing,
+LeRobot, PyTorch3D, FourOverSix, FlashAttention, fast-hadamard-transform, CUTLASS,
+Transformer Engine, DALI, FramePack, Stable Video Infinity, Diffusers,
+Transformers, qwen-vl-utils, OpenVLA, robosuite, RoboTwin, DOMINO, RoboCasa, wheel, and the
+eval-of-gpt-6-astra-as-policy integration. Original notices are retained.
+
+Long-WAM is independently organized; attribution does not imply endorsement.
+This code license does not grant rights to external datasets, model weights,
+simulator assets, trademarks or hosted services. Obtain them under their own
+terms. This notice does not modify any third-party license.

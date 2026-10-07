@@ -1,0 +1,109 @@
+{
+  "schema": "longwam.robocasa-gr1-tabletop-inventory/v1",
+  "repo_id": "nvidia/PhysicalAI-Robotics-GR00T-Teleop-Sim",
+  "repo_type": "dataset",
+  "revision": "09c6de8af50168090e7e9cc01e1ec3bce788de24",
+  "expected_dataset_count": 24,
+  "expected_total_episodes": 24000,
+  "expected_total_frames": 5820277,
+  "expected_fps": 20.0,
+  "expected_chunks_per_dataset": 2,
+  "datasets": {
+    "gr1_unified.PnPBottleToCabinetClose": {
+      "episodes": 1000,
+      "frames": 349476
+    },
+    "gr1_unified.PnPCanToDrawerClose": {
+      "episodes": 1000,
+      "frames": 318546
+    },
+    "gr1_unified.PnPCupToDrawerClose": {
+      "episodes": 1000,
+      "frames": 313404
+    },
+    "gr1_unified.PnPMilkToMicrowaveClose": {
+      "episodes": 1000,
+      "frames": 387316
+    },
+    "gr1_unified.PnPPotatoToMicrowaveClose": {
+      "episodes": 1000,
+      "frames": 373353
+    },
+    "gr1_unified.PnPWineToCabinetClose": {
+      "episodes": 1000,
+      "frames": 441387
+    },
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToBasketSplitA": {
+      "episodes": 1000,
+      "frames": 177569
+    },
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToCardboardboxSplitA": {
+      "episodes": 1000,
+      "frames": 182379
+    },
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToPanSplitA": {
+      "episodes": 1000,
+      "frames": 166293
+    },
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToPotSplitA": {
+      "episodes": 1000,
+      "frames": 213457
+    },
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToTieredbasketSplitA": {
+      "episodes": 1000,
+      "frames": 215965
+    },
+    "gr1_unified.PosttrainPnPNovelFromPlacematToBasketSplitA": {
+      "episodes": 1000,
+      "frames": 140982
+    },
+    "gr1_unified.PosttrainPnPNovelFromPlacematToBowlSplitA": {
+      "episodes": 1000,
+      "frames": 158324
+    },
+    "gr1_unified.PosttrainPnPNovelFromPlacematToPlateSplitA": {
+      "episodes": 1000,
+      "frames": 170207
+    },
+    "gr1_unified.PosttrainPnPNovelFromPlacematToTieredshelfSplitA": {
+      "episodes": 1000,
+      "frames": 258920
+    },
+    "gr1_unified.PosttrainPnPNovelFromPlateToBowlSplitA": {
+      "episodes": 1000,
+      "frames": 171460
+    },
+    "gr1_unified.PosttrainPnPNovelFromPlateToCardboardboxSplitA": {
+      "episodes": 1000,
+      "frames": 225540
+    },
+    "gr1_unified.PosttrainPnPNovelFromPlateToPanSplitA": {
+      "episodes": 1000,
+      "frames": 217848
+    },
+    "gr1_unified.PosttrainPnPNovelFromPlateToPlateSplitA": {
+      "episodes": 1000,
+      "frames": 222740
+    },
+    "gr1_unified.PosttrainPnPNovelFromTrayToCardboardboxSplitA": {
+      "episodes": 1000,
+      "frames": 199399
+    },
+    "gr1_unified.PosttrainPnPNovelFromTrayToPlateSplitA": {
+      "episodes": 1000,
+      "frames": 219082
+    },
+    "gr1_unified.PosttrainPnPNovelFromTrayToPotSplitA": {
+      "episodes": 1000,
+      "frames": 187852
+    },
+    "gr1_unified.PosttrainPnPNovelFromTrayToTieredbasketSplitA": {
+      "episodes": 1000,
+      "frames": 234452
+    },
+    "gr1_unified.PosttrainPnPNovelFromTrayToTieredshelfSplitA": {
+      "episodes": 1000,
+      "frames": 274326
+    }
+  }
+}

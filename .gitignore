@@ -1,5 +1,11 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Modified from NVlabs/LongLive.
+# Source: https://github.com/NVlabs/LongLive @ fb16a87 :: .gitignore
+# Changes: Document the Long-WAM project's independent ignore rules.
+
 # Repository-wide ignores only.
-# LongLive1.0/, LongLive2.0/ and LongLive-Plug/ each keep their own
+# LongLive1.0/, LongLive2.0/, LongLive-Plug/ and Long-WAM/ each keep their own
 # .gitignore for rules specific to that codebase.
 
 __pycache__/

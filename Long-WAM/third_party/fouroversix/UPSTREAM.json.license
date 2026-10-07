@@ -1,0 +1,6 @@
+SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+Provenance: Long-WAM release metadata recording vendored source revisions and checksums.
+Source: https://github.com/Aaronhuang-778/Long-WAM @ fbe5e556b7897c16aac1ce8cb4706764e00c74e1 :: third_party/fouroversix/UPSTREAM.json
+Changes: Record both imported and attributed source checksums.
+License text: LICENSE at the repository root; upstream component licenses remain unchanged.

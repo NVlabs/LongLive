@@ -1,0 +1,15 @@
+{
+  "train_batch_size": "auto",
+  "train_micro_batch_size_per_gpu": "auto",
+  "gradient_accumulation_steps": "auto",
+  "gradient_clipping": 1.0,
+  "zero_optimization": {
+    "stage": 1,
+    "offload_optimizer": {"device": "none"},
+    "offload_param": {"device": "none"},
+    "overlap_comm": false,
+    "contiguous_gradients": false,
+    "reduce_bucket_size": 200000000,
+    "allgather_bucket_size": 200000000
+  }
+}

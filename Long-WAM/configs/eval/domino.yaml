@@ -1,0 +1,40 @@
+# Long-WAM file attribution; existing upstream notices are retained below.
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Original Long-WAM implementation.
+# License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# End Long-WAM attribution.
+
+benchmark: domino
+checkpoint: ???
+model_config: ???
+stats: ???
+output_dir: ${oc.env:LONGWAM_OUTPUT_ROOT,./outputs}/eval/domino
+simulator_python: null
+simulator_root: ${oc.env:DOMINO_ROOT,./third_party/DOMINO}
+task: all
+setting: demo_clean_dynamic
+episodes: 5
+seed: 41
+gpu_id: 0
+replan_steps: 24
+num_inference_steps: 10
+device: cuda
+policy_options:
+  sigma_shift: null
+  text_cfg_scale: 1.0
+  negative_prompt: ''
+  rand_device: cpu
+  tiled: false

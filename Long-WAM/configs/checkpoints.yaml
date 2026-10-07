@@ -1,0 +1,70 @@
+# Long-WAM file attribution; existing upstream notices are retained below.
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Original Long-WAM implementation.
+# License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# End Long-WAM attribution.
+
+# Public, ungated ELM bundles. Immutable commits verified on 2026-10-06.
+# Use the explicit variant keys in documentation; aliases preserve older commands.
+stage1_robot_s: &stage1_robot_s
+  repo_id: Efficient-Large-Model/LongLive2.0-Robot-S
+  revision: 9f23acf1a619afe69d866f105c17209880851894
+stage1_robot_m:
+  repo_id: Efficient-Large-Model/LongLive2.0-Robot-M
+  revision: 6f6fe2ee1c1db6bf3fc109a7bbda9682e45ba151
+libero_idm: &libero_idm
+  repo_id: Efficient-Large-Model/Long-WAM-LIBERO-IDM
+  revision: eca2710140fc0d03a2b0259db1d49d5ca60d5122
+libero_cod:
+  repo_id: Efficient-Large-Model/Long-WAM-LIBERO-COD
+  revision: b73f1c20bbdf7611f4a180c6117dbdbb8416cd54
+robotwin2_idm: &robotwin2_idm
+  repo_id: Efficient-Large-Model/Long-WAM-RoboTwin2.0-IDM
+  revision: f456378dec6c4d38ee74717f5d71c0e7490bcc78
+robotwin2_cod:
+  repo_id: Efficient-Large-Model/Long-WAM-RoboTwin2.0-COD
+  revision: 07b23f10f0b580b8f972c3fed24a86c6a113f7e8
+robocasa_gr1_p0:
+  repo_id: Efficient-Large-Model/Long-WAM-RoboCasa-GR1-0s
+  revision: f58df2afc51eb24fe416df0318516359637356f1
+robocasa_gr1_p48:
+  repo_id: Efficient-Large-Model/Long-WAM-RoboCasa-GR1-2.4s
+  revision: 4505c1fa86fd38f7eca5e0d33384962f761bacd8
+robocasa_gr1_p96:
+  repo_id: Efficient-Large-Model/Long-WAM-RoboCasa-GR1-4.8s
+  revision: 6e46fad23f3b14f4885fa7bb876c0cf5c91a43b7
+robocasa_gr1_p192:
+  repo_id: Efficient-Large-Model/Long-WAM-RoboCasa-GR1-9.6s
+  revision: d3457a907cdefd5035bedac6474cd3179cbc391e
+robocasa_gr1_p384: &robocasa_gr1_p384
+  repo_id: Efficient-Large-Model/Long-WAM-RoboCasa-GR1-19.2s
+  revision: 5e9f9986e12718dd5449d6c1f529f5bfaf61605d
+robocasa365:
+  repo_id: Efficient-Large-Model/Long-WAM-RoboCasa365
+  revision: b0061fbc1d59e57525640ebf4a1cb2db066afccc
+yam:
+  repo_id: Efficient-Large-Model/Long-WAM-YAM
+  revision: e104e72dab1991a166e81e2941f7539e4edb8d68
+
+stage1_robot_video: *stage1_robot_s
+libero: *libero_idm
+robotwin2: *robotwin2_idm
+robocasa_gr1: *robocasa_gr1_p384
+
+# Explicit repository overrides remain supported for custom Domino policies.
+domino:
+  repo_id: null
+  revision: null

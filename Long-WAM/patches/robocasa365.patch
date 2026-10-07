@@ -1,0 +1,131 @@
+diff --git a/robocasa/models/fixtures/counter.py b/robocasa/models/fixtures/counter.py
+index ec83b29..d422f32 100644
+--- a/robocasa/models/fixtures/counter.py
++++ b/robocasa/models/fixtures/counter.py
+@@ -23,6 +23,10 @@ from robocasa.utils.object_utils import (
+ SIDES = ["left", "right", "front", "back"]
+ 
+ 
++def _deduplicate_preserving_order(values):
++    return list(dict.fromkeys(values))
++
++
+ class Counter(ProcGenFixture):
+     """
+     Initializes a counter fixture.
+@@ -809,8 +813,9 @@ class Counter(ProcGenFixture):
+             geom_i = 0
+ 
+             if len(valid_geoms) > 0:
+-                # remove duplicates as needed
+-                valid_geoms = list(set(valid_geoms))
++                # Preserve discovery order so seeded region sampling is reproducible
++                # across processes. Element hashes are process-specific.
++                valid_geoms = _deduplicate_preserving_order(valid_geoms)
+ 
+             for g in valid_geoms:
+                 top_pos = s2a(g.get("pos"))
+diff --git a/robocasa/models/objects/kitchen_object_utils.py b/robocasa/models/objects/kitchen_object_utils.py
+index a4b09e0..075b5ac 100644
+--- a/robocasa/models/objects/kitchen_object_utils.py
++++ b/robocasa/models/objects/kitchen_object_utils.py
+@@ -489,6 +489,7 @@ def sample_kitchen_object_helper(
+     for group, group_cats in OBJ_GROUPS.items():
+         if cat in group_cats:
+             groups_containing_sampled_obj.append(group)
++    groups_containing_sampled_obj.sort()
+ 
+     info = {
+         "groups_containing_sampled_obj": groups_containing_sampled_obj,
+diff --git a/robocasa/models/objects/kitchen_objects.py b/robocasa/models/objects/kitchen_objects.py
+index a6c4e42..a1ee949 100644
+--- a/robocasa/models/objects/kitchen_objects.py
++++ b/robocasa/models/objects/kitchen_objects.py
+@@ -2968,7 +2968,7 @@ for (cat, cat_meta_dict) in OBJ_CATEGORIES.items():
+         cat_types = [cat_types]
+     all_types = all_types.union(cat_types)
+ 
+-for t in all_types:
++for t in sorted(all_types):
+     OBJ_GROUPS[t] = get_cats_by_type(types=[t])
+ 
+ OBJ_GROUPS["food"] = get_cats_by_type(
+diff --git a/robocasa/wrappers/gym_wrapper.py b/robocasa/wrappers/gym_wrapper.py
+index 84b400e..ece3347 100644
+--- a/robocasa/wrappers/gym_wrapper.py
++++ b/robocasa/wrappers/gym_wrapper.py
+@@ -1,3 +1,5 @@
++from copy import deepcopy
++
+ import cv2
+ import gymnasium as gym
+ import numpy as np
+@@ -12,7 +14,7 @@ from robosuite.environments.base import REGISTERED_ENVS
+ 
+ 
+ ALLOWED_LANGUAGE_CHARSET = (
+-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.\n\t[]{}()!?'_:"
++    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.\n\t[]{}()!?'_:-/"
+ )
+ from robocasa.utils.env_utils import create_env
+ 
+@@ -70,12 +72,25 @@ class PandaOmronKeyConverter:
+         observation_space = spaces.Dict()
+ 
+         for k, v in obs.items():
+-            if k.startswith("hand.") or k.startswith("body."):
+-                observation_space["state." + k[5:]] = spaces.Box(
+-                    low=-1, high=1, shape=(len(v),), dtype=np.float32
+-                )
+-            else:
++            if not (k.startswith("hand.") or k.startswith("body.")):
+                 raise ValueError(f"Unknown key: {k}")
++            state_name = "state." + k[5:]
++            if state_name in {
++                "state.base_rotation",
++                "state.end_effector_rotation_relative",
++            }:
++                low, high = -1.0, 1.0
++            elif state_name in {
++                "state.gripper_qpos",
++                "state.base_position",
++                "state.end_effector_position_relative",
++            }:
++                low, high = -np.inf, np.inf
++            else:
++                raise ValueError(f"Unknown state key: {state_name}")
++            observation_space[state_name] = spaces.Box(
++                low=low, high=high, shape=(len(v),), dtype=np.float32
++            )
+ 
+         return observation_space
+ 
+@@ -184,6 +199,7 @@ class RoboCasaGymEnv(gym.Env):
+         self.enable_render = enable_render
+         self.render_obs_key = f"{camera_names[0]}_image"
+         self.render_cache = None
++        self._last_ep_meta = None
+ 
+         self._create_obs_and_action_space()
+ 
+@@ -296,10 +312,19 @@ class RoboCasaGymEnv(gym.Env):
+                     )
+ 
+         self.render_cache = raw_obs[self.render_obs_key]
+-        raw_obs["language"] = self.env.get_ep_meta().get("lang", "")
++        ep_meta = self.env.get_ep_meta()
++        self._last_ep_meta = deepcopy(ep_meta)
++        raw_obs["language"] = ep_meta.get("lang", "")
+ 
+         return raw_obs
+ 
++    @property
++    def last_ep_meta(self):
++        """Metadata used to produce the most recent wrapped observation."""
++        if self._last_ep_meta is None:
++            raise RuntimeError("No wrapped observation has been produced yet.")
++        return deepcopy(self._last_ep_meta)
++
+     def get_observation(self, raw_obs):
+         basic_obs = self.get_basic_observation(raw_obs)
+         obs = {}

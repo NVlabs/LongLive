@@ -1,0 +1,129 @@
+# Long-WAM file attribution; existing upstream notices are retained below.
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Original Long-WAM robot-video integration, adapted from the author branch.
+# Source: https://github.com/Aaronhuang-778/Long-WAM @ 87b87ceb65582c46744792a77f2f61754f8274f0 :: longlive/configs/train_s.yaml
+# License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# End Long-WAM attribution.
+
+infra:
+  sequence_parallel_size: 2
+  sharding_strategy: hybrid_full
+  mixed_precision: true
+  gradient_checkpointing: true
+  vae_halo_latents: 28
+  generator_fsdp_wrap_strategy: size
+  text_encoder_fsdp_wrap_strategy: size
+model_kwargs:
+  model_name: Wan2.2-TI2V-5B
+  initialize_from_config: true
+  timestep_shift: 5.0
+  num_frame_per_block: 8
+  local_attn_size: 64
+  sink_size: 0
+  t_scale: 1.0
+  rope_method: linear
+checkpoints:
+  generator_ckpt: ${oc.env:LONGWAM_VIDEO_STAGE_S_GENERATOR_MODEL}
+  generator_ckpt_load_mode: generator_only
+algorithm:
+  trainer: diffusion
+  i2v: true
+  causal: true
+  teacher_forcing: true
+  independent_first_frame: true
+  num_train_timestep: 1000
+  denoising_loss_type: flow
+  noise_augmentation_max_timestep: 0
+training:
+  lr: 5.0e-06
+  weight_decay: 0.0
+  beta1: 0.0
+  beta2: 0.999
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  max_grad_norm: 10.0
+  ema_weight: 0.99
+  ema_start_step: 100
+  max_iters: 28602
+  log_iters: 500
+  max_checkpoints: 3
+  gc_interval: 100
+  error_recycling:
+    enabled: true
+    num_buckets: 50
+    buffer_size_per_bucket: 500
+    buffer_warmup_iter: 50
+    context_inject_prob: 0.9
+    latent_inject_prob: 0.9
+    noise_inject_prob: 0.01
+    clean_prob: 0.2
+    clean_buffer_update_prob: 0.1
+    modulate_factor: 0.3
+    start_step: 0
+    replacement_strategy: random
+data:
+  data_path: ${oc.env:LONGWAM_VIDEO_DATA_ROOT}/manifests/S/train.jsonl
+  eval_data_path: ${oc.env:LONGWAM_VIDEO_DATA_ROOT}/manifests/S/val.jsonl
+  manifest_stage: S
+  manifest_split: train
+  manifest_receipt_path: ${oc.env:LONGWAM_VIDEO_DATA_ROOT}/receipt.json
+  manifest_receipt_sha256: 0a68f0c07a05d7bab571ea205d108c4ad0f0bca0509cc639cb796e6aaee21976
+  manifest_index_cache_dir: ${oc.env:LONGWAM_VIDEO_INDEX_CACHE}
+  image_or_video_shape:
+  - 1
+  - 64
+  - 48
+  - 44
+  - 80
+  load_raw_video: true
+  allow_padding: true
+  min_latent_frames: 24
+  single_video_only: true
+  uniform_prompt: true
+  max_chunks_per_shot: 0
+  shuffle: false
+  drop_last: false
+inference:
+  sampling_steps: 50
+  local_attn_size: 64
+  sink_size: 0
+  multi_shot_sink: false
+  multi_shot_rope_offset: 0
+  guidance_scale: 3.0
+  independent_first_frame: true
+evaluation:
+  interval: 0
+  evaluate_at_end: false
+  num_frames: 64
+  weights: model
+  use_ema: false
+  val_batch_size: 1
+  save_latents_only: false
+  seed: 20260711
+  sample_ids: []
+logging:
+  seed: 42
+  wandb_key: null
+  wandb_mode: offline
+  wandb_entity: ${oc.env:WANDB_ENTITY,null}
+  wandb_project: ${oc.env:WANDB_PROJECT,robot-video}
+  wandb_name: train_s
+  wandb_group: robot-video
+  wandb_job_type: train
+  wandb_tags:
+  - robot-video
+  - train_s
+  base_checkpoint_sha256: ${oc.env:LONGWAM_VIDEO_STAGE_S_GENERATOR_SHA256}

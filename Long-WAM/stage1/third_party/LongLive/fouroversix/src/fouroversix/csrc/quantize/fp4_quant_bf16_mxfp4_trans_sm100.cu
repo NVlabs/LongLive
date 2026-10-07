@@ -1,0 +1,21 @@
+// Long-WAM file attribution; existing upstream notices are retained below.
+// SPDX-FileCopyrightText: Copyright (c) 2025 Jack Cook
+// SPDX-License-Identifier: MIT
+// Provenance: Copied from the source snapshot listed below.
+// Source: https://github.com/Aaronhuang-778/Long-WAM @ 87b87ceb65582c46744792a77f2f61754f8274f0 :: longlive/third_party/LongLive/fouroversix/src/fouroversix/csrc/quantize/fp4_quant_bf16_mxfp4_trans_sm100.cu
+// Source: https://github.com/mit-han-lab/fouroversix :: src/fouroversix/csrc/quantize/fp4_quant_bf16_mxfp4_trans_sm100.cu
+// Changes: Source is the vendored FourOverSix snapshot; upstream-file notices remain below.
+// License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+// End Long-WAM attribution.
+
+// Splitting the different transpose modes to different files to speed up compilation.
+// This file is auto-generated. See "generate_kernels.py"
+#include "fp4_quant_launch_template.h"
+namespace fouroversix {
+
+template<>
+void run_fp4_quant_<cutlass::bfloat16_t, false, false, true>(FP4_quant_params &params, cudaStream_t stream) {
+    run_mxfp4_quant<cutlass::bfloat16_t, true>(params, stream);
+}
+
+} // namespace fouroversix

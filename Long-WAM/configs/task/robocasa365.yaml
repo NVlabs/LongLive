@@ -1,0 +1,61 @@
+# @package _global_
+# Long-WAM file attribution; existing upstream notices are retained below.
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Original Long-WAM implementation.
+# License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# End Long-WAM attribution.
+
+defaults:
+- override /data: robocasa365
+- override /model: long_wam
+- _self_
+output_dir: ${oc.env:LONGWAM_OUTPUT_ROOT,./outputs}/robocasa365/${now:%Y%m%d_%H%M%S}
+batch_size: 16
+num_workers: 8
+gradient_accumulation_steps: 1
+learning_rate: 1.0e-4
+lr_scheduler_type: cosine
+sampler:
+  strategy: hierarchical
+  domain_weights:
+    atomic: 0.36
+    composite: 0.64
+  domain_strategies:
+    atomic: group_uniform
+    composite: group_uniform
+  samples_per_epoch: 512000
+num_epochs: 100
+max_steps: 100000
+save_every: 2000
+save_state_every: 2000
+eval_every: 0
+weight_decay: 0.01
+checkpoint_strict: true
+wandb:
+  name: robocasa365
+  group: robocasa365
+lr_warmup_ratio: 0.05
+lr_eta_min_ratio: 0.01
+lr_warmup_start_factor: null  # 1 / 5000 warmup updates, matching imported trainer.
+protected_checkpoint_steps: []  # Pin evaluated selections here, or create state/step_N/.keep.
+expected_global_batch_size: 256
+model_init_seed: 42
+checkpoint_keep_last: 3
+scheduler_max_steps: 100000
+adam_beta1: 0.9
+adam_beta2: 0.95
+adam_epsilon: 1.0e-08
+model: {}

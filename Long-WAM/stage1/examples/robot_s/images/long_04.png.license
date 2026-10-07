@@ -1,0 +1,7 @@
+SPDX-FileCopyrightText: The RoVid-X contributors
+SPDX-License-Identifier: CC-BY-4.0
+Provenance: Copied from the author-provided Robot S first-frame demo; lossless RGB frame 0 extracted from RoVid-X.
+Source: https://huggingface.co/datasets/DAGroup-PKU/RoVid-X
+Source video ID: cc580456b7147fb26709d977f68b0bac
+Changes: None to the supplied PNG; image SHA256 and source selection are recorded in examples.json.
+License: https://creativecommons.org/licenses/by/4.0/

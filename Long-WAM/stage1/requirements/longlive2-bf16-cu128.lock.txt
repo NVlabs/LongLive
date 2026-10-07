@@ -1,0 +1,38 @@
+# LongLive2 BF16 stage-1 runtime dependencies.
+#
+# Bootstrap components are installed in a deliberate order by
+# scripts/longlive/setup_longlive2_bf16_env.sh and are therefore not repeated
+# here:
+#   Python       3.10.18
+#   torch        2.8.0+cu128
+#   torchvision  0.23.0+cu128
+#   flash-attn   2.8.3 (built with --no-build-isolation)
+#
+# All active requirements are exact pins. In particular, do not upgrade
+# huggingface-hub to 1.x: transformers 4.57.3 requires huggingface-hub < 1.0.
+
+accelerate==1.12.0
+av==13.1.0
+datasets==4.4.2
+diffusers==0.31.0
+easydict==1.13
+einops==0.8.1
+ftfy==6.3.1
+huggingface-hub==0.36.0
+imageio==2.37.2
+imageio-ffmpeg==0.6.0
+numpy==2.2.6
+omegaconf==2.3.0
+opencv-python==4.12.0.88
+packaging==25.0
+pillow==12.0.0
+protobuf==6.33.2
+psutil==7.2.1
+pydantic==2.10.6
+regex==2025.11.3
+safetensors==0.7.0
+sentencepiece==0.2.1
+tokenizers==0.22.2
+tqdm==4.67.1
+transformers==4.57.3
+wandb==0.23.1

@@ -1,0 +1,52 @@
+diff --git a/policy/PUMA/scripts/robotwin2lerobot/scripts/convert_aloha_to_lerobot.py b/policy/PUMA/scripts/robotwin2lerobot/scripts/convert_aloha_to_lerobot.py
+--- a/policy/PUMA/scripts/robotwin2lerobot/scripts/convert_aloha_to_lerobot.py
++++ b/policy/PUMA/scripts/robotwin2lerobot/scripts/convert_aloha_to_lerobot.py
+@@ -5,12 +5,18 @@ Script to convert Aloha hdf5 data to the LeRobot dataset v2.1 format.
+ """
+ 
+ import dataclasses
++import functools
++import importlib
+ from pathlib import Path
+ import shutil
+ from typing import Literal
+ 
+ import h5py
+-from lerobot.common.datasets.lerobot_dataset import HF_LEROBOT_HOME, LeRobotDataset
++try:
++    from lerobot.common.datasets.lerobot_dataset import HF_LEROBOT_HOME, LeRobotDataset
++except ModuleNotFoundError:
++    from lerobot.constants import HF_LEROBOT_HOME
++    from lerobot.datasets.lerobot_dataset import LeRobotDataset
+ 
+ import numpy as np
+ import torch
+@@ -28,6 +34,7 @@ class DatasetConfig:
+     image_writer_processes: int = 10
+     image_writer_threads: int = 5
+     video_backend: str | None = None
++    video_codec: Literal["h264", "hevc", "libsvtav1"] = "h264"
+ 
+ 
+ DEFAULT_DATASET_CONFIG = DatasetConfig()
+@@ -42,6 +49,14 @@ def create_empty_dataset(
+     has_effort: bool = False,
+     dataset_config: DatasetConfig = DEFAULT_DATASET_CONFIG,
+ ) -> LeRobotDataset:
++    # LeRobot 0.3.x does not expose its encoder through create(); bind the
++    # requested codec in its module without modifying the installed package.
++    dataset_module = importlib.import_module(LeRobotDataset.__module__)
++    dataset_module.encode_video_frames = functools.partial(
++        dataset_module.encode_video_frames,
++        vcodec=dataset_config.video_codec,
++    )
++
+     motors = [
+         "left_waist",
+         "left_shoulder",
+@@ -289,4 +304,5 @@ def port_aloha(
+ 
+ 
+ if __name__ == "__main__":
++    np.random.seed(int(os.environ.get("DOMINO_CONVERSION_SEED", "42")))
+     tyro.cli(port_aloha)

@@ -1,0 +1,69 @@
+# Long-WAM file attribution; existing upstream notices are retained below.
+# SPDX-FileCopyrightText: Copyright (c) 2026 The FastWAM Authors
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: MIT AND Apache-2.0
+# Provenance: Modified from the source snapshot listed below.
+# Source: https://github.com/yuantianyuan01/FastWAM @ 7faa71108368fbb3b6885649f112af607427a2d4 :: pyproject.toml
+# Changes: Long-WAM integration, portable imports and/or robot training/evaluation adaptations.
+# License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+# Source: https://github.com/Aaronhuang-778/Long-WAM @ fbe5e556b7897c16aac1ce8cb4706764e00c74e1 :: pyproject.toml
+# Changes: Integrated shared runtime and accelerated inference while retaining release contracts.
+# End Long-WAM attribution.
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "long-wam"
+version = "0.1.0"
+description = "Long-WAM: streaming long-context world-action modeling"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+dependencies = [
+  "torch>=2.7,<2.8", "torchvision>=0.22,<0.23",
+  "accelerate==1.12.0", "hydra-core==1.3.2", "omegaconf==2.3.0",
+  "einops==0.8.1", "numpy>=1.26,<2", "pillow>=10", "safetensors>=0.5",
+  "transformers==4.49.0", "huggingface-hub>=0.29,<1",
+  "sentencepiece", "ftfy", "regex", "tqdm", "rich", "termcolor",
+  "imageio>=2.37", "imageio-ffmpeg>=0.6", "av>=14", "PyYAML>=6",
+  "opencv-python>=4.9,<4.12",
+]
+
+[project.optional-dependencies]
+infra = ["lerobot==0.4.1"]
+native = ["ninja", "packaging", "psutil", "setuptools>=77.0.3"]
+train = ["datasets==3.6.0", "pyarrow>=19", "pandas>=2.2", "jsonlines>=4", "wandb>=0.20", "boto3>=1.35", "gitpython>=3.1"]
+distributed = ["deepspeed==0.18.5"]
+test = ["pytest>=8", "ruff>=0.11"]
+agentic = ["scipy>=1.11"]
+gpt6 = ["scipy>=1.11"]  # Compatibility alias for existing installs.
+
+[project.scripts]
+longwam = "longwam.cli:main"
+
+[tool.setuptools]
+license-files = [
+  "LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "licenses/*.txt",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["longwam*"]
+
+[tool.setuptools.package-data]
+"longwam.runtime.backends" = ["patches/*.patch", "patches/*.patch.license"]
+"longwam.runtime" = ["README.md"]
+"longwam.benchmarks" = ["**/*.yaml", "**/*.yml", "**/*.txt", "**/*.patch", "**/*.sh", "**/*.sha256", "**/*.md", "**/*.license", "**/LICENSE.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F821", "F822", "F823"]

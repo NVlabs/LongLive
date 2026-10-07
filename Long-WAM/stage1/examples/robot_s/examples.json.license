@@ -1,0 +1,7 @@
+SPDX-FileCopyrightText: The RoVid-X contributors; NVIDIA CORPORATION & AFFILIATES (selection metadata)
+SPDX-License-Identifier: CC-BY-4.0
+Provenance: Modified subset of the author-provided robot-video examples; original instructions retained.
+Source: https://huggingface.co/datasets/DAGroup-PKU/RoVid-X
+Source: Author-provided longlive2.0-robot/examples.json, SHA256 9657ee61d30fd1a62faddbf2d93abe6225fe46a15a74c41de32f20e13ff18025
+Changes: Kept the seven supplied images, renamed the internal sample identifier field; original IDs, hashes, prompts, slots and seeds preserved.
+License: https://creativecommons.org/licenses/by/4.0/

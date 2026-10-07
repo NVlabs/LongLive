@@ -1,0 +1,226 @@
+# Long-WAM file attribution; existing upstream notices are retained below.
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Original Long-WAM implementation.
+# License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# End Long-WAM attribution.
+
+train:
+  _target_: longwam.datasets.mixture.DomainConcatDataset
+  domains:
+    robotwin:
+      _target_: longwam.datasets.lerobot.robot_video_dataset.RobotVideoDataset
+      dataset_dirs:
+      - ${oc.env:ROBOTWIN_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robotwin2.0/robotwin2.0}
+      episode_selection:
+        manifest_path: ${oc.env:ROBOTWIN_MIX_MANIFEST,${oc.env:LONGWAM_DATA_ROOT,./data}/robotwin2.0/manifests/official_instruction_map_domino_replay_16tasks.json}
+        verify_source_hashes: true
+        canonical_tasks:
+        - adjust_bottle
+        - dump_bin_bigbin
+        - grab_roller
+        - handover_block
+        - handover_mic
+        - hanging_mug
+        - move_can_pot
+        - place_a2b_left
+        - place_a2b_right
+        - place_bread_basket
+        - place_bread_skillet
+        - place_shoe
+        - put_bottles_dustbin
+        - put_object_cabinet
+        - rotate_qrcode
+        - scan_object
+        phases:
+        - clean
+        - randomized
+        episodes_per_phase:
+          clean: 5
+          randomized: 50
+        seed: 42
+      shape_meta:
+        images:
+        - key: cam_high
+          raw_shape:
+          - 3
+          - 480
+          - 640
+          shape:
+          - 3
+          - 240
+          - 320
+        - key: cam_left_wrist
+          raw_shape:
+          - 3
+          - 480
+          - 640
+          shape:
+          - 3
+          - 240
+          - 320
+        - key: cam_right_wrist
+          raw_shape:
+          - 3
+          - 480
+          - 640
+          shape:
+          - 3
+          - 240
+          - 320
+        action:
+        - key: default
+          raw_shape: 14
+          shape: 14
+        state:
+        - key: default
+          raw_shape: 14
+          shape: 14
+      num_frames: 81
+      past_obs_size: 48
+      action_chunk: 32
+      global_sample_stride: 1
+      action_video_freq_ratio: 4
+      video_size:
+      - 384
+      - 320
+      camera_key: null
+      val_set_proportion: 0.0
+      is_training_set: true
+      pretrained_norm_stats: ${oc.env:ROBOTWIN_INIT_DIR,${oc.env:LONGWAM_CHECKPOINT_ROOT,./checkpoints}/longwam_release/long-wam-robotwin-m4k2-32s}/dataset_stats.json
+      skip_padding_as_possible: false
+      concat_multi_camera: robotwin
+      text_embedding_cache_dir: ${oc.env:ROBOTWIN_MIX_TEXT_CACHE,${oc.env:LONGWAM_DATA_ROOT,./data}/robotwin2.0/text_embeds_cache/domino_replay_16tasks_5clean_50random_seed42}
+      context_len: 128
+      video_backend: pyav
+      processor:
+        _target_: longwam.datasets.lerobot.processors.longwam_processor.LongWAMProcessor
+        shape_meta: ${data.train.domains.robotwin.shape_meta}
+        num_obs_steps: ${data.train.domains.robotwin.num_frames}
+        num_output_cameras: 3
+        action_output_dim: 14
+        proprio_output_dim: 14
+        action_state_transforms: null
+        use_stepwise_action_norm: false
+        norm_default_mode: z-score
+        norm_exception_mode: null
+        action_state_merger:
+          _target_: longwam.datasets.lerobot.transforms.action_state_merger.ConcatLeftAlign
+        train_transforms:
+        - _target_: longwam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size:
+          - 240
+          - 320
+        val_transforms:
+        - _target_: longwam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size:
+          - 240
+          - 320
+    domino:
+      _target_: longwam.datasets.lerobot.robot_video_dataset.RobotVideoDataset
+      dataset_dirs:
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/press_stapler
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/place_container_plate
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/place_empty_cup
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/click_alarmclock
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/place_object_stand
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/beat_block_hammer
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/place_mouse_pad
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/click_bell
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/place_object_scale
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/move_pillbottle_pad
+      - ${oc.env:DOMINO_LEROBOT_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/lerobot}/domino_level1/stamp_seal
+      shape_meta:
+        images:
+        - key: cam_high
+          raw_shape:
+          - 3
+          - 480
+          - 640
+          shape:
+          - 3
+          - 240
+          - 320
+        - key: cam_left_wrist
+          raw_shape:
+          - 3
+          - 480
+          - 640
+          shape:
+          - 3
+          - 240
+          - 320
+        - key: cam_right_wrist
+          raw_shape:
+          - 3
+          - 480
+          - 640
+          shape:
+          - 3
+          - 240
+          - 320
+        action:
+        - key: default
+          raw_shape: 14
+          shape: 14
+        state:
+        - key: default
+          raw_shape: 14
+          shape: 14
+      num_frames: 81
+      past_obs_size: 48
+      action_chunk: 32
+      global_sample_stride: 1.6666666666666667
+      action_video_freq_ratio: 4
+      video_size:
+      - 384
+      - 320
+      camera_key: null
+      val_set_proportion: 0.0
+      is_training_set: true
+      pretrained_norm_stats: ${oc.env:ROBOTWIN_INIT_DIR,${oc.env:LONGWAM_CHECKPOINT_ROOT,./checkpoints}/longwam_release/long-wam-robotwin-m4k2-32s}/dataset_stats.json
+      skip_padding_as_possible: false
+      concat_multi_camera: robotwin
+      text_embedding_cache_dir: ${oc.env:DOMINO_TEXT_CACHE,${oc.env:LONGWAM_DATA_ROOT,./data}/domino/text_embeds_cache}
+      context_len: 128
+      video_backend: pyav
+      processor:
+        _target_: longwam.datasets.lerobot.processors.longwam_processor.LongWAMProcessor
+        shape_meta: ${data.train.domains.domino.shape_meta}
+        num_obs_steps: ${data.train.domains.domino.num_frames}
+        num_output_cameras: 3
+        action_output_dim: 14
+        proprio_output_dim: 14
+        action_state_transforms: null
+        use_stepwise_action_norm: false
+        norm_default_mode: z-score
+        norm_exception_mode: null
+        action_state_merger:
+          _target_: longwam.datasets.lerobot.transforms.action_state_merger.ConcatLeftAlign
+        train_transforms:
+        - _target_: longwam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size:
+          - 240
+          - 320
+        val_transforms:
+        - _target_: longwam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size:
+          - 240
+          - 320
+val: null

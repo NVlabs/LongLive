@@ -1,0 +1,116 @@
+# Long-WAM file attribution; existing upstream notices are retained below.
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Provenance: Original Long-WAM implementation.
+# License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# End Long-WAM attribution.
+
+train:
+  _target_: longwam.datasets.lerobot.robocasa_gr1_tabletop_dataset.RoboCasaGR1TabletopDataset
+  source_recipe: teleop
+  dataset_dirs:
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PnPBottleToCabinetClose
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PnPCanToDrawerClose
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PnPCupToDrawerClose
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PnPMilkToMicrowaveClose
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PnPPotatoToMicrowaveClose
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PnPWineToCabinetClose
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromCuttingboardToBasketSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromCuttingboardToCardboardboxSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromCuttingboardToPanSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromCuttingboardToPotSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromCuttingboardToTieredbasketSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromPlacematToBasketSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromPlacematToBowlSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromPlacematToPlateSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromPlacematToTieredshelfSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromPlateToBowlSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromPlateToCardboardboxSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromPlateToPanSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromPlateToPlateSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromTrayToCardboardboxSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromTrayToPlateSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromTrayToPotSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromTrayToTieredbasketSplitA
+  - ${oc.env:ROBOCASA_GR1_TABLETOP_DATA_ROOT,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/PhysicalAI-Robotics-GR00T-Teleop-Sim/LeRobot}/gr1_unified.PosttrainPnPNovelFromTrayToTieredshelfSplitA
+  expected_dataset_count: 24
+  expected_dataset_revision: 09c6de8af50168090e7e9cc01e1ec3bce788de24
+  validate_dataset_contract: true
+  known_omissions_path: null
+  sampling_seed: 42
+  balance_dataset_weights: true
+  balance_trajectory_weights: true
+  shape_meta:
+    images:
+    - key: ego_view
+      raw_shape:
+      - 3
+      - 256
+      - 256
+      shape:
+      - 3
+      - 224
+      - 224
+    action:
+    - key: default
+      raw_shape: 44
+      shape: 29
+    state:
+    - key: default
+      raw_shape: 44
+      shape: 58
+  num_frames: ${context.num_frames}
+  past_obs_size: ${context.past_obs_size}
+  action_chunk: 16
+  global_sample_stride: 1
+  action_video_freq_ratio: 4
+  decode_only_sampled_video_frames: true
+  video_size:
+  - 224
+  - 224
+  camera_key: null
+  val_set_proportion: 0.0
+  is_training_set: true
+  skip_padding_as_possible: false
+  concat_multi_camera: null
+  video_backend: pyav
+  fail_on_sample_error: true
+  pretrained_norm_stats: ${oc.env:ROBOCASA_GR1_TABLETOP_ACTION_STATS,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/teleop_derived/global_action_minmax.json}
+  processor:
+    _target_: longwam.datasets.lerobot.robocasa_gr1_tabletop_dataset.RoboCasaGR1TabletopProcessor
+    expected_dataset_revision: ${data.train.expected_dataset_revision}
+    shape_meta: ${data.train.shape_meta}
+    num_obs_steps: ${context.num_frames}
+    num_image_steps: ${context.sampled_video_frames}
+    num_output_cameras: 1
+    action_output_dim: 29
+    proprio_output_dim: 58
+    action_state_transforms:
+    - _target_: longwam.datasets.lerobot.transforms.gr1_tabletop.GR1StateActionTransform
+      action_stats_path: ${data.train.pretrained_norm_stats}
+      expected_dataset_revision: ${data.train.expected_dataset_revision}
+    use_stepwise_action_norm: false
+    norm_default_mode: min/max
+    norm_exception_mode: null
+    action_state_merger:
+      _target_: longwam.datasets.lerobot.transforms.action_state_merger.ConcatLeftAlign
+    train_transforms:
+    - _target_: longwam.datasets.lerobot.transforms.gr1_tabletop.GR1OfficialVideoTransform
+      training: true
+    val_transforms:
+    - _target_: longwam.datasets.lerobot.transforms.gr1_tabletop.GR1OfficialVideoTransform
+      training: false
+  text_embedding_cache_dir: ${oc.env:ROBOCASA_GR1_TABLETOP_TEXT_CACHE,${oc.env:LONGWAM_DATA_ROOT,./data}/robocasa_gr1_tabletop/derived/text_embeds}
+  context_len: 128

@@ -1,0 +1,9 @@
+Long-WAM file attribution; existing upstream notices are retained below.
+SPDX-FileCopyrightText: Copyright (c) 2026 Yu-Mool Shu and Lipxin Zheng
+SPDX-License-Identifier: MIT
+Provenance: Copied from the source snapshot listed below.
+Source: https://github.com/Aaronhuang-778/Long-WAM @ 87b87ceb65582c46744792a77f2f61754f8274f0 :: robocasa/FastWAM/experiments/robocasa_gpt6/skill/gate_prompt.md
+Source: eval-of-gpt-6-astra-as-policy @ 79f8be5905102d6b16000c0f02a9c2195b51bb61
+Changes: RoboCasa integration snapshot; original embodied-policy MIT notice is retained.
+License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+End Long-WAM attribution.

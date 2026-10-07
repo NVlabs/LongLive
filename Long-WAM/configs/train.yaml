@@ -1,0 +1,78 @@
+# @package _global_
+# Long-WAM file attribution; existing upstream notices are retained below.
+# SPDX-FileCopyrightText: Copyright (c) 2026 The FastWAM Authors
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: MIT AND Apache-2.0
+# Provenance: Modified from the source snapshot listed below.
+# Source: https://github.com/yuantianyuan01/FastWAM @ 7faa71108368fbb3b6885649f112af607427a2d4 :: configs/train.yaml
+# Changes: Long-WAM integration, portable imports and/or robot training/evaluation adaptations.
+# License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
+# End Long-WAM attribution.
+
+
+defaults:
+  - _self_
+  - data: null
+  - model: null
+  - context: null
+  - denoising: idm
+  - task: null
+
+
+output_dir: ./runs/train/${now:%Y-%m-%d}_${now:%H-%M-%S}
+
+# dataloading
+batch_size: 2
+num_workers: 4
+sampler:
+  strategy: frame_uniform
+
+# scheduler
+lr_scheduler_type: "cosine"
+learning_rate: 1.0e-4
+num_epochs: 1
+max_steps: null
+log_every: 10
+save_every: 100
+# By default, resumable ZeRO state follows the weights cadence. Set this to a
+# larger interval to keep intermediate evaluation weights without repeatedly
+# writing the much larger optimizer state.
+save_state_every: null
+# Preserve final weights and optimizer state for reuse and exact resume.
+save_final_state: true
+save_final_weights: true
+eval_every: 0  # Benchmark evaluation uses the independent eval.sh entry point.
+eval_num_inference_steps: 10
+
+# training
+gradient_accumulation_steps: 1
+mixed_precision: "bf16" # one of: [no, fp16, bf16]
+seed: 42
+max_grad_norm: 1.0
+weight_decay: 0.0
+resume: null
+checkpoint_strict: false
+# Starts a fresh optimizer/scheduler/step-0 run from schema-adapted weights.
+# This is intentionally separate from, and mutually exclusive with, `resume`.
+# Example:
+# init_checkpoint:
+#   path: /path/to/step.pt
+#   adapter: libero_to_robocasa
+#   gripper: null  # map only with explicit normalized source/target min/max
+init_checkpoint: null
+
+# wandb
+wandb:
+  enabled: false
+  workspace: null
+  project: long-wam
+  name: train
+  group: null
+  mode: online
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: .
+  output_subdir: null

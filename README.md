@@ -1,17 +1,27 @@
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+Provenance: Modified from NVlabs/LongLive.
+Source: https://github.com/NVlabs/LongLive @ fb16a87 :: README.md
+Changes: Add the independent Long-WAM project and its entry points.
+-->
+
 <p align="center" style="border-radius: 10px">
   <img src="LongLive1.0/assets/LongLive-logo.png" width="100%" alt="LongLive logo"/>
 </p>
 
 # 🎬 LongLive
 
-**Long video generation research from NVIDIA.** This repository hosts three
-generations of the project, each in its own directory with its own code,
-documentation and model weights.
+**Long video generation and world-action modeling research from NVIDIA.**
+Each project has its own directory, code, documentation and model weights.
 
+<!-- Long-WAM paper link will be added when supplied; the badge is intentionally not linked. -->
+![Long-WAM paper — link forthcoming](https://img.shields.io/badge/Paper-Long--WAM-lightgrey)
 [![Paper](https://img.shields.io/badge/Paper-LongLive--Plug-brown)](https://arxiv.org/abs/2609.38154)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-red)](https://arxiv.org/abs/2605.18739)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://arxiv.org/abs/2509.22622)
 
+[![Demo Long-WAM](https://img.shields.io/badge/Demo-Long--WAM-76B900)](https://efficient-large-model.github.io/Long-WAM/)
 [![Demo LongLive-Plug](https://img.shields.io/badge/Demo-LongLive--Plug-brown)](https://nvlabs.github.io/LongLive/LongLive-Plug/)
 [![Demo LongLive 2.0](https://img.shields.io/badge/Demo-LongLive_2.0-red)](https://nvlabs.github.io/LongLive/LongLive2/)
 [![Demo LongLive 1.0](https://img.shields.io/badge/Demo-LongLive_1.0-orange)](https://nvlabs.github.io/LongLive/)
@@ -20,41 +30,53 @@ documentation and model weights.
 
 | Directory | What it is | Use it when you want to | Venue |
 | --- | --- | --- | --- |
+| [**`Long-WAM/`**](Long-WAM) | Long-context world-action models | Train and evaluate robot policies, generate robot videos, or deploy on YAM, Franka and Unitree G1 | — |
 | [**`LongLive-Plug/`**](LongLive-Plug) | Once-for-all distillation for video generation | Distill a capability once on a base model and reuse it across downstream models, without retraining | [arXiv](https://arxiv.org/abs/2609.38154) |
 | [**`LongLive2.0/`**](LongLive2.0) | An NVFP4 parallel infrastructure for long video generation | Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism | arXiv |
 | [**`LongLive1.0/`**](LongLive1.0) | Real-time interactive long video generation | Type prompts and watch a long video appear in real time, steered as you go | ICLR 2026 |
 
-Each directory is self-contained: clone the repository, `cd` into the one you
-need, and follow its own README.
+Each project is self-contained. Download only the project you need using partial
+clone and sparse checkout; the example below selects **Long-WAM**.
 
 ```bash
-git clone --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git
-cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
+git clone --filter=blob:none --sparse --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git
+cd LongLive
+git sparse-checkout set Long-WAM
+cd Long-WAM
 ```
+
+For another project, replace `Long-WAM` in the last two commands with
+`LongLive-Plug`, `LongLive2.0` or `LongLive1.0`. Only the selected project and
+shared root files are downloaded; no other project is required to run it.
 
 ## Demo videos
 
 <table>
 <tr>
-<th width="33%" align="center">LongLive-Plug</th>
-<th width="33%" align="center">LongLive 2.0</th>
-<th width="33%" align="center">LongLive 1.0</th>
+<th width="25%" align="center">Long-WAM</th>
+<th width="25%" align="center">LongLive-Plug</th>
+<th width="25%" align="center">LongLive 2.0</th>
+<th width="25%" align="center">LongLive 1.0</th>
 </tr>
 <tr>
-<td width="33%" align="center">
+<td width="25%" align="center">
+  <a href="https://www.youtube.com/watch?v=sQGoMf6au1Y"><img src="https://img.youtube.com/vi/sQGoMf6au1Y/maxresdefault.jpg" width="100%" alt="Long-WAM overview video — watch on YouTube"></a>
+</td>
+<td width="25%" align="center">
   <a href="https://youtu.be/pXNrJvBZvZU"><img src="LongLive-Plug/assets/readme/overview-first-frame.png" width="100%" alt="LongLive-Plug overview video — watch on YouTube"></a>
 </td>
-<td width="33%" align="center">
+<td width="25%" align="center">
   <a href="https://www.youtube.com/watch?v=7oQALy32fiU"><img src="LongLive2.0/assets/longlive2/first-video-frame.png" width="100%" alt="LongLive 2.0 overview video — watch on YouTube"></a>
 </td>
-<td width="33%" align="center">
+<td width="25%" align="center">
   <a href="https://www.youtube.com/watch?v=CO1QC7BNvig"><img src="LongLive1.0/assets/video-first-frame.png" width="100%" alt="LongLive 1.0 overview video — watch on YouTube"></a>
 </td>
 </tr>
 <tr>
-<td width="33%" align="center"><sub>Once-for-all distillation: train a capability once, reuse it downstream</sub></td>
-<td width="33%" align="center"><sub>NVFP4 parallel infrastructure for training and inference</sub></td>
-<td width="33%" align="center"><sub>Real-time interactive long video generation</sub></td>
+<td width="25%" align="center"><sub>Long-context world-action models with streaming visual memory</sub></td>
+<td width="25%" align="center"><sub>Once-for-all distillation: train a capability once, reuse it downstream</sub></td>
+<td width="25%" align="center"><sub>NVFP4 parallel infrastructure for training and inference</sub></td>
+<td width="25%" align="center"><sub>Real-time interactive long video generation</sub></td>
 </tr>
 </table>
 
@@ -62,6 +84,7 @@ cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
 
 ## News
 
+- 🔥 [2026.10.07] We release **Long-WAM**: long-context world-action models, robot-video pretraining, benchmark training/evaluation and real-robot deployment demos. → [`Long-WAM/`](Long-WAM) · [Project page](https://efficient-large-model.github.io/Long-WAM/)
 - 🔥 [2026.09.28] We release **LongLive-Plug** training and inference code with four recipes covering CFG and few-step distillation. → [`LongLive-Plug/`](LongLive-Plug)
 - 🔥 [2026.07.08] LongLive 2.0 supports FP8 inference. Please refer to [here](LongLive2.0/README.md#fp8-ptq).
 - 🔥 [2026.06.01] We released [LongLive-RAG](https://github.com/qixinhu11/LongLive-RAG), a general retrieval-augmented framework for long video gen.
@@ -77,6 +100,22 @@ cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
 
 ## Models
 
+### Long-WAM
+
+Public checkpoints on [Efficient-Large-Model](https://huggingface.co/Efficient-Large-Model).
+See [download and inference instructions](Long-WAM/README.md#checkpoints).
+
+| Model family | Released variants | Use |
+| --- | --- | --- |
+| Long-WAM LIBERO | [IDM](https://huggingface.co/Efficient-Large-Model/Long-WAM-LIBERO-IDM) · [COD](https://huggingface.co/Efficient-Large-Model/Long-WAM-LIBERO-COD) | LIBERO policy inference |
+| Long-WAM RoboTwin 2.0 | [IDM](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-IDM) · [COD](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-COD) | RoboTwin 2.0 policy inference |
+| Long-WAM RoboCasa GR1 | [0 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-0s) · [2.4 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-2.4s) · [4.8 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-4.8s) · [9.6 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-9.6s) · [19.2 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-19.2s) | Context-length scaling |
+| Long-WAM RoboCasa365 | [RoboCasa365](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa365) | Generalist kitchen policy |
+| Long-WAM YAM | [YAM](https://huggingface.co/Efficient-Large-Model/Long-WAM-YAM) | Bimanual pretraining on ABC 130K |
+| LongLive 2.0 Robot | [Robot-S](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-S) · [Robot-M](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-M) | Autoregressive robot-video generation |
+
+### LongLive-Plug
+
 [LongLive-Plug model collection](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug)
 
 | LongLive-Plug | Directory | Supported Models |
@@ -90,6 +129,8 @@ cd LongLive/LongLive-Plug   # or LongLive2.0, or LongLive1.0
 
 Model examples are from the paper appendix, **Complete Transfer Coverage and Additional Cases**; each row lists up to five examples. Wan coverage includes both few-step and CFG transfer. MiniMax-H3 few-step and CFG adapters are used separately.
 
+### LongLive 2.0 and 1.0
+
 | Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
 | --- | --- | ---: | ---: | ---: | :---: |
 | [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
@@ -98,6 +139,23 @@ Model examples are from the paper appendix, **Complete Transfer Coverage and Add
 | [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | [`LongLive1.0/`](LongLive1.0) | 20.7 | 1.3B | 84.87 |  |
 
 
+
+## Long-WAM — Scaling the Context of World-Action Models
+
+Long-context robot policies with streaming visual memory, built on LongLive 2.0
+Robot video pretraining.
+
+- **Benchmarks:** LIBERO, RoboTwin 2.0, Domino, RoboCasa GR1 and RoboCasa365.
+- **Inference:** streaming IDM/COD, configurable Agentic API and image-to-video demos.
+- **Deployment:** RTX 5090, DGX Spark and AGX Thor runtime profiles; YAM, Franka and Unitree G1 interfaces.
+
+| Generated robot video | YAM long-horizon task | Unitree G1 cup stacking |
+| --- | --- | --- |
+| [![Generated robot video](Long-WAM/assets/demos/ar_shoe.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![YAM robot demo](Long-WAM/assets/demos/yam_long_horizon.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![Unitree G1 robot demo](Long-WAM/assets/demos/g1_cup_stacking.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) |
+
+→ [Code and quick start](Long-WAM) · [Checkpoints](Long-WAM/README.md#checkpoints) ·
+[Project page](https://efficient-large-model.github.io/Long-WAM/) ·
+[Video](https://www.youtube.com/watch?v=sQGoMf6au1Y)
 
 ## LongLive-Plug — Once-for-All Distillation for Video Generation
 
@@ -175,6 +233,8 @@ its own copy of the license and, where applicable, its own third-party notices.
 
 Please consider citing our work if you find it useful:
 
+**Long-WAM: Scaling the Context of World-Action Models** — paper link and official BibTeX forthcoming.
+<!-- Replace this line with the author-supplied paper link and official citation. -->
 
 ```bibtex
 @misc{yang2026longliveplug,

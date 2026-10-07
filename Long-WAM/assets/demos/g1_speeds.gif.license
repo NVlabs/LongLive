@@ -1,0 +1,6 @@
+SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+Provenance: Modified Long-WAM project-page demo.
+Source: https://efficient-large-model.github.io/Long-WAM/static/videos/g1_speeds.mp4
+Changes: Converted the full clip to a looping GIF at 8 fps, 384 pixels wide and 64 colors; source playback timing retained.
+Licensed under the Apache License, Version 2.0; see LICENSE at the repository root.
