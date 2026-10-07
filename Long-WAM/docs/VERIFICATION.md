@@ -38,6 +38,13 @@ syntax, static checks, 116 local documentation links and 35 README shell blocks
 passed. All 13 listed ELM model repositories were confirmed public and ungated
 through unauthenticated metadata requests; no weights were downloaded.
 
+A real GitHub partial/sparse clone of `long-wam-release` fetched all 1,458
+Long-WAM files while leaving all three neighboring projects absent. An unrelated
+project image was confirmed missing from the local Git object store, not merely
+hidden from the working tree. In that checkout, 51 of the CPU tests above and
+18 CLI checks passed; these are overlapping regressions, not additional distinct
+tests. Commands also worked from an unrelated working directory.
+
 No GPU jobs, simulator rollouts, physical robot commands or paid API calls were
 run. Checks used a disposable Python 3.12 environment with the existing PyTorch
 2.5.1 CPU runtime, not a fresh installation of the declared training/deployment
