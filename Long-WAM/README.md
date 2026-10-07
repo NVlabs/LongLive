@@ -55,7 +55,7 @@ End Long-WAM attribution.
 <!-- Add the paper link when supplied. -->
 <p align="center">
   <a href="https://github.com/NVlabs/LongLive/tree/long-wam-release/Long-WAM"><img src="https://img.shields.io/badge/GitHub-Code-181717" alt="Official Long-WAM code"></a>
-  <a href="https://efficient-large-model.github.io/Long-WAM/"><img src="https://img.shields.io/badge/Project-Page-76B900" alt="Long-WAM project page"></a>
+  <a href="https://nvlabs.github.io/LongLive/Long-WAM/"><img src="https://img.shields.io/badge/Project-Page-76B900" alt="Long-WAM project page"></a>
   <a href="https://huggingface.co/Efficient-Large-Model"><img src="https://img.shields.io/badge/Hugging_Face-Models-FFD21E" alt="Public checkpoints on Hugging Face"></a>
   <a href="https://www.youtube.com/watch?v=sQGoMf6au1Y"><img src="https://img.shields.io/badge/YouTube-Video-FF0000" alt="Watch Long-WAM on YouTube"></a>
   <a href="#quick-start"><img src="https://img.shields.io/badge/Docs-Getting_Started-2563EB" alt="Documentation: getting started"></a>
@@ -407,26 +407,26 @@ YAM, Franka and G1 share `create_policy` and the existing infra backends.
 
 | G1 · Dynamic cup stacking (1×) | G1 · Moving-cup grasping (1×) |
 | --- | --- |
-| [![G1 stacks cups on a moving conveyor](assets/demos/g1_cup_stacking.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![G1 grasps moving cups at four conveyor speeds](assets/demos/g1_speeds.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) |
+| [![G1 stacks cups on a moving conveyor](assets/demos/g1_cup_stacking.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![G1 grasps moving cups at four conveyor speeds](assets/demos/g1_speeds.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) |
 
 **YAM · Bowl stacking and brick sorting (2×)**
 
-[![YAM long-horizon bowl stacking and brick sorting](assets/demos/yam_long_horizon.gif)](https://efficient-large-model.github.io/Long-WAM/#demos)
+[![YAM long-horizon bowl stacking and brick sorting](assets/demos/yam_long_horizon.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos)
 
 <details>
 <summary>G1 runtime comparisons (1×)</summary>
 
 **Synchronous execution vs. accelerated infra**
 
-[![G1 synchronous execution compared with accelerated infrastructure](assets/demos/g1_sync_infra.gif)](https://efficient-large-model.github.io/Long-WAM/#demos)
+[![G1 synchronous execution compared with accelerated infrastructure](assets/demos/g1_sync_infra.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos)
 
 **Synchronous (top) vs. asynchronous (bottom), across four speeds**
 
-[![G1 synchronous and asynchronous execution across four conveyor speeds](assets/demos/g1_sync_async.gif)](https://efficient-large-model.github.io/Long-WAM/#demos)
+[![G1 synchronous and asynchronous execution across four conveyor speeds](assets/demos/g1_sync_async.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos)
 
 </details>
 
-Real-robot recordings from the [project page](https://efficient-large-model.github.io/Long-WAM/#demos);
+Real-robot recordings from the [project page](https://nvlabs.github.io/LongLive/Long-WAM/#demos);
 click a GIF to watch on the project page.
 
 | Robot | Supported policy interface | Deployment configuration | Inspect without hardware |
@@ -555,12 +555,12 @@ Use its own environment. Recorded training uses **128 workers**; validation uses
 
 | Shoe → container (1×) | Bun → steamer (1×) | Lid → pan (1×) |
 | --- | --- | --- |
-| [![Generated video of placing a shoe into a container](assets/demos/ar_shoe.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![Generated video of putting a bun into a steamer](assets/demos/ar_bun.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![Generated video of covering a frying pan](assets/demos/ar_pan.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) |
+| [![Generated video of placing a shoe into a container](assets/demos/ar_shoe.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![Generated video of putting a bun into a steamer](assets/demos/ar_bun.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![Generated video of covering a frying pan](assets/demos/ar_pan.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) |
 | **Pour water (1×)** | **Fold clothing (2×)** | **Empty measuring cup (1×)** |
-| [![Generated video of pouring water into a bowl](assets/demos/ar_pour.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![Generated video of folding clothing](assets/demos/ar_fold.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![Generated video of emptying a measuring cup](assets/demos/ar_empty_cup.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) |
+| [![Generated video of pouring water into a bowl](assets/demos/ar_pour.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![Generated video of folding clothing](assets/demos/ar_fold.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![Generated video of emptying a measuring cup](assets/demos/ar_empty_cup.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) |
 
 Generated from an image and instruction, **not executed robot rollouts**.
-Click a GIF to watch on the [project page](https://efficient-large-model.github.io/Long-WAM/#demos).
+Click a GIF to watch on the [project page](https://nvlabs.github.io/LongLive/Long-WAM/#demos).
 
 ### Image-to-video inference
 

@@ -21,7 +21,7 @@ Each project has its own directory, code, documentation and model weights.
 [![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-red)](https://arxiv.org/abs/2605.18739)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://arxiv.org/abs/2509.22622)
 
-[![Demo Long-WAM](https://img.shields.io/badge/Demo-Long--WAM-76B900)](https://efficient-large-model.github.io/Long-WAM/)
+[![Demo Long-WAM](https://img.shields.io/badge/Demo-Long--WAM-76B900)](https://nvlabs.github.io/LongLive/Long-WAM/)
 [![Demo LongLive-Plug](https://img.shields.io/badge/Demo-LongLive--Plug-brown)](https://nvlabs.github.io/LongLive/LongLive-Plug/)
 [![Demo LongLive 2.0](https://img.shields.io/badge/Demo-LongLive_2.0-red)](https://nvlabs.github.io/LongLive/LongLive2/)
 [![Demo LongLive 1.0](https://img.shields.io/badge/Demo-LongLive_1.0-orange)](https://nvlabs.github.io/LongLive/)
@@ -85,7 +85,7 @@ shared root files are downloaded; no other project is required to run it.
 
 ## News
 
-- 🔥 [2026.10.07] We release **Long-WAM**: long-context world-action models, robot-video pretraining, benchmark training/evaluation and real-robot deployment demos. → [`Long-WAM/`](Long-WAM) · [Project page](https://efficient-large-model.github.io/Long-WAM/)
+- 🔥 [2026.10.07] We release **Long-WAM**: long-context world-action models, robot-video pretraining, benchmark training/evaluation and real-robot deployment demos. → [`Long-WAM/`](Long-WAM) · [Project page](https://nvlabs.github.io/LongLive/Long-WAM/)
 - 🔥 [2026.09.28] We release **LongLive-Plug** training and inference code with four recipes covering CFG and few-step distillation. → [`LongLive-Plug/`](LongLive-Plug)
 - 🔥 [2026.07.08] LongLive 2.0 supports FP8 inference. Please refer to [here](LongLive2.0/README.md#fp8-ptq).
 - 🔥 [2026.06.01] We released [LongLive-RAG](https://github.com/qixinhu11/LongLive-RAG), a general retrieval-augmented framework for long video gen.
@@ -152,10 +152,10 @@ Robot video pretraining.
 
 | Generated robot video | YAM long-horizon task | Unitree G1 cup stacking |
 | --- | --- | --- |
-| [![Generated robot video](Long-WAM/assets/demos/ar_shoe.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![YAM robot demo](Long-WAM/assets/demos/yam_long_horizon.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) | [![Unitree G1 robot demo](Long-WAM/assets/demos/g1_cup_stacking.gif)](https://efficient-large-model.github.io/Long-WAM/#demos) |
+| [![Generated robot video](Long-WAM/assets/demos/ar_shoe.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![YAM robot demo](Long-WAM/assets/demos/yam_long_horizon.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![Unitree G1 robot demo](Long-WAM/assets/demos/g1_cup_stacking.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) |
 
 → [Code and quick start](Long-WAM) · [Checkpoints](Long-WAM/README.md#checkpoints) ·
-[Project page](https://efficient-large-model.github.io/Long-WAM/) ·
+[Project page](https://nvlabs.github.io/LongLive/Long-WAM/) ·
 [Video](https://www.youtube.com/watch?v=sQGoMf6au1Y)
 
 ## LongLive-Plug — Once-for-All Distillation for Video Generation

@@ -66,7 +66,7 @@ def test_binary_gif_uses_attribution_sidecar(tmp_path):
         "SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES.\n"
         "SPDX-License-Identifier: Apache-2.0\n"
         "Provenance: Modified Long-WAM project-page demo.\n"
-        "Source: https://efficient-large-model.github.io/Long-WAM/\n"
+        "Source: https://nvlabs.github.io/LongLive/Long-WAM/\n"
     )
     assert checker.header_errors(path) == []
 
