@@ -7,7 +7,7 @@ Static project page for **Long-WAM: Scaling the Context of World-Action Models**
 ```
 index.html               page content
 static/css/style.css     styles (dark theme)
-static/js/config.js      ← links (arXiv, PDF, code, models), arXiv id, author homepages
+static/js/config.js      ← links (arXiv, code, models), arXiv id, author homepages
 static/js/data.js        every number on the page, with its table / figure in the paper
 static/js/main.js        film intro, charts, tables, explorers, lazy video loading
 static/videos/           web-encoded videos (largest file 47 MB, total ≈ 100 MB)
@@ -28,7 +28,7 @@ Python's built-in server can't seek inside the long videos. With the full workin
 
 Edit `static/js/config.js`. Empty links show as dimmed "soon" buttons, so nothing else needs editing.
 
-- `arxiv`, `pdf`: the arXiv abstract and PDF links once the paper is public.
+- `arxiv`: the arXiv abstract link once the paper is public.
 - `arxivId`: the arXiv identifier (e.g. `2610.01234`). While it is empty, the BibTeX reads "arXiv preprint" without an id.
 - `code`, `models`: GitHub (`NVlabs/LongLive`, branch `Long-WAM`) and the Hugging Face collection.
 
