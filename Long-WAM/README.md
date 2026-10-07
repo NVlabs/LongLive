@@ -22,21 +22,21 @@ End Long-WAM attribution.
 <h1 align="center">Long-WAM: Scaling the Context of World-Action Models</h1>
 
 <p align="center">
-  Wei Huang<sup>1,3,*</sup> &nbsp;·&nbsp;
-  Bohan Zhang<sup>2,*</sup> &nbsp;·&nbsp;
-  Chenzhi Liu<sup>3</sup> &nbsp;·&nbsp;
-  Isabella Liu<sup>1,4</sup><br>
-  Shuai Yang<sup>1</sup> &nbsp;·&nbsp;
-  Weian Mao<sup>1</sup> &nbsp;·&nbsp;
-  Luozhou Wang<sup>1</sup> &nbsp;·&nbsp;
-  Yicheng Xiao<sup>3</sup><br>
-  Weifeng Lin<sup>1</sup> &nbsp;·&nbsp;
-  Qixin Hu<!-- Author confirmation pending: affiliation was not supplied. --> &nbsp;·&nbsp;
-  Bryan Chu<sup>1</sup> &nbsp;·&nbsp;
-  Sifei Liu<sup>1</sup><br>
-  Jim (Linxi) Fan<sup>1</sup> &nbsp;·&nbsp;
-  Xiaojuan Qi<sup>3</sup> &nbsp;·&nbsp;
-  Song Han<sup>1,2</sup> &nbsp;·&nbsp;
+  Wei Huang<sup>1,3,*</sup>,
+  Bohan Zhang<sup>2,*</sup>,
+  Chenzhi Liu<sup>3</sup>,
+  Isabella Liu<sup>1,4</sup>,
+  Shuai Yang<sup>1</sup>,
+  Weian Mao<sup>1</sup>,
+  Luozhou Wang<sup>1</sup>,
+  Yicheng Xiao<sup>3</sup>,
+  Weifeng Lin<sup>1</sup>,
+  Qixin Hu<!-- Author confirmation pending: affiliation was not supplied. -->,
+  Bryan Chu<sup>1</sup>,
+  Sifei Liu<sup>1</sup>,
+  Jim (Linxi) Fan<sup>1</sup>,
+  Xiaojuan Qi<sup>3</sup>,
+  Song Han<sup>1,2</sup>,
   Yukang Chen<sup>1</sup>
 </p>
 
