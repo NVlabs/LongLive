@@ -37,10 +37,9 @@ Each project has its own directory, code, documentation and model weights.
 
 Each project is self-contained. Download only the project you need using partial
 clone and sparse checkout; the example below selects **Long-WAM**.
-The Long-WAM release currently lives on `long-wam-release`.
 
 ```bash
-git clone --filter=blob:none --sparse --single-branch --branch long-wam-release --depth 1 https://github.com/NVlabs/LongLive.git
+git clone --filter=blob:none --sparse --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git
 cd LongLive
 git sparse-checkout set Long-WAM
 cd Long-WAM

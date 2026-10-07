@@ -54,7 +54,7 @@ End Long-WAM attribution.
 
 <!-- Add the paper link when supplied. -->
 <p align="center">
-  <a href="https://github.com/NVlabs/LongLive/tree/long-wam-release/Long-WAM"><img src="https://img.shields.io/badge/GitHub-Code-181717" alt="Official Long-WAM code"></a>
+  <a href="https://github.com/NVlabs/LongLive/tree/main/Long-WAM"><img src="https://img.shields.io/badge/GitHub-Code-181717" alt="Official Long-WAM code"></a>
   <a href="https://nvlabs.github.io/LongLive/Long-WAM/"><img src="https://img.shields.io/badge/Project-Page-76B900" alt="Long-WAM project page"></a>
   <a href="https://huggingface.co/Efficient-Large-Model"><img src="https://img.shields.io/badge/Hugging_Face-Models-FFD21E" alt="Public checkpoints on Hugging Face"></a>
   <a href="https://www.youtube.com/watch?v=sQGoMf6au1Y"><img src="https://img.shields.io/badge/YouTube-Video-FF0000" alt="Watch Long-WAM on YouTube"></a>
@@ -171,10 +171,9 @@ VAE/text assets, GR1 text cache and simulators are installed separately.
 ## Quick start
 
 Download **only Long-WAM**; the other LongLive projects are not required:
-the current release branch is `long-wam-release`.
 
 ```bash
-git clone --filter=blob:none --sparse --single-branch --branch long-wam-release --depth 1 https://github.com/NVlabs/LongLive.git
+git clone --filter=blob:none --sparse --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git
 cd LongLive
 git sparse-checkout set Long-WAM
 cd Long-WAM

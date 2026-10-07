@@ -38,7 +38,7 @@ syntax, static checks, 116 local documentation links and 35 README shell blocks
 passed. All 13 listed ELM model repositories were confirmed public and ungated
 through unauthenticated metadata requests; no weights were downloaded.
 
-A real GitHub partial/sparse clone of `long-wam-release` fetched all 1,458
+A real GitHub partial/sparse clone of release commit `66a5823` fetched all 1,458
 Long-WAM files while leaving all three neighboring projects absent. An unrelated
 project image was confirmed missing from the local Git object store, not merely
 hidden from the working tree. In that checkout, 51 of the CPU tests above and
