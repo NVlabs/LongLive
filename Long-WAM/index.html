@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Long-WAM: Scaling the Context of World-Action Models</title>
+<meta name="description" content="Long-WAM scales the context of causal world-action models for real-time robot control: autoregressive video pretraining, long-context world-action modeling, and edge deployment on RTX 5090, DGX Spark and Jetson AGX Thor.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Long-WAM: Scaling the Context of World-Action Models">
+<meta property="og:description" content="Remember the past. Imagine the future. Act in real time.">
+<meta property="og:url" content="https://nvlabs.github.io/LongLive/Long-WAM/">
+<meta property="og:image" content="https://nvlabs.github.io/LongLive/Long-WAM/static/images/og.jpg">
+<meta name="twitter:image" content="https://nvlabs.github.io/LongLive/Long-WAM/static/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#030506">
+<link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="static/css/style.css">
+<noscript><style>.film-frame{clip-path:none}[data-reveal]{opacity:1;transform:none}</style></noscript>
+</head>
+<body class="is-intro">
+
+<!-- ═════════════ 0 · THE FILM ═════════════ -->
+<section id="film" class="film" aria-label="Long-WAM film">
+  <div class="film-sticky">
+    <div class="film-line" aria-hidden="true"></div>
+    <div class="film-frame" id="filmFrame">
+      <video id="filmVideo" playsinline muted preload="auto" poster="static/images/poster_longwam_scifi.jpg">
+        <source src="static/videos/longwam_scifi_720.mp4" type="video/mp4" media="(max-width: 900px)">
+        <source src="static/videos/longwam_scifi.mp4" type="video/mp4">
+      </video>
+      <div class="film-progress" aria-hidden="true"><i id="filmBar"></i></div>
+    </div>
+    <button class="film-cta" id="filmCta" type="button"><span class="cta-ring"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span id="filmCtaText">Play with sound</span></button>
+    <div class="film-controls" id="filmControls">
+      <button type="button" id="filmMute" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path class="spk" d="M4 9v6h4l5 4V5L8 9H4z"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/><path class="x" d="M16 9l5 6M21 9l-5 6"/></svg></button>
+      <button type="button" id="filmReplay" aria-label="Replay"><svg viewBox="0 0 24 24"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg></button>
+      <button type="button" id="filmFull" aria-label="Fullscreen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+    <a class="film-skip" href="#paper"><span>Scroll to the paper</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+  </div>
+</section>
+
+<!-- ═════════════ NAV ═════════════ -->
+<nav class="nav" id="nav" aria-label="Sections">
+  <a class="nav-brand" href="#paper">Long-WAM</a>
+  <div class="nav-links">
+    <a href="#results">Results</a><a href="#efficiency">Real time</a><a href="#planning">+ GPT-6 Astra</a><a href="#demos">Demos</a><a href="#bibtex">BibTeX</a>
+  </div>
+  <a class="nav-film" href="#film" aria-label="Back to the film"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Film</a>
+</nav>
+
+<!-- ═════════════ 1 · PAPER ═════════════ -->
+<header id="paper" class="paper">
+  <canvas id="tiles" aria-hidden="true"></canvas>
+  <div class="paper-inner">
+    <p class="eyebrow" data-reveal>World-action models · real-time robot control</p>
+    <h1 class="title" data-reveal>
+      <span class="brand">Long-WAM</span>
+      <span class="subtitle">Scaling the Context of World-Action Models</span>
+    </h1>
+    <p class="authors" id="authors" data-reveal><span class="author-row"><span class="author">Wei Huang<sup>*</sup></span><span class="author">Bohan Zhang<sup>*</sup></span><span class="author">Chenzhi Liu</span><span class="author">Isabella Liu</span></span><span class="author-row"><span class="author">Shuai Yang</span><span class="author">Weian Mao</span><span class="author">Luozhou Wang</span><span class="author">Yicheng Xiao</span></span><span class="author-row"><span class="author">Weifeng Lin</span><span class="author">Qixin Hu</span><span class="author">Bryan Chu</span><span class="author">Sifei Liu</span></span><span class="author-row"><span class="author">Jim (Linxi) Fan</span><span class="author">Xiaojuan Qi</span><span class="author">Song Han</span><span class="author">Yukang Chen</span></span></p>
+    <p class="affils" data-reveal><span>NVIDIA</span><span>MIT</span><span>HKU</span><span>UCSD</span></p>
+    <p class="equal" data-reveal><sup>*</sup> Equal contribution</p>
+    <div class="links" id="links" data-reveal>
+      <a class="btn" data-link="arxiv"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>arXiv</a>
+      <a class="btn" data-link="pdf"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M12 10v7M9 14l3 3 3-3"/></svg>Paper PDF</a>
+      <a class="btn" data-link="code"><svg viewBox="0 0 24 24" class="fill"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.7.11 2.5.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>Code</a>
+      <a class="btn" data-link="models"><span class="hf" aria-hidden="true">🤗</span>Models</a>
+      <a class="btn" href="#bibtex" data-internal><svg viewBox="0 0 24 24"><path d="M8 4H5v16h3M16 4h3v16h-3M9 12h6"/></svg>BibTeX</a>
+    </div>
+  </div>
+  <a class="paper-down" href="#highlights" aria-label="Continue"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+</header>
+
+<main>
+<!-- ═════════════ 2 · HIGHLIGHTS ═════════════ -->
+<section id="highlights" class="section">
+  <div class="wrap">
+    <p class="tldr" data-reveal><span class="tag">TL;DR</span>Long-WAM scales the visual history of a causal world-action model and keeps it real-time. Autoregressive video pretraining turns longer context into better control, and a co-designed runtime runs the full <em>predict-then-act</em> model at 107.4&nbsp;ms per action chunk on an RTX&nbsp;5090, with deployment on DGX&nbsp;Spark and Jetson&nbsp;AGX&nbsp;Thor.</p>
+    <div class="stats" data-reveal>
+      <div class="stat"><b>78.7<small>%</small></b><span>RoboCasa GR-1</span><em>with 19.2 s of context</em></div>
+      <div class="stat"><b>99.5<small>%</small></b><span>LIBERO-Long</span><em>simulation benchmark</em></div>
+      <div class="stat"><b>94.4<small>%</small></b><span>RoboTwin 2.0</span><em>average, clean + randomized</em></div>
+      <div class="stat"><b>107.4<small>ms</small></b><span>per action chunk</span><em>RTX 5090 · incl. future prediction</em></div>
+      <div class="stat"><b>95<small>%</small></b><span>dynamic cup stacking</span><em>Unitree G1 · 19 / 20</em></div>
+      <div class="stat"><b>54.4<small>%</small></b><span>RoboCasa365</span><em>with GPT-6 Astra · 50 tasks</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 3 · ABSTRACT + METHOD ═════════════ -->
+<section id="abstract" class="section">
+  <div class="wrap narrow">
+    <p class="kicker" data-reveal>Abstract</p>
+    <p class="abstract" data-reveal>Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present <b>Long-WAM</b>, a model–system framework for scaling the context of causal world-action models under real-time control constraints. Access to history does not by itself ensure effective context use: in our comparisons, longer histories amplify the advantage of AR video pretraining. We first learn causal prediction from robot and egocentric videos without action labels, then preserve this history-to-future structure during world-action adaptation. On RoboCasa GR-1, increasing context from 2.4 to 19.2 seconds raises success from 66.3% to 78.7%, while bidirectional initialization shows no net gain; robot-domain AR pretraining further improves peak success on GR-1 and LIBERO-Long. Long-WAM also achieves leading results on LIBERO-Long, RoboTwin 2.0, and DOMINO. Streaming observation encoding, asynchronous execution, and hardware-customized acceleration enable deployment on RTX 5090, DGX Spark, and Jetson AGX Thor while retaining future prediction. Inference takes 107.4 ms per action chunk on RTX 5090, including future-video latent prediction. Real-time deployment on Unitree G1 and YAM supports dynamic and long-horizon manipulation, including 95% success on dynamic cup stacking. As a memory-informed executor, Long-WAM also complements higher-level planning in composite tasks.</p>
+  </div>
+</section>
+
+<section id="method" class="section">
+  <div class="wrap">
+    <div class="head" data-reveal><p class="kicker">01 · Method</p><h2>Remember the past. Imagine the future. Act.</h2></div>
+    <div class="pipeline" data-reveal aria-label="Long-WAM inference: observed history, video expert, predicted future latents, action expert, action chunk">
+      <div class="pnode"><span class="pl">Remember</span><div class="ptiles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="now"></i></div><b>Observed video history</b><em>the context we scale</em></div>
+      <div class="parrow" aria-hidden="true"></div>
+      <div class="pnode expert"><b>Video expert</b><em>initialized from LongLive2.0-Robot</em></div>
+      <div class="parrow" aria-hidden="true"></div>
+      <div class="pnode"><span class="pl">Imagine</span><div class="ptiles fut"><i></i><i></i><i></i><i></i></div><b>Future latents</b><em>partially denoised · no pixel decoding</em></div>
+      <div class="parrow" aria-hidden="true"></div>
+      <div class="pnode expert"><b>Action expert</b><em>reads history + predicted future</em></div>
+      <div class="parrow" aria-hidden="true"></div>
+      <div class="pnode"><span class="pl">Act</span><svg class="pcurve" viewBox="0 0 160 44" aria-hidden="true"><polyline points="4,34 22,28 40,20 58,14 76,11 94,12 112,17 130,24 148,30 156,32"/><g><circle cx="4" cy="34" r="3"/><circle cx="40" cy="20" r="3"/><circle cx="76" cy="11" r="3"/><circle cx="112" cy="17" r="3"/><circle cx="148" cy="30" r="3"/></g></svg><b>Action chunk</b><em>executed asynchronously</em></div>
+    </div>
+    <p class="fine pipe-note" data-reveal>Inverse-dynamics (IDM) inference: the video expert predicts future latents from the observed history; the action expert denoises an action chunk conditioned on that history and the predicted future. Video queries never read action tokens.</p>
+    <div class="steps">
+      <article class="step" data-reveal><span class="n">1</span><h3>Autoregressive video pretraining</h3><p><b>LongLive2.0-Robot</b> continues LongLive-2.0’s AR checkpoint on ≈10,000 window-equivalent hours of robot and egocentric video (RoVid-X, AgiBot World, EgoDex, EgoVerse, VITRA). It learns teacher-forced next-chunk prediction on sequences up to 30 s, without action labels.</p></article>
+      <article class="step" data-reveal><span class="n">2</span><h3>Causal-to-causal world-action adaptation</h3><p>Video and action experts are coupled through an asymmetric attention interface (a Mixture of Transformers). Video queries never read action tokens. Action queries read observed history, partially denoised future latents and the action chunk, so Long-WAM predicts the future first and then acts, without decoding pixels.</p></article>
+      <article class="step" data-reveal><span class="n">3</span><h3>Context scaling</h3><p>We scale the duration of real observations in the causal prefix and keep the forecast and action horizons fixed. Each window is trained separately and evaluated at its own length, up to 38.4 s on RoboCasa GR-1.</p></article>
+      <article class="step" data-reveal><span class="n">4</span><h3>Real-time infrastructure</h3><p>Pure asynchronous execution, streaming VAE encoding, NVFP4 quantization, KV reuse, CUDA Graph and device-specific kernel tuning bring the full model to RTX 5090, DGX Spark and Jetson AGX Thor.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ 4 · RESULTS ═════════════ -->
+<section id="results" class="section">
+  <div class="wrap">
+    <div class="head" data-reveal><p class="kicker">02 · Context scaling</p><h2>The value of context depends on AR pretraining.</h2>
+      <p class="lead">Both autoregressive initializations turn longer history into higher success. The bidirectional initialization shows no net gain on RoboCasa GR-1 between 2.4 s and 19.2 s. On LIBERO-Long, 2.4 s of history lifts success from 94.5% to 99.5%.</p></div>
+    <div class="legend" data-reveal><span class="lt">Video expert initialized from</span><span><i class="k robot"></i>LongLive2.0-Robot (AR)</span><span><i class="k ar"></i>LongLive2.0 (AR)</span><span><i class="k bi"></i>Wan2.2 (bidirectional)</span></div>
+    <div class="grid2">
+      <div class="card" data-reveal><div class="card-h"><h3>RoboCasa GR-1</h3><span class="pill">63.3% → 78.7%</span></div><div class="chart" id="chartGR1"></div></div>
+      <div class="card" data-reveal><div class="card-h"><h3>LIBERO-Long</h3><span class="pill">94.5% → 99.5%</span></div><div class="chart" id="chartLIBERO"></div></div>
+    </div>
+    <p class="fine" data-reveal>Context windows are equally spaced on the x-axis. At 38.4 s, 80.4% of sampled history frames are padding (training trajectories average 12.1 s). The drop there reflects limited effective history, not an established memory limit.</p>
+
+    <div class="card explorer" id="ctxExplorer" data-reveal>
+      <div class="card-h"><h3>Context explorer</h3><span class="muted">drag to change the observed history</span></div>
+      <div class="ctx-timeline" id="ctxTimeline"><span class="now">now</span></div>
+      <input type="range" id="ctxSlider" min="0" max="5" step="1" value="4" aria-label="Context window">
+      <div class="ctx-ticks"><span>0 s</span><span>2.4 s</span><span>4.8 s</span><span>9.6 s</span><span>19.2 s</span><span>38.4 s</span></div>
+      <div class="ctx-out">
+        <div class="ctx-window"><span class="lbl">History</span><b id="ctxSec">19.2 s</b></div>
+        <div class="ctx-bars" id="ctxBars"></div>
+        <div class="ctx-lat"><span class="lbl">RTX 5090 latency</span><b id="ctxLat">341.0 ms</b><em>per action chunk</em></div>
+      </div>
+    </div>
+
+    <div class="grid2 mt">
+      <div class="card" data-reveal><div class="card-h"><h3>RoboCasa GR-1 comparison</h3><span class="muted">success rate (%)</span></div><div class="table-wrap" id="tblGR1"></div></div>
+      <div class="card" data-reveal><div class="card-h"><h3>Latency vs. context</h3><span class="muted">RTX 5090 · per action chunk</span></div><div class="table-wrap" id="tblCtxLatency"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="benchmarks" class="section">
+  <div class="wrap">
+    <div class="head" data-reveal><p class="kicker">03 · Simulation benchmarks</p><h2>Leading results across tasks and environments.</h2>
+      <p class="lead">Long-WAM (IDM) reaches 99.5% average on LIBERO and 94.4% on RoboTwin 2.0. After dynamic-data fine-tuning it reaches 34.9% success on DOMINO, the highest among the compared methods.</p></div>
+    <div class="tabs" data-reveal role="tablist">
+      <button class="tab is-on" data-tab="libero" role="tab">LIBERO</button><button class="tab" data-tab="robotwin" role="tab">RoboTwin 2.0</button><button class="tab" data-tab="domino" role="tab">DOMINO</button>
+    </div>
+    <div class="card" data-reveal>
+      <div class="tabpane is-on" data-pane="libero"><div class="table-wrap" id="tblLIBERO"></div></div>
+      <div class="tabpane" data-pane="robotwin"><div class="table-wrap" id="tblRoboTwin"></div></div>
+      <div class="tabpane" data-pane="domino"><div class="table-wrap" id="tblDOMINO"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="realworld" class="section">
+  <div class="wrap">
+    <div class="head" data-reveal><p class="kicker">04 · Real world</p><h2>Catch what moves. Stay on task.</h2>
+      <p class="lead">Unitree G1 grasps from a moving conveyor at up to 7.5 cm/s; both baselines fail every trial at 6.0 and 7.5 cm/s. Dynamic cup stacking succeeds in 19 of 20 trials versus 0 of 20 for both baselines. On YAM, tasks lasting over 40 s average 81.7% success.</p></div>
+    <div class="legend" data-reveal><span><i class="k pi"></i>π<sub>0.5</sub></span><span><i class="k fast"></i>Fast-WAM</span><span><i class="k ours"></i>Long-WAM</span><span><i class="k human"></i>Human (teleoperation)</span></div>
+    <div class="grid3">
+      <div class="card span2" data-reveal><div class="card-h"><h3>Pick up the moving cup</h3><span class="muted">success · 20 trials per policy and speed</span></div><div class="chart" id="chartConveyor"></div></div>
+      <div class="card" data-reveal><div class="card-h"><h3>Dynamic cup stacking</h3><span class="muted">3 cm/s</span></div><div class="chart" id="chartStack"></div></div>
+    </div>
+    <div class="card mt" data-reveal><div class="card-h"><h3>Long-horizon manipulation on YAM</h3><span class="pill">mean 81.7%</span></div><div class="chart" id="chartYAM"></div></div>
+  </div>
+</section>
+
+<section id="efficiency" class="section">
+  <div class="wrap">
+    <div class="head" data-reveal><p class="kicker">05 · Real time on the edge</p><h2>107.4 ms per action chunk, with future prediction retained.</h2>
+      <p class="lead">Shared optimizations and device-specific kernel tuning speed up the full video-then-action pipeline by 3.3×, 4.1× and 3.2× over BF16 eager on RTX 5090, DGX Spark and Jetson AGX Thor.</p></div>
+    <div class="card explorer" id="accExplorer" data-reveal>
+      <div class="card-h"><h3>Acceleration explorer</h3><span class="muted">step through the optimization stages</span></div>
+      <div class="acc-stage"><span class="grp" id="accGroup">Baseline</span><b id="accName">BF16 eager</b></div>
+      <input type="range" id="accSlider" min="0" max="7" step="1" value="7" aria-label="Optimization stage">
+      <div class="acc-dots" id="accDots"></div>
+      <div class="acc-devices" id="accDevices"></div>
+      <p class="fine">Long-WAM (IDM) · V4/A4 · full observation VAE included · each stage keeps the previous optimizations.</p>
+    </div>
+    <div class="grid2 mt">
+      <div class="card" data-reveal><div class="card-h"><h3>End-to-end latency on RTX 5090</h3><span class="muted">ms per action chunk</span></div><div class="chart" id="chartLatency"></div><div class="table-wrap compact" id="tblLatency"></div></div>
+      <div class="card" data-reveal><div class="card-h"><h3>Pure asynchronous execution</h3><span class="muted">RoboTwin 2.0</span></div><div class="table-wrap" id="tblAsync"></div>
+        <p class="fine">Long-WAM keeps 94.2% success asynchronously (94.4% synchronously) with the lowest overlap RMSE and jerk. The AR video foundation conditions actions on temporally continuous predictions.</p></div>
+    </div>
+    <div class="card mt" data-reveal><div class="card-h"><h3>Cumulative acceleration</h3><span class="muted">latency (ms) and speedup vs. BF16 eager</span></div><div class="table-wrap" id="tblAccel"></div></div>
+  </div>
+</section>
+
+<section id="planning" class="section">
+  <div class="wrap">
+    <div class="head" data-reveal><p class="kicker">06 · GPT-6 Astra + Long-WAM</p><h2>Reasoning needs a capable executor.</h2>
+      <p class="lead">Coupled with GPT-6 Astra, the unchanged Long-WAM checkpoint rises from 31.4% to 54.4% overall on RoboCasa365. On unseen compositions it rises from 6.1% to 35.0%.</p></div>
+    <div class="roles" data-reveal>
+      <div class="role-top"><b>GPT-6 Astra</b><span>agentic reasoning over the whole task</span></div>
+      <div class="role-row">
+        <div class="role"><b>Plan</b><span>decomposes the goal into sub-instructions</span></div>
+        <div class="role"><b>Recover</b><span>handles failures and recovery</span></div>
+        <div class="role"><b>Correct</b><span>adjusts actions when needed</span></div>
+      </div>
+      <div class="role-arrow" aria-hidden="true"></div>
+      <div class="role-bottom"><b>Long-WAM</b><span>executes memory-informed action chunks</span></div>
+    </div>
+    <div class="card mt" data-reveal><div class="card-h"><h3>Success by split</h3><span class="muted">RoboCasa365 · 50 tasks</span></div>
+      <div class="legend"><span><i class="k" style="background:#9aa7ad"></i>GPT-6 Astra</span><span><i class="k pi"></i>π<sub>0.5</sub> + GPT-6 Astra</span><span><i class="k ar"></i>Long-WAM</span><span><i class="k ours"></i>Long-WAM + GPT-6 Astra</span></div>
+      <div class="chart" id="chartRC365"></div></div>
+    <div class="card mt" data-reveal><div class="card-h"><h3>RoboCasa365 · all methods</h3><span class="muted">success rate (%)</span></div><div class="table-wrap compact" id="tblRC365"></div></div>
+  </div>
+</section>
+
+<!-- ═════════════ 5 · DEMOS ═════════════ -->
+<section id="demos" class="section demos">
+  <div class="wrap">
+    <div class="head" data-reveal><p class="kicker">07 · Demos</p><h2>See it in action.</h2>
+      <p class="lead">Every clip is labelled with its source and playback speed.</p></div>
+
+    <h3 class="demo-h" data-reveal>Imagination · LongLive2.0-Robot predictions</h3>
+    <p class="demo-p" data-reveal>Each clip is generated from a single image and a language instruction. They are video predictions, not executed rollouts.</p>
+    <div class="vgrid g3">
+      <figure class="vid" data-reveal><video data-src="static/videos/ar_shoe.mp4" poster="static/images/poster_ar_shoe.jpg" muted loop playsinline></video><figcaption>Place the brown shoe into the blue container<span class="src gen">generated · 1×</span></figcaption></figure>
+      <figure class="vid" data-reveal><video data-src="static/videos/ar_bun.mp4" poster="static/images/poster_ar_bun.jpg" muted loop playsinline></video><figcaption>Put the bun into the steamer<span class="src gen">generated · 1×</span></figcaption></figure>
+      <figure class="vid" data-reveal><video data-src="static/videos/ar_pan.mp4" poster="static/images/poster_ar_pan.jpg" muted loop playsinline></video><figcaption>Cover the frying pan with a glass lid<span class="src gen">generated · 1×</span></figcaption></figure>
+      <figure class="vid" data-reveal><video data-src="static/videos/ar_pour.mp4" poster="static/images/poster_ar_pour.jpg" muted loop playsinline></video><figcaption>Pour water into a bowl<span class="src gen">generated · 1×</span></figcaption></figure>
+      <figure class="vid" data-reveal><video data-src="static/videos/ar_fold.mp4" poster="static/images/poster_ar_fold.jpg" muted loop playsinline></video><figcaption>Fold the clothing<span class="src gen">generated · 2×</span></figcaption></figure>
+      <figure class="vid" data-reveal><video data-src="static/videos/ar_empty_cup.mp4" poster="static/images/poster_ar_empty_cup.jpg" muted loop playsinline></video><figcaption>Empty the water from the measuring cup<span class="src gen">generated · 1×</span></figcaption></figure>
+    </div>
+
+    <h3 class="demo-h" data-reveal>Dynamic manipulation · Unitree G1</h3>
+    <div class="vgrid g2">
+      <figure class="vid" data-reveal><video data-src="static/videos/g1_cup_stacking.mp4" poster="static/images/poster_g1_cup_stacking.jpg" muted loop playsinline></video><figcaption>Dynamic cup stacking at 3 cm/s: intercept, align, stack · 19/20 successes in evaluation<span class="src real">real robot · 1×</span></figcaption></figure>
+      <figure class="vid" data-reveal><video data-src="static/videos/g1_speeds.mp4" poster="static/images/poster_g1_speeds.jpg" muted loop playsinline></video><figcaption>Picking up the cup at 3.0 / 4.5 / 6.0 / 7.5 cm/s · 100 / 100 / 95 / 90% over 20 trials each<span class="src real">real robot · 1×</span></figcaption></figure>
+      <figure class="vid wide" data-reveal><div class="vid-labels"><span><span class="nt">π</span><sub>0.5</sub></span><span>Fast-WAM</span></div><video data-src="static/videos/g1_cup_baselines.mp4" poster="static/images/poster_g1_cup_baselines.jpg" muted loop playsinline></video><figcaption>Same stacking task: both baselines miss the moving green cup · 0/20 each in evaluation<span class="src real">real robot · 1×</span></figcaption></figure>
+      <figure class="vid wide" data-reveal><video data-src="static/videos/g1_sync_infra.mp4" poster="static/images/poster_g1_sync_infra.jpg" muted loop playsinline></video><figcaption>Synchronous execution vs. our real-time infrastructure on the same dynamic grasp<span class="src real">real robot · 1×</span></figcaption></figure>
+      <figure class="vid wide full" data-reveal><video data-src="static/videos/g1_sync_async.mp4" poster="static/images/poster_g1_sync_async.jpg" muted loop playsinline></video><figcaption>Synchronous (top) vs. asynchronous (bottom) execution at four conveyor speeds: the robot keeps moving while the next chunk is computed<span class="src real">real robot · 1×</span></figcaption></figure>
+    </div>
+
+    <h3 class="demo-h" data-reveal>Long-horizon manipulation · YAM</h3>
+    <div class="vgrid g1">
+      <figure class="vid wide" data-reveal><div class="vid-labels"><span>Stack bowls · 85%</span><span>Sort bricks by color · 80%</span></div><video data-src="static/videos/yam_long_horizon.mp4" poster="static/images/poster_yam_long_horizon.jpg" muted loop playsinline></video><figcaption>Selected rollouts from tasks that average over 40 s · three-task mean 81.7% (20 trials per task)<span class="src real">real robot · 2×</span></figcaption></figure>
+    </div>
+
+    <h3 class="demo-h" data-reveal>GPT-6 Astra + Long-WAM · RoboCasa365</h3>
+    <p class="demo-p" data-reveal>Left: Long-WAM alone. Right: GPT-6 Astra plans, handles recovery and corrects actions when needed, while Long-WAM executes. Both sides use the same checkpoint. The SUCCESS and FAILED badges come from the original recordings.</p>
+    <div class="vgrid g1">
+      <figure class="vid strip" data-reveal><div class="vid-labels"><span>Long-WAM alone</span><span class="g">GPT-6 Astra + Long-WAM</span></div><video data-src="static/videos/rc365_kitchen.mp4" poster="static/images/poster_rc365_kitchen.jpg" muted loop playsinline></video><figcaption>Pick the kettle and place it on the tray, then pick the mug from the cabinet and place it on the tray, then close the cabinet doors<span class="src sim">simulation · 4×</span></figcaption></figure>
+      <figure class="vid strip" data-reveal><div class="vid-labels"><span>Long-WAM alone</span><span class="g">GPT-6 Astra + Long-WAM</span></div><video data-src="static/videos/rc365_tool.mp4" poster="static/images/poster_rc365_tool.jpg" muted loop playsinline></video><figcaption>Place the appropriate cutting tool for cutting the cucumber skin on the cutting board<span class="src sim">simulation · 4×</span></figcaption></figure>
+    </div>
+
+    <h3 class="demo-h" data-reveal>The full story · narrated overview (4:39)</h3>
+    <figure class="vid main" data-reveal><video src="static/videos/longwam_overview_narrated.mp4" poster="static/images/poster_longwam_overview_narrated.jpg" controls preload="none" playsinline></video><figcaption>Method, results and demos with narration and burned-in captions<span class="src">voice: synthetic (Kokoro)</span></figcaption></figure>
+  </div>
+</section>
+
+<section id="bibtex" class="section">
+  <div class="wrap narrow">
+    <div class="head" data-reveal><p class="kicker">Citation</p><h2>BibTeX</h2></div>
+    <div class="bib" data-reveal><button type="button" id="bibCopy">Copy</button><pre id="bibText">@article{huang2026longwam,
+  title   = {Long-WAM: Scaling the Context of World-Action Models},
+  author  = {Huang, Wei and Zhang, Bohan and Liu, Chenzhi and Liu, Isabella and
+             Yang, Shuai and Mao, Weian and Wang, Luozhou and Xiao, Yicheng and
+             Lin, Weifeng and Hu, Qixin and Chu, Bryan and Liu, Sifei and
+             Fan, Linxi and Qi, Xiaojuan and Han, Song and Chen, Yukang},
+  journal = {arXiv preprint<span id="bibId"></span>},
+  year    = {2026}
+}</pre></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><b>Long-WAM</b> · NVIDIA · MIT · HKU · UCSD</p>
+    <p class="muted">All numbers are from the paper. Real-robot and simulation clips play at the labelled speeds. Generated clips are LongLive2.0-Robot predictions. GPU product photos © NVIDIA.</p>
+  </div>
+</footer>
+
+<script src="static/js/config.js"></script>
+<script src="static/js/data.js"></script>
+<script src="static/js/main.js"></script>
+</body>
+</html>
