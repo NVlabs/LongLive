@@ -82,8 +82,10 @@ body.intro-done .film-skip{opacity:1}
   background:linear-gradient(180deg,#e6ffb8 0%,var(--g) 55%,#8fcf3c 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 0 28px rgba(179,237,85,.35))}
 .title .subtitle{display:block;margin-top:14px;font-size:clamp(24px,3.6vw,46px);font-weight:700;letter-spacing:-.015em;color:var(--text)}
-.authors{margin:40px auto 0;max-width:980px;display:grid;gap:10px;font-size:clamp(16px,1.7vw,20px);color:#e4e9e2}
-.author-row{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 30px}
+/* one flowing list: two balanced lines on desktop, more only on narrow screens */
+.authors{margin:40px auto 0;max-width:1100px;font-size:clamp(15px,1.4vw,18.5px);line-height:1.9;color:#e4e9e2;text-wrap:balance}
+.author-row{display:inline}
+.author{display:inline-block;white-space:nowrap;margin:0 11px}
 .author sup{color:var(--g);margin-left:2px}
 .author a{color:inherit;border-bottom:1px solid rgba(179,237,85,.35)}
 .author a:hover{color:var(--g)}
@@ -298,7 +300,7 @@ tr.sep td{border-top:1px solid var(--line2)}
 .grid2>*,.grid3>*,.vgrid>*,.stats>*,.steps>*{min-width:0}
 .film-cta,.film-skip span{white-space:nowrap}
 @media (max-width:600px){
-  .authors{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px}.author-row{display:contents}
+  .author{margin:0 8px}
   .film-controls{top:16px;bottom:auto;right:14px}.film-controls button{width:38px;height:38px}
   .ctx-window b,.ctx-lat b{font-size:30px;white-space:nowrap}
 }
