@@ -52,8 +52,8 @@ End Long-WAM attribution.
   <strong>Long-context world-action modeling with streaming visual memory.</strong>
 </p>
 
-<!-- Add the paper link when supplied. -->
 <p align="center">
+  <a href="https://arxiv.org/abs/2610.10528"><img src="https://img.shields.io/badge/arXiv-2610.10528-B31B1B" alt="Long-WAM paper on arXiv"></a>
   <a href="https://github.com/NVlabs/LongLive/tree/main/Long-WAM"><img src="https://img.shields.io/badge/GitHub-Code-181717" alt="Official Long-WAM code"></a>
   <a href="https://nvlabs.github.io/LongLive/Long-WAM/"><img src="https://img.shields.io/badge/Project-Page-76B900" alt="Long-WAM project page"></a>
   <a href="https://huggingface.co/Efficient-Large-Model"><img src="https://img.shields.io/badge/Hugging_Face-Models-FFD21E" alt="Public checkpoints on Hugging Face"></a>
@@ -648,10 +648,22 @@ Long-WAM/
 
 ## Paper and citation
 
-**Long-WAM: Scaling the Context of World-Action Models**
+[**Long-WAM: Scaling the Context of World-Action Models**](https://arxiv.org/abs/2610.10528)
 
-<!-- Add the canonical paper URL and official BibTeX when supplied.
-     Do not infer an arXiv identifier, venue or year. -->
+```bibtex
+@misc{huang2026longwamscalingcontextworldaction,
+  title={Long-WAM: Scaling the Context of World-Action Models},
+  author={Wei Huang and Bohan Zhang and Chenzhi Liu and Isabella Liu and
+          Shuai Yang and Weian Mao and Luozhou Wang and Yicheng Xiao and
+          Weifeng Lin and Qixin Hu and Bryan Chu and Sifei Liu and
+          Linxi Fan and Xiaojuan Qi and Song Han and Yukang Chen},
+  year={2026},
+  eprint={2610.10528},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2610.10528},
+}
+```
 
 ## License
 

@@ -15,8 +15,7 @@ Changes: Add the independent Long-WAM project and its entry points.
 **Long video generation and world-action modeling research from NVIDIA.**
 Each project has its own directory, code, documentation and model weights.
 
-<!-- Long-WAM paper link will be added when supplied; the badge is intentionally not linked. -->
-![Long-WAM paper — link forthcoming](https://img.shields.io/badge/Paper-Long--WAM-lightgrey)
+[![Paper Long-WAM](https://img.shields.io/badge/Paper-Long--WAM-76B900)](https://arxiv.org/abs/2610.10528)
 [![Paper](https://img.shields.io/badge/Paper-LongLive--Plug-brown)](https://arxiv.org/abs/2609.38154)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-red)](https://arxiv.org/abs/2605.18739)
 [![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://arxiv.org/abs/2509.22622)
@@ -30,7 +29,7 @@ Each project has its own directory, code, documentation and model weights.
 
 | Directory | What it is | Use it when you want to | Venue |
 | --- | --- | --- | --- |
-| [**`Long-WAM/`**](Long-WAM) | Long-context world-action models | Train and evaluate robot policies, generate robot videos, or deploy on YAM, Franka and Unitree G1 | — |
+| [**`Long-WAM/`**](Long-WAM) | Long-context world-action models | Train and evaluate robot policies, generate robot videos, or deploy on YAM, Franka and Unitree G1 | [arXiv](https://arxiv.org/abs/2610.10528) |
 | [**`LongLive-Plug/`**](LongLive-Plug) | Once-for-all distillation for video generation | Distill a capability once on a base model and reuse it across downstream models, without retraining | [arXiv](https://arxiv.org/abs/2609.38154) |
 | [**`LongLive2.0/`**](LongLive2.0) | An NVFP4 parallel infrastructure for long video generation | Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism | arXiv |
 | [**`LongLive1.0/`**](LongLive1.0) | Real-time interactive long video generation | Type prompts and watch a long video appear in real time, steered as you go | ICLR 2026 |
@@ -84,6 +83,7 @@ shared root files are downloaded; no other project is required to run it.
 
 ## News
 
+- 🔥 [2026.10.08] The [Long-WAM paper](https://arxiv.org/abs/2610.10528) is available on arXiv.
 - 🔥 [2026.10.07] We release **Long-WAM**: long-context world-action models, robot-video pretraining, benchmark training/evaluation and real-robot deployment demos. → [`Long-WAM/`](Long-WAM) · [Project page](https://nvlabs.github.io/LongLive/Long-WAM/)
 - 🔥 [2026.09.28] We release **LongLive-Plug** training and inference code with four recipes covering CFG and few-step distillation. → [`LongLive-Plug/`](LongLive-Plug)
 - 🔥 [2026.07.08] LongLive 2.0 supports FP8 inference. Please refer to [here](LongLive2.0/README.md#fp8-ptq).
@@ -153,7 +153,7 @@ Robot video pretraining.
 | --- | --- | --- |
 | [![Generated robot video](Long-WAM/assets/demos/ar_shoe.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![YAM robot demo](Long-WAM/assets/demos/yam_long_horizon.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![Unitree G1 robot demo](Long-WAM/assets/demos/g1_cup_stacking.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) |
 
-→ [Code and quick start](Long-WAM) · [Checkpoints](Long-WAM/README.md#checkpoints) ·
+→ [Paper](https://arxiv.org/abs/2610.10528) · [Code and quick start](Long-WAM) · [Checkpoints](Long-WAM/README.md#checkpoints) ·
 [Project page](https://nvlabs.github.io/LongLive/Long-WAM/) ·
 [Video](https://www.youtube.com/watch?v=sQGoMf6au1Y)
 
@@ -233,8 +233,22 @@ its own copy of the license and, where applicable, its own third-party notices.
 
 Please consider citing our work if you find it useful:
 
-**Long-WAM: Scaling the Context of World-Action Models** — paper link and official BibTeX forthcoming.
-<!-- Replace this line with the author-supplied paper link and official citation. -->
+[**Long-WAM: Scaling the Context of World-Action Models**](https://arxiv.org/abs/2610.10528)
+
+```bibtex
+@misc{huang2026longwamscalingcontextworldaction,
+  title={Long-WAM: Scaling the Context of World-Action Models},
+  author={Wei Huang and Bohan Zhang and Chenzhi Liu and Isabella Liu and
+          Shuai Yang and Weian Mao and Luozhou Wang and Yicheng Xiao and
+          Weifeng Lin and Qixin Hu and Bryan Chu and Sifei Liu and
+          Linxi Fan and Xiaojuan Qi and Song Han and Yukang Chen},
+  year={2026},
+  eprint={2610.10528},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2610.10528},
+}
+```
 
 ```bibtex
 @misc{yang2026longliveplug,
