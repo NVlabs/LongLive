@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 window.LONGWAM_CONFIG = {
   links: {
-    arxiv: '',        // e.g. 'https://arxiv.org/abs/XXXX.XXXXX'
+    arxiv: 'https://arxiv.org/abs/2610.10528',
     code: 'https://github.com/NVlabs/LongLive/tree/Long-WAM',
     models: 'https://huggingface.co/collections/Efficient-Large-Model/long-wam',
     video: ''         // optional: e.g. a YouTube link for the film
@@ -17,5 +17,5 @@ window.LONGWAM_CONFIG = {
     'Jim (Linxi) Fan': '', 'Xiaojuan Qi': '', 'Song Han': '', 'Yukang Chen': ''
   },
   // arXiv identifier, e.g. '2610.01234'; while empty the BibTeX shows "arXiv preprint" without an id.
-  arxivId: ''
+  arxivId: '2610.10528'
 };
