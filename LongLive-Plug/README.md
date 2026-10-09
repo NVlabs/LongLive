@@ -231,6 +231,10 @@ torchrun --standalone --nproc_per_node=16 train.py \
 
 Choose from the four recipes in [`configs/`](configs/). For multi-machine training, see the [training guide](docs/recipes.md#launch-training).
 
+## Community integrations
+
+- [ComfyUI-LongLive-Plug](https://github.com/hiroki-abe-58/ComfyUI-LongLive-Plug): An independently maintained community integration for ComfyUI's built-in Wan2.1 support, with adapter loading, a 4-step FlowUniPC sampling recipe, and example workflows. Real-weight validation currently covers unquantized BF16 Wan2.1-T2V-14B on Windows 11 with an RTX 5090. See the linked repository for installation, validation details, and limitations.
+
 ## Citation
 
 If you find this work useful, please consider citing:
