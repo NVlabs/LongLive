@@ -138,6 +138,8 @@ Model examples are from the paper appendix, **Complete Transfer Coverage and Add
 | [LongLive-2.0-5B-NVFP4-2Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2) | [`LongLive2.0/`](LongLive2.0) | 45.7 | 5B | 83.14 | ✅ |
 | [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | [`LongLive1.0/`](LongLive1.0) | 20.7 | 1.3B | 84.87 |  |
 
+FPS counts generated output frames per second of diffusion time and excludes VAE decoding, following the LongLive 1.0 and Self Forcing protocol; the LongLive-2.0 paper reports end-to-end times separately. The LongLive-2.0 rows were measured on one GB200 (180 GB), as in Table 3 of the [LongLive-2.0 paper](https://arxiv.org/abs/2605.18739), and the NVFP4 rows include KV-cache quantization (`inference.kv_quant: true`, as in the released NVFP4 config). The LongLive-1.3B row was measured on one H100.
+
 
 
 ## Long-WAM — Scaling the Context of World-Action Models

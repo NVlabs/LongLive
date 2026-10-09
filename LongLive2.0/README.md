@@ -234,6 +234,8 @@ For I2V configs, set `algorithm.i2v: true` and `algorithm.independent_first_fram
 | [LongLive-2.0-5B-NVFP4-4Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4) | 29.7 | 5B | 84.51 | ✅ |
 | [LongLive-2.0-5B-NVFP4-2Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2) | 45.7 | 5B | 83.14 | ✅ |
 
+FPS counts generated output frames per second of diffusion time and excludes VAE decoding, following the LongLive 1.0 and Self Forcing protocol; the LongLive-2.0 paper reports end-to-end times separately. The LongLive-2.0 rows were measured on one GB200 (180 GB), as in Table 3 of the [LongLive-2.0 paper](https://arxiv.org/abs/2605.18739), and the NVFP4 rows include KV-cache quantization (`inference.kv_quant: true`, as in the released NVFP4 config). The LongLive-1.3B row was measured on one H100.
+
 ## Awesome work using LongLive
 
 - [DreamForge-World 0.1](https://trydreamforge.com/): Adapts the LongLive AR video stack with a residual action pathway for low-compute real-time controllable world modeling.
