@@ -5,7 +5,7 @@
 window.LONGWAM_CONFIG = {
   links: {
     arxiv: 'https://arxiv.org/abs/2610.10528',
-    code: 'https://github.com/NVlabs/LongLive/tree/Long-WAM',
+    code: 'https://github.com/NVlabs/LongLive/tree/main/Long-WAM',
     models: 'https://huggingface.co/collections/Efficient-Large-Model/long-wam',
     video: ''         // optional: e.g. a YouTube link for the film
   },

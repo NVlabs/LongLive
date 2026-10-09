@@ -30,7 +30,7 @@ Edit `static/js/config.js`. Empty links show as dimmed "soon" buttons, so nothin
 
 - `arxiv`: the arXiv abstract link once the paper is public.
 - `arxivId`: the arXiv identifier (e.g. `2610.01234`). While it is empty, the BibTeX reads "arXiv preprint" without an id.
-- `code`, `models`: GitHub (`NVlabs/LongLive`, branch `Long-WAM`) and the Hugging Face collection.
+- `code`, `models`: GitHub (`NVlabs/LongLive`, folder `Long-WAM` on `main`) and the Hugging Face collection.
 
 ## Size
 
