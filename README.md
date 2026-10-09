@@ -31,7 +31,7 @@ Each project has its own directory, code, documentation and model weights.
 | --- | --- | --- | --- |
 | [**`Long-WAM/`**](Long-WAM) | Long-context world-action models | Train and evaluate robot policies, generate robot videos, or deploy on YAM, Franka and Unitree G1 | [arXiv](https://arxiv.org/abs/2610.10528) |
 | [**`LongLive-Plug/`**](LongLive-Plug) | Once-for-all distillation for video generation | Distill a capability once on a base model and reuse it across downstream models, without retraining | [arXiv](https://arxiv.org/abs/2609.38154) |
-| [**`LongLive2.0/`**](LongLive2.0) | An NVFP4 parallel infrastructure for long video generation | Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism | (arXiv)[https://arxiv.org/abs/2605.18739] |
+| [**`LongLive2.0/`**](LongLive2.0) | An NVFP4 parallel infrastructure for long video generation | Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism | [arXiv](https://arxiv.org/abs/2605.18739) |
 | [**`LongLive1.0/`**](LongLive1.0) | Real-time interactive long video generation | Type prompts and watch a long video appear in real time, steered as you go | [ICLR 2026](https://arxiv.org/abs/2509.22622) |
 
 Each project is self-contained. Download only the project you need using partial
