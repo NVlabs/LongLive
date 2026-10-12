@@ -6,6 +6,9 @@ Source: https://github.com/NVlabs/LongLive @ fb16a87 :: README.md
 Changes: Add the independent Long-WAM project and its entry points.
 -->
 
+<p align="center" style="border-radius: 10px">
+  <img src="LongLive1.0/assets/LongLive-series-logo.png" width="100%" alt="LongLive series logo"/>
+</p>
 
 ## LongLive Infra for 🎬 Video Gen / 🌍 World Model / 🤖 World Action Model
 
