@@ -6,11 +6,8 @@ Source: https://github.com/NVlabs/LongLive @ fb16a87 :: README.md
 Changes: Add the independent Long-WAM project and its entry points.
 -->
 
-<p align="center" style="border-radius: 10px">
-  <img src="LongLive1.0/assets/LongLive-logo.png" width="100%" alt="LongLive logo"/>
-</p>
 
-# 🎬 LongLive
+# LongLive Infra for 🎬 Video Gen / 🌍 World Model / 🤖 World Action Model (Embodied)
 
 **Long video generation and world-action modeling research from NVIDIA.**
 Each project has its own directory, code, documentation and model weights.
