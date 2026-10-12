@@ -488,6 +488,8 @@ class CausalWanSelfAttention(nn.Module):
             else:
                 key_to_cache = k
 
+            # Keep current and cached keys in the same representation. Per-token
+            # channel centering changes attention logits without mean compensation.
             sink_tokens = self.sink_size * frame_seqlen
             global_sink_tokens = getattr(self, "global_sink_size", 0) * frame_seqlen
             is_quantized_cache = kv_cache.get("quantized", False)
@@ -555,7 +557,7 @@ class CausalWanSelfAttention(nn.Module):
                 local_start_index = local_end_index - num_new_tokens
 
                 if is_quantized_cache:
-                    from utils.quant import dequantize_kv_cache, k_smooth
+                    from utils.quant import dequantize_kv_cache
 
                     max_blks = int(kv_cache["max_blocks"])
                     blk_sz = int(kv_cache["block_token_size"])
@@ -565,7 +567,7 @@ class CausalWanSelfAttention(nn.Module):
                     cache_v = dequantize_kv_cache(
                         kv_cache["v"], max_blks, self.num_heads, blk_sz, v.dtype, v.device
                     )
-                    new_k_for_cache = k_smooth(key_to_cache)
+                    new_k_for_cache = key_to_cache
                 else:
                     cache_k = kv_cache["k"]
                     cache_v = kv_cache["v"]
@@ -626,9 +628,9 @@ class CausalWanSelfAttention(nn.Module):
                 local_start_index = local_end_index - num_new_tokens
 
                 if is_quantized_cache:
-                    from utils.quant import dequantize_kv_cache, k_smooth
+                    from utils.quant import dequantize_kv_cache
 
-                    new_k_for_cache = k_smooth(key_to_cache)
+                    new_k_for_cache = key_to_cache
                     if local_start_index == 0:
                         temp_k = new_k_for_cache
                         temp_v = v
