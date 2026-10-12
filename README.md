@@ -7,8 +7,7 @@ Changes: Add the independent Long-WAM project and its entry points.
 -->
 
 
-# LongLive Infra 
-## for 🎬 Video Gen / 🌍 World Model / 🤖 World Action Model
+# LongLive Infra for 🎬 Video Gen / 🌍 World Model / 🤖 World Action Model
 
 **Long video generation and world-action modeling research from NVIDIA.**
 Each project has its own directory, code, documentation and model weights.
