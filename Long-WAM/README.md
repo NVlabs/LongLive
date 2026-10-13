@@ -477,6 +477,19 @@ LeRobot data.
 Each benchmark has its own `train.sh` and `eval.sh`. Prepare data, text embeddings
 and initialization weights; select variants with `context=` or `denoising=`.
 
+Fresh benchmark training initializes the video expert from public
+[LongLive2.0-Robot-S](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-S),
+not general LongLive 2.0. Download it once:
+
+```bash
+python scripts/download_checkpoint.py stage1_robot_s \
+  --output "${LONGWAM_CHECKPOINT_ROOT:-./checkpoints}/LongLive2.0-Robot-S"
+```
+
+RoboTwin's ActionDiT is randomly initialized; Domino fine-tunes a complete
+RoboTwin policy. These are new-run defaults; see
+[initialization and released-weight provenance](docs/TRAINING.md#initialization-fine-tuning-and-resume).
+
 ### Benchmark recipes
 
 | Benchmark / launcher | Default GPUs × batch/GPU × accumulation | Global batch | Peak LR | Training length | History / action chunk |
@@ -524,13 +537,12 @@ update both the data window and model.
 ```bash
 bash scripts/robocasa_gr1/train.sh context=p384 --dry-run
 
-# Robot-video initialization: change only the video expert.
+# Robot-S video initialization is the default at every context length.
 bash scripts/robocasa_gr1/train.sh context=p192 \
-  model.longlive_video_weights=/path/to/LongLive-2.0-Robot.pt \
   output_dir=outputs/gr1-p192-robot
 ```
 
-Replace only the video expert; retain GR1's action architecture.
+GR1 retains its own action architecture and mapped action-backbone initializer.
 
 ### Adapt the hardware or fine-tune a policy
 

@@ -20,6 +20,7 @@
 from __future__ import annotations
 
 from collections import OrderedDict
+from pathlib import Path
 
 import pytest
 import torch
@@ -35,6 +36,60 @@ ACTION_ENCODER = "mixtures.action.action_encoder.weight"
 ACTION_ENCODER_BIAS = "mixtures.action.action_encoder.bias"
 ACTION_HEAD = "mixtures.action.head.weight"
 ACTION_HEAD_BIAS = "mixtures.action.head.bias"
+
+
+@pytest.mark.parametrize("container", ["generator", "bare", "joint"])
+def test_robot_video_initializer_loads_strictly_on_cpu(container, tmp_path):
+    from longwam.runtime.factory import _load_longlive_video_expert_weights
+
+    # Small synthetic tensors test the public generator export format without
+    # downloading a full model, allocating a GPU, or creating conversion files.
+    expected = {"weight": torch.full((3, 2), 7.0), "bias": torch.full((3,), 11.0)}
+    if container == "generator":
+        payload = {f"model.{key}": value for key, value in expected.items()}
+    elif container == "joint":
+        payload = {"mot": {f"mixtures.video.{key}": value for key, value in expected.items()}}
+        payload["mot"]["mixtures.action.unused"] = torch.ones(1)
+    else:
+        payload = expected
+    checkpoint = tmp_path / "model.pt"
+    torch.save(payload, checkpoint)
+    target = torch.nn.Linear(2, 3)
+    assert _load_longlive_video_expert_weights(target, checkpoint) == checkpoint.resolve()
+    for key, value in expected.items():
+        assert torch.equal(target.state_dict()[key], value)
+    report = target._longwam_strict_load_report
+    assert report["strict"] is True
+    assert report["missing_keys"] == report["unexpected_keys"] == []
+
+
+def test_robot_video_initializer_rejects_missing_weights(tmp_path):
+    from longwam.runtime.factory import _load_longlive_video_expert_weights
+
+    target = torch.nn.Linear(2, 3)
+    with pytest.raises(FileNotFoundError, match="video weights do not exist"):
+        _load_longlive_video_expert_weights(target, tmp_path / "missing.pt")
+    checkpoint = tmp_path / "incomplete.pt"
+    torch.save({"model.weight": torch.ones(3, 2)}, checkpoint)
+    with pytest.raises(RuntimeError, match="Missing key"):
+        _load_longlive_video_expert_weights(target, checkpoint)
+
+
+def test_robot_video_initializer_resolves_relative_paths_from_project_root(tmp_path, monkeypatch):
+    from longwam.runtime.factory import _load_longlive_video_expert_weights
+
+    project = tmp_path / "project"
+    (project / "configs").mkdir(parents=True)
+    relative = Path("checkpoints/LongLive2.0-Robot-S/model.pt")
+    checkpoint = project / relative
+    checkpoint.parent.mkdir(parents=True)
+    expected = {"weight": torch.full((3, 2), 7.0), "bias": torch.full((3,), 11.0)}
+    torch.save({f"model.{key}": value for key, value in expected.items()}, checkpoint)
+    monkeypatch.setenv("LONGWAM_ROOT", str(project))
+    monkeypatch.chdir(tmp_path)
+    target = torch.nn.Linear(2, 3)
+    assert _load_longlive_video_expert_weights(target, relative) == checkpoint.resolve()
+    assert torch.equal(target.weight, expected["weight"])
 
 
 class _StateHolder:

@@ -29,7 +29,11 @@ mot_checkpoint_mixed_attn: true
 skip_dit_load_from_pretrain: true
 skip_video_dit_load_from_pretrain: true
 skip_action_dit_load_from_pretrain: false
-longlive_video_weights: ${oc.env:LONGWAM_CHECKPOINT_ROOT,./checkpoints}/longwam/longlive_ar_video_expert.pt
+# All fresh benchmark runs use the public Robot-S video generator, not general
+# LongLive 2.0. Download the pinned stage1_robot_s bundle from checkpoints.yaml.
+longlive_video_weights: ${oc.env:LONGWAM_ROBOT_VIDEO_CHECKPOINT,${oc.env:LONGWAM_CHECKPOINT_ROOT,./checkpoints}/LongLive2.0-Robot-S/model.pt}
+# Action initialization is independent of the video initializer; task overrides
+# select random initialization (RoboTwin) or full-policy loading (Domino).
 action_dit_pretrained_path: ${oc.env:LONGWAM_CHECKPOINT_ROOT,./checkpoints}/longwam/ActionDiT_from_longlive_ar_1024hdim.pt
 longwam_num_frame_per_block: 1
 longwam_local_attn_size: -1

@@ -87,12 +87,76 @@ def test_good_gr1_data_and_scaling_initialization():
     assert cfg.max_steps == cfg.scheduler_max_steps == 30000
 
 
+@pytest.mark.parametrize("name,overrides", [
+    ("libero", ["denoising=idm"]),
+    ("libero", ["denoising=codenoise"]),
+    ("robotwin2", ["denoising=idm"]),
+    ("robotwin2", ["denoising=codenoise"]),
+    ("robocasa365", []),
+    *[("robocasa_gr1", [f"context=p{past}"]) for past in (0, 48, 96, 192, 384, 768)],
+])
+def test_all_fresh_training_recipes_use_public_robot_s(name, overrides, monkeypatch, tmp_path):
+    monkeypatch.delenv("LONGWAM_ROBOT_VIDEO_CHECKPOINT", raising=False)
+    monkeypatch.setenv("LONGWAM_CHECKPOINT_ROOT", str(tmp_path))
+    cfg = recipe(name, overrides)
+    assert cfg.model.longlive_video_weights == str(tmp_path / "LongLive2.0-Robot-S/model.pt")
+    assert cfg.model.skip_video_dit_load_from_pretrain is True
+    assert cfg.resume is None and cfg.init_checkpoint is None
+    # Changing the video initialization must not silently remap ActionDiT.
+    if name == "robotwin2":
+        assert cfg.model.action_dit_pretrained_path is None
+    else:
+        assert cfg.model.action_dit_pretrained_path == str(
+            tmp_path / "longwam/ActionDiT_from_longlive_ar_1024hdim.pt"
+        )
+
+
+@pytest.mark.parametrize("name", ["libero", "robotwin2", "robocasa_gr1", "robocasa365"])
+def test_robot_video_initializer_supports_env_and_yaml_overrides(name, monkeypatch, tmp_path):
+    model = tmp_path / "custom-robot-s/model.pt"
+    monkeypatch.setenv("LONGWAM_ROBOT_VIDEO_CHECKPOINT", str(model))
+    assert recipe(name).model.longlive_video_weights == str(model)
+    other = tmp_path / "explicit-robot-s/model.pt"
+    assert recipe(name, [f"model.longlive_video_weights={other}"]).model.longlive_video_weights == str(other)
+
+
+@pytest.mark.parametrize("denoising", ["idm", "codenoise"])
+def test_robotwin_action_expert_is_random_not_mapped(denoising, monkeypatch):
+    from longwam.models.wan22.action_dit import ActionDiT
+
+    cfg = recipe("robotwin2", [f"denoising={denoising}"])
+    action_cfg = OmegaConf.to_container(cfg.model.action_dit_config, resolve=True)
+    action_cfg.update(hidden_dim=8, ffn_dim=16, num_heads=2, attn_head_dim=4,
+                      num_layers=1, text_dim=8, freq_dim=4)
+
+    def no_checkpoint_load(*args, **kwargs):
+        pytest.fail("Random RoboTwin ActionDiT must not load a mapped checkpoint")
+
+    monkeypatch.setattr(torch, "load", no_checkpoint_load)
+    with torch.random.fork_rng(devices=[]):
+        torch.manual_seed(cfg.model_init_seed)
+        expected = ActionDiT(**action_cfg)
+        torch.manual_seed(cfg.model_init_seed)
+        actual = ActionDiT.from_pretrained(
+            action_dit_config=action_cfg,
+            action_dit_pretrained_path=cfg.model.action_dit_pretrained_path,
+            skip_dit_load_from_pretrain=cfg.model.skip_action_dit_load_from_pretrain,
+            device="cpu", torch_dtype=torch.float32,
+        )
+    assert actual.action_encoder.in_features == actual.head.out_features == 14
+    for name, tensor in expected.state_dict().items():
+        assert torch.equal(actual.state_dict()[name], tensor), name
+
+
 def test_domino_bestmix_is_the_only_public_domino_recipe():
     cfg = recipe("domino")
     assert dict(cfg.sampler.domain_weights) == {"robotwin": 0.5, "domino": 0.5}
     assert cfg.sampler.samples_per_epoch == 307200
     assert cfg.max_steps == 300
     assert cfg.model.skip_action_dit_load_from_pretrain is True
+    assert OmegaConf.is_missing(cfg, "resume") or cfg.resume
+    assert cfg.model.longlive_video_weights is None
+    assert cfg.model.action_dit_pretrained_path is None
     assert len(cfg.data.train.domains.domino.dataset_dirs) == 11
     assert not (ROOT / "configs/task/domino_mix.yaml").exists()
 
@@ -125,8 +189,9 @@ def test_old_configs_map_names_but_never_weight_keys_or_paths():
     assert "arwam_past_obs_size" in source["model"]
 
 
-def test_inference_does_not_reload_old_training_initializers():
-    cfg = recipe("libero")
+@pytest.mark.parametrize("name", ["libero", "robotwin2", "robocasa_gr1", "robocasa365"])
+def test_inference_does_not_reload_old_training_initializers(name):
+    cfg = recipe(name)
     model_cfg = model_config_for_inference(cfg)
     assert model_cfg.longlive_video_weights is None
     assert model_cfg.action_dit_pretrained_path is None
@@ -233,18 +298,26 @@ def test_public_checkpoint_registry_matches_readme():
         )
 
 
-def test_checkpoint_downloader_uses_pinned_release_without_network(tmp_path, monkeypatch):
+@pytest.mark.parametrize("key,repo_id,revision", [
+    ("robocasa_gr1_p192", "Efficient-Large-Model/Long-WAM-RoboCasa-GR1-9.6s",
+     "d3457a907cdefd5035bedac6474cd3179cbc391e"),
+    ("stage1_robot_s", "Efficient-Large-Model/LongLive2.0-Robot-S",
+     "9f23acf1a619afe69d866f105c17209880851894"),
+])
+def test_checkpoint_downloader_uses_pinned_release_without_network(
+    key, repo_id, revision, tmp_path, monkeypatch,
+):
     import huggingface_hub
 
     calls = []
     monkeypatch.setattr(huggingface_hub, "snapshot_download", lambda **kw: calls.append(kw))
     script = ROOT / "scripts/download_checkpoint.py"
-    output = tmp_path / "gr1"
-    monkeypatch.setattr(sys, "argv", [str(script), "robocasa_gr1_p192", "--output", str(output)])
+    output = tmp_path / "download"
+    monkeypatch.setattr(sys, "argv", [str(script), key, "--output", str(output)])
     runpy.run_path(str(script), run_name="__main__")
     assert calls == [{
-        "repo_id": "Efficient-Large-Model/Long-WAM-RoboCasa-GR1-9.6s",
-        "revision": "d3457a907cdefd5035bedac6474cd3179cbc391e",
+        "repo_id": repo_id,
+        "revision": revision,
         "local_dir": str(output),
     }]
     assert not output.exists()

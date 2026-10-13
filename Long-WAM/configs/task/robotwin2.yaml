@@ -39,4 +39,6 @@ adam_beta1: 0.9
 adam_beta2: 0.95
 adam_epsilon: 1.0e-08
 model:
+  # Inherit the public LongLive2.0-Robot-S video initializer. The entire
+  # ActionDiT is randomly initialized, not mapped from a video checkpoint.
   action_dit_pretrained_path: null

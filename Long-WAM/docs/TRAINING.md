@@ -74,17 +74,15 @@ to reject an accidentally mismatched release bundle.
 
 ```bash
 bash scripts/robocasa_gr1/train.sh context=p192 --dry-run
-# Robot-video initialization variant: replace only the video expert.
+# All context lengths use the shared public Robot-S video initializer.
 bash scripts/robocasa_gr1/train.sh context=p192 \
-  model.longlive_video_weights=/path/to/LongLive-2.0-Robot.pt \
   output_dir=outputs/gr1-p192-robot
 ```
 
-The scaling default retains the original video/action initializer pair.
-The Robot-initialized P96/P192 runs use the same length/data/optimizer parameters
-with only `model.longlive_video_weights` replaced; a Robot-S joint payload is
-supported by extracting its video expert. Its robot-specific action head is
-not copied into the GR1 embodiment.
+All six GR1 contexts default to the public LongLive2.0-Robot-S video generator.
+Context selection does not change initialization, data or optimizer settings.
+The mapped ActionDiT backbone and GR1-specific I/O layers remain separate from
+the video initializer; no RoboTwin action head is copied into GR1.
 
 ## IDM and CodeDenoise
 
@@ -97,12 +95,70 @@ checkpoint/config; it refuses to reinterpret IDM weights as CodeDenoise weights.
 
 ## Initialization, fine-tuning and resume
 
-The shared model points to the LongLive 2.0 video expert and mapped ActionDiT
-under `$LONGWAM_CHECKPOINT_ROOT/longwam/`. These assets are separate from a full
-fine-tuned benchmark policy. Their download URLs are TBD; converters are under
-`tools/weights/`. RoboTwin reinitializes its 14-D action interface; GR1/365 retain
-their own embodiment-specific I/O layers. Precompute text embeddings before
+**Video expert:** all fresh LIBERO, RoboTwin 2.0, RoboCasa GR1 and RoboCasa365
+runs use the public
+[LongLive2.0-Robot-S](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-S)
+generator, not Robot-M or the general LongLive 2.0 AR checkpoint. Download key
+`stage1_robot_s` pins revision `9f23acf1a619afe69d866f105c17209880851894` in
+[`configs/checkpoints.yaml`](../configs/checkpoints.yaml). Its `model.pt` SHA-256 is
+`f7e9693ef4e6d19c2e13d1cfaf7abf306ec70b096da5520dd9f0f0ef96f3962d`.
+
+```bash
+python scripts/download_checkpoint.py stage1_robot_s \
+  --output "${LONGWAM_CHECKPOINT_ROOT:-./checkpoints}/LongLive2.0-Robot-S"
+(cd "${LONGWAM_CHECKPOINT_ROOT:-./checkpoints}/LongLive2.0-Robot-S" && sha256sum -c SHA256SUMS)
+# Optional override when the same Robot-S model.pt is stored elsewhere:
+export LONGWAM_ROBOT_VIDEO_CHECKPOINT=/absolute/path/to/LongLive2.0-Robot-S/model.pt
+```
+
+The default loads this file directly, strips the generator's `model.` prefix,
+and strictly loads the video expert. No video conversion step or private
+checkpoint is required. `model_id: Wan-AI/Wan2.2-TI2V-5B` still supplies the
+architecture/VAE assets; its video DiT weights are skipped.
+
+**ActionDiT is independent of video initialization.** RoboTwin uses a randomly
+initialized **entire ActionDiT**, including its 14-D action interface:
+`action_dit_pretrained_path: null` is intentional, not a missing mapping path.
+LIBERO and RoboCasa retain their separate mapped action-backbone configuration
+under `$LONGWAM_CHECKPOINT_ROOT/longwam/ActionDiT_from_longlive_ar_1024hdim.pt`;
+changing the video initializer does not remap or replace those action weights.
+That legacy action asset is not included in Robot-S; its public download remains
+TBD, and conversion tooling is under `tools/weights/`.
+
+**Domino** loads the complete robot-pretrained RoboTwin policy through
+`LONGWAM_ROBOTWIN_CHECKPOINT`, retaining its trained video/action experts and
+normalization. Its separate video/action initialization fields are therefore
+null. Hugging Face policy-bundle `config.yaml` files are **inference settings**:
+null initializers there avoid loading pretraining weights before the full policy,
+and do not describe how that policy was originally trained.
+
+These defaults apply to new runs; changing a recipe does not change previously
+released weights or their training history. Precompute text embeddings before
 training as described in [DATA.md](DATA.md).
+
+### Released RoboTwin weights versus the current recipe
+
+The released IDM/COD weight hashes match the original artifacts. Their original
+configuration/provenance records identify the following initialization; a
+repository name containing `robot-s` is not, by itself, proof of weight identity.
+
+| Published policy | Recorded video initialization | ActionDiT initialization |
+| --- | --- | --- |
+| [RoboTwin2.0-IDM](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-IDM) | Robot-domain AR intermediate checkpoint, a different recorded source from the public Robot-S/Robot-M terminal exports | Random; no mapped backbone |
+| [RoboTwin2.0-COD](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-COD) | General LongLive 2.0 AR video checkpoint, without robot-data pretraining | Random; no mapped backbone |
+
+Artifact SHA-256 bindings:
+
+- IDM `model.pt`: `8013982c70d7dbd6cb8cd17b71a251409c69eb58e39f1e26005515262d11d711`.
+- IDM's recorded source **full training checkpoint**: `93307e31444055a5307b92e81b84b12741eee61e7bcb75a87a9fa6b378b838e4`; its online generator was selected, not EMA. This is not the checksum of a public weights-only Robot-S file.
+- COD `model.pt`: `25d310fd4586307ec728a1289b6f3b39dda84b51c0893b0b4691c098a7aa70cc`.
+
+Both current training modes now default to the pinned public Robot-S above.
+This correction does not relabel the historical initializers or establish exact
+reproduction of the already published weights. Inference for those weights is
+unchanged: use their bundled config and normalization statistics.
+
+### Fine-tuning and resume
 
 `resume=/path/to/weights.pt` starts a new optimization run from full policy
 weights. `resume=/path/to/checkpoints/state/step_NNNNNN` restores a compatible

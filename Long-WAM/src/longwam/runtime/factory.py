@@ -23,6 +23,7 @@ import numpy as np
 from einops import repeat
 from omegaconf import OmegaConf
 
+from ..paths import repository_root
 from ..utils.logging_config import get_logger, setup_logging
 from ..utils.video_io import save_mp4
 from ..utils import misc
@@ -270,7 +271,7 @@ def _load_longlive_video_expert_weights(
 ) -> Path:
     path = Path(checkpoint_path).expanduser()
     if not path.is_absolute():
-        path = Path(__file__).resolve().parents[2] / path
+        path = repository_root() / path
     path = path.resolve()
     if not path.is_file():
         raise FileNotFoundError(f"LongLive video weights do not exist: {path}")

@@ -40,6 +40,8 @@ save_state_every: 300
 eval_every: 0
 gradient_accumulation_steps: 8
 weight_decay: 0.01
+# Fine-tune the complete robot-pretrained RoboTwin policy; do not overwrite
+# its trained video/action experts with separate Stage 1 initialization weights.
 resume: ${oc.env:LONGWAM_ROBOTWIN_CHECKPOINT,???}
 checkpoint_strict: true
 wandb:
