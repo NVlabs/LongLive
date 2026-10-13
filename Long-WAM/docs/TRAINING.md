@@ -129,34 +129,9 @@ TBD, and conversion tooling is under `tools/weights/`.
 `LONGWAM_ROBOTWIN_CHECKPOINT`, retaining its trained video/action experts and
 normalization. Its separate video/action initialization fields are therefore
 null. Hugging Face policy-bundle `config.yaml` files are **inference settings**:
-null initializers there avoid loading pretraining weights before the full policy,
-and do not describe how that policy was originally trained.
+null initializers there avoid loading pretraining weights before the full policy.
 
-These defaults apply to new runs; changing a recipe does not change previously
-released weights or their training history. Precompute text embeddings before
-training as described in [DATA.md](DATA.md).
-
-### Released RoboTwin weights versus the current recipe
-
-The released IDM/COD weight hashes match the original artifacts. Their original
-configuration/provenance records identify the following initialization; a
-repository name containing `robot-s` is not, by itself, proof of weight identity.
-
-| Published policy | Recorded video initialization | ActionDiT initialization |
-| --- | --- | --- |
-| [RoboTwin2.0-IDM](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-IDM) | Robot-domain AR intermediate checkpoint, a different recorded source from the public Robot-S/Robot-M terminal exports | Random; no mapped backbone |
-| [RoboTwin2.0-COD](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-COD) | General LongLive 2.0 AR video checkpoint, without robot-data pretraining | Random; no mapped backbone |
-
-Artifact SHA-256 bindings:
-
-- IDM `model.pt`: `8013982c70d7dbd6cb8cd17b71a251409c69eb58e39f1e26005515262d11d711`.
-- IDM's recorded source **full training checkpoint**: `93307e31444055a5307b92e81b84b12741eee61e7bcb75a87a9fa6b378b838e4`; its online generator was selected, not EMA. This is not the checksum of a public weights-only Robot-S file.
-- COD `model.pt`: `25d310fd4586307ec728a1289b6f3b39dda84b51c0893b0b4691c098a7aa70cc`.
-
-Both current training modes now default to the pinned public Robot-S above.
-This correction does not relabel the historical initializers or establish exact
-reproduction of the already published weights. Inference for those weights is
-unchanged: use their bundled config and normalization statistics.
+Precompute text embeddings before training as described in [DATA.md](DATA.md).
 
 ### Fine-tuning and resume
 

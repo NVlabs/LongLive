@@ -486,9 +486,8 @@ python scripts/download_checkpoint.py stage1_robot_s \
   --output "${LONGWAM_CHECKPOINT_ROOT:-./checkpoints}/LongLive2.0-Robot-S"
 ```
 
-RoboTwin's ActionDiT is randomly initialized; Domino fine-tunes a complete
-RoboTwin policy. These are new-run defaults; see
-[initialization and released-weight provenance](docs/TRAINING.md#initialization-fine-tuning-and-resume).
+See [initialization and fine-tuning](docs/TRAINING.md#initialization-fine-tuning-and-resume)
+for task-specific settings.
 
 ### Benchmark recipes
 
