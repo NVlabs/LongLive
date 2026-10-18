@@ -21,6 +21,49 @@ End Long-WAM attribution.
 
 # Verification scope
 
+## NumPy 2 and clean Stage 2 installation — 2026-10-18
+
+Stage 2 training and inference now share `numpy>=2.2.6,<2.3`, resolving
+[#112](https://github.com/NVlabs/LongLive/issues/112). LeRobot remains pinned to
+0.4.1 and PyTorch to the 2.7.x series. Environments remain separate because
+training pins `datasets==3.6.0`, while LeRobot requires 4.x. The two OpenCV
+packages are constrained to the same series. Unused imports no longer make
+inference require training-only `boto3`. Model code, training recipes and
+action scheduling are unchanged.
+
+Both environments were installed from scratch on Linux aarch64 / Python 3.12.3,
+without inherited site packages or dependency overrides. Tests used the CPU
+build of PyTorch 2.7.1 and torchvision 0.22.1; `pip check` passed in both.
+
+| Installed extras | NumPy | datasets | PyArrow | LeRobot / Rerun |
+| --- | --- | --- | --- | --- |
+| `infra,test,agentic` | 2.2.6 | 4.1.1 | 26.0.0 | 0.4.1 / 0.26.2 |
+| `train,test,agentic` | 2.2.6 | 3.6.0 | 26.0.0 | Not installed |
+
+The complete main suite passed **354 tests / 12 skipped** in inference and
+**333 tests / 12 skipped** in training. Skips cover CUDA and uninstalled optional
+integrations. No tests failed.
+
+All **23 dependency regression tests** passed in both environments, including
+the Arrow/Parquet-to-training-tensor round trip and a tiny backward pass.
+Public policy imports and NumPy/PyTorch/OpenCV interoperability passed, with
+both OpenCV distributions resolving to 4.11.0.86. RoboTwin training/evaluation
+CLI dry-runs, static checks, the NumPy 2 migration lint, attribution and the
+checkout credential guard passed.
+
+A separate controlled check changed only NumPy 1.26.4 to 2.2.6 while keeping
+PyArrow 25.0.1 and the other packages fixed: synthetic statistics, normalized
+batches, four tiny-model optimizer steps and resulting weights were identical.
+This is a data-boundary check, not a full Long-WAM training equivalence claim.
+
+Dependency resolution also passed for Linux x86_64 (Python 3.10 and 3.12) and
+macOS ARM (Python 3.12) inference extras, plus Linux x86_64 / Python 3.12 training.
+These are resolver checks, not execution on those platforms. See the
+[CPU test command](../infra/README.md#quick-start). No GPU, model checkpoint, simulator,
+robot command or paid API call was used. Temporary environments and installation
+artifacts are removed after testing. Stage 1 and native CUDA builds are outside
+this check; the earlier non-clean-install audits below remain historical records.
+
 ## Official repository layout — 2026-10-07
 
 After moving into `NVlabs/LongLive/Long-WAM/`, **87 CPU regression tests** and

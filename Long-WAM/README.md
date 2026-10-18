@@ -206,7 +206,8 @@ export LONGWAM_OUTPUT_ROOT="$PWD/outputs"
 Set the roots to your storage paths. Install simulators via the
 [benchmark setup guide](docs/BENCHMARKS.md).
 
-**Keep environments separate:** `.[infra]` requires `datasets` 4.x; `.[train]`
+Stage 2 training and inference share **NumPy 2.2.x** (validated with 2.2.6).
+**Keep environments separate:** `.[infra]` uses `datasets` 4.x; `.[train]`
 pins 3.6.0. Stage 1 also has its own environment. GR1 and RoboCasa365 use
 incompatible `robocasa` packages; select each simulator with `simulator_python`.
 

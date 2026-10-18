@@ -23,9 +23,10 @@ storage remain BF16.
 
 Use a **separate inference environment** and run commands from the Long-WAM
 project root (`LongLive/Long-WAM/` in the official repository).
-Do not combine `.[infra]` and `.[train]`: LeRobot 0.4.1 requires `datasets` 4.x,
-while the reproducible training extra pins `datasets==3.6.0`. The deployment extra
-is optional so existing training and RoboCasa environments do not acquire that
+Training and inference share NumPy 2.2.x (validated with 2.2.6), satisfying
+LeRobot 0.4.1's Rerun SDK dependency. Do not combine `.[infra]` and `.[train]`:
+deployment requires `datasets` 4.x, while training pins `datasets==3.6.0`.
+The deployment extra is optional so training and RoboCasa environments do not acquire that
 conflict. LIBERO, RoboTwin and Domino's shared control path need `.[infra]`;
 RoboCasa GR1/365 keep their benchmark-specific socket protocols.
 
@@ -33,6 +34,15 @@ Install the deployment environment:
 
 ```bash
 pip install -e '.[infra]'
+python -m pip check
+```
+
+For CPU interface tests (no checkpoint, simulator or robot required):
+
+```bash
+pip install -e '.[infra,test]'
+CUDA_VISIBLE_DEVICES='' HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+  python -m pytest -q tests/runtime tests/test_dependency_contract.py
 ```
 
 Install your simulator using the [benchmark setup guide](../docs/BENCHMARKS.md).
