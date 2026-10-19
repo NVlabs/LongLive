@@ -127,7 +127,7 @@ Public checkpoints are hosted by
 **COD** uses `inference_mode=codenoise` with matching weights/config.
 YAM is a pretraining release; see its model card for the camera/action interface.
 
-### RoboCasa GR1: five history lengths
+### RoboCasa GR1: context-length scaling
 
 All variants use 20-Hz control and a 16-step action chunk.
 
@@ -137,7 +137,7 @@ All variants use 20-Hz control and a 16-step action chunk.
 | 2.4 s | P48 | 4 | [Long-WAM-RoboCasa-GR1-2.4s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-2.4s) | `robocasa_gr1_p48` |
 | 4.8 s | P96 | 7 | [Long-WAM-RoboCasa-GR1-4.8s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-4.8s) | `robocasa_gr1_p96` |
 | 9.6 s | P192 | 13 | [Long-WAM-RoboCasa-GR1-9.6s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-9.6s) | `robocasa_gr1_p192` |
-| 19.2 s | P384 | 25 | [Long-WAM-RoboCasa-GR1-19.2s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-19.2s) | `robocasa_gr1_p384` |
+| 19.2 s | P384 | 25 | Under investigation; updated checkpoint coming soon. | — |
 
 P0 uses only the current frame; other variants add the listed history.
 Use matching weights and config.
@@ -305,18 +305,20 @@ Configuration: [`configs/eval/domino.yaml`](configs/eval/domino.yaml).
 <summary><strong>RoboCasa GR1 · History-specific checkpoints</strong></summary>
 
 ```bash
-python scripts/download_checkpoint.py robocasa_gr1_p384 --output checkpoints/gr1-19.2s
-bash scripts/robocasa_gr1/eval.sh expected_history=384 \
-  checkpoint=checkpoints/gr1-19.2s/model.pt \
-  model_config=checkpoints/gr1-19.2s/config.yaml \
-  stats=checkpoints/gr1-19.2s/dataset_stats.json \
+python scripts/download_checkpoint.py robocasa_gr1_p192 --output checkpoints/gr1-9.6s
+bash scripts/robocasa_gr1/eval.sh expected_history=192 \
+  checkpoint=checkpoints/gr1-9.6s/model.pt \
+  model_config=checkpoints/gr1-9.6s/config.yaml \
+  stats=checkpoints/gr1-9.6s/dataset_stats.json \
   text_cache=/path/to/text_cache \
   simulator_python=/path/to/gr1-env/bin/python \
-  output_dir=outputs/gr1-p384-eval
+  output_dir=outputs/gr1-p192-eval
 ```
 
-Set `expected_history` to `0`, `48`, `96`, `192` or `384` and use the matching
-bundle/text cache. This flag checks history; it does not resize memory.
+For the currently recommended releases, set `expected_history` to `0`, `48`,
+`96` or `192` and use the matching bundle/text cache. This flag checks history;
+it does not resize memory. The P384 (19.2 s) checkpoint is under investigation;
+an updated version will be uploaded after validation.
 
 Configuration: [`configs/eval/robocasa_gr1.yaml`](configs/eval/robocasa_gr1.yaml).
 
