@@ -29,5 +29,4 @@
  .overview-v3.overview-flow .lane-heading h3 { font-size: 20px; }
 }
 
-/* Citation content will be supplied later. */
 .bibtex-block { margin: 0; min-height: 100px; padding: 22px; border: 1px solid var(--line); border-radius: 10px; background: #f7f8f5; color: var(--ink); font: 13px/1.7 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
