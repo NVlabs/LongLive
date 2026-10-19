@@ -235,29 +235,25 @@ its own copy of the license and, where applicable, its own third-party notices.
 
 Please consider citing our work if you find it useful:
 
-[**Long-WAM: Scaling the Context of World-Action Models**](https://arxiv.org/abs/2610.10528)
-
 ```bibtex
-@misc{huang2026longwamscalingcontextworldaction,
+@article{huang2026longwam,
   title={Long-WAM: Scaling the Context of World-Action Models},
   author={Wei Huang and Bohan Zhang and Chenzhi Liu and Isabella Liu and
           Shuai Yang and Weian Mao and Luozhou Wang and Yicheng Xiao and
           Weifeng Lin and Qixin Hu and Bryan Chu and Sifei Liu and
           Linxi Fan and Xiaojuan Qi and Song Han and Yukang Chen},
+  journal={arXiv preprint arXiv: 2610.10528},
   year={2026},
-  eprint={2610.10528},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO},
-  url={https://arxiv.org/abs/2610.10528},
 }
 ```
 
 ```bibtex
-@misc{yang2026longliveplug,
+@article{yang2026longliveplug,
   title  = {LongLive-Plug: Once-for-All Distillation for Video Generation},
   author = {Shuai Yang and Luozhou Wang and Wei Huang and ZhiFei Chen and
             Bohan Zhang and Xiao Fu and Qianli Ma and Chen-Hsuan Lin and
             Weian Mao and Bryan Chu and Song Han and Yukang Chen},
+  journal={arXiv preprint arXiv: 2609.38154},
   year   = {2026}
 }
 ```
