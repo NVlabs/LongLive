@@ -371,12 +371,16 @@ hardware backends. See the [infra guide](infra/README.md).
 
 | Device | GPU compute capability | Compile on the target device | Evaluation setting |
 | --- | --- | --- | --- |
+| NVIDIA GeForce RTX 4090 (opt-in BF16) | 8.9 | No native build | `hardware=rtx4090` |
 | NVIDIA GeForce RTX 5090 | 12.0 | `longwam build rtx5090` | `hardware=rtx5090` |
 | NVIDIA DGX Spark | 12.1 | `longwam build spark` | `hardware=spark` |
 | NVIDIA Jetson AGX Thor | 11.0 | `longwam build thor` | `hardware=thor` |
 
-Acceleration uses **NVFP4 video / BF16 actions and KV**. Build on the target
-device with compatible PyTorch, CUDA and C++ tools; follow the
+The RTX4090 profile retains original BF16/FP32 dtypes and currently validates
+synchronous P48/H32/V4/A10 inference. See [its contract, tests and measurements](docs/RTX4090.md).
+
+RTX5090, Spark and Thor profiles use **NVFP4 video / BF16 actions and KV**.
+Build on the target device with compatible PyTorch, CUDA and C++ tools; follow the
 [platform instructions](infra/README.md#build), especially on Spark/Thor.
 
 ### Install, check and run
