@@ -7,7 +7,7 @@
 
 """Explicit platform profiles for the shared inference implementation."""
 
-CAPABILITIES = {"rtx5090": (12, 0), "spark": (12, 1), "thor": (11, 0)}
+CAPABILITIES = {"rtx4090": (8, 9), "rtx5090": (12, 0), "spark": (12, 1), "thor": (11, 0)}
 
 
 def prepare_backend(model, hardware="reference", overrides=None):
@@ -32,6 +32,13 @@ def prepare_backend(model, hardware="reference", overrides=None):
     actual = torch.cuda.get_device_capability(model.device)
     if actual != CAPABILITIES[hardware]:
         raise ValueError(f"{hardware} requires CC {CAPABILITIES[hardware]}, got {actual}")
+    if hardware == "rtx4090":
+        unsupported = set(overrides) - {"video_rope_grid_size"}
+        if unsupported:
+            raise ValueError(f"rtx4090 has no validated optimization overrides: {sorted(unsupported)}")
+        from ..optim.sm89 import prepare_rtx4090
+        return prepare_rtx4090(model)
+
     options = {
         "model_quant": True,
         "model_quant_targets": ["video"],

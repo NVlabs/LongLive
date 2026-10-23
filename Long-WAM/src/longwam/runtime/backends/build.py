@@ -5,7 +5,7 @@
 # License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
 # Licensed under the Apache License, Version 2.0 for NVIDIA changes; upstream terms are retained.
 
-"""Build a device-specific copy of bundled, unpatched FourOverSix source."""
+"""Build a device-specific FourOverSix extension when the backend requires one."""
 
 import hashlib
 import json
@@ -85,6 +85,14 @@ def build_extension(hardware, *, build_dir=None, check_only=False):
 
     if hardware not in CAPABILITIES:
         raise ValueError(f"Choose hardware from {tuple(CAPABILITIES)}")
+    if hardware == "rtx4090":
+        identity = {
+            "hardware": hardware,
+            "native_build": False,
+            "message": "RTX4090 BF16 backend does not require a FourOverSix native build.",
+        }
+        print(json.dumps(identity, indent=2))
+        return identity
     root = repository_root()
     source = root / "third_party/fouroversix"
     upstream = json.loads((source / "UPSTREAM.json").read_text())

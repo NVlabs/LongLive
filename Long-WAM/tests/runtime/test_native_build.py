@@ -8,6 +8,7 @@
 """Exercise real device patches without compiling or installing dependencies."""
 
 from pathlib import Path
+import json
 import subprocess
 import shutil
 
@@ -17,6 +18,40 @@ import torch
 from longwam.runtime.backends import build
 from longwam.runtime.backends import CAPABILITIES
 from longwam.paths import repository_root
+from longwam.cli import main
+
+
+@pytest.mark.parametrize("check_only", [False, True])
+def test_rtx4090_build_needs_no_native_sources_or_gpu(check_only, tmp_path, monkeypatch, capsys):
+    import longwam.paths
+
+    target = tmp_path / "unused-build"
+    cache = tmp_path / "unused-cache"
+    monkeypatch.setenv("LONGWAM_BUILD_ROOT", str(cache))
+
+    def unexpected(*args, **kwargs):
+        pytest.fail("RTX4090 must not inspect native sources, build tools or a GPU")
+
+    monkeypatch.setattr(longwam.paths, "repository_root", unexpected)
+    monkeypatch.setattr(build, "_patch", unexpected)
+    monkeypatch.setattr(build, "_build_environment", unexpected)
+    monkeypatch.setattr(build.shutil, "copytree", unexpected)
+    monkeypatch.setattr(build.subprocess, "run", unexpected)
+    monkeypatch.setattr(torch.cuda, "is_available", unexpected)
+    monkeypatch.setattr(torch.cuda, "get_device_capability", unexpected)
+    command = ["build", "rtx4090", "--build-dir", str(target)]
+    if check_only:
+        command.append("--check-only")
+    assert main(command) == 0
+    captured = capsys.readouterr()
+    identity = json.loads(captured.out)
+    assert identity["hardware"] == "rtx4090"
+    assert identity["native_build"] is False
+    assert "BF16" in identity["message"]
+    assert "FourOverSix" in identity["message"]
+    assert not captured.err
+    assert not target.exists()
+    assert not cache.exists()
 
 
 @pytest.mark.parametrize("hardware", ["rtx5090", "spark", "thor"])

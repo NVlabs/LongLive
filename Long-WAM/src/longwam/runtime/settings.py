@@ -36,8 +36,10 @@ def normalize_settings(settings):
         raise TypeError("optimization must be a mapping")
     if cfg.execution not in {"sync", "async"}:
         raise ValueError("execution must be sync or async (pure async, without blending)")
-    if cfg.hardware not in {"reference", "rtx5090", "spark", "thor"}:
-        raise ValueError("hardware must be reference, rtx5090, spark or thor")
+    if cfg.hardware not in {"reference", "rtx4090", "rtx5090", "spark", "thor"}:
+        raise ValueError("hardware must be reference, rtx4090, rtx5090, spark or thor")
+    if cfg.hardware == "rtx4090" and (cfg.execution != "sync" or cfg.streaming_vae):
+        raise ValueError("rtx4090 currently requires synchronous execution and full observation VAE")
     if type(cfg.streaming_vae) is not bool:
         raise TypeError("streaming_vae must be true or false")
     robot = cfg.get("robot")
