@@ -9,9 +9,10 @@ import inspect
 
 import torch
 
-from .profiles import apply_profile
+from .profiles import apply_profile, validate_fast_profile
 
 PROFILE = "graph_first_prefix_direct"
+PROFILES = {"strict": PROFILE, "fast": "graph_clean_prefix"}
 
 
 class SM89State:
@@ -19,7 +20,7 @@ class SM89State:
 
     def __init__(self, telemetry):
         self.telemetry = telemetry
-        self.profile = PROFILE
+        self.profile = telemetry["name"]
 
     def to_dict(self):
         result = {key: value for key, value in self.telemetry.items() if key != "wrappers"}
@@ -37,11 +38,14 @@ class SM89State:
         return result
 
 
-def prepare_rtx4090(model):
+def prepare_rtx4090(model, *, mode="strict"):
     """Prepare once, after strict checkpoint/adapter loading and model.eval()."""
+    if not isinstance(mode, str) or mode not in PROFILES:
+        raise ValueError("rtx4090_mode must be strict or fast")
+    profile = PROFILES[mode]
     if getattr(model, "_inference_optimization_prepared", False):
         state = getattr(model, "_sm89_optimization_state", None)
-        if state is not None and state.profile == PROFILE:
+        if state is not None and state.profile == profile:
             return state
         raise RuntimeError("Cannot mix or reconfigure prepared inference backends")
     if torch.device(model.device).type != "cuda":
@@ -62,9 +66,12 @@ def prepare_rtx4090(model):
     previous = getattr(model, "_inference_optimization_config", None)
     if previous is not None and previous.enabled:
         raise ValueError("rtx4090 cannot mix preconfigured optimization policies")
+    if mode == "fast":
+        validate_fast_profile(model)
     signature = inspect.signature(model.infer_joint_ar)
     model.configure_inference_optimizations({"required_compute_capability": "8.9"})
-    telemetry = apply_profile(model, PROFILE)
+    telemetry = apply_profile(model, profile)
+    telemetry["mode"] = mode
     # The native runtime normalizes each new frame into its history buffer.
     # The study's raw-history batch-upload adapter is a separate frontend.
     model._wam4090_batch_rgb_upload = False

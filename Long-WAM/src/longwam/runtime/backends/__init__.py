@@ -33,11 +33,11 @@ def prepare_backend(model, hardware="reference", overrides=None):
     if actual != CAPABILITIES[hardware]:
         raise ValueError(f"{hardware} requires CC {CAPABILITIES[hardware]}, got {actual}")
     if hardware == "rtx4090":
-        unsupported = set(overrides) - {"video_rope_grid_size"}
+        unsupported = set(overrides) - {"video_rope_grid_size", "rtx4090_mode"}
         if unsupported:
             raise ValueError(f"rtx4090 has no validated optimization overrides: {sorted(unsupported)}")
         from ..optim.sm89 import prepare_rtx4090
-        return prepare_rtx4090(model)
+        return prepare_rtx4090(model, mode=overrides.get("rtx4090_mode", "strict"))
 
     options = {
         "model_quant": True,
