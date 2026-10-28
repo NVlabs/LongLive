@@ -148,8 +148,10 @@ Use matching weights and config.
 | --- | --- | --- | --- |
 | Robot-S | Short sequences, within a few seconds | [LongLive2.0-Robot-S](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-S) | `stage1_robot_s` |
 | Robot-M | Short and medium-length sequences | [LongLive2.0-Robot-M](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-M) | `stage1_robot_m` |
+| Robot-L | Long sequences; continued from Robot-M | [LongLive2.0-Robot-L](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-L) | `stage1_robot_l` |
 
-S/M denote sequence-length coverage, not model size. These are video generators;
+S/M/L denote sequence-length coverage, not model size. Robot-L is the final
+Stage-L checkpoint at optimizer step **3,972**. These are video generators;
 see the [Stage 1 guide](stage1/README.md).
 
 ### Download a bundle
@@ -581,7 +583,9 @@ Click a GIF to watch on the [project page](https://nvlabs.github.io/LongLive/Lon
 
 ### Image-to-video inference
 
-Use a Robot-S checkpoint or your own compatible video generator.
+Published Robot-S, Robot-M and Robot-L weights are listed [above](#checkpoints).
+The example command below uses Robot-S; see the [Stage 1 guide](stage1/README.md#published-checkpoints)
+for Robot-L downloads and its long-context validation settings.
 Seven RGB first frames and their original instructions are bundled:
 
 | `short_00` · Bun → steamer | `short_04` · Lid → pan | `long_00` · Shoe → container |

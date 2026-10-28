@@ -50,6 +50,41 @@ python scripts/longlive/prebuild_video_indexes.py --help
 
 ## Image-to-video inference
 
+### Published checkpoints
+
+| Checkpoint | Training sequence lengths | Download key |
+| --- | --- | --- |
+| [Robot-S](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-S) | Short sequences | `stage1_robot_s` |
+| [Robot-M](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-M) | Short and medium-length sequences | `stage1_robot_m` |
+| [Robot-L](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-L) | Long sequences; continued from Robot-M | `stage1_robot_l` |
+
+S/M/L describe sequence-length coverage, not model size. Robot-L finished Stage L
+at optimizer step **3,972**. Its 20 scheduled evaluation gates passed, including
+the final 24-video panel and W&B upload verification. The final panel uses latent
+lengths 32/64/96/120/128/192, 50 sampling steps, CFG 3, and seed `20260711 + slot`
+within each group. These checks establish release integrity, not a benchmark score.
+
+Like Robot-M, the Robot-L bundle contains a bare online-generator `model.pt`
+(825 FP32 tensors, approximately 20 GB), `README.md` and `SHA256SUMS`.
+Optimizer, EMA and training-resume state are excluded; VAE and text assets are
+installed separately. Revisions are pinned in
+[`configs/checkpoints.yaml`](../configs/checkpoints.yaml).
+
+From the Long-WAM project root:
+
+```bash
+python scripts/download_checkpoint.py stage1_robot_l --output checkpoints/robot-l
+(cd checkpoints/robot-l && sha256sum -c SHA256SUMS)
+```
+
+For Robot-L's full fixed panel, use the eight-GPU [validation path](#validation--long-context-demos)
+with `--stage L --training-step 3972 --generator /path/to/checkpoints/robot-l/model.pt`.
+[`validation_l.yaml`](configs/validation_l.yaml) retains its 192-latent-frame
+local attention window. The standalone Robot-S example below uses a 64-latent-frame
+window and is a separate inference preset.
+
+### Standalone inference
+
 The standalone [`infer.py`](infer.py) reuses the bundled LongLive 2.0 causal
 pipeline. It loads the online generator only: no trainer, dataset loader,
 optimizer, W&B, distributed process group or API credentials.

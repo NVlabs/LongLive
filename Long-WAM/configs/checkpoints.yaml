@@ -17,7 +17,7 @@
 # limitations under the License.
 # End Long-WAM attribution.
 
-# Public, ungated ELM bundles. Immutable commits verified on 2026-10-06.
+# Public, ungated ELM bundles pinned to immutable commits.
 # Use the explicit variant keys in documentation; aliases preserve older commands.
 stage1_robot_s: &stage1_robot_s
   repo_id: Efficient-Large-Model/LongLive2.0-Robot-S
@@ -25,6 +25,9 @@ stage1_robot_s: &stage1_robot_s
 stage1_robot_m:
   repo_id: Efficient-Large-Model/LongLive2.0-Robot-M
   revision: 6f6fe2ee1c1db6bf3fc109a7bbda9682e45ba151
+stage1_robot_l:
+  repo_id: Efficient-Large-Model/LongLive2.0-Robot-L
+  revision: 8910a995dda1a395e3d1d82c63323075413671bc
 libero_idm: &libero_idm
   repo_id: Efficient-Large-Model/Long-WAM-LIBERO-IDM
   revision: eca2710140fc0d03a2b0259db1d49d5ca60d5122

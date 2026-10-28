@@ -282,7 +282,7 @@ def test_public_checkpoint_registry_matches_readme():
     readme = (ROOT / "README.md").read_text()
     releases = {entry["repo_id"]: entry["revision"] for entry in registry.values()
                 if entry["repo_id"] is not None}
-    assert len(releases) == 13
+    assert len(releases) == 14
     for repo_id, revision in releases.items():
         assert repo_id.startswith("Efficient-Large-Model/")
         assert re.fullmatch(r"[0-9a-f]{40}", revision)
@@ -303,6 +303,8 @@ def test_public_checkpoint_registry_matches_readme():
      "d3457a907cdefd5035bedac6474cd3179cbc391e"),
     ("stage1_robot_s", "Efficient-Large-Model/LongLive2.0-Robot-S",
      "9f23acf1a619afe69d866f105c17209880851894"),
+    ("stage1_robot_l", "Efficient-Large-Model/LongLive2.0-Robot-L",
+     "8910a995dda1a395e3d1d82c63323075413671bc"),
 ])
 def test_checkpoint_downloader_uses_pinned_release_without_network(
     key, repo_id, revision, tmp_path, monkeypatch,
