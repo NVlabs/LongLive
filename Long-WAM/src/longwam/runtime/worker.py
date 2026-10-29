@@ -4,6 +4,7 @@
 # Source: https://github.com/Aaronhuang-778/Long-WAM @ fbe5e556b7897c16aac1ce8cb4706764e00c74e1 :: src/longwam/runtime/worker.py
 # License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
 # Licensed under the Apache License, Version 2.0 for NVIDIA changes; upstream terms are retained.
+# Changes: Surface sender failures and keep rejected request enqueues retryable.
 
 """Single-flight spawned-process RPC for simulator/inference isolation.
 
@@ -19,6 +20,7 @@ import os
 import copy
 import queue
 import threading
+import time
 import traceback
 from multiprocessing.connection import Connection
 from typing import Any, Callable, Optional
@@ -102,7 +104,12 @@ class ProcessFuture:
         self._error: Optional[BaseException] = None
 
     def done(self) -> bool:
-        return self._resolved or self._client._connection.poll(0.0)
+        if self._resolved or self._client._send_error is not None:
+            return True
+        try:
+            return self._client._connection.poll(0.0)
+        except (OSError, EOFError):
+            return True
 
     def result(self, timeout: Optional[float] = None) -> Any:
         if not self._resolved:
@@ -160,23 +167,48 @@ class SpawnedInferenceProcess:
         self.pid = int(message["pid"])
         self.metadata = dict(message["metadata"])
         self._outbox = queue.Queue(maxsize=128)
-        self._send_error = None
+        self._send_error: Optional[BaseException] = None
         self._sender = threading.Thread(target=self._send_loop, name=f"{name}-sender", daemon=True)
         self._sender.start()
 
-    def _send_loop(self):
+    def _send_loop(self) -> None:
+        """Record terminal write or serialization failures for the waiting caller."""
         try:
             while True:
                 message = self._outbox.get()
                 if message is None:
                     return
                 self._connection.send(message)
-        except (OSError, EOFError) as error:
+        except BaseException as error:
             self._send_error = error
 
-    def _enqueue(self, message):
+    def _raise_if_send_failed(self) -> None:
+        """Keep a failed sender terminal because pipe delivery may be incomplete."""
         if self._send_error is not None:
-            raise RemoteInferenceError(f"Inference transport failed: {self._send_error}")
+            raise RemoteInferenceError(
+                f"Inference transport failed: {self._send_error}"
+            ) from self._send_error
+
+    def _wait_for_response(self, timeout: Optional[float]) -> None:
+        """Wait for a reply while checking sender failure even without a timeout."""
+        deadline = None if timeout is None else time.monotonic() + max(0.0, float(timeout))
+        while True:
+            self._raise_if_send_failed()
+            wait = 0.05
+            if deadline is not None:
+                wait = min(wait, max(0.0, deadline - time.monotonic()))
+            try:
+                ready = self._connection.poll(wait)
+            except (OSError, EOFError) as error:
+                raise RemoteInferenceError(f"Inference transport failed: {error}") from error
+            self._raise_if_send_failed()
+            if ready:
+                return
+            if deadline is not None and time.monotonic() >= deadline:
+                raise TimeoutError("inference response timed out")
+
+    def _enqueue(self, message):
+        self._raise_if_send_failed()
         try:
             self._outbox.put_nowait(message)
         except queue.Full as error:
@@ -199,7 +231,6 @@ class SpawnedInferenceProcess:
             raise RuntimeError("only one inference request may be in flight")
         request_id = self._next_request_id
         self._next_request_id += 1
-        self._pending_request_id = request_id
         self._enqueue(
             {
                 "kind": "request",
@@ -208,6 +239,7 @@ class SpawnedInferenceProcess:
                 "payload": payload,
             }
         )
+        self._pending_request_id = request_id
         return ProcessFuture(self, request_id)
 
     def call(self, operation: str, payload: Any = None) -> Any:
@@ -227,13 +259,18 @@ class SpawnedInferenceProcess:
     def _receive(self, request_id: int, timeout: Optional[float]) -> Any:
         if self._pending_request_id != int(request_id):
             raise RuntimeError("inference response does not match the in-flight request")
-        if timeout is not None and not self._connection.poll(float(timeout)):
-            raise TimeoutError(f"inference request {request_id} timed out")
+        try:
+            self._wait_for_response(timeout)
+        except TimeoutError as error:
+            raise TimeoutError(f"inference request {request_id} timed out") from error
+        except BaseException:
+            self._pending_request_id = None
+            raise
         try:
             message = self._connection.recv()
-        except EOFError as error:
+        except (OSError, EOFError) as error:
             raise RemoteInferenceError(
-                f"inference process exited with code {self._process.exitcode}"
+                f"Inference transport failed (worker exit code {self._process.exitcode}): {error}"
             ) from error
         finally:
             self._pending_request_id = None
@@ -251,11 +288,15 @@ class SpawnedInferenceProcess:
         if self._closed:
             return
         self._closed = True
+        force = force or getattr(self, "_send_error", None) is not None
         try:
             if not force and self._pending_request_id is None and self._process.is_alive():
-                self._enqueue({"kind": "shutdown"})
-                if self._connection.poll(10.0):
+                try:
+                    self._enqueue({"kind": "shutdown"})
+                    self._wait_for_response(10.0)
                     self._connection.recv()
+                except (OSError, EOFError, RuntimeError):
+                    force = True
         finally:
             if force and self._process.is_alive():
                 self._process.terminate()
