@@ -38,6 +38,121 @@ ACTION_HEAD = "mixtures.action.head.weight"
 ACTION_HEAD_BIAS = "mixtures.action.head.bias"
 
 
+@pytest.fixture
+def action_conversion():
+    import runpy
+
+    script = Path(__file__).resolve().parents[1] / "tools/weights/preprocess_action_dit_backbone.py"
+    converter = runpy.run_path(str(script))
+    video_cfg, action_cfg = converter["_load_model_config"](
+        script.parents[2] / "configs/model/long_wam.yaml"
+    )
+    shared = dict(num_layers=1, num_heads=2, attn_head_dim=6, text_dim=16, freq_dim=8)
+    video_cfg.update(shared, hidden_dim=12, ffn_dim=24, in_dim=4, out_dim=4)
+    action_cfg.update(shared, hidden_dim=8, ffn_dim=16, action_dim=29)
+    with torch.random.fork_rng(devices=[]):
+        torch.manual_seed(3)
+        state = converter["WanVideoDiT"](**video_cfg).state_dict()
+    return script, converter, video_cfg, action_cfg, state
+
+
+@pytest.mark.parametrize("container", ["generator", "bare", "joint"])
+def test_action_conversion_loads_backbone_and_keeps_random_interfaces(
+    action_conversion, container, tmp_path
+):
+    _, converter, video_cfg, action_cfg, state = action_conversion
+    wrapped = {
+        "generator": {f"model.{k}": v for k, v in state.items()},
+        "bare": state,
+        "joint": {"mot": {f"mixtures.video.{k}": v for k, v in state.items()}},
+    }[container]
+    payload, counts = converter["convert_backbone"](
+        converter["_video_state"](wrapped), video_cfg, action_cfg
+    )
+    assert counts["copied"] > 0 and counts["interpolated"] > 0 and counts["skipped"] == 4
+    backbone = payload["backbone_state_dict"]
+    assert not any(k.startswith(("action_encoder.", "head.")) for k in backbone)
+    checkpoint = tmp_path / "action.pt"
+    torch.save(payload, checkpoint)
+    cls = converter["ActionDiT"]
+    with torch.random.fork_rng(devices=[]):
+        torch.manual_seed(42)
+        expected = cls(**action_cfg).state_dict()
+        torch.manual_seed(42)
+        model = cls.from_pretrained(
+            action_cfg, str(checkpoint), device="cpu", torch_dtype=torch.float32
+        )
+    for key, value in model.state_dict().items():
+        assert torch.equal(value, backbone.get(key, expected[key])), key
+
+
+@pytest.mark.parametrize("problem", ["missing", "shape", "nonfinite"])
+def test_action_conversion_rejects_invalid_source(action_conversion, problem):
+    _, converter, video_cfg, action_cfg, state = action_conversion
+    key = "text_embedding.0.weight"
+    if problem == "missing":
+        del state[key]
+    elif problem == "shape":
+        state[key] = state[key][:1]
+    else:
+        state[key].fill_(float("nan"))
+    with pytest.raises(ValueError):
+        converter["convert_backbone"](state, video_cfg, action_cfg)
+
+
+def test_action_conversion_one_command_download_and_no_overwrite(
+    action_conversion, tmp_path, monkeypatch
+):
+    import hashlib
+    import runpy
+    import sys
+
+    import huggingface_hub
+    from omegaconf import OmegaConf
+
+    script, _, video_cfg, action_cfg, state = action_conversion
+    root = tmp_path / "project"
+    (root / "configs/model").mkdir(parents=True)
+    source = tmp_path / "model.pt"
+    torch.save({f"model.{k}": v for k, v in state.items()}, source)
+    digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    release = dict(repo_id="example/Robot-S", revision="a" * 40, sha256=digest)
+    OmegaConf.save(OmegaConf.create({"stage1_robot_s": release}), root / "configs/checkpoints.yaml")
+    OmegaConf.save(
+        OmegaConf.create({"video_dit_config": video_cfg, "action_dit_config": action_cfg}),
+        root / "configs/model/long_wam.yaml",
+    )
+    monkeypatch.setenv("LONGWAM_ROOT", str(root))
+    monkeypatch.delenv("LONGWAM_CHECKPOINT_ROOT", raising=False)
+    monkeypatch.delenv("LONGWAM_ROBOT_VIDEO_CHECKPOINT", raising=False)
+    monkeypatch.chdir(tmp_path)
+    calls = []
+
+    def download(**kwargs):
+        calls.append(kwargs)
+        return str(source)
+
+    monkeypatch.setattr(huggingface_hub, "hf_hub_download", download)
+    monkeypatch.setattr(sys, "argv", [str(script), "--threads", "1"])
+    runpy.run_path(str(script), run_name="__main__")
+    output = root / "checkpoints/longwam/ActionDiT_from_longlive_ar_1024hdim.pt"
+    payload = torch.load(output, weights_only=True)
+    assert payload["source"] == {**release, "filename": "model.pt"}
+    assert calls == [
+        dict(
+            repo_id=release["repo_id"],
+            revision=release["revision"],
+            filename="model.pt",
+            local_dir=root / "checkpoints/LongLive2.0-Robot-S",
+        )
+    ]
+    original = output.read_bytes()
+    with pytest.raises(SystemExit):
+        runpy.run_path(str(script), run_name="__main__")
+    assert output.read_bytes() == original and len(calls) == 1
+    assert not list(output.parent.glob(".*.tmp"))
+
+
 @pytest.mark.parametrize("container", ["generator", "bare", "joint"])
 def test_robot_video_initializer_loads_strictly_on_cpu(container, tmp_path):
     from longwam.runtime.factory import _load_longlive_video_expert_weights

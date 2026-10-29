@@ -22,6 +22,7 @@
 stage1_robot_s: &stage1_robot_s
   repo_id: Efficient-Large-Model/LongLive2.0-Robot-S
   revision: 9f23acf1a619afe69d866f105c17209880851894
+  sha256: f7e9693ef4e6d19c2e13d1cfaf7abf306ec70b096da5520dd9f0f0ef96f3962d
 stage1_robot_m:
   repo_id: Efficient-Large-Model/LongLive2.0-Robot-M
   revision: 6f6fe2ee1c1db6bf3fc109a7bbda9682e45ba151

@@ -120,10 +120,37 @@ architecture/VAE assets; its video DiT weights are skipped.
 initialized **entire ActionDiT**, including its 14-D action interface:
 `action_dit_pretrained_path: null` is intentional, not a missing mapping path.
 LIBERO and RoboCasa retain their separate mapped action-backbone configuration
-under `$LONGWAM_CHECKPOINT_ROOT/longwam/ActionDiT_from_longlive_ar_1024hdim.pt`;
-changing the video initializer does not remap or replace those action weights.
-That legacy action asset is not included in Robot-S; its public download remains
-TBD, and conversion tooling is under `tools/weights/`.
+under `$LONGWAM_CHECKPOINT_ROOT/longwam/ActionDiT_from_longlive_ar_1024hdim.pt`.
+Generate it directly from the public Robot-S video checkpoint (no separate
+ActionDiT download or pretraining run):
+
+```bash
+python tools/weights/preprocess_action_dit_backbone.py
+```
+
+This CPU-only command reuses the local Robot-S `model.pt`, or downloads the pinned
+release when absent. It copies matching tensors, interpolates resized tensors with
+alpha scaling, and excludes the action input/output layers, which are initialized
+randomly when training. The output goes to the path already used by the training
+configs; the filename is retained for compatibility. Its source SHA-256 and public
+revision are recorded in the generated file. Use a CPU machine with 32 GB RAM;
+allow about 4 GB for the output, plus space for Robot-S if not already downloaded.
+
+For an existing local source or a custom output:
+
+```bash
+python tools/weights/preprocess_action_dit_backbone.py \
+  --video-weights /path/to/LongLive2.0-Robot-S/model.pt \
+  --output /path/to/action_initializer.pt
+# Pass a custom output to a fresh training run:
+bash scripts/robocasa_gr1/train.sh model.action_dit_pretrained_path=/path/to/action_initializer.pt
+```
+
+`LONGWAM_ROBOT_VIDEO_CHECKPOINT` also selects a local source. Existing outputs are
+not overwritten unless `--overwrite` is explicit. Conversion is a preparation
+step for **fresh training**, not for resume or inference; changing the video path
+alone does not regenerate ActionDiT. A different source checkpoint produces a
+different initializer, not a bitwise reproduction of an earlier conversion.
 
 **Domino** loads the complete robot-pretrained RoboTwin policy through
 `LONGWAM_ROBOTWIN_CHECKPOINT`, retaining its trained video/action experts and

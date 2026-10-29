@@ -493,8 +493,12 @@ not general LongLive 2.0. Download it once:
 ```bash
 python scripts/download_checkpoint.py stage1_robot_s \
   --output "${LONGWAM_CHECKPOINT_ROOT:-./checkpoints}/LongLive2.0-Robot-S"
+# LIBERO / RoboCasa: generate the ActionDiT initializer from Robot-S on CPU.
+python tools/weights/preprocess_action_dit_backbone.py
 ```
 
+No separate ActionDiT download is needed. RoboTwin uses random ActionDiT
+initialization and does not require this conversion.
 See [initialization and fine-tuning](docs/TRAINING.md#initialization-fine-tuning-and-resume)
 for task-specific settings.
 

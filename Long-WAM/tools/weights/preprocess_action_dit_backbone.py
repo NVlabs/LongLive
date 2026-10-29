@@ -9,6 +9,10 @@
 # End Long-WAM attribution.
 
 import argparse
+import hashlib
+import os
+import tempfile
+from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
@@ -17,7 +21,8 @@ import torch.nn.functional as F
 from omegaconf import OmegaConf
 
 from longwam.models.wan22.action_dit import ActionDiT
-from longwam.models.wan22.helpers.loader import load_wan22_ti2v_5b_components
+from longwam.models.wan22.wan_video_dit import WanVideoDiT
+from longwam.paths import repository_root
 
 
 def _parse_dtype(name: str) -> torch.dtype:
@@ -118,22 +123,15 @@ def _load_model_config(path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     if not isinstance(video_cfg, dict) or not isinstance(action_cfg, dict):
         raise ValueError("`video_dit_config` and `action_dit_config` must resolve to dicts.")
 
-    if _is_unresolved_interpolation(video_cfg.get("action_dim")):
-        print(
-            "[WARN] `video_dit_config.action_dim` is unresolved; defaulting to 7 for preprocessing."
-        )
-        video_cfg["action_dim"] = 7
-
-    if _is_unresolved_interpolation(action_cfg.get("action_dim")):
-        print(
-            "[WARN] `action_dit_config.action_dim` is unresolved; defaulting to 7 for preprocessing."
-        )
-        action_cfg["action_dim"] = 7
+    # Robot-specific I/O tensors are excluded from the generated backbone.
+    for config in (video_cfg, action_cfg):
+        if _is_unresolved_interpolation(config.get("action_dim")):
+            config["action_dim"] = 7
 
     for key in ["num_heads", "attn_head_dim", "num_layers", "text_dim", "freq_dim"]:
         action_cfg[key] = _resolve_from_video_cfg(action_cfg.get(key), video_cfg)
 
-    return video_cfg, action_cfg, cfg
+    return video_cfg, action_cfg
 
 
 def _require_int_config(cfg: dict[str, Any], key: str) -> int:
@@ -150,43 +148,27 @@ def _require_float_config(cfg: dict[str, Any], key: str) -> float:
     return float(value)
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Preprocess ActionDiT backbone weights from WanVideoDiT and save as .pt payload."
-    )
-    parser.add_argument(
-        "--model-config", required=True, help="Path to model yaml, e.g. configs/model/longwam.yaml"
-    )
-    parser.add_argument(
-        "--output", required=True, help="Output .pt path for preprocessed ActionDiT backbone."
-    )
-    parser.add_argument(
-        "--device", default="cpu", help="Device for loading model and preprocessing."
-    )
-    parser.add_argument("--dtype", default="float32", choices=["float32", "float16", "bfloat16"])
-    parser.add_argument(
-        "--apply-alpha-scaling",
-        default="true",
-        help="Whether to apply alpha=sqrt(dv/da) when the last dimension is resized (true/false). Default: true.",
-    )
-    parser.add_argument(
-        "--video-weights",
-        default=None,
-        help="Optional path to a bare WanVideoDiT state_dict (.pt) to use as the interpolation "
-        "source instead of the HF base Wan2.2 weights (e.g. the LongLive AR video expert). "
-        "Loaded into the video expert with strict=False before extracting the interp source.",
-    )
-    args = parser.parse_args()
+def _video_state(payload: Mapping) -> dict[str, torch.Tensor]:
+    """Accept the public Robot-S generator, bare video, or full-policy export."""
+    if not isinstance(payload, Mapping) or not payload:
+        raise ValueError("Video checkpoint must contain a non-empty state dict.")
+    if isinstance(payload.get("mot"), Mapping):
+        prefix = "mixtures.video."
+        state = {k[len(prefix) :]: v for k, v in payload["mot"].items() if k.startswith(prefix)}
+    elif all(isinstance(k, str) and k.startswith("model.") for k in payload):
+        state = {k[len("model.") :]: v for k, v in payload.items()}
+    else:
+        state = dict(payload)
+    if not state or any(not isinstance(v, torch.Tensor) for v in state.values()):
+        raise ValueError("Video checkpoint must contain only video tensors.")
+    return state
 
-    model_config_path = Path(args.model_config)
-    output_path = Path(args.output)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    apply_alpha_scaling = _parse_bool(args.apply_alpha_scaling)
 
-    video_cfg, action_cfg, cfg = _load_model_config(model_config_path)
-    torch_dtype = _parse_dtype(args.dtype)
-    redirect_common_files = _parse_bool(cfg.get("redirect_common_files", False))
-
+def convert_backbone(
+    video_state, video_cfg, action_cfg, *, dtype=torch.float32, apply_alpha_scaling=True
+):
+    """Map tensors on CPU; meta models supply shapes without allocating model weights."""
+    action_cfg = dict(action_cfg)
     int_fields = [
         "hidden_dim",
         "action_dim",
@@ -200,43 +182,29 @@ def main() -> None:
     for key in int_fields:
         action_cfg[key] = _require_int_config(action_cfg, key)
     action_cfg["eps"] = _require_float_config(action_cfg, "eps")
-
-    print(
-        f"[INFO] Loaded model config from {model_config_path}. "
-        f"Preprocessing ActionDiT backbone with dtype={torch_dtype} on device={args.device}, "
-        f"apply_alpha_scaling={apply_alpha_scaling}."
-    )
-    components = load_wan22_ti2v_5b_components(
-        device=args.device,
-        torch_dtype=torch_dtype,
-        model_id=cfg.get("model_id", "Wan-AI/Wan2.2-TI2V-5B"),
-        tokenizer_model_id=cfg.get("tokenizer_model_id", "Wan-AI/Wan2.1-T2V-1.3B"),
-        redirect_common_files=redirect_common_files,
-        dit_config=video_cfg,
-    )
-    video_expert = components.dit
-
-    if args.video_weights:
-        print(f"[INFO] Overriding video-expert interp source from {args.video_weights}")
-        ov = torch.load(args.video_weights, map_location=args.device, mmap=True, weights_only=False)
-        res = video_expert.load_state_dict(ov, strict=False)
-        miss = [k for k in res.missing_keys if not k.endswith("freqs")]
-        print(
-            f"[INFO]   video-weights load: missing={len(miss)} unexpected={len(res.unexpected_keys)}"
-        )
-
-    action_expert = ActionDiT(**action_cfg).to(device=args.device, dtype=torch_dtype)
-    if int(action_cfg["num_heads"]) != int(video_expert.num_heads):
-        raise ValueError("ActionDiT `num_heads` must match video expert for MoT mixed attention.")
-    if int(action_cfg["attn_head_dim"]) != int(video_expert.attn_head_dim):
+    for key in ("num_heads", "attn_head_dim", "num_layers"):
+        if action_cfg[key] != int(video_cfg[key]):
+            raise ValueError(f"ActionDiT `{key}` must match the video expert.")
+    with torch.device("meta"):
+        expected_video = WanVideoDiT(**video_cfg).state_dict()
+        action_expert = ActionDiT(**action_cfg)
+    missing = sorted(expected_video.keys() - video_state.keys())
+    unexpected = sorted(video_state.keys() - expected_video.keys())
+    if missing or unexpected:
         raise ValueError(
-            "ActionDiT `attn_head_dim` must match video expert for MoT mixed attention."
+            f"Video state dict mismatch: missing={missing[:8]}, unexpected={unexpected[:8]}"
         )
-    if int(action_cfg["num_layers"]) != int(len(video_expert.blocks)):
-        raise ValueError("ActionDiT `num_layers` must match video expert.")
-
+    for key, expected in expected_video.items():
+        source = video_state[key]
+        if (
+            source.shape != expected.shape
+            or not source.is_floating_point()
+            or source.device.type != "cpu"
+        ):
+            raise ValueError(
+                f"Invalid video tensor {key}: expected CPU float {tuple(expected.shape)}, got {source.shape}"
+            )
     action_state = action_expert.state_dict()
-    video_state = video_expert.state_dict()
     backbone_keys = ActionDiT.backbone_key_set(action_state.keys())
 
     backbone_state_dict: dict[str, torch.Tensor] = {}
@@ -245,7 +213,7 @@ def main() -> None:
     for key in sorted(backbone_keys):
         if key not in video_state:
             raise ValueError(f"Key `{key}` not found in video expert state dict.")
-        src = video_state[key]
+        src = video_state[key].to(dtype=dtype)
         target = action_state[key]
         if tuple(src.shape) == tuple(target.shape):
             value = src
@@ -256,7 +224,10 @@ def main() -> None:
                 alpha = (float(src.shape[-1]) / float(target.shape[-1])) ** 0.5
                 value = value.to(torch.float32) * alpha
             interpolated += 1
-        backbone_state_dict[key] = value.detach().to(dtype=target.dtype, device="cpu").contiguous()
+        value = value.detach().to(dtype=dtype).contiguous().clone()
+        if not torch.isfinite(value).all():
+            raise ValueError(f"Non-finite converted tensor: {key}")
+        backbone_state_dict[key] = value
 
     payload = {
         "policy": {
@@ -276,13 +247,113 @@ def main() -> None:
             "eps": float(action_cfg["eps"]),
         },
     }
-    torch.save(payload, str(output_path))
+    return payload, {
+        "copied": copied,
+        "interpolated": interpolated,
+        "skipped": len(action_state) - len(backbone_keys),
+    }
 
-    skipped = len(action_state) - len(backbone_keys)
-    print(
-        "[INFO] Saved ActionDiT backbone payload to "
-        f"{output_path} (copied={copied}, interpolated={interpolated}, skipped={skipped})."
+
+def main() -> None:
+    root = repository_root()
+    checkpoint_root = Path(
+        os.environ.get("LONGWAM_CHECKPOINT_ROOT", root / "checkpoints")
+    ).expanduser()
+    if not checkpoint_root.is_absolute():
+        checkpoint_root = root / checkpoint_root
+    parser = argparse.ArgumentParser(
+        description="Convert public LongLive2.0-Robot-S to an ActionDiT initializer on CPU."
     )
+    parser.add_argument("--model-config", type=Path, default=root / "configs/model/long_wam.yaml")
+    parser.add_argument(
+        "--video-weights",
+        type=Path,
+        default=os.environ.get("LONGWAM_ROBOT_VIDEO_CHECKPOINT"),
+        help="Local Robot-S model.pt; otherwise reuse/download the pinned public release.",
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=checkpoint_root / "longwam/ActionDiT_from_longlive_ar_1024hdim.pt",
+    )
+    parser.add_argument("--device", choices=["cpu"], default="cpu")
+    parser.add_argument("--dtype", default="float32", choices=["float32", "float16", "bfloat16"])
+    parser.add_argument(
+        "--apply-alpha-scaling",
+        default="true",
+        help="Apply sqrt(d_video/d_action) scaling (true/false).",
+    )
+    parser.add_argument("--threads", type=int, default=min(8, os.cpu_count() or 1))
+    parser.add_argument(
+        "--overwrite", action="store_true", help="Explicitly replace an existing initializer."
+    )
+    args = parser.parse_args()
+    if args.threads < 1:
+        parser.error("--threads must be positive")
+    torch.set_num_threads(args.threads)
+    output = args.output.expanduser().resolve()
+    if output.exists() and not args.overwrite:
+        parser.error(
+            f"Output already exists: {output}; choose --output or explicitly use --overwrite."
+        )
+    registry = OmegaConf.load(root / "configs/checkpoints.yaml")
+    release = registry.stage1_robot_s
+    source = args.video_weights
+    if source is None:
+        source = checkpoint_root / "LongLive2.0-Robot-S/model.pt"
+        if not source.is_file():
+            from huggingface_hub import hf_hub_download
+
+            source = Path(
+                hf_hub_download(
+                    repo_id=release.repo_id,
+                    revision=release.revision,
+                    filename="model.pt",
+                    local_dir=source.parent,
+                )
+            )
+    source = source.expanduser().resolve(strict=True)
+    if source == output:
+        parser.error("Output must not overwrite the source video checkpoint.")
+    print(f"[INFO] Reading {source} on CPU", flush=True)
+    digest = hashlib.sha256()
+    with source.open("rb") as handle:
+        for block in iter(lambda: handle.read(8 * 1024**2), b""):
+            digest.update(block)
+    source_sha256 = digest.hexdigest()
+    is_public_robot_s = source_sha256 == release.sha256
+    if args.video_weights is None and not is_public_robot_s:
+        raise ValueError(
+            "Default Robot-S model.pt does not match the pinned release SHA-256; use an explicit --video-weights for custom weights."
+        )
+    video_cfg, action_cfg = _load_model_config(args.model_config.expanduser())
+    state = _video_state(torch.load(source, map_location="cpu", mmap=True, weights_only=True))
+    payload, counts = convert_backbone(
+        state,
+        video_cfg,
+        action_cfg,
+        dtype=_parse_dtype(args.dtype),
+        apply_alpha_scaling=_parse_bool(args.apply_alpha_scaling),
+    )
+    payload["source"] = {"filename": source.name, "sha256": source_sha256}
+    if is_public_robot_s:
+        payload["source"].update(repo_id=release.repo_id, revision=release.revision)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    fd, temporary = tempfile.mkstemp(prefix=f".{output.name}.", suffix=".tmp", dir=output.parent)
+    try:
+        with os.fdopen(fd, "wb") as handle:
+            torch.save(payload, handle)
+            handle.flush()
+            os.fsync(handle.fileno())
+        if args.overwrite:
+            os.replace(temporary, output)
+        else:
+            os.link(
+                temporary, output
+            )  # Atomic publication without overwriting another process's output.
+    finally:
+        Path(temporary).unlink(missing_ok=True)
+    print(f"[INFO] Saved {output} ({counts}); source_sha256={source_sha256}", flush=True)
 
 
 if __name__ == "__main__":
