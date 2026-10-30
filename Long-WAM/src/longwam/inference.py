@@ -122,7 +122,7 @@ class TextCache:
 
     def __call__(self, prompt):
         import torch
-        from .datasets.lerobot.robot_video_dataset import get_text_cache_path
+        from .text_cache import get_text_cache_path
 
         if prompt not in self._cache:
             path = Path(get_text_cache_path(self.directory, str(prompt), self.context_len))
@@ -168,7 +168,7 @@ def load_benchmark_policy(settings):
     if settings.benchmark in {"libero", "robotwin2"}:
         from .runtime import create_policy
         return create_policy(settings)
-    from .datasets.lerobot.robot_video_dataset import DEFAULT_PROMPT
+    from .text_cache import DEFAULT_PROMPT
 
     cfg = load_run_config(settings.model_config)
     if settings.benchmark == "robocasa_gr1":
