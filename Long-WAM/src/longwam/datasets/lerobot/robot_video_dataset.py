@@ -8,7 +8,6 @@
 # License texts and component notes: see THIRD_PARTY_NOTICES.md at the repository root.
 # End Long-WAM attribution.
 
-import hashlib
 import os
 from typing import Optional
 import numpy as np
@@ -35,22 +34,9 @@ from ..dataset_utils import ResizeSmallestSideAspectPreserving, CenterCrop, Norm
 from longwam.utils.logging_config import get_logger
 from longwam.utils import misc
 from accelerate import PartialState
+from longwam.text_cache import DEFAULT_PROMPT, TEXT_CACHE_TAG, get_text_cache_path
 
 logger = get_logger(__name__)
-
-
-DEFAULT_PROMPT = (
-    "A video recorded from a robot's point of view executing the following instruction: {task}"
-)
-TEXT_CACHE_TAG = "wan22ti2v5b"
-
-
-def get_text_cache_path(cache_dir, prompt: str, context_len: int):
-    hashed = hashlib.sha256(prompt.encode("utf-8")).hexdigest()
-    return os.path.join(
-        cache_dir,
-        f"{hashed}.t5_len{int(context_len)}.{TEXT_CACHE_TAG}.pt",
-    )
 
 
 class RobotVideoDataset(torch.utils.data.Dataset):

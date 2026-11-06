@@ -198,7 +198,7 @@ class CachedTextContext:
         self._loaded: dict[str, tuple[torch.Tensor, torch.Tensor]] = {}
 
     def __call__(self, prompt: str) -> tuple[torch.Tensor, torch.Tensor]:
-        from longwam.datasets.lerobot.robot_video_dataset import get_text_cache_path
+        from longwam.text_cache import get_text_cache_path
 
         prompt = str(prompt)
         if prompt in self._loaded:
