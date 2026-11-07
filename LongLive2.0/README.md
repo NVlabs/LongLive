@@ -197,7 +197,7 @@ FlashAttention 3 a 32 s video's diffusion runs at 39.0 fps at k = 2 against 24.6
 (1.59x), at 99% of its Restricted VBench Quality-6 (five MovieGenVideoBench prompts, 16 s videos: 81.2 vs 81.9).
 
 ```bash
-pip install "specar @ git+https://github.com/statite-ai/SpecAR"
+pip install "specar @ git+https://github.com/statite-ai/SpecAR" "kernels<0.11"   # kernels: FlashAttention 3 from the Hugging Face hub
 huggingface-cli download Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2 model_te.pt --local-dir ckpt/longlive2_5b_s2
 python inference.py --config_path configs/inference_specar.yaml   # `specar:` section: drafter_ckpt, k, kv_mode
 ```

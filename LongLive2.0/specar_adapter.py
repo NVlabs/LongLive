@@ -8,6 +8,7 @@ Enabled by a `specar:` section in the inference config:
       drafter_ckpt: /path/to/LongLive-2.0-5B-NVFP4-S2/model_te.pt   # the 2-step generator, BF16
       k: 2                       # blocks the 4-step generator generates; the rest are drafted
       kv_mode: shared            # shared (default) | replay | window, see the specar package
+      attention: auto            # auto (default) | fa3 | fa4 | fa2; auto = FlashAttention 3 on Hopper, 4 on Blackwell
 
 Without the section nothing changes. The decoding algorithm lives in the `specar` package
 (https://github.com/statite-ai/SpecAR, `pip install "specar @ git+https://github.com/statite-ai/SpecAR"`); this file
@@ -29,7 +30,7 @@ def setup(pipeline, config, device, verbose=True):
         STATE["reason"] = "no specar section in the config"
         return None
     try:
-        from specar.model_longlive import LongLiveSpecAR
+        from specar.model_longlive import LongLiveSpecAR, _install_attention
     except ImportError:
         STATE["reason"] = "specar package not installed (pip install \"specar @ git+https://github.com/statite-ai/SpecAR\")"
         if verbose:
@@ -37,6 +38,7 @@ def setup(pipeline, config, device, verbose=True):
         return None
     from utils.inference_utils import load_generator_checkpoint
     from utils.wan_5b_wrapper import WanDiffusionWrapper
+    kernel = _install_attention(getattr(section, "attention", None))   # FlashAttention 3 on Hopper (kernel hub), 4 on Blackwell
     drafter = WanDiffusionWrapper(**config.model_kwargs, is_causal=True)
     load_generator_checkpoint(drafter, section.drafter_ckpt)
     drafter = drafter.to(device=device, dtype=torch.bfloat16)
@@ -46,7 +48,7 @@ def setup(pipeline, config, device, verbose=True):
     engine.k = int(getattr(section, "k", 2))
     STATE.update(enabled=True, reason="")
     if verbose:
-        print(f"[specar] enabled: k={engine.k}, kv_mode={engine.kv_mode}, drafter {section.drafter_ckpt}")
+        print(f"[specar] enabled: k={engine.k}, kv_mode={engine.kv_mode}, attention {kernel}, drafter {section.drafter_ckpt}")
     return engine
 
 

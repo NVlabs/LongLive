@@ -43,6 +43,7 @@ specar:
   drafter_ckpt: /path/to/LongLive-2.0-5B-NVFP4-S2/model_te.pt
   k: 2
   kv_mode: shared
+  attention: auto
 
 logging:
   seed: 0
