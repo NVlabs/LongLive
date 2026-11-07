@@ -187,6 +187,25 @@ video = pipe.inference(noise=noise, text_prompts=prompts)
 save_video(video[0], "videos/quickstart/sample_nvfp4.mp4", fps=24)
 ```
 
+#### SpecAR (optional, 1.5x faster on H100)
+
+[SpecAR](https://github.com/statite-ai/SpecAR) lets the 4-step generator generate `k` blocks spread evenly over the
+video and the 2-step generator (`model_te.pt` from
+[LongLive-2.0-5B-NVFP4-S2](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2), the same model
+with the 2-step DMD LoRA merged, in BF16) generate the rest, through one shared KV cache. On one H100 with
+FlashAttention 3 a 32 s video's diffusion runs at 39.0 fps at k = 2 against 24.6 fps for the 4-step generator alone
+(1.59x), at 99% of its Restricted VBench Quality-6 (five MovieGenVideoBench prompts, 16 s videos: 81.2 vs 81.9).
+
+```bash
+pip install "specar @ git+https://github.com/statite-ai/SpecAR"
+huggingface-cli download Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2 model_te.pt --local-dir ckpt/longlive2_5b_s2
+python inference.py --config_path configs/inference_specar.yaml   # `specar:` section: drafter_ckpt, k, kv_mode
+```
+
+Without a `specar:` section in the config nothing changes. Text-to-video, one sample per call; image-to-video and
+`num_samples > 1` run the stock path and say so. The adapter is `specar_adapter.py`; the decoding algorithm lives in
+the `specar` package.
+
 ## Training Modes
 
 LongLive2.0 supports both T2V and I2V training. Each modality follows the same two-stage recipe: AR teacher-forcing training first, then DMD distillation from the AR checkpoint.
