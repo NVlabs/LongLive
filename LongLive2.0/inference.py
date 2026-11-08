@@ -481,6 +481,8 @@ if bool(getattr(config, "fp8_quant", False)):
 
     quantize_model_fp8(pipeline.generator.model, verbose=(local_rank == 0))
 configure_generator_torch_compile(pipeline, config)
+import specar_adapter  # optional SpecAR decoding: a no-op unless the config has a `specar:` section
+specar_engine = specar_adapter.setup(pipeline, config, device, verbose=(local_rank == 0))
 
 vae_device_str = getattr(config, "vae_device", None)
 use_dedicated_vae_device = bool(getattr(config, "streaming_vae", False)) and bool(vae_device_str)
@@ -639,7 +641,7 @@ for i, batch_data in tqdm(enumerate(dataloader), disable=(local_rank != 0)):
     )
     if initial_latent is not None:
         inference_kwargs["initial_latent"] = initial_latent
-    with torch.inference_mode():
+    with torch.inference_mode(), specar_adapter.maybe(specar_engine, inference_kwargs, pipeline.num_frame_per_block, verbose=(local_rank == 0)):
         generated = pipeline.inference(**inference_kwargs)
 
     if not save_latents_only:
