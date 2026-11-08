@@ -11,7 +11,7 @@ Enabled by a `specar:` section in the inference config:
       attention: auto            # auto (default) | fa3 | fa4 | fa2; auto = FlashAttention 3 on Hopper, 4 on Blackwell
 
 Without the section nothing changes. The decoding algorithm lives in the `specar` package
-(https://github.com/statite-ai/SpecAR, `pip install "specar @ git+https://github.com/statite-ai/SpecAR"`); this file
+(https://github.com/statite-ai/SpecAR, `pip install "specar @ git+https://github.com/statite-ai/SpecAR.git" "kernels<0.11"`); this file
 only loads the drafter and wraps `pipeline.inference` calls. Text-to-video, one sample per call; other requests run
 the stock path and the reason is printed.
 """
@@ -32,7 +32,7 @@ def setup(pipeline, config, device, verbose=True):
     try:
         from specar.model_longlive import LongLiveSpecAR, _install_attention
     except ImportError:
-        STATE["reason"] = "specar package not installed (pip install \"specar @ git+https://github.com/statite-ai/SpecAR\")"
+        STATE["reason"] = "specar package not installed (pip install \"specar @ git+https://github.com/statite-ai/SpecAR.git\" \"kernels<0.11\")"
         if verbose:
             print(f"[specar] disabled: {STATE['reason']}")
         return None

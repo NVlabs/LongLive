@@ -38,7 +38,7 @@ checkpoints:
 
 # SpecAR: the 4-step generator generates `k` blocks spread evenly over the video, the 2-step generator
 # (LongLive-2.0-5B-NVFP4-S2/model_te.pt, BF16) generates the rest, through one shared KV cache.
-# Needs `pip install "specar @ git+https://github.com/statite-ai/SpecAR"`. Remove the section for stock inference.
+# Needs `pip install "specar @ git+https://github.com/statite-ai/SpecAR.git" "kernels<0.11"`. Remove the section for stock inference.
 specar:
   drafter_ckpt: /path/to/LongLive-2.0-5B-NVFP4-S2/model_te.pt
   k: 2
