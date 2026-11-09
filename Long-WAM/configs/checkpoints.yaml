@@ -55,7 +55,7 @@ robocasa_gr1_p192:
   revision: d3457a907cdefd5035bedac6474cd3179cbc391e
 robocasa_gr1_p384: &robocasa_gr1_p384
   repo_id: Efficient-Large-Model/Long-WAM-RoboCasa-GR1-19.2s
-  revision: 5e9f9986e12718dd5449d6c1f529f5bfaf61605d
+  revision: 8f6db7bebb510796492b42105dc5d1df71e749ee
 robocasa365:
   repo_id: Efficient-Large-Model/Long-WAM-RoboCasa365
   revision: b0061fbc1d59e57525640ebf4a1cb2db066afccc
