@@ -301,6 +301,8 @@ def test_public_checkpoint_registry_matches_readme():
 @pytest.mark.parametrize("key,repo_id,revision", [
     ("robocasa_gr1_p192", "Efficient-Large-Model/Long-WAM-RoboCasa-GR1-9.6s",
      "d3457a907cdefd5035bedac6474cd3179cbc391e"),
+    ("robocasa_gr1_p384", "Efficient-Large-Model/Long-WAM-RoboCasa-GR1-19.2s",
+     "8f6db7bebb510796492b42105dc5d1df71e749ee"),
     ("stage1_robot_s", "Efficient-Large-Model/LongLive2.0-Robot-S",
      "9f23acf1a619afe69d866f105c17209880851894"),
     ("stage1_robot_l", "Efficient-Large-Model/LongLive2.0-Robot-L",
