@@ -1,0 +1,3859 @@
+{
+ "id": "hd14_f8b61a_full",
+ "setup": {
+  "title": "The Master Groom's Trial",
+  "style": "A warm, naturalistic 19th-century historical film aesthetic with rich amber barn light, textured wood grains, and tactile period details.",
+  "cast": [
+   {
+    "id": "silas",
+    "name": "Silas Vance",
+    "description": "Silas Vance, Man in his thirties, lean and sinewy build, sun-weathered fair skin, wavy chestnut hair, unbleached canvas work shirt and brown corduroy trousers, sturdy muddy leather work boots."
+   }
+  ]
+ },
+ "bible": {
+  "entities": {
+   "silas": {
+    "id": "silas",
+    "kind": "character",
+    "name": "Silas Vance",
+    "identity": "Man in his thirties, lean and sinewy build, sun-weathered fair skin, wavy chestnut hair",
+    "initial": {
+     "outfit": "unbleached canvas work shirt and brown corduroy trousers",
+     "footwear": "sturdy muddy leather work boots"
+    },
+    "protagonist": true
+   },
+   "jasper": {
+    "id": "jasper",
+    "kind": "character",
+    "name": "Jasper",
+    "identity": "Massive black Percheron draft horse, broad muscular chest, white star on forehead",
+    "initial": {
+     "hairstyle": "wild uncombed black mane",
+     "accessory": "plain hemp rope halter"
+    },
+    "protagonist": false
+   },
+   "barnaby": {
+    "id": "barnaby",
+    "kind": "character",
+    "name": "Barnaby",
+    "identity": "Tall chestnut draft horse, muscular build, thick flaxen mane and tail",
+    "initial": {
+     "hairstyle": "loose tangled flaxen mane",
+     "accessory": "plain hemp rope halter"
+    },
+    "protagonist": false
+   },
+   "cole": {
+    "id": "cole",
+    "kind": "character",
+    "name": "Master Cole",
+    "identity": "Elderly barrel-chested wheelwright, ruddy complexion, bushy grey beard and eyebrows",
+    "initial": {
+     "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "headwear": "battered brown felt flat cap"
+    },
+    "protagonist": false
+   },
+   "ceremonial_carriage": {
+    "id": "ceremonial_carriage",
+    "kind": "object",
+    "name": "Ceremonial Carriage",
+    "identity": "Ornate four-wheeled landau carriage with high spring suspension, polished brass lamps, and scrolled armrests",
+    "initial": {
+     "state": "dust-draped, dry unpolished navy coachwork resting level on four painted wheels",
+     "placement": "parked in Carriage Barn center bay"
+    },
+    "protagonist": false
+   },
+   "curry_comb": {
+    "id": "curry_comb",
+    "kind": "object",
+    "name": "Curry Comb",
+    "identity": "Oval brass-backed grooming curry comb with an embossed red leather hand-strap",
+    "initial": {
+     "state": "clean and dry with polished brass backing",
+     "placement": "resting on wooden stable shelf"
+    },
+    "protagonist": false
+   },
+   "leather_harness": {
+    "id": "leather_harness",
+    "kind": "object",
+    "name": "Leather Harness",
+    "identity": "Heavy double harness of stitched black patent leather with mirror-polished brass buckles",
+    "initial": {
+     "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+     "placement": "hanging on tack room wall rack"
+    },
+    "protagonist": false
+   },
+   "plumed_headstalls": {
+    "id": "plumed_headstalls",
+    "kind": "object",
+    "name": "Plumed Headstalls",
+    "identity": "Pair of black patent-leather bridles crowned with tall crimson ostrich feather plumes",
+    "initial": {
+     "state": "pristine with straight, fluffed crimson plumes",
+     "placement": "draped over saddle bracket in tack room"
+    },
+    "protagonist": false
+   },
+   "cracked_wheel": {
+    "id": "cracked_wheel",
+    "kind": "object",
+    "name": "Cracked Carriage Wheel",
+    "identity": "Heavy wooden twelve-spoked carriage wheel banded in black forged iron, painted dark navy with gold trim",
+    "initial": {
+     "state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+     "placement": "mounted as rear-left wheel on carriage"
+    },
+    "protagonist": false
+   },
+   "spare_wheel": {
+    "id": "spare_wheel",
+    "kind": "object",
+    "name": "Spare Carriage Wheel",
+    "identity": "Unmounted twelve-spoked carriage wheel of seasoned white oak with bare iron tire",
+    "initial": {
+     "state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+     "placement": "leaning against wheelwright workshop wall"
+    },
+    "protagonist": false
+   },
+   "jack_stand": {
+    "id": "jack_stand",
+    "kind": "object",
+    "name": "Screw Jack Stand",
+    "identity": "Heavy forged cast-iron screw jack with broad four-footed base and turn-lever handle",
+    "initial": {
+     "state": "collapsed down to lowest height, clean cast iron",
+     "placement": "sitting on carriage barn floor"
+    },
+    "protagonist": false
+   },
+   "grease_pot": {
+    "id": "grease_pot",
+    "kind": "object",
+    "name": "Axle Grease Pot",
+    "identity": "Cylindrical brown stoneware jar with carved wooden applicator paddle",
+    "initial": {
+     "state": "full to brim with thick black axle grease, paddle wiped clean",
+     "placement": "resting on bench in carriage barn"
+    },
+    "protagonist": false
+   },
+   "parade_rosette": {
+    "id": "parade_rosette",
+    "kind": "object",
+    "name": "Parade Rosette",
+    "identity": "Broad silk ribbon rosette in scarlet, navy, and gold with long trailing swallowtail ribbons",
+    "initial": {
+     "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+     "placement": "lying on tack room table"
+    },
+    "protagonist": false
+   },
+   "wheel_wrench": {
+    "id": "wheel_wrench",
+    "kind": "object",
+    "name": "Lug Wrench",
+    "identity": "Long-handled heavy iron socket wrench with square box-end",
+    "initial": {
+     "state": "dark forged iron, free of rust, hanging by leather thong",
+     "placement": "hung on carriage barn tool rack"
+    },
+    "protagonist": false
+   }
+  },
+  "locations": {
+   "stables_interior": {
+    "id": "stables_interior",
+    "name": "Stables Interior",
+    "look": "A dim, barn-aisle stall row with whitewashed stone walls, fragrant golden straw bedding, and iron-barred box stalls."
+   },
+   "tack_room": {
+    "id": "tack_room",
+    "name": "Tack Room",
+    "look": "A narrow cedar-paneled room lined with bridle hooks, saddle horses, polished brass fittings, and cedar chests."
+   },
+   "carriage_barn": {
+    "id": "carriage_barn",
+    "name": "Carriage Barn",
+    "look": "A high-raftered timber carriage house with wide plank floors, tall coach doors, and iron lantern sconces."
+   },
+   "cobblestone_courtyard": {
+    "id": "cobblestone_courtyard",
+    "name": "Cobblestone Courtyard",
+    "look": "An open outdoor yard paved with worn river stones, featuring a wide stone water trough and mounting block."
+   },
+   "wheelwright_shed": {
+    "id": "wheelwright_shed",
+    "name": "Wheelwright Shed",
+    "look": "An open-sided timber workshop adjacent to the yard with a stone hearth forge, anvil, workbench, and timber wheel horses."
+   }
+  }
+ },
+ "shots": [
+  {
+   "prompt": "In the Stables Interior, golden morning straw covers the central aisle beneath dim timber rafters, flanked by whitewashed stone walls and iron-barred box stalls.\n\nSilas Vance, a lean, sinewy man in his thirties with sun-weathered fair skin and wavy chestnut hair, wears an unbleached canvas work shirt, brown corduroy trousers, and sturdy muddy leather work boots. He walks down the corridor, checking on Jasper, a massive black Percheron draft horse with a broad muscular chest, white star on his forehead, a wild uncombed black mane, and a plain hemp rope halter. In the adjacent stall stands Barnaby, a tall chestnut draft horse with a muscular build, loose tangled flaxen mane, and hemp rope halter. Silas pats Jasper's muzzle and offers a handful of sweet feed.\n\nA wide tracking shot moves down the barn aisle, stopping between the two horse stalls.",
+   "annotation": {
+    "title_en": "Silas enters the morning stables, checking both Jasper and B",
+    "scene": "stables_interior",
+    "camera": "Wide tracking shot moving down the aisle, stopping between the two horse stalls.",
+    "beat": "Silas enters the morning stables, checking both Jasper and Barnaby in their adjacent stalls before beginning parade preparations.",
+    "present": [
+     "silas",
+     "jasper",
+     "barnaby"
+    ],
+    "first_appearance": [
+     "silas",
+     "jasper",
+     "barnaby"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Silas pats Jasper's muzzle and offers a handful of sweet feed.",
+    "start_state": {
+     "silas": {
+      "outfit": "unbleached canvas work shirt and brown corduroy trousers",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "loose tangled flaxen mane",
+      "accessory": "plain hemp rope halter"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "unbleached canvas work shirt and brown corduroy trousers",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "loose tangled flaxen mane",
+      "accessory": "plain hemp rope halter"
+     }
+    },
+    "state": {
+     "silas.outfit": "unbleached canvas work shirt and brown corduroy trousers",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "jasper.hairstyle": "wild uncombed black mane",
+     "jasper.accessory": "plain hemp rope halter",
+     "barnaby.hairstyle": "loose tangled flaxen mane",
+     "barnaby.accessory": "plain hemp rope halter"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Stables Interior, warm amber morning light filters through the timber boards, illuminating the straw bedding and stone walls of the box stalls.\n\nSilas Vance, clad in his canvas work shirt, corduroy trousers, and muddy boots, steps into the stall beside Jasper, whose massive black coat is dusty beneath his hemp rope halter and uncombed black mane. Resting on the wooden stable shelf is the Curry Comb, an oval brass-backed grooming comb with an embossed red leather hand-strap, clean and dry with polished brass. Silas lifts the comb and begins working through the draft horse's dusty flank. Silas blows rising dust from the hide, and Jasper snorts softly.\n\nA medium close-up at horse shoulder height focuses on Silas's vigorous strokes.",
+   "annotation": {
+    "title_en": "Silas steps into Jasper's stall and lifts the brass curry co",
+    "scene": "stables_interior",
+    "camera": "Medium close-up at horse shoulder height, focusing on Silas's vigorous strokes.",
+    "beat": "Silas steps into Jasper's stall and lifts the brass curry comb from the stall shelf to begin working through the horse's dusty flank.",
+    "present": [
+     "silas",
+     "jasper",
+     "curry_comb"
+    ],
+    "first_appearance": [
+     "curry_comb"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas blows dust from the horse's flank, Jasper snorts softly.",
+    "start_state": {
+     "silas": {
+      "outfit": "unbleached canvas work shirt and brown corduroy trousers",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "unbleached canvas work shirt and brown corduroy trousers",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "loose tangled flaxen mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     }
+    },
+    "state": {
+     "silas.outfit": "unbleached canvas work shirt and brown corduroy trousers",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "jasper.hairstyle": "wild uncombed black mane",
+     "jasper.accessory": "plain hemp rope halter",
+     "curry_comb.state": "clean and dry with polished brass backing",
+     "curry_comb.placement": "resting on wooden stable shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Within the Stables Interior, dust motes float lazily across the weathered oak stall partitions and whitewashed stone walls.\n\nSilas Vance, dressed in his unbleached canvas work shirt, brown corduroy trousers, and muddy leather boots, pauses beside the stall divider. Holding the brass-backed Curry Comb by its red leather hand-strap, he taps its teeth rhythmically against a wooden upright post to dislodge accumulated hair and dander. Silas wipes his brow with the back of his forearm.\n\nA tight close-up frames Silas's hands cleaning the brass comb teeth against the timber post.",
+   "annotation": {
+    "title_en": "Silas pauses by the stall partition, tapping the curry comb ",
+    "scene": "stables_interior",
+    "camera": "Tight close-up on Silas's hands cleaning the brass comb teeth against the timber.",
+    "beat": "Silas pauses by the stall partition, tapping the curry comb against a wooden post to clear accumulated loose hair and dander.",
+    "present": [
+     "silas",
+     "curry_comb"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas wipes his brow with the back of his forearm.",
+    "start_state": {
+     "silas": {
+      "outfit": "unbleached canvas work shirt and brown corduroy trousers",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "unbleached canvas work shirt and brown corduroy trousers",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "loose tangled flaxen mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     }
+    },
+    "state": {
+     "silas.outfit": "unbleached canvas work shirt and brown corduroy trousers",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "curry_comb.state": "clean and dry with polished brass backing",
+     "curry_comb.placement": "resting on wooden stable shelf"
+    }
+   }
+  },
+  {
+   "prompt": "The Tack Room is a narrow cedar-paneled chamber lined with bridle hooks, saddle horses, polished brass fittings, and sturdy cedar chests.\n\nSilas Vance stands in his canvas shirt, corduroy trousers, and muddy boots. Hanging on a wall rack is the Leather Harness, a heavy double harness of supple black patent leather with mirror-polished brass buckles. Draped over a saddle bracket are the Plumed Headstalls, pristine black bridles crowned with straight crimson ostrich plumes, while the crisp silk Parade Rosette sits on the table. Silas inspects the gear, then pulls on a dark oiled leather apron over his shirt and trousers, tying the apron straps firmly behind his waist.\n\nA static medium shot observes Silas from across the cedar tack bench.",
+   "annotation": {
+    "title_en": "Silas enters the tack room, inspects the ceremonial gear on ",
+    "scene": "tack_room",
+    "camera": "Static medium shot from across the cedar tack bench.",
+    "beat": "Silas enters the tack room, inspects the ceremonial gear on the walls, and pulls on a heavy oiled leather apron over his clothes.",
+    "present": [
+     "silas",
+     "leather_harness",
+     "plumed_headstalls",
+     "parade_rosette"
+    ],
+    "first_appearance": [
+     "leather_harness",
+     "plumed_headstalls",
+     "parade_rosette"
+    ],
+    "changes": [
+     {
+      "entity": "silas",
+      "attr": "outfit",
+      "value": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Silas ties the apron straps firmly behind his waist.",
+    "start_state": {
+     "silas": {
+      "outfit": "unbleached canvas work shirt and brown corduroy trousers",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "loose tangled flaxen mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "leather_harness.state": "buckled and looped, hanging on wall peg, dust-free and supple",
+     "leather_harness.placement": "hanging on tack room wall rack",
+     "plumed_headstalls.state": "pristine with straight, fluffed crimson plumes",
+     "plumed_headstalls.placement": "draped over saddle bracket in tack room",
+     "parade_rosette.state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+     "parade_rosette.placement": "lying on tack room table"
+    }
+   }
+  },
+  {
+   "prompt": "Back inside the Stables Interior, golden straw glistens under the warm lantern light hung along the whitewashed stone stalls.\n\nSilas Vance wears his canvas work shirt and corduroy trousers under his dark oiled leather apron, along with his muddy boots. In the stall, Jasper stands quietly in his plain hemp rope halter with his wild uncombed black mane. Silas retrieves the clean brass Curry Comb from the wooden shelf and resumes grooming, brushing down the black draft horse's coat until it gleams under the lantern. Silas runs a hand along Jasper's spine to check the smooth coat.\n\nA medium profile shot tracks Silas moving steadily along Jasper's flank.",
+   "annotation": {
+    "title_en": "Returning to Jasper's stall in his apron, Silas finishes bru",
+    "scene": "stables_interior",
+    "camera": "Medium profile shot tracking Silas moving along Jasper's side.",
+    "beat": "Returning to Jasper's stall in his apron, Silas finishes brushing down the black draft horse's coat until it gleams under the lantern.",
+    "present": [
+     "silas",
+     "jasper",
+     "curry_comb"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Silas runs a hand along Jasper's spine to check the smooth coat.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "loose tangled flaxen mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "jasper.hairstyle": "wild uncombed black mane",
+     "jasper.accessory": "plain hemp rope halter",
+     "curry_comb.state": "clean and dry with polished brass backing",
+     "curry_comb.placement": "resting on wooden stable shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Stables Interior, the air is quiet and fragrant with cedar shavings and sweet feed beneath the whitewashed stall arches.\n\nSilas Vance, dressed in his canvas work shirt, corduroy trousers, dark oiled leather apron, and muddy leather boots, stands close to Jasper's shoulder. Jasper waits patiently in his plain hemp rope halter as Silas skillfully braids the horse's heavy black mane, lacing narrow gold ribbons through the plaits until the hair transforms into tight, ornate braids. Silas holds a strip of ribbon between his lips while securing a braid knot.\n\nAn over-the-shoulder close shot follows Silas's nimble fingers weaving the braids.",
+   "annotation": {
+    "title_en": "Silas skillfully braids Jasper's heavy black mane, lacing na",
+    "scene": "stables_interior",
+    "camera": "Over-the-shoulder close shot following Silas's fingers braiding.",
+    "beat": "Silas skillfully braids Jasper's heavy black mane, lacing narrow gold ribbons through each tight plait for the parade.",
+    "present": [
+     "silas",
+     "jasper"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "jasper",
+      "attr": "hairstyle",
+      "value": "tightly braided black mane interwoven with gold ribbon"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas holds a strip of ribbon between his lips while securing a braid knot.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "wild uncombed black mane",
+      "accessory": "plain hemp rope halter"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "loose tangled flaxen mane",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "jasper.hairstyle": "tightly braided black mane interwoven with gold ribbon",
+     "jasper.accessory": "plain hemp rope halter"
+    }
+   }
+  },
+  {
+   "prompt": "In the dim stables interior, whitewashed stone walls line the barn aisle amidst fragrant golden straw bedding and iron-barred box stalls.\n\nSilas Vance, a lean, sinewy man with sun-weathered fair skin and wavy chestnut hair, wears a canvas work shirt, brown corduroy trousers, a dark oiled leather apron, and muddy leather work boots. Standing beside Barnaby, a tall chestnut draft horse with a plain hemp rope halter, Silas meticulously combs the horse's loose flaxen mane and weaves it into tight braids interwoven with gold ribbon. Silas steps back briefly to check the alignment.\n\nA medium shot frames Silas beside Barnaby's neck under the warm amber barn light.",
+   "annotation": {
+    "title_en": "Moving into Barnaby's stall, Silas meticulously combs and we",
+    "scene": "stables_interior",
+    "camera": "Medium shot framing Silas beside Barnaby's neck.",
+    "beat": "Moving into Barnaby's stall, Silas meticulously combs and weaves the chestnut horse's flaxen mane into matching ribboned braids.",
+    "present": [
+     "silas",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "barnaby",
+      "attr": "hairstyle",
+      "value": "tightly braided flaxen mane interwoven with gold ribbon"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas steps back to visually check the alignment of the gold ribbons.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "barnaby": {
+      "hairstyle": "loose tangled flaxen mane",
+      "accessory": "plain hemp rope halter"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "barnaby.hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+     "barnaby.accessory": "plain hemp rope halter"
+    }
+   }
+  },
+  {
+   "prompt": "The cobblestone courtyard is an open outdoor yard paved with worn river stones, featuring a wide stone water trough and mounting block under morning sunlight.\n\nSilas Vance, dressed in his canvas work shirt, corduroy trousers, dark leather apron, and muddy work boots, leads Barnaby across the yard. Barnaby, a muscular chestnut draft horse wearing a plain hemp rope halter, displays his tightly braided flaxen mane interwoven with gold ribbon. Silas guides him to the water trough, where Barnaby dips his muzzle into the clear water, rippling the surface.\n\nA wide slow pan tracks horse and groom across the cobblestones.",
+   "annotation": {
+    "title_en": "Silas leads Barnaby out into the courtyard sunlight to stret",
+    "scene": "cobblestone_courtyard",
+    "camera": "Wide slow pan tracking horse and groom across the cobblestones.",
+    "beat": "Silas leads Barnaby out into the courtyard sunlight to stretch his legs and drink from the stone trough.",
+    "present": [
+     "silas",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Barnaby dips his muzzle into the clear water, rippling the surface.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "barnaby.hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+     "barnaby.accessory": "plain hemp rope halter"
+    }
+   }
+  },
+  {
+   "prompt": "The carriage barn is a high-raftered timber carriage house featuring wide plank floors, tall coach doors, and iron lantern sconces.\n\nSilas Vance, clad in his canvas work shirt, corduroy trousers, oiled leather apron, and muddy work boots, approaches the center bay. Parked there is the Ceremonial Carriage, an ornate four-wheeled landau carriage with high spring suspension, polished brass lamps, and scrolled armrests, currently hidden beneath dusty canvas covers over dry unpolished navy coachwork. Silas pulls the heavy canvas dust covers away, shakes out the sheet, and folds it loosely on the timber floor.\n\nA wide low-angle shot captures the dusty canvas cover billowing off the carriage frame.",
+   "annotation": {
+    "title_en": "Silas walks into the carriage barn and pulls the heavy canva",
+    "scene": "carriage_barn",
+    "camera": "Wide low-angle shot as the dusty cover billows off the carriage frame.",
+    "beat": "Silas walks into the carriage barn and pulls the heavy canvas dust covers away from the ceremonial carriage.",
+    "present": [
+     "silas",
+     "ceremonial_carriage"
+    ],
+    "first_appearance": [
+     "ceremonial_carriage"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Silas shakes out the canvas sheet and folds it loosely on the floor.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "ceremonial_carriage": {
+      "state": "dust-draped, dry unpolished navy coachwork resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dust-draped, dry unpolished navy coachwork resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "ceremonial_carriage.state": "dust-draped, dry unpolished navy coachwork resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay"
+    }
+   }
+  },
+  {
+   "prompt": "Within the high-raftered carriage barn, lantern sconces cast a warm amber glow across the wide plank flooring and tall coach doors.\n\nSilas Vance, wearing his canvas work shirt, brown corduroy trousers, dark oiled leather apron, and muddy boots, circles the Ceremonial Carriage. The ornate landau carriage rests in the center bay with dry, unpolished navy coachwork. Silas rubs beeswax paste onto the enamel panels with a soft flannel cloth, working in tight circular motions over the coach door emblem.\n\nA mid-level tracking shot slowly encircles the landau's carriage body as Silas buffs the surface.",
+   "annotation": {
+    "title_en": "Silas circles the carriage, rubbing beeswax paste onto the n",
+    "scene": "carriage_barn",
+    "camera": "Mid-level tracking shot encircling the carriage body.",
+    "beat": "Silas circles the carriage, rubbing beeswax paste onto the navy enamel panels and buffing them with a soft flannel cloth.",
+    "present": [
+     "silas",
+     "ceremonial_carriage"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas rubs in tight circular motions over the coach door emblem.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "ceremonial_carriage": {
+      "state": "dust-draped, dry unpolished navy coachwork resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dust-draped, dry unpolished navy coachwork resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "ceremonial_carriage.state": "dust-draped, dry unpolished navy coachwork resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay"
+    }
+   }
+  },
+  {
+   "prompt": "In the carriage barn, the tall timber rafters and wide plank floors gleam with warm, naturalistic 19th-century lantern light.\n\nSilas Vance, in his canvas work shirt, corduroy trousers, oiled leather apron, and muddy work boots, finishes buffing the Ceremonial Carriage. The landau's navy coachwork is now fully dusted and buffed to a glossy, reflective sheen across all four wheels. Silas steps back to admire his handiwork, nods approvingly, and tucks his polishing cloth into his apron pocket.\n\nAn eye-level medium shot frames Silas standing proudly beside the reflective navy carriage.",
+   "annotation": {
+    "title_en": "Silas finishes polishing the carriage exterior, stepping bac",
+    "scene": "carriage_barn",
+    "camera": "Eye-level medium shot framing Silas beside the reflective navy carriage.",
+    "beat": "Silas finishes polishing the carriage exterior, stepping back to admire the gleaming coachwork ready for the parade.",
+    "present": [
+     "silas",
+     "ceremonial_carriage"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "ceremonial_carriage",
+      "attr": "state",
+      "value": "dusted and buffed glossy navy coachwork, resting level on four painted wheels"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas nods approvingly and tucks the polishing rag into his apron pocket.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "ceremonial_carriage": {
+      "state": "dust-draped, dry unpolished navy coachwork resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "ceremonial_carriage.state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the narrow cedar-paneled tack room, bridle hooks, saddle horses, and cedar chests are accented by polished brass fittings along the walls.\n\nSilas Vance, wearing his canvas work shirt, brown corduroy trousers, oiled leather apron, and muddy work boots, reaches up toward the wall rack. Hanging securely from a high brass peg is the Leather Harness, a heavy double harness of supple stitched black patent leather with mirror-polished brass buckles. Silas lifts the harness from the hook and heaves the heavy leather over his right shoulder.\n\nA low-angle medium shot looks up at Silas lifting the gear from the high brass peg.",
+   "annotation": {
+    "title_en": "Silas returns to the tack room to take down the heavy double",
+    "scene": "tack_room",
+    "camera": "Low-angle medium shot looking up at the high brass harness peg.",
+    "beat": "Silas returns to the tack room to take down the heavy double leather harness from its mounting hook.",
+    "present": [
+     "silas",
+     "leather_harness"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Silas heaves the heavy harness over his right shoulder.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "leather_harness.state": "buckled and looped, hanging on wall peg, dust-free and supple",
+     "leather_harness.placement": "hanging on tack room wall rack"
+    }
+   }
+  },
+  {
+   "prompt": "The dim Stables Interior reveals whitewashed stone walls, fragrant golden straw bedding covering the floor, and iron-barred box stalls bathed in soft amber light.\n\nSilas Vance, a lean man with sun-weathered fair skin and wavy chestnut hair, wears a canvas work shirt, brown corduroy trousers, a dark oiled leather apron, and sturdy muddy leather work boots. On a wooden stable shelf rests the Curry Comb, clean and dry with an embossed red leather hand-strap and polished brass backing.\n\nPassing down the aisle, Silas takes the curry comb from the shelf and hooks it securely onto an iron wall fixture, gently straightening the leather strap so it hangs flat against the wall. The camera holds in a close-up on the wall hook as he seats the comb's brass frame.",
+   "annotation": {
+    "title_en": "Passing through the stable aisle, Silas takes the curry comb",
+    "scene": "stables_interior",
+    "camera": "Close-up on the wall hook as Silas seats the comb's brass frame.",
+    "beat": "Passing through the stable aisle, Silas takes the curry comb from the shelf and hangs it securely on its designated wall hook.",
+    "present": [
+     "silas",
+     "curry_comb"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "curry_comb",
+      "attr": "placement",
+      "value": "hung on stable wall hook"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Silas straightens the comb's leather strap so it hangs flat.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "resting on wooden stable shelf"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "curry_comb.state": "clean and dry with polished brass backing",
+     "curry_comb.placement": "hung on stable wall hook"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Stables Interior, golden light illuminates the wide stone aisle flanked by whitewashed walls and iron-barred box stalls.\n\nSilas Vance is dressed in his canvas work shirt, corduroy trousers, oiled leather apron, and muddy leather work boots. Standing side by side are Jasper, the massive black Percheron draft horse with a braided black mane interwoven with gold ribbon wearing a hemp rope halter, and Barnaby, the tall chestnut draft horse with a braided flaxen mane and hemp rope halter. Draped nearby are the pristine Plumed Headstalls crowned with tall crimson ostrich feathers.\n\nSilas removes their plain halters and fits the ornate parade harnesses and crimson-plumed headstalls onto both horses, fastening the brass buckles with care while gently easing Barnaby's cheekpiece clear of his ear. A wide shot captures both horses standing side by side in the stable aisle.",
+   "annotation": {
+    "title_en": "Silas fits the parade harnesses and plumed headstalls onto J",
+    "scene": "stables_interior",
+    "camera": "Wide shot showing both horses standing side by side in the stable aisle.",
+    "beat": "Silas fits the parade harnesses and plumed headstalls onto Jasper and Barnaby, fastening each brass buckle with care.",
+    "present": [
+     "silas",
+     "jasper",
+     "barnaby",
+     "plumed_headstalls"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "jasper",
+      "attr": "accessory",
+      "value": "ornate parade harness with plumed crimson headstall"
+     },
+     {
+      "entity": "barnaby",
+      "attr": "accessory",
+      "value": "ornate parade harness with plumed crimson headstall"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas gently adjusts Barnaby's cheekpiece to avoid pinching the ear.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "plain hemp rope halter"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "jasper.hairstyle": "tightly braided black mane interwoven with gold ribbon",
+     "jasper.accessory": "ornate parade harness with plumed crimson headstall",
+     "barnaby.hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+     "barnaby.accessory": "ornate parade harness with plumed crimson headstall",
+     "plumed_headstalls.state": "pristine with straight, fluffed crimson plumes",
+     "plumed_headstalls.placement": "draped over saddle bracket in tack room"
+    }
+   }
+  },
+  {
+   "prompt": "The Stables Interior is quiet and dim, its whitewashed stone walls and golden straw glowing under lantern light.\n\nSilas Vance wears his canvas work shirt, brown corduroys, oiled leather apron, and muddy work boots. Beside him stand Jasper and Barnaby, both draft horses adorned in ornate parade harnesses, plumed crimson headstalls, and ribbon-woven manes.\n\nSilas inspects the girth straps beneath both horses to confirm the parade gear is balanced and secure, slipping two fingers beneath the leather girth to test the tension comfortably. The camera takes a kneeling low angle looking beneath Jasper's massive barrel as Silas firmly pulls a billet strap.",
+   "annotation": {
+    "title_en": "Silas checks the girth straps on both horses, ensuring the h",
+    "scene": "stables_interior",
+    "camera": "Kneeling low shot looking beneath Jasper's barrel as Silas pulls a billet strap.",
+    "beat": "Silas checks the girth straps on both horses, ensuring the harnesses are balanced and comfortable for the long parade route.",
+    "present": [
+     "silas",
+     "jasper",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas slips two fingers beneath the girth to test tension.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "jasper.hairstyle": "tightly braided black mane interwoven with gold ribbon",
+     "jasper.accessory": "ornate parade harness with plumed crimson headstall",
+     "barnaby.hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+     "barnaby.accessory": "ornate parade harness with plumed crimson headstall"
+    }
+   }
+  },
+  {
+   "prompt": "The high-raftered Carriage Barn features wide timber plank floors, tall coach doors, and warm iron lantern sconces casting long shadows.\n\nSilas Vance wears his canvas work shirt, corduroy trousers, dark oiled leather apron, and muddy boots. Parked level in the center bay rests the Ceremonial Carriage, its glossy navy coachwork dusted and buffed to a fine sheen.\n\nSilas ducks beneath the undercarriage to inspect the wheel spindles, inadvertently wiping a thick black grease smear across his right cheek as he rubs his sweaty brow with an oily sleeve. The camera captures a close-up of Silas rising from under the axle, revealing his grease-marked face in the warm barn light.",
+   "annotation": {
+    "title_en": "Silas returns to the carriage barn to lubricate the wheel sp",
+    "scene": "carriage_barn",
+    "camera": "Close-up of Silas rising from under the axle, showing his grease-marked face.",
+    "beat": "Silas returns to the carriage barn to lubricate the wheel spindles, inadvertently wiping a thick streak of black grease across his cheek.",
+    "present": [
+     "silas",
+     "ceremonial_carriage"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "silas",
+      "attr": "stains",
+      "value": "thick black grease smear across right cheek"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Silas rubs his sweaty forehead with the back of an oily sleeve.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "ceremonial_carriage.state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay"
+    }
+   }
+  },
+  {
+   "prompt": "In the Carriage Barn, dust motes drift between high timber rafters and lantern sconces above the wide plank floor.\n\nSilas Vance wears a canvas shirt, brown corduroys, an oiled apron, muddy boots, and sports a thick black grease smear across his right cheek. The Ceremonial Carriage rests in the central bay. Resting on a sturdy timber workbench is the Axle Grease Pot, a cylindrical brown stoneware jar filled to the brim with thick black lubricant alongside a clean wooden applicator paddle.\n\nSilas approaches the bench, dipping the wooden paddle deep into the dark grease and giving it a firm stir before lifting a loaded scoop to carry toward the carriage. A close shot frames the stoneware grease pot on the bench as he gathers the lubricant.",
+   "annotation": {
+    "title_en": "Silas dips the wooden paddle into the stoneware grease pot, ",
+    "scene": "carriage_barn",
+    "camera": "Close shot of the grease pot on the workbench as Silas scoops out dark lubricant.",
+    "beat": "Silas dips the wooden paddle into the stoneware grease pot, preparing to inspect and pack the axle journals.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "grease_pot"
+    ],
+    "first_appearance": [
+     "grease_pot"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas stirs the thick grease before carrying the paddle toward the carriage.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "ceremonial_carriage.state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "grease_pot.state": "full to brim with thick black axle grease, paddle wiped clean",
+     "grease_pot.placement": "resting on bench in carriage barn"
+    }
+   }
+  },
+  {
+   "prompt": "Within the Carriage Barn, lantern glow reflects off polished wood and carriage iron along the wide plank floor.\n\nSilas Vance wears his work shirt, corduroys, leather apron, muddy boots, and has a black grease smear on his right cheek. The Ceremonial Carriage sits level, bearing on its rear-left hub the Cracked Carriage Wheel, a heavy twelve-spoked navy wheel banded in black forged iron with faint hairline paint crazing. Nearby sits the open Axle Grease Pot.\n\nSilas crouches beside the rear-left wheel, carefully applying fresh grease onto the axle journal with his paddle and rapping his knuckles against the wooden spokes to test their acoustic resonance. A medium shot frames Silas crouched attentively beside the rear wheel hub.",
+   "annotation": {
+    "title_en": "Silas kneels by the rear-left carriage wheel, applying greas",
+    "scene": "carriage_barn",
+    "camera": "Medium shot framing Silas crouched beside the rear wheel hub.",
+    "beat": "Silas kneels by the rear-left carriage wheel, applying grease to the hub fitting while checking the spokes.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "cracked_wheel",
+     "grease_pot"
+    ],
+    "first_appearance": [
+     "cracked_wheel"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas taps the wooden spoke with his knuckles to listen to the resonance.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "cracked_wheel": {
+      "state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+      "placement": "mounted as rear-left wheel on carriage"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+      "placement": "mounted as rear-left wheel on carriage"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "ceremonial_carriage.state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "cracked_wheel.state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+     "cracked_wheel.placement": "mounted as rear-left wheel on carriage",
+     "grease_pot.state": "full to brim with thick black axle grease, paddle wiped clean",
+     "grease_pot.placement": "resting on bench in carriage barn"
+    }
+   }
+  },
+  {
+   "prompt": "In the high-raftered timber carriage barn, wide plank floors stretch beneath tall coach doors and glowing iron lantern sconces.\n\nSilas Vance, a lean groom in his thirties with sun-weathered fair skin, wavy chestnut hair, canvas work shirt, brown corduroy trousers, oiled leather apron, muddy boots, and a black grease smear on his right cheek, inspects the Ceremonial Carriage parked in the center bay. Its rear-left wheel is the Cracked Carriage Wheel, a navy twelve-spoked wheel with hairline paint crazing. Silas grabs the Screw Jack Stand—a heavy cast-iron screw jack collapsed down to its lowest height—and positions it directly beneath the rear-left axle tree, adjusting its footpads on the timber planks with his boot.\n\nA low floor-level shot captures the heavy cast-iron jack as it slides into place.",
+   "annotation": {
+    "title_en": "Hearing a dull thud in the spoke, Silas retrieves the iron s",
+    "scene": "carriage_barn",
+    "camera": "Low floor-level shot as the heavy cast-iron jack slides into place.",
+    "beat": "Hearing a dull thud in the spoke, Silas retrieves the iron screw jack and positions it firmly beneath the rear-left axle tree.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "cracked_wheel",
+     "jack_stand"
+    ],
+    "first_appearance": [
+     "jack_stand"
+    ],
+    "changes": [
+     {
+      "entity": "jack_stand",
+      "attr": "placement",
+      "value": "positioned directly beneath the rear-left carriage axle"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas adjusts the jack's footpads on the floorboards with his boot.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "cracked_wheel": {
+      "state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+      "placement": "mounted as rear-left wheel on carriage"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "sitting on carriage barn floor"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+      "placement": "mounted as rear-left wheel on carriage"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "ceremonial_carriage.state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "cracked_wheel.state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+     "cracked_wheel.placement": "mounted as rear-left wheel on carriage",
+     "jack_stand.state": "collapsed down to lowest height, clean cast iron",
+     "jack_stand.placement": "positioned directly beneath the rear-left carriage axle"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the high-raftered timber carriage barn, warm lantern light falls across the wide plank floorboards and massive roof timbers.\n\nSilas Vance, wearing his canvas work shirt, corduroy trousers, and dark oiled leather apron with a grease streak across his cheek, attends to the Ceremonial Carriage resting above the collapsed cast-iron Screw Jack Stand. Silas takes down the Lug Wrench—a long-handled dark forged iron socket wrench with a square box-end hanging by a leather thong—from the tool rack. He engages the screw jack's lever and cranks steadily upward, straining his shoulders against the heavy mechanical resistance to lift the axle.\n\nA medium shot focuses on Silas cranking the jack lever steadily upward.",
+   "annotation": {
+    "title_en": "Silas takes the forged lug wrench from the tool rack and beg",
+    "scene": "carriage_barn",
+    "camera": "Medium shot focusing on Silas cranking the jack lever steadily upward.",
+    "beat": "Silas takes the forged lug wrench from the tool rack and begins turning the screw jack's lever to lift the axle.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "jack_stand",
+     "wheel_wrench"
+    ],
+    "first_appearance": [
+     "wheel_wrench"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas strains his shoulders against the mechanical resistance.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+      "placement": "mounted as rear-left wheel on carriage"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "ceremonial_carriage.state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "jack_stand.state": "collapsed down to lowest height, clean cast iron",
+     "jack_stand.placement": "positioned directly beneath the rear-left carriage axle",
+     "wheel_wrench.state": "dark forged iron, free of rust, hanging by leather thong",
+     "wheel_wrench.placement": "hung on carriage barn tool rack"
+    }
+   }
+  },
+  {
+   "prompt": "In the timber carriage barn, amber lantern sconces illuminate the glossy coachwork and wide plank floors.\n\nSilas Vance, dressed in his canvas work shirt, corduroy trousers, and oiled leather apron with a grease smear on his right cheek, observes the Ceremonial Carriage as its weight shifts onto the jack stand. Suddenly, the Cracked Carriage Wheel mounted on the rear-left axle fractures under the strain; two wooden spokes split open with a sharp report and the iron tire warps outward from the rim. Silas flinches and recoils his hand as wooden splinters pop violently into the air.\n\nAn extreme close-up captures the wheel spokes splintering under sudden tension.",
+   "annotation": {
+    "title_en": "As the weight shifts under the jack, a sharp crack echoes th",
+    "scene": "carriage_barn",
+    "camera": "Extreme close-up on the wheel spokes splintering under sudden tension.",
+    "beat": "As the weight shifts under the jack, a sharp crack echoes through the barn as two spokes split open and the iron rim twists outward.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "cracked_wheel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "cracked_wheel",
+      "attr": "state",
+      "value": "fractured with two split spokes and iron tire warping outward from rim"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas flinches and recoils his hand as wooden splinters pop.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "cracked_wheel": {
+      "state": "solidly assembled, uncracked painted navy wheel with hairline paint crazing",
+      "placement": "mounted as rear-left wheel on carriage"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "fractured with two split spokes and iron tire warping outward from rim",
+      "placement": "mounted as rear-left wheel on carriage"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "ceremonial_carriage.state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "cracked_wheel.state": "fractured with two split spokes and iron tire warping outward from rim",
+     "cracked_wheel.placement": "mounted as rear-left wheel on carriage"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the high-raftered timber carriage barn, warm light glints off iron fittings and polished coachwork.\n\nSilas Vance, his face marked by a black grease smear and clad in his canvas shirt, corduroy trousers, and oiled apron, works beside the tilted Ceremonial Carriage, now propped securely on the jack stand with its rear-left wheel loosened. Grasping the dark forged iron Lug Wrench, Silas fits the square box-end over the stubborn hub nut. He grunts with heavy physical exertion as the tight iron nut finally breaks free, unbolting the damaged wheel.\n\nA mid-angle dynamic shot tracks Silas levering the wrench against the axle nut.",
+   "annotation": {
+    "title_en": "Silas hastily engages the wrench on the hub nut, unbolting t",
+    "scene": "carriage_barn",
+    "camera": "Mid-angle dynamic shot tracking Silas levering the wrench against the axle nut.",
+    "beat": "Silas hastily engages the wrench on the hub nut, unbolting the damaged wheel while the carriage tilts securely on the jack stand.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "cracked_wheel",
+     "wheel_wrench"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "ceremonial_carriage",
+      "attr": "state",
+      "value": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas grunts with exertion as the tight iron nut breaks free.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "ceremonial_carriage": {
+      "state": "dusted and buffed glossy navy coachwork, resting level on four painted wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "cracked_wheel": {
+      "state": "fractured with two split spokes and iron tire warping outward from rim",
+      "placement": "mounted as rear-left wheel on carriage"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "fractured with two split spokes and iron tire warping outward from rim",
+      "placement": "mounted as rear-left wheel on carriage"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "ceremonial_carriage.state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "cracked_wheel.state": "fractured with two split spokes and iron tire warping outward from rim",
+     "cracked_wheel.placement": "mounted as rear-left wheel on carriage",
+     "wheel_wrench.state": "dark forged iron, free of rust, hanging by leather thong",
+     "wheel_wrench.placement": "hung on carriage barn tool rack"
+    }
+   }
+  },
+  {
+   "prompt": "Within the wide plank carriage barn, lantern light reflects off the timber walls toward the tall coach doors.\n\nSilas Vance, wearing his canvas work shirt, corduroy trousers, and leather apron with grease smeared on his cheek, sets aside the Lug Wrench. He grips the Cracked Carriage Wheel, its two split spokes visible and its iron rim warped, and pulls it free from the greased spindle. Silas rolls the heavy broken wheel across the barn floor toward the exterior doorway, guiding it carefully as it wobbles visibly on its bent rim.\n\nA medium tracking shot follows Silas rolling the fractured wheel toward the doorway.",
+   "annotation": {
+    "title_en": "Silas slides the cracked wheel completely off the greased sp",
+    "scene": "carriage_barn",
+    "camera": "Medium tracking shot following Silas rolling the fractured wheel.",
+    "beat": "Silas slides the cracked wheel completely off the greased spindle and rolls the heavy damaged piece toward the doorway.",
+    "present": [
+     "silas",
+     "cracked_wheel",
+     "wheel_wrench"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "cracked_wheel",
+      "attr": "placement",
+      "value": "lifted off axle and rolled toward barn doorway"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "The wheel wobbles visibly on its broken rim as Silas guides it.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "cracked_wheel": {
+      "state": "fractured with two split spokes and iron tire warping outward from rim",
+      "placement": "mounted as rear-left wheel on carriage"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "fractured with two split spokes and iron tire warping outward from rim",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "cracked_wheel.state": "fractured with two split spokes and iron tire warping outward from rim",
+     "cracked_wheel.placement": "lifted off axle and rolled toward barn doorway",
+     "wheel_wrench.state": "dark forged iron, free of rust, hanging by leather thong",
+     "wheel_wrench.placement": "hung on carriage barn tool rack"
+    }
+   }
+  },
+  {
+   "prompt": "The Wheelwright Shed is an open-sided timber workshop adjacent to the yard, featuring a stone hearth forge, an anvil, a wide workbench, and timber wheel horses.\n\nSilas Vance, dressed in his canvas work shirt, corduroy trousers, muddy boots, and oiled leather apron with a grease streak on his cheek, enters with a tight linen bandage wrapped around his strained left wrist. He approaches Master Cole, an elderly, barrel-chested wheelwright with a ruddy complexion, bushy grey beard, charcoal canvas smock, cowhide trousers, and a battered brown felt flat cap. Silas cradles his bandaged wrist as Cole glances up from his workbench.\n\nA medium two-shot is framed by the open forge timber posts.",
+   "annotation": {
+    "title_en": "Silas arrives at the wheelwright shed with his left wrist ba",
+    "scene": "wheelwright_shed",
+    "camera": "Medium two-shot framed by the open forge timber posts.",
+    "beat": "Silas arrives at the wheelwright shed with his left wrist bandaged from wrenching the stubborn axle nut, seeking Master Cole's help.",
+    "present": [
+     "silas",
+     "cole"
+    ],
+    "first_appearance": [
+     "cole"
+    ],
+    "changes": [
+     {
+      "entity": "silas",
+      "attr": "injury",
+      "value": "tight linen bandage wrapped around left wrist"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Silas cradles his bandaged wrist as Cole glances up from his workbench.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "fractured with two split spokes and iron tire warping outward from rim",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "cole.outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "cole.headwear": "battered brown felt flat cap"
+    }
+   }
+  },
+  {
+   "prompt": "In the Wheelwright Shed, an open-sided timber workshop adjacent to the yard with a stone hearth forge, anvil, workbench, and timber wheel horses, amber daylight cuts through haze.\n\nSilas Vance, lean and sinewy in his thirties with sun-weathered skin and wavy chestnut hair, wears a canvas work shirt, brown corduroy trousers under a dark oiled leather apron, sturdy muddy boots, a thick black grease smear across his right cheek, and a tight linen bandage wrapped around his left wrist. Master Cole, an elderly barrel-chested wheelwright with a ruddy complexion, bushy grey beard, and bushy eyebrows, wears a heavy charcoal canvas smock, cowhide work trousers, and a battered brown felt flat cap. Silas urgently explains the looming parade deadline, gesturing out toward the carriage barn. Cole listens intently, deep in thought, tapping his heavy wooden mallet rhythmically against his open palm.\n\nClose-up on Master Cole's weathered face, his heavy brow furrowing with deepening concern as he considers the compressed timeline.",
+   "annotation": {
+    "title_en": "Silas urgently explains the parade deadline to Master Cole, ",
+    "scene": "wheelwright_shed",
+    "camera": "Close-up on Cole's weathered face reacting with furrowed brows.",
+    "beat": "Silas urgently explains the parade deadline to Master Cole, pointing toward the carriage barn while Cole listens intently.",
+    "present": [
+     "silas",
+     "cole"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Cole taps his wooden mallet against his palm in thought.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "fractured with two split spokes and iron tire warping outward from rim",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "cole.outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "cole.headwear": "battered brown felt flat cap"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the rustic, timber-framed Wheelwright Shed, tools hang from pegged beams above a massive, scarred timber workbench, with the stone forge glowing faintly nearby.\n\nSilas Vance stands nearby in his canvas shirt, corduroy trousers, oiled leather apron, muddy boots, smeared cheek, and bandaged left wrist. Master Cole, in his charcoal smock, cowhide trousers, and battered flat cap, handles the Cracked Carriage Wheel—a twelve-spoked wooden wheel painted dark navy with gold trim, fractured with two split spokes and a warped black forged iron tire. Cole hoists the wheel and lays it flat onto the sturdy workbench. Shaking his head, he rubs a rough thumb over the splintered grain, then draws white tailor's chalk across the severed fibers to mark the damage.\n\nHigh-angle top-down shot looking directly down onto the workbench surface as the chalk scrapes against the dark painted wood.",
+   "annotation": {
+    "title_en": "Cole lays the cracked wheel flat onto the heavy workbench, m",
+    "scene": "wheelwright_shed",
+    "camera": "High-angle top-down shot looking onto the workbench surface.",
+    "beat": "Cole lays the cracked wheel flat onto the heavy workbench, marking the severed wood fibers with white tailor's chalk.",
+    "present": [
+     "silas",
+     "cole",
+     "cracked_wheel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "cracked_wheel",
+      "attr": "state",
+      "value": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Cole shakes his head, running a thumb across the fractured grain.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     },
+     "cracked_wheel": {
+      "state": "fractured with two split spokes and iron tire warping outward from rim",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "cole.outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "cole.headwear": "battered brown felt flat cap",
+     "cracked_wheel.state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+     "cracked_wheel.placement": "lifted off axle and rolled toward barn doorway"
+    }
+   }
+  },
+  {
+   "prompt": "Within the sunlit Wheelwright Shed, timber wheel horses and iron rims lean against the rough-hewn posts amidst wood chips and curled shavings.\n\nSilas Vance, marked with a grease-smudged cheek and bandaged wrist, stands alongside Master Cole in his smock and flat cap. The Spare Carriage Wheel, an unmounted twelve-spoked carriage wheel of raw, unfinished pale seasoned white oak with an oiled bare iron rim, completely unpainted, rests leaning against the shed wall. Cole gestures toward it, and together the men lift the raw wheel, hoisting it onto the iron spindle of a revolving painting trestle. With the wheel securely mounted, Silas extends his uninjured right hand and spins the rim smoothly, carefully testing its rotational balance.\n\nMedium shot tracking the unfinished oak wheel as the men lift and seat it firmly onto the central trestle spindle.",
+   "annotation": {
+    "title_en": "Cole points Silas to an unfinished spare oak wheel in the co",
+    "scene": "wheelwright_shed",
+    "camera": "Medium shot tracking the raw wheel being lifted onto the trestle spindle.",
+    "beat": "Cole points Silas to an unfinished spare oak wheel in the corner, and together they hoist it onto a revolving painting trestle.",
+    "present": [
+     "silas",
+     "cole",
+     "spare_wheel"
+    ],
+    "first_appearance": [
+     "spare_wheel"
+    ],
+    "changes": [
+     {
+      "entity": "spare_wheel",
+      "attr": "placement",
+      "value": "mounted onto revolving painting trestle in wheelwright shed"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas uses his good right hand to spin the wheel, testing its balance.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     },
+     "spare_wheel": {
+      "state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+      "placement": "leaning against wheelwright workshop wall"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     },
+     "spare_wheel": {
+      "state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+      "placement": "mounted onto revolving painting trestle in wheelwright shed"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "cole.outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "cole.headwear": "battered brown felt flat cap",
+     "spare_wheel.state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+     "spare_wheel.placement": "mounted onto revolving painting trestle in wheelwright shed"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the dusty, golden-lit Wheelwright Shed, the revolving painting trestle occupies center stage beside the long tool bench and glowing hearth.\n\nMaster Cole wears his charcoal canvas smock, cowhide trousers, and felt cap, now pulling a pair of thick horn-rimmed magnifying spectacles from his pocket and perching them on his nose. Silas Vance watches in his leather apron, corduroy trousers, and bandaged wrist. The Spare Carriage Wheel remains mounted on the trestle in its raw pale oak state. Cole leans in close, squinting one eye to sight down the iron rim, holding up a polished brass bevel gauge to measure the raw spokes and verify their true alignment.\n\nClose-up on Master Cole's magnified eyes peering through the thick lenses of his spectacles, scrutinizing the spoke angles with artisan precision.",
+   "annotation": {
+    "title_en": "Cole dons his horn-rimmed magnifying spectacles and inspects",
+    "scene": "wheelwright_shed",
+    "camera": "Close-up on Cole's magnified eyes behind the thick lenses.",
+    "beat": "Cole dons his horn-rimmed magnifying spectacles and inspects the raw oak spokes, checking for true alignment with a bevel gauge.",
+    "present": [
+     "silas",
+     "cole",
+     "spare_wheel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "cole",
+      "attr": "accessory",
+      "value": "thick horn-rimmed magnifying spectacles perched on nose"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Cole sights down the edge of the rim with one eye squinted.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap"
+     },
+     "spare_wheel": {
+      "state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+      "placement": "mounted onto revolving painting trestle in wheelwright shed"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+      "placement": "mounted onto revolving painting trestle in wheelwright shed"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "cole.outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "cole.headwear": "battered brown felt flat cap",
+     "cole.accessory": "thick horn-rimmed magnifying spectacles perched on nose",
+     "spare_wheel.state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+     "spare_wheel.placement": "mounted onto revolving painting trestle in wheelwright shed"
+    }
+   }
+  },
+  {
+   "prompt": "The open-sided Wheelwright Shed glows warmly as the stone forge hearth crackles with live coals beneath hanging iron tongs and calipers.\n\nMaster Cole, sporting his smock, cowhide trousers, flat cap, and magnifying spectacles, tends an iron ladle of quick-drying lacquer over the glowing hearth embers. At the workbench nearby, Silas Vance, clad in his greased leather apron, canvas shirt, and wrist bandage, diligently prepares earthenware pots of deep navy enamel and rich gold leaf sizing. Silas carefully lifts a carved mixing stick from the navy paint, watching a heavy glossy drop roll off the tip to test its thickness and viscosity.\n\nMedium wide shot capturing Cole working beside the hearth fire on one side and Silas stirring enamel at the long timber workbench on the other.",
+   "annotation": {
+    "title_en": "While Cole preheats quick-drying lacquer over the hearth coa",
+    "scene": "wheelwright_shed",
+    "camera": "Medium wide shot showing Cole at the hearth and Silas stirring paint at the bench.",
+    "beat": "While Cole preheats quick-drying lacquer over the hearth coals, Silas prepares pots of navy enamel and gold leaf sizing.",
+    "present": [
+     "silas",
+     "cole",
+     "spare_wheel"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas tests paint viscosity by letting a drop fall from the mixing stick.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+      "placement": "mounted onto revolving painting trestle in wheelwright shed"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+      "placement": "mounted onto revolving painting trestle in wheelwright shed"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "cole.outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "cole.headwear": "battered brown felt flat cap",
+     "cole.accessory": "thick horn-rimmed magnifying spectacles perched on nose",
+     "spare_wheel.state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+     "spare_wheel.placement": "mounted onto revolving painting trestle in wheelwright shed"
+    }
+   }
+  },
+  {
+   "prompt": "In the warm, amber atmosphere of the Wheelwright Shed, dust motes drift around the central timber trestle beneath the heavy rafters.\n\nSilas Vance, his face grease-streaked and left wrist wrapped, works shoulder-to-shoulder with Master Cole in his canvas smock, flat cap, and magnifying spectacles. Moving with practiced urgency, they sweep wide bristle brushes across the Spare Carriage Wheel, transforming it as rich, wet navy enamel coats the oak and delicate, shimmering gold leaf pin-striping is laid flawlessly along each spoke. Cole leans in close, gently blowing across the tacky gold leaf to smooth and set the fragile gilding.\n\nClose-up slow pan gliding alongside the slowly revolving wheel rim as fine, gleaming gold pin-stripes take shape across the glossy, wet navy finish.",
+   "annotation": {
+    "title_en": "Working rapidly together, Cole and Silas coat the wheel in d",
+    "scene": "wheelwright_shed",
+    "camera": "Close-up slow pan along the spinning wheel as gold lines are drawn.",
+    "beat": "Working rapidly together, Cole and Silas coat the wheel in deep navy enamel and apply delicate gold pin-striping along each spoke.",
+    "present": [
+     "silas",
+     "cole",
+     "spare_wheel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "spare_wheel",
+      "attr": "state",
+      "value": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Cole blows gently across the tacky gold leaf to set it.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "raw unfinished pale oak with oiled bare iron rim, completely unpainted",
+      "placement": "mounted onto revolving painting trestle in wheelwright shed"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+      "placement": "mounted onto revolving painting trestle in wheelwright shed"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "cole.outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "cole.headwear": "battered brown felt flat cap",
+     "cole.accessory": "thick horn-rimmed magnifying spectacles perched on nose",
+     "spare_wheel.state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+     "spare_wheel.placement": "mounted onto revolving painting trestle in wheelwright shed"
+    }
+   }
+  },
+  {
+   "prompt": "The high-raftered timber carriage barn glows with amber lantern light across its wide plank floors and tall open coach doors.\n\nSilas Vance, a lean, sinewy groom in his thirties with sun-weathered fair skin, wavy chestnut hair, a tight linen bandage on his left wrist, and a thick black grease smear across his right cheek, wears a canvas work shirt, brown corduroy trousers, sturdy muddy leather boots, and a dark oiled leather apron. The ornate Ceremonial Carriage tilts leftward in the center bay, propped on a jack stand. Silas sets down the Spare Carriage Wheel, its twelve white oak spokes freshly painted glossy dark navy with wet gold leaf pinstripes, resting it against the axle hub. Dipping into the Cylindrical stoneware Axle Grease Pot, he leaves it half-empty as he scoops thick lubricant with the wooden paddle, swirling rich black grease generously over the bronze bushing.\n\nA medium shot captures Silas scooping lubricant with the wooden paddle as amber lantern light glints off the slick axle grease.",
+   "annotation": {
+    "title_en": "Silas carries the cured replacement wheel back into the carr",
+    "scene": "carriage_barn",
+    "camera": "Medium shot of Silas scooping lubricant with the wooden paddle.",
+    "beat": "Silas carries the cured replacement wheel back into the carriage barn and dips deeply into the grease pot to repack the empty hub.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "spare_wheel",
+     "grease_pot"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "grease_pot",
+      "attr": "state",
+      "value": "half-empty of black grease with wooden paddle resting inside"
+     },
+     {
+      "entity": "spare_wheel",
+      "attr": "placement",
+      "value": "carried into carriage barn, resting against axle hub"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Silas coats the bronze axle bushing in thick swirls of black grease.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "spare_wheel": {
+      "state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+      "placement": "mounted onto revolving painting trestle in wheelwright shed"
+     },
+     "grease_pot": {
+      "state": "full to brim with thick black axle grease, paddle wiped clean",
+      "placement": "resting on bench in carriage barn"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "ceremonial_carriage.state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "spare_wheel.state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+     "spare_wheel.placement": "carried into carriage barn, resting against axle hub",
+     "grease_pot.state": "half-empty of black grease with wooden paddle resting inside",
+     "grease_pot.placement": "resting on bench in carriage barn"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the warm, timber-raftered carriage barn, lantern light catches the polished wood planks and iron wall sconces.\n\nSilas Vance, lean and sun-weathered with wavy chestnut hair, a grease-smeared right cheek, and a bandaged left wrist, wears his canvas work shirt, brown corduroy trousers, muddy boots, and oiled leather apron. Beside the tilted Ceremonial Carriage and the low cast-iron Screw Jack Stand beneath its rear axle, Silas carefully lifts the glossy navy and gold Spare Carriage Wheel. Bracing with his forearm to avoid the wet paint, he smoothly slides the wheel hub flush onto the axle spindle without touching the glistening gold pinstripes.\n\nA close-up focuses tightly on the wheel hub sliding flush over the axle shoulder in a clean, steady motion.",
+   "annotation": {
+    "title_en": "Silas aligns the newly painted replacement wheel onto the ca",
+    "scene": "carriage_barn",
+    "camera": "Close-up on the wheel hub sliding flush over the axle shoulder.",
+    "beat": "Silas aligns the newly painted replacement wheel onto the carriage spindle, carefully sliding it inward without marring the wet paint.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "spare_wheel",
+     "jack_stand"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas uses his forearm to avoid touching the wet gold pinstripes.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "spare_wheel": {
+      "state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+      "placement": "carried into carriage barn, resting against axle hub"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "ceremonial_carriage.state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "spare_wheel.state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+     "spare_wheel.placement": "carried into carriage barn, resting against axle hub",
+     "jack_stand.state": "collapsed down to lowest height, clean cast iron",
+     "jack_stand.placement": "positioned directly beneath the rear-left carriage axle"
+    }
+   }
+  },
+  {
+   "prompt": "The carriage barn's wide plank floors and timber rafters frame the workspace under warm lantern illumination.\n\nSilas Vance, his right cheek smeared with black grease and his left wrist wrapped in linen, wears his canvas shirt, corduroys, muddy work boots, and oiled leather apron. Taking down the long-handled forged iron Lug Wrench from its tool rack, he steps up to the tilted Ceremonial Carriage. He spins the brass axle nut onto the Spare Carriage Wheel and levers the wrench in forceful arcs, leaning his full weight into the tool until it firmly clicks, locking the wheel securely onto the rear-left axle.\n\nA low-angle shot tracks the wrench rotating in smooth, forceful arcs as Silas tightens the hub.",
+   "annotation": {
+    "title_en": "Silas threads the brass axle nut home and tightens it firmly",
+    "scene": "carriage_barn",
+    "camera": "Low-angle shot tracking the wrench rotating in smooth, forceful arcs.",
+    "beat": "Silas threads the brass axle nut home and tightens it firmly with the lug wrench, locking the new wheel onto the carriage.",
+    "present": [
+     "silas",
+     "ceremonial_carriage",
+     "spare_wheel",
+     "wheel_wrench"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "spare_wheel",
+      "attr": "state",
+      "value": "mounted securely on rear-left axle of carriage, fully bolted"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas leans his full weight on the wrench handle until it clicks.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "spare_wheel": {
+      "state": "freshly painted dark navy with shimmering gold leaf pin-striping, glossy and wet",
+      "placement": "carried into carriage barn, resting against axle hub"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "mounted securely on rear-left axle of carriage, fully bolted",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "ceremonial_carriage.state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay",
+     "spare_wheel.state": "mounted securely on rear-left axle of carriage, fully bolted",
+     "spare_wheel.placement": "carried into carriage barn, resting against axle hub",
+     "wheel_wrench.state": "dark forged iron, free of rust, hanging by leather thong",
+     "wheel_wrench.placement": "hung on carriage barn tool rack"
+    }
+   }
+  },
+  {
+   "prompt": "The timber carriage barn stands illuminated in rich lantern light, its wide coach doors framing the stable yard beyond.\n\nSilas Vance, lean and sinewy in his grease-stained work shirt, corduroys, muddy boots, and oiled leather apron with a linen wrap on his left wrist, steps to the screw jack. He unwinds the cast-iron mechanism, letting the Ceremonial Carriage settle smoothly onto its four matching navy-and-gold wheels until fully level. Silas gives the rear carriage corner a firm bounce with both hands, watching the suspension springs compress and stabilize evenly.\n\nA wide shot captures the carriage as the suspension springs compress and stabilize across the level timber floor.",
+   "annotation": {
+    "title_en": "Releasing the screw jack, Silas lets the carriage settle smo",
+    "scene": "carriage_barn",
+    "camera": "Wide shot of the carriage as the suspension springs compress and stabilize.",
+    "beat": "Releasing the screw jack, Silas lets the carriage settle smoothly back onto all four wheels, perfectly level and parade-ready.",
+    "present": [
+     "silas",
+     "ceremonial_carriage"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "ceremonial_carriage",
+      "attr": "state",
+      "value": "fully assembled with matching navy and gold wheels, resting level on all four wheels"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Silas gives the rear carriage corner a firm bounce to test the spring.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "ceremonial_carriage": {
+      "state": "tilted heavily leftward, propped on iron jack stand with rear-left wheel loose",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "mounted securely on rear-left axle of carriage, fully bolted",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "ceremonial_carriage.state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay"
+    }
+   }
+  },
+  {
+   "prompt": "The Cobblestone Courtyard stretches beneath soft afternoon light, paved in worn river stones beside the stone water trough and timber carriage barn doors.\n\nSilas Vance, wearing his dark oiled leather apron, canvas shirt, corduroy trousers, and muddy boots with grease on his cheek and a bandage on his wrist, leads the team forward. Beside him walk Jasper, the massive black Percheron with a white forehead star, and Barnaby, the tall chestnut draft horse, both sporting gold-braided manes and ornate parade harnesses crowned with crimson ostrich plume headstalls. Jasper tosses his massive head proudly, shaking the tall crimson feathers as hooves clatter over stone.\n\nA wide exterior tracking shot follows the horses stepping in unison across the river stones toward the barn.",
+   "annotation": {
+    "title_en": "Silas leads the fully harnessed draft horses from the stable",
+    "scene": "cobblestone_courtyard",
+    "camera": "Wide exterior tracking shot as the horses step in unison across the river stones.",
+    "beat": "Silas leads the fully harnessed draft horses from the stables out into the courtyard, lining them up before the carriage doors.",
+    "present": [
+     "silas",
+     "jasper",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Jasper tosses his head, shaking the crimson ostrich plumes proudly.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "mounted securely on rear-left axle of carriage, fully bolted",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+     "silas.footwear": "sturdy muddy leather work boots",
+     "silas.stains": "thick black grease smear across right cheek",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "jasper.hairstyle": "tightly braided black mane interwoven with gold ribbon",
+     "jasper.accessory": "ornate parade harness with plumed crimson headstall",
+     "barnaby.hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+     "barnaby.accessory": "ornate parade harness with plumed crimson headstall"
+    }
+   }
+  },
+  {
+   "prompt": "The cedar-paneled tack room is lined with gleaming brass bridle hooks, polished harness racks, and a small glass looking-glass upon the wall.\n\nSilas Vance has washed his face clear of grease and removed his work apron. Setting aside his worn clothes, he pulls on gleaming black knee-high riding boots and a formal brass-buttoned livery coat with a stiff scarlet collar over crisp cream breeches, his left wrist still bound in clean linen. On the cedar table rests the scarlet, navy, and gold silk Parade Rosette. Facing the mirror, Silas fastens his top brass collar button and smoothly straightens his coat lapels.\n\nA medium shot frames Silas in front of the cedar looking-glass as he buttons his livery tunic.",
+   "annotation": {
+    "title_en": "In the tack room, Silas washes his face clean, sheds his wor",
+    "scene": "tack_room",
+    "camera": "Medium shot in front of the cedar looking-glass as Silas buttons his tunic.",
+    "beat": "In the tack room, Silas washes his face clean, sheds his work apron, and dresses in his immaculate parade livery coat and boots.",
+    "present": [
+     "silas",
+     "parade_rosette"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "silas",
+      "attr": "outfit",
+      "value": "formal brass-buttoned livery coat with scarlet collar and cream breeches"
+     },
+     {
+      "entity": "silas",
+      "attr": "stains",
+      "value": "no stains (removed)"
+     },
+     {
+      "entity": "silas",
+      "attr": "footwear",
+      "value": "gleaming black knee-high riding boots"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Silas fastens the top brass collar button and straightens his lapels.",
+    "start_state": {
+     "silas": {
+      "outfit": "canvas work shirt and brown corduroy trousers under a dark oiled leather apron",
+      "footwear": "sturdy muddy leather work boots",
+      "stains": "thick black grease smear across right cheek",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "mounted securely on rear-left axle of carriage, fully bolted",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+     "silas.footwear": "gleaming black knee-high riding boots",
+     "silas.stains": "no stains (removed)",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "parade_rosette.state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+     "parade_rosette.placement": "lying on tack room table"
+    }
+   }
+  },
+  {
+   "prompt": "In the Cobblestone Courtyard paved with worn river stones under warm afternoon light, the stone water trough stands nearby.\n\nSilas Vance, lean and sun-weathered with wavy chestnut hair, wears a formal brass-buttoned livery coat with scarlet collar, cream breeches, gleaming black knee-high riding boots, and a tight linen bandage wrapped around his left wrist. Jasper, the massive black Percheron draft horse with a white forehead star, stands braided with gold ribbon in his mane, fitted with an ornate parade harness and plumed crimson headstall. Silas holds the parade rosette, a crisp tricolor silk ribbon in scarlet, navy, and gold, and pins it onto Jasper's leather bridle browband, smoothing down its long trailing swallowtail ribbons.\n\nClose-up on Silas's bandaged and sound hands as he securely fastens the brass pin behind the rosette.",
+   "annotation": {
+    "title_en": "Stepping into the bright courtyard, Silas pins the crisp tri",
+    "scene": "cobblestone_courtyard",
+    "camera": "Close-up on Silas's hands fastening the brass pin behind the rosette.",
+    "beat": "Stepping into the bright courtyard, Silas pins the crisp tricolor silk rosette directly to the center of Jasper's parade bridle.",
+    "present": [
+     "silas",
+     "jasper",
+     "parade_rosette"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "parade_rosette",
+      "attr": "placement",
+      "value": "pinned onto Jasper's leather bridle browband"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Silas smooths down the long trailing swallowtail ribbons.",
+    "start_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "lying on tack room table"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "pinned onto Jasper's leather bridle browband"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "mounted securely on rear-left axle of carriage, fully bolted",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+     "silas.footwear": "gleaming black knee-high riding boots",
+     "silas.stains": "no stains (removed)",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "jasper.hairstyle": "tightly braided black mane interwoven with gold ribbon",
+     "jasper.accessory": "ornate parade harness with plumed crimson headstall",
+     "parade_rosette.state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+     "parade_rosette.placement": "pinned onto Jasper's leather bridle browband"
+    }
+   }
+  },
+  {
+   "prompt": "In the open Cobblestone Courtyard outside the wide barn doors, sunlight gleams on the worn stones.\n\nSilas Vance, dressed in his pristine formal brass-buttoned livery coat with scarlet collar, cream breeches, and gleaming black knee-high boots with his left wrist bandaged, guides the Ceremonial Carriage out into the yard. The ornate landau carriage, fully assembled with matching navy and gold wheels and polished brass lamps, rolls level and steady as Silas backs it smoothly into position behind Jasper, who stands hitched and plumed in his parade harness. Silas checks the clearance between the rear hub and the wooden doorframe.\n\nWide tracking shot as the heavy carriage rolls smoothly over the cobblestones into the courtyard.",
+   "annotation": {
+    "title_en": "Silas guides the gleaming ceremonial carriage out into the o",
+    "scene": "cobblestone_courtyard",
+    "camera": "Wide tracking shot as the carriage rolls smoothly over the cobblestones.",
+    "beat": "Silas guides the gleaming ceremonial carriage out into the open courtyard, backing it into position behind Jasper.",
+    "present": [
+     "silas",
+     "jasper",
+     "ceremonial_carriage"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas checks the clearance between the rear hub and the barn doorframe.",
+    "start_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "pinned onto Jasper's leather bridle browband"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "mounted securely on rear-left axle of carriage, fully bolted",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+     "silas.footwear": "gleaming black knee-high riding boots",
+     "silas.stains": "no stains (removed)",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "jasper.hairstyle": "tightly braided black mane interwoven with gold ribbon",
+     "jasper.accessory": "ornate parade harness with plumed crimson headstall",
+     "ceremonial_carriage.state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay"
+    }
+   }
+  },
+  {
+   "prompt": "Across the Cobblestone Courtyard, golden afternoon sunlight glints off brass fittings and harness leather.\n\nSilas Vance, in his formal livery coat with scarlet collar, cream breeches, black boots, and bandaged left wrist, stands between the two massive draft horses. Jasper, the black Percheron, and Barnaby, the tall chestnut with flaxen braided mane, are both adorned in ornate parade harnesses with plumed crimson headstalls. Behind them sits the Ceremonial Carriage, resting level on its matching navy and gold wheels. Silas couples both horses to the carriage traces, dropping the steel coupling pins into place on the doubletree and giving each thick leather trace a firm tug to ensure it is locked.\n\nMedium low shot focusing on the trace chains snapping into the carriage tree.",
+   "annotation": {
+    "title_en": "Silas couples Jasper and Barnaby to the carriage traces, dro",
+    "scene": "cobblestone_courtyard",
+    "camera": "Medium low shot focusing on the trace chains snapping into the carriage tree.",
+    "beat": "Silas couples Jasper and Barnaby to the carriage traces, dropping the steel coupling pins into place on the doubletree.",
+    "present": [
+     "silas",
+     "jasper",
+     "barnaby",
+     "ceremonial_carriage"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Silas gives each leather trace a firm tug to verify the latching.",
+    "start_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "pinned onto Jasper's leather bridle browband"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "mounted securely on rear-left axle of carriage, fully bolted",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+     "silas.footwear": "gleaming black knee-high riding boots",
+     "silas.stains": "no stains (removed)",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "jasper.hairstyle": "tightly braided black mane interwoven with gold ribbon",
+     "jasper.accessory": "ornate parade harness with plumed crimson headstall",
+     "barnaby.hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+     "barnaby.accessory": "ornate parade harness with plumed crimson headstall",
+     "ceremonial_carriage.state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay"
+    }
+   }
+  },
+  {
+   "prompt": "In the Cobblestone Courtyard near the mounting block and open carriage doors, the air is bright and calm.\n\nSilas Vance stands ready in his scarlet-collared livery coat, cream breeches, black riding boots, and bandaged wrist beside the level Ceremonial Carriage. Master Cole, the elderly barrel-chested wheelwright with a bushy grey beard, wears a heavy charcoal canvas smock, cowhide trousers, a battered brown felt flat cap, and horn-rimmed magnifying spectacles. Cole walks into the yard, nods in thorough approval at the newly fitted wheel, and hands Silas the long parade reins, raising an open hand in a parting salute as Silas gathers them.\n\nMedium two-shot framing Cole and Silas beside the freshly painted wheel.",
+   "annotation": {
+    "title_en": "Master Cole walks out into the courtyard, gives the replaced",
+    "scene": "cobblestone_courtyard",
+    "camera": "Medium two-shot framing Cole and Silas beside the freshly painted wheel.",
+    "beat": "Master Cole walks out into the courtyard, gives the replaced wheel a nod of thorough approval, and hands Silas the parade reins.",
+    "present": [
+     "silas",
+     "cole",
+     "ceremonial_carriage"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Cole raises an open hand in a parting salute as Silas gathers the reins.",
+    "start_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     }
+    },
+    "entity_state": {
+     "silas": {
+      "outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+      "footwear": "gleaming black knee-high riding boots",
+      "stains": "no stains (removed)",
+      "injury": "tight linen bandage wrapped around left wrist"
+     },
+     "jasper": {
+      "hairstyle": "tightly braided black mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "barnaby": {
+      "hairstyle": "tightly braided flaxen mane interwoven with gold ribbon",
+      "accessory": "ornate parade harness with plumed crimson headstall"
+     },
+     "curry_comb": {
+      "state": "clean and dry with polished brass backing",
+      "placement": "hung on stable wall hook"
+     },
+     "leather_harness": {
+      "state": "buckled and looped, hanging on wall peg, dust-free and supple",
+      "placement": "hanging on tack room wall rack"
+     },
+     "plumed_headstalls": {
+      "state": "pristine with straight, fluffed crimson plumes",
+      "placement": "draped over saddle bracket in tack room"
+     },
+     "parade_rosette": {
+      "state": "crisp, uncreased silk ribbon rosette pinned to backing card",
+      "placement": "pinned onto Jasper's leather bridle browband"
+     },
+     "ceremonial_carriage": {
+      "state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+      "placement": "parked in Carriage Barn center bay"
+     },
+     "grease_pot": {
+      "state": "half-empty of black grease with wooden paddle resting inside",
+      "placement": "resting on bench in carriage barn"
+     },
+     "cracked_wheel": {
+      "state": "dismounted, cracked spokes tagged with white chalk marks, resting flat on workbench",
+      "placement": "lifted off axle and rolled toward barn doorway"
+     },
+     "jack_stand": {
+      "state": "collapsed down to lowest height, clean cast iron",
+      "placement": "positioned directly beneath the rear-left carriage axle"
+     },
+     "wheel_wrench": {
+      "state": "dark forged iron, free of rust, hanging by leather thong",
+      "placement": "hung on carriage barn tool rack"
+     },
+     "cole": {
+      "outfit": "heavy charcoal canvas smock and cowhide work trousers",
+      "headwear": "battered brown felt flat cap",
+      "accessory": "thick horn-rimmed magnifying spectacles perched on nose"
+     },
+     "spare_wheel": {
+      "state": "mounted securely on rear-left axle of carriage, fully bolted",
+      "placement": "carried into carriage barn, resting against axle hub"
+     }
+    },
+    "state": {
+     "silas.outfit": "formal brass-buttoned livery coat with scarlet collar and cream breeches",
+     "silas.footwear": "gleaming black knee-high riding boots",
+     "silas.stains": "no stains (removed)",
+     "silas.injury": "tight linen bandage wrapped around left wrist",
+     "cole.outfit": "heavy charcoal canvas smock and cowhide work trousers",
+     "cole.headwear": "battered brown felt flat cap",
+     "cole.accessory": "thick horn-rimmed magnifying spectacles perched on nose",
+     "ceremonial_carriage.state": "fully assembled with matching navy and gold wheels, resting level on all four wheels",
+     "ceremonial_carriage.placement": "parked in Carriage Barn center bay"
+    }
+   }
+  }
+ ]
+}

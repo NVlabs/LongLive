@@ -1,0 +1,52 @@
+{
+ "name": "22_unscrew_bottle_cap",
+ "title": "Unscrewing and Occluding Bottle Cap",
+ "summary": "A dual-arm robot unscrews a soda bottle cap, occludes it under an arm, reveals it, and picks it up.",
+ "camera": "fixed overhead camera",
+ "robot": "two black robot arms with parallel grippers",
+ "setting": "a laboratory desk with a white surface",
+ "first_frame": "22_unscrew_bottle_cap.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "218f6a69c496175cf8dcbc18961c24e5",
+  "frame_index": 0,
+  "original_prompt": "unscrew the bottle cap",
+  "viewpoint": "third_person_overhead",
+  "first_frame_sha256": "6ce12787701be31008e6a3d82d6ab72fe135583d151c20b5258e517db4223eb0"
+ },
+ "segments": [
+  {
+   "instruction": "The top gripper twists the orange cap counterclockwise while the side arm holds the bottle steady.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The top gripper pulls the unscrewed cap upward, clearing the bottle neck.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The top gripper places the cap upright on the white table to the right and releases it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The side arm extends its wrist forward, positioning its wide joint directly over the cap to block it from view.",
+   "memory_event": "hide: the orange cap is completely occluded from the overhead camera by the robot arm"
+  },
+  {
+   "instruction": "The top gripper hovers over the open bottle while the side arm remains stationary over the occluded cap.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The side arm retracts to its initial holding pose, clearing the space above the tabletop.",
+   "memory_event": "return: the orange cap reappears in the exact same spot and upright orientation on the white table"
+  },
+  {
+   "instruction": "The top gripper descends toward the cap and closes its fingers around it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The top gripper lifts the cap from the table and aligns it above the mouth of the bottle.",
+   "memory_event": "none"
+  }
+ ]
+}

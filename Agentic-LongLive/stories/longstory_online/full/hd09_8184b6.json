@@ -1,0 +1,4105 @@
+{
+ "id": "hd09_8184b6_full",
+ "setup": {
+  "title": "The Detailer's Touch",
+  "style": "Crisp documentary realism with warm industrial lighting, tactile reflections, and rich textural automotive details.",
+  "cast": [
+   {
+    "id": "milo",
+    "name": "Milo Vance",
+    "description": "Milo Vance, Man in his mid-30s with athletic build, olive skin, and short cropped dark brown hair, clean gray mechanic overalls, black rubber work boots, backwards navy baseball cap."
+   }
+  ]
+ },
+ "bible": {
+  "entities": {
+   "milo": {
+    "id": "milo",
+    "kind": "character",
+    "name": "Milo Vance",
+    "identity": "Man in his mid-30s with athletic build, olive skin, and short cropped dark brown hair.",
+    "initial": {
+     "outfit": "clean gray mechanic overalls",
+     "footwear": "black rubber work boots",
+     "headwear": "backwards navy baseball cap"
+    },
+    "protagonist": true
+   },
+   "samira": {
+    "id": "samira",
+    "kind": "character",
+    "name": "Samira Al-Jamil",
+    "identity": "Woman in her early 20s with a lean frame, amber skin, and thick curly black hair tied up.",
+    "initial": {
+     "outfit": "navy utility jumpsuit",
+     "accessory": "yellow safety glasses on forehead"
+    },
+    "protagonist": false
+   },
+   "elena": {
+    "id": "elena",
+    "kind": "character",
+    "name": "Elena Rostova",
+    "identity": "Woman in her late 50s with sharp features, fair skin, and wavy silver-gray hair.",
+    "initial": {
+     "outfit": "beige trench coat over cream knit top",
+     "accessory": "string of freshwater pearls"
+    },
+    "protagonist": false
+   },
+   "tariq": {
+    "id": "tariq",
+    "kind": "character",
+    "name": "Tariq Mansoor",
+    "identity": "Stocky man in his 40s with warm brown skin, buzzcut dark hair, and a round jovial face.",
+    "initial": {
+     "outfit": "flour-dusted burgundy polo and dark denim trousers",
+     "headwear": "khaki sun visor"
+    },
+    "protagonist": false
+   },
+   "convertible": {
+    "id": "convertible",
+    "kind": "object",
+    "name": "Vintage Convertible",
+    "identity": "1968 crimson roadster convertible with rounded chrome accents and spoked wheels.",
+    "initial": {
+     "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+     "placement": "bay 1 wash slip"
+    },
+    "protagonist": false
+   },
+   "delivery_van": {
+    "id": "delivery_van",
+    "kind": "object",
+    "name": "Delivery Van",
+    "identity": "Boxy 1990s white cargo van with faded Tariq's Bakes lettering on sides.",
+    "initial": {
+     "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+     "placement": "bay 2 lift"
+    },
+    "protagonist": false
+   },
+   "rotary_buffer": {
+    "id": "rotary_buffer",
+    "kind": "object",
+    "name": "Rotary Buffer",
+    "identity": "Heavy electric polishing machine with a wide spinning head and dual side handles.",
+    "initial": {
+     "state": "clean tool with fresh white wool pad",
+     "placement": "detailing cart"
+    },
+    "protagonist": false
+   },
+   "foam_cannon": {
+    "id": "foam_cannon",
+    "kind": "object",
+    "name": "Foam Cannon",
+    "identity": "Brass quick-connect pressure sprayer with a translucent cylindrical soap reservoir.",
+    "initial": {
+     "state": "filled with thick concentrated pink foaming soap",
+     "placement": "wash bay rack"
+    },
+    "protagonist": false
+   },
+   "dent_puller_kit": {
+    "id": "dent_puller_kit",
+    "kind": "object",
+    "name": "Dent Puller Kit",
+    "identity": "Red stamped-metal case containing slide hammers and molded suction adapters.",
+    "initial": {
+     "state": "closed red metal kit with latches secured",
+     "placement": "workbench"
+    },
+    "protagonist": false
+   },
+   "chrome_polish_jar": {
+    "id": "chrome_polish_jar",
+    "kind": "object",
+    "name": "Chrome Polish Jar",
+    "identity": "Squat circular aluminum tin with embossed silver lettering.",
+    "initial": {
+     "state": "sealed aluminum tin with intact label",
+     "placement": "detailing shelf"
+    },
+    "protagonist": false
+   },
+   "leather_conditioner_bottle": {
+    "id": "leather_conditioner_bottle",
+    "kind": "object",
+    "name": "Leather Conditioner Bottle",
+    "identity": "Tall amber glass bottle with a black trigger spray nozzle.",
+    "initial": {
+     "state": "full amber bottle of nourishing leather emulsion",
+     "placement": "detailing shelf"
+    },
+    "protagonist": false
+   },
+   "steamer_machine": {
+    "id": "steamer_machine",
+    "kind": "object",
+    "name": "Steam Extractor",
+    "identity": "Wheeled industrial steam cleaning unit with clear plastic recovery tanks.",
+    "initial": {
+     "state": "clean, empty transparent recovery tank",
+     "placement": "corner staging area"
+    },
+    "protagonist": false
+   },
+   "chalkboard_schedule": {
+    "id": "chalkboard_schedule",
+    "kind": "object",
+    "name": "Chalkboard Schedule",
+    "identity": "Sturdy pine-framed wall chalkboard divided into client restoration columns.",
+    "initial": {
+     "state": "blank slate with empty client intake boxes drawn",
+     "placement": "office wall"
+    },
+    "protagonist": false
+   },
+   "vintage_steering_wheel": {
+    "id": "vintage_steering_wheel",
+    "kind": "object",
+    "name": "Vintage Steering Wheel",
+    "identity": "Three-spoke mahogany and polished steel classic roadster steering wheel.",
+    "initial": {
+     "state": "cracked peeling lacquer with tarnished steel spokes",
+     "placement": "parts tray"
+    },
+    "protagonist": false
+   }
+  },
+  "locations": {
+   "outdoor_apron": {
+    "id": "outdoor_apron",
+    "name": "Shop Apron",
+    "look": "Paved exterior driveway outside tall corrugated metal roll-up bay doors under morning sun."
+   },
+   "front_office": {
+    "id": "front_office",
+    "name": "Front Office",
+    "look": "Glass-walled reception space with linoleum flooring, counter, and view into the garage bays."
+   },
+   "wash_bay": {
+    "id": "wash_bay",
+    "name": "Wash Bay",
+    "look": "Tiled wet floor with recessed drainage grates, high-pressure hose reels, and bright overhead LEDs."
+   },
+   "paint_correction_bay": {
+    "id": "paint_correction_bay",
+    "name": "Paint Correction Bay",
+    "look": "Enclosed dust-free studio lined with diffused hexagonal inspection ring-lights."
+   },
+   "upholstery_station": {
+    "id": "upholstery_station",
+    "name": "Upholstery Station",
+    "look": "Dedicated alcove with padded workbenches, parts racks, and industrial hanging extraction ducts."
+   }
+  }
+ },
+ "shots": [
+  {
+   "prompt": "On the Shop Apron, morning sun illuminates the paved exterior driveway directly outside tall corrugated metal roll-up bay doors.\n\nMilo Vance, an athletic man in his mid-30s with olive skin and short cropped dark brown hair, wears clean gray mechanic overalls, black rubber work boots, and a backwards navy baseball cap. Beside him stands Elena Rostova, a late-50s woman with sharp features, fair skin, and wavy silver-gray hair, dressed in a beige trench coat over a cream knit top and a string of freshwater pearls. Elena gestures toward her Vintage Convertible, a 1968 crimson roadster parked at bay 1 wash slip that sits caked in thick barn dust, dried mud on rims, and oxidized paint. With an anxious, hopeful smile, Elena extends her car keys toward Milo.\n\nWide tracking shot as Milo walks out to inspect the dusty car beside Elena.",
+   "annotation": {
+    "title_en": "Elena steps out onto the shop apron, gesturing at her barn-f",
+    "scene": "outdoor_apron",
+    "camera": "Wide tracking shot as Milo walks out to inspect the dusty car beside Elena.",
+    "beat": "Elena steps out onto the shop apron, gesturing at her barn-find roadster covered in decades of grime.",
+    "present": [
+     "milo",
+     "elena",
+     "convertible"
+    ],
+    "first_appearance": [
+     "milo",
+     "elena",
+     "convertible"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Elena extends her keys toward Milo with an anxious, hopeful smile.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "elena.outfit": "beige trench coat over cream knit top",
+     "elena.accessory": "string of freshwater pearls",
+     "convertible.state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+     "convertible.placement": "bay 1 wash slip"
+    }
+   }
+  },
+  {
+   "prompt": "Outside on the Shop Apron, warm morning light reflects across the paved concrete driveway bordering the closed metal bay doors.\n\nMilo Vance stands in his clean gray mechanic overalls, black rubber work boots, and backwards navy baseball cap. Tariq Mansoor, a stocky man in his 40s with warm brown skin, buzzcut dark hair, and a round jovial face, wears a flour-dusted burgundy polo, dark denim trousers, and a khaki sun visor. Tariq pulls up his Delivery Van, a boxy 1990s white cargo van with faded Tariq's Bakes lettering, featuring a deep front fender dent, faded panels, and grease-smeared bumpers at the bay 2 lift. Laughing heartily, Tariq steps out, wipes flour-dusted hands on a rag, claps Milo on the shoulder, and taps his caved-in front fender.\n\nMedium pan following Tariq as he taps the caved-in front fender of his white van.",
+   "annotation": {
+    "title_en": "Tariq pulls his dented bakery delivery van up onto the apron",
+    "scene": "outdoor_apron",
+    "camera": "Medium pan following Tariq as he taps the caved-in front fender of his white van.",
+    "beat": "Tariq pulls his dented bakery delivery van up onto the apron, laughing as he climbs out to greet Milo.",
+    "present": [
+     "milo",
+     "tariq",
+     "delivery_van"
+    ],
+    "first_appearance": [
+     "tariq",
+     "delivery_van"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Tariq wipes his floury hands on a rag and claps Milo on the shoulder.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "tariq.outfit": "flour-dusted burgundy polo and dark denim trousers",
+     "tariq.headwear": "khaki sun visor",
+     "delivery_van.state": "deep front fender dent, faded panels, grease-smeared bumpers",
+     "delivery_van.placement": "bay 2 lift"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Front Office, morning light floods through glass-walled partitions across linoleum flooring, a reception counter, and garage bay viewing windows.\n\nMilo Vance, dressed in his clean gray mechanic overalls, black rubber work boots, and backwards navy baseball cap, stands before the pine-framed Chalkboard Schedule on the office wall. Beside him, Elena Rostova in her beige trench coat and pearl necklace, and Tariq Mansoor in his flour-dusted polo and sun visor, sign intake clipboards. Milo takes a piece of yellow chalk and inscribes client names Rostova and Mansoor alongside detailed task checklists into the chalkboard's empty intake boxes.\n\nEye-level medium shot framing Milo writing on the chalkboard between both customers.",
+   "annotation": {
+    "title_en": "Inside the reception office, Milo logs both vehicles on the ",
+    "scene": "front_office",
+    "camera": "Eye-level medium shot framing Milo writing on the chalkboard between both customers.",
+    "beat": "Inside the reception office, Milo logs both vehicles on the wall schedule while Elena and Tariq sign forms.",
+    "present": [
+     "milo",
+     "elena",
+     "tariq",
+     "chalkboard_schedule"
+    ],
+    "first_appearance": [
+     "chalkboard_schedule"
+    ],
+    "changes": [
+     {
+      "entity": "chalkboard_schedule",
+      "attr": "state",
+      "value": "inscribed with client names Rostova and Mansoor alongside task checklists"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Milo holds a piece of yellow chalk while reviewing intake clipboards.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "chalkboard_schedule": {
+      "state": "blank slate with empty client intake boxes drawn",
+      "placement": "office wall"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "elena.outfit": "beige trench coat over cream knit top",
+     "elena.accessory": "string of freshwater pearls",
+     "tariq.outfit": "flour-dusted burgundy polo and dark denim trousers",
+     "tariq.headwear": "khaki sun visor",
+     "chalkboard_schedule.state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+     "chalkboard_schedule.placement": "office wall"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Wash Bay, overhead LEDs illuminate the wet tiled floor, recessed drainage grates, and wall-mounted high-pressure hose reels.\n\nMilo Vance wears his backwards navy baseball cap and black rubber work boots, his gray mechanic overalls becoming splattered with soapy water and mud across his chest. At bay 1 wash slip, the Vintage Convertible sits caked in thick barn dust, dried mud on rims, and oxidized paint. Grabbing the Foam Cannon—a brass quick-connect sprayer with a translucent soap reservoir from the rack—Milo grips the lance with both hands, bracing against the kickback as concentrated pink suds power-soak the roadster and blast away layers of grime.\n\nLow-angle shot focusing on the high-pressure spray blanketing the vehicle in thick pink foam.",
+   "annotation": {
+    "title_en": "Milo begins power-soaking the vintage roadster, getting spla",
+    "scene": "wash_bay",
+    "camera": "Low-angle shot focusing on the high-pressure spray blanketing the vehicle in thick pink foam.",
+    "beat": "Milo begins power-soaking the vintage roadster, getting splashed across his chest as mud blasts off the body.",
+    "present": [
+     "milo",
+     "convertible",
+     "foam_cannon"
+    ],
+    "first_appearance": [
+     "foam_cannon"
+    ],
+    "changes": [
+     {
+      "entity": "milo",
+      "attr": "stains",
+      "value": "soapy water and mud splatters on chest"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Milo grips the foam lance with both hands, bracing against the spray pressure.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "convertible.state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+     "convertible.placement": "bay 1 wash slip",
+     "foam_cannon.state": "filled with thick concentrated pink foaming soap",
+     "foam_cannon.placement": "wash bay rack"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Wash Bay, water glints across the tiled wet floor and drainage grates beneath bright overhead industrial LEDs.\n\nMilo Vance works in his backwards navy cap, black rubber boots, and gray mechanic overalls stained with soapy water and mud splatters on his chest, with the Foam Cannon resting on the wall rack. Samira Al-Jamil, a lean woman in her early 20s with amber skin and thick curly black hair tied up, wears a navy utility jumpsuit with yellow safety glasses pushed onto her forehead. She crouches beside the front wheel of the foam-coated Vintage Convertible at bay 1 wash slip, working a soft horsehair detailing brush into the wire spokes while Milo lances away suds.\n\nTwo-shot tracking along the side of the sudsy roadster.",
+   "annotation": {
+    "title_en": "Samira joins Milo in the wash bay, scrubbing the intricate w",
+    "scene": "wash_bay",
+    "camera": "Two-shot tracking along the side of the sudsy roadster.",
+    "beat": "Samira joins Milo in the wash bay, scrubbing the intricate wire wheels while Milo lances off the soap.",
+    "present": [
+     "milo",
+     "samira",
+     "convertible",
+     "foam_cannon"
+    ],
+    "first_appearance": [
+     "samira"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Samira crouches beside the front wheel, holding a soft horsehair detailing brush.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "convertible.state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+     "convertible.placement": "bay 1 wash slip",
+     "foam_cannon.state": "filled with thick concentrated pink foaming soap",
+     "foam_cannon.placement": "wash bay rack"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Wash Bay, overhead LEDs cast bright reflections across the tiled wet floor and recessed drainage grates.\n\nMilo Vance stands in his backwards navy baseball cap, black rubber work boots, and gray mechanic overalls splattered across the chest with soapy water and mud, with the Foam Cannon resting on the rack. The Vintage Convertible at bay 1 wash slip has been foamed and pressure-rinsed, its muddy wheel wells washed completely clean, revealing clean but heavily dull, swirled, oxidized crimson paint. Milo shuts off the high-pressure lance and inspects the dull clear-coat under the harsh overhead lights as rinse water streams down the body panels.\n\nSlow orbit around the streaming wet convertible as water cascades down the drainage grate.",
+   "annotation": {
+    "title_en": "Milo completes the final rinse of the convertible, revealing",
+    "scene": "wash_bay",
+    "camera": "Slow orbit around the streaming wet convertible as water cascades down the drainage grate.",
+    "beat": "Milo completes the final rinse of the convertible, revealing clean but heavily dull, oxidized red paint.",
+    "present": [
+     "milo",
+     "convertible",
+     "foam_cannon"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "convertible",
+      "attr": "state",
+      "value": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo shuts off the lance and inspects the clear-coat under overhead LED lights.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "convertible": {
+      "state": "caked in thick barn dust, dried mud on rims, oxidized paint",
+      "placement": "bay 1 wash slip"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "convertible.state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+     "convertible.placement": "bay 1 wash slip",
+     "foam_cannon.state": "filled with thick concentrated pink foaming soap",
+     "foam_cannon.placement": "wash bay rack"
+    }
+   }
+  },
+  {
+   "prompt": "The Wash Bay features wet tiled floors, recessed drainage grates, high-pressure hose reels, and bright overhead LEDs casting stark industrial reflections. In bay 1 wash slip, the Vintage Convertible sits foamed and pressure-rinsed, its swirled oxidized crimson paint revealed and muddy wheel wells washed clean. Resting on the wash bay rack is the Foam Cannon, a brass quick-connect pressure sprayer filled with thick concentrated pink foaming soap.\n\nSamira Al-Jamil, a lean woman in her early 20s with amber skin and thick curly black hair tied up, wears a navy utility jumpsuit with yellow safety glasses perched on her forehead. With focused concentration, she uses an oversized microfiber drying towel to gently pat dry the long hood of the crimson roadster, shaking out the damp towel as she works.\n\nThe camera tracks in a smooth close-up over the red sheet metal as the dry towel steadily pulls away residual moisture beads.",
+   "annotation": {
+    "title_en": "Samira uses an oversized microfiber drying towel to gently p",
+    "scene": "wash_bay",
+    "camera": "Close-up tracking over the red sheet metal as the dry towel pulls away moisture.",
+    "beat": "Samira uses an oversized microfiber drying towel to gently pat dry the long hood of the roadster.",
+    "present": [
+     "samira",
+     "convertible",
+     "foam_cannon"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Samira shakes out the damp microfiber towel with focused concentration.",
+    "start_state": {
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "convertible.state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+     "convertible.placement": "bay 1 wash slip",
+     "foam_cannon.state": "filled with thick concentrated pink foaming soap",
+     "foam_cannon.placement": "wash bay rack"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the brightly lit Wash Bay, the tiled wet floor glistens beneath overhead LEDs beside wall-mounted hose reels and recessed floor drains.\n\nMilo Vance, an athletic man in his mid-30s with olive skin and short cropped dark brown hair, wears clean gray mechanic overalls, black rubber work boots, and a backwards navy baseball cap, with soapy water and mud splatters marking his chest. Samira Al-Jamil, a lean woman with amber skin and curly black hair up, wears a navy utility jumpsuit with yellow safety glasses on her forehead. Standing by the bay exit discussing the next stages, Samira leans back against a wash cart, accidentally smearing dark black tire grease across the front thighs of her jumpsuit, looking down at the stain in sudden amusement.\n\nA medium shot captures Milo and Samira conversing near the exit doorway with the wet bay reflected behind them.",
+   "annotation": {
+    "title_en": "Samira leans against the wash cart and accidentally smears t",
+    "scene": "wash_bay",
+    "camera": "Medium shot of Samira and Milo discussing the next stages by the bay exit.",
+    "beat": "Samira leans against the wash cart and accidentally smears tire grease along the legs of her utility suit.",
+    "present": [
+     "milo",
+     "samira"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "samira",
+      "attr": "stains",
+      "value": "black tire grease across front thighs"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Samira looks down in amusement at her newly stained jumpsuit.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs"
+    }
+   }
+  },
+  {
+   "prompt": "The Paint Correction Bay is an enclosed dust-free studio lined with diffused hexagonal inspection ring-lights overhead, casting intense geometric reflections across a glossy polished floor.\n\nMilo Vance stands tall with olive skin and short dark brown hair, dressed in gray mechanic overalls, black rubber work boots, a backwards navy baseball cap, and chest-stained soapy water and mud splatters. Beside him is Samira Al-Jamil, her amber skin highlighted under the white lights, wearing her navy utility jumpsuit marked with black tire grease across the thighs, her yellow safety glasses on her forehead. Together they reach up to adjust the glowing hexagonal ceiling lighting racks to properly inspect body panels, Milo pointing a handheld color-match inspection torch up at the ceiling grid.\n\nA wide low-angle perspective looks upward at the glowing hexagonal ceiling lights mirrored vividly across the glossy floor.",
+   "annotation": {
+    "title_en": "In the paint correction bay, Milo and Samira adjust the hexa",
+    "scene": "paint_correction_bay",
+    "camera": "Wide perspective looking up at the glowing ceiling lights reflected on the glossy floor.",
+    "beat": "In the paint correction bay, Milo and Samira adjust the hexagonal overhead lighting racks to inspect panels.",
+    "present": [
+     "milo",
+     "samira"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Milo points a handheld color-match inspection torch at the ceiling grid.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs"
+    }
+   }
+  },
+  {
+   "prompt": "In the Paint Correction Bay under brilliant hexagonal ring-lights, the Delivery Van—a boxy 1990s white cargo van with faded Tariq's Bakes lettering on its sides—rests on the bay 2 lift showing a deep front fender dent, faded panels, and grease-smeared bumpers. On a nearby metal workbench sits the Dent Puller Kit, a red stamped-metal case containing slide hammers and molded suction adapters, its latches initially secured.\n\nMilo Vance, athletic with olive skin and short cropped hair, wears his splattered gray overalls, backwards navy cap, and black rubber work boots. He rolls the van into position beneath the lamps, snaps the metal latches open on the kit, and pulls out a heavy slide hammer along with glue tabs, leaving the case open. He then positions a hot-glue tab directly against the center of the van's crumpled fender.\n\nA medium close-up frames Milo as he unlatches the red metal case and extracts the heavy slide hammer.",
+   "annotation": {
+    "title_en": "Milo rolls Tariq's van under the lamps and pops open the den",
+    "scene": "paint_correction_bay",
+    "camera": "Medium close-up as Milo snaps the metal latches open and extracts a heavy slide hammer.",
+    "beat": "Milo rolls Tariq's van under the lamps and pops open the dent puller kit to assess the fender crease.",
+    "present": [
+     "milo",
+     "delivery_van",
+     "dent_puller_kit"
+    ],
+    "first_appearance": [
+     "dent_puller_kit"
+    ],
+    "changes": [
+     {
+      "entity": "dent_puller_kit",
+      "attr": "state",
+      "value": "open red metal kit with loose slide hammer and used glue tabs"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo holds a hot-glue tab against the center of the van's crumpled fender.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "dent_puller_kit": {
+      "state": "closed red metal kit with latches secured",
+      "placement": "workbench"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "delivery_van.state": "deep front fender dent, faded panels, grease-smeared bumpers",
+     "delivery_van.placement": "bay 2 lift",
+     "dent_puller_kit.state": "open red metal kit with loose slide hammer and used glue tabs",
+     "dent_puller_kit.placement": "workbench"
+    }
+   }
+  },
+  {
+   "prompt": "Bright hexagonal light rings beam down within the clean Paint Correction Bay. On the workbench lies the open red metal Dent Puller Kit with a loose slide hammer and used glue tabs scattered inside. On the bay 2 lift sits the boxy Delivery Van.\n\nMilo Vance, wearing his mud-and-soap-splattered gray mechanic overalls, backwards navy cap, and rubber boots, works at the van's damaged corner. With a rhythmic, powerful pop of the slide hammer, he pulls the deep front fender dent flush, wipes down the degreased bumper, and sprays a smooth mist of gray primer over the stripped metal patch. He deftly catches the falling slide hammer and runs his bare thumb smoothly along the newly restored body line.\n\nA close-up focuses sharply on the crushed sheet metal popping flush under tension, followed immediately by the fine drifting plume of gray aerosol primer.",
+   "annotation": {
+    "title_en": "Milo pulls the deep dent flush with a rhythmic pop of the ha",
+    "scene": "paint_correction_bay",
+    "camera": "Close-up on the metal panel popping out under pressure, followed by a mist of gray primer.",
+    "beat": "Milo pulls the deep dent flush with a rhythmic pop of the hammer and sprays a quick coat of gray primer.",
+    "present": [
+     "milo",
+     "delivery_van",
+     "dent_puller_kit"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "delivery_van",
+      "attr": "state",
+      "value": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo catches the falling slide hammer and runs his thumb along the smoothed body line.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "delivery_van": {
+      "state": "deep front fender dent, faded panels, grease-smeared bumpers",
+      "placement": "bay 2 lift"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "delivery_van.state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+     "delivery_van.placement": "bay 2 lift",
+     "dent_puller_kit.state": "open red metal kit with loose slide hammer and used glue tabs",
+     "dent_puller_kit.placement": "workbench"
+    }
+   }
+  },
+  {
+   "prompt": "The Paint Correction Bay is bright and quiet, its dust-free air illuminated by overhead hexagonal ring-lights reflecting on the polished floor. Raised on the bay 2 lift is the white Delivery Van, displaying a reshaped fender, degreased bumper, and fresh patch of gray primer.\n\nSamira Al-Jamil, lean with amber skin and curly hair tied up, wears her navy utility jumpsuit stained with black tire grease across the front thighs and yellow safety glasses rested on her forehead. With delicate control, she feather-edges the primer patch using a fine orbital sanding block, gently leaning in to blow away a whisper of fine gray sanding residue from the metal panel.\n\nAn over-the-shoulder shot looks down past Samira's arm, watching her hand make smooth, rhythmic circular passes across the primed fender.",
+   "annotation": {
+    "title_en": "Samira feather-edges the primer patch on the delivery van us",
+    "scene": "paint_correction_bay",
+    "camera": "Over-the-shoulder shot looking down at Samira's hand smoothly circling the fender.",
+    "beat": "Samira feather-edges the primer patch on the delivery van using a fine orbital sanding block.",
+    "present": [
+     "samira",
+     "delivery_van"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Samira gently blows fine gray sanding residue off the panel.",
+    "start_state": {
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     }
+    },
+    "state": {
+     "milo.outfit": "clean gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "delivery_van.state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+     "delivery_van.placement": "bay 2 lift"
+    }
+   }
+  },
+  {
+   "prompt": "The Paint Correction Bay is an enclosed dust-free studio lined with diffused hexagonal inspection ring-lights, casting sharp luminous reflections across clean concrete floors.\n\nMilo Vance, an athletic man in his mid-30s with olive skin and short cropped dark brown hair, is wearing clean gray mechanic overalls, black rubber work boots, a backwards navy baseball cap, and soapy water and mud splatters on his chest. Resting on a nearby detailing cart is the Rotary Buffer, a heavy electric polishing machine with a wide spinning head, dual side handles, and a fresh white wool pad. Milo slips on a thick charcoal shop apron over his overalls, tying the straps behind his back. He lifts the buffer, checking the heavy cord, and clicks the trigger to test the motor as it gives off a sharp, high-pitched whir.\n\nMedium profile shot as Milo ties the apron straps behind his back and checks the buffer cord under the bright ring-lights.",
+   "annotation": {
+    "title_en": "Milo slips on a thick charcoal apron to protect himself befo",
+    "scene": "paint_correction_bay",
+    "camera": "Medium profile shot as Milo ties the apron straps behind his back and checks the buffer cord.",
+    "beat": "Milo slips on a thick charcoal apron to protect himself before taking down the rotary buffer from the cart.",
+    "present": [
+     "milo",
+     "rotary_buffer"
+    ],
+    "first_appearance": [
+     "rotary_buffer"
+    ],
+    "changes": [
+     {
+      "entity": "milo",
+      "attr": "outfit",
+      "value": "charcoal shop apron over gray mechanic overalls"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo tests the buffer trigger, listening to the high-pitched motor spin.",
+    "start_state": {
+     "milo": {
+      "outfit": "clean gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "rotary_buffer": {
+      "state": "clean tool with fresh white wool pad",
+      "placement": "detailing cart"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "clean tool with fresh white wool pad",
+      "placement": "detailing cart"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "rotary_buffer.state": "clean tool with fresh white wool pad",
+     "rotary_buffer.placement": "detailing cart"
+    }
+   }
+  },
+  {
+   "prompt": "The enclosed Paint Correction Bay glows under the sharp overhead hexagonal lights, highlighting every surface imperfection on the panels within the dust-free studio.\n\nMilo Vance—athletic, mid-30s, olive skin, and short cropped dark brown hair—wears a charcoal shop apron over gray mechanic overalls, black rubber work boots, a backwards navy baseball cap, and soapy water and mud splatters on his chest. Sitting on the detailing shelf is the Chrome Polish Jar, a squat circular aluminum tin with embossed silver lettering, sealed with its intact label. Milo holds the Rotary Buffer, applying heavy cutting compound to the fresh pad. As he works down a red test panel, the pad becomes crimson-stained with paste. He steadies the heavy machine's vibration using both hands on the ergonomic grip.\n\nClose-up of the rotating pad smearing paste across a red test plate, staining the foam pad pink-red.",
+   "annotation": {
+    "title_en": "Milo dots heavy cutting compound on a fresh foam pad and beg",
+    "scene": "paint_correction_bay",
+    "camera": "Close-up of the rotating pad smearing paste across a red test plate, staining the foam pad pink-red.",
+    "beat": "Milo dots heavy cutting compound on a fresh foam pad and begins working down test panels.",
+    "present": [
+     "milo",
+     "rotary_buffer",
+     "chrome_polish_jar"
+    ],
+    "first_appearance": [
+     "chrome_polish_jar"
+    ],
+    "changes": [
+     {
+      "entity": "rotary_buffer",
+      "attr": "state",
+      "value": "used tool with crimson-stained foam pad"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo steadies the vibration with both hands resting on the ergonomic grip.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "rotary_buffer": {
+      "state": "clean tool with fresh white wool pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "rotary_buffer.state": "used tool with crimson-stained foam pad",
+     "rotary_buffer.placement": "detailing cart",
+     "chrome_polish_jar.state": "sealed aluminum tin with intact label",
+     "chrome_polish_jar.placement": "detailing shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Paint Correction Bay, bright hexagonal LED arrays reflect crisply off the studio's polished floor and immaculate walls.\n\nSamira Al-Jamil, a woman in her early 20s with a lean frame, amber skin, and thick curly black hair tied up, wears a navy utility jumpsuit with black tire grease across her front thighs and yellow safety glasses pushed up on her forehead. Positioned on the bay 2 lift is the Delivery Van, a boxy 1990s white cargo van with faded Tariq's Bakes lettering, its pulled fender dent reshaped, bumper degreased, and stripped paint patch primed in matte gray. Samira meticulously masks the side windows and logos with green automotive tape and brown craft paper, tearing each strip cleanly with her thumbnail and pressing it down firmly.\n\nMedium pan showing Samira pulling a long strip of green tape along the window seal.",
+   "annotation": {
+    "title_en": "Samira meticulously seals the van's side windows and logos w",
+    "scene": "paint_correction_bay",
+    "camera": "Medium pan showing Samira pulling a long strip of green tape along the window seal.",
+    "beat": "Samira meticulously seals the van's side windows and logos with green automotive masking tape and craft paper.",
+    "present": [
+     "samira",
+     "delivery_van"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Samira tears the tape cleanly with her thumbnail and presses it down firmly.",
+    "start_state": {
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "delivery_van.state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+     "delivery_van.placement": "bay 2 lift"
+    }
+   }
+  },
+  {
+   "prompt": "The Paint Correction Bay's dust-filtered air extraction hums quietly, illuminated by brilliant hexagonal overhead lighting that eliminates shadows across the floor.\n\nMilo Vance is present, sporting his athletic build, short dark cropped hair, charcoal shop apron over gray mechanic overalls, rubber work boots, backwards navy cap, and dried mud splatters on his chest. Nearby on the bay 2 lift sits the boxy Delivery Van with its reshaped fender and gray-primed repair patch. Milo grips a professional pneumatic spray gun and sweeps an exact match white basecoat across the primed fender, squinting through the fine paint atomization to verify smooth, seamless coverage.\n\nLow tracking shot following the fluid, overlapping sweep of the paint spray gun.",
+   "annotation": {
+    "title_en": "Milo applies an exact match white basecoat over the primed f",
+    "scene": "paint_correction_bay",
+    "camera": "Low tracking shot following the fluid, overlapping sweep of the paint spray gun.",
+    "beat": "Milo applies an exact match white basecoat over the primed fender of the bakery van.",
+    "present": [
+     "milo",
+     "delivery_van"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Milo squints through the clean paint mist to verify uniform coverage.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "delivery_van.state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+     "delivery_van.placement": "bay 2 lift"
+    }
+   }
+  },
+  {
+   "prompt": "The enclosed Paint Correction Bay is silent save for the ventilation fans, its bright hexagonal light banks overhead casting crisp geometric reflections across the clean concrete.\n\nMilo Vance stands in his charcoal shop apron over gray mechanic overalls, black rubber boots, backwards navy cap, and stained chest, beside Samira Al-Jamil in her navy utility jumpsuit with grease-streaked thighs and yellow safety glasses on her forehead. Together, they roll a tall wheeled infrared curing lamp into place before the freshly sprayed delivery van fender. Milo leans down to adjust the tilt knob on the heating element while Samira checks and turns the timer dial on the control unit.\n\nMedium two-shot bathed in warm amber infrared glow as the heating elements click on.",
+   "annotation": {
+    "title_en": "Milo and Samira roll an infrared curing lamp into place to b",
+    "scene": "paint_correction_bay",
+    "camera": "Medium two-shot bathed in warm amber infrared glow.",
+    "beat": "Milo and Samira roll an infrared curing lamp into place to bake the freshly sprayed paint on the van.",
+    "present": [
+     "milo",
+     "samira"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Milo adjusts the tilt knob of the heating element while Samira checks the timer dial.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs"
+    }
+   }
+  },
+  {
+   "prompt": "The Upholstery Station is a dedicated detailing alcove fitted with padded workbenches, parts racks, and industrial hanging extraction ducts suspended above.\n\nSamira Al-Jamil, lean with amber skin and curly black hair, wears her navy utility jumpsuit with black tire grease across the thighs and yellow safety glasses pushed up on her forehead. Standing in the corner staging area is the Steam Extractor, a wheeled industrial steam cleaning unit with clean, empty transparent recovery tanks. Samira gathers a red bandana and ties it securely over her hair bun. She rolls the extractor over, plugs in the reinforced steam line, and smiles as the boiler clicks and lets out a soft, pressurized hiss.\n\nClose-up of Samira knotting the bandana behind her neck and plugging in the steam line.",
+   "annotation": {
+    "title_en": "At the upholstery station, Samira ties a red bandana over he",
+    "scene": "upholstery_station",
+    "camera": "Close-up of Samira knotting the bandana behind her neck and plugging in the steam line.",
+    "beat": "At the upholstery station, Samira ties a red bandana over her hair before prepping the steam extractor.",
+    "present": [
+     "samira",
+     "steamer_machine"
+    ],
+    "first_appearance": [
+     "steamer_machine"
+    ],
+    "changes": [
+     {
+      "entity": "samira",
+      "attr": "headwear",
+      "value": "red bandana covering hair bun"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Samira smiles as the steam boiler clicks and hisses to life.",
+    "start_state": {
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun",
+     "steamer_machine.state": "clean, empty transparent recovery tank",
+     "steamer_machine.placement": "corner staging area"
+    }
+   }
+  },
+  {
+   "prompt": "The Paint Correction Bay is an enclosed, dust-free studio lined with diffused hexagonal inspection ring-lights overhead, casting intense geometric reflections onto the polished floor.\n\nMilo Vance, an athletic man in his mid-30s with olive skin, short cropped dark brown hair, wearing a charcoal shop apron over gray mechanic overalls, black rubber work boots, a backwards navy baseball cap, and soapy water and mud splatters on his chest, positions the heavy Rotary Buffer. Nearby sits the Vintage Convertible, its crimson roadster body foamed and pressure-rinsed with swirled, oxidized paint. Milo guides the spinning buffer over the faded crimson boot lid, tilting the pad slightly on edge to maneuver around the trunk emblem.\n\nA high-angle view captures the sharp contrast between the unbuffed milky haze and the restored vibrant gloss emerging under the LED light grid.",
+   "annotation": {
+    "title_en": "Milo brings the convertible into the bay and guides the rota",
+    "scene": "paint_correction_bay",
+    "camera": "High-angle view showing the sharp contrast between unbuffed haze and restored gloss under the LED light.",
+    "beat": "Milo brings the convertible into the bay and guides the rotary buffer over the faded crimson boot lid.",
+    "present": [
+     "milo",
+     "convertible",
+     "rotary_buffer"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Milo tilts the pad slightly on edge to work around the trunk emblem.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "convertible.state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+     "convertible.placement": "bay 1 wash slip",
+     "rotary_buffer.state": "used tool with crimson-stained foam pad",
+     "rotary_buffer.placement": "detailing cart"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Paint Correction Bay, the clean studio floor glows brightly under the grid of hexagonal ceiling lights.\n\nMilo Vance, dressed in his splattered charcoal apron over gray overalls, backwards navy cap, and rubber work boots, sets down the Rotary Buffer on the detailing cart. The Vintage Convertible now gleams with compounded, mirror-polished crimson paint and pristine chrome trim. Milo takes a clean microfiber cloth and gently wipes away the remaining compound haze, revealing a deep liquid reflection across the entire car, smiling with deep satisfaction as he buffs the final panel corner.\n\nThe camera executes a slow gliding shot along the crimson front fender, capturing crisp mirror reflections of the overhead inspection lights.",
+   "annotation": {
+    "title_en": "Milo wipes off the haze with a soft cloth, revealing a deep ",
+    "scene": "paint_correction_bay",
+    "camera": "Slow gliding shot along the crimson fender, capturing perfect mirror reflections of the overhead lights.",
+    "beat": "Milo wipes off the haze with a soft cloth, revealing a deep liquid reflection across the entire convertible.",
+    "present": [
+     "milo",
+     "convertible",
+     "rotary_buffer"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "convertible",
+      "attr": "state",
+      "value": "compounded and mirror-polished crimson paint, pristine chrome trim"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo smiles with deep satisfaction as he buffs the final panel corner.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "convertible": {
+      "state": "foamed and pressure-rinsed, clean but swirled oxidized paint with muddy wheel wells washed",
+      "placement": "bay 1 wash slip"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "convertible.state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+     "convertible.placement": "bay 1 wash slip",
+     "rotary_buffer.state": "used tool with crimson-stained foam pad",
+     "rotary_buffer.placement": "detailing cart"
+    }
+   }
+  },
+  {
+   "prompt": "Hexagonal white inspection lights flood the pristine, dust-free Paint Correction Bay with clear, crisp illumination.\n\nMilo Vance, wearing his charcoal shop apron over gray mechanic overalls, black rubber work boots, backwards navy baseball cap, and chest stains, approaches the detailing shelf. He picks up the Chrome Polish Jar, a sealed circular aluminum tin with embossed silver lettering. He twists the lid off, leaving pasty residue around the rim, and prepares to treat the roadster's exterior wing mirrors and headlight bezels, dabbing silver paste onto a round cotton applicator pad.\n\nA close-up frames Milo's gloved fingers scooping thick silver paste out from the opened tin.",
+   "annotation": {
+    "title_en": "Milo unscrews the chrome polish jar to coat the convertible'",
+    "scene": "paint_correction_bay",
+    "camera": "Close-up on Milo's gloved fingers scooping silver paste from the opened tin.",
+    "beat": "Milo unscrews the chrome polish jar to coat the convertible's exterior wing mirrors and headlight bezels.",
+    "present": [
+     "milo",
+     "chrome_polish_jar"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "chrome_polish_jar",
+      "attr": "state",
+      "value": "opened aluminum tin with pasty residue around rim"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo rubs paste onto a round cotton applicator pad.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "chrome_polish_jar": {
+      "state": "sealed aluminum tin with intact label",
+      "placement": "detailing shelf"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "chrome_polish_jar.state": "opened aluminum tin with pasty residue around rim",
+     "chrome_polish_jar.placement": "detailing shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Back in the Upholstery Station, padded wooden workbenches, heavy parts racks, and industrial hanging extraction ducts create a focused restoration workspace under warm overhead shop lamps.\n\nMilo Vance, in his charcoal apron, gray mechanic overalls, rubber boots, backwards cap, and stained chest, carries detached interior trim components into the bay. He meets Samira Al-Jamil, a woman in her early 20s with amber skin and thick curly black hair tied up under a red bandana, wearing a navy utility jumpsuit stained with black tire grease across the front thighs and yellow safety glasses perched on her forehead. Samira gestures toward the worn leather seating cushions laid out across the table.\n\nA medium shot frames the pair reviewing the restoration workbench loaded with weathered automotive components.",
+   "annotation": {
+    "title_en": "Milo carries the detached interior components into the uphol",
+    "scene": "upholstery_station",
+    "camera": "Medium shot of the pair reviewing the restoration bench loaded with weathered components.",
+    "beat": "Milo carries the detached interior components into the upholstery bay to coordinate with Samira.",
+    "present": [
+     "milo",
+     "samira"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Samira gestures toward the worn leather seating cushions set on the table.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun"
+    }
+   }
+  },
+  {
+   "prompt": "The Upholstery Station features padded workbenches set beneath hanging exhaust ducts and bright industrial task lamps illuminating rows of vintage components.\n\nMilo Vance, in his stained charcoal apron and backwards navy cap, stands beside the parts tray holding the Vintage Steering Wheel, a three-spoke mahogany and polished steel classic roadster steering wheel covered in cracked peeling lacquer with tarnished steel spokes. Milo pulls a pair of clear polycarbonate safety goggles over his eyes, securing the strap over his temples. He takes a brass scraper and gently peels away brittle flakes of old yellow lacquer along the wooden rim.\n\nA close-up captures Milo adjusting the goggle strap against his temples before carefully shaving the brittle finish.",
+   "annotation": {
+    "title_en": "Milo puts on clear safety goggles to strip the cracked yello",
+    "scene": "upholstery_station",
+    "camera": "Close-up on Milo adjusting the goggle strap over his temples before scraping the wood rim.",
+    "beat": "Milo puts on clear safety goggles to strip the cracked yellow varnish from the vintage steering wheel.",
+    "present": [
+     "milo",
+     "vintage_steering_wheel"
+    ],
+    "first_appearance": [
+     "vintage_steering_wheel"
+    ],
+    "changes": [
+     {
+      "entity": "milo",
+      "attr": "accessory",
+      "value": "clear polycarbonate safety goggles worn over eyes"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo uses a brass scraper to gently peel away brittle flakes of old lacquer.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest"
+     },
+     "vintage_steering_wheel": {
+      "state": "cracked peeling lacquer with tarnished steel spokes",
+      "placement": "parts tray"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "cracked peeling lacquer with tarnished steel spokes",
+      "placement": "parts tray"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "vintage_steering_wheel.state": "cracked peeling lacquer with tarnished steel spokes",
+     "vintage_steering_wheel.placement": "parts tray"
+    }
+   }
+  },
+  {
+   "prompt": "In the warm task lighting of the Upholstery Station, padded workbenches and overhead extraction hoods frame an orderly crafting space.\n\nMilo Vance, wearing clear polycarbonate safety goggles over his eyes, charcoal apron, overalls, and backwards navy cap, reaches near the detailing shelf where the Leather Conditioner Bottle sits as a tall amber glass bottle with a black trigger spray nozzle. Milo applies hand-rubbed oil across the Vintage Steering Wheel, transforming it into a restored satin walnut rim with gleaming polished brass spokes. He delicately spins the wheel on a bench spindle to inspect its pristine balance.\n\nA tight macro shot tracks the rich grain of the restored mahogany steering wheel springing to life under the glistening oil.",
+   "annotation": {
+    "title_en": "Milo finishes applying hand-rubbed oil to the wood and buffs",
+    "scene": "upholstery_station",
+    "camera": "Tight macro shot as the rich grain of the restored mahogany steering wheel comes alive under oil.",
+    "beat": "Milo finishes applying hand-rubbed oil to the wood and buffs the three center spokes to a brilliant shine.",
+    "present": [
+     "milo",
+     "vintage_steering_wheel",
+     "leather_conditioner_bottle"
+    ],
+    "first_appearance": [
+     "leather_conditioner_bottle"
+    ],
+    "changes": [
+     {
+      "entity": "vintage_steering_wheel",
+      "attr": "state",
+      "value": "restored satin walnut rim with gleaming polished brass spokes"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo spins the wheel delicately on the bench spindle to admire the balance.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "vintage_steering_wheel": {
+      "state": "cracked peeling lacquer with tarnished steel spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "full amber bottle of nourishing leather emulsion",
+      "placement": "detailing shelf"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "full amber bottle of nourishing leather emulsion",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "vintage_steering_wheel.state": "restored satin walnut rim with gleaming polished brass spokes",
+     "vintage_steering_wheel.placement": "parts tray",
+     "leather_conditioner_bottle.state": "full amber bottle of nourishing leather emulsion",
+     "leather_conditioner_bottle.placement": "detailing shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Paint Correction Bay, an enclosed dust-free studio lined with diffused hexagonal inspection ring-lights casting crisp geometric reflections across the floor.\n\nSamira Al-Jamil, a woman in her early 20s with a lean frame, amber skin, and thick curly black hair tied up, wears a navy utility jumpsuit stained with black tire grease across the front thighs, yellow safety glasses perched on her forehead, and a red bandana covering her hair bun. She stands beside the boxy white Delivery Van resting on the bay 2 lift with its pulled fender dent reshaped, degreased bumper, and stripped paint patch primed gray. Samira carefully unmasks the dried paint, peeling back the paper to reveal clean seams, then balls up the brown masking paper into a bundle.\n\nA medium tracking shot glides along the van's side as the paper smoothly peels away from the crisp white body.",
+   "annotation": {
+    "title_en": "Back at the delivery van, Samira carefully unmasks the dried",
+    "scene": "paint_correction_bay",
+    "camera": "Medium tracking shot as paper peels away from the crisp white van body.",
+    "beat": "Back at the delivery van, Samira carefully unmasks the dried paint, pulling away paper to show seamless seams.",
+    "present": [
+     "samira",
+     "delivery_van"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Samira balls up the used brown masking paper into a bundle.",
+    "start_state": {
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "full amber bottle of nourishing leather emulsion",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun",
+     "delivery_van.state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+     "delivery_van.placement": "bay 2 lift"
+    }
+   }
+  },
+  {
+   "prompt": "In the Paint Correction Bay, overhead hexagonal LED arrays bathe the workspace in clinical white illumination, throwing sharp reflections across the newly finished vehicle.\n\nMilo Vance, an athletic man in his mid-30s with olive skin and short cropped dark brown hair, wears a charcoal shop apron over gray mechanic overalls splattered with soapy water and mud, black rubber work boots, a backwards navy baseball cap, and clear polycarbonate safety goggles over his eyes. He peels away the remaining tape from the Delivery Van, unveiling freshly repainted gloss white panels, restored red Tariq's Bakes lettering, and a washed undercarriage. Milo leans back against a steel tool chest, admiring the uniform factory shine.\n\nA low wide-angle camera frames the immaculate, dent-free front quarter panel of the gleaming van.",
+   "annotation": {
+    "title_en": "Milo removes the remaining tape and stands back to inspect t",
+    "scene": "paint_correction_bay",
+    "camera": "Low wide-angle view framing the immaculate, dent-free front quarter panel of Tariq's van.",
+    "beat": "Milo removes the remaining tape and stands back to inspect the flawless white paint and sharp red lettering.",
+    "present": [
+     "milo",
+     "delivery_van"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "delivery_van",
+      "attr": "state",
+      "value": "freshly repainted gloss white panels, restored lettering, washed undercarriage"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo leans back against the tool chest, admiring the uniform factory shine.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "delivery_van": {
+      "state": "pulled fender dent reshaped, degreased bumper, stripped paint patch primed gray",
+      "placement": "bay 2 lift"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "full amber bottle of nourishing leather emulsion",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "delivery_van.state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+     "delivery_van.placement": "bay 2 lift"
+    }
+   }
+  },
+  {
+   "prompt": "In the Upholstery Station, a dedicated alcove furnished with padded workbenches, organized parts racks, and industrial hanging extraction ducts. On a detailing shelf rests the Leather Conditioner Bottle, a full amber glass bottle filled with nourishing leather emulsion and fitted with a black trigger nozzle.\n\nSamira Al-Jamil, wearing her grease-stained navy utility jumpsuit, yellow safety glasses on her forehead, and a red bandana over her bun, rolls the Steam Extractor—a wheeled industrial steam cleaning unit with empty, clear plastic recovery tanks—out from its corner staging area toward the staged leather seats. She clicks a triangular upholstery brush head onto the steam wand and unfurls the vacuum hose.\n\nA dolly shot moves alongside the steamer unit as Samira unfurls the vacuum hose across the station floor.",
+   "annotation": {
+    "title_en": "Samira wheels the steam extractor toward the convertible's l",
+    "scene": "upholstery_station",
+    "camera": "Dolly shot moving with the steamer unit as Samira unfurls the vacuum hose.",
+    "beat": "Samira wheels the steam extractor toward the convertible's leather bucket seats staged on stands.",
+    "present": [
+     "samira",
+     "steamer_machine",
+     "leather_conditioner_bottle"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Samira clicks the triangular upholstery brush head onto the steam wand.",
+    "start_state": {
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     },
+     "leather_conditioner_bottle": {
+      "state": "full amber bottle of nourishing leather emulsion",
+      "placement": "detailing shelf"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "full amber bottle of nourishing leather emulsion",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun",
+     "steamer_machine.state": "clean, empty transparent recovery tank",
+     "steamer_machine.placement": "corner staging area",
+     "leather_conditioner_bottle.state": "full amber bottle of nourishing leather emulsion",
+     "leather_conditioner_bottle.placement": "detailing shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Within the specialized alcove of the Upholstery Station, hanging extraction ducts hum softly beneath the focused overhead lights, surrounding the padded workbenches.\n\nSamira Al-Jamil, in her grease-stained navy utility jumpsuit with safety glasses on her forehead and red bandana over her hair, grips the wand of the Steam Extractor. She depresses the steam trigger in slow, overlapping strokes, drawing years of embedded grit and dark water from the seat pleats directly into the clear tank, turning the reservoir water into a warm, sloshing, murky brown soup.\n\nA close-up focuses tightly on the clear suction head pulling cloudy dirt and dark liquid from the tan leather pleats into the reservoir.",
+   "annotation": {
+    "title_en": "Samira runs the extractor over the seats, drawing years of e",
+    "scene": "upholstery_station",
+    "camera": "Close-up on the clear suction head pulling cloudy dirt from the tan leather pleats into the reservoir.",
+    "beat": "Samira runs the extractor over the seats, drawing years of embedded grit and dark water into the clear tank.",
+    "present": [
+     "samira",
+     "steamer_machine"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "steamer_machine",
+      "attr": "state",
+      "value": "warm running machine with murky brown wastewater in recovery tank"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Samira depresses the steam trigger in slow, overlapping strokes.",
+    "start_state": {
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "steamer_machine": {
+      "state": "clean, empty transparent recovery tank",
+      "placement": "corner staging area"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "full amber bottle of nourishing leather emulsion",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun",
+     "steamer_machine.state": "warm running machine with murky brown wastewater in recovery tank",
+     "steamer_machine.placement": "corner staging area"
+    }
+   }
+  },
+  {
+   "prompt": "At the Upholstery Station, warm industrial lights reflect across the leather staging benches as the overhead extraction ducts pull away residual steam.\n\nMilo Vance, wearing his charcoal shop apron over gray overalls, mud splatters on his chest, backwards navy cap, and safety goggles, grabs the Leather Conditioner Bottle from the detailing shelf. He pumps the trigger spray twice, misting the cushion with rich balm, leaving greasy fingerprints across the half-empty amber bottle. Samira Al-Jamil, wearing her navy utility jumpsuit and red bandana, massages the conditioner deep into the hide using circular palm motions to bring out the hide's natural luster.\n\nA medium two-shot frames their coordinated hands working together to restore the supple luster of the vintage leather.",
+   "annotation": {
+    "title_en": "Milo sprays rich conditioner from the bottle across the drie",
+    "scene": "upholstery_station",
+    "camera": "Medium two-shot of their coordinated hands restoring the supple luster of the leather.",
+    "beat": "Milo sprays rich conditioner from the bottle across the dried seats while Samira massages it deep into the hide.",
+    "present": [
+     "milo",
+     "samira",
+     "leather_conditioner_bottle"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "leather_conditioner_bottle",
+      "attr": "state",
+      "value": "half-empty amber bottle with greasy fingerprints"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo pumps the trigger spray twice, misting the seat cushion.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "leather_conditioner_bottle": {
+      "state": "full amber bottle of nourishing leather emulsion",
+      "placement": "detailing shelf"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun",
+     "leather_conditioner_bottle.state": "half-empty amber bottle with greasy fingerprints",
+     "leather_conditioner_bottle.placement": "detailing shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Front Office, a glass-walled reception space featuring clean linoleum flooring, a front desk counter, and an expansive view into the adjacent garage bays.\n\nMilo Vance, dressed in his charcoal shop apron over stained gray mechanic overalls, black rubber boots, backwards navy cap, and clear goggles, steps into the quiet reception area. On the wall hangs the Chalkboard Schedule, a pine-framed board inscribed with the names Rostova and Mansoor alongside client task checklists. Milo holds a stick of white chalk, hovering right over the progress boxes as he prepares to mark off the completed mechanical and paint milestones.\n\nA medium shot frames Milo studying the schedule board through the glass partition.",
+   "annotation": {
+    "title_en": "Milo walks back into the quiet front office to check off the",
+    "scene": "front_office",
+    "camera": "Medium shot framing Milo studying the schedule board through the glass partition.",
+    "beat": "Milo walks back into the quiet front office to check off the completed mechanical and paint milestones.",
+    "present": [
+     "milo",
+     "chalkboard_schedule"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Milo holds a piece of chalk, hovering over the progress boxes.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "chalkboard_schedule.state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+     "chalkboard_schedule.placement": "office wall"
+    }
+   }
+  },
+  {
+   "prompt": "The Front Office is a glass-walled reception space featuring scuffed linoleum flooring, a reception counter, and clear visibility into the adjacent garage bays. Hanging securely on the wall, the pine-framed Chalkboard Schedule displays client columns for Rostova and Mansoor alongside detailed task checklists.\n\nMilo Vance, an athletic man in his mid-30s with olive skin and short cropped dark brown hair, wears a charcoal shop apron over gray overalls, black rubber work boots, a backwards navy cap, clear polycarbonate safety goggles, and soapy water and mud splatters on his chest. Beside him stands Samira Al-Jamil, a lean woman in her early 20s with amber skin, wearing a navy utility jumpsuit stained with black tire grease, a red bandana over her bun, and yellow safety glasses on her forehead. Milo draws a bold green chalk line, marking the final restoration tasks completed on the chalkboard. Grinning, Samira claps Milo on the arm in celebration.\n\nA close-up shot focuses directly on the chalkboard as the final check mark snaps firmly into place.",
+   "annotation": {
+    "title_en": "Samira joins Milo in the office, grinning as Milo ticks the ",
+    "scene": "front_office",
+    "camera": "Close-up on the chalkboard as the final check mark snaps firmly into place.",
+    "beat": "Samira joins Milo in the office, grinning as Milo ticks the final green checkmark beside both customer orders.",
+    "present": [
+     "milo",
+     "samira",
+     "chalkboard_schedule"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "chalkboard_schedule",
+      "attr": "state",
+      "value": "inscribed with all restoration tasks checked off in bold green chalk"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Samira claps Milo on the arm in celebration.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with client names Rostova and Mansoor alongside task checklists",
+      "placement": "office wall"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "soapy water and mud splatters on chest",
+     "milo.accessory": "clear polycarbonate safety goggles worn over eyes",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun",
+     "chalkboard_schedule.state": "inscribed with all restoration tasks checked off in bold green chalk",
+     "chalkboard_schedule.placement": "office wall"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Paint Correction Bay, the dust-free studio glows under rows of diffused hexagonal inspection ring-lights overhead.\n\nMilo Vance, an athletic olive-skinned man in his mid-30s with cropped dark hair, wears his charcoal shop apron over gray overalls, black rubber boots, a backwards navy cap, and soapy water splatters across his chest. Samira Al-Jamil, a lean woman in her early 20s with amber skin and curly hair in a red bandana, stands nearby in her grease-stained navy utility jumpsuit with yellow glasses propped on her forehead. Milo lifts off his clear polycarbonate safety goggles, hanging them onto a cart hook. He pats his shoulder, shaking fine white polishing compound dust across his gray overalls, sending a faint powder cloud into the air.\n\nA medium portrait shot captures Milo removing the goggles and hanging them on the cart hook.",
+   "annotation": {
+    "title_en": "Returning to the bay, Milo takes off his safety goggles, wip",
+    "scene": "paint_correction_bay",
+    "camera": "Medium portrait shot as Milo removes the goggles and hangs them on the cart hook.",
+    "beat": "Returning to the bay, Milo takes off his safety goggles, wiping away white compound dust that has settled on his shoulders.",
+    "present": [
+     "milo",
+     "samira"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "milo",
+      "attr": "accessory",
+      "value": "no accessory (removed)"
+     },
+     {
+      "entity": "milo",
+      "attr": "stains",
+      "value": "fine polishing compound dust across shoulders"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Milo pats his shoulder, sending a faint puff of white compound dust into the air.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "soapy water and mud splatters on chest",
+      "accessory": "clear polycarbonate safety goggles worn over eyes"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Paint Correction Bay, brilliant diffused hexagonal inspection ring-lights illuminate the pristine, dust-free enclosed workshop.\n\nMilo Vance, an athletic olive-skinned man with cropped dark hair, wears his charcoal shop apron over gray overalls dusted with white polishing compound, black boots, and a backwards navy cap. Nearby, Samira Al-Jamil, a lean woman with amber skin wearing a navy utility jumpsuit stained with tire grease, yellow safety glasses on her forehead, and a red bandana, completes shop chores. The two detailers conduct a careful final walkthrough of the detailing space, stowing stray cords and readying the vehicles for release. Samira smoothly coils a heavy rubber air hose onto its wall-mounted bracket.\n\nA wide, slow-panning shot glides across the clean, orderly detailing bay highlighting the spotless workspace.",
+   "annotation": {
+    "title_en": "The two detailers do a final walkthrough of the shop, stowin",
+    "scene": "paint_correction_bay",
+    "camera": "Wide slow-panning shot taking in the clean, orderly detailing bay.",
+    "beat": "The two detailers do a final walkthrough of the shop, stowing stray cords and preparing the cars for delivery.",
+    "present": [
+     "milo",
+     "samira"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Samira coils an air hose neatly onto its wall bracket.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Paint Correction Bay, diffused hexagonal ring-lights cast sharp specular highlights across the dust-free studio floor. The 1968 Vintage Convertible rests in the bay with mirror-polished crimson paint and spotless chrome trim.\n\nMilo Vance, an athletic man in his mid-30s with olive skin and short cropped hair, wears a charcoal apron over compound-dusted gray overalls, black rubber boots, and a backwards navy cap. Sitting inside the roadster's cabin, Milo carefully fits the three-spoke mahogany and polished steel Vintage Steering Wheel onto the exposed steering column. He secures it, tightening down the central chrome retaining nut before giving the polished wooden rim an affectionate pat with his open palm.\n\nAn interior view shot from the passenger seat frames Milo tightening the central chrome retaining nut.",
+   "annotation": {
+    "title_en": "Milo installs the beautifully reconditioned mahogany steerin",
+    "scene": "paint_correction_bay",
+    "camera": "Interior view from the passenger seat as Milo tightens the central chrome retaining nut.",
+    "beat": "Milo installs the beautifully reconditioned mahogany steering wheel into the convertible's steering column.",
+    "present": [
+     "milo",
+     "convertible"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Milo gives the wooden wheel an affectionate pat with his palm.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "convertible.state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+     "convertible.placement": "bay 1 wash slip"
+    }
+   }
+  },
+  {
+   "prompt": "The Paint Correction Bay is an enclosed dust-free studio radiant beneath the bright glow of geometric hexagonal inspection ceiling lights. Positioned centrally, the 1968 Vintage Convertible transforms into a showpiece with a fully detailed mirror crimson finish, treated rich leather seats, and gleaming chrome wire wheels.\n\nMilo Vance, an athletic man in his mid-30s with olive skin and short dark hair, wears his charcoal apron over gray overalls dusted with fine polishing compound, black boots, and a backwards navy cap. Milo circles the finished convertible, admiring the museum-grade luster and leaning down to wipe a solitary fingerprint from the passenger wing mirror using a soft cloth.\n\nA dramatic 360-degree sweep pans smoothly around the flawless red roadster bathed under brilliant LED arrays.",
+   "annotation": {
+    "title_en": "With seats installed and body buffed, the convertible stands",
+    "scene": "paint_correction_bay",
+    "camera": "Dramatic 360-degree sweep around the flawless red roadster bathed under brilliant LED arrays.",
+    "beat": "With seats installed and body buffed, the convertible stands gleaming like a museum masterpiece.",
+    "present": [
+     "milo",
+     "convertible"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "convertible",
+      "attr": "state",
+      "value": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Milo wipes a solitary fingerprint from the passenger wing mirror.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "convertible": {
+      "state": "compounded and mirror-polished crimson paint, pristine chrome trim",
+      "placement": "bay 1 wash slip"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "convertible.state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+     "convertible.placement": "bay 1 wash slip"
+    }
+   }
+  },
+  {
+   "prompt": "The Shop Apron is a paved exterior concrete driveway stretching outside tall corrugated metal roll-up bay doors, bathed in bright afternoon sunlight.\n\nMilo Vance, an athletic man with olive skin and short dark hair, wears his charcoal apron over compound-dusted gray overalls, black rubber boots, and a backwards navy cap. Beside him is Samira Al-Jamil, a lean woman in her early 20s with amber skin, dressed in a grease-stained navy utility jumpsuit with a red bandana and yellow glasses on her forehead. Together, they grip the lower handles and shove up the heavy corrugated metal doors. Milo blinks and raises a forearm to shield his eyes against the sudden burst of intense natural daylight.\n\nA silhouette shot captures the scene from inside the dark garage looking outward as the garage doors roll into the ceiling.",
+   "annotation": {
+    "title_en": "Milo and Samira push up the heavy roll-up doors, allowing br",
+    "scene": "outdoor_apron",
+    "camera": "Silhouette shot from inside looking outward as the garage doors roll into the ceiling.",
+    "beat": "Milo and Samira push up the heavy roll-up doors, allowing brilliant afternoon sunlight to flood the shop entrance.",
+    "present": [
+     "milo",
+     "samira"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Milo shields his eyes against the sudden burst of natural daylight.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun"
+    }
+   }
+  },
+  {
+   "prompt": "Outside the shop on the paved exterior apron beneath morning sunlight, tall corrugated metal roll-up bay doors stand open to the garage bays. The vintage crimson roadster rests parked in the bay 1 wash slip, showcasing a fully detailed mirror finish, treated leather seats, and gleaming chrome wheels.\n\nMilo Vance, an athletic olive-skinned man in his mid-30s with short cropped dark brown hair, wears a charcoal shop apron over gray mechanic overalls, black rubber work boots, and a backwards navy baseball cap, with fine polishing compound dust dusting his shoulders and no accessories. Elena Rostova, a woman in her late 50s with sharp features, fair skin, wavy silver-gray hair, and a string of freshwater pearls, steps forward having changed into an elegant emerald silk blouse and cream linen trousers. Elena gasps with hands clasped as she beholds her late father's car restored to glory, gently placing a trembling hand over the gleaming chrome radiator cap.\n\nA medium shot captures Elena's emotional expression reflected across the deep glossy surface of the crimson hood.",
+   "annotation": {
+    "title_en": "Elena arrives in an emerald blouse, gasping with hands clasp",
+    "scene": "outdoor_apron",
+    "camera": "Medium shot capturing Elena's emotional expression reflected against the glossy crimson hood.",
+    "beat": "Elena arrives in an emerald blouse, gasping with hands clasped as she sees her late father's car restored to glory.",
+    "present": [
+     "milo",
+     "elena",
+     "convertible"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "elena",
+      "attr": "outfit",
+      "value": "emerald silk blouse with cream linen trousers"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Elena places a trembling hand gently over the chrome radiator cap.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "beige trench coat over cream knit top",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+      "placement": "bay 1 wash slip"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "emerald silk blouse with cream linen trousers",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "elena.outfit": "emerald silk blouse with cream linen trousers",
+     "elena.accessory": "string of freshwater pearls",
+     "convertible.state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+     "convertible.placement": "bay 1 wash slip"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the front office, bright sunlight streams through glass partition walls onto linoleum flooring, a reception counter, and clear sightlines into the garage bays.\n\nMilo Vance stands behind the counter in his charcoal shop apron over gray mechanic overalls, black rubber work boots, and backwards navy baseball cap, his shoulders lightly powdered with polishing compound dust and wearing no accessories. Across from him stands Elena Rostova, her wavy silver-gray hair framing her sharp features, wearing an emerald silk blouse, cream linen trousers, and a strand of freshwater pearls. Elena gratefully signs the final handover paperwork and passes Milo a heartfelt thank-you envelope, warmly grasping his hand across the counter in profound gratitude.\n\nAn over-the-counter medium shot frames Elena handing over the keys and paperwork to Milo.",
+   "annotation": {
+    "title_en": "In the front office, Elena gratefully signs the final handov",
+    "scene": "front_office",
+    "camera": "Over-the-counter medium shot of Elena handing over the keys and paperwork.",
+    "beat": "In the front office, Elena gratefully signs the final handover paperwork and passes Milo a heartfelt thank-you envelope.",
+    "present": [
+     "milo",
+     "elena"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Elena warmly grasps Milo's hand across the counter in heartfelt gratitude.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "emerald silk blouse with cream linen trousers",
+      "accessory": "string of freshwater pearls"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "emerald silk blouse with cream linen trousers",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "elena.outfit": "emerald silk blouse with cream linen trousers",
+     "elena.accessory": "string of freshwater pearls"
+    }
+   }
+  },
+  {
+   "prompt": "On the paved shop apron outside the tall corrugated metal roll-up bay doors under full daylight, the boxy delivery van rests on the bay 2 lift showing freshly repainted gloss white panels, restored lettering, and a clean washed undercarriage.\n\nMilo Vance stands nearby in his charcoal shop apron over gray mechanic overalls, black rubber work boots, and backwards navy cap with compound dust on his shoulders and no accessories. Tariq Mansoor, a stocky man in his 40s with warm brown skin, a buzzcut, and a jovial face, arrives sharply dressed, changing from his dusty polo into a clean white baker jacket and pressed slacks, removing his sun visor. Tariq bursts into hearty laughter at his flawless, glossy delivery van, rapping his knuckles against the sturdy, repainted steel panel in disbelief.\n\nA medium tracking shot follows Tariq as he inspects the seamless front fender where the massive dent used to be.",
+   "annotation": {
+    "title_en": "Tariq arrives in his fresh baker's uniform, bursting into la",
+    "scene": "outdoor_apron",
+    "camera": "Medium tracking shot as Tariq inspects the seamless fender where the huge dent once was.",
+    "beat": "Tariq arrives in his fresh baker's uniform, bursting into laughter at his completely dentless, glossy delivery van.",
+    "present": [
+     "milo",
+     "tariq",
+     "delivery_van"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "tariq",
+      "attr": "outfit",
+      "value": "clean white baker jacket and pressed slacks"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Tariq raps his knuckles against the sturdy, repainted steel panel in disbelief.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "tariq": {
+      "outfit": "flour-dusted burgundy polo and dark denim trousers",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "emerald silk blouse with cream linen trousers",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "clean white baker jacket and pressed slacks",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "tariq.outfit": "clean white baker jacket and pressed slacks",
+     "tariq.headwear": "khaki sun visor",
+     "delivery_van.state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+     "delivery_van.placement": "bay 2 lift"
+    }
+   }
+  },
+  {
+   "prompt": "Outside on the paved shop apron, morning sunshine illuminates the wide asphalt drive in front of the tall corrugated metal roll-up bay doors. The delivery van, gleaming with freshly repainted gloss white panels and crisp lettering, pulls away down the tarmac.\n\nMilo Vance stands on the apron wearing his charcoal shop apron over gray mechanic overalls, black rubber work boots, and backwards navy cap, fine polishing dust across his shoulders. Beside him stands Samira Al-Jamil, a lean woman in her early 20s with amber skin and thick curly black hair under a red bandana, wearing a navy utility jumpsuit with black tire grease across the thighs and yellow safety glasses pushed up on her forehead. Milo raises an arm in a relaxed farewell wave as Samira smiles warmly beside him while Tariq honks cheerily down the street.\n\nA wide receding shot looks back at Milo and Samira standing together in front of the open shop doors.",
+   "annotation": {
+    "title_en": "Milo and Samira wave from the sunny apron as Tariq honks che",
+    "scene": "outdoor_apron",
+    "camera": "Wide receding shot looking back at Milo and Samira standing together in front of the open shop doors.",
+    "beat": "Milo and Samira wave from the sunny apron as Tariq honks cheerily and drives his pristine van down the street.",
+    "present": [
+     "milo",
+     "samira",
+     "delivery_van"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Milo raises an arm in a relaxed farewell wave as Samira smiles beside him.",
+    "start_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     }
+    },
+    "entity_state": {
+     "milo": {
+      "outfit": "charcoal shop apron over gray mechanic overalls",
+      "footwear": "black rubber work boots",
+      "headwear": "backwards navy baseball cap",
+      "stains": "fine polishing compound dust across shoulders",
+      "accessory": "no accessory (removed)"
+     },
+     "elena": {
+      "outfit": "emerald silk blouse with cream linen trousers",
+      "accessory": "string of freshwater pearls"
+     },
+     "convertible": {
+      "state": "fully detailed mirror finish, treated leather seats, gleaming chrome wheels",
+      "placement": "bay 1 wash slip"
+     },
+     "tariq": {
+      "outfit": "clean white baker jacket and pressed slacks",
+      "headwear": "khaki sun visor"
+     },
+     "delivery_van": {
+      "state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+      "placement": "bay 2 lift"
+     },
+     "chalkboard_schedule": {
+      "state": "inscribed with all restoration tasks checked off in bold green chalk",
+      "placement": "office wall"
+     },
+     "foam_cannon": {
+      "state": "filled with thick concentrated pink foaming soap",
+      "placement": "wash bay rack"
+     },
+     "samira": {
+      "outfit": "navy utility jumpsuit",
+      "accessory": "yellow safety glasses on forehead",
+      "stains": "black tire grease across front thighs",
+      "headwear": "red bandana covering hair bun"
+     },
+     "dent_puller_kit": {
+      "state": "open red metal kit with loose slide hammer and used glue tabs",
+      "placement": "workbench"
+     },
+     "rotary_buffer": {
+      "state": "used tool with crimson-stained foam pad",
+      "placement": "detailing cart"
+     },
+     "chrome_polish_jar": {
+      "state": "opened aluminum tin with pasty residue around rim",
+      "placement": "detailing shelf"
+     },
+     "steamer_machine": {
+      "state": "warm running machine with murky brown wastewater in recovery tank",
+      "placement": "corner staging area"
+     },
+     "vintage_steering_wheel": {
+      "state": "restored satin walnut rim with gleaming polished brass spokes",
+      "placement": "parts tray"
+     },
+     "leather_conditioner_bottle": {
+      "state": "half-empty amber bottle with greasy fingerprints",
+      "placement": "detailing shelf"
+     }
+    },
+    "state": {
+     "milo.outfit": "charcoal shop apron over gray mechanic overalls",
+     "milo.footwear": "black rubber work boots",
+     "milo.headwear": "backwards navy baseball cap",
+     "milo.stains": "fine polishing compound dust across shoulders",
+     "milo.accessory": "no accessory (removed)",
+     "samira.outfit": "navy utility jumpsuit",
+     "samira.accessory": "yellow safety glasses on forehead",
+     "samira.stains": "black tire grease across front thighs",
+     "samira.headwear": "red bandana covering hair bun",
+     "delivery_van.state": "freshly repainted gloss white panels, restored lettering, washed undercarriage",
+     "delivery_van.placement": "bay 2 lift"
+    }
+   }
+  }
+ ]
+}

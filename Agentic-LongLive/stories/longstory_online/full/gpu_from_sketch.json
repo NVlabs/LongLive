@@ -1,0 +1,567 @@
+{
+ "id": "gpu_from_sketch",
+ "setup": {
+  "title": "From a Pencil Sketch to a Frame of Game: One Engineer Builds an NVIDIA GPU",
+  "style": "Live-action, cinematic, realistic documentary look with warm practical lighting at home and cool industrial lighting in the fab.",
+  "cast": [
+   {
+    "id": "lin",
+    "name": "Lin",
+    "description": "Lin, an East Asian woman in her early thirties with shoulder-length straight black hair tied in a low ponytail, round tortoiseshell glasses and a small silver stud earring in each ear, wearing a moss-green zip hoodie over a white T-shirt, black jeans and white sneakers."
+   }
+  ],
+  "extras": {
+   "voice": "Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1),",
+   "music": "Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout.",
+   "speech": "Lin narrates her own build in first person, like a maker video; inside the cleanroom she speaks through her face mask."
+  }
+ },
+ "shots": [
+  {
+   "prompt": "Inside a quiet home studio at midnight, a warm desk lamp casts a pool of soft amber light across a dark wooden work surface. Outside the focused glow, the room falls away into deep shadows, with the faint silhouettes of bookshelves and inactive computer monitors in the background. A ceramic coffee mug sits beside drafting pens, framing a closed, grid-lined notebook resting near the desk's edge. The atmosphere is calm, concentrated, and solitary, capturing the quiet stillness of an engineer's late-night workspace.\n\nLin, an East Asian woman in her early thirties with shoulder-length straight black hair tied in a low ponytail, wears round tortoiseshell glasses and small silver stud earrings. Dressed in a moss-green zip hoodie over a white T-shirt, black jeans, and white sneakers, she pulls up an office chair and sits down. Reaching forward, she flips open the notebook to reveal a completely blank grid page under the lamplight. She picks up a mechanical pencil, clicks the top to advance the lead, and settles her hands beside the page. Looking directly into the camera, she speaks with calm confidence about her plan to build an NVIDIA GPU entirely from scratch.\n\nThe shot begins in an eye-level medium framing and performs a slow, steady push-in toward Lin and her desktop. Her upper torso, face, and deliberate hand movements remain in clear view throughout the push. The lamp's warm illumination keeps the pristine grid paper and her focused expression sharp, anchoring the scene as the dim room stays softly blurred.",
+   "annotation": {
+    "title_en": "A blank notebook at midnight",
+    "scene": "home_studio_desk",
+    "camera": "slow push-in, medium shot",
+    "beat": "Night in Lin's small home studio. A warm desk lamp, a coffee mug and a blank grid notebook. Lin sits down, opens the notebook to an empty page, clicks a pencil and tells the camera she is going to build her own NVIDIA GPU from scratch.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "blank notebook page"
+    }
+   }
+  },
+  {
+   "prompt": "The shot is set at a wooden work desk in Lin's compact home studio at night. An adjustable desk lamp casts a focused pool of warm amber light across an open grid notebook, highlighting the pale paper and leaving the rest of the room in soft, moody shadow. A ceramic coffee mug sits near the corner of the blotter. The setting conveys an intimate, quiet atmosphere dedicated to late-night technical design.\n\nLin, an East Asian woman in her early thirties, wears round tortoiseshell glasses, small silver stud earrings, and a moss-green zip hoodie over a white T-shirt, with her straight black hair gathered into a low ponytail. Holding a mechanical pencil over the initially blank page, she briskly draws out a GPU architecture. She sketches an organized grid of streaming multiprocessor blocks, runs a wide horizontal bar representing the L2 cache across the middle, and positions rectangular memory controllers along the outer edges. After scribbling neat labels beside the units, she lifts the pencil away from the finished graphite schematic and looks up, her face settling into a proud, satisfied smile.\n\nThe camera starts in a top-down close-up tightly framed on the notebook and her sketching hand. Once she finishes labeling the diagram, the camera tilts smoothly upward from the paper to her face. Lin remains centered as her warm expression comes into view, the desk lamp creating a gentle gleam on her glasses while the freshly completed block diagram stays anchored in the lower portion of the frame.",
+   "annotation": {
+    "title_en": "The block diagram",
+    "scene": "home_studio_desk",
+    "camera": "top-down close-up then tilt up to her face",
+    "beat": "Close on the notebook as Lin sketches the GPU architecture in pencil: a grid of streaming multiprocessor blocks, an L2 cache bar across the middle and memory controllers on the edges. She labels the blocks, then looks up satisfied.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "pencil block diagram of a GPU on paper"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of Lin's home studio centers on a wide cork board mounted on a neutral wall, densely layered with colorful sticky notes, printed silicon die photos, and technical diagrams. To the side, a tall window reveals the first faint cool-blue glow of early dawn, mingling softly with the warm amber light of an indoor desk lamp. The room feels still, calm, and steeped in the quiet concentration of an overnight engineering session.\n\nLin, an East Asian woman in her early thirties, stands by the board with her shoulder-length straight black hair gathered into a low ponytail. She wears round tortoiseshell glasses, silver stud earrings, a moss-green zip hoodie over a white T-shirt, black jeans, and white sneakers. Holding her open notebook, she carefully tears out the page containing the pencil sketch of the GPU architecture. She picks up a pushpin and anchors the newly freed sheet securely into the vacant center of the cork board, surrounded by the reference die photos. Once it is pinned flat, she lowers her hands and steps back slightly, her expression focused and satisfied.\n\nThe camera holds static in a medium-wide framing at eye level, keeping Lin’s upper body, the cork board, and the adjacent window all in view. The steady composition emphasizes her deliberate actions without moving, maintaining a clear visual focus on the newly pinned pencil architecture sheet as the subtle dawn light registers against the window pane.",
+   "annotation": {
+    "title_en": "Pinning the plan",
+    "scene": "home_studio_wall",
+    "camera": "medium wide, static",
+    "beat": "Lin tears the architecture page out of the notebook and pins it to the centre of a cork board covered with sticky notes and printed die photos. The first blue light of dawn appears in the window beside the board.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "architecture sketch pinned on the cork board"
+    }
+   }
+  },
+  {
+   "prompt": "The home studio is filled with the calm, quiet ambience of early morning, illuminated by a mix of pale dawn filtering through a side window and warm domestic lighting overhead. A wide magnetic whiteboard mounted against the pale wall dominates the space, catching clean ambient light with minimal glare. The edges of nearby studio shelves and the home workstation remain softly visible in the background, framing an organized, intense workspace dedicated to technical design.\n\nLin, an East Asian woman in her early thirties, has her shoulder-length straight black hair neatly gathered into a low ponytail. She wears round tortoiseshell glasses, small silver stud earrings, a moss-green zip hoodie over a clean white T-shirt, black jeans, and white sneakers. Holding a chisel-tip black dry-erase marker, she rapidly inks the final interconnections of an arithmetic unit circuit, detailing logic NAND gate symbols, inputs, and a square block representing a full adder. Once the lines connect, she clicks the cap onto the marker, turns slightly toward the lens, and taps the plastic cap directly against the full adder schematic. She speaks directly to the camera with animated confidence, explaining the logic flow and how these individual gates compute fundamental graphics math.\n\nThe camera maintains a medium framing at chest level, executing a steady, slow lateral track that glides horizontally alongside Lin as she shifts from sketching to speaking. The whiteboard schematic and her expressive gestures remain centered and sharp, keeping her face, hands, and the newly drafted circuit diagram simultaneously in view throughout the shot.",
+   "annotation": {
+    "title_en": "Gates on the whiteboard",
+    "scene": "home_studio_whiteboard",
+    "camera": "medium shot, slow lateral track",
+    "beat": "At a large whiteboard Lin draws a transistor-level circuit for one arithmetic unit with a black marker: NAND gates, a full adder and wires. She taps the adder with the marker cap and explains it to the camera.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "circuit schematic on the whiteboard"
+    }
+   }
+  },
+  {
+   "prompt": "The home studio desk is bathed in warm practical light from an adjustable lamp, contrasted against the vivid luminescence of two dual monitors. Soft ambient light fills the quiet room, casting gentle shadows across the wooden desktop. A mousepad, ergonomic keyboard, and Lin's open paper notebook sit beside the displays. The atmosphere feels focused and authentic, capturing the meticulous reality of modern microchip design.\n\nLin, an East Asian woman in her early thirties with shoulder-length straight black hair in a low ponytail, sits upright at the workstation. She wears round tortoiseshell glasses, small silver stud earrings, a moss-green zip hoodie over a white T-shirt, black jeans, and white sneakers. Resting her hand on the mouse, she scrolls smoothly to manipulate the chip layout software. On the main screen, tightly packed rectangles of microscopic metal interconnects in cyan, red, and gold begin to contract. As she zooms out, the microscopic traces resolve into an entire glowing silicon die floorplan, forming a dense mosaic of processing cores and memory arrays that visually echoes her paper sketch. She watches intently as the complete layout fills the display.\n\nThe camera starts in an over-the-shoulder framing, keeping Lin's hooded shoulder and hand on the mouse in view, before gliding slowly forward into a crisp close-up of the primary monitor. The shot finishes tight on the vibrant, luminous architecture of the completed die layout, keeping every dense circuit block distinct and razor-sharp.",
+   "annotation": {
+    "title_en": "Layout on screen",
+    "scene": "home_studio_desk",
+    "camera": "over-the-shoulder, then close on screen",
+    "beat": "Lin works at two monitors running chip layout software. Colourful rectangles of metal layers fill the screen; she zooms out until the whole die floorplan appears as a dense, glowing mosaic that matches her paper sketch.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "full die layout on the monitor"
+    }
+   }
+  },
+  {
+   "prompt": "The interior entryway beside the front door of Lin's home studio is bathed in warm practical morning light. Neutral walls, a minimalist coat rack, and a small wooden console table create an orderly, lived-in domestic space. Outside the entryway, vibrant morning sun awaits, casting a bright sliver along the edge of the doorframe. The mood is quiet and focused, capturing the purposeful routine of an early departure.\n\nLin, an East Asian woman in her early thirties, has shoulder-length straight black hair in a low ponytail, round tortoiseshell glasses, and small silver stud earrings. She begins dressed in a moss-green zip hoodie over a white T-shirt, with black jeans and white sneakers. Taking a medium-blue denim jacket, she slips her arms into the sleeves, settling it over the hoodie. She then picks up a tightly rolled paper printout of the die layout from the console, slides it into a rigid black poster tube, caps it, and slings the strap across her shoulder. Fully prepared with the denim jacket over her hoodie and the tube resting securely against her torso, she turns the door handle and pushes the door open into the intense morning glare.\n\nThe camera tracks alongside Lin in a steady medium shot, moving smoothly as she steps toward the exit. Eye-level framing keeps her upper body, the jacket adjustment, and the handling of the poster tube clearly in view. When the door swings open, the camera maintains focus as bright exterior daylight washes across her, framing her poised exit in a realistic, unembellished documentary manner.",
+   "annotation": {
+    "title_en": "Off to the fab",
+    "scene": "home_studio_door",
+    "camera": "medium shot following her to the door",
+    "beat": "Morning. Lin pulls a denim jacket on over her hoodie, slides a rolled printout of the layout into a black poster tube, slings it over her shoulder and opens the front door into bright daylight.",
+    "state": {
+     "outfit": "denim jacket over moss-green hoodie",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "layout printout in a poster tube"
+    }
+   }
+  },
+  {
+   "prompt": "The wide concrete plaza outside the semiconductor fabrication plant sits bathed in the crisp, pale gold light of early morning. Looming ahead, the monumental facility features a sleek glass-and-steel facade that mirrors the clear blue sky, accented by clean architectural lines and brushed metal paneling. Long, sharp morning shadows stretch across the light-grey pavers of the walkway. Near the building's entrance, polished turnstiles and glass security barriers establish an orderly, high-tech industrial atmosphere.\n\nLin, an East Asian woman in her early thirties with straight black hair tied in a low ponytail, walks briskly across the plaza. She wears round tortoiseshell glasses, small silver stud earrings, a denim jacket over a moss-green zip hoodie, a white T-shirt, black jeans, and white sneakers. Slung diagonally across her shoulder is a black poster tube containing the rolled layout printout. With purposeful steps, she approaches the entrance gate, lifts a keycard badge clipped to her jacket, and taps it against the scanner terminal. The reader beeps softly with a green flash, and she smoothly pushes through the waist-high barrier, keeping her stride steady.\n\nThe camera tracks smoothly in a wide shot, moving alongside Lin to capture her full figure against the imposing scale of the fab. The framing maintains a clean view of her approach and badge tap, with the towering glass building and sunny plaza remaining prominent throughout. The crisp morning sunlight cleanly outlines her movement, lending a grounded documentary clarity to her arrival.",
+   "annotation": {
+    "title_en": "Arriving at the fab",
+    "scene": "fab_exterior",
+    "camera": "wide tracking shot",
+    "beat": "Lin walks across a plaza toward a huge modern semiconductor fab with a glass-and-steel facade under a clear morning sky, poster tube on her shoulder, and taps her badge at the entrance gate.",
+    "state": {
+     "outfit": "denim jacket over moss-green hoodie",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "layout printout in a poster tube"
+    }
+   }
+  },
+  {
+   "prompt": "The brightly lit semiconductor fab gowning room is lined with stainless steel benches, sealed lockers, and glossy, seamless white wall panels. Recessed overhead LED panels cast a cool, uniform illumination across the pristine floor, creating a sterile, tightly regulated industrial atmosphere devoid of dust or clutter.\n\nLin, an East Asian woman in her early thirties with round tortoiseshell glasses, small silver stud earrings, and shoulder-length black hair tied in a low ponytail, stands beside a bench where her black poster tube rests. Wearing her denim jacket over a moss-green hoodie, she steps into a white cleanroom coverall. She pulls the protective fabric up over her shoulders, smoothly pulls the zipper closed to her chin, and draws the tight white hood over her head, tucking away her ponytail and ears. She then hooks an elastic white face mask over her nose and mouth before sliding clear safety goggles directly over her tortoiseshell glasses. By the end of the shot, Lin is completely enclosed in the full white bunny suit, leaving only her focused eyes and glasses visible behind the clear visor.\n\nThe camera holds a static medium shot at chest level, capturing Lin’s methodical gowning sequence without panning or tilting. The cleanroom background and steel bench remain steadily in frame as the cool lighting highlights the crisp white fabric, keeping her precise routine as the clear central focus.",
+   "annotation": {
+    "title_en": "Gowning up",
+    "scene": "fab_gowning_room",
+    "camera": "medium shot, static",
+    "beat": "In a bright white gowning room with steel benches, Lin steps into a white cleanroom coverall, zips it up, pulls on the white hood, a white face mask and clear safety goggles over her glasses. Only her eyes and glasses remain visible.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "none in hand"
+    }
+   }
+  },
+  {
+   "prompt": "The narrow air shower chamber features brushed stainless-steel walls studded with circular high-velocity nozzles. Cool industrial fluorescent lighting reflects sharply off the polished metal surfaces and the clear glass doors enclosing the space. Overhead, a small status panel provides a clean, clinical glow. The atmosphere is stark, sterile, and pressurized, conveying the extreme cleanliness standards required before entering the semiconductor fabrication floor.\n\nLin stands inside, completely sealed in a white cleanroom bunny suit with an integrated hood, white face mask, and clear safety goggles. Beneath the goggles, her round tortoiseshell glasses and focused dark eyes are visible, while her black hair is fully tucked away. Her hands are empty in white cleanroom gloves. She holds her arms slightly raised as strong jets of air blast from the nozzles, violently rippling the fabric of her coverall. She turns slightly in place to catch the airflow across her torso. After several seconds, the buffeting air stops, and the suit settles. A small indicator light shifts to green, and the inner door smoothly slides open to the side.\n\nThe camera remains stationary in a medium shot, viewing Lin through the transparent glass door at eye level. The framing captures her from the waist up, keeping her centered amidst the metallic walls. Her steady stance, the rippling fabric, and the green signal light stay clearly in focus, while faint ambient reflections on the glass accentuate the sealed, clinical environment.",
+   "annotation": {
+    "title_en": "Air shower",
+    "scene": "fab_air_shower",
+    "camera": "static medium shot through the glass door",
+    "beat": "Lin, fully suited in white, stands inside a narrow stainless-steel air shower with her arms raised while strong jets of air ripple the fabric of her suit. A green light turns on and the inner door slides open.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "none in hand"
+    }
+   }
+  },
+  {
+   "prompt": "The photolithography bay unfolds as a vast, pristine cleanroom bathed in saturated amber-yellow safety lighting. Massive white lithography scanner systems line the polished floor panels, their towering enclosures accented with stainless-steel trim and glowing status indicators. Filtered air grates in the ceiling and perforated floor tiles maintain continuous laminar airflow, creating an ultra-sterile, precisely controlled industrial atmosphere where every surface gleams under the monochromatic yellow wash.\n\nLin, an East Asian woman in her early thirties, is clad from head to toe in a white cleanroom bunny suit with an integrated hood, a white face mask, and clear protective goggles through which her round tortoiseshell glasses remain visible. She walks steadily forward carrying a specialized transparent reticle pod that houses the patterned glass photomask of her GPU design. Moving with deliberate care, she approaches the automated interface port on the front of a lithography machine. She gently positions the clear pod onto the receiving dock and guides it forward until the mechanical port clamps firmly engage, transferring the photomask into the scanner's internal mechanism. By the end of the action, her gloved hands pull back, resting empty at her sides.\n\nThe camera executes a slow dolly forward, starting in a medium-wide framing that tracks Lin walking down the amber-lit aisle before tightening as she interfaces with the machine. The framing stays smooth and level at chest height, maintaining clear view of Lin's precise hand movements and the reticle port throughout the loading sequence.",
+   "annotation": {
+    "title_en": "The yellow room",
+    "scene": "fab_lithography_bay",
+    "camera": "slow dolly forward",
+    "beat": "Lin walks into the photolithography bay, a long cleanroom bathed in amber-yellow light with tall white lithography machines. She carries a clear pod holding the photomask made from her design and loads it into a reticle port.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "photomask of her design loaded into the scanner"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the photolithography bay of the advanced fabrication facility, monochromatic amber-yellow safety lighting bathes the cleanroom to shield photoresists from unintended ultraviolet exposure. Pristine white equipment enclosures, brushed stainless steel automated fixtures, and the open port of a front-opening unified pod create a sterile, high-precision industrial environment. Laminar airflow and climate-controlled filtration maintain an atmosphere of hushed, immaculate stillness.\n\nLin, an East Asian woman in her early thirties, stands beside the load port. She is entirely enclosed in a white cleanroom bunny suit with its hood drawn tight, wearing a white protective face mask and clear safety goggles over her round tortoiseshell glasses, with only her dark, focused eyes exposed. A precision robotic arm engages, carefully sliding under and lifting a blank, circular 300-millimetre silicon wafer from the pod's interior racks. As the disc rises, Lin leans slightly forward to observe the process. The pristine, mirror-polished surface of the wafer catches the warm amber overhead lighting and casts back a clear reflection of Lin's masked, goggled face watching the flawless silicon ready for printing.\n\nThe camera frames a close-up starting on the mechanical gripper holding the wafer's edge, then performs a slow, fluid tilt upward as the robotic arm elevates the disc. The camera movement maintains razor-sharp focus on the gleaming reflective surface, keeping both the amber reflections and Lin's watchful eyes visible throughout the steady motion.",
+   "annotation": {
+    "title_en": "A mirror of silicon",
+    "scene": "fab_lithography_bay",
+    "camera": "close-up, slow tilt",
+    "beat": "A robotic arm lifts a blank, mirror-polished 300 millimetre silicon wafer out of a front-opening pod. The wafer reflects the amber light and Lin's goggled face as she leans in to watch.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "blank mirror-polished silicon wafer"
+    }
+   }
+  },
+  {
+   "prompt": "The lithography track inside the cleanroom glows under amber safety lighting mixed with sterile LED illumination from within the coater chamber. Viewed through the thick observation window, the stainless-steel spin module appears impeccably sterile, isolated from airborne contaminants. The environment conveys intense industrial precision and quiet, automated control.\n\nLin stands beside the viewport, dressed in a white cleanroom bunny suit with its hood pulled up, wearing protective goggles over her round tortoiseshell glasses, a surgical face mask, and white nitrile gloves. At first, a blank, mirror-polished 300-millimetre silicon wafer rests on the vacuum chuck. An automated nozzle dispenses a droplet of liquid photoresist directly onto the centre. The chuck accelerates into a high-speed spin, flinging the liquid outward into an ultra-thin film that flashes with brilliant iridescent rings of violet, cyan, and gold before settling into a uniform, coated surface. Lin observes intently, her gloved hand resting against the machine casing as her focused eyes follow the rapid fluid motion.\n\nThe camera frames a tight close-up through the viewport glass, maintaining crisp focus on the spinning wafer while Lin's masked profile and goggles reflect softly in the transparent pane. The camera holds nearly stationary with a minute drift inward, keeping the vibrant rainbow interference patterns and smooth rotation fully visible.",
+   "annotation": {
+    "title_en": "Spin coating",
+    "scene": "fab_lithography_bay",
+    "camera": "close-up through a machine window",
+    "beat": "Inside a coater, a drop of photoresist lands on the wafer and the wafer spins fast, the liquid spreading into a thin film that flashes with iridescent colours. Lin watches through the window with her gloved hand on the panel.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "wafer coated with photoresist"
+    }
+   }
+  },
+  {
+   "prompt": "The lithography bay of the semiconductor fabrication facility is bathed in amber cleanroom lighting, preserving photoresist integrity. Matte-white tool enclosures and stainless steel panels line the sterile corridor. Inside the lithography scanner, a rhythmic pulse of deep violet light flashes intermittently through an inspection seam, cast by the laser exposure source as the high-speed stage steps across hundreds of fields. Clean laminar airflow generates a quiet, continuous hum throughout the pristine, high-tech environment.\n\nLin stands beside the operator console, completely suited in a white cleanroom bunny suit with a hood, white face mask, and clear goggles over her round tortoiseshell glasses. Her gloved hands rest on the desk edge as she monitors the automated process. On the primary screen, a graphical map of the circular wafer populates field by field, filling each square die location as the UV beam imprints the GPU circuitry onto the coated surface. Lin watches the display with focused concentration, occasionally shifting her gaze toward the machine's viewport as the violet pulses count down the stepping exposure.\n\nThe camera starts in a medium shot showing Lin in three-quarter profile alongside the workstation, slowly pushing in toward the illuminated monitors. Lin’s suited torso, the subtle violet flicker reflecting against the cleanroom panels, and the expanding grid on the wafer map remain visible throughout the move.",
+   "annotation": {
+    "title_en": "Exposure",
+    "scene": "fab_lithography_bay",
+    "camera": "medium shot, slow push toward the monitors",
+    "beat": "Lin stands at the lithography scanner's control monitors. A pulsing violet glow comes from inside the machine as the wafer stage steps across hundreds of fields; on screen a progress map of the wafer fills in field by field.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "wafer being exposed with her pattern"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the fab's etch bay, clean and sterile white overhead illumination bounces off brushed stainless steel surfaces and high-grade composite panels. The expansive cleanroom aisle is anchored by modular plasma processing tools interconnected by vacuum lines and specialized gas manifolds. Set into the front of a primary reaction chamber, a thick circular quartz viewport offers a direct view inside, where an electric magenta-purple glow of ionized plasma hums with concentrated energy, casting vivid violet reflections across the surrounding metallic chassis as the wafer undergoes dry etching.\n\nLin stands adjacent to the etch chamber, dressed in a full white cleanroom bunny suit complete with an integrated hood, sterile white face mask, and clear protective goggles fitted over her round tortoiseshell glasses. Her gloved hands hold a slender, chemical-resistant white tablet displaying real-time pressure curves and radio-frequency power metrics. She tracks the telemetry data with steady eyes, lightly tapping the screen with a gloved finger to log the current process cycle. She then raises her gaze to observe the glowing viewport, checking the uniformity of the violet plasma enveloping the wafer within the vacuum.\n\nThe shot begins in a tight close-up on the circular viewport, filling the frame with the swirling, vibrant magenta-purple plasma glow. The camera then smoothly pulls back along a straight diagonal axis, steadily revealing the massive cylindrical chamber and Lin beside it. The final composition settles into a medium shot that holds Lin, her active tablet, and the intensely glowing viewport in balanced, sharp view.",
+   "annotation": {
+    "title_en": "Plasma etch",
+    "scene": "fab_etch_bay",
+    "camera": "close-up on a viewport then pull back to Lin",
+    "beat": "In a white-lit bay of etch tools, a magenta-purple plasma glows through the round viewport of a vacuum chamber as the pattern is etched into the wafer. The camera pulls back to Lin, suited in white, checking a tablet.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "wafer in the etch chamber"
+    }
+   }
+  },
+  {
+   "prompt": "The high-tech semiconductor fab etch bay glows under sterile, cool white cleanroom illumination filtered through pristine overhead panels. In the softly blurred background, stainless steel vacuum chambers, robotic transfer modules, and neat rows of metallic ductwork maintain an immaculate, ultra-pure industrial atmosphere. Reflections gleam across polished chrome fixtures and glossy floor panels, creating a crisp environment of absolute precision and quiet technological marvel.\n\nLin, an East Asian woman in her early thirties, is clad in a pristine white cleanroom bunny suit with the hood tightly pulled over her hair, a pleated white face mask, and clear protective goggles sitting over her round tortoiseshell glasses. With both hands clad in pale cleanroom gloves, she steadily holds up a specialized wafer handling tool grasping a finished circular silicon disk. As Lin gently tilts the wafer under the overhead illumination, its mirror-like surface reveals a dense, immaculate grid of hundreds of microscopic rectangular dies. The microscopic circuitry acts as a diffraction grating, scattering the light into vivid bands of iridescent rainbow hues that shimmer across the silicon. Above her mask, her dark eyes crinkle into an unmistakable, proud smile.\n\nThe camera frames Lin and the suspended disk in a medium close-up, executing a slow, continuous orbit from front to three-quarter profile. This gentle rotational move accentuates the shifting chromatic spectrum flaring across the wafer's grid while keeping Lin's expressive eyes and steady gloved posture clearly visible. The sterile machinery of the bay remains softly diffused behind her, highlighting the glittering centerpiece of completed silicon.",
+   "annotation": {
+    "title_en": "The finished wafer",
+    "scene": "fab_etch_bay",
+    "camera": "medium close-up, slow orbit",
+    "beat": "Lin holds the finished wafer up in a gloved wafer holder. Its surface is now a precise grid of hundreds of identical rectangular dies that split the light into rainbow colours as she tilts it. Her eyes smile above the mask.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "patterned wafer with a rainbow grid of dies"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the fab test floor, clean industrial overhead lights cast an immaculate, cool white glow across rows of specialized automated testing equipment. The atmosphere is quiet and clinical, defined by the low hum of mechanical drive stages and continuous HEPA air filtration. At the center of the station sits a high-precision wafer prober, its vacuum chuck holding the circular silicon disc beneath an intricate stereo microscope assembly, accompanied by diagnostic test screens displaying technical readouts in the background.\n\nLin, an East Asian woman in her early thirties, is completely clad in a sterile white cleanroom bunny suit with an integrated hood, protective clear goggles fitted over her round tortoiseshell glasses, and a white face mask. Leaning forward over the equipment, she peers into the binocular microscope eyepieces. Below, the patterned wafer rests on the motorized chuck as the microscopic needles of a probe card descend with micrometer precision, making physical contact with the tiny pads of an individual die. Lin delicately adjusts the stage controls with gloved fingers, maintaining focus while the probe system runs electrical tests before automatically indexing to the next die on the wafer grid.\n\nThe shot begins in a sharp close-up on the fine probe needles touching down upon the iridescent die surface, capturing the minute mechanical contact. The camera then smoothly glides back and tilts up into a stable medium shot, keeping Lin's suited posture, the microscope optics, and the stepping probe chuck continuously visible within the coolly lit cleanroom interior.",
+   "annotation": {
+    "title_en": "Probe test",
+    "scene": "fab_test_floor",
+    "camera": "close-up of the probe card then medium shot",
+    "beat": "On the test floor the wafer sits on a probe station chuck. Fine needles of a probe card touch down on one die after another while Lin, still suited, leans over the microscope eyepiece.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "patterned wafer under probe test"
+    }
+   }
+  },
+  {
+   "prompt": "The cleanroom test floor is bathed in cool, neutral white lighting, casting a crisp and sterile atmosphere across the workstation. An industrial monitor displays a circular wafer yield map composed of a fine grid. As the automated test concludes, the grid squares rapidly populate with bright green across the entire center, dotted with only a few isolated red squares near the outer perimeter. Cleanroom wall panels and equipment consoles reflect the monitor's glow, centering the vivid yield graphic in the quiet, clinical space.\n\nLin is dressed in a full white cleanroom bunny suit with the hood tightly enclosing her hair, a pleated surgical mask over her lower face, and protective goggles over her round tortoiseshell glasses. She wears pale blue nitrile gloves. Initially turned toward the screen, she watches the final rows of the wafer map resolve into solid green. As the successful readout completes, Lin pivots her upper body toward the camera. Her dark eyes crinkle with unmistakable joy behind her lenses, smiling broadly beneath her mask. She raises her gloved right hand and flashes a firm, enthusiastic thumbs-up to celebrate the high yield. Her cleanroom suit remains spotless throughout.\n\nThe camera holds an over-the-shoulder medium shot at eye level, keeping the monitor screen and Lin’s suited torso in crisp focus. A gentle static frame accommodates Lin's pivot without panning away, allowing her celebratory gesture, expressive masked face, and the bright green wafer map behind her to remain clearly visible together until the shot ends.",
+   "annotation": {
+    "title_en": "The wafer map",
+    "scene": "fab_test_floor",
+    "camera": "over-the-shoulder on a monitor",
+    "beat": "A monitor shows a circular wafer map filling with mostly green squares and a few red ones at the edge. Lin turns from the screen to the camera and gives a big thumbs-up with her gloved hand.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "tested wafer with a mostly green yield map"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the semiconductor fab's dicing bay, cool blue-white industrial lighting illuminates the sterile workspace and the sealed interior of an automated dicing saw. The pristine chamber is framed by stainless steel fixtures and a clear protective observation window. Fine jets of deionized coolant continuously spray across the cutting stage, scattering glistening micro-droplets against interior surfaces and catching brilliant, sharp reflections from high-intensity internal LEDs. The atmosphere is clinical, quiet, and rigorously controlled.\n\nPositioned just behind the transparent viewing window, Lin monitors the automated operation. She is clad in full cleanroom gear: a white zippered bunny suit with its hood drawn tight, a white face mask over her nose and mouth, and clear safety goggles resting over her round tortoiseshell glasses. Inside the machine, an ultra-thin diamond saw blade spins at high speed, tracing along microscopic streets between circuits on the silicon wafer. Cooled by the fine water spray, the blade cuts smooth, straight lines through the grid, steadily separating the patterned disc into individual rectangular dies. Lin leans forward slightly, her dark eyes behind the goggles watching every motorized pass with steady focus.\n\nThe camera maintains a macro close-up framed on the spinning blade and the water-slicked silicon surface, with Lin’s suited silhouette and masked face visible in soft focus through the chamber window in the upper background. A subtle sideways tracking movement follows the cutting axis, keeping the blade, the fine water mist, and the newly separated dies in sharp view throughout.",
+   "annotation": {
+    "title_en": "Dicing",
+    "scene": "fab_dicing_room",
+    "camera": "macro close-up",
+    "beat": "A thin diamond saw blade spins inside a dicing machine and cuts straight lines through the wafer under a fine spray of water, separating the grid into individual dies. Lin watches from behind the machine's window.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "wafer being diced into dies"
+    }
+   }
+  },
+  {
+   "prompt": "The cleanroom dicing station is bathed in cool, sterile overhead fluorescent light, complemented by the intense, direct white glow of an articulated magnifier ring lamp. On the clean stainless-steel workbench, a freshly diced wafer rests stretched across vibrant blue dicing tape held rigid inside a circular metal frame. The atmosphere is quiet, pristine, and clinically controlled, filled with the faint, steady white noise of laminar air filtration.\n\nLin stands beside the station, completely suited in a white cleanroom bunny suit with the hood enclosing her hair, protective goggles resting over her round tortoiseshell glasses, and a pleated sterile face mask covering her nose and mouth. A fine vacuum pick-up tool lifts one fingernail-sized silicon die from the adhesive blue grid. Lin smoothly transfers the chip to fine-tipped anti-static tweezers held in her gloved right hand. She carefully raises the bare, mirror-like die into the focused illumination beneath the magnifier lamp, tilting it slightly so iridescent microscopic circuit patterns glint across the polished surface. Her dark eyes behind the transparent goggles narrow in silent, methodical inspection.\n\nThe camera begins in an extreme close-up on the blue tape as the single die separates from the wafer grid, then smoothly pulls back and tilts up into a medium close-up showing Lin's hands, chest, and masked face. The framing keeps both the tiny, reflective die in the tweezers and Lin's focused gaze sharp and central as the background cleanroom softens.",
+   "annotation": {
+    "title_en": "One die",
+    "scene": "fab_dicing_room",
+    "camera": "extreme close-up then medium close-up",
+    "beat": "The diced wafer sits on blue tape in a metal ring. A pick-up tool lifts one die. Lin takes it with tweezers and holds the fingernail-sized, mirror-like silicon die up to the light under a magnifier lamp.",
+    "state": {
+     "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+     "glasses": "round tortoiseshell under goggles",
+     "gpu_stage": "single bare silicon die in tweezers"
+    }
+   }
+  },
+  {
+   "prompt": "The white gowning room outside the cleanroom bay is brightly lit by cool, diffused overhead fluorescent panels. Polished stainless steel benches and gowning racks line the clinical white walls, with clean floors reflecting the crisp industrial lighting. The atmosphere is quiet and methodical. On the metallic surface of the central bench, a small, clear anti-static carrier sits securely, holding the fingernail-sized silicon die inside.\n\nLin, an East Asian woman in her early thirties, starts fully enclosed in a white cleanroom bunny suit with a hood, a face mask, and goggles over her round tortoiseshell glasses. She pulls off the goggles and mask, then peels back the hood to reveal her shoulder-length black hair tied in a low ponytail and small silver stud earrings. Lin unzips the bunny suit, steps out of the bulky fabric to reveal her moss-green zip hoodie, white T-shirt, and black jeans, and puts on a light-blue anti-static lab coat over the hoodie. By the end of the shot, she wears the light-blue lab coat over her green hoodie and tortoiseshell glasses, glancing down at the bare die resting safely inside the carrier on the bench.\n\nThe camera remains in a static medium shot at eye level, holding Lin and the bench in sharp focus throughout the degowning process. The framing keeps both her deliberate change of attire and the small die carrier visible against the clean, sterile background, capturing the quiet shift in cleanroom protocol with steady documentary realism.",
+   "annotation": {
+    "title_en": "Out of the suit",
+    "scene": "fab_gowning_room",
+    "camera": "medium shot, static",
+    "beat": "Back in the white gowning room, Lin pulls off the goggles, mask and hood, revealing her face, glasses and ponytail again, steps out of the bunny suit and puts on a light-blue anti-static lab coat over her hoodie. A small die carrier sits on the bench.",
+    "state": {
+     "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "bare die in a small carrier"
+    }
+   }
+  },
+  {
+   "prompt": "The packaging lab is brightly illuminated by crisp, cool overhead LED fixtures, casting clean reflections across polished anti-static flooring, brushed aluminum tool bays, and transparent safety enclosures. The environment possesses a sterile, industrial high-tech atmosphere, dominated by surgical whites, metallic grays, and the deep green hues of semiconductor circuit boards. Automated precision equipment hums quietly throughout the spacious room.\n\nLin, an East Asian woman in her early thirties with straight black hair tied into a low ponytail, stands by the primary packaging station wearing round tortoiseshell glasses and small silver stud earrings. Over her moss-green zip hoodie and white T-shirt, she wears a light-blue anti-static lab coat, paired with black jeans. A small die carrier rests open nearby. Inside the bonding chamber, a robotic flip-chip placement head secures the central silicon die, flips it inverted, and presses it delicately onto a green substrate patterned with thousands of microscopic solder bumps, positioned directly adjacent to four tall stacks of HBM memory. Lin intently tracks the micro-alignment crosshairs displayed across an adjacent monitor, her hands resting near the console as the die bonds firmly to the substrate.\n\nThe shot begins in a tight macro close-up focused on the robotic bonding head descending toward the green substrate and HBM memory towers. As the component settles into position, the camera smoothly pans upward and pulls back slightly into a medium close-up of Lin, keeping her focused expression, her blue lab coat, and the edge of the alignment monitor visible.",
+   "annotation": {
+    "title_en": "Flip-chip bonding",
+    "scene": "packaging_lab",
+    "camera": "close-up on the machine, then Lin",
+    "beat": "In a bright packaging lab, a bonding machine flips the die and places it onto a green substrate covered in tiny solder bumps, with four tall stacks of HBM memory placed beside it. Lin, in her blue lab coat, monitors the alignment camera.",
+    "state": {
+     "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "die bonded on a green substrate with HBM stacks"
+    }
+   }
+  },
+  {
+   "prompt": "The packaging lab maintains a clinical aesthetic with cool overhead fluorescent illumination reflecting off polished stainless steel workstations and anti-static matting. At Lin's workstation, a compact industrial reflow oven emits a warm, vibrant orange infrared glow from its tunnel aperture, casting warm highlights across the conveyor track against the otherwise cool, muted tones of the cleanroom environment. \n\nLin, an East Asian woman in her early thirties, wears round tortoiseshell glasses, small silver stud earrings, and has her shoulder-length straight black hair tied into a low ponytail. Over her moss-green zip hoodie and white T-shirt, she wears a light-blue anti-static lab coat. She monitors the green substrate—carrying the die and four adjacent HBM stacks—as it glides along a narrow conveyor into the orange-glowing reflow oven to melt the solder bumps. Once it emerges onto an assembly jig, Lin takes hold of a fine pneumatic needle dispenser. Leaning close with her tongue tucked slightly at the corner of her mouth in deep concentration, she carefully applies a thin, glossy bead of liquid underfill along the seam of the die, allowing capillary action to draw the resin underneath the silicon. \n\nThe camera holds a steady medium shot at eye level, capturing Lin from the waist up alongside the tabletop apparatus. The framing keeps her concentrated facial expressions, her tortoiseshell frames, and the delicate motion of the dispenser needle in sharp focus, while the reflow oven's warm orange interior softly illuminates the edge of the frame.",
+   "annotation": {
+    "title_en": "Reflow and underfill",
+    "scene": "packaging_lab",
+    "camera": "medium shot",
+    "beat": "The substrate rides a conveyor into a reflow oven glowing orange inside. Lin then uses a fine needle dispenser to run a bead of underfill along the edge of the die, carefully, her tongue at the corner of her mouth.",
+    "state": {
+     "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "bonded package being underfilled"
+    }
+   }
+  },
+  {
+   "prompt": "The packaging lab is bathed in cool, uniform LED light, casting crisp highlights across the blue ESD-safe matting and stainless-steel precision fixtures on the workbench. Clean lines, calibrated assembly jigs, and micro-manipulator arms populate the background in soft focus. The atmosphere is quiet, clinical, and intensely focused, dominated by the sterile, high-tech palette of cool blues, greys, and reflective metallic surfaces.\n\nLin, an East Asian woman in her early thirties with round tortoiseshell glasses, small silver stud earrings, and shoulder-length straight black hair gathered into a low ponytail, wears a light-blue anti-static lab coat over her moss-green zip hoodie. Wearing clean purple nitrile gloves, she carefully lowers and presses a polished silver heat-spreader lid onto the bonded silicon die, securing it squarely against the green substrate. She then gently picks up the completed GPU chip by its outer edges between her thumb and index finger. Raising it upward, she displays the finished component toward the camera, revealing the lustrous silver heat spreader mounted atop the rigid green circuit board with micro-soldered gold contact pads gleaming faintly on its underside. Her face behind the lenses shows a quiet, genuine sense of pride.\n\nThe camera frames her hands in a crisp close-up before executing a steady, slow push-in as she elevates the chip. The shallow depth of field keeps the sharp edges and brushed metallic texture of the heat spreader in razor-sharp focus, while Lin's subtle, proud smile and the softly blurred laboratory interior form an evocative backdrop.",
+   "annotation": {
+    "title_en": "The lid",
+    "scene": "packaging_lab",
+    "camera": "close-up, slow push",
+    "beat": "Lin presses a polished silver heat-spreader lid onto the package. She lifts the finished GPU chip, a silver square on a green substrate with gold contact pads underneath, and holds it toward the camera between two fingers.",
+    "state": {
+     "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "finished packaged GPU chip with silver lid"
+    }
+   }
+  },
+  {
+   "prompt": "The packaging lab test station is illuminated by cool, even overhead strip lights complemented by the pale glow of digital readouts and diagnostic screens. On the anti-static workbench, specialized testing hardware sits alongside neatly routed ribbon cables, oscilloscopes, and a tilted computer monitor displaying diagnostic software. The atmosphere is precise and sterile, carrying the quiet, focused tension of an engineering validation facility.\n\nLin stands behind the test bench, an East Asian woman in her early thirties with shoulder-length straight black hair gathered into a low ponytail, round tortoiseshell glasses, and small silver stud earrings. She wears a light-blue anti-static lab coat over her moss-green zip hoodie, white T-shirt, and black jeans. Holding the finished packaged GPU chip with its polished silver lid, she carefully aligns it into the open test socket and latches the hinged retention clamp down securely. Her gaze shifts to the adjacent monitor, where lines of diagnostic test code rapidly stream across the black interface before resolving into a bright, saturated green PASS signal. Seeing the result, Lin's tense posture immediately relaxes; she pumps her right fist in triumph and laughs with pure relief and satisfaction.\n\nThe camera remains in a steady medium shot at chest height, keeping Lin, the test fixture, and the monitor screen within a single balanced composition. The framing maintains sharp focus on Lin's face and hands as she clamps the chip, while keeping the monitor clearly readable in the background. The steady framing captures both the technical milestone and her spontaneous emotional reaction without cutting away.",
+   "annotation": {
+    "title_en": "Final test",
+    "scene": "packaging_lab",
+    "camera": "medium shot",
+    "beat": "Lin drops the chip into a test socket and closes the clamp. A monitor runs a test sequence and flashes a large green PASS. Lin pumps her fist and laughs.",
+    "state": {
+     "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "packaged GPU chip passing final test"
+    }
+   }
+  },
+  {
+   "prompt": "The home electronics studio is bathed in warm, quiet afternoon daylight filtering through nearby windows, accented by the cool circular glow of an articulated magnifier lamp poised over the wooden workbench. The organized surface holds neatly arranged hand tools, spool holders, and digital meters. At the center of a blue anti-static mat lies a bare, matte-black graphics card printed circuit board, completely unpopulated except for printed copper traces and a prominent empty square footprint right in the middle.\n\nLin, an East Asian woman in her early thirties, sits attentively at the desk. Her shoulder-length straight black hair is pulled back into a low ponytail, framing her round tortoiseshell glasses and small silver stud earrings. She wears her moss-green zip hoodie over a plain white T-shirt and black jeans. Gripping a pair of slender metal tweezers, she delicately lifts her finished GPU chip from a foam container. Leaning forward slightly, she guides the chip directly above the empty footprint on the board. With deliberate, steady motion, she lowers the processor into position, seating it cleanly against the square contacts before releasing her grip on the tweezers.\n\nThe camera remains completely static in a medium-wide shot, holding Lin’s upper body and the working surface of the bench in stable view. The soft domestic lighting and the desk lamp keep her focused expression, her hands, and the matte-black circuit board clearly illuminated without any sudden shifts in perspective.",
+   "annotation": {
+    "title_en": "Back at the bench",
+    "scene": "home_electronics_bench",
+    "camera": "medium wide, static",
+    "beat": "Afternoon back in her home studio, now in just her moss-green hoodie again. On an electronics bench with a magnifier lamp lies a bare black graphics card circuit board with an empty square footprint in the centre. Lin places her chip onto the footprint with tweezers.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "chip placed on a bare black graphics card board"
+    }
+   }
+  },
+  {
+   "prompt": "The home electronics studio is bathed in warm ambient evening light, contrasted sharply by the bright white illumination of an articulated magnifier lamp directed straight down at an antistatic work mat. Resting in the centre of the green surface, the matte-black graphics card printed circuit board gleams under the intense task light, highlighting intricate copper traces and tiny metallic pads. Spools of micro-solder wire, a syringe of amber flux, and precision tweezers sit nearby, creating an intimate, focused workshop atmosphere filled with quiet domestic concentration.\n\nLin, an East Asian woman in her early thirties with shoulder-length straight black hair gathered in a low ponytail, wears round tortoiseshell glasses, silver stud earrings, and a moss-green zip hoodie over a white T-shirt. Leaning forward over the bench, she wields a hot-air rework nozzle with practiced precision, sweeping the heated stream in tight circles above the central silicon chip to reflow its contacts. Setting the wand in its cradle, she takes up a pencil-thin soldering iron and fine solder wire, methodically soldering memory chips and miniature power components around the processor. A delicate wisp of pale grey smoke curls upward through the lamp's beam, leaving the board fully populated with cleanly seated components.\n\nThe camera holds a close-up perspective angled down toward the circuit board, executing a very slow macro drift across the workspace. Lin’s focused face and tortoiseshell glasses remain softly blurred in the upper background, keeping visual attention fixed on her steady hands, the iron's glowing tip, and the newly populated graphics card.",
+   "annotation": {
+    "title_en": "Soldering",
+    "scene": "home_electronics_bench",
+    "camera": "close-up",
+    "beat": "Close on the board as Lin heats the chip with a hot-air rework station, then solders memory chips and power components around it with a fine soldering iron; a thin wisp of smoke curls up under the lamp.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "populated graphics card board"
+    }
+   }
+  },
+  {
+   "prompt": "The home electronics workbench is bathed in the focused glow of an overhead adjustable task lamp, casting bright, crisp reflections off tiny solder joints and metallic traces. A dark silicone antistatic mat covers the surface, bordered by out-of-focus precision tweezers, small component bins, and the warm ambient light of the quiet apartment room. The surrounding environment remains still and hushed, conveying an atmosphere of patient, focused craftsmanship.\n\nLin, an East Asian woman in her early thirties with straight black hair in a low ponytail, wears round tortoiseshell glasses, silver stud earrings, and a moss-green zip hoodie over a white T-shirt. Leaning close over the populated graphics card board with her moss-green sleeves pulled back, she holds a small plastic syringe of thermal paste in one hand. With careful pressure, she squeezes a neat, pea-sized bead of viscous grey compound onto the exact center of the chip's polished silver lid. Setting the tube aside, she picks up a miniature flat-edged spatula and gently spreads the paste outward with controlled, smooth strokes. By the end of the action, the previously bare silver lid is fully covered in a uniform, paper-thin layer of matte grey paste.\n\nThe camera maintains a crisp macro close-up framed tightly on the central processor and Lin’s steady hands. A shallow depth of field keeps the spreading grey compound in sharp relief while the surrounding memory chips and board components blur softly into the background. The shot remains static, letting the tactile precision of her spreading motion dominate the frame.",
+   "annotation": {
+    "title_en": "Thermal paste",
+    "scene": "home_electronics_bench",
+    "camera": "macro close-up",
+    "beat": "Lin squeezes a small dot of grey thermal paste onto the silver lid of the chip on the populated board and spreads it into a thin even layer with a small spatula.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "board with thermal paste on the chip"
+    }
+   }
+  },
+  {
+   "prompt": "The home electronics workbench is illuminated by the warm, directional glow of an adjustable desk lamp, casting focused light across a blue anti-static work mat while leaving the background shelving in soft, ambient shadow. Small component bins, hand tools, and test equipment sit neatly arranged in the peripheral space, maintaining a calm, dedicated workshop atmosphere. The populated circuit board rests flat on the mat, its central chip crowned with a freshly spread layer of grey thermal paste.\n\nLin, an East Asian woman in her early thirties, leans over the bench in deep concentration. Her shoulder-length straight black hair is tied in a tidy low ponytail, and she wears round tortoiseshell glasses, small silver stud earrings, and a moss-green zip hoodie over a white T-shirt. She lifts a substantial heatsink featuring a dense stack of aluminium fins and thick copper heat pipes, carefully aligning its mounting posts over the board before lowering it smoothly onto the prepared silicon die. Picking up a small precision screwdriver, she fastens the four spring-loaded screws in an alternating diagonal cross pattern, applying measured turns to each corner until the cooling assembly is firmly and evenly clamped into place.\n\nThe camera remains in a steady medium close-up, angled downward to frame Lin's attentive face and her dexterous hands at work on the bench. The composition keeps both her focused gaze behind the tortoiseshell frames and the metallic textures of the heatsink in clear view throughout the delicate mechanical assembly.",
+   "annotation": {
+    "title_en": "The heatsink",
+    "scene": "home_electronics_bench",
+    "camera": "medium close-up",
+    "beat": "Lin lowers a large heatsink with thick copper heat pipes and a dense aluminium fin stack onto the board and tightens the four spring screws in a cross pattern with a small screwdriver.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "board with copper-pipe heatsink mounted"
+    }
+   }
+  },
+  {
+   "prompt": "The home electronics workbench is bathed in a cozy blend of warm ambient room light and the focused illumination of an adjustable desktop task lamp. Organized clutter surrounds the blue anti-static work mat, with precision screwdriver sets, tweezers, and labeled component bins resting quietly in the soft-focus background. The atmosphere is quiet, intimate, and authentic to a personal engineering project in a lived-in domestic space.\n\nLin, an East Asian woman in her early thirties with shoulder-length straight black hair tied in a low ponytail, wears round tortoiseshell glasses, small silver stud earrings, and an open moss-green zip hoodie over a white T-shirt. Before her lies the circuit board with its exposed copper-pipe heatsink mounted. Working with practiced efficiency, she carefully clips a sculpted black-and-green shroud housing three cooling fans onto the front, then secures a matte black backplate across the reverse side. Now holding a fully assembled, pristine NVIDIA graphics card, Lin raises the substantial hardware in both hands and turns it directly toward the viewer, her focused demeanor softening into a broad, proud grin.\n\nThe camera maintains a medium shot at eye level, beginning with Lin over the workbench and executing a steady, slow push-in. The framing smoothly narrows to emphasize both her triumphant expression and the sleek, finished graphics card, keeping the warm workshop backdrop gently softened behind her.",
+   "annotation": {
+    "title_en": "The card is born",
+    "scene": "home_electronics_bench",
+    "camera": "medium shot, slow push-in",
+    "beat": "Lin clips on a black-and-green fan shroud with three fans and screws on a black backplate. She lifts the finished NVIDIA graphics card with both hands and turns it toward the camera with a proud grin.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "finished black-and-green triple-fan NVIDIA graphics card"
+    }
+   }
+  },
+  {
+   "prompt": "The shot takes place at Lin's home electronics workbench, where an open PC test rig and a benchtop power supply sit on a blue anti-static mat. Warm light from an adjustable desk lamp pools across the motherboard and neatly bundled cables. The atmosphere is hushed and charged with quiet anticipation, focused entirely on the electrical test.\n\nLin, an East Asian woman in her early thirties with shoulder-length black hair in a low ponytail, round tortoiseshell glasses, silver stud earrings, and a moss-green zip hoodie over a white T-shirt, handles the finished black-and-green NVIDIA graphics card. She slots it firmly into the test bench's PCIe riser and clicks the power cables into place. She flips the power toggle. After a momentary pause, the card's three cooling fans spin up into a steady whir, and a vivid green LED strip along the upper edge illuminates cleanly, bathing the components in emerald light. Lin's shoulders drop as she releases a long, relieved breath, her tense focus giving way to an open, radiant smile as she watches the card operate flawlessly.\n\nThe camera begins in a tight close-up on the graphics card and Lin's hands plugging in the connectors. As the green lights engage, it smoothly pulls back and tilts up into a medium shot, keeping both Lin's relieved face and the spinning, illuminated graphics card clearly visible on the bench.",
+   "annotation": {
+    "title_en": "First light",
+    "scene": "home_electronics_bench",
+    "camera": "close-up then medium",
+    "beat": "Lin connects the card to a bench power supply and test rig. The three fans spin up and a green light strip along the edge of the card glows. She lets out a relieved breath.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "graphics card powered on the test rig, fans spinning"
+    }
+   }
+  },
+  {
+   "prompt": "The evening setting centers on Lin’s home gaming desk, bathed in the soft, warm illumination of an angled desk lamp and muted ambient room light. The spacious dark desk provides an organized workstation, flanked by keyboard peripherals and shadowed shelving in the background. The atmosphere is quiet, purposeful, and domestic, capturing the focused intimacy of a late-night hardware assembly inside a cozy personal space.\n\nLin, an East Asian woman in her early thirties, stands beside the desk with her straight black shoulder-length hair tied in a low ponytail. She wears round tortoiseshell glasses, small silver stud earrings, a moss-green zip hoodie over a white T-shirt, black jeans, and white sneakers. With steady, practiced hands, she loosens the thumbscrews on a matte black mid-tower PC case and carefully lifts away its tempered glass side panel, setting it gently aside. Inside the open chassis, a motherboard with a mounted CPU cooler and RAM sticks is already fitted, leaving the primary PCIe slot completely bare. Resting beside the chassis on a shiny grey anti-static bag sits her finished graphics card, fans stationary and awaiting installation. She pauses, closely examining the interior layout with a quiet, thoughtful expression.\n\nThe camera holds a steady medium wide shot at desk height, framing Lin from the waist up alongside the computer case and the resting graphics card. The fixed composition keeps her deliberate hands, the vacant motherboard slot, and the GPU continuously visible without panning. Soft practical lighting neatly defines the contours of the open chassis and the fabric of her hoodie throughout the movement.",
+   "annotation": {
+    "title_en": "An empty case",
+    "scene": "home_gaming_desk",
+    "camera": "medium wide",
+    "beat": "At her gaming desk in the evening, Lin opens an empty black PC case with a tempered glass side panel. A motherboard with a CPU cooler and RAM is already inside; the long PCIe slot is empty. Her graphics card waits on an anti-static bag beside it.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "graphics card next to an open PC case"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the open black computer case rests on the warm wooden surface of the home gaming desk. Warm practical lamplight illuminates the workspace, casting soft amber reflections across the exposed motherboard, cooling fins, and surrounding tools, while creating deep, soft shadows within the chassis interior. The environment feels calm, meticulous, and dedicated to evening hobby work, centered on the delicate circuitry awaiting assembly.\n\nLin, an East Asian woman in her early thirties with straight black hair tied in a low ponytail, wears round tortoiseshell glasses, small silver stud earrings, and a moss-green zip hoodie over a white T-shirt. Leaning forward, she grips the graphics card by its plastic shroud and aligns its gold contact edge with the motherboard's empty PCIe slot. With deliberate, balanced pressure from both thumbs, she presses the card downward until the PCIe retention latch snaps firmly into place. She immediately secures the rear bracket to the chassis frame with a small black screw, tightening it by hand, and then plugs the braided multi-pin power connector into the side socket of the card, confirming the fit with a gentle push.\n\nThe camera holds a close-up framing focused directly on her steady hands and the internal bay of the computer tower. The shallow depth of field keeps the mechanical connection razor-sharp while her face and glasses remain softly blurred just above the work area. The slow, controlled camera remains steady throughout the installation, keeping the card, slot, and cables clearly visible until the hardware sits fully assembled.",
+   "annotation": {
+    "title_en": "Click into the slot",
+    "scene": "home_gaming_desk",
+    "camera": "close-up",
+    "beat": "Lin lines up the graphics card and presses it into the PCIe slot until the latch clicks, screws the bracket to the case and plugs in the power cable.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "graphics card installed in the PC"
+    }
+   }
+  },
+  {
+   "prompt": "The scene unfolds at a cozy home gaming desk under warm ambient room lighting. A sleek mid-tower computer chassis rests on the wooden desktop beside a widescreen monitor, while soft practical lamps in the background create an inviting workspace atmosphere. The computer case sits with its newly installed components ready for operation, subtly reflecting the warm overhead room glow.\n\nLin, an East Asian woman in her early thirties, stands beside the desk. She has shoulder-length straight black hair tied into a low ponytail, round tortoiseshell glasses, small silver stud earrings, and wears a moss-green zip hoodie over a white T-shirt with black jeans. She carefully slides the tempered glass side panel shut against the PC chassis. Reaching over, she presses the chassis power button. The system immediately springs to life as internal fans illuminate with soft rainbow lighting, and the newly built graphics card emits a bright green light strip through the glass. Simultaneously, the adjacent monitor wakes to show a clean boot screen. Relieved and thrilled by the successful power-on, Lin turns directly toward the camera with a broad, genuine grin.\n\nThe camera remains fixed in a steady eye-level medium shot, framing Lin from the waist up alongside the computer case and monitor. The composition captures both the physical closure of the chassis and the colorful illumination of the components, keeping her joyful expression and the glowing green GPU clearly visible throughout.",
+   "annotation": {
+    "title_en": "Power on",
+    "scene": "home_gaming_desk",
+    "camera": "medium shot",
+    "beat": "Lin slides the glass panel shut and presses the power button. The case lights up with soft rainbow lighting, the card's green light strip glows through the glass and the monitor shows a boot screen. She grins at the camera.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "PC with her graphics card booting up"
+    }
+   }
+  },
+  {
+   "prompt": "The darkened home office and gaming setup is quiet and intimate at night, with the main room lights switched off. Illumination emanates entirely from the computer workstation, where soft colored radiance from the PC tower and the bright glow of the wide monitor cut through the surrounding shadows. The deep darkness of the room accentuates the vivid reflections playing across the clean desk surface and rear wall, establishing a focused, authentic late-night gaming ambiance.\n\nLin, an East Asian woman in her early thirties, sits facing the display with her shoulder-length straight black hair secured in a low ponytail. She wears round tortoiseshell glasses, subtle silver stud earrings, and a moss-green zip hoodie over a white T-shirt. Smiling with focused anticipation, she reaches down, lifts a pair of black over-ear gaming headphones, and settles them snugly over her ears. She briefly interlaces her fingers, cracking her knuckles with relaxed confidence before taking hold of the mouse. With a decisive click, she launches the game, prompting an ornate fantasy title screen to flare to life and cast shifting amber and azure light across her face, glasses, and hoodie.\n\nThe camera holds in a steady medium close-up at eye level, focusing on Lin’s expressive face and upper torso. The framing keeps her headset adjustment, focused gaze, and the dynamic interplay of monitor reflections across her tortoiseshell lenses clearly visible throughout the shot. The surrounding room recedes into natural soft-focus shadow, highlighting her joyful, solitary gaming ritual.",
+   "annotation": {
+    "title_en": "Headset on",
+    "scene": "home_gaming_desk",
+    "camera": "medium close-up",
+    "beat": "Night. The room lights are off except for the glowing PC and monitor. Lin puts on a black over-ear gaming headset, cracks her knuckles and launches a game; a fantasy title screen lights her face.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt, black gaming headset",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "game launching on her PC"
+    }
+   }
+  },
+  {
+   "prompt": "In the darkened room, the home gaming desk is bathed in vibrant, shifting illumination cast entirely by the large gaming monitor and the quiet glow of the nearby PC tower. Warm amber, violet, and deep orange tones from the sunset-lit virtual environment wash over the dark wooden desktop, textured mouse mat, and mechanical keyboard. The atmosphere is hushed, focused, and deeply immersive, capturing a solitary late-night gaming session in a cozy domestic interior.\n\nLin, an East Asian woman in her early thirties with straight black hair pulled into a low ponytail, wears round tortoiseshell glasses, subtle silver stud earrings, a black over-ear gaming headset, and a moss-green zip hoodie over a white T-shirt. From behind her right side, her left hand rests over the keyboard keys while her right hand maneuvers the optical mouse with fluid precision. On the screen, the launched game opens into an expansive fantasy landscape where her avatar rides on horseback across a glassy lake, casting complex ray-traced reflections of sunset clouds and ripples across the water. Lin watches intently, her posture relaxed yet engaged as her fingers make smooth control inputs while the photorealistic graphics render seamlessly.\n\nThe camera frames an over-the-shoulder medium shot, keeping the curve of Lin's hooded shoulder, the headset ear cup, and her active hands grounded in the lower foreground while centering the breathtaking gameplay on the monitor. A subtle, steady push-in draws closer toward the vibrant screen, preserving the crisp digital visuals while maintaining Lin's quiet concentration.",
+   "annotation": {
+    "title_en": "Into the world",
+    "scene": "home_gaming_desk",
+    "camera": "over-the-shoulder toward the monitor",
+    "beat": "Over Lin's shoulder, the monitor shows a breathtaking open-world fantasy landscape with ray-traced reflections on a lake at sunset as her character rides across it. Her hands move on the keyboard and mouse.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt, black gaming headset",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "open-world game running on her GPU"
+    }
+   }
+  },
+  {
+   "prompt": "The setting is Lin's home gaming desk during the evening, wrapped in deep, cozy room shadows. Rapidly alternating flashes of fierce fiery orange and crackling electric blue illuminate the dark space, radiating directly from the bright computer monitor just off-camera. A faint, warm practical glow hums in the blurred background, but the immediate environment is dominated by the flickering, chromatic highlights of high-stakes digital combat, creating an immersive and electrifying atmosphere.\n\nLin, an East Asian woman in her early thirties, wears a moss-green zip hoodie over a white T-shirt, with a sleek black gaming headset fitted over her shoulder-length black hair tied in a low ponytail. Her round tortoiseshell glasses and small silver stud earrings catch the dynamic screen light, reflecting vibrant dragon flames and magical blasts across the lenses. Her eyes are wide with absolute focus as she tracks the intense boss fight. Leaning slightly forward, she tenses her shoulders, parting her lips in quiet concentration while her fingers execute rapid, decisive clicks on the mouse. Her expression stays gripped by adrenaline, shifting subtly between tense anticipation and fierce determination as the encounter peaks.\n\nThe camera maintains a tight, intimate close-up on Lin's face at eye level, slowly creeping forward by a fraction of an inch to emphasize the mounting tension. The depth of field is shallow, keeping the background and the outer edges of her black headset softly out of focus while keeping her eyes, glasses, and the shifting colored light across her skin crisply detailed.",
+   "annotation": {
+    "title_en": "Boss fight",
+    "scene": "home_gaming_desk",
+    "camera": "close-up on her face lit by the screen",
+    "beat": "Close on Lin's face, flickering with orange and blue light from the screen, eyes wide behind her glasses as she fights a huge dragon in the game; she leans forward, clicking rapidly.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt, black gaming headset",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "dragon battle on screen"
+    }
+   }
+  },
+  {
+   "prompt": "The home gaming desk is bathed in the dynamic ambient glow of a large desktop monitor, contrasted against the warm, soft practical lamplight of the surrounding apartment room. The dark desk holds a backlit mechanical keyboard and gaming mouse, framed by muted domestic decor in the background. On the vibrant screen, the climactic encounter resolves as the massive fantasy dragon collapses in a cascade of illuminated visual effects, swiftly giving way to a prominent, radiant golden victory banner that casts a bright yellow-orange sheen across the workspace.\n\nLin, an East Asian woman in her early thirties with straight black hair in a low ponytail, round tortoiseshell glasses, and small silver stud earrings, sits poised at the desk wearing a moss-green zip hoodie over a white T-shirt, black jeans, and a black gaming headset over her ears. As the defeat animation plays, she instantly erupts with joy, pushing back from her ergonomic chair and leaping to her feet with both arms pumped high in the air. The rapid, celebratory jump knocks the headset slightly askew on her head, leaving one earcup tipped back over her temple. She breaks into bright, breathless laughter, her face beaming with genuine exhilaration as she celebrates her hard-earned triumph.\n\nThe camera remains in a steady medium shot at eye level, subtly tilting upward and drifting back slightly to smoothly follow her vertical movement as she stands. The framing comfortably preserves her upper body, raised fists, slightly disheveled headset, and the blazing victory screen beside her, maintaining clear visibility of both her joyful expression and the triumphant game interface.",
+   "annotation": {
+    "title_en": "Victory",
+    "scene": "home_gaming_desk",
+    "camera": "medium shot",
+    "beat": "The dragon falls on screen and a VICTORY banner appears. Lin jumps up from her gaming chair with both arms raised, her headset knocked slightly askew, laughing.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt, black gaming headset",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "victory screen in the game"
+    }
+   }
+  },
+  {
+   "prompt": "The home studio is bathed in an intimate blend of warm domestic lamp light and computer glow. A desk lamp casts golden tones across the wooden surface, countered by the soft illumination of the custom PC case and the bright, vibrant light from the paused game screen. On the wall beside the workstation, a cork board holds pinned notes and a prominent hand-drawn pencil architectural schematic. The room carries a quiet, reflective atmosphere punctuated by the soft hum of cooling fans.\n\nLin, an East Asian woman in her early thirties with straight black hair in a low ponytail, wears round tortoiseshell glasses, silver stud earrings, a moss-green zip hoodie over a white T-shirt, black jeans, and white sneakers. A black gaming headset sits over her ears. Smiling with quiet satisfaction, she lifts her hands, pulls the headset down around her neck, and gently pats the top of the illuminated PC case. She then turns toward the cork board, gazing directly at the pinned pencil architecture sketch. Her headset remains settled over her hoodie collar as her expression softens in contemplation.\n\nThe camera begins in a medium shot of Lin at the desk and slowly pulls back in a smooth, continuous motion. The widening frame gracefully incorporates the pinned pencil sketch, Lin standing peacefully, the glowing PC tower, and the paused monitor display into a single balanced wide shot that maintains crisp focus across the entire studio setup.",
+   "annotation": {
+    "title_en": "Full circle",
+    "scene": "home_studio_wall",
+    "camera": "slow pull-back to a wide shot",
+    "beat": "Lin pulls the headset down around her neck, pats the glowing PC case and turns to the cork board where her pencil architecture sketch is still pinned. The camera pulls back to show the sketch, the glowing PC and the paused game together.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt, headset around her neck",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "sketch on the board and the running PC in one frame"
+    }
+   }
+  },
+  {
+   "prompt": "The home gaming desk is bathed in the balanced glow of warm practical lamps and the vivid, cool luminescence radiating from the wide computer monitor. In the softly blurred background, the cozy room light outlines the corkboard on the wall, while the paused video game casts vibrant, high-fidelity colors across the desk surface, mechanical keyboard, and mousepad. The atmosphere is quiet, intimate, and deeply satisfying, capturing the relaxed conclusion of a long technical journey within a comfortable personal workspace.\n\nLin, an East Asian woman in her early thirties, has straight black hair gathered in a low ponytail, round tortoiseshell glasses, and subtle silver stud earrings. She wears a moss-green zip hoodie over a white T-shirt, with a black gaming headset resting around her neck. Settling back into her desk chair, Lin turns directly toward the lens. Her expression softens into a warm, accomplished smile as she speaks to the viewer, explaining that the intricate game frame paused behind her originated from a simple pencil sketch. Radiating quiet pride, she leans forward slightly and reaches her right hand directly toward the front of the lens to turn off the recording.\n\nThe camera remains static in a medium close-up framing Lin from the chest up at eye level. The composition keeps her expressive face, tortoiseshell glasses, hoodie, and the headset around her neck sharply defined against the soft ambient backdrop. The shot concludes cleanly as Lin's reaching hand enters the immediate foreground toward the lens.",
+   "annotation": {
+    "title_en": "Sign-off",
+    "scene": "home_gaming_desk",
+    "camera": "medium close-up, static",
+    "beat": "Lin sits back down in the glow of the monitor, turns to the camera and smiles; she says that this frame started as a pencil sketch, then reaches toward the camera to switch the recording off.",
+    "state": {
+     "outfit": "moss-green zip hoodie over white T-shirt, headset around her neck",
+     "glasses": "round tortoiseshell",
+     "gpu_stage": "game paused on screen"
+    }
+   }
+  }
+ ]
+}

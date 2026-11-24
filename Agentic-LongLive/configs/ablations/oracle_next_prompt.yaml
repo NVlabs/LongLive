@@ -1,0 +1,2 @@
+# Upper bound that breaks the online protocol: the agent may read the next prompt.
+agent: {oracle_next_prompt: true}

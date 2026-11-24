@@ -1,0 +1,52 @@
+{
+ "name": "04_adjust_shirt_hanger",
+ "title": "Adjusting Shirt and Sorting Laundry",
+ "summary": "The robot adjusts a white t-shirt on a wire hanger, hangs it on the railing, sorts laundry in the basket below, and returns to check the hanger.",
+ "camera": "head camera",
+ "robot": "two black robotic arms with parallel grippers and wrist cameras",
+ "setting": "a high-rise balcony with a railing overlooking tall buildings and a laundry basket on the floor",
+ "first_frame": "04_adjust_shirt_hanger.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "75a08ba2206bc357a470b007d689eb30",
+  "frame_index": 0,
+  "original_prompt": "Adjust the white t-shirt on the hanger",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "21075247e57d1c16385010e778aadf6637956cc6ed14697eb01af9faa9df608f"
+ },
+ "segments": [
+  {
+   "instruction": "Use the left gripper to pull the left shoulder of the white t-shirt onto the wire hanger while the right gripper holds the top.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the hanger with the neatly positioned t-shirt and hook it onto the top balcony railing, then release it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Tilt the camera down towards the laundry basket on the balcony floor, leaving the hung t-shirt out of view above.",
+   "memory_event": "hide: the white t-shirt on the hanger hanging from the railing"
+  },
+  {
+   "instruction": "Reach both grippers into the laundry basket and grasp the red garment.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the red garment and turn the camera and arms to the left, placing it down onto the floor area to the side.",
+   "memory_event": "hide: the laundry basket on the floor"
+  },
+  {
+   "instruction": "Turn the camera back down towards the laundry basket, bringing it back into view.",
+   "memory_event": "return: the laundry basket with remaining white clothing inside"
+  },
+  {
+   "instruction": "Tilt the camera up towards the balcony railing where the white t-shirt was hung.",
+   "memory_event": "return: the white t-shirt properly positioned on the wire hanger hooked onto the balcony railing"
+  },
+  {
+   "instruction": "Grasp the hook of the wire hanger with the right gripper and lift it slightly off the railing.",
+   "memory_event": "none"
+  }
+ ]
+}

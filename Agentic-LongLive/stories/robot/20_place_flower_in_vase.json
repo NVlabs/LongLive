@@ -1,0 +1,52 @@
+{
+ "name": "20_place_flower_in_vase",
+ "title": "Flower and Vase Arrangement",
+ "summary": "The robot places a flower into a vase, removes it, covers the flower with the inverted vase, and reveals it again.",
+ "camera": "fixed third-person camera",
+ "robot": "one black robot arm with a parallel gripper",
+ "setting": "a tabletop with a marble pattern against cardboard walls",
+ "first_frame": "20_place_flower_in_vase.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "81f23bf651720d8be53f44d69c1aa76b",
+  "frame_index": 0,
+  "original_prompt": "move flower to vase",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "c66bbe417fe53e7bdf34436927c044b2314ffcf8b1e99e701c7476e99b24aed1"
+ },
+ "segments": [
+  {
+   "instruction": "The gripper grasps the flower stem near the blossom and lifts it above the marble table. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot moves the flower over the pink vase, inserts the stem into the opening, and releases it. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The gripper grasps the protruding flower stem, pulls it out of the vase, and lays it flat on the table. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot grasps the pink vase, flips it upside down, and places it over the flower blossom. The camera remains fixed.",
+   "memory_event": "hide: flower covered by the inverted pink vase"
+  },
+  {
+   "instruction": "The gripper releases the inverted vase and adjusts its position slightly on the table. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The arm pulls back and hovers stationary above the right side of the workspace. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The gripper moves to the inverted vase, grasps it, and lifts it straight up. The camera remains fixed.",
+   "memory_event": "return: flower on the table with its blossom and green stem in the exact prior orientation"
+  },
+  {
+   "instruction": "The robot turns the vase upright, sets it down beside the flower, and releases it. The camera remains fixed.",
+   "memory_event": "none"
+  }
+ ]
+}

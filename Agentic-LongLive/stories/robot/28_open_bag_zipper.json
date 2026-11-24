@@ -1,0 +1,52 @@
+{
+ "name": "28_open_bag_zipper",
+ "title": "Unzipping and Accessing Bag Contents",
+ "summary": "A dual-arm robot unzips a beige pouch, takes out a blue container, places it back inside, closes the lid, and later reopens the bag to retrieve it.",
+ "camera": "fixed overhead camera",
+ "robot": "two black robotic arms with parallel grippers",
+ "setting": "a white tabletop workspace",
+ "first_frame": "28_open_bag_zipper.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "eff11421f6c43d0c8cbf839a2ce2f604",
+  "frame_index": 0,
+  "original_prompt": "open the zipper",
+  "viewpoint": "third_person_overhead",
+  "first_frame_sha256": "f6b268dcdba6c28d7f0fa2b07d516f5225d3765cc64ef05e894bd0fb0bd35867"
+ },
+ "segments": [
+  {
+   "instruction": "The right gripper pulls the zipper around the front curve while the left gripper holds the bag steady.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The right gripper finishes unzipping the remaining track to completely release the top flap.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The left gripper lifts open the top flap to reveal a small blue container inside, and the right gripper lifts the container out onto the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The right gripper places the blue container back into the bag, and the left gripper folds the lid shut.",
+   "memory_event": "hide: blue container placed inside the bag and covered by the closed lid"
+  },
+  {
+   "instruction": "Both grippers press down gently along the closed lid and shift the bag slightly toward the center.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The left gripper straightens the front strap of the bag while the right arm retracts to clear the top.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The left gripper lifts open the lid of the bag again.",
+   "memory_event": "return: the blue container reappears inside the bag in the exact same spot and orientation"
+  },
+  {
+   "instruction": "The right gripper reaches inside and grasps what was put inside the bag.",
+   "memory_event": "none"
+  }
+ ]
+}

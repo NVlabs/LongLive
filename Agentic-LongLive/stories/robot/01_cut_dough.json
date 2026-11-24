@@ -1,0 +1,52 @@
+{
+ "name": "01_cut_dough",
+ "title": "Dough Slicing and Stove Prep",
+ "summary": "A dual-arm robot slices dough on a cutting board, moves a piece to the stovetop, covers it, and checks back between workstations.",
+ "camera": "head camera",
+ "robot": "two black dexterous robotic arms with multi-finger grippers",
+ "setting": "a kitchen counter with a cutting board, condiment bottles, and a gas stove",
+ "first_frame": "01_cut_dough.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "094c4709647f2c0bbab4b17690d316da",
+  "frame_index": 0,
+  "original_prompt": "Cut the dough into small pieces with a knife using both hands",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "cd5af98f65ab0080d0496a65dd4218d81b9721cb384da583322db65bf41d2941"
+ },
+ "segments": [
+  {
+   "instruction": "Press the knife down using both hands to slice through the dough log. The camera stays focused on the cutting board.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the blade, cut a second slice, and set the knife flat on the board. The camera remains still.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pick up a sliced dough piece with the right hand while the camera turns right toward the stovetop.",
+   "memory_event": "hide: cutting board, knife, and condiment counter pan out of view"
+  },
+  {
+   "instruction": "Place the dough piece onto the stove tray and reach toward the lid next to it. The camera stays on the stove.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Place the lid over the dough piece on the tray. The camera remains fixed on the stove.",
+   "memory_event": "hide: dough piece on the tray is covered by the lid"
+  },
+  {
+   "instruction": "Move the hands back toward the counter as the camera turns left to face the cutting board.",
+   "memory_event": "return: cutting board with the sliced dough log and resting knife reappears exactly as left"
+  },
+  {
+   "instruction": "Pick up another dough slice with the right hand while the camera pans right back to the stovetop.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the lid off the tray with the left hand. The camera stays focused on the stove.",
+   "memory_event": "return: first dough piece reappears uncovered on the tray"
+  }
+ ]
+}

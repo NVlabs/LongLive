@@ -3,36 +3,99 @@ SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All 
 SPDX-License-Identifier: Apache-2.0
 Provenance: Modified from NVlabs/LongLive.
 Source: https://github.com/NVlabs/LongLive @ fb16a87 :: README.md
-Changes: Add the independent Long-WAM project and its entry points.
+Changes: Add the independent Long-WAM and Agentic LongLive projects and group the overview by project.
 -->
 
-<p align="center" style="border-radius: 10px">
-  <img src="LongLive1.0/assets/LongLive-series-logo.png" width="100%" alt="LongLive series logo"/>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/longlive-logo-dark.png">
+    <img src="assets/longlive-logo.png" width="500" alt="LongLive"/>
+  </picture>
 </p>
 
-## LongLive Infra for 🎬 Video Gen / 🌍 World Model / 🤖 World Action Model
+<h2 align="center">LongLive Family</h2>
 
-**Long video generation and world-action modeling research from NVIDIA.**
-Each project has its own directory, code, documentation and model weights.
+<p align="center">
+  <b>Agentic, Robotic, Transferable, Infra-native, Interactive Long Video Gen</b>
+</p>
 
-[![Paper Long-WAM](https://img.shields.io/badge/Paper-Long--WAM-76B900)](https://arxiv.org/abs/2610.10528)
-[![Paper](https://img.shields.io/badge/Paper-LongLive--Plug-brown)](https://arxiv.org/abs/2609.38154)
-[![Paper](https://img.shields.io/badge/Paper-LongLive_2.0-red)](https://arxiv.org/abs/2605.18739)
-[![Paper](https://img.shields.io/badge/Paper-LongLive_1.0-orange)](https://arxiv.org/abs/2509.22622)
+<p align="center">
+  <a href="Agentic-LongLive"><img src="https://img.shields.io/badge/Paper-Agentic_LongLive-2E7D32" alt="Paper: Agentic LongLive"></a>
+  <a href="https://arxiv.org/abs/2610.10528"><img src="https://img.shields.io/badge/Paper-Long--WAM-76B900" alt="Paper: Long-WAM"></a>
+  <a href="https://arxiv.org/abs/2609.38154"><img src="https://img.shields.io/badge/Paper-LongLive--Plug-brown" alt="Paper: LongLive-Plug"></a>
+  <a href="https://arxiv.org/abs/2605.18739"><img src="https://img.shields.io/badge/Paper-LongLive_2.0-red" alt="Paper: LongLive 2.0"></a>
+  <a href="https://arxiv.org/abs/2509.22622"><img src="https://img.shields.io/badge/Paper-LongLive_1.0-orange" alt="Paper: LongLive 1.0"></a>
+  <br>
+  <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/"><img src="https://img.shields.io/badge/Demo-Agentic_LongLive-2E7D32" alt="Demo: Agentic LongLive"></a>
+  <a href="https://nvlabs.github.io/LongLive/Long-WAM/"><img src="https://img.shields.io/badge/Demo-Long--WAM-76B900" alt="Demo: Long-WAM"></a>
+  <a href="https://nvlabs.github.io/LongLive/LongLive-Plug/"><img src="https://img.shields.io/badge/Demo-LongLive--Plug-brown" alt="Demo: LongLive-Plug"></a>
+  <a href="https://nvlabs.github.io/LongLive/LongLive2/"><img src="https://img.shields.io/badge/Demo-LongLive_2.0-red" alt="Demo: LongLive 2.0"></a>
+  <a href="https://nvlabs.github.io/LongLive/"><img src="https://img.shields.io/badge/Demo-LongLive_1.0-orange" alt="Demo: LongLive 1.0"></a>
+</p>
 
-[![Demo Long-WAM](https://img.shields.io/badge/Demo-Long--WAM-76B900)](https://nvlabs.github.io/LongLive/Long-WAM/)
-[![Demo LongLive-Plug](https://img.shields.io/badge/Demo-LongLive--Plug-brown)](https://nvlabs.github.io/LongLive/LongLive-Plug/)
-[![Demo LongLive 2.0](https://img.shields.io/badge/Demo-LongLive_2.0-red)](https://nvlabs.github.io/LongLive/LongLive2/)
-[![Demo LongLive 1.0](https://img.shields.io/badge/Demo-LongLive_1.0-orange)](https://nvlabs.github.io/LongLive/)
+## Projects
 
-## What's in this repository
+<table>
+<tr>
+<td width="40%" align="center">
+  <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/"><img src="Agentic-LongLive/assets/project_page.jpg" width="100%" alt="Agentic LongLive project page: the video streams on while the memory agent reads each prompt, updates its entity memory and draws the memory picture for the next shot"></a>
+</td>
+<td width="60%">
+  <a href="Agentic-LongLive"><b>Agentic LongLive</b></a><br>
+  Asynchronous agentic memory for long video generation.<br>
+  <sub>Keep people, objects and places consistent over long interactive stories and robot videos, with an LLM memory agent running beside a real-time generator.</sub><br>
+  <sub><a href="Agentic-LongLive">Code</a> · <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/">Project page</a></sub>
+</td>
+</tr>
+<tr>
+<td width="40%" align="center">
+  <a href="https://www.youtube.com/watch?v=sQGoMf6au1Y"><img src="https://img.youtube.com/vi/sQGoMf6au1Y/maxresdefault.jpg" width="100%" alt="Long-WAM overview video — watch on YouTube"></a>
+</td>
+<td width="60%">
+  <a href="Long-WAM"><b>Long-WAM</b></a><br>
+  Long-context world-action models.<br>
+  <sub>Train and evaluate robot policies, generate robot videos, or deploy on YAM, Franka and Unitree G1.</sub><br>
+  <sub><a href="https://arxiv.org/abs/2610.10528">Paper</a> · <a href="Long-WAM">Code</a> · <a href="https://nvlabs.github.io/LongLive/Long-WAM/">Project page</a> · <a href="https://www.youtube.com/watch?v=sQGoMf6au1Y">Video</a></sub>
+</td>
+</tr>
+<tr>
+<td width="40%" align="center">
+  <a href="https://youtu.be/pXNrJvBZvZU"><img src="LongLive-Plug/assets/readme/overview-first-frame.png" width="100%" alt="LongLive-Plug overview video — watch on YouTube"></a>
+</td>
+<td width="60%">
+  <a href="LongLive-Plug"><b>LongLive-Plug</b></a><br>
+  Once-for-all distillation for video generation.<br>
+  <sub>Distill a capability once on a base model and reuse it across downstream models, without retraining.</sub><br>
+  <sub><a href="https://arxiv.org/abs/2609.38154">Paper</a> · <a href="LongLive-Plug">Code</a> · <a href="https://nvlabs.github.io/LongLive/LongLive-Plug/">Project page</a> · <a href="https://youtu.be/pXNrJvBZvZU">Video</a></sub>
+</td>
+</tr>
+<tr>
+<td width="40%" align="center">
+  <a href="https://www.youtube.com/watch?v=7oQALy32fiU"><img src="LongLive2.0/assets/longlive2/first-video-frame.png" width="100%" alt="LongLive 2.0 overview video — watch on YouTube"></a>
+</td>
+<td width="60%">
+  <a href="LongLive2.0"><b>LongLive 2.0</b></a><br>
+  An NVFP4 parallel infrastructure for long video generation.<br>
+  <sub>Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism.</sub><br>
+  <sub><a href="https://arxiv.org/abs/2605.18739">Paper</a> · <a href="LongLive2.0">Code</a> · <a href="https://nvlabs.github.io/LongLive/LongLive2/">Project page</a> · <a href="https://www.youtube.com/watch?v=7oQALy32fiU">Video</a></sub>
+</td>
+</tr>
+<tr>
+<td width="40%" align="center">
+  <a href="https://www.youtube.com/watch?v=CO1QC7BNvig"><img src="LongLive1.0/assets/video-first-frame.png" width="100%" alt="LongLive 1.0 overview video — watch on YouTube"></a>
+</td>
+<td width="60%">
+  <a href="LongLive1.0"><b>LongLive 1.0</b></a><br>
+  Real-time interactive long video generation.<br>
+  <sub>Type prompts and watch a long video appear in real time, steered as you go.</sub><br>
+  <sub><a href="https://arxiv.org/abs/2509.22622">Paper</a> · <a href="LongLive1.0">Code</a> · <a href="https://nvlabs.github.io/LongLive/">Project page</a> · <a href="https://www.youtube.com/watch?v=CO1QC7BNvig">Video</a></sub>
+</td>
+</tr>
+</table>
 
-| Directory | What it is | Use it when you want to | Venue |
-| --- | --- | --- | --- |
-| [**`Long-WAM/`**](Long-WAM) | Long-context world-action models | Train and evaluate robot policies, generate robot videos, or deploy on YAM, Franka and Unitree G1 | [arXiv](https://arxiv.org/abs/2610.10528) |
-| [**`LongLive-Plug/`**](LongLive-Plug) | Once-for-all distillation for video generation | Distill a capability once on a base model and reuse it across downstream models, without retraining | [arXiv](https://arxiv.org/abs/2609.38154) |
-| [**`LongLive2.0/`**](LongLive2.0) | An NVFP4 parallel infrastructure for long video generation | Train or serve long-video models fast, with NVFP4 quantization and sequence parallelism | [arXiv](https://arxiv.org/abs/2605.18739) |
-| [**`LongLive1.0/`**](LongLive1.0) | Real-time interactive long video generation | Type prompts and watch a long video appear in real time, steered as you go | [ICLR 2026](https://arxiv.org/abs/2509.22622) |
+<p align="center"><sub>Click a thumbnail to watch the overview video on YouTube. The Agentic LongLive picture opens its project page.</sub></p>
+
+## Download one project
 
 Each project is self-contained. Download only the project you need using partial
 clone and sparse checkout; the example below selects **Long-WAM**.
@@ -45,48 +108,22 @@ cd Long-WAM
 ```
 
 For another project, replace `Long-WAM` in the last two commands with
-`LongLive-Plug`, `LongLive2.0` or `LongLive1.0`. Only the selected project and
-shared root files are downloaded; no other project is required to run it.
-
-## Demo videos
-
-<table>
-<tr>
-<th width="25%" align="center">Long-WAM</th>
-<th width="25%" align="center">LongLive-Plug</th>
-<th width="25%" align="center">LongLive 2.0</th>
-<th width="25%" align="center">LongLive 1.0</th>
-</tr>
-<tr>
-<td width="25%" align="center">
-  <a href="https://www.youtube.com/watch?v=sQGoMf6au1Y"><img src="https://img.youtube.com/vi/sQGoMf6au1Y/maxresdefault.jpg" width="100%" alt="Long-WAM overview video — watch on YouTube"></a>
-</td>
-<td width="25%" align="center">
-  <a href="https://youtu.be/pXNrJvBZvZU"><img src="LongLive-Plug/assets/readme/overview-first-frame.png" width="100%" alt="LongLive-Plug overview video — watch on YouTube"></a>
-</td>
-<td width="25%" align="center">
-  <a href="https://www.youtube.com/watch?v=7oQALy32fiU"><img src="LongLive2.0/assets/longlive2/first-video-frame.png" width="100%" alt="LongLive 2.0 overview video — watch on YouTube"></a>
-</td>
-<td width="25%" align="center">
-  <a href="https://www.youtube.com/watch?v=CO1QC7BNvig"><img src="LongLive1.0/assets/video-first-frame.png" width="100%" alt="LongLive 1.0 overview video — watch on YouTube"></a>
-</td>
-</tr>
-<tr>
-<td width="25%" align="center"><sub>Long-context world-action models with streaming visual memory</sub></td>
-<td width="25%" align="center"><sub>Once-for-all distillation: train a capability once, reuse it downstream</sub></td>
-<td width="25%" align="center"><sub>NVFP4 parallel infrastructure for training and inference</sub></td>
-<td width="25%" align="center"><sub>Real-time interactive long video generation</sub></td>
-</tr>
-</table>
-
-<p align="center"><sub>Click a thumbnail to watch on YouTube.</sub></p>
+`Agentic-LongLive`, `LongLive-Plug`, `LongLive2.0` or `LongLive1.0`. Only the selected project and
+shared root files are downloaded; no other project is required to run it, except that
+Agentic LongLive runs its LongLive-2.0 generator from `LongLive2.0/`
+(`git sparse-checkout set Agentic-LongLive LongLive2.0`).
 
 ## News
 
+- 🔥 [2026.11.24] We release **Agentic LongLive**: an asynchronous LLM memory agent for real-time long video generation, with the full system on LongLive-2.0 and MiniMax-H3 generators, the LongStory-Online benchmark, robot-video memory and RL training of the memory planner. → [`Agentic-LongLive/`](Agentic-LongLive) · [Project page](https://nvlabs.github.io/LongLive/Agentic-LongLive/)
 - 🔥 [2026.10.08] The [Long-WAM paper](https://arxiv.org/abs/2610.10528) is available on arXiv.
 - 🔥 [2026.10.07] We release **Long-WAM**: long-context world-action models, robot-video pretraining, benchmark training/evaluation and real-robot deployment demos. → [`Long-WAM/`](Long-WAM) · [Project page](https://nvlabs.github.io/LongLive/Long-WAM/)
 - 🔥 [2026.09.28] We release **LongLive-Plug** training and inference code with four recipes covering CFG and few-step distillation. → [`LongLive-Plug/`](LongLive-Plug)
 - 🔥 [2026.07.08] LongLive 2.0 supports FP8 inference. Please refer to [here](LongLive2.0/README.md#fp8-ptq).
+
+<details>
+<summary>Earlier news</summary>
+
 - 🔥 [2026.06.01] We released [LongLive-RAG](https://github.com/qixinhu11/LongLive-RAG), a general retrieval-augmented framework for long video gen.
 - 🔥 [2026.05.30] LongLive 2.0 now supports I2V AR teacher-forcing training and I2V DMD distillation for Wan2.2-TI2V-5B.
 - ⚡ [2026.05.25] We optimized the NVFP4 inference path with fused Triton RoPE/adaLN kernels, reduced KV-cache synchronization overhead, in-place quantized KV-cache updates, faster FP4 KV dequantization, pinned VAE transfers, and safer LoRA-before-quantization setup, improving overall throughput by **18.6%**.
@@ -97,50 +134,53 @@ shared root files are downloaded; no other project is required to run it.
 - 🔥 [2025.11.03] We implement LongLive on linear attention model [SANA-Video](https://nvlabs.github.io/Sana/Video/)! Now SANA-Video can generate 60s interactive videos in real-time.
 - 🔥 [2025.09.29] We release [Paper](https://arxiv.org/abs/2509.22622), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive).
 
+</details>
 
-## Models
+## Agentic LongLive — Asynchronous Agentic Memory for Long Video Generation
 
-### Long-WAM
+**A real-time video generator with a memory agent, running in parallel.** A memory agent on its own GPUs reads the
+prompts as they arrive, keeps text and images for every person, object and place, and writes memory pictures into the
+generator's attention sink before each shot, so the video never waits. A small planner trained with RL decides what to
+remember.
 
-Public checkpoints on [Efficient-Large-Model](https://huggingface.co/Efficient-Large-Model).
-See [download and inference instructions](Long-WAM/README.md#checkpoints).
+<table>
+<tr>
+<td width="25%" align="center"><h3>⏱️ 14 min+</h3><sub>stories that keep the same people and image quality; LongLive-2.0 alone loses identity after 2 min</sub></td>
+<td width="25%" align="center"><h3>🎯 ≈0 drift</h3><sub>image quality, last minute vs. first: +0.002, vs. −0.089 for LongLive-2.0 alone</sub></td>
+<td width="25%" align="center"><h3>⚡ 34.3 FPS</h3><sub>full system on one 8×B200 node (BF16), 1.43× faster than real time</sub></td>
+<td width="25%" align="center"><h3>👍 98.8%</h3><sub>user votes for our persistent state vs. LongLive-2.0's built-in memory</sub></td>
+</tr>
+</table>
 
-| Model family | Released variants | Use |
-| --- | --- | --- |
-| Long-WAM LIBERO | [IDM](https://huggingface.co/Efficient-Large-Model/Long-WAM-LIBERO-IDM) · [COD](https://huggingface.co/Efficient-Large-Model/Long-WAM-LIBERO-COD) | LIBERO policy inference |
-| Long-WAM RoboTwin 2.0 | [IDM](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-IDM) · [COD](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-COD) | RoboTwin 2.0 policy inference |
-| Long-WAM RoboCasa GR1 | [0 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-0s) · [2.4 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-2.4s) · [4.8 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-4.8s) · [9.6 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-9.6s) | Context-length scaling; 19.2 s under investigation, updated checkpoint coming soon. |
-| Long-WAM RoboCasa365 | [RoboCasa365](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa365) | Generalist kitchen policy |
-| Long-WAM YAM | [YAM](https://huggingface.co/Efficient-Large-Model/Long-WAM-YAM) | Bimanual pretraining on ABC 130K |
-| LongLive 2.0 Robot | [Robot-S](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-S) · [Robot-M](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-M) | Autoregressive robot-video generation |
+- **Results:** on LongStory-Online (25 stories, 857 shots, about 150 minutes of video) it raises LongLive-2.0's
+  persistent-state accuracy by 26.3 points, identity by 44.9 and revisit consistency by 40.4.
+- **No drift over long stories:** LongLive-2.0 alone forgets the protagonist after about two minutes and its image
+  quality decays over the story. With the agent, identity and image quality stay flat through 14-minute stories.
+- **Memory costs almost nothing:** the agent runs on its own GPUs and adds about 1% generation time (H100).
+  LongLive-H3 with the agent also streams in real time (34.7 FPS, 1.45×, optimized kernels).
+- **Generators:** LongLive-2.0, LongLive-H3 and FastH3-Omni; robot videos with screenshot memory.
+- **Release:** full system with documented ablation switches, LongStory-Online benchmark and judge, RL training.
 
-### LongLive-Plug
+| Live story (FastH3-Omni) | Robot video: generator alone vs. with our agent |
+| --- | --- |
+| [![Agentic LongLive story](Agentic-LongLive/assets/demos/plein_air.gif)](https://nvlabs.github.io/LongLive/Agentic-LongLive/) | [![Agentic LongLive robot](Agentic-LongLive/assets/demos/robot_fan.gif)](https://nvlabs.github.io/LongLive/Agentic-LongLive/) |
 
-[LongLive-Plug model collection](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug)
+### Checkpoints
 
-| LongLive-Plug | Directory | Supported Models |
-| --- | --- | --- |
-| [LongLive-Plug-MiniMax-H3-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step) | [`LongLive-Plug/`](LongLive-Plug) | H3-World, Code World Model, SolarWM-H3, Fun ControlNet-Union, LineartAnime, ... |
-| [LongLive-Plug-MiniMax-H3-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-cfg) | [`LongLive-Plug/`](LongLive-Plug) | MiniMax-H3 (base model), SolarWM-H3 |
-| [LongLive-Plug-Wan2.1-T2V-14B-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.1-T2V-14B-few-step) | [`LongLive-Plug/`](LongLive-Plug) | FantasyWorld, DreamZero, Fun Control, Wan-Move, MagicTryOn, ... |
-| [LongLive-Plug-Wan2.1-T2V-14B-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.1-T2V-14B-cfg) | [`LongLive-Plug/`](LongLive-Plug) | FantasyWorld, DreamZero, Fun Control, Wan-Move, MagicTryOn, ... |
-| [LongLive-Plug-Wan2.2-TI2V-5B-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.2-TI2V-5B-few-step) | [`LongLive-Plug/`](LongLive-Plug) | Matrix-Game 3.0, SCOPE, Fast-WAM LIBERO, Kiwi-Edit, Ovi, ... |
-| [LongLive-Plug-Wan2.2-TI2V-5B-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.2-TI2V-5B-cfg) | [`LongLive-Plug/`](LongLive-Plug) | Matrix-Game 3.0, SCOPE, Fast-WAM LIBERO, Kiwi-Edit, Ovi, ... |
+The full system runs on public generators, [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B)
+and [FastH3-Omni](https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1) (a few-step distillation of
+[MiniMax-H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) released by FastVideo), and on open agent models
+(Qwen3.6-35B-A3B, FLUX.2-klein-4B). See [checkpoints](Agentic-LongLive/README.md#checkpoints).
 
-Model examples are from the paper appendix, **Complete Transfer Coverage and Additional Cases**; each row lists up to five examples. Wan coverage includes both few-step and CFG transfer. MiniMax-H3 few-step and CFG adapters are used separately.
+| Model | Use |
+| --- | --- |
+| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | Real-time AR generator of the main LongStory-Online results |
+| [FastH3-Omni](https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1) | Few-step MiniMax-H3 generator with audio, used for the live demos |
+| LongLive-H3 (coming soon) | Few-step chunked-AR MiniMax-H3 generator used with the agent |
+| Agentic-LongLive-Planner-Qwen3-8B (coming soon) | RL memory planner (Qwen3-8B + GRPO LoRA, merged) |
 
-### LongLive 2.0 and 1.0
-
-| Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
-| --- | --- | ---: | ---: | ---: | :---: |
-| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
-| [LongLive-2.0-5B-NVFP4-4Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4) | [`LongLive2.0/`](LongLive2.0) | 29.7 | 5B | 84.51 | ✅ |
-| [LongLive-2.0-5B-NVFP4-2Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2) | [`LongLive2.0/`](LongLive2.0) | 45.7 | 5B | 83.14 | ✅ |
-| [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | [`LongLive1.0/`](LongLive1.0) | 20.7 | 1.3B | 84.87 |  |
-
-FPS counts generated output frames per second of diffusion time and excludes VAE decoding, following the LongLive 1.0 and Self Forcing protocol; the LongLive-2.0 paper reports end-to-end times separately. The LongLive-2.0 rows were measured on one GB200 (180 GB), as in Table 3 of the [LongLive-2.0 paper](https://arxiv.org/abs/2605.18739), and the NVFP4 rows include KV-cache quantization (`inference.kv_quant: true`, as in the released NVFP4 config). The LongLive-1.3B row was measured on one H100.
-
-
+→ [Code and quick start](Agentic-LongLive) · [Checkpoints](Agentic-LongLive/README.md#checkpoints) ·
+[Project page](https://nvlabs.github.io/LongLive/Agentic-LongLive/)
 
 ## Long-WAM — Scaling the Context of World-Action Models
 
@@ -155,6 +195,20 @@ Robot video pretraining.
 | --- | --- | --- |
 | [![Generated robot video](Long-WAM/assets/demos/ar_shoe.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![YAM robot demo](Long-WAM/assets/demos/yam_long_horizon.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) | [![Unitree G1 robot demo](Long-WAM/assets/demos/g1_cup_stacking.gif)](https://nvlabs.github.io/LongLive/Long-WAM/#demos) |
 
+### Checkpoints
+
+Public checkpoints on [Efficient-Large-Model](https://huggingface.co/Efficient-Large-Model).
+See [download and inference instructions](Long-WAM/README.md#checkpoints).
+
+| Model family | Released variants | Use |
+| --- | --- | --- |
+| Long-WAM LIBERO | [IDM](https://huggingface.co/Efficient-Large-Model/Long-WAM-LIBERO-IDM) · [COD](https://huggingface.co/Efficient-Large-Model/Long-WAM-LIBERO-COD) | LIBERO policy inference |
+| Long-WAM RoboTwin 2.0 | [IDM](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-IDM) · [COD](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboTwin2.0-COD) | RoboTwin 2.0 policy inference |
+| Long-WAM RoboCasa GR1 | [0 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-0s) · [2.4 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-2.4s) · [4.8 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-4.8s) · [9.6 s](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa-GR1-9.6s) | Context-length scaling; 19.2 s under investigation, updated checkpoint coming soon. |
+| Long-WAM RoboCasa365 | [RoboCasa365](https://huggingface.co/Efficient-Large-Model/Long-WAM-RoboCasa365) | Generalist kitchen policy |
+| Long-WAM YAM | [YAM](https://huggingface.co/Efficient-Large-Model/Long-WAM-YAM) | Bimanual pretraining on ABC 130K |
+| LongLive 2.0 Robot | [Robot-S](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-S) · [Robot-M](https://huggingface.co/Efficient-Large-Model/LongLive2.0-Robot-M) | Autoregressive robot-video generation |
+
 → [Paper](https://arxiv.org/abs/2610.10528) · [Code and quick start](Long-WAM) · [Checkpoints](Long-WAM/README.md#checkpoints) ·
 [Project page](https://nvlabs.github.io/LongLive/Long-WAM/) ·
 [Video](https://www.youtube.com/watch?v=sQGoMf6au1Y)
@@ -166,11 +220,28 @@ functional LoRAs on a base model, then attach them to compatible downstream
 models while keeping those models' task-specific weights. Supports
 Wan2.1-14B, Wan2.2-TI2V-5B and MiniMax-H3.
 
-<p align="left" style="border-radius: 10px">
+<p align="left">
   <img src="LongLive-Plug/assets/readme/method.png" width="80%" alt="LongLive-Plug method overview"/>
 </p>
 
-→ Code and documentation in [`LongLive-Plug/`](LongLive-Plug)
+### Checkpoints
+
+[LongLive-Plug model collection](https://huggingface.co/collections/Efficient-Large-Model/longlive-plug)
+
+| LongLive-Plug | Directory | Supported Models |
+| --- | --- | --- |
+| [LongLive-Plug-MiniMax-H3-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step) | [`LongLive-Plug/`](LongLive-Plug) | H3-World, Code World Model, SolarWM-H3, Fun ControlNet-Union, LineartAnime, ... |
+| [LongLive-Plug-MiniMax-H3-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-cfg) | [`LongLive-Plug/`](LongLive-Plug) | MiniMax-H3 (base model), SolarWM-H3 |
+| [LongLive-Plug-Wan2.1-T2V-14B-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.1-T2V-14B-few-step) | [`LongLive-Plug/`](LongLive-Plug) | FantasyWorld, DreamZero, Fun Control, Wan-Move, MagicTryOn, ... |
+| [LongLive-Plug-Wan2.1-T2V-14B-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.1-T2V-14B-cfg) | [`LongLive-Plug/`](LongLive-Plug) | FantasyWorld, DreamZero, Fun Control, Wan-Move, MagicTryOn, ... |
+| [LongLive-Plug-Wan2.2-TI2V-5B-few-step](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.2-TI2V-5B-few-step) | [`LongLive-Plug/`](LongLive-Plug) | Matrix-Game 3.0, SCOPE, Fast-WAM LIBERO, Kiwi-Edit, Ovi, ... |
+| [LongLive-Plug-Wan2.2-TI2V-5B-cfg](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-Wan2.2-TI2V-5B-cfg) | [`LongLive-Plug/`](LongLive-Plug) | Matrix-Game 3.0, SCOPE, Fast-WAM LIBERO, Kiwi-Edit, Ovi, ... |
+
+Model examples are from the paper appendix, **Complete Transfer Coverage and Additional Cases**; each row lists up to five examples. Wan coverage includes both few-step and CFG transfer. MiniMax-H3 few-step and CFG adapters are used separately.
+
+→ [Paper](https://arxiv.org/abs/2609.38154) · [Code and documentation](LongLive-Plug) ·
+[Project page](https://nvlabs.github.io/LongLive/LongLive-Plug/) · [Video](https://youtu.be/pXNrJvBZvZU)
+
 ## LongLive 2.0 — An NVFP4 Parallel Infrastructure for Long Video Generation
 
 Training and inference infrastructure built around NVFP4 quantization and
@@ -187,11 +258,23 @@ sequence parallelism.
   - [x] Sequence parallel inference.
   - [x] Async decoding.
 
-<p align="left" style="border-radius: 10px">
+<p align="left">
   <img src="LongLive2.0/assets/longlive2/fig_framework_overview.png" width="80%" alt="LongLive 2.0 framework overview"/>
 </p>
 
-→ Code and documentation in [`LongLive2.0/`](LongLive2.0)
+### Checkpoints (LongLive 2.0 and 1.0)
+
+| Model | Directory | FPS ↑ | Params | VBench ↑ | Multi-shot |
+| --- | --- | ---: | ---: | ---: | :---: |
+| [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | [`LongLive2.0/`](LongLive2.0) | 24.8 | 5B | 85.06 | ✅ |
+| [LongLive-2.0-5B-NVFP4-4Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S4) | [`LongLive2.0/`](LongLive2.0) | 29.7 | 5B | 84.51 | ✅ |
+| [LongLive-2.0-5B-NVFP4-2Step](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B-NVFP4-S2) | [`LongLive2.0/`](LongLive2.0) | 45.7 | 5B | 83.14 | ✅ |
+| [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) | [`LongLive1.0/`](LongLive1.0) | 20.7 | 1.3B | 84.87 |  |
+
+FPS counts generated output frames per second of diffusion time and excludes VAE decoding, following the LongLive 1.0 and Self Forcing protocol; the LongLive-2.0 paper reports end-to-end times separately. The LongLive-2.0 rows were measured on one GB200 (180 GB), as in Table 3 of the [LongLive-2.0 paper](https://arxiv.org/abs/2605.18739), and the NVFP4 rows include KV-cache quantization (`inference.kv_quant: true`, as in the released NVFP4 config). The LongLive-1.3B row was measured on one H100.
+
+→ [Paper](https://arxiv.org/abs/2605.18739) · [Code and documentation](LongLive2.0) ·
+[Project page](https://nvlabs.github.io/LongLive/LongLive2/) · [Video](https://www.youtube.com/watch?v=7oQALy32fiU)
 
 ## LongLive 1.0 — Real-time Interactive Long Video Generation
 
@@ -199,11 +282,15 @@ Accepts sequential user prompts and generates the corresponding video in real
 time, so a person can steer a long video while it is being produced. The key
 ideas are the attention sink, KV-recache, and streaming long tuning.
 
-<p align="left" style="border-radius: 10px">
+<p align="left">
   <img src="LongLive2.0/assets/longlive2/LongLive1_teaser.png" width="80%" alt="LongLive 1.0 overview"/>
 </p>
 
-→ Code and documentation in [`LongLive1.0/`](LongLive1.0)
+Checkpoint: [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B) (speed and quality in the
+[table above](#checkpoints-longlive-20-and-10)).
+
+→ [Paper](https://arxiv.org/abs/2509.22622) · [Code and documentation](LongLive1.0) ·
+[Project page](https://nvlabs.github.io/LongLive/) · [Video](https://www.youtube.com/watch?v=CO1QC7BNvig)
 
 ## Awesome work using LongLive
 
@@ -233,7 +320,24 @@ its own copy of the license and, where applicable, its own third-party notices.
 
 ## Citation
 
-Please consider citing our work if you find it useful:
+Please consider citing our work if you find it useful. Click a paper to show its BibTeX entry.
+
+<details>
+<summary><b>Agentic LongLive</b>: Asynchronous Agentic Memory for Long Video Generation</summary>
+
+```bibtex
+@article{liu2026agenticlonglive,
+  title={Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation},
+  author={Shaoteng Liu and Shuai Yang and Wei Huang and Luozhou Wang and Song Han and Yukang Chen},
+  journal={arXiv preprint},
+  year={2026},
+}
+```
+
+</details>
+
+<details>
+<summary><b>Long-WAM</b>: Scaling the Context of World-Action Models</summary>
 
 ```bibtex
 @article{huang2026longwam,
@@ -247,6 +351,11 @@ Please consider citing our work if you find it useful:
 }
 ```
 
+</details>
+
+<details>
+<summary><b>LongLive-Plug</b>: Once-for-All Distillation for Video Generation</summary>
+
 ```bibtex
 @article{yang2026longliveplug,
   title  = {LongLive-Plug: Once-for-All Distillation for Video Generation},
@@ -258,6 +367,11 @@ Please consider citing our work if you find it useful:
 }
 ```
 
+</details>
+
+<details>
+<summary><b>LongLive 2.0</b>: An NVFP4 Parallel Infrastructure for Long Video Generation</summary>
+
 ```bibtex
 @article{longlive_2.0,
   title={LongLive2.0: An NVFP4 Parallel Infrastructure for Long Video Generation},
@@ -267,6 +381,10 @@ Please consider citing our work if you find it useful:
 }
 ```
 
+</details>
+
+<details>
+<summary><b>LongLive 1.0</b>: Real-time Interactive Long Video Generation</summary>
 
 ```bibtex
 @inproceedings{longlive,
@@ -277,8 +395,10 @@ Please consider citing our work if you find it useful:
 }
 ```
 
+</details>
 
-Related project:
+<details>
+<summary>Related project: <b>LongLive-RAG</b>: A General Retrieval-Augmented Framework for Long Video Generation</summary>
 
 ```bibtex
 @article{longlive_rag,
@@ -289,9 +409,13 @@ Related project:
 }
 ```
 
+</details>
+
 ## Acknowledgement
 
 - [Self-Forcing](https://github.com/guandeh17/Self-Forcing): the AR training codebase and formulation we build upon.
 - [Wan2.1](https://github.com/Wan-Video/Wan2.1): the video diffusion backbone used in LongLive 1.0 and LongLive-Plug.
 - [Wan2.2](https://github.com/Wan-Video/Wan2.2): the base video diffusion model components used in this release.
-- [MiniMax-H3](https://github.com/MiniMax-AI/MiniMax-H3): the audio-video generation backbone used in LongLive-Plug.
+- [MiniMax-H3](https://github.com/MiniMax-AI/MiniMax-H3): the audio-video generation backbone used in LongLive-Plug and Agentic LongLive.
+- [FastVideo](https://github.com/hao-ai-lab/FastVideo) and [UniServe](https://github.com/hao-ai-lab/uniserve): FastH3-Omni, the few-step MiniMax-H3 generator of the Agentic LongLive demos, and its server.
+- [SGLang](https://github.com/sgl-project/sglang), [Qwen3](https://github.com/QwenLM/Qwen3) and [FLUX.2](https://github.com/black-forest-labs/flux2): serving and models of the Agentic LongLive memory agent.

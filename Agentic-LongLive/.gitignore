@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+# Agentic LongLive: run outputs, downloaded weights and data stay out of git.
+/outputs/
+/checkpoints/
+/data/
+/wandb/
+*.mp4
+*.pt
+*.safetensors

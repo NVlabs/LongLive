@@ -1,0 +1,20 @@
+{
+ "mode": "sft",
+ "run": "sft",
+ "out": "outputs/rl/sft",
+ "model": "Qwen/Qwen3-8B",
+ "lora_r": 32,
+ "lora_alpha": 64,
+ "max_new_tokens": 2048,
+ "max_prompt_tokens": 7500,
+ "micro_tokens": 24000,
+ "seed": 0,
+ "lr": 0.0001,
+ "warmup": 10,
+ "sft_data": "data/rl/sft/bestof.jsonl",
+ "sft_epochs": 1.0,
+ "sft_batch": 32,
+ "sft_min_reward": 0.2,
+ "save_every": 25,
+ "grad_clip": 1.0
+}

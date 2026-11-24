@@ -1,0 +1,52 @@
+{
+ "name": "24_open_thermos",
+ "title": "Opening Thermos and Inspecting Strainer",
+ "summary": "A robotic arm opens a thermos, removes and replaces an internal strainer, relocates the bottle, and retrieves the strainer again.",
+ "camera": "fixed third-person camera",
+ "robot": "one white robotic arm with a parallel gripper",
+ "setting": "a room with acoustic wall panels, green carpeting, and a light wood table",
+ "first_frame": "24_open_thermos.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "5760f6f2adada1499292fca9212319dc",
+  "frame_index": 0,
+  "original_prompt": "open the bottle",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "9c406a1a000d7871457d4d15770d73f94112a3599ce228d496889aac0f8b465c"
+ },
+ "segments": [
+  {
+   "instruction": "Lower the gripper toward the black thermos and press the lid latch while the camera stays fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Push the flip lid fully open to expose the inner neck; the camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the metal strainer out of the neck, drop it back inside, and press the lid shut; the camera stays fixed.",
+   "memory_event": "hide: the metal strainer is enclosed inside the thermos when the lid snaps shut"
+  },
+  {
+   "instruction": "Grasp the thermos body and slide it toward the right side of the table while the camera stays fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the bottle and lift the gripper into a central standby position; the camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach toward the bottle at its new location and flip open the lid; the camera stays fixed.",
+   "memory_event": "return: the metal strainer inside the thermos neck reappears exactly as placed earlier"
+  },
+  {
+   "instruction": "Take out the item from inside the thermos and place it on the table; the camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Retract the arm upward into an idle rest position above the table while the camera stays fixed.",
+   "memory_event": "none"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "name": "09_press_disinfection_gun",
+ "title": "Operating Disinfection Gun and Cabinet",
+ "summary": "The robot activates a handheld disinfection gun, pans away to inspect a wall cabinet, and returns to the tabletop workspace.",
+ "camera": "head camera",
+ "robot": "two robotic arms with black parallel grippers",
+ "setting": "a minimalist office or lab with a large white conference table",
+ "first_frame": "09_press_disinfection_gun.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "97ea0cdcec89d0bfc27877bda0172ee3",
+  "frame_index": 0,
+  "original_prompt": "Press the switch button of the disinfection gun",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "edb563ecc27071e8bb8c438c83d0cfc8ff9c3ca8354c87d967a2c239ae53377c"
+ },
+ "segments": [
+  {
+   "instruction": "Move the left gripper toward the back of the white disinfection gun held in the right gripper.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Press the power switch button on the disinfection gun with the left gripper and release.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Place the disinfection gun upright on the right side of the table and pick up the brown pad with the left gripper.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the camera upward and to the left to face the upper wall cabinet, leaving the tabletop completely out of view.",
+   "memory_event": "hide: tabletop with the upright disinfection gun and workspace leaves camera view"
+  },
+  {
+   "instruction": "Reach toward the white cabinet with the left gripper and pull the door open.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Nudge a small supply bottle on the cabinet shelf with the left gripper.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Push the cabinet door closed and turn the camera back down to the conference table.",
+   "memory_event": "return: conference table reappears with the white disinfection gun standing on the right side"
+  },
+  {
+   "instruction": "Place the brown pad neatly onto the table next to the disinfection gun.",
+   "memory_event": "none"
+  }
+ ]
+}

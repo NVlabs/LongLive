@@ -1,0 +1,1062 @@
+{
+  "id": "gpu_build_pc_terse",
+  "setup": {
+    "title": "Build Night: Assembling an NVIDIA Graphics Card, a Water-Cooled PC, and the First Game",
+    "style": "Live-action, cinematic product-assembly documentary: clean macro inserts of parts and tools, a bright daytime workshop that turns into a dim, neon-lit gaming room at night.",
+    "cast": [
+      {
+        "id": "alex",
+        "name": "Alex",
+        "description": "Alex, a man in his late twenties with tousled sandy-blond hair and light stubble, wearing a black T-shirt under a dark-navy canvas work apron, black cargo trousers, and a black anti-static wrist strap on his left wrist."
+      }
+    ],
+    "extras": {
+      "voice": "Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1),",
+      "music": "Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout.",
+      "speech": "Alex narrates the build in first-person voice-over, like a build-guide video; he is rarely seen speaking on camera.",
+      "framing": "This is a step-by-step build film. Almost every shot is an object-focused insert of parts, tools and assembly where only the builder's hands, forearms and apron are visible; when the builder himself is shown, use medium or wide framing and never a facial close-up."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "Natural morning daylight fills the maker workshop, pouring through broad windows to illuminate a pristine white workbench. A wide green anti-static mat lies centered on the tabletop, clean and empty. In the background, tidy pegboards holding precision hand tools, soldering gear, and neatly organized component shelves establish a calm, methodical maker atmosphere, with soft daylight casting gentle shadows across the bright concrete floor.\n\nAlex, a man in his late twenties with tousled sandy-blond hair and light stubble, wears a black T-shirt under a dark-navy canvas work apron, black cargo trousers, and a black anti-static wrist strap on his left wrist. Carrying a heavy stack of component boxes, he steps up and sets them down onto the workbench beside the green mat. He rests his hands near his apron pockets and speaks in voice-over, explaining that he will assemble an NVIDIA graphics card from loose parts and construct a complete water-cooled PC around it. The boxes remain sealed and stacked on the surface by the end of the shot.\n\nThe camera remains stationary in a wide establishing shot, keeping the spacious room and workbench dominant while framing Alex as a full-figure presence without any facial close-ups. The white table, the green mat, and the tall stack of boxed components stay clearly visible throughout, anchoring the clean, orderly workspace before any assembly begins.",
+      "annotation": {
+        "title_en": "Parts day",
+        "scene": "workshop_bench",
+        "camera": "wide establishing shot",
+        "beat": "A bright maker workshop in daylight. Alex, in a navy work apron, sets a stack of component boxes on a white workbench covered with a green anti-static mat. In voice-over he says today he is building an NVIDIA graphics card from parts, and then a whole water-cooled PC around it.",
+        "state": {
+          "outfit": "black T-shirt, navy apron, wrist strap",
+          "card_stage": "parts still in boxes",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          221,
+          221
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide establishing shot of a sunlit maker workshop, where Alex enters carrying boxes toward a pristine white workbench centered with a green anti-static mat. The camera holds a static wide establishing shot of the bright maker workshop. Natural morning daylight pours through broad windows across the concrete floor, illuminating the pristine white workbench and its centered green anti-static mat beneath tidy tool pegboards. Alex steps forward carrying a heavy stack of component boxes, wearing a black T-shirt under a dark-navy canvas work apron, black cargo trousers, and a black anti-static wrist strap on his left wrist. He sets the sealed boxes down beside the mat and rests his hands near his apron pockets. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Today I am assembling a graphics card from loose components and building a complete water-cooled computer around it.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: Footsteps echo softly on the concrete floor, followed by the dull thud of heavy cardboard boxes being placed onto the wooden workbench. A quiet, airy room tone fills the spacious workshop.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nThe mat displays an immaculate knolled arrangement of graphics card parts oriented in straight, symmetrical rows. In the center rests a bare matte-black printed circuit board featuring an empty square chip footprint with miniature contact pads. Arranged neatly around it are a shiny silicon GPU chip inside a clear plastic tray, eight tiny rectangular memory modules, a milled copper heatsink with polished heat pipes, three matte-black fans, an angular black-and-green shroud, and a brushed black backplate. Alex's hands smoothly lower a small transparent tray of tiny silver and black screws into the final open corner of the grid. Once the screw tray is aligned, his hands pull back, leaving the complete set of components perfectly presented.\n\nThe camera remains in a locked, top-down ninety-degree flat-lay angle looking straight down onto the mat. The crisp overhead perspective keeps every component, from the expansive circuit board to the individual miniature screws, sharp and completely visible throughout the entire sequence.",
+      "annotation": {
+        "title_en": "Knolling",
+        "scene": "workshop_bench",
+        "camera": "top-down",
+        "beat": "Top-down on the green mat: the parts laid out in neat rows, a bare black circuit board with an empty square chip footprint, a GPU chip in a clear tray, eight memory chips, a copper heatsink, three black fans, a black-and-green shroud, a black backplate and small screws. Hands place the last screw tray.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "all parts laid out",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          231,
+          162
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a top-down shot of a workshop bench, where a mat displays an immaculate arrangement of graphics card components. The camera holds a locked, top-down ninety-degree flat-lay angle looking straight down onto the mat. In the center rests a bare matte-black printed circuit board featuring an empty square chip footprint with miniature contact pads. Neatly arranged around it are a shiny silicon GPU chip inside a clear plastic tray, eight tiny rectangular memory modules, a milled copper heatsink with polished heat pipes, three matte-black fans, an angular black-and-green shroud, and a brushed black backplate. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] With every component neatly laid out, we are ready to assemble this graphics card.</d> After this line the voice-over stays silent for the rest of the shot. Alex's hands smoothly lower a small transparent tray of tiny silver and black screws into the final open corner of the grid. Once the screw tray is aligned, his hands pull back, leaving the complete set of components perfectly presented.\n\noverall_soundscape: A faint room tone fills the workshop. A soft plastic tap sounds as the tray of screws meets the work mat, followed by the quiet rustle of Alex's hands pulling away.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nAlex reaches down to snap the grounding cord firmly onto the corner stud of the mat. He carefully grips the outer edges of the circuit board, lifting it steadily off the bench without touching any internal circuitry. Tilting the board slightly toward the overhead lamp, the empty square footprint at its core catches the light, illuminating the intricate grid of microscopic gold contact pads.\n\nThe camera holds a tight macro close-up, angling low over the mat before tilting upward smoothly as the circuit board rises. A shallow depth of field keeps his fingertips and the metallic glint of the central footprint razor-sharp, while the workbench surface and background tools blur into soft, muted shapes. The framing remains steady, highlighting the deliberate and careful handling of the board.",
+      "annotation": {
+        "title_en": "Wrist strap",
+        "scene": "workshop_bench",
+        "camera": "close-up",
+        "beat": "Close on Alex's left wrist as he clips the black anti-static strap's cable to the mat, then lifts the bare black circuit board by its edges and turns it toward the light, the empty chip footprint shining with tiny gold pads.",
+        "state": {
+          "outfit": "wrist strap, black T-shirt sleeve",
+          "card_stage": "bare circuit board in hand",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          235,
+          132
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro close-up shot at the workshop bench, where Alex reaches toward the mat. The camera holds a tight macro close-up, angling low over the mat with a shallow depth of field. Alex reaches down to snap the grounding cord firmly onto the corner stud of the mat. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Make sure you connect the ground cord first.</d> He carefully grips the outer edges of the circuit board, lifting it steadily off the bench without touching any internal circuitry. The camera tilts upward smoothly as the circuit board rises, keeping his fingertips razor-sharp while the workbench surface and background tools blur into soft, muted shapes. Alex (S1) adds: <d>[English] Always lift the board carefully by the outer edges.</d> After this line the voice-over stays silent for the rest of the shot. Tilting the board slightly toward the overhead lamp, the empty square footprint at its core catches the light, illuminating the intricate grid of microscopic gold contact pads while the framing remains steady.\n\noverall_soundscape: A sharp click sounds as the grounding cord snaps firmly onto the stud. Subtle handling noises accompany the circuit board lifting cleanly from the bench amid a quiet room tone.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nResting flat on the mat is the circuit board. Alex maneuvers a sleek, pen-style metallic vacuum tool into the center of the frame, holding the GPU chip at its suction tip. Carefully controlling the tool, he lowers the chip toward the circuit board, pausing briefly to visually align the corner triangle with the matching marker on the board. With steady coordination, he gently seats the chip squarely onto the contact pads. The vacuum seal releases, leaving the GPU positioned on the board as the tool lifts upward and out of frame.\n\nCaptured in an extreme macro close-up, the camera remains nearly stationary, tilted at a steep downward angle directly over the socket area. A razor-thin depth of field keeps the contact pads and the chip in sharp focus while the background blurs, centering on the delicate alignment and placement.",
+      "annotation": {
+        "title_en": "Placing the GPU",
+        "scene": "workshop_bench",
+        "camera": "macro close-up",
+        "beat": "A vacuum pick-up pen lifts the GPU chip, a silver-lidded square on a green substrate, and lowers it precisely onto the footprint, aligning the corner marker.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "GPU chip placed on the board",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          256,
+          144
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme macro close-up at the workshop bench, where Alex works over a circuit board resting flat on a mat. The camera holds a nearly stationary shot tilted at a steep downward angle directly over the socket area, maintaining a razor-thin depth of field that blurs the background. Alex maneuvers a sleek, pen-style metallic vacuum tool into the center of the frame, holding the GPU chip at its suction tip. Carefully controlling the tool, he lowers the chip toward the circuit board, pausing briefly to visually align the corner triangle with the matching marker on the board. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] I align the corner triangle marker before gently seating the chip.</d> With steady coordination, he gently seats the chip squarely onto the contact pads. Alex (S1) adds: <d>[English] Releasing the vacuum leaves it perfectly placed.</d> After this line the voice-over stays silent for the rest of the shot. The vacuum seal releases, leaving the GPU positioned on the board as the tool lifts upward and out of frame.\n\noverall_soundscape: A faint hum of the miniature vacuum suction tool fills the close space. A soft puff of air hisses as the vacuum seal releases, followed by the faint whisper of the metal tool lifting away.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nThe GPU chip rests flat on its footprint on the circuit board. Alex's steady hand grips a stainless-steel hot-air rework nozzle just above the die, pointing its angled cylindrical tip downward. The nozzle slowly traces smooth, continuous circles over the perimeter of the component, directing a focused stream of heated air. Within seconds, amber liquid flux around the edges begins to bubble faintly, creating a gleaming, reflective collar. Beneath the substrate, the array of hidden solder balls melts, causing the processor to settle slightly downward by a fraction of a millimeter as surface tension snaps it into dead-center alignment. Alex lifts the nozzle upward and out of frame, leaving the newly soldered chip sitting firmly bonded in place.\n\nThe camera maintains an extreme macro close-up angled slightly downward across the circuit board, rendering the melting solder and settling movement in razor-sharp detail. With a shallow depth of field, the framing stays locked on the chip, smoothly capturing the subtle drop and settling motion without shaking.",
+      "annotation": {
+        "title_en": "Reflow",
+        "scene": "workshop_bench",
+        "camera": "macro close-up",
+        "beat": "A hot-air rework nozzle circles over the chip; the solder balls underneath melt and the chip settles flat with a tiny shimmer of flux.",
+        "state": {
+          "outfit": "not visible",
+          "card_stage": "GPU chip soldered",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          255,
+          170
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme macro close-up at the workshop bench angled slightly downward across a circuit board, where Alex holds a hot-air rework nozzle over a GPU chip. The camera holds a locked extreme macro shot with a shallow depth of field, angled slightly downward across the circuit board. The GPU chip rests flat on its footprint. Alex's steady hand grips a stainless-steel hot-air rework nozzle just above the die, pointing its angled cylindrical tip downward. The nozzle slowly traces smooth, continuous circles over the perimeter of the component, directing a focused stream of heated air. Within seconds, amber liquid flux around the edges begins to bubble faintly, creating a gleaming, reflective collar. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Once the hidden solder balls melt underneath, surface tension snaps the processor into dead-center alignment.</d> After this line the voice-over stays silent for the rest of the shot. Beneath the substrate, the array of hidden solder balls melts, causing the processor to settle slightly downward by a fraction of a millimeter as surface tension snaps it into dead-center alignment. Alex lifts the nozzle upward and out of frame, leaving the newly soldered chip firmly bonded in place.\n\noverall_soundscape: The constant, low whir and gentle hiss of hot air blowing continuously from the rework nozzle. Faint, quiet sizzling and bubbling from the heating liquid flux as the solder reflows.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nOnly Alex's fingers enter the frame, manipulating micro-tools with practiced care. In the center of the circuit board sits the mounted GPU. Using ultra-fine curved metal tweezers, he places the memory chips one by one onto pre-fluxed pads encircling the processor. A needle-fine soldering iron tip glides in from the side to touch the perimeter leads, tacking a chip cleanly into place. A tiny bead of solder flows instantly, and a thin, translucent wisp of flux smoke curls up into the air before dissipating. By the end of the shot, a neat ring of memory modules firmly encircles the GPU, aligned squarely on the board.\n\nThe camera frames an extreme macro insert, executing a slow, silky slide across the surface of the circuit board. A razor-thin depth of field keeps the chip edges, solder joints, and rising vapor sharply resolved while softly blurring adjacent traces. The view stays strictly focused on the components, keeping the micro-soldering action perfectly centered throughout.",
+      "annotation": {
+        "title_en": "Memory chips",
+        "scene": "workshop_bench",
+        "camera": "macro, slow slide",
+        "beat": "Tweezers place black memory chips one by one in a ring around the GPU and a fine soldering iron fixes them; a thin wisp of flux smoke rises.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "GPU with a ring of memory chips",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          239,
+          165
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme macro insert at the workshop bench, where Alex's fingers manipulate micro-tools above a circuit board with a mounted GPU. The camera executes a slow, silky slide across the surface of the circuit board with a razor-thin depth of field. Alex's fingers enter the frame, using ultra-fine curved metal tweezers to place memory chips one by one onto pre-fluxed pads encircling the mounted GPU. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now I carefully seat each memory chip and tack the pins with a touch of solder.</d> After this line the voice-over stays silent for the rest of the shot. A needle-fine soldering iron tip glides in from the side to touch the perimeter leads, cleanly tacking a chip into place. A tiny bead of solder flows instantly, releasing a thin, translucent wisp of flux smoke that curls upward before dissipating. The camera keeps the micro-soldering action strictly centered as a neat ring of memory modules firmly and squarely encircles the GPU.\n\noverall_soundscape: Delicate metallic clicks of tweezers tapping against contacts blend with a faint, brief sizzle as solder and flux melt. A quiet workshop room tone hums steadily in the background.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nThe circuit board rests flat, bearing the GPU and memory chips. Along the left edge, an aligned row of cylindrical polymer capacitors with silver tops and dark blue markings stands next to cube-shaped black ferrite power chokes. Alex's steady fingers use tweezers to align the final square power choke over its designated solder pads. The soldering iron tip touches the contact point, briefly liquefying the solder paste into a mirror-bright silver fillet before lifting away. His fingers and the tools retract smoothly out of the frame, leaving the board fully populated with its complete power delivery stage.\n\nThe macro lens glides horizontally in an extreme close-up tracking shot along the completed row of components. The shallow depth of field keeps the sequential row of chokes and capacitor caps in sharp focus while softly blurring the GPU in the background. The slow, fluid motion emphasizes the uniform spacing and pristine solder work across the edge of the circuit board.",
+      "annotation": {
+        "title_en": "Power stages",
+        "scene": "workshop_bench",
+        "camera": "macro close-up",
+        "beat": "A row of square black power chokes and polymer capacitors is soldered along one edge of the board; the camera glides along the finished row.",
+        "state": {
+          "outfit": "not visible",
+          "card_stage": "fully populated board",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          230,
+          163
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme close-up of a workshop bench, where Alex leans over a flat circuit board with precision tools. Alex's steady fingers use tweezers to align the final square power choke over its designated solder pads on the circuit board. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] I drop the last power choke into place and melt the solder for a clean joint.</d> After this line the voice-over stays silent for the rest of the shot. The soldering iron tip touches the contact point, briefly liquefying the solder paste into a mirror-bright silver fillet before lifting away. His fingers and the tools retract smoothly out of the frame. The camera glides horizontally in an extreme close-up tracking shot along the completed row of components, holding the sequential chokes and cylindrical polymer capacitors in sharp focus while softly blurring the GPU in the background to reveal the uniform spacing.\n\noverall_soundscape: A delicate metallic tap echoes as the component is aligned, followed by a brief, faint sizzle of melting solder paste. A low, steady workshop room tone hums softly in the background.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nThe assembled circuit board rests flat on the mat. At its center sits the GPU die, surrounded by the memory modules. Across the top and side margins, the chokes and capacitors are visible, with the PCIe interface and gold connector fingers running along the bottom edge. The board remains untouched and stationary.\n\nThe camera frames the circuit board in an overhead macro insert, looking straight down onto the component plane. In a slow, continuous gliding pan, the camera drifts smoothly along the length of the board, maintaining tack-sharp focus across the circuitry and components, keeping the hardware centrally framed throughout.",
+      "annotation": {
+        "title_en": "The populated board",
+        "scene": "workshop_bench",
+        "camera": "slow overhead pan",
+        "beat": "The finished board lies on the green mat in soft daylight: the silver GPU in the centre, memory chips around it, power stages along the edge, gold connector fingers at the bottom.",
+        "state": {
+          "outfit": "not visible",
+          "card_stage": "fully populated board",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          105
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an overhead macro shot at the workshop bench, where the assembled circuit board lies flat on the mat before Alex. The camera looks straight down onto the component plane in an overhead macro framing. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] With every component in place, from the memory modules to the chokes, the board is ready.</d> After this line the voice-over stays silent for the rest of the shot. In a slow, continuous gliding pan, the camera drifts smoothly along the length of the board, keeping the hardware centrally framed throughout while maintaining tack-sharp focus across the circuitry and components. The assembled circuit board remains completely untouched and stationary on the mat, displaying the central GPU die surrounded by memory modules, the chokes and capacitors bordering the top and side margins, and the PCIe interface with gold connector fingers lining the bottom edge.\n\noverall_soundscape: A quiet indoor room tone fills the workshop. A very faint electric hum and distant ventilation breeze remain audible.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nAt the center lies the circuit board. Alex’s fingers appear in frame, peeling individual light-blue silicone thermal pads from a clear plastic backing sheet. With controlled precision, his fingertips press a rectangular pad atop each memory chip framing the central processor, gently tapping each one flat to ensure adhesion. He then positions longer blue thermal strips across the tops of the power stages along the board's edge. By the end of the action, every memory chip and voltage regulator is neatly capped with a pad, leaving only the central GPU core exposed.\n\nThe camera holds a macro close-up framing at a high three-quarter angle, performing a subtle lateral drift across the circuit board. The shallow depth of field keeps the tactile placement of each blue pad in razor-sharp focus while softly blurring the surrounding workspace. The framing remains fixed on the board and Alex's moving fingers, highlighting the clean, deliberate geometry of the layout.",
+      "annotation": {
+        "title_en": "Thermal pads",
+        "scene": "workshop_bench",
+        "camera": "macro close-up",
+        "beat": "Hands peel light-blue thermal pads from their sheet and press them onto every memory chip and power stage.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "thermal pads on memory and power stages",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          241,
+          159
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up shot at a high three-quarter angle of the workshop bench, where Alex works over a circuit board with his hands in frame. The camera holds a macro close-up framing at a high three-quarter angle with a shallow depth of field, performing a subtle lateral drift across the circuit board. Alex’s fingers peel individual light-blue silicone thermal pads from a clear plastic backing sheet. With controlled precision, his fingertips press a rectangular pad atop each memory chip framing the central processor, gently tapping each one flat to ensure adhesion. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] I carefully press thermal pads over each memory chip and power stage.</d> He then positions longer blue thermal strips across the tops of the power stages along the board's edge. Alex (S1) adds: <d>[English] Just be sure to leave the central core exposed.</d> After this line the voice-over stays silent for the rest of the shot. Every memory chip and voltage regulator is neatly capped, leaving only the central GPU core exposed.\n\noverall_soundscape: Subtle plastic crinkling as silicone pads peel away from the backing sheet, followed by soft, rhythmic tapping of fingertips against the components. A quiet ambient room tone hums in the background.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nIn the center of the circuit board, the GPU die sits exposed. Alex's steady fingers enter the macro frame holding a slender applicator syringe filled with thermal compound. His thumb gently depresses the plunger, depositing a neat, pea-sized bead of viscous, matte-grey thermal paste directly onto the center of the die. Setting the syringe aside, his fingers introduce a small, flexible plastic spreader card. Holding the card at a shallow angle, he smoothly glides its edge across the droplet, drawing the paste back and forth until it forms a paper-thin, completely uniform grey layer that evenly coats the entire rectangular surface of the chip right to its borders.\n\nThe macro close-up camera remains positioned at a tight, slightly tilted angle, maintaining an intimate focus on the micro-textures of the die and thermal compound. A shallow depth of field isolates the spreading action, softly blurring the outer components while keeping the card, paste, and die crisp and legible throughout the controlled motion.",
+      "annotation": {
+        "title_en": "Thermal paste",
+        "scene": "workshop_bench",
+        "camera": "macro close-up",
+        "beat": "A syringe squeezes a pea of grey thermal paste onto the GPU lid and a small plastic card spreads it into a thin, even layer.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "paste on the GPU",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          166
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up of a workshop bench, where Alex's steady fingers work over an exposed GPU die on a circuit board. The camera holds a static macro shot from a tight, slightly tilted angle with shallow depth of field focused on the micro-textures of the exposed GPU die. Alex's steady fingers enter the frame holding a slender applicator syringe filled with thermal compound. His thumb gently depresses the plunger, depositing a neat, pea-sized bead of viscous, matte-grey thermal paste directly onto the center of the die. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Apply a small bead right in the center, then spread it into a smooth, even layer.</d> After this line the voice-over stays silent for the rest of the shot. Setting the syringe aside, Alex's fingers introduce a small, flexible plastic spreader card. Holding the card at a shallow angle, he smoothly glides its edge across the droplet, drawing the paste back and forth until it forms a paper-thin, completely uniform grey layer coating the chip right to its borders.\n\noverall_soundscape: A faint mechanical click of the syringe plunger accompanies the soft extrusion of viscous compound. A subtle, rhythmic scraping sound follows as the plastic spreader card smooths over the polished silicon die.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nAlex reaches into frame and lifts the heatsink. He slowly tilts the cooler at an angle, turning it toward the window. Daylight sweeps smoothly across the metallic grid, casting a rolling flare across each fin and highlighting the gloss of the copper pipes. Satisfied with the cleanliness and alignment, he balances the heatsink horizontally, held ready for installation.\n\nThe camera maintains a close-up macro insert, framed tightly on the heatsink and Alex's fingers. A shallow depth of field keeps the metalwork and pipe contours razor-sharp while softening the background. The lens performs a gentle lateral drift, tracking the gleam of light across the fin stack without widening to reveal Alex’s face.",
+      "annotation": {
+        "title_en": "The heatsink",
+        "scene": "workshop_bench",
+        "camera": "close-up, light sweep",
+        "beat": "Alex's hands hold up a vapour-chamber heatsink with five thick copper heat pipes running through a dense aluminium fin stack; window light sweeps across the fins.",
+        "state": {
+          "outfit": "hands and apron edge",
+          "card_stage": "heatsink ready",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          242,
+          116
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up macro insert at a workshop bench, where Alex's hands reach into frame to handle a heatsink in front of soft window light. Alex reaches into the close macro frame and lifts the heatsink from the workshop bench. He slowly tilts the cooler at an angle, turning it toward the window. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] I'll inspect the fin stack under the light to make sure everything is clean and straight.</d> After this line the voice-over stays silent for the rest of the shot. Daylight sweeps smoothly across the metallic grid, casting a rolling flare across each fin and highlighting the gloss of the copper pipes against the soft background. The camera performs a gentle lateral drift at slow speed, tracking the gleam of light across the fin stack while keeping the metalwork and pipe contours razor-sharp without widening to reveal his face. Alex then balances the heatsink horizontally, holding it ready for installation.\n\noverall_soundscape: A faint metallic friction sounds as fingers grip and lift the cooler. Gentle ambient room tone accompanies the quiet handling of metal fins and pipes.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nResting flat on the mat is the circuit board, its central die prepped with thermal compound. Alex carefully lowers the heatsink onto the board, aligning the mounting posts. Once the heatsink settles flush over the board, he takes up a precision screwdriver. He systematically inserts and tightens four spring-loaded screws into the rear retention bracket in an alternating diagonal cross pattern, compressing each spring gradually to equalize mounting pressure. By the end, the heatsink sits firmly anchored to the board, the screws fully secured.\n\nThe camera maintains an object-focused macro insert shot angled slightly downward over the mounting zone. A shallow depth of field isolates the screwdriver tip and the screw heads against the circuit board. A subtle, gradual push-in follows the cross-pattern tightening sequence, keeping the mechanical compression of each spring in crisp focus while completely excluding Alex's face.",
+      "annotation": {
+        "title_en": "Heatsink on",
+        "scene": "workshop_bench",
+        "camera": "close-up",
+        "beat": "The heatsink is lowered onto the board and a small screwdriver tightens four spring screws in a cross pattern around the GPU.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "heatsink mounted on the board",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          249,
+          145
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an object-focused macro insert shot over the workshop bench, where Alex works above a circuit board resting flat on a mat. The circuit board rests flat on the mat with its central die prepped with thermal compound. Angled slightly downward over the mounting zone with a shallow depth of field, Alex lowers the heatsink onto the board, aligning its mounting posts. Once the heatsink settles flush, Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Lower the heatsink flush and secure the four spring screws in a diagonal cross pattern for balanced pressure.</d> After this line the voice-over stays silent for the rest of the shot. Alex takes up a precision screwdriver. He systematically inserts and tightens four spring-loaded screws into the rear retention bracket in an alternating diagonal cross pattern, compressing each spring gradually to equalize mounting pressure. The camera pushes in with small amplitude at slow speed toward the screw heads, keeping the compressing springs in crisp focus and completely excluding Alex's face until the heatsink sits firmly anchored.\n\noverall_soundscape: A gentle metallic tap sounds as the heatsink seats onto the board, followed by the quiet scrape and resistance of a screwdriver turning spring-loaded screws into threads.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nThe shroud lies open on the mat. Alex’s fingers enter the frame, guiding the three fans into position. In sequence, his thumbs press the first fan into the left circular bay until the retention clips snap shut with a defined tactile click. He immediately repeats the motion for the center fan, then locks the third fan firmly into the remaining aperture. Once all three fans sit flush within the frame, his fingertips gather the fan leads, routing them along an inner cable channel before seating the plugs into a shared connector. By the end, the fans form an integrated cooling unit secured neatly inside the shroud.\n\nThe camera maintains a crisp macro close-up at a low forty-five-degree angle, executing a slow, deliberate lateral glide across the shroud’s length to follow each fan as it is seated. The shallow depth of field keeps sharp focus on the snapping latches and connector pins, while his hands remain the sole visible human element.",
+      "annotation": {
+        "title_en": "Three fans",
+        "scene": "workshop_bench",
+        "camera": "macro close-up",
+        "beat": "Three black fans click one after another into the black-and-green shroud frame and their small cables are plugged into a shared connector.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "shroud with three fans",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          260,
+          165
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up at a workshop bench at a low forty-five-degree angle, where Alex's hands work above an open shroud resting on a mat. The camera executes a slow, deliberate lateral glide across the shroud’s length with a shallow depth of field focused on the latches. Alex’s fingers guide three fans into position. In sequence, his thumbs press the first fan into the left circular bay until the retention clips snap shut. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Snap each fan firmly into the shroud until the clips lock into place.</d> He immediately repeats the motion for the center fan, then locks the third fan firmly into the remaining aperture. Once all three fans sit flush, his fingertips gather the fan leads, routing them along an inner cable channel. Alex (S1) adds: <d>[English] Then route the cables cleanly.</d> After this line the voice-over stays silent for the rest of the shot. He seats the plugs into a shared connector, forming a neatly integrated cooling unit.\n\noverall_soundscape: Plastic retention clips snap shut with three distinct, crisp clicks against the shroud. Thin wires rustle gently as they are guided along the channel, followed by the soft friction click of a connector seating.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nOnly Alex's hands appear in frame. On the mat rests the graphics card assembly, its circuit board and heatsink exposed. Alex grips the shroud—fitted with its three fans—and lowers it smoothly over the fin stack until it seats flush onto the frame. Reaching for a precision screwdriver, his fingers insert and tighten screws into the perimeter mounting brackets one by one. Once secured, the heatsink vanishes beneath the casing, leaving the graphics card resting securely on the mat.\n\nThe camera maintains a tight, slightly elevated close-up angle on the card, tracking the descending shroud with a subtle forward glide. Overhead light catches the edge of the shroud and the metallic glint of the rotating screwdriver bit. Alex's face and upper body remain out of frame, keeping total visual priority on the tactile, step-by-step fitting process.",
+      "annotation": {
+        "title_en": "Shroud on",
+        "scene": "workshop_bench",
+        "camera": "close-up",
+        "beat": "The black-and-green shroud with its three fans is lowered over the heatsink and screwed down; the card now looks like a graphics card.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "shroud and fans installed",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          242,
+          140
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight, slightly elevated close-up shot at the workshop bench, where only Alex's hands appear over a mat. On the mat rests the graphics card assembly with its circuit board and heatsink exposed. The camera tracks the descending shroud with a subtle forward glide. Alex grips the shroud fitted with three fans and lowers it smoothly over the fin stack until it seats flush onto the frame, while overhead light catches the edge of the shroud. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now I lower the fan shroud smoothly over the heatsink.</d> Reaching for a precision screwdriver, Alex's fingers insert and tighten screws into the perimeter mounting brackets one by one, the light catching the metallic glint of the rotating screwdriver bit. Alex (S1) adds: <d>[English] Next, I tighten down every perimeter screw until fully secure.</d> After this line the voice-over stays silent for the rest of the shot. Once secured, the heatsink vanishes beneath the casing, leaving the graphics card resting securely on the mat while Alex's face and upper body remain out of frame.\n\noverall_soundscape: A gentle plastic and metal click sounds as the shroud seats flush against the frame. Tiny metallic scrapes and gentle rotations of a precision screwdriver follow in steady succession against quiet room tone.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nOnly Alex's hands appear in frame. He gently flips the graphics card over on the mat so the rear circuitry faces upward. He then lifts the backplate, aligns it carefully over the pre-drilled standoff holes, and lowers it into position. With steady fingers, he guides a precision screwdriver to drive screws into the perimeter, firmly seating the plate flush against the card's rear side until the backplate is completely installed.\n\nThe camera remains in a high-angle close-up, drifting slightly inward to follow the screwdriver as it secures the final fasteners. The framing keeps the backplate and rhythmic hand motions centered throughout the shot, leaving Alex's face entirely out of frame as the card settles into its completed form.",
+      "annotation": {
+        "title_en": "Backplate",
+        "scene": "workshop_bench",
+        "camera": "close-up",
+        "beat": "The card is flipped and a brushed black metal backplate with a thin green accent line is screwed on.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "backplate installed",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          240,
+          123
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle close-up shot at the workshop bench, where only Alex's hands are visible over the mat. Alex's hands gently flip the graphics card over on the mat so the rear circuitry faces upward. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Next, I flip the card to mount the backplate, carefully driving the screws flush around the perimeter.</d> After this line the voice-over stays silent for the rest of the shot. He then lifts the backplate, aligns it carefully over the pre-drilled standoff holes, and lowers it into position. With steady fingers, he guides a precision screwdriver to drive screws into the perimeter, firmly seating the plate flush against the card's rear side until the backplate is completely installed. The camera drifts slightly inward from its high-angle close-up to follow the screwdriver as it secures the final fasteners, keeping the backplate and rhythmic hand motions centered throughout the shot while Alex's face remains entirely out of frame.\n\noverall_soundscape: A soft friction sound rustles as the graphics card flips over on the mat, followed by a faint metallic click when the backplate aligns. Subtle metallic squeaks and clicks accompany the precision screwdriver threading each screw into place.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nResting on its side across the mat is the graphics card. Alex's hands enter the frame. With his fingertips, he carefully grips a miniature white multi-pin RGB light-strip plug attached to flexible wiring. He guides the connector into a recessed socket on the circuit board's edge, pressing until it securely clips into place. He then tucks the thin wire into an internal channel and positions an elongated logo plate with a translucent green accent line over the shroud's side aperture. Applying firm thumb pressure, he snaps the plate flush into the shroud, where internal clips lock it solidly into position, leaving the card fully assembled.\n\nThe camera maintains a tight macro close-up with a shallow depth of field, focused squarely on the card's edge. A subtle lateral slide follows his fingers as they align and press the logo plate, keeping crisp sharpness on the seam and locking tabs, ending on the seamless, finished perimeter of the card.",
+      "annotation": {
+        "title_en": "The light strip",
+        "scene": "workshop_bench",
+        "camera": "macro close-up",
+        "beat": "A thin RGB light-strip cable is clipped into the board and a green-lit logo plate snaps into the side of the shroud.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "finished card with light strip",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          248,
+          162
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro close-up of the workshop bench, where Alex leans over a graphics card resting on its side across the mat. The camera holds a tight macro close-up with shallow depth of field focused squarely on the card's edge. Alex's hands enter the frame, his fingertips carefully gripping a miniature white multi-pin RGB light-strip plug attached to flexible wiring. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now plug in the small lighting connector securely.</d> He guides the connector into a recessed socket on the circuit board's edge, pressing until it securely clips into place. He tucks the thin wire into an internal channel and positions an elongated logo plate with a translucent green accent line over the shroud's side aperture. The camera performs a subtle lateral slide following his fingers. Alex (S1) adds: <d>[English] Then snap the decorative logo plate firmly into the shroud.</d> After this line the voice-over stays silent for the rest of the shot. Applying firm thumb pressure, he snaps the plate flush into the shroud, internal clips locking it solidly into position.\n\noverall_soundscape: A tiny plastic click sounds as the miniature plug seats into the circuit board socket. A firm, crisp double-snap resonates as the plate locks into the shroud.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nAlex stands behind the bench, visible from the waist up, with his head tilted downward toward the surface so his face is turned away and partially cropped by the upper edge of the frame. Using both hands, he lifts the graphics card up to chest height, proudly presenting it toward the viewer. He gently rotates the card a few degrees in either direction, allowing overhead light to gleam across the fans, the backplate, and the logo shroud. The card remains held firmly in place, fully intact and ready for installation.\n\nThe camera maintains a waist-up medium shot at eye level with the hardware, entirely bypassing any facial close-up. A subtle, slow forward drift keeps the graphics card as the sharp central subject while retaining Alex's torso and forearms in clear view. The background stays softly defocused, ensuring the component commands the frame throughout the presentation.",
+      "annotation": {
+        "title_en": "The finished card",
+        "scene": "workshop_bench",
+        "camera": "medium shot",
+        "beat": "At waist-up medium distance, Alex in his navy apron holds the finished black-and-green triple-fan NVIDIA graphics card up in both hands toward the camera; his face stays above the top of the frame or turned toward the card.",
+        "state": {
+          "outfit": "black T-shirt, navy apron",
+          "card_stage": "finished black-and-green triple-fan graphics card",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          256,
+          150
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a waist-up medium shot of the workshop bench, where Alex stands behind the surface with his head tilted downward and partially cropped. Alex stands behind the bench with his face turned away and partially cropped at the top edge. Using both hands, he lifts the graphics card up to chest height, proudly presenting it toward the viewer. The camera drifts forward at a subtle, slow pace at eye level with the hardware, keeping the graphics card in sharp focus while maintaining Alex's torso and forearms in clear view against a softly defocused background. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now we have the graphics card ready for installation, and the whole shroud looks completely pristine.</d> After this line the voice-over stays silent for the rest of the shot. He gently rotates the card a few degrees in either direction, allowing overhead light to gleam across the fans, the backplate, and the logo shroud, holding the card firmly in place.\n\noverall_soundscape: A soft electrical hum radiates from overhead lighting in the quiet workshop. Faint rustling fabric and subtle shifting handling noises accompany the movement of the heavy hardware component.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop bench.\n\nMounted horizontally in an open-air test bench's PCIe slot is the graphics card, its three fans stationary. Alex reaches in briefly to press the test bench's power button, then withdraws his hand completely from view. Instantly, power engages. The three fans spin to life in smooth synchrony, blurring into quiet rotation while the green LED strip along the card's top edge glows steadily. Connected via a thin display ribbon, an adjacent five-inch diagnostic monitor flickers on, cycling through initialization code before displaying the detected GPU model in clean white text across the screen.\n\nThe camera maintains a low-angle close-up insert framing, keeping the glowing green accent and the spinning fan hub in sharp focus in the foreground while the diagnostic monitor remains clearly legible in the midground. A slow, subtle horizontal push emphasizes the whirring fans and glowing badge, holding the powered hardware completely in frame throughout the test.",
+      "annotation": {
+        "title_en": "Test bench",
+        "scene": "workshop_bench",
+        "camera": "close-up",
+        "beat": "On an open test bench the card powers up: three fans spin, the green strip glows, and a small diagnostic monitor shows the GPU detected.",
+        "state": {
+          "outfit": "not visible",
+          "card_stage": "card powered on the test bench",
+          "pc_stage": "not started"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          240,
+          154
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle close-up insert shot at the workshop bench, where Alex stands beside an open-air test bench holding a graphics card. Mounted horizontally in the open-air test bench's PCIe slot, the graphics card sits with its three fans stationary. Alex reaches in briefly to press the test bench's power button, then withdraws his hand completely from view. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Hitting the power switch now, and all three fans spin up smoothly on the first boot.</d> After this line the voice-over stays silent for the rest of the shot. Instantly, power engages. The three fans spin to life in smooth synchrony, blurring into quiet rotation while the green LED strip along the card's top edge glows steadily. Connected via a thin display ribbon, the adjacent five-inch diagnostic monitor flickers on, cycling through initialization code before displaying the detected GPU model in white text. The camera pushes horizontally at slow, subtle speed, keeping the glowing green accent and spinning fan hub sharply focused in the foreground with the diagnostic monitor legible in the midground.\n\noverall_soundscape: A crisp mechanical click of the power button gives way to an immediate electrical hum. Three cooling fans spool up together, settling into a steady, quiet whir.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Late afternoon sunlight slants through a large workshop window, casting warm, amber illumination across a spacious wooden build desk. In the center of the orderly workspace stands an empty mid-tower PC chassis in matte white, its tempered glass side panels already removed and set safely nearby. To one side rests the graphics card on the mat, while stacked neatly beside the chassis are unopened retail boxes for a motherboard, processor, memory kits, and a water-cooling loop. The atmosphere is quiet, methodical, and cleanly organized.\n\nAlex stands behind the desk, appearing as a full-figure presence in the wide setting. Gazing down at the arranged hardware, he reaches toward the stack and takes hold of the motherboard box. With deliberate, practiced motions, he slices through the clear factory seal with a small precision hobby knife and smoothly folds open the top cardboard flap, revealing the inner protective wrap. The graphics card sits safely undisturbed on the mat.\n\nThe camera holds a locked-off wide shot at chest height, framing the full expanse of the build desk with Alex positioned slightly off-center. The open white computer case and the tall stack of branded component boxes dominate the visual field, keeping the focus squarely on the assembly space and the upcoming hardware preparation without cutting to close-up views.",
+      "annotation": {
+        "title_en": "An empty case",
+        "scene": "build_desk",
+        "camera": "wide",
+        "beat": "Late afternoon at a larger build desk. An empty white PC case with tempered glass panels stands open; boxes for a motherboard, CPU, memory and a water-cooling kit are stacked beside it. Alex, small in the frame, opens the first box.",
+        "state": {
+          "outfit": "black T-shirt, navy apron",
+          "card_stage": "finished card on the side",
+          "pc_stage": "empty case"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          249,
+          213
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a sunlit workshop, where Alex stands behind a spacious wooden build desk beside an empty white computer chassis and component boxes. Late afternoon sunlight slants through a large workshop window, casting warm, amber illumination across the spacious wooden build desk. The camera holds a locked-off wide shot at chest height framing Alex standing slightly off-center behind the desk. Beside an empty matte white mid-tower chassis with removed glass panels and a graphics card resting on a mat, unopened boxes for a motherboard, processor, memory kits, and water-cooling loop sit stacked neatly. Gazing down, Alex reaches out and takes the motherboard box. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] To kick off the build, I am opening up the motherboard box to inspect our core foundation.</d> After this line the voice-over stays silent for the rest of the shot. Using a small precision hobby knife, he slices through the clear factory seal with deliberate, practiced motions and smoothly folds open the top cardboard flap, revealing the inner protective wrap while the graphics card rests undisturbed.\n\noverall_soundscape: Soft ambient room tone fills the quiet workshop. A crisp slice sounds as the hobby knife cuts through the tape seal, followed by the gentle creak of folding cardboard.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the wooden build desk.\n\nOnly Alex's hands are visible in the frame. The socket load plate rests open, exposing the pin grid. With an index finger, he unhooks the retention lever and lifts it completely back. Holding the CPU by its edges, he carefully aligns the triangle marking with the socket's indicator. He lowers the chip into the bed, seating it flush without sliding. He then lowers the bracket over the edges of the processor and presses the spring-loaded lever down firmly, guiding the arm sideways to snap it under the retention hook, clamping the processor rigidly into the locked socket.\n\nThe camera maintains a stable macro close-up angled just above the socket, keeping the alignment notches and heat spreader in sharp focus. The shot stays locked in place as the lever flexes and clicks down, capturing the mechanical process without panning or zooming, framing the motherboard around the locked processor until the movement settles.",
+      "annotation": {
+        "title_en": "The CPU",
+        "scene": "build_desk",
+        "camera": "macro close-up",
+        "beat": "On the motherboard the socket lever lifts; fingers lower the CPU into the socket by its edges, matching the triangle, and the lever clamps it down.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "on the side",
+          "pc_stage": "CPU installed on the motherboard"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          231,
+          157
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up angled just above the socket on the wooden build desk, where Alex's hands hover over the open load plate and pin grid. The camera holds a static shot in sharp focus on the alignment notches and heat spreader. Only Alex's hands are visible. With an index finger, he unhooks the retention lever and lifts it completely back. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Carefully align the golden triangle, drop the chip straight in, and snap the lever shut.</d> After this line the voice-over stays silent for the rest of the shot. Holding the CPU by its edges, he aligns the triangle marking with the socket's indicator and lowers the chip into the bed, seating it flush without sliding. He lowers the bracket over the edges of the processor and presses the spring-loaded lever down firmly, guiding the arm sideways to snap it under the retention hook. The camera keeps framing the motherboard as the clamped processor locks rigidly into place and all movement settles.\n\noverall_soundscape: A light metallic scrape sounds as the retention lever unhooks. The processor gently seats with a faint clink, followed by the firm creak and sharp click of the spring-loaded latch snapping into place.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the build desk.\n\nAlex’s hands enter the frame. Holding two memory sticks, he aligns them over the empty slots on the motherboard. Firm thumb pressure pushes each stick down until the plastic latches snap securely inward. His fingers then take a small NVMe solid-state drive and slide it diagonally into the M.2 slot. Pressing the drive flat against the standoff, he uses a precision screwdriver to thread a miniature screw down, fastening the drive securely in place.\n\nThe camera maintains a tight, object-focused macro insert angled down across the memory slots and the lower M.2 connector. A shallow depth of field isolates the seating clips, metallic contacts, and screw threads, keeping the delicate mechanical actions sharply in focus while the surrounding workspace recedes into a soft blur.",
+      "annotation": {
+        "title_en": "Memory and SSD",
+        "scene": "build_desk",
+        "camera": "close-up",
+        "beat": "Two memory sticks click into their slots and a small NVMe drive is screwed into its slot on the motherboard.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "on the side",
+          "pc_stage": "CPU, memory and SSD on the motherboard"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          220,
+          129
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro insert shot at the build desk, angled down toward the motherboard where Alex's hands enter the frame. The camera maintains a static, tight, object-focused macro insert angled down across the memory slots and the lower M.2 connector, with shallow depth of field keeping seating clips, metallic contacts, and screw threads in sharp focus while the surrounding workspace recedes into a soft blur. Alex’s hands enter the frame holding two memory sticks and align them over empty slots on the motherboard. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Snap the memory sticks in firmly until both latches click, then secure the drive flat with its screw.</d> After this line the voice-over stays silent for the rest of the shot. Firm thumb pressure pushes each stick down until the plastic latches snap securely inward. His fingers then take a small NVMe solid-state drive, sliding it diagonally into the M.2 slot, pressing it flat against the standoff, and using a precision screwdriver to thread a miniature screw down to fasten the drive securely in place.\n\noverall_soundscape: Sharp, crisp plastic clicks echo as the memory latches snap securely into place. A light metallic friction sounds as the solid-state drive slides into its slot, followed by the delicate, quiet turns of a precision screwdriver threading down a miniature screw.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the build desk.\n\nAlex carefully grips the edges of the motherboard and angles it smoothly into the chassis. His fingers align the rear ports with the cutout and settle the board onto the standoffs. With a screwdriver, he sets and tightens several screws through the mounting holes. Immediately after, he guides a power supply into the bottom compartment of the case, sliding it smoothly into its bay until it sits flush against the chassis frame.\n\nThe camera maintains a high-angle close-up looking down into the main chamber, keeping both the motherboard's mounting points and the case interior in crisp focus. A gentle downward tilt follows the motherboard into position, smoothly tracking the screwdriver before shifting focus to the lower power supply shroud. Alex’s hands and the hardware remain the central focus throughout the steady movement.",
+      "annotation": {
+        "title_en": "Board into the case",
+        "scene": "build_desk",
+        "camera": "close-up",
+        "beat": "Hands lower the motherboard into the white case and screw it onto the standoffs; the power supply slides into its bay at the bottom.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "on the side",
+          "pc_stage": "motherboard and power supply in the case"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          249,
+          137
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle close-up at the build desk, looking down into the main chamber of a chassis where Alex works with computer hardware. The camera maintains a high-angle close-up looking down into the main chamber, keeping the mounting points and case interior in crisp focus. Alex carefully grips the edges of the motherboard and angles it smoothly into the chassis. Tilting gently downward, the camera follows the motherboard as his fingers align the rear ports with the cutout and settle the board onto the standoffs. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Carefully seat the motherboard onto the standoffs, secure each screw, and slide in the power supply.</d> After this line the voice-over stays silent for the rest of the shot. With a screwdriver, he sets and tightens several screws through the mounting holes while the camera tracks the screwdriver. Shifting focus to the lower power supply shroud, the camera watches as Alex guides a power supply into the bottom compartment of the case, sliding it smoothly into its bay until it sits flush against the chassis frame.\n\noverall_soundscape: Gentle metallic scraping and soft clicks as the motherboard seats onto brass standoffs. The quiet squeak and turning sound of a manual screwdriver driving into threads, followed by the dull sliding friction and firm clink of the power supply casing locking flush into its bay.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the build desk.\n\nOnly Alex's hands are in frame as he maneuvers a custom CPU water block featuring a polished, mirror-finish nickel-plated base, an internal grid of micro-cooling fins, and a crystal-clear acrylic top with dual threaded port openings. He lowers the block squarely onto the processor, pressing it flush against the heat spreader. His fingers then position four knurled silver thumb screws over the corner spring posts, turning and tightening them in an alternating diagonal sequence until the water block sits level and securely anchored to the socket.\n\nThe macro close-up maintains a tight, slightly angled perspective directly over the socket. The camera holds almost entirely static with an imperceptible drift following his tightening fingers, preserving an ultra-shallow depth of field where the transparent acrylic, metallic screw ridges, and circuit traces stay in razor-sharp focus while the surrounding case interior drops into a smooth, muted blur.",
+      "annotation": {
+        "title_en": "CPU water block",
+        "scene": "build_desk",
+        "camera": "macro close-up",
+        "beat": "A CPU water block with a clear acrylic top and a nickel base is pressed onto the CPU and four thumb screws are tightened.",
+        "state": {
+          "outfit": "fingers only",
+          "card_stage": "on the side",
+          "pc_stage": "water block on the CPU"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          229,
+          149
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up shot at the build desk, where Alex's hands hover directly over the CPU socket. From a tight, slightly angled macro perspective over the socket, only Alex's hands are visible. He maneuvers a custom CPU water block featuring a polished, mirror-finish nickel-plated base, an internal grid of micro-cooling fins, and a crystal-clear acrylic top with dual threaded port openings. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] I set the water block squarely down onto the processor.</d> He lowers the block squarely onto the processor, pressing it flush against the heat spreader. His fingers position four knurled silver thumb screws over the corner spring posts. Alex (S1) adds: <d>[English] Tightening each thumb screw diagonally keeps the mounting pressure even.</d> After this line the voice-over stays silent for the rest of the shot. He turns and tightens them in an alternating diagonal sequence until the water block sits level and securely anchored. The camera holds almost static with an imperceptible drift following his fingers, maintaining razor-sharp focus on the acrylic, screw ridges, and circuit traces as the surrounding case interior blurs.\n\noverall_soundscape: A soft, muted tap sounds as the water block meets the processor heat spreader. The delicate, tactile scraping and clicking of knurled thumb screws turning onto spring posts resonates close to the microphone.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop build desk.\n\nThe focus is on a long, matte-black 360-millimeter liquid cooling radiator pre-fitted with three 120-millimeter fans and neatly routed braided cabling. Alex's hands maneuver the radiator up against the top mounting bracket of the chassis. Supporting the weight steadily with his left palm, his right hand introduces mounting screws into the elongated rail slots using a magnetic screwdriver. He methodically tightens each fastener down into the radiator's threaded frame, securing the entire assembly firmly against the ceiling of the case by the end of the process.\n\nThe camera holds a crisp, high-angle close-up insert on the case's roof bracket, drifting smoothly along the mounting track as the screwdriver engages each screw. Depth of field stays tightly locked onto the screw heads and fan edges, allowing the previously installed CPU water block deeper in the interior to remain in soft, atmospheric focus.",
+      "annotation": {
+        "title_en": "Radiator",
+        "scene": "build_desk",
+        "camera": "close-up",
+        "beat": "A long 360 millimetre radiator with three fans is screwed into the top of the case.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "on the side",
+          "pc_stage": "radiator mounted"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          233,
+          147
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle close-up shot at the workshop build desk, where Alex positions a long liquid cooling radiator against a chassis roof bracket. Alex holds the matte-black three-hundred-and-sixty-millimeter radiator, fitted with three fans and braided cabling, against the top bracket of the chassis. Supporting the radiator steadily with his left palm, his right hand introduces mounting screws into the elongated rail slots using a magnetic screwdriver. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Next, I secure the top radiator into place along the mounting rails, tightening each screw down evenly.</d> After this line the voice-over stays silent for the rest of the shot. The camera drifts smoothly along the mounting track with a shallow depth of field locked tightly onto the screw heads and fan edges, while the CPU water block below remains in soft focus. He methodically tightens each fastener down into the threaded frame, securing the entire assembly firmly against the ceiling of the case.\n\noverall_soundscape: The light metallic click of magnetic screws seating into elongated slots, followed by the crisp ratcheting friction of a screwdriver tightening threads into metal.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop build desk.\n\nAlex’s hands reach into the chassis holding a combined cooling unit consisting of a clear acrylic cylindrical reservoir fused to a compact, matte-black pump base. Carefully angling the unit inside the case, he aligns its integrated bracket against vertical mounting rails next to the motherboard. With his left hand steadying the cylinder, his right hand uses a magnetic hex driver to thread and tighten screws through the bracket eyelets. The reservoir stands firmly upright and rigidly locked in position by the end of the action.\n\nThe camera maintains a crisp, stable close-up angled slightly downward into the chassis, keeping the reservoir, the pump base, and the fastening bracket in sharp relief. A slight, imperceptible forward push tracks the tightening of the hardware, framing the placement of the cooling unit within the chassis without showing Alex's face.",
+      "annotation": {
+        "title_en": "Pump and reservoir",
+        "scene": "build_desk",
+        "camera": "close-up",
+        "beat": "A clear cylindrical reservoir with a pump at its base is mounted upright on a bracket inside the case.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "on the side",
+          "pc_stage": "pump and reservoir mounted"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          242,
+          142
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a crisp close-up shot angled slightly downward into a computer chassis at a workshop build desk, where Alex's hands manipulate hardware. Alex’s hands reach into the chassis holding a combined cooling unit consisting of a clear acrylic cylindrical reservoir fused to a compact, matte-black pump base. He carefully angles the unit inside the case, aligning its integrated bracket against vertical mounting rails next to the motherboard. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now I align the pump and reservoir unit against the vertical rails and secure it firmly.</d> After this line the voice-over stays silent for the rest of the shot. With his left hand steadying the cylinder, his right hand uses a magnetic hex driver to thread and tighten screws through the bracket eyelets. The camera maintains a crisp, stable close-up angled slightly downward into the chassis, keeping the reservoir, pump base, and fastening bracket in sharp relief without showing Alex's face, pushing forward with small amplitude at imperceptible speed. The reservoir stands firmly upright and rigidly locked in position.\n\noverall_soundscape: A faint metallic tap sounds as the bracket rests against the mounting rails. The subtle, delicate squeak of threaded metal echoes as the hex driver turns and tightens the screws.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop build desk.\n\nAlex holds a clear rigid tubing piece with a flexible grey silicone insert threaded inside to prevent collapse. Slowly rotating the tube over the metallic nozzle of a benchtop heat gun, his fingers turn the plastic evenly through the hot air stream. Once the material softens, he steadily bends the tube into a crisp, smooth ninety-degree curve. He holds the bend locked in position for several seconds as the plastic cools, solidifies, and retains its clean, glass-like right-angle shape.\n\nThe camera maintains a stable macro close-up on the central bend and his guiding fingers. Faint heat shimmer warps the air around the nozzle before subsiding as the tube clears the hot airflow. The framing remains locked onto the crisp arc, highlighting the tube's transparent clarity and pristine geometric curve against the mat.",
+      "annotation": {
+        "title_en": "Bending tubes",
+        "scene": "build_desk",
+        "camera": "macro close-up",
+        "beat": "A heat gun warms a clear rigid tube with a silicone insert inside; hands bend it into a smooth 90-degree curve and hold it while it cools.",
+        "state": {
+          "outfit": "hands and forearms",
+          "card_stage": "on the side",
+          "pc_stage": "first bent tube"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          230,
+          138
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up at the workshop build desk, where Alex works with clear rigid tubing above a benchtop heat gun. The camera holds a static macro close-up on Alex's guiding fingers and the central bend of a clear rigid tubing piece with a flexible grey silicone insert threaded inside. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Keep rotating it smoothly in the heat, then hold the angle until it sets completely.</d> After this line the voice-over stays silent for the rest of the shot. Faint heat shimmer warps the air around the metallic nozzle of the benchtop heat gun as his fingers slowly turn the plastic evenly through the hot air stream. Once the material softens, Alex steadily bends the tube into a crisp, smooth ninety-degree curve. Moving the tube clear of the hot airflow, he holds the bend locked in position for several seconds as the plastic cools and solidifies, the framing remaining locked onto the pristine geometric curve and its transparent clarity against the mat.\n\noverall_soundscape: The steady, low hum and rushing hiss of a benchtop heat gun blowing hot air. Faint friction of fingers rotating the plastic tube, followed by quiet stillness as the bent tubing cools.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop build desk.\n\nOnly Alex's hands enter the chassis, where the CPU block, reservoir, and top radiator are fitted with compression fittings. He aligns the first bent tube, pressing its end into the reservoir port until seated against the internal rubber O-ring, followed by the CPU block inlet. Using his fingertips, he spins the locking collar clockwise, tightening it firmly against the thread. Moving upward, he seats the second bent tube between the CPU block outlet and the radiator port, twisting the matching collar down until both rigid runs form fully anchored, airtight connections.\n\nThe camera holds a steady, angled close-up insert focused tightly within the chassis interior. A shallow depth of field isolates the fittings and tubing, while a micro-pan tracks his hand movements to keep both newly secured runs fully visible.",
+      "annotation": {
+        "title_en": "Fittings",
+        "scene": "build_desk",
+        "camera": "close-up",
+        "beat": "The bent tubes are pushed into black compression fittings and tightened, connecting the reservoir to the CPU block and the CPU block to the radiator.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "on the side",
+          "pc_stage": "water loop tubing connected"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          248,
+          136
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady, angled close-up insert inside a chassis at the workshop build desk, where only Alex's hands enter the frame. A shallow depth of field isolates the compression fittings on the CPU block, reservoir, and top radiator inside the chassis. Alex aligns the first bent tube and presses its end into the reservoir port until seated against the internal rubber O-ring, then into the CPU block inlet. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] I seat each tube firmly past the O-ring before hand-tightening the collars for an airtight seal.</d> After this line the voice-over stays silent for the rest of the shot. Using his fingertips, he spins the locking collar clockwise, tightening it firmly against the thread. Moving upward as the camera executes a micro-pan to track his hands, Alex seats the second bent tube between the CPU block outlet and radiator port, twisting the matching collar down until both rigid runs form fully anchored connections.\n\noverall_soundscape: A soft rubber squeak sounds as the rigid tubing presses into the O-rings, followed by the quiet metallic rasp of locking collars spinning along threads. Faint, quiet room tone hums in the workshop background.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop build desk.\n\nInside the chassis, the vertical reservoir has a small plastic funnel fitted into its top port. Alex steadies the funnel with one hand while tilting a bottle of vivid neon-green coolant over the opening with the other. A steady stream of translucent green fluid pours down into the reservoir, swirling softly as it collects at the base. The liquid level climbs smoothly past internal baffles until the cylinder is halfway full, casting a vibrant emerald glow through the clear walls before he gently tips the bottle back up.\n\nThe camera maintains a static, macro close-up focused intently on the reservoir and the rising green fluid. A shallow depth of field keeps the pouring action sharp while softening the interior hardware behind it. The composition remains locked throughout the shot, emphasizing the controlled motion of the liquid without any camera movement.",
+      "annotation": {
+        "title_en": "Green coolant",
+        "scene": "build_desk",
+        "camera": "close-up",
+        "beat": "Vivid green coolant is poured from a bottle through a funnel into the reservoir, filling it halfway.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "on the side",
+          "pc_stage": "loop being filled with green coolant"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          241,
+          146
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static macro close-up inside the chassis at the workshop build desk, where Alex works beside a vertical reservoir fitted with a small funnel. The camera holds a static macro close-up focused intently on the vertical reservoir, with shallow depth of field softening the interior hardware behind it. Alex steadies the small plastic funnel fitted into its top port with one hand while tilting a bottle of vivid neon-green coolant with the other. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now I carefully pour in the vivid coolant.</d> A steady stream of translucent green fluid pours down into the reservoir, swirling softly as it collects at the base. Alex (S1) adds: <d>[English] We only need to fill the reservoir halfway for now.</d> After this line the voice-over stays silent for the rest of the shot. The liquid level climbs smoothly past internal baffles until the cylinder is halfway full, casting a vibrant emerald glow through the clear walls before he gently tips the bottle back up.\n\noverall_soundscape: A gentle, continuous trickling sound echoes as fluid flows through the funnel into the reservoir. A subtle glug sounds from the bottle as coolant pours, accompanied by faint swirling liquid resonance.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the build desk.\n\nFolded strips of white paper towel are tucked beneath every tube joint and fitting across the chassis. Alex reaches into frame to toggle a jump-start switch on the external power supply, quickly withdrawing out of view. The pump hums to life, sending the green coolant surging through the tubes. Frothy air bubbles race along the bends and empty into the reservoir, quickly clearing the lines. Throughout the rush of fluid, the paper towels beneath each fitting remain pristine and completely dry, showing no stains or seepage. By the end of the sequence, the coolant flows in a smooth, continuous stream through the fully pressurized loop with no hands in frame.\n\nThe camera maintains a crisp, close-up insert angled across the central tubing runs and fittings. A slow, controlled lateral pan tracks the surging coolant from the reservoir toward the primary block joints, keeping the protective paper towels visible underneath. The framing documents the contrast between the moving fluid and the dry paper towels in steady detail throughout the test.",
+      "annotation": {
+        "title_en": "Leak test",
+        "scene": "build_desk",
+        "camera": "close-up",
+        "beat": "Paper towels lie under every fitting. The pump starts and green coolant rushes through the clear tubes, air bubbles chasing through the loop into the reservoir; the towels stay dry.",
+        "state": {
+          "outfit": "not visible",
+          "card_stage": "on the side",
+          "pc_stage": "green coolant flowing through the loop, no leaks"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          249,
+          174
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a crisp close-up insert at the build desk, where Alex stands beside the chassis with folded paper towels beneath the tube joints. Folded strips of white paper towel lie tucked beneath every tube joint and fitting across the chassis. Angled across the central tubing runs and fittings, the camera holds a crisp close-up insert as Alex reaches into frame to toggle a jump-start switch on the external power supply, then quickly withdraws out of view. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now we power up the pump to bleed the loop and check that every fitting stays dry.</d> After this line the voice-over stays silent for the rest of the shot. The pump hums to life, sending green coolant surging through the tubes while frothy air bubbles race along the bends and empty into the reservoir. A slow, controlled lateral pan tracks the surging coolant from the reservoir toward the primary block joints. The paper towels beneath each fitting remain pristine and completely dry without stains, until the coolant flows in a smooth, continuous stream through the fully pressurized loop with no hands in frame.\n\noverall_soundscape: A sharp mechanical click of the switch gives way to the low electrical hum of the pump starting up. Coolant rushes through the acrylic tubing with gurgling bubbles that splash into the reservoir, settling into a steady, quiet fluid flow.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the workshop build desk.\n\nAlex's hands enter the frame. He grips the graphics card, carefully aligning its PCIe fingers with the slot directly below the water block, and applies firm, even downward pressure until the motherboard latch snaps shut with a crisp mechanical click. He then grasps a braided power cable extending from the chassis grommet and smoothly plugs its connector into the graphics card's top edge, seating the clip completely flush.\n\nThe camera maintains a steady, downward-angled close-up insert, framing the expansion slot, the seated graphics card, and the adjacent coolant tubes in razor-sharp focus. The shot completely excludes his face and upper body, prioritizing the mechanical tactile action and tidy cable management as the card locks solidly into position.",
+      "annotation": {
+        "title_en": "The card goes in",
+        "scene": "build_desk",
+        "camera": "close-up",
+        "beat": "Hands lower the black-and-green graphics card into the PCIe slot below the CPU until the latch clicks, then plug in its power cable.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "card installed in the PC",
+          "pc_stage": "card installed beside the green water loop"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          245,
+          123
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a downward-angled close-up insert of the workshop build desk, where Alex's hands work above the motherboard expansion slot. The camera holds a steady, downward-angled close-up insert framing the expansion slot and adjacent coolant tubes. Alex's hands enter the frame and grip the graphics card, carefully aligning its PCIe fingers with the slot directly below the water block. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now, I slide the graphics card into the slot until it clicks, and connect the power cable.</d> After this line the voice-over stays silent for the rest of the shot. He applies firm, even downward pressure until the motherboard latch snaps shut with a crisp mechanical click. He then grasps a braided power cable extending from the chassis grommet and smoothly plugs its connector into the top edge of the graphics card, seating the clip completely flush while his face and upper body remain excluded from the shot.\n\noverall_soundscape: A sharp mechanical click echoes as the graphics card locks into the motherboard slot. A soft plastic friction sound and tactile snap follow as the power connector seats firmly into place.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the build desk.\n\nOnly Alex’s hands are visible. Several thick, braided power cables—including the 24-pin motherboard and PCIe lines—initially hang loose across the backplate. Working deliberately, his fingers gather the splayed strands, smoothing them into straight, parallel runs against the recessed steel channel. His left hand holds the unified bundle flat while his right hand threads a velcro strap through a metal tie-down bridge. He pulls the strap taut around the cables and presses the fastener firmly into place, leaving the lines neatly anchored, flush, and organized along the tray by the end of the maneuver.\n\nThe camera holds a tight, steady macro insert focused directly on the cable channel behind the motherboard tray, subtly drifting downward as the strap is cinched. The shallow depth of field keeps the weave of the cables and the binding in sharp focus while softly blurring the desk surface beyond the chassis frame.",
+      "annotation": {
+        "title_en": "Cable management",
+        "scene": "build_desk",
+        "camera": "close-up behind the motherboard tray",
+        "beat": "Behind the motherboard tray, hands bundle cables with velcro straps into neat parallel runs.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "installed",
+          "pc_stage": "cables tidy"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          250,
+          151
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro shot at the build desk, where Alex's hands work behind the motherboard tray of the chassis. The camera holds a tight macro insert focused on the cable channel behind the motherboard tray with a shallow depth of field. Several thick, braided power cables, including the twenty-four-pin motherboard and PCIe lines, initially hang loose across the backplate. Working deliberately, Alex's fingers gather the splayed strands, smoothing them into straight, parallel runs against the recessed steel channel. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now I gather the main power lines into the channel and cinch them down securely with velcro.</d> After this line the voice-over stays silent for the rest of the shot. His left hand holds the unified bundle flat while his right hand threads a velcro strap through a metal tie-down bridge. The camera subtly drifts downward as he pulls the strap taut around the cables and presses the fastener firmly into place, leaving the lines neatly anchored, flush, and organized along the tray.\n\noverall_soundscape: The soft rustling of braided cable sleeves sliding against steel. A light threading sound followed by the crisp, firm pressing crunch of a velcro strap fastening into place.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the build desk.\n\nThe computer sits in the chassis, showing the tubing connecting the CPU block, radiator fans, and the graphics card. Alex lifts the tempered glass panel into position. With steady care, his fingers align the panel against the chassis rim, sliding it into the mounting grooves so the pane sits flush. He fastens the captive thumbscrews at the rear edge to secure the panel, ensuring no smudges touch the surface. His hands pull back completely from the desk, leaving the sealed, fully assembled water-cooled PC standing as a unified unit.\n\nThe camera executes a slow, cinematic orbit around the desktop tower, moving smoothly from a side-angle view toward a front three-quarters perspective. The framing keeps the PC centered as the glass reflects faint glints while remaining transparent enough to showcase the internal components, liquid lines, and cooling fans. The steady rotation highlights the completed machine.",
+      "annotation": {
+        "title_en": "Glass on",
+        "scene": "build_desk",
+        "camera": "slow orbit",
+        "beat": "The tempered glass side panel slides on. The camera slowly orbits the finished white case: green coolant in clear tubes, the graphics card, the radiator fans.",
+        "state": {
+          "outfit": "not visible",
+          "card_stage": "installed",
+          "pc_stage": "finished white water-cooled PC"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          149
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot of the build desk, where Alex works beside a water-cooled computer inside its chassis. Inside the chassis, tubing connects the CPU block, radiator fans, and the graphics card. Alex lifts the tempered glass panel into position. With steady care, his fingers align the panel against the chassis rim, sliding it into the mounting grooves so the pane sits flush. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Finally, we slide on the tempered glass side panel and lock it down tight.</d> After this line the voice-over stays silent for the rest of the shot. He fastens the captive thumbscrews at the rear edge to secure the panel, ensuring no smudges touch the surface. His hands pull back completely from the desk, leaving the sealed, fully assembled water-cooled PC standing as a unified unit. The camera executes a slow, cinematic orbit around the desktop tower, moving smoothly from a side-angle view toward a front three-quarters perspective, keeping the PC centered as faint glints reflect across the transparent glass displaying the internal components, liquid lines, and cooling fans.\n\noverall_soundscape: A subtle metallic scrape sounds as the tempered glass panel slides smoothly into the chassis grooves. The soft threading clicks of thumbscrews turning tight give way to a quiet ambient room tone.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The dim gaming room is cast in moody evening ambient light, with vibrant neon strip lights glowing along the dark accent wall and beneath the desk. A deep indigo and warm purple tint washes across the space, contrasting with the soft shadows in the corners. The spacious setup features a sleek dark gaming desk dominated by an expansive curved ultrawide monitor, an uncluttered mechanical keyboard, and a wide mouse mat. The atmosphere is quiet and expectant, shifting the visual tone from a utilitarian workshop to a nocturnal gaming battle station.\n\nAlex appears at a distance in full figure. Seen from the side, he carefully carries the computer with both hands supporting the base. Through the tempered glass panel, the coolant within the tubing catches faint glints of neon. He steps forward toward the desk and cautiously bends to set the computer down on the right side of the tabletop beside the curved monitor, releasing his grip and standing upright.\n\nThe camera remains fixed in a wide shot, holding a stable side-angle perspective where the room's architecture and gaming peripherals dominate the frame. Alex stays a full-figure, distant presence throughout the placement without any facial close-up. The computer chassis sits prominently on the desk next to the curved display as the neon backlighting frames the complete scene.",
+      "annotation": {
+        "title_en": "To the gaming desk",
+        "scene": "gaming_room",
+        "camera": "wide",
+        "beat": "Evening. Alex, seen from the side at a distance, carries the finished PC to a gaming desk with a wide curved monitor and sets it down; neon strip lights glow along the wall.",
+        "state": {
+          "outfit": "black T-shirt, navy apron",
+          "card_stage": "installed",
+          "pc_stage": "PC on the gaming desk"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          249,
+          216
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a fixed wide shot of a dim gaming room illuminated by vibrant neon strip lights, where Alex approaches the sleek desk carrying the computer. The camera holds a static wide shot from a side angle across the dim gaming room, where deep indigo and warm purple ambient light washes over the dark accent wall and desk. Vibrant neon strips glow along the wall and beneath the sleek desk holding an expansive curved ultrawide monitor, mechanical keyboard, and wide mouse mat. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] With assembly finished, it's finally time to move the build onto the desk.</d> In the distance, Alex steps forward in full figure, carefully carrying the computer with both hands supporting its base. Faint neon glints reflect through the tempered glass panel off the coolant tubing. Alex (S1) adds: <d>[English] Right where it belongs.</d> After this line the voice-over stays silent for the rest of the shot. He cautiously bends, sets the computer down on the right side of the tabletop beside the curved monitor, releases his grip, and stands upright as the chassis rests in place.\n\noverall_soundscape: Soft footsteps approach across the floor amidst the faint electric hum of the neon lights. The computer chassis settles onto the desk surface with a solid, gentle thud followed by the subtle rustle of clothing as Alex stands upright.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the gaming desk in the dim room.\n\nAlex's forefinger enters the tight frame, pressing the metallic power button on the PC's top panel before swiftly pulling back. Immediately, electrical current surges through the build. The internal cooling fans whirl up, their translucent blades glowing with cycling rainbow RGB illumination. Coolant blazes to life through the clear tubes, and the graphics card lights up with its green edge strip shining steadily along the shroud. In the background, the curved monitor abruptly wakes, its panel illuminating with a sharp white boot logo against dark glass. By the end, the entire computer hums with light and fluid motion.\n\nBeginning in an object-focused close-up on the power switch, the camera executes a smooth, slow pull-back. As it retreats, the frame expands to keep the illuminated internals, radiant coolant, spinning RGB fans, and the glowing curved monitor screen clearly visible in a cohesive desktop composition.",
+      "annotation": {
+        "title_en": "Power on",
+        "scene": "gaming_room",
+        "camera": "close-up, slow pull-back",
+        "beat": "A finger presses the power button. The case lights up: the green coolant glows, fans spin with rainbow light, the card's green strip shines, and the curved monitor shows a boot logo.",
+        "state": {
+          "outfit": "finger only",
+          "card_stage": "running",
+          "pc_stage": "PC powered on, glowing"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          152
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up of a gaming desk in a dim room, where Alex reaches for the metallic power button on top of a PC. Alex's forefinger enters the tight frame, pressing the metallic power button on the PC's top panel before swiftly pulling back. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now for the moment of truth, powering it on to see all the lighting and components wake up.</d> After this line the voice-over stays silent for the rest of the shot. Immediately, electrical current surges through the build. The internal cooling fans whirl up, their translucent blades glowing with cycling rainbow RGB illumination. Coolant blazes to life through the clear tubes, and the graphics card lights up with its green edge strip shining steadily along the shroud. In the background, the curved monitor abruptly wakes, illuminating with a sharp white boot logo against dark glass. The camera pulls back smoothly and slowly, expanding to reveal the illuminated internals, radiant coolant, spinning RGB fans, and glowing curved monitor screen in a cohesive desktop composition as the computer hums with light and fluid motion.\n\noverall_soundscape: A tactile mechanical click of the power switch, followed by an electrical surge and the rising whir of cooling fans. Gentle fluid sloshing through cooling tubes mixes with a steady, low system hum.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the dim gaming room.\n\nThe curved monitor displays a crisp, high-resolution benchmark sequence. Rendered in detail, a dense futuristic cyberpunk city sweeps across the screen with rain-slicked asphalt, towering neon-lit skyscrapers, and fluid real-time lighting running without hesitation. In the upper corner of the screen, an on-screen telemetry read-out displays a frame-rate counter steadily tracking well into triple digits. Directly beside it, a diagnostic graph monitors graphics card thermals, charting a flat, unbroken line at a cool, stable temperature as the PC operates under full load without any micro-stutter, frame drops, or thermal spikes.\n\nThe camera maintains a close-up insert on the curved monitor, keeping the digital motion and metric read-outs sharply in focus. A slow, subtle tracking drift glides slightly across the screen, following the rendered city pan before lingering on the flatline temperature graph. The desk edge and ambient chassis lights remain softly out of focus around the perimeter.",
+      "annotation": {
+        "title_en": "Benchmark",
+        "scene": "gaming_room",
+        "camera": "close-up on the monitor",
+        "beat": "On the monitor a benchmark scene of a futuristic city runs smoothly with a frame-rate counter in the corner and a temperature graph staying flat.",
+        "state": {
+          "outfit": "not visible",
+          "card_stage": "running a benchmark",
+          "pc_stage": "running"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          244,
+          153
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot in the dim gaming room, where Alex sits watching a glowing curved monitor. The camera maintains a close-up insert on the curved monitor, drifting in a slow, subtle tracking motion across the screen. On the display, a detailed benchmark sequence sweeps across a dense cyberpunk city with rain-slicked asphalt, neon-lit skyscrapers, and fluid real-time lighting. In the upper corner, an on-screen telemetry read-out tracks frame rates well into triple digits. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Even under full load, our frame rates stay well in the triple digits with completely flat temperatures.</d> After this line the voice-over stays silent for the rest of the shot. Beside the counter, a diagnostic graph charts a flat, unbroken line at a cool, stable temperature with no thermal spikes or micro-stutters. The camera motion gently lingers on the temperature graph, keeping desk edges and ambient chassis lights softly out of focus.\n\noverall_soundscape: A quiet, steady airflow hums from computer fans operating at full speed. Faint electronic coil whine subtly whispers through the quiet room.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the dim gaming room late at night.\n\nAlex stands beside the mesh chair. Reaching behind his waist, he unties the apron ties, lifts the neck strap over his head, and drapes the apron over the back of the chair. He then picks up a matte black over-ear gaming headset from the desk and fits the cushioned cups over his ears. He sits down and pulls himself toward the glowing monitor.\n\nThe camera maintains a steady medium profile shot from the side at waist level, never tightening into a facial close-up. The framing clearly captures Alex handling the apron and headset alongside the running PC tower, remaining stable under the monitor glow to record his smooth transition from builder to player.",
+      "annotation": {
+        "title_en": "Apron off, headset on",
+        "scene": "gaming_room",
+        "camera": "medium shot from the side",
+        "beat": "Night. At medium distance from the side, Alex unties the navy apron and hangs it on the chair, puts on a black over-ear headset and sits down at the desk.",
+        "state": {
+          "outfit": "black T-shirt, black headset, apron off",
+          "card_stage": "running",
+          "pc_stage": "running"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          122
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium profile shot from the side at waist level in a dim gaming room late at night, where Alex stands beside a mesh chair. The camera maintains a steady medium profile shot from the side at waist level throughout the scene. Reaching behind his waist, Alex unties the apron ties, lifts the neck strap over his head, and drapes the apron over the back of the mesh chair. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now that the assembly is finished, it is time to take this rig for a spin.</d> After this line the voice-over stays silent for the rest of the shot. He then picks up a matte black over-ear gaming headset from the desk and fits the cushioned cups over his ears. Alex sits down in the chair and pulls himself toward the glowing monitor alongside the running PC tower, while the camera holds a static shot without tightening into a facial close-up.\n\noverall_soundscape: Fabric rustles softly as the apron is removed and draped across the mesh chair back. The running PC tower emits a gentle, steady fan hum in the quiet room. Casters roll lightly on the floor as Alex pulls himself toward the desk.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the dimly lit gaming room.\n\nThe curved monitor displays a high-speed racing simulation running fluidly through a rain-drenched futuristic metropolis, with ray-traced reflections of neon storefronts and car tail-lights shimmering across wet asphalt. In the lower foreground, Alex’s hands grip a matte-black wireless game controller. His thumbs steer the textured analog thumbsticks while his index fingers feather the triggers. As the digital sports car drifts through a sharp corner, his knuckles tense subtly, counter-steering with precise micro-adjustments that translate immediately to the responsive motion on screen.\n\nThe camera rests in a steady, object-focused insert positioned just behind Alex's hands, keeping the controller in the lower foreground and the luminous curved monitor filling the center and upper frame. The depth of field maintains clear clarity across both the tactile controller inputs and the detailed, reflection-rich gameplay throughout the shot.",
+      "annotation": {
+        "title_en": "Neon racing",
+        "scene": "gaming_room",
+        "camera": "over the shoulder toward the monitor",
+        "beat": "The curved monitor fills the frame with a night racing game through a rain-soaked neon city with ray-traced reflections; Alex's hands work a game controller in the foreground.",
+        "state": {
+          "outfit": "hands only",
+          "card_stage": "running the game",
+          "pc_stage": "running"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          218,
+          140
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady, object-focused insert shot in a dimly lit gaming room, where Alex holds a wireless game controller before a luminous curved monitor. The camera holds a steady, object-focused insert shot positioned just behind Alex's hands, keeping a matte-black wireless game controller in the lower foreground while a luminous curved monitor fills the center and upper frame with clear depth of field. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Now we test real-time handling, watching how smoothly the vehicle responds through tight, rain-soaked city turns.</d> After this line the voice-over stays silent for the rest of the shot. On screen, a high-speed racing simulation runs fluidly through a rain-drenched futuristic metropolis, showing ray-traced reflections of neon storefronts and car tail-lights shimmering across wet asphalt. Alex's thumbs steer the textured analog thumbsticks while his index fingers feather the triggers. As the digital sports car drifts through a sharp corner, his knuckles tense subtly, counter-steering with precise micro-adjustments that translate immediately to the responsive motion on screen.\n\noverall_soundscape: Soft, tactile clicks of controller thumbsticks and trigger pulls mix with the low hum of computer fans. In-game audio produces the muffled roar of a high-speed sports car engine, tire screeches, and rainfall splashing against city asphalt.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the dimly lit gaming room.\n\nBehind the glass, the system operates under heavy load with no builder or hands visible in frame. The graphics card runs at peak capacity, its three fans spinning in a uniform high-velocity blur. Neon-green coolant surges steadily through the clear tubing, coursing past the water block and fittings. The rapid fluid circulation continues through the loop, working in smooth, uninterrupted operation alongside the spinning fans.\n\nThe camera holds an object-focused macro close-up framed tightly against the chassis glass, angled toward the spinning fans and tubing. It executes a slow, controlled push-in, keeping the whirling fan hub and fluid pathways in sharp focus while subtle reflections shift in the blurred foreground, remaining locked on the cooling hardware throughout.",
+      "annotation": {
+        "title_en": "Under load",
+        "scene": "gaming_room",
+        "camera": "close-up through the glass",
+        "beat": "Through the glass panel: the graphics card's three fans spin, green coolant streams through the tubes and the light reflects on the desk, while the game's engine roar plays.",
+        "state": {
+          "outfit": "not visible",
+          "card_stage": "under load",
+          "pc_stage": "coolant flowing"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          256,
+          124
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an object-focused macro close-up of a computer chassis in a dimly lit gaming room, where Alex's custom cooling loop runs under heavy load. The camera holds an object-focused macro close-up framed tightly against the chassis glass, angled toward the spinning fans and clear tubing. Behind the glass, the system operates under heavy load with no builder or hands visible in frame. The graphics card runs at peak capacity, its three fans spinning in a uniform high-velocity blur as neon-green coolant surges steadily through the clear tubing, coursing past the water block and fittings. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Under heavy stress testing, the coolant surges smoothly while the triple fans spin at maximum velocity.</d> After this line the voice-over stays silent for the rest of the shot. The camera executes a slow, controlled push-in, keeping the whirling fan hub and fluid pathways in sharp focus while subtle reflections shift in the blurred foreground. It remains locked on the cooling hardware throughout as the rapid fluid circulation continues in smooth, uninterrupted operation.\n\noverall_soundscape: A steady, high-pitched whir of triple cooling fans spinning at full throttle fills the space. Beneath the air rush, a continuous subtle hum and faint liquid movement hums through the closed loop.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the dim gaming room.\n\nSeen from behind, Alex sits centered in the chair facing the display. Both of his hands grip the controller at chest height as the race car on screen surges past the checkered line, triggering a bright banner that proclaims first place across the virtual track. Reacting immediately to the win, he raises the controller high above his head in an energetic gesture of triumph, leaning back slightly with his arms raised in victory.\n\nThe camera holds a steady wide framing from directly behind the desk, capturing Alex as a silhouette anchored against the screen and the computer tower beside it. The graphics on the monitor and the coolant pulsing through the rig dominate the composition, keeping the machine fully visible throughout the moment.",
+      "annotation": {
+        "title_en": "Finish line",
+        "scene": "gaming_room",
+        "camera": "wide from behind",
+        "beat": "Seen from behind in the dark neon room, the race car crosses the finish line on screen with a FIRST PLACE banner and Alex raises the controller in triumph.",
+        "state": {
+          "outfit": "black T-shirt, black headset",
+          "card_stage": "running",
+          "pc_stage": "running"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          241,
+          129
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a dim gaming room from directly behind the desk, where Alex sits centered in a chair facing the display. The camera holds a steady wide framing from directly behind the desk. Seen from behind as a silhouette against the screen and the computer tower beside it, Alex sits centered in the chair facing the display, with both hands gripping the controller at chest height. On the monitor, the race car surges past the checkered line, triggering a bright banner that proclaims first place across the virtual track. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Testing out the new system under full load, and it handles top settings without breaking a sweat.</d> After this line the voice-over stays silent for the rest of the shot. Reacting immediately to the win, Alex raises the controller high above his head in an energetic gesture of triumph, leaning back slightly with his arms raised in victory as coolant continuously pulses through the visible rig.\n\noverall_soundscape: Low whirring from computer cooling fans blends with the rhythmic whoosh of liquid coolant circulating through the rig. Muffled racing car engine roars and a brief digital victory chime emanate from the monitor speakers.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the gaming room, now deep in the night.\n\nAlex sits relaxed in his desk chair facing the glowing setup. With the controller resting loosely in his lap, he leans back slightly, gazing toward the vibrant display in quiet satisfaction as the graphics card and liquid-cooling loop operate smoothly. As he reflects on the achievement, he narrates via voice-over about turning a collection of loose components into a first victory within a single evening.\n\nThe camera executes a slow, deliberate pull-back from a closer view of the chassis and monitor to an expansive wide shot of the entire room. The framing prioritizes the atmospheric space and glowing machinery over close character detail, keeping Alex, the desktop setup, the packaging, and the shelving in clear, balanced view as the perspective smoothly widens.",
+      "annotation": {
+        "title_en": "Build night",
+        "scene": "gaming_room",
+        "camera": "slow pull-back to a wide shot",
+        "beat": "The camera pulls back from the glowing PC and monitor to the whole dark room: Alex in his chair, the empty parts boxes stacked by the door and the green anti-static mat rolled up on a shelf. In voice-over he says from a box of parts to the first win in one night.",
+        "state": {
+          "outfit": "black T-shirt, black headset",
+          "card_stage": "running",
+          "pc_stage": "finished PC glowing in the dark room"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          132
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a closer shot of the gaming room deep in the night, where Alex sits relaxed in his desk chair facing the glowing setup. Alex sits relaxed in his desk chair facing the glowing setup, the controller resting loosely in his lap. He leans back slightly, gazing toward the vibrant display in quiet satisfaction while the graphics card and liquid-cooling loop operate smoothly. The camera executes a slow, deliberate pull-back from the chassis and monitor toward an expansive wide shot of the entire room. Alex, speaking in voice-over, a man in his late twenties with a bright, friendly tenor voice, an upbeat pace and a neutral American accent (S1) says: <d>[English] Going from loose components on the desk to our first victory in just one evening feels incredible.</d> After this line the voice-over stays silent for the rest of the shot. The widening perspective prioritizes the atmospheric space and glowing machinery, keeping Alex, the desktop setup, the packaging, and the shelving in clear, balanced view.\n\noverall_soundscape: A gentle, steady hum emanates from the computer fans and liquid-cooling pump. Faint room ambience fills the quiet space during the late night.\n\nnon_diegetic_music: Relaxed lo-fi hip-hop beat with soft electric piano and vinyl crackle, kept at low volume beneath the narration throughout."
+      }
+    }
+  ]
+}

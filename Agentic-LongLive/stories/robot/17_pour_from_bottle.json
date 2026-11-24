@@ -1,0 +1,52 @@
+{
+ "name": "17_pour_from_bottle",
+ "title": "Pouring Liquid and Repositioning Objects",
+ "summary": "A robotic arm pours liquid into a glass, hides the glass by placing the bottle directly in front of it, slides a coaster, and then restores the bottle to reveal the glass.",
+ "camera": "fixed third-person camera",
+ "robot": "one white arm with a parallel gripper",
+ "setting": "a white table in a brightly lit room",
+ "first_frame": "17_pour_from_bottle.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "5dd14fbe9d0d22dd2a115367c07ee032",
+  "frame_index": 0,
+  "original_prompt": "tilt the bottle to pour liquid",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "016608723552b05a0917faab8d1d6e9a17d39fde85d8352be87f9953ef62bd62"
+ },
+ "segments": [
+  {
+   "instruction": "The robot reaches for the glass bottle, grasps it, and lifts it toward the small glass. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot tilts the bottle to pour liquid into the glass, turns it upright, and places it down on the right.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot regripps the bottle and lifts it off the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot places the bottle directly in front of the glass, completely blocking it from view.",
+   "memory_event": "hide: the glass is occluded behind the bottle"
+  },
+  {
+   "instruction": "The robot reaches to the black coaster on the left edge and slides it toward the center.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot aligns the black coaster on the table surface and releases it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot grasps the bottle and sets it back on the right side of the table.",
+   "memory_event": "return: the small glass reappears containing liquid, upright and undisturbed"
+  },
+  {
+   "instruction": "The robot releases the bottle and retracts the arm upward to a resting position.",
+   "memory_event": "none"
+  }
+ ]
+}

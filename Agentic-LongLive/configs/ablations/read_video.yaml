@@ -1,0 +1,2 @@
+# Closed loop: the agent also reads the last frame of each generated shot (video errors can enter memory).
+agent: {read_generated_video: true}

@@ -1,0 +1,2 @@
+# Stricter commit rule: round 0 must also pass its check (a failed update keeps the older memory).
+agent: {commit_first_round: false}

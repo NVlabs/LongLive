@@ -1,0 +1,2 @@
+# Synchronous agent: shot i waits until memory from prompts <= i-1 has finished all rounds (not real time).
+runtime: {mode: sync}

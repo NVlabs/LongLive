@@ -1,0 +1,2 @@
+# No global image G: only the per-shot pictures M.
+memory: {use_g: false}

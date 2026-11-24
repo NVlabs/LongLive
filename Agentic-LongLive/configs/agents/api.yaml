@@ -1,0 +1,32 @@
+# Optional API agent: Gemini (planner + checker) and an OpenAI-compatible image API (e.g. GPT Image on Azure).
+# Higher picture quality, but ~60 s per memory update, so memory lags several shots behind a real-time generator.
+# Credentials come from the environment, never from the repository:
+#   GEMINI_SERVICE_ACCOUNT  path to a Vertex AI service-account JSON (or params.backend: studio + GEMINI_API_KEY)
+#   AGL_IMAGE_ENDPOINT      Azure OpenAI resource URL;  AGL_IMAGE_DEPLOYMENT  image deployment name
+#   AZURE_OPENAI_API_KEY    the Azure API key (or AGL_IMAGE_KEY_FILE: a file holding it)
+agent:
+  planner:
+    provider: gemini
+    model: ${oc.env:AGL_GEMINI_MODEL,gemini-3.8-flash}
+    credentials_env: GEMINI_SERVICE_ACCOUNT
+    params: {backend: vertex, location: global, temperature: 0.2, max_tokens: 8192}
+    max_concurrency: 8
+    timeout_s: 90
+  checker:
+    provider: gemini
+    model: ${oc.env:AGL_GEMINI_MODEL,gemini-3.8-flash}
+    credentials_env: GEMINI_SERVICE_ACCOUNT
+    params: {backend: vertex, location: global, temperature: 0.0, max_tokens: 2048, max_image_side: 768}
+    max_concurrency: 8
+    timeout_s: 60
+  image:
+    provider: openai_image
+    base_url: ${oc.env:AGL_IMAGE_ENDPOINT,https://YOUR-RESOURCE.openai.azure.com}
+    model: ${oc.env:AGL_IMAGE_DEPLOYMENT,gpt-image-1}
+    api_key_env: AZURE_OPENAI_API_KEY
+    credentials_env: AGL_IMAGE_KEY_FILE
+    params: {flavor: azure, api_version: 2025-04-01-preview, quality: medium}
+    max_concurrency: 6
+    min_interval_s: 1.0
+    max_retries: 20
+    timeout_s: 90

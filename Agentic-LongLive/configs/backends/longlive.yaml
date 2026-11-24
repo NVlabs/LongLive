@@ -1,0 +1,21 @@
+# LongLive-2.0 (Wan2.2-TI2V-5B) in process. Weights: model_bf16.pt from Efficient-Large-Model/LongLive-2.0-5B and the
+# Wan2.2-TI2V-5B components (text encoder, VAE) from Wan-AI/Wan2.2-TI2V-5B (scripts/download_weights.sh).
+backend:
+  name: longlive
+  injection: sink               # none: LongLive-2.0's built-in multi-shot memory (baseline)
+  params:
+    longlive_root: ${oc.env:AGL_LONGLIVE_ROOT,../LongLive2.0}
+    wan_models: ${oc.env:AGL_WAN_MODELS,checkpoints/wan_models}               # contains Wan2.2-TI2V-5B/
+    generator_ckpt: ${oc.env:AGL_LONGLIVE_CKPT,checkpoints/LongLive-2.0-5B/model_bf16.pt}
+    device: cuda:0              # generator
+    aux_device: cuda:1          # memory prefill (DiT replica) and memory-picture encoding
+    decode_device: cuda:2       # streaming VAE decode
+    blocks_per_shot: 8          # 8 blocks x 8 latents = 253 frames, 10.5 s at 24 fps
+    fps: 24
+    scene_routing: llm          # llm: keep / recall / new location per revealed prompt | none: always [G, M, M]
+    route_llm_url: ${oc.env:AGL_ROUTE_URL,http://127.0.0.1:31001/v1}
+    route_llm_model: ${oc.env:AGL_ROUTE_MODEL,Qwen/Qwen3.6-35B-A3B-FP8}
+    route_llm_style: sglang     # sglang (EBNF) | vllm (structured outputs) constrained decoding
+    recall_prefill: true        # keep [G, M_loc] of every known location prefilled on the aux GPU
+    attn_backend: fa2           # fa2 | fa4 | cudnn
+    async_decode_tail: false    # true: the next shot starts while the last blocks of this one are decoded

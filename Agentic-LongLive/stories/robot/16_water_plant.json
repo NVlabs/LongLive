@@ -1,0 +1,52 @@
+{
+ "name": "16_water_plant",
+ "title": "Watering Plant and Rearranging Table",
+ "summary": "The robot waters a potted plant, sets the watering can down, temporarily moves the plant behind the chair, adjusts the watering can, and returns the plant to the table.",
+ "camera": "fixed third-person camera",
+ "robot": "one robotic arm with a two-finger parallel gripper",
+ "setting": "an office or dining space with a white marble table and a white chair",
+ "first_frame": "16_water_plant.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "72860ca08ae46927e837b7b4131280db",
+  "frame_index": 0,
+  "original_prompt": "pour water into the potted plant",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "0d3b5045da1a8f5529a7afdf6421eaf1c10f82ad594c9a94b97ea4bf8e971f30"
+ },
+ "segments": [
+  {
+   "instruction": "Lift the grey watering can and position its spout directly over the potted plant while the camera remains stationary.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Tilt the watering can forward to water the plant, then tilt it back upright while the camera stays fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Move the watering can back to the right side of the table, place it down, and release the handle.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Move the gripper over to the potted plant and grasp the rim of the pot.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the potted plant, move it behind the solid backrest of the chair out of view, and set it down.",
+   "memory_event": "hide: potted plant is lowered behind the chair backrest and hidden from camera view"
+  },
+  {
+   "instruction": "Return the empty arm to the table, grasp the watering can handle, and rotate the can slightly clockwise.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the watering can and reach behind the chair backrest toward the object placed there earlier.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift what was placed behind the chair back onto the table, setting it down in its original location.",
+   "memory_event": "return: the potted plant reappears from behind the chair unchanged and is placed back on the table"
+  }
+ ]
+}

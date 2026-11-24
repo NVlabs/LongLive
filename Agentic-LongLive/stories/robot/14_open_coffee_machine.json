@@ -1,0 +1,52 @@
+{
+ "name": "14_open_coffee_machine",
+ "title": "Brewing Coffee with Dual Arms",
+ "summary": "A dual-arm robot opens a coffee machine, inserts a capsule, retrieves a cup from the sink area, and prepares the machine.",
+ "camera": "head camera",
+ "robot": "two robotic arms with articulated black grippers",
+ "setting": "a kitchen countertop with a coffee machine, capsule box, and adjacent sink",
+ "first_frame": "14_open_coffee_machine.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "05f9eebfe930fca38d130ebe0bdb774f",
+  "frame_index": 0,
+  "original_prompt": "Open the lid of the capsule coffee machine with both hands",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "1f5da79d4b5fc7ac920c182e3f43fe461e1d9030d84e52cc0d222a4917d6b39d"
+ },
+ "segments": [
+  {
+   "instruction": "Stabilize the coffee machine with the left gripper while the right gripper grasps the top lever handle.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pull the lever all the way up and backward with the right gripper to open the capsule slot, keeping the camera focused on the machine.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the lever and use the right gripper to pick up a blue capsule from the box on the counter.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Drop the capsule into the open chamber and push the lever all the way down to close the machine.",
+   "memory_event": "hide: capsule hidden inside the closed coffee machine"
+  },
+  {
+   "instruction": "Turn the head camera to the right to look at the sink and countertop area.",
+   "memory_event": "hide: coffee machine and capsule tray go out of view"
+  },
+  {
+   "instruction": "Reach with the right gripper to grasp the small mug resting beside the sink basin.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the head camera back toward the coffee machine and place the mug onto the machine's drip tray.",
+   "memory_event": "return: coffee machine and capsule box reappear in their previous states and positions"
+  },
+  {
+   "instruction": "Lift the top lever of the coffee machine back up with the right gripper.",
+   "memory_event": "return: the capsule inserted earlier is visible inside the chamber"
+  }
+ ]
+}

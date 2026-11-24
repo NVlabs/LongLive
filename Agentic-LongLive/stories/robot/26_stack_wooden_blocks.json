@@ -1,0 +1,52 @@
+{
+ "name": "26_stack_wooden_blocks",
+ "title": "Stacking and Hiding Blocks on Table",
+ "summary": "The robot stacks a red hexagon on a white block, conceals a blue cube beneath the block's arch, manipulates other objects, and later retrieves the hidden cube.",
+ "camera": "fixed overhead camera",
+ "robot": "one robot arm with a parallel gripper",
+ "setting": "a wooden tabletop workspace with geometric blocks",
+ "first_frame": "26_stack_wooden_blocks.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "5d581f600f1a34bbc4baa8206dfca54a",
+  "frame_index": 0,
+  "original_prompt": "pick up the red hexagon block and stack it on the white cuboid block",
+  "viewpoint": "third_person_overhead",
+  "first_frame_sha256": "f5d7dd75d26d3169a3acb76924a1189819787dd3a7d1af276ef1ba0cb4322762"
+ },
+ "segments": [
+  {
+   "instruction": "The robot arm moves to the red hexagon block and closes its parallel gripper around it. The camera remains fixed on the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot lifts the red hexagon block, carries it leftward, and stacks it squarely on top of the white arched cuboid. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot grasps the lower-left blue cube and slides it completely underneath the arched opening of the white block. The camera remains fixed.",
+   "memory_event": "hide: the blue cube is hidden under the white arched block"
+  },
+  {
+   "instruction": "The robot releases the cube, moves to the tall white cylinder in the center ring, and lifts it slightly before seating it firmly back down. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot moves to the right blue cube, picks it up, and sets it in the center foreground of the table. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot reaches back to the arched white block and pulls out what was placed underneath it, setting it down to the left. The camera remains fixed.",
+   "memory_event": "return: the blue cube reappears from under the white arch, unchanged"
+  },
+  {
+   "instruction": "The robot grasps the right blue cube from the center and stacks it on top of the red hexagon block. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot releases the stacked cube and retracts its gripper to an upright resting position above the table. The camera remains fixed.",
+   "memory_event": "none"
+  }
+ ]
+}

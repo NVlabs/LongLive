@@ -1,0 +1,52 @@
+{
+ "name": "12_receive_tray",
+ "title": "Receiving Tray and Organizing Utensils",
+ "summary": "The robot receives a tray, conceals a cup behind a container, checks the side counter, and returns to uncover the food.",
+ "camera": "head camera",
+ "robot": "two robot arms with black parallel grippers",
+ "setting": "a white dining or lab table with another robot across from it",
+ "first_frame": "12_receive_tray.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "6701126349172c99a237355bb4a5b219",
+  "frame_index": 0,
+  "original_prompt": "Receive the rectangular tray with both arms",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "4116f5aee2418747fbe039224cb28b6c63af0cdeb99601637cf992b2fe57aebc"
+ },
+ "segments": [
+  {
+   "instruction": "Both arms reach forward toward the edges of the tray held by the opposite robot. The camera stays fixed on the tray.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Both grippers grasp the sides of the tray and pull it down onto the foreground table. The camera tilts slightly downward to follow.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The right gripper picks up the tall drink cup and places it behind the white utensil holder. The camera remains on the table.",
+   "memory_event": "hide: tall drink cup hidden behind the white utensil holder"
+  },
+  {
+   "instruction": "The camera pans left toward the empty counter space as both arms retract slightly.",
+   "memory_event": "hide: main table and tray turn out of view to the left"
+  },
+  {
+   "instruction": "The left gripper rests near the left counter edge while the camera remains pointed at the empty counter.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The camera pans back to the center table. Both arms return to ready position.",
+   "memory_event": "return: center table reappears with the tray, square food box, pastry stick, and utensil holder as left"
+  },
+  {
+   "instruction": "The right gripper reaches behind the utensil holder and returns what was placed there back onto the tray. The camera watches the action.",
+   "memory_event": "return: tall drink cup retrieved from behind utensil holder and placed onto tray"
+  },
+  {
+   "instruction": "The left gripper grasps the lid of the square food container and lifts it up. The camera stays centered on the tray.",
+   "memory_event": "none"
+  }
+ ]
+}

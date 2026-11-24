@@ -1,0 +1,261 @@
+{
+ "id": "chef_mei_long_day",
+ "setup": {
+  "title": "Chef Mei's Longest Day",
+  "style": "Live-action, cinematic, warm realistic food-documentary look.",
+  "cast": [
+   {
+    "id": "mei",
+    "name": "Chef Mei",
+    "description": "Chef Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket."
+   }
+  ],
+  "extras": {
+   "voice": "Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1),",
+   "music": "Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+   "speech": "Mei talks to the camera like a cooking-show host."
+  }
+ },
+ "shots": [
+  {
+   "prompt": "The shot opens on a bustling wet market bathed in early dawn light. Cool blue morning tones from outside mingle with warm, hanging incandescent bulbs strung over rows of vendor stalls. The concrete floor glistens with fresh water and damp reflections. Wooden tables are piled high with glistening crushed ice and freshly caught seafood, while soft vapor and gentle mist drift through the cool air, establishing a grounded, authentic documentary atmosphere.\n\nChef Mei, a petite East Asian woman in her forties with a round face and a single dimple, steps into view. She wears a clean white chef jacket beneath an open grey knit cardigan, black trousers, and a bright green bandana tied securely over her hair, with a red-handled wooden spoon tucked into her jacket's breast pocket. Carrying an oval woven basket on her arm, she pauses at a fishmonger's table. She reaches down with both hands to lift a firm, whole red snapper from the ice. Mei brings the fish toward her face, sniffing it approvingly, her dimple deepening with a satisfied smile, before carefully setting the fresh red snapper into her basket.\n\nA smooth tracking medium shot glides alongside Mei at eye level, following her steps through the aisle before settling into a steady frame as she inspects the catch. The composition keeps her upper body, the basket, and the pristine fish fully in view, maintaining sharp focus on her movements against the softly blurred motion of the early morning market around her.",
+   "annotation": {
+    "title_en": "Dawn market",
+    "scene": "wet_market",
+    "camera": "tracking medium shot",
+    "beat": "Dawn at a bustling wet market. Mei, in a grey cardigan over her white chef jacket, green bandana on, walks between stalls with a woven basket, picks up a whole red snapper and sniffs it approvingly.",
+    "state": {
+     "outfit": "grey cardigan over white chef jacket",
+     "jacket_condition": "clean",
+     "bandana": "green bandana on",
+     "dish_stage": "fresh red snapper in her basket"
+    }
+   }
+  },
+  {
+   "prompt": "The wet market stall is bathed in soft morning light filtering through overhead canvas awnings, mixed with the warm glow of bare incandescent bulbs. Heaps of vibrant produce fill wooden crates—crisp leafy greens glistening with water droplets, knobby ginger, and scarlet chillies. The damp concrete floor and blurry movement of early-morning shoppers create an authentic, lively market atmosphere.\n\nChef Mei, a petite East Asian woman in her forties with a round face and a dimple, wears a green bandana, a grey cardigan over her clean white chef jacket, black trousers, and a red-handled wooden spoon in her pocket. Standing before an elderly vegetable vendor, she carries a woven basket holding a fresh red snapper. Mei bargains cheerfully, smiling as she gestures toward the produce. The vendor hands her crisp bok choy, fresh ginger root, and several bright red chillies. Mei carefully arranges these into her basket beside the fish, then takes several coins from her pocket and hands them over with a gracious nod. Her basket now holds the snapper, chillies, ginger, and bok choy, while her clothing stays clean.\n\nThe camera maintains a stable medium two-shot at eye level, framing Mei and the vendor from the waist up. A subtle handheld drift preserves the documentary realism while keeping Mei’s cheerful expressions, the vegetable counter, and the exchange of produce and coins cleanly in view.",
+   "annotation": {
+    "title_en": "Bargaining",
+    "scene": "wet_market",
+    "camera": "medium two-shot",
+    "beat": "Mei haggles cheerfully with an old vegetable seller, adds bright red chillies, ginger and bok choy to her basket and pays with coins.",
+    "state": {
+     "outfit": "grey cardigan over white chef jacket",
+     "jacket_condition": "clean",
+     "bandana": "green bandana on",
+     "dish_stage": "basket of snapper, chillies, ginger and bok choy"
+    }
+   }
+  },
+  {
+   "prompt": "The restaurant kitchen stands brightly lit and quiet in the early morning, filled with gleaming stainless steel surfaces, hanging pots, and orderly prep stations. Crisp daylight spills through the open back doorway, washing across the polished metallic countertops and tiled floor with a soft, clean glow. The atmosphere feels pristine and expectant, capturing the calm before daily prep begins.\n\nChef Mei, a petite East Asian woman in her forties with a round face, one dimple, and a green bandana tied around her hair, steps inside carrying a basket of fresh red snapper, bright chillies, ginger, and bok choy. She initially wears a grey cardigan over her clean white chef jacket, black trousers, and has a red-handled wooden spoon tucked into her jacket pocket. Stopping beside the entrance, she slips off the cardigan and hangs it on a wall hook, revealing the crisp, spotless white jacket underneath. Mei then approaches the central stainless steel counter and unloads the basket, laying out the fresh fish, vibrant red chillies, knobby ginger, and leafy bok choy across the clean metal surface.\n\nA wide static camera captures the transition from the back entrance across the spacious kitchen to the central island. The locked-off framing keeps Mei's full figure in view as she enters, sheds her outerwear, and arranges her market produce, preserving an authentic, observational look at the quiet morning routine.",
+   "annotation": {
+    "title_en": "Opening the kitchen",
+    "scene": "restaurant_kitchen",
+    "camera": "wide static",
+    "beat": "Mei pushes open the back door of her bright restaurant kitchen, hangs her grey cardigan on a hook, and unpacks the basket onto the steel counter.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "clean",
+     "bandana": "green bandana on",
+     "dish_stage": "ingredients laid out on the counter"
+    }
+   }
+  },
+  {
+   "prompt": "The restaurant kitchen is filled with warm, clear daylight and soft working lights reflecting off stainless-steel counters. On the prep station, a thick wooden cutting board sits beside vibrant produce including red chillies, leafy bok choy, and knobby ginger roots. Stacked metal bowls and kitchen utensils rest in the softly blurred background, creating an energetic, clean, and focused atmosphere.\n\nChef Mei, a petite East Asian woman in her forties with a round face, wears a tied green bandana over her dark hair, a clean white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket. Standing over the prep counter, her hands deftly guide a sharp knife, rapidly slicing chillies and crisp bok choy on the wooden board. She swiftly chops fresh ginger, then uses the flat knife blade to scrape the ginger slices aside, leaving a colourful spread of chopped ginger, chillies, and bok choy on the board. Pausing, she glances up and breaks into a warm grin, her single dimple showing clearly while her jacket remains spotless.\n\nThe shot begins in a close-up on the wooden cutting board, capturing her rapid knife work. As she scrapes the ginger aside, the camera tilts smoothly upward to a medium close-up of Mei's face and upper torso, keeping her green bandana, dimple, and clean white jacket clearly framed against the bright, slightly out-of-focus kitchen.",
+   "annotation": {
+    "title_en": "Chopping",
+    "scene": "restaurant_kitchen",
+    "camera": "close-up on the board, tilt up to her face",
+    "beat": "Mei chops vegetables at lightning speed on a wooden board in the bright kitchen, then scrapes ginger slices aside and grins at the camera, her dimple showing.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "clean",
+     "bandana": "green bandana on",
+     "dish_stage": "chopped ginger, chillies and bok choy"
+    }
+   }
+  },
+  {
+   "prompt": "The commercial kitchen bustles around the stainless steel prep sink area, illuminated by bright overhead lights blended with warm ambient task lighting. Droplets of water glisten across the deep metal basin, where a steady trickle from the faucet pools around a prep board. Chrome fixtures and clean tiled walls reflect soft highlights, establishing a functional, documentary-real culinary workspace filled with energetic momentum.\n\nChef Mei stands at the sink, a petite East Asian woman in her forties with a round face, one visible dimple, and her hair bound beneath a green bandana. She wears a crisp white chef jacket with a red-handled wooden spoon tucked into the pocket, alongside black trousers. Gripping a fresh red snapper by its tail, she briskly works a scaler along its pink skin. A spray of moisture and a few shimmering fish scales flutter onto her left sleeve. Mei cuts neat diagonal scoring lines across the flank, then glances at her arm with an amused laugh. She quickly flicks the scales away with her thumb, restoring her jacket to its clean condition while the scored red snapper rests ready in the sink.\n\nThe camera maintains a medium close-up framing at chest height, capturing both Mei’s animated facial expressions and her deft hand movements. The framing remains steady with a very subtle handheld drift that accentuates the live documentary feel, keeping the glistening fish and the front of her uniform in sharp focus.",
+   "annotation": {
+    "title_en": "Scaling the fish",
+    "scene": "restaurant_kitchen",
+    "camera": "medium close-up",
+    "beat": "Mei scales and scores the red snapper at the sink; a few shiny scales fly onto her jacket sleeve and she laughs and flicks them off.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "clean",
+     "bandana": "green bandana on",
+     "dish_stage": "scored red snapper"
+    }
+   }
+  },
+  {
+   "prompt": "The restaurant kitchen bustles with culinary warmth around the stainless steel stovetop, illuminated by warm overhead task lights and the soft ambient glow of active gas burners. A heavy, polished copper pan sits over a steady flame, radiating heat as a vibrant red chilli sauce simmers inside. Aromatic steam rises in soft curls against the background of brushed metal shelves and hanging cookware, creating an authentic, focused atmosphere dedicated to professional cooking.\n\nChef Mei, a petite East Asian woman in her forties with a round face, one dimple, and dark hair tucked beneath a bright green bandana, stands over the burner wearing black trousers and a clean white chef jacket. She firmly grips her red-handled wooden spoon, steadily stirring the thick, glossy chilli mixture. Suddenly, a large bubble ruptures at the surface, launching a thick splatter of bright red sauce across the chest of her immaculate white jacket. Mei gasps with a startled jump, her eyebrows raising as she glances down at the sudden mess. Accepting the everyday mishap, she gives an easy shrug and immediately resumes stirring the bubbling pan. By the end, a prominent, irregular splash of crimson sauce visibly stains the front of her jacket.\n\nThe camera holds a documentary-style close-up framed on Mei's upper torso and the copper pan. A gentle handheld drift captures the kitchen action while keeping both the bubbling red sauce and the newly stained jacket in sharp focus, letting the small cooking accident unfold naturally.",
+   "annotation": {
+    "title_en": "The copper pan",
+    "scene": "restaurant_kitchen",
+    "camera": "close-up",
+    "beat": "Close-up as Mei stirs a chilli sauce in a copper pan with her red-handled wooden spoon. The sauce bubbles up and a big splash of red sauce lands across the front of her white jacket. She gasps, then shrugs and keeps stirring.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "large red chilli-sauce splash on the front",
+     "bandana": "green bandana on",
+     "dish_stage": "chilli sauce in the copper pan"
+    }
+   }
+  },
+  {
+   "prompt": "The commercial kitchen is engulfed in the chaotic energy of a peak lunch rush. Fiery orange flames leap dramatically from heavy wok stations along the stainless-steel cook line, casting pulsating flickers across the metallic surfaces and tiled splashbacks. A long row of incandescent heat lamps casts a warm, amber glow over the plating pass. Receipt printers churn continuously, spitting out long ribbons of white paper tickets onto the counter. The atmosphere is intense, sweltering, and thick with rising steam and fragrant cooking smoke, conveying the relentless pressure of professional kitchen service.\n\nChef Mei stands behind the plating counter, a petite East Asian woman in her forties with a round face, a subtle dimple, and fine beads of sweat glistening across her forehead. She wears a knotted green bandana covering her hair, black trousers, and a white chef jacket marked prominently across the chest by a large red chilli-sauce stain, with a red-handled wooden spoon tucked into her breast pocket. Working with practiced speed, she garnishes and arranges steaming plates of food directly under the radiant heat lamps. She calls out sharp, rhythmic firing orders to the line cooks, her focused expression unwavering as she maintains total command of the pass.\n\nThe camera operates in an organic handheld medium shot at chest height, subtly adjusting to follow Mei's fluid movements. The framing keeps her expressive face, the sauce-stained jacket, and the hot plates resting under the lamps clearly visible throughout the shot as kitchen activity pulses behind her.",
+   "annotation": {
+    "title_en": "Lunch rush",
+    "scene": "restaurant_kitchen",
+    "camera": "handheld medium shot",
+    "beat": "The lunch rush: ticket printers chatter, flames leap from the woks. Mei, sauce stain still on her jacket, shouts orders and plates dishes rapidly under the heat lamps, sweat on her forehead.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "red chilli-sauce stain on the front",
+     "bandana": "green bandana on",
+     "dish_stage": "plates of food under heat lamps"
+    }
+   }
+  },
+  {
+   "prompt": "A stainless-steel plating station inside the busy restaurant kitchen sits illuminated beneath bright, warm halogen task lamps. The metallic counter reflects soft golden highlights, creating an intense, culinary documentary atmosphere focused entirely on craft. In the centre rests a pristine, long white ceramic platter bearing an intact, tenderly steamed red snapper that releases faint curls of aromatic steam into the warm air.\n\nChef Mei, a petite East Asian woman in her forties with a round face and a green bandana wrapped around her hair, leans intently over the dish. A distinct red chilli-sauce stain marks the front of her white chef jacket, which also holds a red-handled wooden spoon tucked neatly inside its breast pocket. Using a metal ladle, she pours a thick, glossy red chilli sauce evenly along the spine of the fish, watching it coat the tender white flesh. She then takes a pinch of finely julienned spring onions and fresh green coriander leaves, scattering them across the top to complete the presentation. The dish now sits finished, vibrant with red sauce and green herbs.\n\nThe camera shoots from an overhead, top-down close-up angle, framing the long white platter squarely in the centre. The shot holds steady with minimal drift, keeping Mei’s deft hands and the cuffs of her white sleeves clearly visible as she finishes plating. The glossy sheen of the sauce and the vivid garnish remain sharply focused throughout the sequence.",
+   "annotation": {
+    "title_en": "The signature dish",
+    "scene": "restaurant_kitchen",
+    "camera": "top-down close-up",
+    "beat": "Mei pours the glossy chilli sauce over the whole steamed red snapper on a long white platter and scatters spring onions and coriander over it.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "red chilli-sauce stain on the front",
+     "bandana": "green bandana on",
+     "dish_stage": "finished chilli snapper on a white platter"
+    }
+   }
+  },
+  {
+   "prompt": "The dining room glows with warm amber light cast by pendant lamps over crowded wooden tables. Rich tones of polished timber, dark upholstery, and soft golden reflections fill the space, creating an inviting, lively evening atmosphere. Diners chat over steaming dishes and clinking glasses, while swinging service doors lead back toward the kitchen.\n\nChef Mei, a petite East Asian woman in her forties with a round face, one dimple, and a green bandana, pushes through the swinging doors. She wears a white chef jacket marked with a distinct red chilli-sauce stain on the front, black trousers, and a red-handled wooden spoon in her pocket. In both hands, she carefully balances the long white platter holding the whole red snapper coated in glossy chilli sauce and fresh herbs. She walks steadily across the room, smiling as patrons notice the dish. Mei approaches a table occupied by an expectant family and sets the steaming platter gently into the center. The family members beam and break into enthusiastic applause, while Mei steps back with a modest, relieved nod.\n\nA smooth tracking camera glides backward ahead of Mei as she advances through the room, keeping her chest-level platter and cheerful expression centrally framed. As she reaches the table, the camera arcs into a medium shot, clearly capturing her stained jacket, the freshly served snapper, and the clapping family.",
+   "annotation": {
+    "title_en": "Into the dining room",
+    "scene": "dining_room",
+    "camera": "tracking shot",
+    "beat": "Mei carries the platter through swinging doors into a warmly lit dining room full of guests and sets it down at a family's table to applause.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "red chilli-sauce stain on the front",
+     "bandana": "green bandana on",
+     "dish_stage": "snapper served at a family's table"
+    }
+   }
+  },
+  {
+   "prompt": "The intimate dining room corner is bathed in a warm, golden ambiance, illuminated by soft overhead pendant lighting that casts gentle glows onto the dark wooden walls and crisp linen tablecloth. Surrounding tables with softly blurred diners remain quietly in the background, creating a focused, hushed atmosphere around this secluded booth. Upon the table sits an artfully presented portion of whole snapper, surrounded by glistening aromatic sauce, fresh herbs, and polished silverware.\n\nChef Mei, a petite East Asian woman in her forties with a round face, a single dimple, and a green bandana over her hair, stands beside the table in black trousers and her white chef jacket, which carries a noticeable red chilli-sauce stain across the front alongside a red-handled wooden spoon tucked into the breast pocket. She clutches a white kitchen towel, nervously wringing and wiping her hands. Across from her, a serious food critic in a tailored grey suit uses his fork to sample a tender flake of the snapper. He chews with measured concentration while Mei watches his face. After an agonizing beat of contemplation, the critic's austere features soften into a slow, approving nod, culminating in a warm smile directed up at her.\n\nThe camera remains in a steady medium shot framing both the seated critic and Mei standing nearby. A gentle, imperceptible push inward keeps both figures in clear focus, capturing the fork movement, the sampled fish, Mei's nervous grip on the towel, and the subtle shift in the critic's expression.",
+   "annotation": {
+    "title_en": "A food critic",
+    "scene": "dining_room",
+    "camera": "medium shot",
+    "beat": "At a corner table a serious food critic in a grey suit tastes the snapper. Mei waits nervously, wiping her hands on a towel; the critic slowly nods and smiles.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "red chilli-sauce stain on the front",
+     "bandana": "green bandana on",
+     "dish_stage": "critic tasting the snapper"
+    }
+   }
+  },
+  {
+   "prompt": "The professional restaurant kitchen glows under bright overhead work lights and amber heat lamps reflecting off stainless-steel counters. The evening rush has finally broken; empty service platters and wiped ramekins rest along the stainless pass. Faint steam drifts from simmering stockpots in the background, while hanging saute pans and ladles frame the bustling space with a warm, triumphant culinary atmosphere.\n\nChef Mei, a petite East Asian woman in her forties with a round face and one visible dimple, stands between two young cooks wearing dark aprons. Her white chef jacket bears a distinct red chilli-sauce stain across the front, paired with black trousers and a red-handled wooden spoon tucked in her jacket pocket. At first, her tied green bandana secures her hair. Beaming with relief, she vigorously high-fives both cooks in rapid succession. She then reaches up with both hands, swiftly unties the green bandana, and pulls it free to reveal her short black hair. Laughing aloud, she exuberantly waves the green cloth overhead, letting the fabric flutter in the warm kitchen air while the sauce stain on her white uniform remains prominent.\n\nThe camera holds a medium wide shot at eye level, capturing Mei and the cooks against the gleaming service line. A subtle, documentary-style handheld sway accommodates her joyful movement while keeping the empty platters on the pass and her fluttering bandana entirely within frame, preserving the spontaneous celebration from beginning to end.",
+   "annotation": {
+    "title_en": "Celebration in the kitchen",
+    "scene": "restaurant_kitchen",
+    "camera": "medium wide",
+    "beat": "Back in the kitchen Mei high-fives two young cooks, then pulls off her green bandana and waves it in the air, her short black hair now uncovered.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "red chilli-sauce stain on the front",
+     "bandana": "bandana off, waved in her hand, short black hair visible",
+     "dish_stage": "empty platters on the pass"
+    }
+   }
+  },
+  {
+   "prompt": "The restaurant kitchen settles into a quiet, warm evening atmosphere as service draws to a close. Overhead lights cast a soft golden glow across brushed stainless steel counters, clean white wall tiles, and overhead utensil racks. The frantic rush of cooking has fully faded, leaving a tranquil, orderly space where warm ambient reflections shimmer quietly off the scrubbed metal surfaces.\n\nChef Mei, a petite East Asian woman in her forties with a round face and one dimple, stands by the counter with her short black hair uncovered, holding her green bandana in her hand. Her white chef jacket bears a noticeable red chilli-sauce stain on the chest, worn over black trousers, and her red-handled wooden spoon is tucked in her pocket. She sets the bandana aside on a shelf, takes a cloth, and thoroughly wipes the stainless steel prep counter until it gleams. Moving along the line, she lifts a copper pan and hooks it securely onto the overhead rail. She then pulls the red-handled wooden spoon from her jacket pocket and hangs it beside the pan, stepping back with a quiet, satisfied smile as her dimple shows.\n\nA static wide camera maintains a fixed, eye-level vantage across the kitchen interior. The steady framing encompasses Mei's full figure, the long polished counters, and the cookware suspended above. Without moving, the shot observes the serene rhythm of her closing routine, highlighting the pristine, shut-down kitchen as evening settles in.",
+   "annotation": {
+    "title_en": "Cleaning down",
+    "scene": "restaurant_kitchen",
+    "camera": "wide static",
+    "beat": "Evening. The kitchen is quiet. Mei, bandana off, wipes the steel counters until they shine and hangs the copper pan and her red-handled spoon on the rail.",
+    "state": {
+     "outfit": "white chef jacket",
+     "jacket_condition": "red chilli-sauce stain on the front",
+     "bandana": "off, short black hair visible",
+     "dish_stage": "clean kitchen"
+    }
+   }
+  },
+  {
+   "prompt": "The compact staff locker room is illuminated by warm, practical overhead light that casts gentle shadows across rows of muted grey metal lockers. A sturdy wooden bench sits along the narrow passage beside a canvas laundry hamper resting near an open locker door. The utilitarian tiled flooring and functional fittings convey a calm, quiet backstage atmosphere, offering a restful contrast to the busy environment of the commercial kitchen.\n\nChef Mei, a petite East Asian woman in her forties with a round face, a visible dimple, and short black hair exposed without her bandana, stands beside her open locker. She begins the sequence wearing black trousers and her white chef jacket, marked on the front by a noticeable red chilli-sauce stain. With steady, unhurried motions, Mei unbuttons the soiled jacket, peels it off her shoulders, and drops it into the laundry bin. Beneath it, she wears a plain short-sleeved black T-shirt. She then reaches into her locker, pulls out a bright yellow hooded raincoat, and slips her arms through the sleeves, letting it hang over the dark shirt. By the finish, she is dressed in the yellow raincoat over the black T-shirt, her stained jacket safely deposited in the hamper.\n\nThe camera maintains a stationary medium shot at eye level, framing Mei from the waist up while keeping the locker interior and the top of the laundry bin in view. The framing remains steady throughout her actions, capturing the garment change in continuous documentary style as the vivid yellow fabric replaces the white jacket.",
+   "annotation": {
+    "title_en": "Changing",
+    "scene": "staff_locker_room",
+    "camera": "medium shot",
+    "beat": "In a small staff locker room Mei unbuttons and takes off the stained chef jacket, drops it into a laundry bin and puts on a yellow raincoat over a black T-shirt.",
+    "state": {
+     "outfit": "yellow raincoat over black T-shirt",
+     "jacket_condition": "stained jacket in the laundry bin",
+     "bandana": "off, short black hair visible",
+     "dish_stage": "none"
+    }
+   }
+  },
+  {
+   "prompt": "A narrow alleyway opens onto a glistening city street at night, soaked in steady rain. Neon signs from neighboring storefronts cast vibrant streaks of magenta, amber, and cool blue across the wet asphalt, reflecting off shallow puddles along the curb. Raindrops patter steadily against the dark brick walls and pavement under a dim exterior security lamp, establishing a quiet, atmospheric urban setting.\n\nChef Mei, a petite East Asian woman in her forties with a round face and a single dimple, steps out through the restaurant's rear service door. Her green bandana is off, leaving her short black hair fully visible, and she wears a bright yellow raincoat over a plain black T-shirt and dark trousers. She pulls the heavy metal door shut, turns back, and uses a key to lock the deadbolt. Turning toward the glistening street, Mei lifts a compact clear umbrella in front of her chest and pops it open with a crisp click, shielding her head from the downpour. Her posture relaxes with quiet relief as she adjusts her grip on the transparent canopy's handle.\n\nThe camera captures the action in a wide tracking shot, gliding smoothly alongside Mei as she transitions from the alleyway onto the open sidewalk. The composition keeps her full figure in view, contrasting the vivid yellow of her raincoat with the dark, neon-streaked backdrop. The lateral movement preserves a steady distance, tracking her footsteps as she begins walking into the rainy night.",
+   "annotation": {
+    "title_en": "Rainy street",
+    "scene": "rainy_street",
+    "camera": "wide tracking shot",
+    "beat": "Night rain on a neon-lit street. Mei in her yellow raincoat walks out of the restaurant's back alley, locks the door and pops open a clear umbrella.",
+    "state": {
+     "outfit": "yellow raincoat over black T-shirt, clear umbrella",
+     "jacket_condition": "n/a",
+     "bandana": "off",
+     "dish_stage": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The shot is set on an open urban rooftop at night immediately following a rainfall, with wet concrete puddles reflecting the golden glow of incandescent string lights draped overhead. Cool night mist mingles with hot steam drifting upward into the dark air, framed by the softly blurred bokeh of distant city towers. Sturdy plastic stools and a shared folding table anchor the space, creating an authentic, intimate atmosphere for a post-shift staff supper.\n\nChef Mei, a petite East Asian woman in her forties with a round face, a single prominent dimple, and dark hair neatly tied back without her bandana, sits comfortably on a red plastic stool. Her wet, folded clear umbrella rests propped against the stool's leg. She wears a bright yellow hooded raincoat open over a plain black T-shirt and dark trousers. Mei holds a steaming ceramic bowl of noodles close to her chest with one hand while lifting a portion with wooden chopsticks. After taking a bite, she chuckles warmly at a colleague's joke, her dimple deepening as she speaks casually and gestures with her chopsticks, thoroughly relaxed among her crew.\n\nThe camera captures the moment in a medium shot at eye level, executing a very slow, continuous push-in toward Mei. The framing keeps her expressive face, her yellow raincoat, the bowl of noodles, and the overlapping silhouettes of her seated team clearly visible throughout the gentle advance.",
+   "annotation": {
+    "title_en": "Rooftop supper",
+    "scene": "rooftop",
+    "camera": "medium shot, slow push-in",
+    "beat": "On a rooftop under string lights after the rain, Mei in her yellow raincoat sits on a plastic stool with her team, eating noodles from a bowl with chopsticks and laughing.",
+    "state": {
+     "outfit": "yellow raincoat over black T-shirt",
+     "jacket_condition": "n/a",
+     "bandana": "off",
+     "dish_stage": "bowl of noodles"
+    }
+   }
+  },
+  {
+   "prompt": "On the rooftop terrace under the night sky, warm string lights hang overhead, casting soft golden halos into the cool post-rain air. In the blurred background, distant city skyscrapers sparkle with soft ambers and blues against the deep nocturnal atmosphere. The damp floorboards and cool night breeze contrast with the gentle urban warmth, lending the rooftop an intimate, quiet feeling of well-earned rest after a demanding shift.\n\nChef Mei, a petite East Asian woman in her forties with a round face, stands visible from the chest up. Her dark hair is free without her usual green bandana, and she wears a bright yellow raincoat layered over a casual black T-shirt. Her features are initially illuminated by the cool, soft glow of the smartphone screen cradled in her hands. As she reads a glowing five-star review, a wave of visible relief washes over her features, and her single deep dimple indents prominently into her cheek. Her expression transforms into quiet pride as she turns the bright phone screen outward toward the camera, revealing the luminous review and offering a radiant, genuine smile into the night.\n\nThe camera frames Mei in an intimate close-up at eye level, capturing the subtle micro-expressions across her illuminated face. A shallow depth of field keeps the focus crisply centered on her eyes, her dimpled smile, and the phone screen, while blurring the twinkling skyline behind her into cinematic bokeh. The frame holds steadily, preserving the quiet, celebratory authenticity of the documentary moment.",
+   "annotation": {
+    "title_en": "The review",
+    "scene": "rooftop",
+    "camera": "close-up",
+    "beat": "Mei reads a glowing five-star review on her phone, her face lit by the screen; her dimple deepens as she turns the phone toward the camera and smiles in the night city lights.",
+    "state": {
+     "outfit": "yellow raincoat over black T-shirt",
+     "jacket_condition": "n/a",
+     "bandana": "off",
+     "dish_stage": "phone showing a five-star review"
+    }
+   }
+  }
+ ]
+}

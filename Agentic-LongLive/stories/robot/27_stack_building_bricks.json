@@ -1,0 +1,52 @@
+{
+ "name": "27_stack_building_bricks",
+ "title": "Stacking and Sorting Toy Blocks",
+ "summary": "A robotic arm stacks building blocks on a workbench, covers a block with another, and later reveals and stacks it.",
+ "camera": "fixed third-person camera",
+ "robot": "one white arm with a parallel gripper",
+ "setting": "a robotics lab with a wooden workbench and colorful toy blocks",
+ "first_frame": "27_stack_building_bricks.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "8ebeb7473e5ec4ddedc6dec4dd16ce6f",
+  "frame_index": 0,
+  "original_prompt": "Stack green blocks on a blue base",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "a13987a2e6a26fba95aa7f9cffa7b60438888bcf691954458b5a0bd0b9d6cdd8"
+ },
+ "segments": [
+  {
+   "instruction": "Pick up the green block from the table and align it over the blue base block.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Press the green block onto the blue base block to complete the stack, then release it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Grasp the yellow block and place it upside-down over the loose green block to cover it.",
+   "memory_event": "hide: green block covered beneath the hollow yellow block"
+  },
+  {
+   "instruction": "Pick up the long red block and set it down to the left of the workspace.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pick up the loose blue block and place it on top of the red block.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the cover block and set it aside on the table.",
+   "memory_event": "return: green block uncovered, resting undisturbed on the table surface"
+  },
+  {
+   "instruction": "Pick up the uncovered block and place it atop the blue block on the left.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the block and raise the gripper into a parked position above the table.",
+   "memory_event": "none"
+  }
+ ]
+}

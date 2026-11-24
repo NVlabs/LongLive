@@ -1,0 +1,52 @@
+{
+ "name": "06_open_refrigerator",
+ "title": "Fetching Drink from Refrigerator",
+ "summary": "The robot opens the refrigerator door, removes a bottle, closes the door, cleans the counter, and reopens the refrigerator.",
+ "camera": "head camera",
+ "robot": "two robotic arms with black multi-jointed dexterous hands",
+ "setting": "a kitchen corner with a bronze refrigerator next to a white table",
+ "first_frame": "06_open_refrigerator.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "04aa58647ea944365b652148ffce0f3f",
+  "frame_index": 0,
+  "original_prompt": "Open the refrigerator door with the left arm",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "dcd4226f4515c88fb68eb2b1233d716357e4fbd6abe4fb76906a9bb90361766e"
+ },
+ "segments": [
+  {
+   "instruction": "Reach the right hand forward and hook the fingers into the side edge of the upper refrigerator door.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pull the upper refrigerator door fully open with the right hand, showing the shelves inside.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach the left hand to the door rack, grasp the white bottle, and set it down onto the white table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Push the refrigerator door closed with the right hand until it latches shut.",
+   "memory_event": "hide: refrigerator interior and remaining drinks hidden inside the closed fridge"
+  },
+  {
+   "instruction": "Turn the camera slightly left to focus on the white table and slide the white bottle further back.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pick up the blue cloth resting on the counter corner and wipe the tabletop next to the bottle.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the camera back toward the refrigerator and pull the upper door open again.",
+   "memory_event": "return: refrigerator interior with identical shelving and drink containers, with the white bottle missing from the door shelf"
+  },
+  {
+   "instruction": "Hold the door open and rest both hands in front of the shelves.",
+   "memory_event": "none"
+  }
+ ]
+}

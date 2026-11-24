@@ -1,0 +1,52 @@
+{
+ "name": "21_place_cup_on_plate",
+ "title": "Sorting Teaware and Covering Plate",
+ "summary": "A robotic arm arranges tea cups onto plates, covers a plate with a book, and later uncovers it.",
+ "camera": "fixed third-person camera",
+ "robot": "one white arm with a parallel gripper",
+ "setting": "a white desk with tea cups, plates, a vintage radio, and a potted plant",
+ "first_frame": "21_place_cup_on_plate.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "ad2f16615af8ebfafab6eac1c062aa98",
+  "frame_index": 0,
+  "original_prompt": "pick up the green cup and place it on the green plate",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "5efd906ba4ae18c4bebb761abdca48a7c527d707808a98c3893a0dbb98c923f7"
+ },
+ "segments": [
+  {
+   "instruction": "The robot arm reaches down and grasps the small green cup. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot carries the green cup and places it centered on the green plate.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot moves to the bottom right and grasps the closed book.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot lifts the book and places it squarely over the yellow plate.",
+   "memory_event": "hide: the yellow plate is completely covered by the book"
+  },
+  {
+   "instruction": "The robot reaches toward the yellow cup and grasps its handle.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot lifts the yellow cup and places it in front of the vintage radio.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot grasps the book and lifts it off the plate.",
+   "memory_event": "return: the yellow plate is uncovered, remaining in its original position"
+  },
+  {
+   "instruction": "The robot moves the book back to the bottom right corner of the table and releases it.",
+   "memory_event": "none"
+  }
+ ]
+}
