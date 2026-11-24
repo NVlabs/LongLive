@@ -1,0 +1,52 @@
+{
+ "name": "23_move_toothbrush",
+ "title": "Tidying Objects Around Sneaker",
+ "summary": "A dual-arm robot places a toothbrush in a cup, hides a toy train inside a sneaker, rearranges tabletop items, and retrieves the train.",
+ "camera": "fixed third-person camera",
+ "robot": "two black robotic arms with two-finger parallel grippers",
+ "setting": "a grey patterned table with assorted toys and household items",
+ "first_frame": "23_move_toothbrush.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "d914b8dc62f24e028628e45cb42cbedc",
+  "frame_index": 0,
+  "original_prompt": "move the toothbrush",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "6711b7610ae80eeca95637edba42bd2f6222f2b65fb456a3a3c82032344a5d81"
+ },
+ "segments": [
+  {
+   "instruction": "Move the green toothbrush across the table toward the purple cup while the camera stays fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Place the toothbrush upright into the purple cup and release the gripper.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach with the right gripper toward the small toy train on the lower right and grasp it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Slide the toy train deep into the opening of the sneaker until it is completely out of view.",
+   "memory_event": "hide: toy train is inserted into the sneaker opening and fully obscured"
+  },
+  {
+   "instruction": "Move the left gripper to the red toy bus in the background and push it forward.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pick up the small paper wrapper on the right and shift it slightly backward.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach into the sneaker with the right gripper to grasp what was placed inside.",
+   "memory_event": "return: the toy train is retrieved from inside the sneaker, identical to before"
+  },
+  {
+   "instruction": "Pull the object out of the sneaker and set it down on the table beside the red bus.",
+   "memory_event": "none"
+  }
+ ]
+}

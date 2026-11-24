@@ -1,0 +1,2 @@
+# One composition round per update (no anytime refinement).
+agent: {refine_rounds: 1}

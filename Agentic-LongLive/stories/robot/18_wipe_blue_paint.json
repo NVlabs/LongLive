@@ -1,0 +1,52 @@
+{
+ "name": "18_wipe_blue_paint",
+ "title": "Wiping Blue Paint and Storing Sponge",
+ "summary": "A robot arm wipes blue paint from a white table, deposits the used sponge into a container, and later reopens it to retrieve the sponge.",
+ "camera": "fixed overhead camera",
+ "robot": "one black robot arm with a parallel gripper",
+ "setting": "a white tabletop workspace against a blue mottled wall",
+ "first_frame": "18_wipe_blue_paint.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "6a6a183cf2f0eb110e67312de34ac32d",
+  "frame_index": 0,
+  "original_prompt": "wipe up blue paint",
+  "viewpoint": "third_person_overhead",
+  "first_frame_sha256": "bc2b88a4726036129865b840a036363539178b9966f41ad9c7ec32b9cc61fd08"
+ },
+ "segments": [
+  {
+   "instruction": "Wipe the central blue paint spill using the sponge held in the gripper.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Scrub the remaining blue paint specks at the lower left edge until the table is clean.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach toward the upper workspace boundary and place a small plastic box with an open lid onto the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Drop the sponge into the box and press the lid shut.",
+   "memory_event": "hide: the paint-stained sponge inside the closed box"
+  },
+  {
+   "instruction": "Move the gripper across the wiped tabletop area to inspect the surface.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Tap the center of the clean table with the closed gripper tips.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Open the box on the table.",
+   "memory_event": "return: the paint-stained sponge resting inside the box exactly as dropped"
+  },
+  {
+   "instruction": "Take out what you put in the box and hold it above the table.",
+   "memory_event": "none"
+  }
+ ]
+}

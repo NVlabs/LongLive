@@ -1,0 +1,52 @@
+{
+ "name": "07_seal_food_box",
+ "title": "Seal and Inspect Food Box",
+ "summary": "The robot seals a food box with a plastic lid, checks utensils on the right, and returns to unseal the container.",
+ "camera": "head camera",
+ "robot": "two black dexterous hands with white robotic arms",
+ "setting": "a dining table with a green tablecloth, wooden chairs, a stack of bowls, and utensil holders",
+ "first_frame": "07_seal_food_box.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "181775c37a2931e1ffd78e6218639101",
+  "frame_index": 0,
+  "original_prompt": "Press the box lid with both hands to seal the box",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "26d59776b19c57d991c285ef66fcd7a0c5e444189ace66077e959aa63de2d9b4"
+ },
+ "segments": [
+  {
+   "instruction": "Pick up the clear plastic lid from the bottom left with both hands.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Place the lid onto the food box in the center and press down firmly with both hands to seal it.",
+   "memory_event": "hide: the contents inside the food container are covered by the sealed lid"
+  },
+  {
+   "instruction": "Turn the head camera to the right toward the chopstick holder and reach for a wooden chopstick with the right hand.",
+   "memory_event": "hide: the sealed food box and left table area leave the camera view as the head turns right"
+  },
+  {
+   "instruction": "Lift the chopstick and gently tap the rim of the stacked beige bowls.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Place the chopstick back into the light-blue holder and retract the right hand.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the head camera back to the center of the table toward the food container.",
+   "memory_event": "return: the sealed food container reappears in the center of the table exactly as left"
+  },
+  {
+   "instruction": "Grasp the edges of the lid with both hands and remove it, setting it down on the table to the left.",
+   "memory_event": "return: the coiled food contents inside the container are exposed again, looking identical to the start"
+  },
+  {
+   "instruction": "Nudge the open food container slightly forward with the left hand and return both hands to rest.",
+   "memory_event": "none"
+  }
+ ]
+}

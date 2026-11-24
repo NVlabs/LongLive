@@ -1,0 +1,2 @@
+# No scene routing: every shot starts from the committed memory [G, M_{i-2}, M_{i-1}].
+backend: {params: {scene_routing: none}}

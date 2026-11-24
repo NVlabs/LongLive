@@ -1,0 +1,3522 @@
+{
+ "id": "hd05_7c16e7_full",
+ "setup": {
+  "title": "A Day of Care at the Savanna Reserve",
+  "style": "Documentary-realist zoo cinematography with natural sunlight, tactile textures, and steady observational camera movement.",
+  "cast": [
+   {
+    "id": "clara",
+    "name": "Clara",
+    "description": "Clara, Late 20s female zookeeper, tan skin, athletic build, brown eyes, dark curly hair tied back in a low bun, olive green zookeeper polo and cargo shorts, sturdy waterproof work boots, wide-brim khaki sun hat, clean."
+   }
+  ]
+ },
+ "bible": {
+  "entities": {
+   "clara": {
+    "id": "clara",
+    "kind": "character",
+    "name": "Clara",
+    "identity": "Late 20s female zookeeper, tan skin, athletic build, brown eyes, dark curly hair tied back in a low bun",
+    "initial": {
+     "outfit": "olive green zookeeper polo and cargo shorts",
+     "footwear": "sturdy waterproof work boots",
+     "headwear": "wide-brim khaki sun hat",
+     "stains": "clean"
+    },
+    "protagonist": true
+   },
+   "barnaby": {
+    "id": "barnaby",
+    "kind": "character",
+    "name": "Barnaby",
+    "identity": "Adult male Asian elephant with smooth rounded left tusk tip, deep skin folds, and a notch on his right ear flap",
+    "initial": {
+     "stains": "caked in dry reddish mud and dust"
+    },
+    "protagonist": false
+   },
+   "pippa": {
+    "id": "pippa",
+    "kind": "character",
+    "name": "Pippa",
+    "identity": "Juvenile gentoo penguin with bright orange-red bill, white bonnet feather band, and pink webbed feet",
+    "initial": {
+     "outfit": "bare feathers ruffled and dull",
+     "injury": "drooping left flipper with mild swelling"
+    },
+    "protagonist": false
+   },
+   "twiga": {
+    "id": "twiga",
+    "kind": "character",
+    "name": "Twiga",
+    "identity": "Adult female reticulated giraffe with jagged chestnut patches, long dark eyelashes, and tufted ossicones",
+    "initial": {
+     "accessory": "plain brown leather halter collar"
+    },
+    "protagonist": false
+   },
+   "scrub_brush": {
+    "id": "scrub_brush",
+    "kind": "object",
+    "name": "Scrub Brush",
+    "identity": "Wide deck scrub brush with stiff yellow bristles and a smooth ash wood handle",
+    "initial": {
+     "state": "clean dry yellow bristles with bare wooden handle",
+     "placement": "leaning against enclosure wall"
+    },
+    "protagonist": false
+   },
+   "hose_nozzle": {
+    "id": "hose_nozzle",
+    "kind": "object",
+    "name": "Hose Nozzle",
+    "identity": "Heavy machined brass high-pressure water nozzle with knurled grip",
+    "initial": {
+     "state": "shiny dry brass nozzle connected to black hose",
+     "placement": "coiled beside the concrete spigot"
+    },
+    "protagonist": false
+   },
+   "paint_bucket": {
+    "id": "paint_bucket",
+    "kind": "object",
+    "name": "Paint Bucket",
+    "identity": "Five-gallon cylindrical steel paint bucket with wire bail handle and manufacturer logo",
+    "initial": {
+     "state": "sealed factory can with terracotta paint label",
+     "placement": "on the shelter threshold"
+    },
+    "protagonist": false
+   },
+   "roller_tray": {
+    "id": "roller_tray",
+    "kind": "object",
+    "name": "Roller Tray",
+    "identity": "Pressed galvanized steel paint roller tray with deep reservoir and corrugated ramp",
+    "initial": {
+     "state": "clean unpainted metal tray with dry white roller sleeve",
+     "placement": "beside paint bucket"
+    },
+    "protagonist": false
+   },
+   "shelter_wall": {
+    "id": "shelter_wall",
+    "kind": "object",
+    "name": "Giraffe Shelter Wall",
+    "identity": "Exterior vertical timber slat facade of the giraffe night barn",
+    "initial": {
+     "state": "faded peeling greyish-tan paint with scuffs",
+     "placement": "front wall of the giraffe barn"
+    },
+    "protagonist": false
+   },
+   "wheelbarrow": {
+    "id": "wheelbarrow",
+    "kind": "object",
+    "name": "Wheelbarrow",
+    "identity": "Heavy-duty green poly dual-wheel contractor wheelbarrow with steel handles",
+    "initial": {
+     "state": "empty clean green tub",
+     "placement": "parked beside tool shed doors"
+    },
+    "protagonist": false
+   },
+   "heat_lamp": {
+    "id": "heat_lamp",
+    "kind": "object",
+    "name": "Heat Lamp",
+    "identity": "Ruby ceramic infrared radiant heating fixture mounted on a flexible gooseneck clamp",
+    "initial": {
+     "state": "switched off dark ceramic bulb on black clamp",
+     "placement": "clamped above nursery brooder pen"
+    },
+    "protagonist": false
+   },
+   "vet_thermometer": {
+    "id": "vet_thermometer",
+    "kind": "object",
+    "name": "Veterinary Thermometer",
+    "identity": "Digital veterinary rectal thermometer with flexible probe and LCD readout",
+    "initial": {
+     "state": "sanitized white plastic probe in clear plastic sleeve",
+     "placement": "on stainless medical counter"
+    },
+    "protagonist": false
+   },
+   "feeding_syringe": {
+    "id": "feeding_syringe",
+    "kind": "object",
+    "name": "Feeding Syringe",
+    "identity": "Fifty milliliter graduated clear plastic syringe with soft silicone feeder nozzle",
+    "initial": {
+     "state": "clean empty clear plastic barrel with silicone tip",
+     "placement": "inside clinic preparation tray"
+    },
+    "protagonist": false
+   },
+   "electrolyte_bowl": {
+    "id": "electrolyte_bowl",
+    "kind": "object",
+    "name": "Electrolyte Bowl",
+    "identity": "Low-rimmed non-tip stainless steel animal feeding bowl",
+    "initial": {
+     "state": "dry clean empty steel bowl",
+     "placement": "on examination table shelf"
+    },
+    "protagonist": false
+   }
+  },
+  "locations": {
+   "elephant_paddock": {
+    "id": "elephant_paddock",
+    "name": "Elephant Wash Paddock",
+    "look": "Spacious outdoor enclosure with sand earth, boulder perimeter, reinforced wash slab, and high water spigots under open sky"
+   },
+   "tool_shed": {
+    "id": "tool_shed",
+    "name": "Maintenance Tool Shed",
+    "look": "Cedar-paneled utility room with pegboards, hanging garden implements, stacked paint cans, and concrete floor"
+   },
+   "giraffe_shelter": {
+    "id": "giraffe_shelter",
+    "name": "Giraffe Shelter Paddock",
+    "look": "High-roofed wooden pavilion with sandy footing, tall feeding racks, timber support poles, and green paddocks beyond"
+   },
+   "penguin_nursery": {
+    "id": "penguin_nursery",
+    "name": "Penguin Rehabilitation Nursery",
+    "look": "Sanitary tiled clinic room with blue rubber floor mats, recovery pens, drain troughs, and bright overhead daylight panels"
+   }
+  }
+ },
+ "shots": [
+  {
+   "prompt": "The Elephant Wash Paddock is a spacious outdoor enclosure with sand earth, a rugged boulder perimeter, a reinforced concrete wash slab, and high water spigots under an open sky.\n\nClara, a late-20s female zookeeper with tan skin, an athletic build, brown eyes, and dark curly hair tied in a low bun, wears a clean olive green zookeeper polo, cargo shorts, sturdy waterproof work boots, and a wide-brim khaki sun hat. Barnaby, an adult male Asian elephant with a smooth rounded left tusk tip, deep skin folds, and a notched right ear flap, stands caked in dry reddish mud and dust. The Scrub Brush, with clean dry yellow bristles and a bare ash wood handle, leans against the enclosure wall. Clara walks onto the concrete wash slab, raising a hand in greeting while Barnaby flares his ears and rumbles softly.\n\nA wide establishing pan glides from the paddock boulders to the concrete wash slab.",
+   "annotation": {
+    "title_en": "Clara walks onto the concrete wash slab where Barnaby the el",
+    "scene": "elephant_paddock",
+    "camera": "Wide establishing pan from the paddock boulders to the concrete wash slab",
+    "beat": "Clara walks onto the concrete wash slab where Barnaby the elephant rumbles greeting.",
+    "present": [
+     "clara",
+     "barnaby",
+     "scrub_brush"
+    ],
+    "first_appearance": [
+     "clara",
+     "barnaby",
+     "scrub_brush"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Clara raises a hand in greeting while Barnaby flares his ears",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "caked in dry reddish mud and dust",
+     "scrub_brush.state": "clean dry yellow bristles with bare wooden handle",
+     "scrub_brush.placement": "leaning against enclosure wall"
+    }
+   }
+  },
+  {
+   "prompt": "The Elephant Wash Paddock features a reinforced concrete wash slab bordered by sandy earth and boulders under the bright open sky.\n\nClara, dressed in her clean olive green zookeeper polo, cargo shorts, waterproof work boots, and wide-brim khaki sun hat, steps forward beside Barnaby, who remains caked in dry reddish mud and dust with his rounded left tusk tip visible. The Hose Nozzle, a shiny dry brass high-pressure nozzle connected to a heavy black hose, rests coiled beside the concrete spigot. Clara lifts the brass nozzle from its coil and turns the paddock water valve, releasing a light mist as water hisses while testing the nozzle lever.\n\nA medium tracking shot follows Clara as she steps up to the spigot.",
+   "annotation": {
+    "title_en": "Clara lifts the brass hose nozzle from its coil and turns th",
+    "scene": "elephant_paddock",
+    "camera": "Medium tracking shot following Clara as she steps up to the spigot",
+    "beat": "Clara lifts the brass hose nozzle from its coil and turns the paddock water valve.",
+    "present": [
+     "clara",
+     "barnaby",
+     "hose_nozzle"
+    ],
+    "first_appearance": [
+     "hose_nozzle"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Water hiss sounds as Clara tests the nozzle lever, releasing a light mist",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "caked in dry reddish mud and dust",
+     "hose_nozzle.state": "shiny dry brass nozzle connected to black hose",
+     "hose_nozzle.placement": "coiled beside the concrete spigot"
+    }
+   }
+  },
+  {
+   "prompt": "The Elephant Wash Paddock's concrete wash pad glints under the natural savanna sunlight beside the surrounding sandy earth.\n\nClara wears her wide-brim khaki sun hat, waterproof boots, and olive green zookeeper polo and cargo shorts, now buckling a heavy waterproof black rubber apron over her uniform. Nearby stands Barnaby, the adult male Asian elephant with deep skin folds and a notched right ear, still heavily caked in dry reddish mud. Clara pulls the neck strap tight and smooths the heavy black rubber down over her front to prepare for the wash.\n\nThe camera captures Clara in a medium chest-height shot focused on her strapping and smoothing the apron.",
+   "annotation": {
+    "title_en": "Clara buckles a heavy waterproof black rubber apron over her",
+    "scene": "elephant_paddock",
+    "camera": "Medium chest-height shot focused on Clara strapping the apron",
+    "beat": "Clara buckles a heavy waterproof black rubber apron over her uniform to prepare for the wash.",
+    "present": [
+     "clara",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara pulls the neck strap tight and smooths the heavy black rubber down",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "caked in dry reddish mud and dust"
+    }
+   }
+  },
+  {
+   "prompt": "The Elephant Wash Paddock spreads wide under the daylight, its reinforced concrete wash slab damp underfoot.\n\nClara stands in her sun hat and waterproof work boots, wearing her heavy waterproof black rubber apron over her olive green polo and cargo shorts. Barnaby waits with dusty, reddish-mud-caked skin and a notched right ear flap. Holding both the shiny brass Hose Nozzle and the wooden-handled Scrub Brush, Clara directs Barnaby to turn sideways onto the slab. Barnaby sways his trunk and stamps lightly on the pad as he steps his front feet onto the wet concrete.\n\nA full shot captures Barnaby stepping his front feet onto the wet concrete beside Clara.",
+   "annotation": {
+    "title_en": "Holding both nozzle and scrub brush, Clara directs Barnaby t",
+    "scene": "elephant_paddock",
+    "camera": "Full shot capturing Barnaby stepping his front feet onto the wet concrete",
+    "beat": "Holding both nozzle and scrub brush, Clara directs Barnaby to turn sideways onto the slab.",
+    "present": [
+     "clara",
+     "barnaby",
+     "scrub_brush",
+     "hose_nozzle"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Barnaby sways his trunk and stamps lightly on the pad",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "caked in dry reddish mud and dust",
+     "scrub_brush.state": "clean dry yellow bristles with bare wooden handle",
+     "scrub_brush.placement": "leaning against enclosure wall",
+     "hose_nozzle.state": "shiny dry brass nozzle connected to black hose",
+     "hose_nozzle.placement": "coiled beside the concrete spigot"
+    }
+   }
+  },
+  {
+   "prompt": "The Elephant Wash Paddock's reinforced concrete slab is bordered by sand earth and large boundary boulders under the sun.\n\nClara, clad in her khaki sun hat, work boots, and heavy black rubber apron over her zookeeper polo and shorts, grips the Scrub Brush by its ash wood handle. Barnaby's flank and head turn dark and wet as Clara works thick soapy lather across his reddish mud-caked hide, with white suds foaming along his spine. Clara leans into each stroke as the yellow bristles dig rhythmically into his deep skin folds.\n\nAn over-the-shoulder medium close-up follows Clara's rhythmic scrubbing motion across Barnaby's flank.",
+   "annotation": {
+    "title_en": "Clara works thick soapy lather across Barnaby's muddy flank ",
+    "scene": "elephant_paddock",
+    "camera": "Over-the-shoulder medium close-up following Clara's rhythmic scrubbing motion",
+    "beat": "Clara works thick soapy lather across Barnaby's muddy flank using the stiff-bristled brush.",
+    "present": [
+     "clara",
+     "barnaby",
+     "scrub_brush"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "barnaby",
+      "attr": "stains",
+      "value": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara leans into the stroke while yellow bristles dig into elephant skin folds",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "caked in dry reddish mud and dust"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine",
+     "scrub_brush.state": "clean dry yellow bristles with bare wooden handle",
+     "scrub_brush.placement": "leaning against enclosure wall"
+    }
+   }
+  },
+  {
+   "prompt": "The Elephant Wash Paddock's concrete slab slopes gently toward the perimeter drainage grate under the open sky.\n\nClara, wearing her khaki sun hat, waterproof boots, and black rubber apron over her polo and shorts, grips the heavy brass Hose Nozzle firmly. Barnaby stands partially washed with dark wet skin on his head and flank and foamy white suds clinging along his spine. Clara depresses the nozzle lever, using the high-pressure water stream to blast loosened reddish clay from Barnaby's massive legs, sending muddy brown runoff streaming rapidly toward the paddock drain.\n\nA low-angle shot tracks the surging water jet hitting Barnaby's forelegs.",
+   "annotation": {
+    "title_en": "Clara uses the high-pressure brass nozzle to blast loosened ",
+    "scene": "elephant_paddock",
+    "camera": "Low-angle shot tracking the surging water jet hitting Barnaby's forelegs",
+    "beat": "Clara uses the high-pressure brass nozzle to blast loosened reddish clay from Barnaby's massive legs.",
+    "present": [
+     "clara",
+     "barnaby",
+     "hose_nozzle"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Muddy brown runoff streams rapidly toward the paddock drain",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine",
+     "hose_nozzle.state": "shiny dry brass nozzle connected to black hose",
+     "hose_nozzle.placement": "coiled beside the concrete spigot"
+    }
+   }
+  },
+  {
+   "prompt": "The Elephant Wash Paddock stretches out under open sky with red sand earth, a reinforced wash slab, and massive perimeter boulders.\n\nClara, a late 20s female zookeeper with tan skin, dark curly hair in a low bun, wears an olive green polo, cargo shorts, a waterproof black rubber apron, work boots, and a khaki sun hat. She directs the brass hose nozzle, arching a glistening spray over Barnaby, an adult male Asian elephant with a notched right ear, whose dark hide is lathered in white foam along his spine. Barnaby shuts his eyes tightly and lifts his head, raising his trunk in pure delight as water cascades down.\n\nA medium wide shot captures the sunlit enclosure, the backlit water droplets forming faint prismatic rainbows in the air.",
+   "annotation": {
+    "title_en": "Clara arches the high spray over Barnaby's broad back, who r",
+    "scene": "elephant_paddock",
+    "camera": "Medium wide shot with water backlight creating small rainbows in the air",
+    "beat": "Clara arches the high spray over Barnaby's broad back, who raises his trunk in delight.",
+    "present": [
+     "clara",
+     "barnaby",
+     "hose_nozzle"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Barnaby shuts his eyes tightly and lifts his head toward the arc of water",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine",
+     "hose_nozzle.state": "shiny dry brass nozzle connected to black hose",
+     "hose_nozzle.placement": "coiled beside the concrete spigot"
+    }
+   }
+  },
+  {
+   "prompt": "The Elephant Wash Paddock surrounds the concrete wash slab with stone boulders under bright daylight.\n\nClara, dressed in her olive green polo, cargo shorts, waterproof rubber apron, work boots, and khaki sun hat, grasps the scrub brush—with its stiff yellow bristles and ash wood handle—resting near the wet elephant. Barnaby stands quietly, his flank dark and wet with suds bubbling along his back. Clara scrubs behind Barnaby's notched ear with both hands, coaxing away stubborn crusts of dried soil while softly murmuring praises.\n\nA close-up frames Barnaby's thick ear fold and Clara's steady, rhythmic brushwork lifting the grime.",
+   "annotation": {
+    "title_en": "Clara scrubs behind Barnaby's notched ear, coaxing away the ",
+    "scene": "elephant_paddock",
+    "camera": "Close-up on the large ear fold and Clara's brush working gently",
+    "beat": "Clara scrubs behind Barnaby's notched ear, coaxing away the last stubborn crust of dried soil.",
+    "present": [
+     "clara",
+     "barnaby",
+     "scrub_brush"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara murmurs soothing praises while brushing with two hands",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine",
+     "scrub_brush.state": "clean dry yellow bristles with bare wooden handle",
+     "scrub_brush.placement": "leaning against enclosure wall"
+    }
+   }
+  },
+  {
+   "prompt": "The Elephant Wash Paddock gleams under midday sun, water coursing over the concrete wash slab toward perimeter drains.\n\nClara stands in her clean olive green polo, cargo shorts, black rubber apron, work boots, and khaki sun hat, wielding the heavy brass hose nozzle. She delivers a continuous stream across Barnaby, washing away every trace of white lather until his slate-grey hide glistens fully clean and dark in the bright sunlight. Barnaby trumpets gently in satisfaction, flapping both expansive ears.\n\nA wide shot captures Barnaby's glistening dark silhouette against the open backdrop of the paddock.",
+   "annotation": {
+    "title_en": "Clara delivers the final rinse, leaving Barnaby's wet slate-",
+    "scene": "elephant_paddock",
+    "camera": "Wide shot showing Barnaby's glistening dark silhouette against the paddock backdrop",
+    "beat": "Clara delivers the final rinse, leaving Barnaby's wet slate-grey skin gleaming clean in the sun.",
+    "present": [
+     "clara",
+     "barnaby",
+     "hose_nozzle"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "barnaby",
+      "attr": "stains",
+      "value": "fully rinsed clean glistening slate-grey wet hide"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Barnaby trumpets gently and flaps both ears happily",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "partially washed with dark wet skin on flank and head, soapy white suds foaming along spine"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "barnaby.stains": "fully rinsed clean glistening slate-grey wet hide",
+     "hose_nozzle.state": "shiny dry brass nozzle connected to black hose",
+     "hose_nozzle.placement": "coiled beside the concrete spigot"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Maintenance Tool Shed, cedar-paneled walls feature organized pegboards, hanging implements, stacked paint cans, and a smooth concrete floor.\n\nClara, wearing her clean olive green polo, cargo shorts, black waterproof apron, sturdy boots, and khaki sun hat, carries the yellow-bristled scrub brush. Parked by the open double doors sits the Wheelbarrow, a heavy-duty green poly dual-wheel contractor wheelbarrow with an empty clean tub and steel handles. Clara slots the brush's wooden handle into wall brackets, then takes the wheelbarrow handles to roll it out into the sun.\n\nAn interior medium shot tracks Clara moving alongside the cedar tool racks.",
+   "annotation": {
+    "title_en": "Clara hangs the wet scrub brush on the shed pegboard and rol",
+    "scene": "tool_shed",
+    "camera": "Interior medium shot tracking Clara moving past wooden tool racks",
+    "beat": "Clara hangs the wet scrub brush on the shed pegboard and rolls out the utility wheelbarrow.",
+    "present": [
+     "clara",
+     "scrub_brush",
+     "wheelbarrow"
+    ],
+    "first_appearance": [
+     "wheelbarrow"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Clara slots the brush handle into metal brackets on the shed wall",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     }
+    },
+    "state": {
+     "clara.outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "scrub_brush.state": "clean dry yellow bristles with bare wooden handle",
+     "scrub_brush.placement": "leaning against enclosure wall",
+     "wheelbarrow.state": "empty clean green tub",
+     "wheelbarrow.placement": "parked beside tool shed doors"
+    }
+   }
+  },
+  {
+   "prompt": "The Giraffe Shelter Paddock features a high-roofed wooden pavilion with sandy footing, tall feeding racks, and open paddocks. Facing the yard is the Giraffe Shelter Wall, showing weathered vertical timber slats with faded, peeling greyish-tan paint.\n\nClara sets down the empty green wheelbarrow. Over fence rails towers Twiga, an adult female reticulated giraffe with jagged chestnut patches, long dark eyelashes, tufted ossicones, and a plain brown leather halter collar. Twiga tilts her head down inquisitively as Clara strips off her apron and zips into heavy white canvas painter coveralls over her clothes.\n\nA low-angle wide shot emphasizes the vertical scale of the shelter and Twiga's soaring neck.",
+   "annotation": {
+    "title_en": "Clara arrives at the weathered shelter and zips into heavy w",
+    "scene": "giraffe_shelter",
+    "camera": "Low-angle wide shot emphasizing the height of the shelter and Twiga's towering neck",
+    "beat": "Clara arrives at the weathered shelter and zips into heavy white painter coveralls while Twiga watches.",
+    "present": [
+     "clara",
+     "twiga",
+     "wheelbarrow",
+     "shelter_wall"
+    ],
+    "first_appearance": [
+     "twiga",
+     "shelter_wall"
+    ],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "white zip-up canvas painter coveralls over work clothes"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Twiga tilts her head down over the corral fence as Clara pulls up the zipper",
+    "start_state": {
+     "clara": {
+      "outfit": "olive green zookeeper polo and cargo shorts under heavy waterproof black rubber apron",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "shelter_wall": {
+      "state": "faded peeling greyish-tan paint with scuffs",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "faded peeling greyish-tan paint with scuffs",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "twiga.accessory": "plain brown leather halter collar",
+     "wheelbarrow.state": "empty clean green tub",
+     "wheelbarrow.placement": "parked beside tool shed doors",
+     "shelter_wall.state": "faded peeling greyish-tan paint with scuffs",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "At the Giraffe Shelter Paddock, sandy ground abuts the faded, peeling greyish-tan timber slats of the Giraffe Shelter Wall.\n\nClara wears her white zip-up canvas coveralls, sturdy work boots, and khaki sun hat. On the shelter threshold rests the Paint Bucket, a five-gallon cylindrical steel bucket with a wire bail handle and a sealed factory lid labeled terracotta paint. Kneeling beside it, Clara inserts a steel pry bar under the rim and pops the lid off with a sharp metallic snap, exposing thick wet terracotta paint that she stirs with a timber stick.\n\nA close-up focuses on the paint bucket lid prying loose and releasing the fresh pigment.",
+   "annotation": {
+    "title_en": "Clara pops the lid off the five-gallon paint bucket with a p",
+    "scene": "giraffe_shelter",
+    "camera": "Close-up on the bucket lid prying loose with a sharp metallic snap",
+    "beat": "Clara pops the lid off the five-gallon paint bucket with a pry bar, exposing fresh terracotta paint.",
+    "present": [
+     "clara",
+     "paint_bucket",
+     "shelter_wall"
+    ],
+    "first_appearance": [
+     "paint_bucket"
+    ],
+    "changes": [
+     {
+      "entity": "paint_bucket",
+      "attr": "state",
+      "value": "unsealed open metal bucket brimful of wet terracotta paint"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara inspects the thick terracotta paint and stirs it with a timber stick",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "paint_bucket": {
+      "state": "sealed factory can with terracotta paint label",
+      "placement": "on the shelter threshold"
+     },
+     "shelter_wall": {
+      "state": "faded peeling greyish-tan paint with scuffs",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "faded peeling greyish-tan paint with scuffs",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "paint_bucket.state": "unsealed open metal bucket brimful of wet terracotta paint",
+     "paint_bucket.placement": "on the shelter threshold",
+     "shelter_wall.state": "faded peeling greyish-tan paint with scuffs",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Giraffe Shelter Paddock, sunlight streams across the sandy ground and timber poles of the high-roofed wooden pavilion.\n\nClara, an athletic female zookeeper in her late twenties with tan skin, brown eyes, and dark curly hair tied in a low bun, wears white zip-up canvas painter coveralls, sturdy waterproof work boots, and a wide-brim khaki sun hat. Beside an unsealed five-gallon steel paint bucket brimful of wet terracotta paint on the threshold rests the Roller Tray, a pressed galvanized steel paint roller tray with a deep reservoir holding a clean, dry white roller sleeve. Clara carefully tilts the heavy bucket, pouring thick paint into the tray reservoir as viscous reddish paint cascades down, before priming the roller along the corrugated ramp until the sleeve is thoroughly saturated.\n\nA downward medium shot captures Clara tilting the heavy bucket steadily.",
+   "annotation": {
+    "title_en": "Clara pours thick paint into the tray and primes the plush r",
+    "scene": "giraffe_shelter",
+    "camera": "Downward medium shot of Clara carefully tilting the heavy bucket",
+    "beat": "Clara pours thick paint into the tray and primes the plush roller sleeve along the corrugated ramp.",
+    "present": [
+     "clara",
+     "paint_bucket",
+     "roller_tray"
+    ],
+    "first_appearance": [
+     "roller_tray"
+    ],
+    "changes": [
+     {
+      "entity": "roller_tray",
+      "attr": "state",
+      "value": "tray well filled with wet terracotta paint and saturated roller sleeve"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Viscous reddish paint cascades into the metal tray reservoir",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "clean unpainted metal tray with dry white roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "faded peeling greyish-tan paint with scuffs",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "paint_bucket.state": "unsealed open metal bucket brimful of wet terracotta paint",
+     "paint_bucket.placement": "on the shelter threshold",
+     "roller_tray.state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+     "roller_tray.placement": "beside paint bucket"
+    }
+   }
+  },
+  {
+   "prompt": "In the Giraffe Shelter Paddock, open-air green paddocks stretch beyond the high timber pavilion posts.\n\nClara, wearing clean white canvas coveralls, waterproof boots, and a wide-brim khaki sun hat, works beside the saturated Roller Tray on the threshold. Facing the Giraffe Shelter Wall—the night barn's exterior vertical timber slat facade currently clad in faded, scuffed, peeling greyish-tan paint—she presses the roller firmly into the rough wood grain. She rolls broad vertical strokes of terracotta paint, transforming the faded lower boards with fresh, rich reddish coverage.\n\nA medium tracking shot moves sideways alongside Clara's steady roller movements as she coats the lower wall.",
+   "annotation": {
+    "title_en": "Clara applies bold vertical strokes of terracotta paint, tra",
+    "scene": "giraffe_shelter",
+    "camera": "Medium tracking shot moving sideways alongside Clara's roller movements",
+    "beat": "Clara applies bold vertical strokes of terracotta paint, transforming the faded lower timbers.",
+    "present": [
+     "clara",
+     "roller_tray",
+     "shelter_wall"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "shelter_wall",
+      "attr": "state",
+      "value": "half-painted with fresh damp terracotta paint over scraped grey wood"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara presses the roller firmly into the rough grain of the wooden wall",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     },
+     "shelter_wall": {
+      "state": "faded peeling greyish-tan paint with scuffs",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "roller_tray.state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+     "roller_tray.placement": "beside paint bucket",
+     "shelter_wall.state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "Under the tall timber rafters of the Giraffe Shelter Paddock, midday light warms the sandy floor.\n\nClara stands in her clean white painter coveralls and khaki sun hat before the Giraffe Shelter Wall, which is half-painted in fresh damp terracotta paint over weathered grey wood. Twiga, an adult reticulated giraffe with jagged chestnut patches, long dark eyelashes, and a brown leather halter, lowers her tall head curiously toward the wet timber. Clara laughs gently, holding up an open flat palm beside her shoulder to safely block the giraffe's soft muzzle from licking the fresh paint.\n\nA two-shot captures Twiga's towering neck descending down beside Clara's shoulder.",
+   "annotation": {
+    "title_en": "Twiga stretches her neck down toward the wet wall, and Clara",
+    "scene": "giraffe_shelter",
+    "camera": "Two-shot capturing Twiga's muzzle descending near Clara's shoulder",
+    "beat": "Twiga stretches her neck down toward the wet wall, and Clara gently shooes her back with an open palm.",
+    "present": [
+     "clara",
+     "twiga",
+     "shelter_wall"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara laughs gently and extends a flat hand to block Twiga from licking paint",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "twiga.accessory": "plain brown leather halter collar",
+     "shelter_wall.state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "Beneath the high wooden eaves of the Giraffe Shelter Paddock, dust motes drift through the bright savanna sunlight.\n\nClara pauses in front of the half-painted Giraffe Shelter Wall, wearing her white canvas painter coveralls, boots, and khaki hat. As she lifts a careless forearm to wipe sweat from her brow, she smears wet terracotta paint across her chest and left cheek. She pauses under the midday glare, swiftly catching an errant paint droplet dripping from the metal roller frame before it hits the ground.\n\nA close-up frames Clara pausing in the bright glare as she wipes her brow and catches the drip.",
+   "annotation": {
+    "title_en": "Wiping sweat from her forehead with a careless forearm, Clar",
+    "scene": "giraffe_shelter",
+    "camera": "Close-up of Clara pausing in the midday glare and wiping her brow",
+    "beat": "Wiping sweat from her forehead with a careless forearm, Clara smears terracotta paint across her face.",
+    "present": [
+     "clara",
+     "shelter_wall"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "stains",
+      "value": "terracotta paint smeared across chest and left cheek"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara catches a droplet dripping off the roller frame",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "terracotta paint smeared across chest and left cheek",
+     "shelter_wall.state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "The towering timber posts of the Giraffe Shelter Paddock frame the open sand floor and high roof beams.\n\nClara, wearing her hat and coveralls stained with terracotta paint across her chest and cheek, stands before the half-painted Giraffe Shelter Wall. She twists a sturdy extension pole onto the roller handle. Bracing her waterproof boots into the paddock sand, she pushes the roller high overhead, smoothly cutting along the upper eaves of the vertical timber facade.\n\nAn upward angled shot follows the long extension pole and roller reaching high above Clara's head.",
+   "annotation": {
+    "title_en": "Clara attaches an extension pole to cut along the high eaves",
+    "scene": "giraffe_shelter",
+    "camera": "Upward angled shot following the roller extending high above head height",
+    "beat": "Clara attaches an extension pole to cut along the high eaves of the timber shelter wall.",
+    "present": [
+     "clara",
+     "shelter_wall"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara braces her feet in the paddock sand and pushes upward",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "terracotta paint smeared across chest and left cheek",
+     "shelter_wall.state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Giraffe Shelter Paddock, high wire browse baskets hang suspended from the pavilion's lofty wooden rafters.\n\nOn the left, Clara, marked with terracotta paint across her coveralls and cheek, rolls paint across the upper middle boards of the Giraffe Shelter Wall. On the right, Twiga stands placidly in her brown leather halter collar, extending her long, prehensile black tongue to strip green acacia leaves from a thorny hanging branch.\n\nA wide balanced shot frames Clara methodically painting on the left while Twiga feeds serenely on the right.",
+   "annotation": {
+    "title_en": "Twiga munches acacia browse from her high basket while Clara",
+    "scene": "giraffe_shelter",
+    "camera": "Wide balanced shot framing Clara working on the left and Twiga eating on the right",
+    "beat": "Twiga munches acacia browse from her high basket while Clara paints the upper middle boards.",
+    "present": [
+     "clara",
+     "twiga",
+     "shelter_wall"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Twiga's prehensile black tongue strips leaves from a thorny branch",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "terracotta paint smeared across chest and left cheek",
+     "twiga.accessory": "plain brown leather halter collar",
+     "shelter_wall.state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "Giraffe Shelter Paddock: High-roofed wooden pavilion with sandy footing, tall feeding racks, timber support poles, and green paddocks beyond under open sunlight.\n\nClara, an athletic zookeeper in her late 20s with tan skin and dark curly hair tied in a low bun, wears white zip-up canvas painter coveralls spattered with terracotta paint across her chest and left cheek, sturdy waterproof work boots, and a wide-brim khaki sun hat. Before her, the Giraffe Shelter Wall stands half-painted with damp terracotta paint over scraped grey wood. Clara carefully feathers out the final roller marks, transforming the facade so it is smoothly coated in vibrant fresh terracotta paint, drying evenly, before stepping back three paces to appraise the finish.\n\nA medium wide shot slowly tracks backwards from the finished timber facade under the steady natural daylight.",
+   "annotation": {
+    "title_en": "Clara feathers out the final roller marks, completing the un",
+    "scene": "giraffe_shelter",
+    "camera": "Medium wide shot slowly tracking backwards from the finished facade",
+    "beat": "Clara feathers out the final roller marks, completing the uniform coat across the entire timber wall.",
+    "present": [
+     "clara",
+     "shelter_wall"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "shelter_wall",
+      "attr": "state",
+      "value": "smoothly coated in vibrant fresh terracotta paint, drying evenly"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara steps back three paces and appraises the vibrant finish",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "shelter_wall": {
+      "state": "half-painted with fresh damp terracotta paint over scraped grey wood",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "terracotta paint smeared across chest and left cheek",
+     "shelter_wall.state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "Giraffe Shelter Paddock: High-roofed wooden pavilion with sandy footing, tall feeding racks, and heavy timber support poles illuminated by afternoon sun.\n\nClara stands in her white zip-up canvas painter coveralls smeared with terracotta paint, waterproof work boots, and wide-brim khaki sun hat. Beside her at the wooden partition stands Twiga, an adult female reticulated giraffe with jagged chestnut patches, long dark eyelashes, tufted ossicones, and a plain brown leather halter collar, set against the Giraffe Shelter Wall smoothly coated in fresh terracotta paint. Clara gently pats Twiga's velvety shoulder over the barrier, and Twiga responds by affectionately nudging Clara's sun hat with her chin.\n\nA medium close two-shot frames Clara and Twiga side-by-side against the warm terracotta wall in quiet observational focus.",
+   "annotation": {
+    "title_en": "Clara pats Twiga's velvety shoulder over the barrier before ",
+    "scene": "giraffe_shelter",
+    "camera": "Medium close two-shot of Clara and Twiga side-by-side against the terracotta wall",
+    "beat": "Clara pats Twiga's velvety shoulder over the barrier before beginning cleanup.",
+    "present": [
+     "clara",
+     "twiga",
+     "shelter_wall"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Twiga nudges Clara's sun hat affectionately with her chin",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "terracotta paint smeared across chest and left cheek",
+     "twiga.accessory": "plain brown leather halter collar",
+     "shelter_wall.state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+     "shelter_wall.placement": "front wall of the giraffe barn"
+    }
+   }
+  },
+  {
+   "prompt": "Giraffe Shelter Paddock: High-roofed wooden pavilion with sandy footing, timber support posts, and sunlit ground near the shelter threshold.\n\nClara is dressed in her terracotta-stained white canvas coveralls, sturdy waterproof boots, and khaki sun hat. Nearby sits the Wheelbarrow as an empty clean green poly tub, the Paint Bucket open and brimful of wet terracotta paint, and the Roller Tray loaded with wet paint and a saturated roller. Clara taps the paint can's lid tightly closed with a mallet tap, empties the Roller Tray until it is crusted with drying terracotta residue, and loads both containers into the wheelbarrow tub.\n\nA medium shot frames Clara loading the painting gear into the poly tub under natural daylight.",
+   "annotation": {
+    "title_en": "Clara packs the empty tray and sealed can into the wheelbarr",
+    "scene": "giraffe_shelter",
+    "camera": "Medium shot framing Clara loading the painting gear into the poly tub",
+    "beat": "Clara packs the empty tray and sealed can into the wheelbarrow bed.",
+    "present": [
+     "clara",
+     "wheelbarrow",
+     "paint_bucket",
+     "roller_tray"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "roller_tray",
+      "attr": "state",
+      "value": "crusted with drying terracotta residue, empty reservoir"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara snaps the plastic lid tight on the paint can with a rubber mallet tap",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "tray well filled with wet terracotta paint and saturated roller sleeve",
+      "placement": "beside paint bucket"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "terracotta paint smeared across chest and left cheek",
+     "wheelbarrow.state": "empty clean green tub",
+     "wheelbarrow.placement": "parked beside tool shed doors",
+     "paint_bucket.state": "unsealed open metal bucket brimful of wet terracotta paint",
+     "paint_bucket.placement": "on the shelter threshold",
+     "roller_tray.state": "crusted with drying terracotta residue, empty reservoir",
+     "roller_tray.placement": "beside paint bucket"
+    }
+   }
+  },
+  {
+   "prompt": "Maintenance Tool Shed: Cedar-paneled utility room with pegboards, hanging garden implements, stacked paint cans, and a smooth concrete floor.\n\nClara, wearing her terracotta-smeared white canvas painter coveralls, sturdy waterproof work boots, and wide-brim khaki sun hat, pushes the clean green Wheelbarrow through the double doors. She parks the wheelbarrow beside the entrance, unzips her spattered coveralls, peels off the heavy canvas suit, and hangs it neatly onto a wall locker hook.\n\nAn interior view from within the shed watches Clara enter through the open double doors with steady documentary framing.",
+   "annotation": {
+    "title_en": "Clara returns the wheelbarrow to the tool shed and unzips he",
+    "scene": "tool_shed",
+    "camera": "Interior view from within the shed as Clara enters through the double doors",
+    "beat": "Clara returns the wheelbarrow to the tool shed and unzips her paint-spattered coveralls.",
+    "present": [
+     "clara",
+     "wheelbarrow"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Clara peels off the white canvas suit and hangs it on a locker hook",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     }
+    },
+    "state": {
+     "clara.outfit": "white zip-up canvas painter coveralls over work clothes",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "terracotta paint smeared across chest and left cheek",
+     "wheelbarrow.state": "empty clean green tub",
+     "wheelbarrow.placement": "parked beside tool shed doors"
+    }
+   }
+  },
+  {
+   "prompt": "Penguin Rehabilitation Nursery: Sanitary tiled clinic room with blue rubber floor mats, recovery pens, drain troughs, and bright overhead daylight panels.\n\nFreshly washed and clean of paint, Clara enters wearing a light blue clinical scrub top, olive cargo shorts, waterproof boots, and her khaki sun hat. In a low recovery pen rests Pippa, a juvenile gentoo penguin with a bright orange-red bill, white bonnet feather band, pink webbed feet, dull ruffled plumage, and a drooping, swollen left flipper. Pippa emits a weak, raspy peep and flumps her chest forward onto the fleece mat as Clara approaches.\n\nA low tracking shot glides across the clinic floor toward Pippa's low recovery pen.",
+   "annotation": {
+    "title_en": "Freshly washed and in clean medical scrubs, Clara enters the",
+    "scene": "penguin_nursery",
+    "camera": "Low tracking shot across the clinic floor toward Pippa's low recovery pen",
+    "beat": "Freshly washed and in clean medical scrubs, Clara enters the quiet nursery where Pippa sits huddled.",
+    "present": [
+     "clara",
+     "pippa"
+    ],
+    "first_appearance": [
+     "pippa"
+    ],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "light blue clinical scrub top and olive cargo shorts"
+     },
+     {
+      "entity": "clara",
+      "attr": "stains",
+      "value": "clean"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Pippa lets out a weak, raspy peep and flumps her chest into the fleece mat",
+    "start_state": {
+     "clara": {
+      "outfit": "white zip-up canvas painter coveralls over work clothes",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "terracotta paint smeared across chest and left cheek"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "drooping left flipper with mild swelling"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "drooping left flipper with mild swelling"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "drooping left flipper with mild swelling"
+    }
+   }
+  },
+  {
+   "prompt": "Penguin Rehabilitation Nursery: Sanitary tiled clinic room with blue rubber floor mats, low pens, and bright overhead illumination panels.\n\nClara stands beside the pen in her light blue clinical scrubs, olive cargo shorts, waterproof boots, and sun hat, looking down at Pippa who rests quietly with dull feathers and an injured flipper. Clamped above the brooder pen is the Heat Lamp, initially an inactive dark ceramic fixture. Clara clicks the toggle switch, turning the Heat Lamp into an active glowing ruby-red infrared lamp that casts warm radiant heat over Pippa, before placing her hand below the bulb to verify safe thermal clearance.\n\nA close-up captures the ceramic lamp clicking on with warm red illumination washing across the brooder pen.",
+   "annotation": {
+    "title_en": "Clara clicks the switch on the heat lamp, bathing Pippa in g",
+    "scene": "penguin_nursery",
+    "camera": "Close-up of the ceramic lamp clicking on with a warm red illumination washing the pen",
+    "beat": "Clara clicks the switch on the heat lamp, bathing Pippa in gentle ruby warmth.",
+    "present": [
+     "clara",
+     "pippa",
+     "heat_lamp"
+    ],
+    "first_appearance": [
+     "heat_lamp"
+    ],
+    "changes": [
+     {
+      "entity": "heat_lamp",
+      "attr": "state",
+      "value": "active glowing ruby-red infrared lamp emitting warm radiant heat"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara checks the clearance distance above Pippa with her hand to ensure safe warmth",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "drooping left flipper with mild swelling"
+     },
+     "heat_lamp": {
+      "state": "switched off dark ceramic bulb on black clamp",
+      "placement": "clamped above nursery brooder pen"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "drooping left flipper with mild swelling"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "drooping left flipper with mild swelling",
+     "heat_lamp.state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+     "heat_lamp.placement": "clamped above nursery brooder pen"
+    }
+   }
+  },
+  {
+   "prompt": "The Penguin Rehabilitation Nursery features sanitary tiled walls, textured blue rubber floor mats, and bright overhead daylight panels illuminating stainless steel counters. On the counter rests a veterinary thermometer, a digital veterinary rectal thermometer with a flexible probe encased in a clear plastic sleeve. Nearby stands Clara, a late 20s female zookeeper with tan skin, athletic build, brown eyes, and dark curly hair in a low bun, wearing a clean light blue clinical scrub top, olive cargo shorts, sturdy waterproof work boots, and a wide-brim khaki sun hat. Beside her rests Pippa, a juvenile gentoo penguin with ruffled, dull plumage, an orange-red bill, and a mildly swollen, drooping left flipper.\n\nClara stretches a pair of powder-free purple nitrile gloves over her fingers, snapping the snug cuffs securely at her wrists. She picks up the digital thermometer and slides off the clear plastic protective sleeve with an audible, light pop to ready the instrument.\n\nMedium shot framing Clara at the stainless counter as she crisply snaps the glove cuff at her wrist.",
+   "annotation": {
+    "title_en": "Clara snaps on purple nitrile gloves and picks up the digita",
+    "scene": "penguin_nursery",
+    "camera": "Medium shot of Clara snapping the rubber cuff at her wrist",
+    "beat": "Clara snaps on purple nitrile gloves and picks up the digital thermometer.",
+    "present": [
+     "clara",
+     "pippa",
+     "vet_thermometer"
+    ],
+    "first_appearance": [
+     "vet_thermometer"
+    ],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "accessory",
+      "value": "powder-free purple nitrile gloves"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara removes the plastic probe cover with a light pop",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "drooping left flipper with mild swelling"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "drooping left flipper with mild swelling"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "drooping left flipper with mild swelling",
+     "vet_thermometer.state": "sanitized white plastic probe in clear plastic sleeve",
+     "vet_thermometer.placement": "on stainless medical counter"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Penguin Rehabilitation Nursery, blue rubber mats cover the sanitary floor beneath clean tiled walls and overhead daylight illumination. Clamped above the nursery brooder pen, a heat lamp glows deep ruby-red, casting a warm infrared circle of radiant heat across the matting.\n\nClara wears her light blue scrub top, olive cargo shorts, waterproof boots, wide-brim khaki sun hat, and purple nitrile gloves. She leans over Pippa, the juvenile gentoo penguin with ruffled dull feathers and a drooping, swollen left wing. Working with steady care, Clara unspools vibrant lime-green cohesive bandage and neatly wraps the injured flipper to stabilize the joint against strain. Pippa settles quietly, relaxing under the soothing infrared warmth.\n\nClose-up on Clara's gloved hands meticulously overlapping the flexible lime-green wrap around the gentle penguin's wing.",
+   "annotation": {
+    "title_en": "Clara carefully wraps Pippa's swollen left flipper with lime",
+    "scene": "penguin_nursery",
+    "camera": "Close-up on Clara's gloved hands neatly overlapping the flexible green bandage",
+    "beat": "Clara carefully wraps Pippa's swollen left flipper with lime-green cohesive bandage to reduce strain.",
+    "present": [
+     "clara",
+     "pippa",
+     "heat_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "pippa",
+      "attr": "injury",
+      "value": "left flipper neatly stabilized in lime-green cohesive wrap"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Pippa holds still, relaxing under the radiant red glow",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "drooping left flipper with mild swelling"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "heat_lamp.state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+     "heat_lamp.placement": "clamped above nursery brooder pen"
+    }
+   }
+  },
+  {
+   "prompt": "In the Penguin Rehabilitation Nursery, bright daylight panels reflect off clean tiled walls, stainless preparation counters, and non-slip blue floor mats. On the stainless medical counter sits the digital veterinary thermometer with its bare flexible probe exposed.\n\nClara, dressed in her light blue scrub top, olive shorts, waterproof work boots, khaki sun hat, and purple nitrile gloves, attends to Pippa. Pippa, the juvenile gentoo penguin, rests placidly with her dull feathers smoothed and her left flipper now neatly bound in a vibrant lime-green cohesive wrap. Clara gently slips the flexible probe into the warm fold beneath Pippa's wing to record her internal temperature, checking the readout. She gives an approving nod as the stabilized reading appears.\n\nClose-up on the digital thermometer's LCD screen as it emits a gentle beep upon stabilizing.",
+   "annotation": {
+    "title_en": "Clara checks Pippa's temperature under the wing fold, readin",
+    "scene": "penguin_nursery",
+    "camera": "Close-up on the digital thermometer screen beeping softly as the number stabilizes",
+    "beat": "Clara checks Pippa's temperature under the wing fold, reading the LCD display.",
+    "present": [
+     "clara",
+     "pippa",
+     "vet_thermometer"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara nods in approval at the normal thermal reading",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "vet_thermometer.state": "sanitized white plastic probe in clear plastic sleeve",
+     "vet_thermometer.placement": "on stainless medical counter"
+    }
+   }
+  },
+  {
+   "prompt": "The Penguin Rehabilitation Nursery remains clinical and calm, its white tiled walls and blue rubber mats brightly lit by overhead daylight panels. Inside a stainless clinic preparation tray sits the feeding syringe, a clean and empty fifty-milliliter graduated clear plastic syringe fitted with a soft silicone nozzle.\n\nClara wears her light blue scrubs, olive cargo shorts, waterproof boots, wide-brim sun hat, and purple nitrile gloves. She stands beside Pippa, the quiet juvenile gentoo penguin whose injured wing is bound in lime-green cohesive wrap. Clara lifts the feeding syringe and slowly draws the plunger backward, filling the graduated barrel with forty milliliters of warm, creamy yellow nutrient fish-slurry. She taps the plastic barrel firmly with a gloved nail to release trapped air bubbles.\n\nEye-level medium shot tracking Clara's steady hands as the syringe barrel fills with thick slurry.",
+   "annotation": {
+    "title_en": "Clara draws forty milliliters of warm nutrient fish slurry i",
+    "scene": "penguin_nursery",
+    "camera": "Eye-level medium shot of Clara drawing the plunger back steadily",
+    "beat": "Clara draws forty milliliters of warm nutrient fish slurry into the feeding syringe.",
+    "present": [
+     "clara",
+     "pippa",
+     "feeding_syringe"
+    ],
+    "first_appearance": [
+     "feeding_syringe"
+    ],
+    "changes": [
+     {
+      "entity": "feeding_syringe",
+      "attr": "state",
+      "value": "filled with 40ml creamy yellow nutrient fish-slurry"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara taps the barrel with a gloved fingernail to dislodge small air bubbles",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "feeding_syringe": {
+      "state": "clean empty clear plastic barrel with silicone tip",
+      "placement": "inside clinic preparation tray"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "filled with 40ml creamy yellow nutrient fish-slurry",
+      "placement": "inside clinic preparation tray"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "feeding_syringe.state": "filled with 40ml creamy yellow nutrient fish-slurry",
+     "feeding_syringe.placement": "inside clinic preparation tray"
+    }
+   }
+  },
+  {
+   "prompt": "Within the Penguin Rehabilitation Nursery, diffuse daylight illuminates the hygienic tiled room, blue floor mats, and stainless clinic stations. The feeding syringe rests primed in Clara's gloved grip, loaded with forty milliliters of creamy yellow fish-slurry.\n\nClara wears her light blue clinical scrub top, olive cargo shorts, waterproof boots, wide-brim sun hat, and purple nitrile gloves. She sits on a low stool with Pippa, the juvenile gentoo penguin with ruffled feathers and a lime-green wrapped left flipper, held gently in her lap. Clara cushions Pippa's head with one hand and carefully introduces the soft silicone syringe tip into the edge of the penguin's bright orange-red bill. Pippa swallows in steady rhythm as Clara depresses the plunger smoothly.\n\nTight two-shot capturing Clara's calm, focused face and patient hands supporting Pippa during the feeding.",
+   "annotation": {
+    "title_en": "Clara cradles Pippa gently in her lap and guides the soft si",
+    "scene": "penguin_nursery",
+    "camera": "Tight two-shot showing Clara's patient, steady hands supporting Pippa's head",
+    "beat": "Clara cradles Pippa gently in her lap and guides the soft silicone syringe tip into her beak.",
+    "present": [
+     "clara",
+     "pippa",
+     "feeding_syringe"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Pippa swallows reflexively as Clara gently depresses the plunger",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "feeding_syringe": {
+      "state": "filled with 40ml creamy yellow nutrient fish-slurry",
+      "placement": "inside clinic preparation tray"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "filled with 40ml creamy yellow nutrient fish-slurry",
+      "placement": "inside clinic preparation tray"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "feeding_syringe.state": "filled with 40ml creamy yellow nutrient fish-slurry",
+     "feeding_syringe.placement": "inside clinic preparation tray"
+    }
+   }
+  },
+  {
+   "prompt": "The Penguin Rehabilitation Nursery is quiet under the wide overhead daylight fixtures, casting soft highlights across the tiled perimeter and rubber-matted floor. \n\nClara, wearing her light blue scrubs, olive shorts, waterproof boots, sun hat, and purple nitrile gloves, finishes depressing the plunger of the feeding syringe completely, leaving only an oily yellow film inside the empty transparent barrel. Pippa, the juvenile gentoo penguin with her lime-green wrapped flipper, sits calmly in Clara's lap. Clara sets the emptied syringe aside onto the tray, takes a sterile gauze pad, and gently wipes residual slurry from Pippa's orange beak. She strokes Pippa's crown feathers tenderly with her gloved thumb.\n\nClose-up on Pippa contentedly smacking her cleaned beak as the empty syringe is laid away.",
+   "annotation": {
+    "title_en": "Clara completes the feeding and wipes Pippa's orange beak cl",
+    "scene": "penguin_nursery",
+    "camera": "Close-up on Pippa smacking her beak contentedly as the empty syringe is set aside",
+    "beat": "Clara completes the feeding and wipes Pippa's orange beak clean with a sterile gauze pad.",
+    "present": [
+     "clara",
+     "pippa",
+     "feeding_syringe"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "feeding_syringe",
+      "attr": "state",
+      "value": "plunger fully depressed, empty clear barrel with oily fish residue"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara softly strokes Pippa's crown feathers with her gloved thumb",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "feeding_syringe": {
+      "state": "filled with 40ml creamy yellow nutrient fish-slurry",
+      "placement": "inside clinic preparation tray"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "feeding_syringe.state": "plunger fully depressed, empty clear barrel with oily fish residue",
+     "feeding_syringe.placement": "inside clinic preparation tray"
+    }
+   }
+  },
+  {
+   "prompt": "In the Penguin Rehabilitation Nursery, sanitary white wall tiles gleam under overhead daylight panels, beside blue rubber floor mats and neat stainless steel treatment counters.\n\nClara, a late 20s athletic zookeeper with tan skin, brown eyes, and dark curly hair tied in a low bun, wears a clean light blue clinical scrub top, olive cargo shorts, sturdy waterproof work boots, a wide-brim khaki sun hat, and powder-free purple nitrile gloves. She stands by the shelf holding the Electrolyte Bowl, a low-rimmed non-tip stainless steel animal feeding bowl that starts dry and empty. Measuring rehydration solution from a flask, Clara pours fluid into the dish until it is half-filled with clear pink electrolyte liquid, gently swirling the bowl to ensure the powder is fully dissolved.\n\nMedium close-up focusing on the stainless bowl filling with pink liquid as Clara swirls it gently.",
+   "annotation": {
+    "title_en": "Clara measures rehydration solution from a flask, pouring pi",
+    "scene": "penguin_nursery",
+    "camera": "Medium close-up focusing on the stainless bowl filling with pink liquid",
+    "beat": "Clara measures rehydration solution from a flask, pouring pink electrolyte fluid into the bowl.",
+    "present": [
+     "clara",
+     "electrolyte_bowl"
+    ],
+    "first_appearance": [
+     "electrolyte_bowl"
+    ],
+    "changes": [
+     {
+      "entity": "electrolyte_bowl",
+      "attr": "state",
+      "value": "half-filled with clear pink electrolyte liquid"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara swirls the bowl gently to ensure the powder is fully dissolved",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "electrolyte_bowl": {
+      "state": "dry clean empty steel bowl",
+      "placement": "on examination table shelf"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     },
+     "electrolyte_bowl": {
+      "state": "half-filled with clear pink electrolyte liquid",
+      "placement": "on examination table shelf"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "electrolyte_bowl.state": "half-filled with clear pink electrolyte liquid",
+     "electrolyte_bowl.placement": "on examination table shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Penguin Rehabilitation Nursery, blue rubber floor mats cushion the base of the partitioned recovery pens beneath bright overhead daylight panels.\n\nClara, wearing her clean light blue scrub top, olive cargo shorts, waterproof boots, khaki sun hat, and purple nitrile gloves, lowers the low-rimmed stainless steel Electrolyte Bowl, half-filled with clear pink liquid, into the recovery pen. Mounted above, the Heat Lamp glows ruby-red as an active infrared fixture emitting soothing radiant warmth. Pippa, a juvenile gentoo penguin with ruffled dull feathers, an orange-red bill, pink webbed feet, and a lime-green cohesive wrap stabilizing her left flipper, inspects the bowl with quick head tilts, wiggling her tail feathers.\n\nOverhead perspective looking down into the warm, red-lit nursery pen.",
+   "annotation": {
+    "title_en": "Clara places the electrolyte bowl inside the recovery pen di",
+    "scene": "penguin_nursery",
+    "camera": "Overhead perspective looking down into the warm, red-lit nursery pen",
+    "beat": "Clara places the electrolyte bowl inside the recovery pen directly beneath the heat lamp.",
+    "present": [
+     "clara",
+     "pippa",
+     "electrolyte_bowl",
+     "heat_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Pippa inspects the bowl with quick head tilts, wiggling her tail feathers",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "electrolyte_bowl": {
+      "state": "half-filled with clear pink electrolyte liquid",
+      "placement": "on examination table shelf"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     },
+     "electrolyte_bowl": {
+      "state": "half-filled with clear pink electrolyte liquid",
+      "placement": "on examination table shelf"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "electrolyte_bowl.state": "half-filled with clear pink electrolyte liquid",
+     "electrolyte_bowl.placement": "on examination table shelf",
+     "heat_lamp.state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+     "heat_lamp.placement": "clamped above nursery brooder pen"
+    }
+   }
+  },
+  {
+   "prompt": "In the Penguin Rehabilitation Nursery, the sanitary recovery pen is bathed in clean overhead light and the warm crimson glow of radiant infrared lamps.\n\nPippa, the juvenile gentoo penguin with ruffled feathers, pink feet, and a lime-green cohesive wrap on her left flipper, waddles forward toward the low-rimmed stainless steel Electrolyte Bowl containing pink liquid beneath the active Heat Lamp. She dips her orange-red bill into the solution and begins drinking eagerly. Kneeling beside the pen in her light blue scrub top, cargo shorts, waterproof boots, khaki sun hat, and purple nitrile gloves, Clara smiles with visible relief.\n\nLow-angle eye-level shot capturing Pippa drinking eagerly.",
+   "annotation": {
+    "title_en": "Pippa waddles forward on pink feet and begins dipping her bi",
+    "scene": "penguin_nursery",
+    "camera": "Low-angle eye-level shot capturing Pippa drinking eagerly",
+    "beat": "Pippa waddles forward on pink feet and begins dipping her bill into the pink electrolyte water.",
+    "present": [
+     "clara",
+     "pippa",
+     "electrolyte_bowl",
+     "heat_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara smiles with relief while kneeling beside the pen enclosure",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "electrolyte_bowl": {
+      "state": "half-filled with clear pink electrolyte liquid",
+      "placement": "on examination table shelf"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     },
+     "electrolyte_bowl": {
+      "state": "half-filled with clear pink electrolyte liquid",
+      "placement": "on examination table shelf"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "powder-free purple nitrile gloves",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "electrolyte_bowl.state": "half-filled with clear pink electrolyte liquid",
+     "electrolyte_bowl.placement": "on examination table shelf",
+     "heat_lamp.state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+     "heat_lamp.placement": "clamped above nursery brooder pen"
+    }
+   }
+  },
+  {
+   "prompt": "Within the Penguin Rehabilitation Nursery, tiled white walls and floor drain troughs frame the treatment area beside a clinical biohazard container.\n\nClara, dressed in her clean light blue scrub top, olive cargo shorts, waterproof work boots, and wide-brim khaki sun hat, peels off her powder-free purple nitrile gloves, rolling them off inside-out and dropping them into the receptacle, leaving her hands completely bare. She then dries her bare hands with a clean paper towel. Inside the adjacent pen, Pippa rests under the ruby-glowing Heat Lamp with her lime-green wrapped left flipper tucked close.\n\nMedium shot of Clara rolling the gloves off inside-out.",
+   "annotation": {
+    "title_en": "Clara peels off her purple gloves and drops them into the cl",
+    "scene": "penguin_nursery",
+    "camera": "Medium shot of Clara rolling the gloves off inside-out",
+    "beat": "Clara peels off her purple gloves and drops them into the clinic biohazard receptacle.",
+    "present": [
+     "clara",
+     "pippa",
+     "heat_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "accessory",
+      "value": "no accessory (removed)"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara dries her bare hands on a clean paper towel",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "powder-free purple nitrile gloves"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     },
+     "electrolyte_bowl": {
+      "state": "half-filled with clear pink electrolyte liquid",
+      "placement": "on examination table shelf"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "no accessory (removed)",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "heat_lamp.state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+     "heat_lamp.placement": "clamped above nursery brooder pen"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Penguin Rehabilitation Nursery, diffuse illumination from overhead daylight panels washes across sanitary tile walls and recovery pens.\n\nClara, wearing her clean light blue clinical scrub top, olive cargo shorts, waterproof boots, and khaki sun hat with bare hands, stands beside the pen holding a clipboard. She diligently writes down Pippa's temperature and feeding volume on the chart. Behind her, nestled comfortably under the ruby glow of the clamped Heat Lamp, Pippa rests peacefully with her ruffled feathers and lime-green wrapped flipper.\n\nMedium profile shot showing Clara writing notes with Pippa nestled behind her.",
+   "annotation": {
+    "title_en": "Clara updates Pippa's medical chart on a clipboard while the",
+    "scene": "penguin_nursery",
+    "camera": "Medium profile shot showing Clara writing notes with Pippa nestled behind her",
+    "beat": "Clara updates Pippa's medical chart on a clipboard while the young penguin rests peacefully.",
+    "present": [
+     "clara",
+     "pippa",
+     "heat_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara writes down the temperature and feeding volume on the chart",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     },
+     "electrolyte_bowl": {
+      "state": "half-filled with clear pink electrolyte liquid",
+      "placement": "on examination table shelf"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "no accessory (removed)",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "heat_lamp.state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+     "heat_lamp.placement": "clamped above nursery brooder pen"
+    }
+   }
+  },
+  {
+   "prompt": "In the Penguin Rehabilitation Nursery, clean blue rubber mats and drainage troughs line the floor under bright daylight ceiling fixtures.\n\nClara, dressed in her light blue scrub top, olive cargo shorts, waterproof boots, and khaki sun hat without gloves, reaches down to lift the stainless steel Electrolyte Bowl from the pen floor. The bowl is now completely empty, showing only a faint pink water ring at its base. Pippa, standing on her pink webbed feet with her ruffled feathers and stabilized lime-green wrapped flipper, lets out a vibrant, clear honk of renewed energy.\n\nClose-up on Clara lifting the empty stainless bowl from the pen floor.",
+   "annotation": {
+    "title_en": "Clara inspects the steel bowl, noting Pippa has finished all",
+    "scene": "penguin_nursery",
+    "camera": "Close-up on Clara lifting the empty stainless bowl from the pen floor",
+    "beat": "Clara inspects the steel bowl, noting Pippa has finished all the hydration fluids.",
+    "present": [
+     "clara",
+     "pippa",
+     "electrolyte_bowl"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "electrolyte_bowl",
+      "attr": "state",
+      "value": "empty steel bowl with faint pink water ring at base"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Pippa lets out a vibrant, clear honk of renewed energy",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "electrolyte_bowl": {
+      "state": "half-filled with clear pink electrolyte liquid",
+      "placement": "on examination table shelf"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     },
+     "electrolyte_bowl": {
+      "state": "empty steel bowl with faint pink water ring at base",
+      "placement": "on examination table shelf"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "no accessory (removed)",
+     "pippa.outfit": "bare feathers ruffled and dull",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "electrolyte_bowl.state": "empty steel bowl with faint pink water ring at base",
+     "electrolyte_bowl.placement": "on examination table shelf"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Penguin Rehabilitation Nursery, bright overhead daylight panels illuminate the sanitary white wall tiles, blue rubber floor mats, and clean recovery pens with drain troughs.\n\nClara, a late 20s female zookeeper with tan skin and dark curly hair tied back in a low bun, wears a clean light blue clinical scrub top, olive cargo shorts, sturdy waterproof work boots, and a wide-brim khaki sun hat. Clamped above the brooder pen, the ruby ceramic Heat Lamp glows radiant red. Pippa, a juvenile gentoo penguin with a bright orange-red bill, white bonnet band, pink webbed feet, and her left flipper stabilized in a lime-green cohesive wrap, hops onto the pen's stone platform. Pippa vigorously preens her coat into sleek, glossy plumage and stands alert, while Clara gives an encouraging clap and beams at her recovered vitality.\n\nMedium full shot framing Pippa standing upright and briskly flapping both flippers under the warm lamp glow.",
+   "annotation": {
+    "title_en": "Pippa hops up onto the pen's stone platform, preening her gl",
+    "scene": "penguin_nursery",
+    "camera": "Medium full shot of Pippa standing upright and flapping both flippers briskly",
+    "beat": "Pippa hops up onto the pen's stone platform, preening her glossy black and white feathers vigorously.",
+    "present": [
+     "clara",
+     "pippa",
+     "heat_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "pippa",
+      "attr": "outfit",
+      "value": "sleek glossy preened plumage, standing alert"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara gives an encouraging clap and beams at Pippa's recovered vitality",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "pippa": {
+      "outfit": "bare feathers ruffled and dull",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "sleek glossy preened plumage, standing alert",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     },
+     "electrolyte_bowl": {
+      "state": "empty steel bowl with faint pink water ring at base",
+      "placement": "on examination table shelf"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "no accessory (removed)",
+     "pippa.outfit": "sleek glossy preened plumage, standing alert",
+     "pippa.injury": "left flipper neatly stabilized in lime-green cohesive wrap",
+     "heat_lamp.state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+     "heat_lamp.placement": "clamped above nursery brooder pen"
+    }
+   }
+  },
+  {
+   "prompt": "At the Elephant Wash Paddock, the spacious outdoor enclosure features sandy earth, a boulder perimeter, reinforced wash slab, and tall spigots bathed in low evening sunlight that stretches long golden shadows across the ground.\n\nClara, an athletic keeper with tan skin and dark curls in a bun, wears her clean light blue scrub top, olive cargo shorts, waterproof boots, and khaki sun hat as she rests against the railing. Nearby, the Scrub Brush with clean dry yellow bristles leans against the wall, and the shiny dry brass Hose Nozzle rests on the hose coiled beside the concrete spigot. Barnaby, the adult male Asian elephant with a rounded left tusk tip, deep skin folds, notched right ear, and glistening slate-grey wet hide, greets Clara warmly, extending his clean trunk to gently touch her shoulder.\n\nWide cinematic tracking shot gliding smoothly across the sunlit paddock amidst the warm, long golden shadows.",
+   "annotation": {
+    "title_en": "Clara returns to the elephant paddock at evening, greeted wa",
+    "scene": "elephant_paddock",
+    "camera": "Wide cinematic tracking shot across the sunlit paddock with long golden shadows",
+    "beat": "Clara returns to the elephant paddock at evening, greeted warmly by a clean, dry, contented Barnaby.",
+    "present": [
+     "clara",
+     "barnaby",
+     "scrub_brush",
+     "hose_nozzle"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Barnaby extends his clean trunk to touch Clara's shoulder as she rests against the railing",
+    "start_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "light blue clinical scrub top and olive cargo shorts",
+      "footwear": "sturdy waterproof work boots",
+      "headwear": "wide-brim khaki sun hat",
+      "stains": "clean",
+      "accessory": "no accessory (removed)"
+     },
+     "barnaby": {
+      "stains": "fully rinsed clean glistening slate-grey wet hide"
+     },
+     "scrub_brush": {
+      "state": "clean dry yellow bristles with bare wooden handle",
+      "placement": "leaning against enclosure wall"
+     },
+     "hose_nozzle": {
+      "state": "shiny dry brass nozzle connected to black hose",
+      "placement": "coiled beside the concrete spigot"
+     },
+     "wheelbarrow": {
+      "state": "empty clean green tub",
+      "placement": "parked beside tool shed doors"
+     },
+     "twiga": {
+      "accessory": "plain brown leather halter collar"
+     },
+     "shelter_wall": {
+      "state": "smoothly coated in vibrant fresh terracotta paint, drying evenly",
+      "placement": "front wall of the giraffe barn"
+     },
+     "paint_bucket": {
+      "state": "unsealed open metal bucket brimful of wet terracotta paint",
+      "placement": "on the shelter threshold"
+     },
+     "roller_tray": {
+      "state": "crusted with drying terracotta residue, empty reservoir",
+      "placement": "beside paint bucket"
+     },
+     "pippa": {
+      "outfit": "sleek glossy preened plumage, standing alert",
+      "injury": "left flipper neatly stabilized in lime-green cohesive wrap"
+     },
+     "heat_lamp": {
+      "state": "active glowing ruby-red infrared lamp emitting warm radiant heat",
+      "placement": "clamped above nursery brooder pen"
+     },
+     "vet_thermometer": {
+      "state": "sanitized white plastic probe in clear plastic sleeve",
+      "placement": "on stainless medical counter"
+     },
+     "feeding_syringe": {
+      "state": "plunger fully depressed, empty clear barrel with oily fish residue",
+      "placement": "inside clinic preparation tray"
+     },
+     "electrolyte_bowl": {
+      "state": "empty steel bowl with faint pink water ring at base",
+      "placement": "on examination table shelf"
+     }
+    },
+    "state": {
+     "clara.outfit": "light blue clinical scrub top and olive cargo shorts",
+     "clara.footwear": "sturdy waterproof work boots",
+     "clara.headwear": "wide-brim khaki sun hat",
+     "clara.stains": "clean",
+     "clara.accessory": "no accessory (removed)",
+     "barnaby.stains": "fully rinsed clean glistening slate-grey wet hide",
+     "scrub_brush.state": "clean dry yellow bristles with bare wooden handle",
+     "scrub_brush.placement": "leaning against enclosure wall",
+     "hose_nozzle.state": "shiny dry brass nozzle connected to black hose",
+     "hose_nozzle.placement": "coiled beside the concrete spigot"
+    }
+   }
+  }
+ ]
+}

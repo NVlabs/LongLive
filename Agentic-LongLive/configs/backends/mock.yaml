@@ -1,0 +1,4 @@
+backend:
+  name: mock
+  injection: sink
+  params: {shot_seconds: 0.2, prefill_seconds: 0.05}

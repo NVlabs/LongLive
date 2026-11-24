@@ -1,0 +1,110 @@
+{
+ "id": "second_skin",
+ "setup": {
+  "title": "Suit Up",
+  "style": "Live-action, cinematic science fiction with practical-looking hardware, a night garage workshop full of robotic arms and soft blue holograms, a coastal city at dusk, the sky above the clouds, a hangar bay and a desert test range; one continuous shot per prompt.",
+  "cast": [
+   {
+    "id": "kai",
+    "name": "Kai",
+    "description": "Kai, an engineer in his thirties with short black hair, a trimmed beard and warm brown skin, wearing a charcoal-gray henley shirt with pushed-up sleeves and dark jeans."
+   }
+  ],
+  "extras": {
+   "music": "A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects.",
+   "voice": "Kai, speaking in voice-over, a man in his thirties with a calm, low and confident voice and a neutral American accent (S1),"
+  }
+ },
+ "shots": [
+  {
+   "prompt": "A wide shot of a garage workshop at night, where Kai stands at a workbench under a floating blue hologram. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, sketches the outline of a sleek armored suit on a glowing tablet. The blue hologram above the bench turns slowly, showing the suit's white-and-teal plates. Behind him an empty suit platform waits under a ring of robotic arms. The camera holds a wide shot of the whole workshop with Kai small at the bench.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a garage workshop at night, where Kai stands at a workbench under a floating blue hologram. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, sketches the outline of a sleek armored suit on a glowing tablet. The blue hologram above the bench turns slowly, showing the suit's white-and-teal plates. Behind him an empty suit platform waits under a ring of robotic arms. The camera holds a wide shot of the whole workshop with Kai small at the bench. Kai, speaking in voice-over, a man in his thirties with a calm, low and confident voice and a neutral American accent (S1), says: <d>[English] Tonight we find out if it actually fits.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: The hum of servers, a soft electronic beep from the tablet and distant waves.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A close-up of the workbench under a magnifying lamp, where Kai fits a power core into a white chest plate. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, lowers a small hexagonal power core into the center of a sleek white chest plate with teal trim lying on the bench. He turns a tiny screwdriver, and the hexagon flickers, then glows a steady cyan, lighting his face from below. The camera holds a tight close-up on his hands and the chest plate, then tilts up to his face.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up of the workbench under a magnifying lamp, where Kai fits a power core into a white chest plate. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, lowers a small hexagonal power core into the center of a sleek white chest plate with teal trim lying on the bench. He turns a tiny screwdriver, and the hexagon flickers, then glows a steady cyan, lighting his face from below. The camera holds a tight close-up on his hands and the chest plate, then tilts up to his face.\n\noverall_soundscape: A tiny screwdriver clicking, a rising electric whine and a soft confirmation chime.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A medium shot of the circular suit platform in the garage, where Kai stands with his arms held out. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, stands on the platform as robotic arms swing in and lock sleek white armor plates with teal trim onto his legs, torso and arms, one piece after another. The hexagonal cyan light glows on the chest plate. His head and face are still uncovered. The camera slowly circles him as the plates click into place.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the circular suit platform in the garage, where Kai stands with his arms held out. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, stands on the platform as robotic arms swing in and lock sleek white armor plates with teal trim onto his legs, torso and arms, one piece after another. The hexagonal cyan light glows on the chest plate. His head and face are still uncovered. The camera slowly circles him as the plates click into place.\n\noverall_soundscape: Whirring servos, sharp metallic clicks and a rising electric hum.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A close-up of Kai's face in the white-and-teal armor, where the helmet closes. Kai, with short black hair and a trimmed beard, looks straight ahead as the white helmet with teal trim slides forward and seals over his face. The narrow eye slits light up cyan. He raises one armored gauntlet and flexes the fingers, the hexagonal chest light glowing below. The camera holds a tight close-up on the helmet, then tilts down to the raised gauntlet.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up of Kai's face in the white-and-teal armor, where the helmet closes. Kai, with short black hair and a trimmed beard, looks straight ahead as the white helmet with teal trim slides forward and seals over his face. The narrow eye slits light up cyan. He raises one armored gauntlet and flexes the fingers, the hexagonal chest light glowing below. The camera holds a tight close-up on the helmet, then tilts down to the raised gauntlet. Kai, speaking in voice-over, a man in his thirties with a calm, low and confident voice and a neutral American accent (S1), says: <d>[English] All systems green.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: A pneumatic hiss as the helmet seals, a soft chime and a low steady hum.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A wide shot of the garage workshop, where the white-and-teal armored suit hovers above the floor. Kai, sealed inside the sleek white armored suit with teal trim and a glowing hexagonal cyan chest light, lifts a meter off the floor on blue boot thrusters, wobbles, drifts sideways and knocks over a red toolbox with a crash. He steadies himself with small bursts from the palm thrusters and gives a thumbs-up. The camera holds a wide shot from the workshop doorway.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of the garage workshop, where the white-and-teal armored suit hovers above the floor. Kai, sealed inside the sleek white armored suit with teal trim and a glowing hexagonal cyan chest light, lifts a meter off the floor on blue boot thrusters, wobbles, drifts sideways and knocks over a red toolbox with a crash. He steadies himself with small bursts from the palm thrusters and gives a thumbs-up. The camera holds a wide shot from the workshop doorway. Kai, speaking in voice-over, a man in his thirties with a calm, low and confident voice and a neutral American accent (S1), says: <d>[English] Okay. Minor adjustments.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: Sputtering thrusters, tools clattering across the floor and a short embarrassed laugh through the helmet.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A wide aerial shot of a coastal city at dusk, where the white-and-teal armored suit flies over the bay. Kai in the sleek white armored suit with teal trim and a glowing hexagonal cyan chest light streaks over the water with blue flames from the boot thrusters, banks around a lighthouse and climbs over the city lights toward the orange horizon. The camera follows the flight from slightly behind and above in one smooth aerial move.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide aerial shot of a coastal city at dusk, where the white-and-teal armored suit flies over the bay. Kai in the sleek white armored suit with teal trim and a glowing hexagonal cyan chest light streaks over the water with blue flames from the boot thrusters, banks around a lighthouse and climbs over the city lights toward the orange horizon. The camera follows the flight from slightly behind and above in one smooth aerial move.\n\noverall_soundscape: Roaring thrusters, rushing wind and the distant city below.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A wide aerial shot high above a sea of moonlit clouds at night, where the white-and-teal armored suit flies. Kai in the sleek white armored suit with teal trim and a glowing hexagonal cyan chest light glides above the silver clouds under a full moon, turns one slow barrel roll, then tucks his arms and dives down through the clouds. The camera flies alongside the suit, then follows it down into the clouds.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide aerial shot high above a sea of moonlit clouds at night, where the white-and-teal armored suit flies. Kai in the sleek white armored suit with teal trim and a glowing hexagonal cyan chest light glides above the silver clouds under a full moon, turns one slow barrel roll, then tucks his arms and dives down through the clouds. The camera flies alongside the suit, then follows it down into the clouds.\n\noverall_soundscape: Thin high-altitude wind, the steady roar of the thrusters and a whoosh as it dives.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A medium shot of the garage workshop at night, where the white-and-teal suit lands on the platform. The sleek white armored suit with teal trim touches down on the platform. Its plates unlock and fold back into the robotic arms, and Kai steps out in his charcoal-gray henley and dark jeans, breathing hard and grinning, a little sweat on his forehead. The empty white suit hangs open on the rack behind him. The camera holds a medium shot as the armor opens around him.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the garage workshop at night, where the white-and-teal suit lands on the platform. The sleek white armored suit with teal trim touches down on the platform. Its plates unlock and fold back into the robotic arms, and Kai steps out in his charcoal-gray henley and dark jeans, breathing hard and grinning, a little sweat on his forehead. The empty white suit hangs open on the rack behind him. The camera holds a medium shot as the armor opens around him.\n\noverall_soundscape: A heavy landing thud, servos retracting and Kai's relieved laugh.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A medium shot of the garage workbench, where Kai designs a giant suit on a large hologram. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, spreads his hands to enlarge a blue hologram of a towering, bulky heavy armor, three meters tall, with huge gunmetal-gray arms and glowing orange joints. The white suit with teal trim hangs on its rack behind him. The camera slowly pushes in past the hologram toward Kai's focused face.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the garage workbench, where Kai designs a giant suit on a large hologram. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, spreads his hands to enlarge a blue hologram of a towering, bulky heavy armor, three meters tall, with huge gunmetal-gray arms and glowing orange joints. The white suit with teal trim hangs on its rack behind him. The camera slowly pushes in past the hologram toward Kai's focused face. Kai, speaking in voice-over, a man in his thirties with a calm, low and confident voice and a neutral American accent (S1), says: <d>[English] Bigger problems need a bigger suit.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: The hum of the hologram and quick taps on the tablet.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A wide shot of a high-ceilinged hangar bay lit by welding sparks, where robotic arms assemble the heavy armor. Robotic arms bolt a giant gunmetal-gray forearm onto the frame of the towering gunmetal-gray heavy armor, three meters tall, with glowing orange joints, while sparks rain down. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, with a tablet in hand, watches from a steel catwalk as the orange joint lights flicker on one by one. The camera slowly cranes up from the hangar floor to the catwalk.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a high-ceilinged hangar bay lit by welding sparks, where robotic arms assemble the heavy armor. Robotic arms bolt a giant gunmetal-gray forearm onto the frame of the towering gunmetal-gray heavy armor, three meters tall, with glowing orange joints, while sparks rain down. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, with a tablet in hand, watches from a steel catwalk as the orange joint lights flicker on one by one. The camera slowly cranes up from the hangar floor to the catwalk.\n\noverall_soundscape: Heavy bolts driving in, showers of crackling sparks and a deep hum of power.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A wide shot of the hangar bay, where the huge gunmetal-gray heavy armor stands open. Kai, wearing the sleek white armored suit with teal trim and a glowing hexagonal cyan chest light, walks into the open chest of the towering gunmetal-gray heavy armor, three meters tall, with glowing orange joints. The giant suit closes around him plate by plate, its orange joints lighting up, until only the massive heavy armor stands there. The camera holds a low wide angle that makes the heavy armor look enormous.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of the hangar bay, where the huge gunmetal-gray heavy armor stands open. Kai, wearing the sleek white armored suit with teal trim and a glowing hexagonal cyan chest light, walks into the open chest of the towering gunmetal-gray heavy armor, three meters tall, with glowing orange joints. The giant suit closes around him plate by plate, its orange joints lighting up, until only the massive heavy armor stands there. The camera holds a low wide angle that makes the heavy armor look enormous.\n\noverall_soundscape: Deep mechanical clanks, hydraulic hisses and a heavy power-up boom.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A wide shot of a rocky desert test range at midday, where the gunmetal-gray heavy armor walks. The towering gunmetal-gray heavy armor, three meters tall, with glowing orange joints stomps across the cracked ground, kicking up dust. It bends down, lifts a boulder the size of a car above its head and sets it down gently. The camera tracks low beside the giant suit, then holds as it lifts the boulder.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a rocky desert test range at midday, where the gunmetal-gray heavy armor walks. The towering gunmetal-gray heavy armor, three meters tall, with glowing orange joints stomps across the cracked ground, kicking up dust. It bends down, lifts a boulder the size of a car above its head and sets it down gently. The camera tracks low beside the giant suit, then holds as it lifts the boulder.\n\noverall_soundscape: Earth-shaking footsteps, grinding rock and whistling desert wind.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A wide shot of a deep desert canyon at golden hour, where the gunmetal-gray heavy armor runs toward the edge. The towering gunmetal-gray heavy armor, three meters tall, with glowing orange joints sprints along the rocky rim, fires its huge back thrusters and leaps across the canyon, landing on the far side in a burst of dust. It straightens up and raises one giant fist. The camera holds a wide side-on view across the canyon as the armor flies through the frame.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a deep desert canyon at golden hour, where the gunmetal-gray heavy armor runs toward the edge. The towering gunmetal-gray heavy armor, three meters tall, with glowing orange joints sprints along the rocky rim, fires its huge back thrusters and leaps across the canyon, landing on the far side in a burst of dust. It straightens up and raises one giant fist. The camera holds a wide side-on view across the canyon as the armor flies through the frame.\n\noverall_soundscape: Pounding footsteps, a thunderous thruster burst and a heavy landing boom echoing off the canyon walls.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A medium shot of the garage workshop at dawn, where the heavy armor kneels on the platform. The gunmetal-gray heavy armor opens and the sleek white suit with teal trim steps out of it. Then the white suit folds open too, and Kai steps out in his charcoal-gray henley and dark jeans, just himself again, rolling his shoulders. The camera holds a steady medium shot as the two suits open one after the other.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the garage workshop at dawn, where the heavy armor kneels on the platform. The gunmetal-gray heavy armor opens and the sleek white suit with teal trim steps out of it. Then the white suit folds open too, and Kai steps out in his charcoal-gray henley and dark jeans, just himself again, rolling his shoulders. The camera holds a steady medium shot as the two suits open one after the other.\n\noverall_soundscape: Hydraulic sighs, unlocking clicks and birdsong outside the garage door.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  },
+  {
+   "prompt": "A wide shot of the garage workshop in soft morning light, where Kai sits on the workbench with a mug. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, sips coffee from a mug. Behind him the sleek white suit with teal trim and the towering gunmetal-gray heavy armor stand side by side on their racks, their lights glowing softly. The camera slowly pulls back to reveal both suits behind him.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of the garage workshop in soft morning light, where Kai sits on the workbench with a mug. Kai, an engineer in his thirties with short black hair and a trimmed beard, in a charcoal-gray henley and dark jeans, sips coffee from a mug. Behind him the sleek white suit with teal trim and the towering gunmetal-gray heavy armor stand side by side on their racks, their lights glowing softly. The camera slowly pulls back to reveal both suits behind him. Kai, speaking in voice-over, a man in his thirties with a calm, low and confident voice and a neutral American accent (S1), says: <d>[English] Not bad for one night.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: A quiet morning hum, the clink of the mug and distant waves.\n\nnon_diegetic_music: A driving electronic orchestral score with deep synth pulses and soaring strings, kept below the sound effects."
+   }
+  }
+ ]
+}

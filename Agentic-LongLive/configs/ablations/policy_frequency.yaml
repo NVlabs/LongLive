@@ -1,0 +1,2 @@
+# Rule-based member selection (most often mentioned entities) instead of the planner.
+agent: {policy: frequency}

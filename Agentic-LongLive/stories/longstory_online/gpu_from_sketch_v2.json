@@ -1,0 +1,1022 @@
+{
+  "id": "gpu_from_sketch_v2_terse",
+  "setup": {
+    "title": "From a Pencil Sketch to a Frame of Game (v2): One Maker Builds an NVIDIA GPU",
+    "style": "Live-action, cinematic, realistic product-documentary look: macro inserts of materials and machines, warm practical lighting at home, cool industrial lighting in the fab.",
+    "cast": [
+      {
+        "id": "daniel",
+        "name": "Daniel",
+        "description": "Daniel, a man in his early thirties with short dark-brown hair, a short neat beard and black rectangular glasses, wearing a charcoal-grey crew-neck sweater over a white T-shirt, dark jeans and grey sneakers."
+      }
+    ],
+    "extras": {
+      "voice": "Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1),",
+      "music": "Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout.",
+      "speech": "Daniel narrates his own build in first-person voice-over, like a maker documentary; he is rarely seen speaking on camera.",
+      "framing": "This is a making-of film about the GPU, not a portrait. Most shots are object-focused inserts where only the maker's hands and sleeves are visible; when the maker himself is shown, use medium or wide framing and never a facial close-up."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "The shot opens inside a compact home studio late at night, enveloped in deep shadows except for a solitary pool of warm amber light. An angled desk lamp illuminates the rich grain of a dark wooden worktable, casting soft reflections and elongated shadows across the quiet room. The surrounding space remains muted in deep twilight blues and blacks, creating an intimate, focused atmosphere that emphasizes the solitary nature of an overnight project.\n\nDaniel, a man in his early thirties with short dark-brown hair, a neat beard, and black rectangular glasses, appears as a small figure within the wide room. Dressed in a charcoal-grey crew-neck sweater over a white T-shirt with dark jeans and grey sneakers, he pulls back a chair and sits down at the desk. He places a dark ceramic coffee mug near the lamp's base, then draws a hardbound grid notebook toward himself and smoothly flips it open to a blank spread. Speaking in a calm voice-over about designing an NVIDIA GPU from scratch tonight, he rests his hands beside the pristine paper, prepared to work.\n\nThe camera captures the scene from an eye-level wide establishing shot, executing a steady, subtle push-in toward the illuminated desk. Throughout the gentle forward move, the environment and furniture dominate the composition, keeping Daniel in modest proportion without approaching a facial close-up. The warm desk lamp, the steaming mug, and the crisp, untouched grid pages remain clearly visible as the camera drifts closer.",
+      "annotation": {
+        "title_en": "Midnight desk",
+        "scene": "home_studio_desk",
+        "camera": "wide establishing shot, slow push-in",
+        "beat": "Night in a small home studio lit by one warm desk lamp. Daniel, small in the frame, sits down at a wooden desk with a coffee mug and opens a blank grid notebook. In voice-over he says tonight he will design his own NVIDIA GPU from scratch.",
+        "state": {
+          "outfit": "charcoal-grey sweater, black rectangular glasses",
+          "gpu_stage": "blank notebook page"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          241,
+          241
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an eye-level wide establishing shot of a compact home studio late at night, where Daniel stands beside a dark wooden worktable in a pool of amber light. Surrounded by deep twilight blues and shadows, Daniel, a man in his early thirties with short dark-brown hair, a neat beard, and black rectangular glasses, wearing a charcoal-grey crew-neck sweater over a white T-shirt, dark jeans, and grey sneakers, pulls back a chair and sits at the dark wooden worktable. He places a dark ceramic coffee mug near the angled desk lamp, which casts warm amber light across the rich wood grain. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Tonight, I am setting out to design an entire graphics processing unit completely from scratch.</d> After this line the voice-over stays silent for the rest of the shot. Drawing a hardbound grid notebook forward, he smoothly flips it open to a blank spread and rests his hands beside the pristine paper. The camera pushes in steadily at slow speed toward the desk, keeping Daniel in modest proportion without approaching a close-up as the steaming mug and untouched grid pages remain visible.\n\noverall_soundscape: A wooden chair scrapes softly against the floor, followed by the dull ceramic tap of a mug setting down on the table. A crisp paper rustle echoes as a fresh notebook page is turned in the quiet room.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the desk in the home studio.\n\nThe notebook lies open flat, its gridded pages initially pristine and blank. Daniel’s right hand enters the frame, holding a sharpened graphite drafting pencil with steady fingers as he begins mapping out a silicon architecture. His hand sketches a broad, segmented rectangle across the grid lines, dividing the core layout. He draws a central horizontal band representing the shared L2 cache, then methodically outlines rows of identical small squares flanking it on both sides for the streaming multiprocessor blocks. Finally, he adds small rectangular nodes along the outer perimeter to indicate memory controllers. Fine graphite deposits glint lightly under the bulb, leaving a clear, hand-drawn GPU block diagram fully established across the page by the end of the shot.\n\nThe camera maintains a strict top-down close-up framing, centered directly over the notebook as the diagram takes shape. The shot remains locked off with a subtle, barely perceptible macro drift inward. Only Daniel’s hand, sleeve, the pencil, and the crisp graphite strokes remain visible, keeping the technical sketch at the absolute center of attention.",
+      "annotation": {
+        "title_en": "The block diagram",
+        "scene": "home_studio_desk",
+        "camera": "top-down close-up",
+        "beat": "Top-down on the notebook: Daniel's hand in a grey sweater sleeve sketches the GPU architecture in pencil, a grid of identical streaming-multiprocessor blocks with an L2 cache bar through the middle and memory controllers on the edges.",
+        "state": {
+          "outfit": "grey sweater sleeve visible",
+          "gpu_stage": "pencil block diagram of a GPU on paper"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          252,
+          181
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a top-down close-up framing over a desk in the home studio, where an open gridded notebook lies flat beneath an overhead bulb. The camera maintains a strict top-down close-up framing centered over the notebook, executing a subtle, barely perceptible macro drift inward. Pristine, blank gridded pages fill the view before Daniel's right hand enters the frame, holding a sharpened graphite drafting pencil with steady fingers. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I start sketching out the core architecture, laying down the cache and multiprocessor blocks.</d> After this line the voice-over stays silent for the rest of the shot. Daniel sketches a broad, segmented rectangle across the grid lines to divide the core layout. Next, he draws a central horizontal band representing the shared L2 cache, then methodically outlines rows of identical small squares flanking it on both sides for the streaming multiprocessor blocks. He adds small rectangular nodes along the outer perimeter to indicate memory controllers. Under the bulb, fine graphite deposits glint lightly, leaving the completed hand-drawn GPU block diagram fully established while only Daniel's hand, sleeve, and pencil remain visible.\n\noverall_soundscape: Crisp, rhythmic scratching of a sharp graphite pencil moving across paper resonates in the quiet space. A faint, low electrical hum emanates steadily from the overhead bulb.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the studio desk.\n\nDaniel appears strictly as his right hand. Holding the pencil, his fingers guide the lead into the interior of an outlined streaming-multiprocessor rectangle. With deliberate strokes, he sketches a neat grid of smaller interior compartments representing execution cores, stacks of register files, and a dedicated rectangular tensor unit. He then draws fine, delicate arrows looping between the compartments to map internal data flow. Tiny particles of graphite dust accumulate along the lines as the formerly empty block fills with intricate architectural detail. By the end of the shot, the single block has become a fully articulated compute schematic.\n\nThe camera maintains a low-angle macro close-up, executing a slow, steady slide across the paper to follow the pencil's movements. The depth of field is razor-thin, keeping the graphite tip, the freshly etched boxes, and paper fibers in crisp focus while softly defocusing his sleeve and the surrounding page.",
+      "annotation": {
+        "title_en": "Inside one block",
+        "scene": "home_studio_desk",
+        "camera": "macro close-up, slow slide",
+        "beat": "Macro on the paper as the pencil fills one multiprocessor block with smaller boxes for cores, registers and a tensor unit, then draws arrows of data flowing between them. Eraser crumbs and the lamp's warm light on the grain of the paper.",
+        "state": {
+          "outfit": "grey sweater sleeve visible",
+          "gpu_stage": "detailed sketch of one compute block"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          247,
+          152
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle macro close-up of a studio desk, where Daniel's right hand grips a pencil above drawn outlines on paper. The camera executes a slow, steady slide across the paper, tracking the pencil's movements with razor-thin depth of field that renders Daniel's sleeve and the surrounding page softly defocused. Daniel's fingers guide the lead into the interior of an outlined streaming-multiprocessor rectangle. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Inside each streaming multiprocessor block, I sketch out the individual cores and internal data paths.</d> After this line the voice-over stays silent for the rest of the shot. With deliberate strokes, he sketches a neat grid of smaller interior compartments representing execution cores, stacks of register files, and a dedicated rectangular tensor unit. He then draws fine, delicate arrows looping between the compartments to map internal data flow. Tiny particles of graphite dust accumulate along the lines as the formerly empty block fills with intricate architectural detail, transforming into a fully articulated compute schematic while the graphite tip and paper fibers remain in crisp focus.\n\noverall_soundscape: The dry, rhythmic scratching of graphite scraping across textured paper resonates closely. Faint scuffs of a pencil tip pressing into fibers accompany the quiet rustle of paper.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Inside the home studio, a large cork board covers much of the wall above the workspace, densely patterned with colourful sticky notes, printed circuit schematics, and high-resolution silicon die photographs. Beside the board, an adjacent window reveals the first faint blue light of dawn seeping in from outside, creating a delicate natural contrast against the lingering warm tungsten glow of an off-screen desk lamp. The environment carries the quiet, solitary atmosphere of an all-night engineering session.\n\nSeen from behind in a wide perspective, Daniel stands before the wall. He holds the completed paper bearing the GPU sketch, cleanly tears it free from the pad, and steps toward the wall. Raising his hands, he pushes a thumb tack through the top edge of the sheet, firmly pinning the sketch directly into the vacant centre of the cork board among the surrounding reference materials.\n\nThe camera remains entirely stationary in a wide framing, letting the sprawling technical wall and the workspace dominate the composition while Daniel appears as a modest full-figure presence with his back turned. The framing emphasizes the physical progression of the design wall rather than a portrait, keeping the newly pinned sketch and the soft dawn light entering through the window clearly visible through the end of the shot.",
+      "annotation": {
+        "title_en": "Pinned to the board",
+        "scene": "home_studio_wall",
+        "camera": "medium-wide, static",
+        "beat": "Daniel, seen from behind at medium-wide distance, tears out the page and pins it to the centre of a cork board covered with sticky notes and printed die photographs. Blue dawn light appears in the window beside the board.",
+        "state": {
+          "outfit": "charcoal-grey sweater",
+          "gpu_stage": "architecture sketch pinned on the cork board"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          210
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a quiet home studio, where Daniel stands with his back turned before a large cork board on the wall above the workspace. The camera holds a static shot in wide framing, showcasing the sprawling technical cork board above the workspace, covered with colourful sticky notes, printed circuit schematics, and silicon die photographs. Beside it, an adjacent window reveals faint blue dawn light contrasting with the warm tungsten glow of an off-screen desk lamp. Seen from behind, Daniel cleanly tears the completed paper bearing the GPU sketch free from the pad. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] After working through the night, the core layout finally earned its place on the board.</d> After this line the voice-over stays silent for the rest of the shot. Stepping toward the wall, Daniel raises his hands and pushes a thumb tack through the sheet's top edge, firmly pinning the sketch directly into the vacant centre of the board. The newly pinned sketch remains clearly visible against the dawn light through the end of the shot.\n\noverall_soundscape: A crisp tearing sound of paper cleanly ripping from a notepad, followed by soft footfalls. A muffled press of a thumb tack sinking firmly into the cork board settles into quiet ambient room tone.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "A large wall-mounted whiteboard fills the frame in Daniel's home studio. Gentle, cool blue morning light filtering from a side window mixes with warm indoor overhead lighting, casting soft diagonal reflections across the glossy, clean melamine surface. Faint grey ghost marks and wiped dry-erase smudges from previous calculations are faintly visible around the margins, giving the space an authentic, work-in-progress atmosphere.\n\nDaniel's face is out of frame; only his right hand and wrist are visible. He holds a black chisel-tip dry-erase marker with its cap posted securely on the back. Moving with practiced precision, the tip squeaks against the whiteboard, inking black logic symbols, parallel connection wires, and the internal NAND gates of a transistor-level full adder. He draws deliberate orthogonal trace lines connecting the input nodes through the gate array. Once the carry and sum paths are resolved, Daniel rotates the marker in his fingers and decisively taps the plastic cap against the final drawn output line. By the end of the shot, a neat, fully linked schematic for one adder circuit stands out in stark black lines on the whiteboard.\n\nThe camera maintains an intimate close-up framing, tracking smoothly alongside the marker as it navigates the whiteboard surface. A shallow depth of field keeps the drawing tip and the freshly applied black ink in sharp focus while softly blurring the studio behind it. The frame remains locked strictly onto Daniel's hand, the marker, and the expanding circuit diagram.",
+      "annotation": {
+        "title_en": "Gates on the whiteboard",
+        "scene": "home_studio_whiteboard",
+        "camera": "close-up tracking the marker",
+        "beat": "Close on a large whiteboard as a black marker in Daniel's hand draws a transistor-level circuit for one adder: NAND gates, a full adder and wires. The marker cap taps the output line.",
+        "state": {
+          "outfit": "grey sweater sleeve visible",
+          "gpu_stage": "full-adder circuit on the whiteboard"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          247,
+          240
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up shot of a large wall-mounted whiteboard in Daniel's home studio, where Daniel's right hand and wrist draw with a marker. Cool blue morning window light mixes with warm indoor overhead lighting across the glossy whiteboard. Ghost marks and smudges linger near the margins. Daniel's right hand guides a black chisel-tip dry-erase marker across the board, inking logic symbols, parallel connection wires, and internal NAND gates. The camera tracks smoothly alongside the marker in shallow focus, keeping the tip and freshly laid black ink sharp. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I map out the full adder first, linking the logic gates to establish my carry and sum paths.</d> After this line the voice-over stays silent for the rest of the shot. As he completes the orthogonal trace lines, Daniel rotates the marker in his fingers and decisively taps its posted cap against the final output line, leaving a neat, fully linked circuit diagram.\n\noverall_soundscape: The dry-erase marker tip squeaks with smooth friction against the whiteboard surface. A quiet studio room tone hums softly in the background before a distinct, hollow plastic tap clicks against the board.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back at the home studio desk.\n\nThe screen initially displays a heavily magnified view of a digital circuit layout: vibrant, sharp-edged rectangular ribbons and routing traces in saturated blues, reds, and cyans representing overlapping metal interconnect layers. In the foreground resting on the desk mat, Daniel’s right hand grips an ergonomic black mouse. He clicks and rolls the mouse's central scroll wheel backward. In response, the virtual viewport smoothly zooms out. The isolated wire routings quickly recede into compact standard logic cells, which then assemble into repeating execution cores. By the end of the shot, the entire silicon floorplan sits visible as a massive, dense mosaic of identical glowing blocks framed by outer I/O rings, reflecting the architecture of a complete GPU die.\n\nThe camera begins in a tight macro close-up on the screen's glowing polygon lines, then executes a slow, deliberate zoom out to incorporate the monitor's thin black bezel and Daniel's hand on the mouse in the lower foreground. The focus remains locked onto the sharp visual architecture of the chip layout throughout, never tilting upward to reveal his face.",
+      "annotation": {
+        "title_en": "Layout on screen",
+        "scene": "home_studio_desk",
+        "camera": "close-up on the monitor, slow zoom out",
+        "beat": "A monitor running chip layout software fills the frame: coloured rectangles of metal layers. The view zooms out until the whole die floorplan appears as a dense glowing mosaic of identical blocks, matching the paper sketch. Daniel's hand moves the mouse in the foreground.",
+        "state": {
+          "outfit": "grey sweater sleeve visible",
+          "gpu_stage": "full die layout on the monitor"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          254,
+          182
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro close-up at the home studio desk, where glowing circuit layout lines fill the screen and Daniel's hand rests near the mouse below. The screen initially displays a heavily magnified view of a digital circuit layout with vibrant, sharp-edged rectangular ribbons and routing traces in saturated blues, reds, and cyans. In the lower foreground on the desk mat, Daniel’s right hand grips an ergonomic black mouse. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Zooming out reveals how these microscopic logic gates tile together into a full graphics processor die.</d> After this line the voice-over stays silent for the rest of the shot. He clicks and rolls the central scroll wheel backward. The camera executes a slow, deliberate zoom out, bringing the monitor's thin black bezel and Daniel's hand into frame. On screen, the wire routings recede into compact standard logic cells, which assemble into repeating execution cores until the complete silicon floorplan appears as a dense mosaic of glowing blocks framed by outer I/O rings. The focus stays locked onto the chip layout, never tilting up to reveal his face.\n\noverall_soundscape: The distinct, tactile plastic click of a computer mouse echoes alongside the quiet, rhythmic ratcheting of a scroll wheel. A low, gentle electronic hum fills the quiet room.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The interior entryway of the home studio is illuminated by soft, warm morning light, while the edges of the front door frame hint at a much brighter day outside. Pale neutral walls and clean, modern wood trim give the space an organized, calm atmosphere. A small console table stands near the threshold, and the overall color palette balances muted indoor earth tones with the crisp, cool illumination waiting just beyond the entryway.\n\nCaptured from behind in a waist-up view, Daniel smoothly slips into a jacket, settling the shoulders. Reaching down, he picks up a tightly rolled large-format printout of the chip layout and slides it neatly inside a rigid black poster tube, securely pressing the cap into place. He slings the tube's strap over his shoulder across his back, then reaches forward to turn the handle and open the front door into the brilliant morning daylight. By the end, he stands silhouetted against the bright exterior with the tube slung over his shoulder.\n\nThe camera remains static in a medium waist-height framing positioned directly behind Daniel, keeping his hands, the jacket, and the tube clearly visible throughout the action. The composition avoids any facial close-ups, prioritizing the deliberate physical preparation and the burst of daylight filling the open doorway.",
+      "annotation": {
+        "title_en": "Off to the fab",
+        "scene": "home_studio_door",
+        "camera": "medium shot from behind",
+        "beat": "Morning. Seen from behind at waist height, Daniel pulls a denim jacket on over his grey sweater, slides a rolled layout printout into a black poster tube, slings it over his shoulder and opens the front door into bright daylight.",
+        "state": {
+          "outfit": "denim jacket over charcoal-grey sweater, poster tube on shoulder",
+          "gpu_stage": "layout printout in a poster tube"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          263,
+          209
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium waist-up shot from behind in the interior entryway of the home studio, where Daniel stands facing the front door. The camera holds a static shot at waist height directly behind Daniel. Soft, warm morning light illuminates the pale neutral walls and modern wood trim of the entryway. Daniel smoothly slips into a jacket, settling the shoulders. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] With the chip layout printed and packed, it is time to take the design out into the world.</d> After this line the voice-over stays silent for the rest of the shot. Reaching toward a small console table near the threshold, Daniel picks up a tightly rolled large-format printout of the chip layout and slides it inside a rigid black poster tube, securely pressing the cap into place. He slings the tube's strap across his back over his shoulder. Reaching forward, Daniel turns the handle and opens the front door, remaining silhouetted against the brilliant morning daylight outside.\n\noverall_soundscape: The rustle of jacket fabric is followed by the smooth slide of rolled paper entering the tube and the click of the plastic cap. A metallic door latch unclicks, accompanied by the gentle whoosh of incoming morning air.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The exterior of a massive semiconductor fabrication facility stretches across the frame under a crisp, pale morning sky. Sunlight reflects sharply off the towering multi-story facade constructed of sheer glass panels, brushed steel beams, and clean white architectural accents. A sprawling, immaculately swept plaza paved with pale grey stone pavers extends in front of the structure, casting elongated, cool morning shadows. The atmosphere is stark, quiet, and monumental, highlighting the immense technological scale and pristine nature of the advanced industrial complex.\n\nDaniel appears as a small figure crossing the wide plaza toward the colossal glass entrance doors. With the poster tube slung diagonally across his shoulder, he walks with steady, purposeful steps. One hand loosely holds the strap against his chest to steady the tube as he advances across the expansive pavement.\n\nThe camera moves in a smooth, continuous wide tracking shot, gliding slowly forward and parallel to Daniel's path. The framing keeps him small in the lower third of the composition, deliberately dwarfed by the towering architecture of the fab rising above. The expansive geometric pavement and soaring reflective curtain walls remain dominant throughout the motion.",
+      "annotation": {
+        "title_en": "The fab",
+        "scene": "fab_exterior",
+        "camera": "wide tracking shot",
+        "beat": "A huge modern semiconductor fab with a glass-and-steel facade under a clear morning sky. Daniel, a small figure with a poster tube on his shoulder, crosses the wide plaza toward the entrance.",
+        "state": {
+          "outfit": "denim jacket, poster tube",
+          "gpu_stage": "layout printout in a poster tube"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          229,
+          187
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a massive semiconductor fabrication facility under a pale morning sky, where Daniel walks across an expansive stone plaza. Under a crisp, pale morning sky, sunlight reflects sharply off the towering facade of sheer glass panels, brushed steel beams, and clean white architectural accents. Elongated cool morning shadows stretch across the vast plaza paved with pale grey stone pavers. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I arrived early at the massive fabrication facility, carrying the complete schematics ready for production.</d> After this line the voice-over stays silent for the rest of the shot. Daniel advances across the pavement with steady, purposeful steps toward the colossal glass entrance doors, with a poster tube slung diagonally across his shoulder and one hand loosely holding the strap against his chest. The camera glides in a smooth, continuous wide tracking shot slowly forward and parallel to his path, keeping him framed small in the lower third as the soaring reflective curtain walls and expansive geometric pavement dominate the view.\n\noverall_soundscape: A distant, hollow morning breeze whispers across the vast open plaza. Rhythmic, muted footsteps click faintly against the pale stone pavers.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The shot is set inside a brightly illuminated semiconductor fab gowning room. Cool fluorescent lighting floods the antiseptic white walls, glossy floor, and stainless steel benches, giving the space an immaculate, clinical atmosphere. Garment dispensers and sterile storage racks line the perimeter under sharp, shadowless light, establishing an environment engineered for strict contamination control.\n\nDaniel stands beside a steel bench, resting the poster tube on it. He steps into a cleanroom coverall, pulls it over his torso, and pulls the central zipper shut. He then draws the integrated hood over his head, loops a face mask across his nose and mouth, and seats goggles over his glasses. Finally, he snaps nitrile gloves onto both hands, smoothing the cuffs. By the end, he is fully enclosed beneath the suit, hood, mask, goggles, and gloves, with nothing in his hands.\n\nThe camera maintains a static medium-wide framing throughout the shot, positioned at eye level across from the bench. The composition keeps Daniel visible from the mid-thighs up, documenting each step of the dressing sequence without zooming in or using facial close-ups. The sterile geometry of the gowning room remains fixed and steady as he prepares for the fab floor.",
+      "annotation": {
+        "title_en": "Gowning up",
+        "scene": "fab_gowning_room",
+        "camera": "medium-wide, static",
+        "beat": "In a bright white gowning room with steel benches, Daniel, at medium-wide distance, steps into a white cleanroom coverall, zips it, pulls on the white hood, a face mask, goggles over his glasses and blue nitrile gloves.",
+        "state": {
+          "outfit": "white cleanroom bunny suit, hood, face mask, goggles, blue gloves",
+          "gpu_stage": "none in hand"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          231,
+          197
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static medium-wide shot of a brightly illuminated semiconductor fab gowning room, where Daniel stands at eye level beside a stainless steel bench. The camera holds a static shot at eye level, framing Daniel from the mid-thighs up. Cool fluorescent lighting floods the antiseptic white walls, glossy floor, and stainless steel benches, casting sharp, shadowless light past garment dispensers and sterile storage racks. Daniel rests the poster tube on the bench, steps into a cleanroom coverall, pulls it over his torso, and pulls the central zipper shut. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Entering the fab requires complete gowning to prevent contamination.</d> He draws the integrated hood over his head, loops a face mask across his nose and mouth, and seats goggles over his glasses. Snapping nitrile gloves onto both hands, he smooths the cuffs. Daniel (S1) adds: <d>[English] Every single layer ensures no airborne particles reach the floor.</d> After this line the voice-over stays silent for the rest of the shot. He stands completely enclosed beneath the suit, hood, mask, goggles, and gloves, holding nothing in his hands.\n\noverall_soundscape: The low, steady hum of cleanroom air filtration fills the room. A synthetic rustle accompanies the coverall being put on, followed by the zipping of the suit and the sharp snap of nitrile gloves stretching over skin.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The interior of the semiconductor fabrication facility's lithography bay is bathed in monochromatic amber-yellow safety lighting designed to protect photoresist-sensitive processes. Pristine polished metal panels and glossy off-white industrial surfaces softly reflect the warm golden hue, establishing an ultra-clean, sterile environment. In the immediate background, the exterior casing of an advanced photolithography scanner rises into the laminar airflow, its immaculate white chassis accented with dark status panels and precision access ports.\n\nDaniel holds a transparent polycarbonate reticle pod. Inside the clear protective enclosure rests a square quartz photomask, a flawless plate of synthetic silica patterned with dark, opaque chrome. As he gently angles the carrier, the microscopic GPU circuit geometries etched into the chrome surface catch the amber light, glinting with fine, iridescent micro-architectural tracings. His fingers carefully disengage the pod latch and align the quartz mask with the narrow reticle port of the scanner. With steady, deliberate motion, he slides the reticle into the motorized bay, where precision guide rails engage the edges and draw the mask smoothly into the scanner's enclosed optical column.\n\nThe camera maintains a crisp macro close-up, utilizing a shallow depth of field focused squarely on the intricate chrome patterns of the photomask. A slow, stable push-in tracks the movement as the glass plate travels from the carrier toward the machine interface. Daniel's face remains entirely off-screen, with only his hands visible, keeping the visual emphasis wholly on the loaded component.",
+      "annotation": {
+        "title_en": "The photomask",
+        "scene": "fab_lithography_bay",
+        "camera": "macro close-up",
+        "beat": "In amber-yellow cleanroom light, gloved blue hands hold a clear pod containing a quartz photomask whose chrome pattern glitters with the GPU design, then slide it into the reticle port of a tall white lithography scanner.",
+        "state": {
+          "outfit": "blue nitrile gloves, white suit sleeves",
+          "gpu_stage": "photomask of the design loaded into the scanner"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          256,
+          236
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up of a semiconductor fabrication facility's amber-lit lithography bay, where Daniel's hands hold a transparent reticle pod before an advanced photolithography scanner. Under monochromatic amber-yellow safety lighting softly reflecting off polished metal panels and glossy off-white surfaces, Daniel's hands hold a transparent polycarbonate reticle pod. As he gently angles the carrier, microscopic GPU circuit geometries etched into the quartz photomask's dark chrome glint with fine, iridescent tracings. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I carefully align the quartz photomask, letting the scanner draw our microscopic GPU circuitry inside.</d> After this line the voice-over stays silent for the rest of the shot. His fingers disengage the pod latch and align the quartz mask with the scanner's narrow reticle port. He slides the reticle into the motorized bay, where precision guide rails engage and draw the mask smoothly into the enclosed optical column. The camera pushes in at slow speed with a stable macro tracking move, keeping shallow focus on the chrome patterns while his face remains off-screen.\n\noverall_soundscape: The steady, low whoosh of laminar airflow fills the sterile lithography bay. A faint click sounds as the pod latch disengages, followed by the soft motorized whir of precision guide rails drawing the quartz plate into the scanner.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the fab's lithography bay.\n\nA dark front-opening unified pod sits locked in position with its door retracted to reveal horizontal slots. A robotic end-effector made of matte grey anodized aluminum smoothly extends its slender vacuum wand beneath a pristine disc. The mechanical arm lifts a blank, mirror-polished 300-millimeter silicon wafer, completely free of any circuitry. Perfectly circular with a delicate edge bevel, the disc rises out of the carrier. As the robotic wrist slowly rotates, the flawless metallic surface catches and sweeps the amber cleanroom lamps and white ceiling panels across its mirror finish. No human operators are visible, keeping the focus entirely on the automated handling of the virgin substrate.\n\nThe camera maintains a close-up, object-focused insert on the wafer transfer, executing a steady, slow upward tilt that follows the disc's elevation. A shallow depth of field keeps the wafer’s razor-thin edge and pristine reflective plane sharply defined against the soft amber and charcoal machinery behind it. The tilt remains smooth and stable, tracking the reflective sweep until the silicon disc floats suspended in the center of the frame.",
+      "annotation": {
+        "title_en": "A mirror of silicon",
+        "scene": "fab_lithography_bay",
+        "camera": "close-up, slow tilt",
+        "beat": "A robotic arm lifts a blank, mirror-polished 300 millimetre silicon wafer out of a front-opening pod. The wafer reflects the amber lights and the white ceiling as it turns.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "blank mirror-polished silicon wafer"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          182
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot inside the fab's lithography bay, where Daniel monitors the automated transfer station from off-camera. A dark front-opening unified pod rests locked in place with its retracted door exposing horizontal slots. A matte grey anodized aluminum robotic end-effector extends its slender vacuum wand under a pristine disc. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Each pristine silicon wafer begins completely blank, carefully lifted into the cleanroom light before any exposure takes place.</d> After this line the voice-over stays silent for the rest of the shot. The mechanical arm lifts the blank, mirror-polished silicon wafer free of circuitry from the carrier. The camera maintains a close-up insert on the transfer with shallow depth of field, executing a steady, slow upward tilt following the circular disc's delicate beveled edge as it rises. As the robotic wrist slowly rotates, the flawless metallic surface sweeps reflections of amber cleanroom lamps and white ceiling panels across its mirror finish against charcoal machinery, while the camera tilts until the disc floats suspended at frame center.\n\noverall_soundscape: The quiet, steady hiss of cleanroom laminar airflow fills the bay. A soft pneumatic click engages as vacuum suction locks onto the substrate, followed by the faint hum of precise robotic motors lifting and rotating.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the lithography bay at the spin-coating chamber.\n\nAt the center of the chamber, the wafer rests securely atop a central vacuum chuck. A narrow automated dispense arm extends directly above its center and releases a single, viscous droplet of amber photoresist onto the disc. The chuck instantly accelerates into a high-speed spin. Centrifugal force flings the liquid outward in a rapid, seamless wave, evening it out into an ultra-thin layer. As the chemical coating stretches across the surface, optical interference generates vibrant, iridescent bands of magenta, violet, and green that ripple over the spinning surface, transforming the mirror disc into a finished photoresist-coated wafer.\n\nThe camera holds a locked-off close-up framed slightly from above, angled through the access window directly onto the wafer's surface. Depth of field keeps the expanding liquid boundary and shimmering colour bands sharply defined while the background softens. The steady framing captures the full radial spread without panning, preserving the precise mechanical elegance of the automated coating cycle.",
+      "annotation": {
+        "title_en": "Spin coating",
+        "scene": "fab_lithography_bay",
+        "camera": "close-up through a machine window",
+        "beat": "Inside a coater a drop of photoresist lands on the wafer; the wafer spins fast and the liquid spreads into a thin film that flashes with iridescent colour bands.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "wafer coated with photoresist"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          230,
+          164
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a locked-off close-up framed slightly from above the spin-coating chamber inside the lithography bay, where Daniel observes the wafer on a central vacuum chuck. The camera holds a locked-off close-up framed slightly from above, angled through the access window directly onto the wafer's surface. At the center of the chamber, the wafer rests securely atop a central vacuum chuck. A narrow automated dispense arm extends directly above its center and releases a single, viscous droplet of amber photoresist onto the disc. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] A single drop spreads out under high spin speed, creating a clean, microscopically uniform coating.</d> After this line the voice-over stays silent for the rest of the shot. The chuck instantly accelerates into a high-speed spin. Centrifugal force flings the liquid outward in a rapid, seamless wave, evening it out into an ultra-thin layer. Optical interference generates vibrant, iridescent bands of magenta, violet, and green that ripple over the spinning surface, transforming the mirror disc into a finished photoresist-coated wafer. Depth of field keeps the expanding liquid boundary and shimmering colour bands sharply defined while the background softens.\n\noverall_soundscape: A soft mechanical click accompanies the dispense arm releasing the droplet. The spin coater motor hums with a high-pitched, accelerating whine as air rushes inside the sealed chamber.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the photolithography bay.\n\nDaniel stands before the machine's extended terminal arm, operating the dual control monitors to input alignment parameters and verify that the photoresist-coated wafer is properly exposing beneath the reticle. He remains stationed at the console throughout, monitoring diagnostic readouts as the violet light pulses steadily beside him.\n\nThe camera frames the expanse in a wide perspective, performing a slow, cinematic dolly across the floor. The composition emphasizes the sheer physical scale of the scanner architecture, keeping the environment dominant while Daniel stands in the middle ground. The rhythmic violet pulse remains constant throughout the smooth tracking movement.",
+      "annotation": {
+        "title_en": "The scanner bay",
+        "scene": "fab_lithography_bay",
+        "camera": "wide shot, slow dolly",
+        "beat": "Wide view of the amber photolithography bay: a row of tall white scanners. A pulsing violet glow leaks from one machine. Daniel, a small white-suited figure, stands at its control monitors.",
+        "state": {
+          "outfit": "white bunny suit",
+          "gpu_stage": "wafer being exposed"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          240,
+          102
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of the photolithography bay, where Daniel stands in the middle ground before the machine's extended terminal arm. The camera executes a slow, cinematic dolly across the floor in a wide perspective, emphasizing the immense physical scale of the scanner architecture while keeping the environment dominant. In the middle ground, Daniel operates the dual control monitors of the extended terminal arm. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I input the alignment parameters and verify the wafer is exposing properly beneath the reticle.</d> After this line the voice-over stays silent for the rest of the shot. He remains stationed at the console throughout the smooth tracking movement, entering parameters and monitoring diagnostic readouts. A rhythmic violet light pulses steadily beside him as the exposure proceeds.\n\noverall_soundscape: A deep mechanical drone reverberates through the bay alongside the steady, rhythmic hum of the pulsing violet exposure lamp. Faint clicks register from the terminal controls as the diagnostic hardware operates.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the scanner console in the photolithography bay.\n\nThe monitor displays a dark diagnostic interface tracking the active lithography cycle. Centered on the interface, a detailed digital circular wafer map shows a dense grid of rectangular chip fields. Field by field, pale translucent blocks turn into solid bright green squares as the stepper pulses UV light onto each respective die location. Beneath the filling circle, a slender horizontal progress bar and percentage readout tick upward in real time. Daniel’s right hand reaches into frame. His index finger points deliberately at the advancing progress bar, holding steady alongside the readout as three more rectangular exposure dies sequentially illuminate across the wafer grid.\n\nThe camera holds a locked-off, slightly angled close-up insert on the monitor face and the gesturing hand. A shallow depth of field keeps the glowing die matrix and his fingertip in sharp clarity, while blurring the surrounding console bezel and the machinery behind it into a soft, steady backdrop.",
+      "annotation": {
+        "title_en": "Field by field",
+        "scene": "fab_lithography_bay",
+        "camera": "close-up on the monitor",
+        "beat": "On the scanner monitor a circular wafer map fills in field by field with exposed rectangles, while a gloved blue finger points at the progress bar.",
+        "state": {
+          "outfit": "blue glove visible",
+          "gpu_stage": "wafer exposure progress map filling"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          161
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a slightly angled close-up insert of the scanner console monitor in the photolithography bay, where Daniel reaches his hand into frame. The camera holds a locked-off, slightly angled close-up insert on the monitor face and Daniel’s gesturing hand, with a shallow depth of field keeping the glowing interface and his fingertip in sharp focus while softly blurring the console bezel and machinery behind it. On the dark diagnostic screen, pale translucent blocks across a circular wafer map turn into solid bright green squares as UV pulses expose each die location. Below the map, a slender horizontal progress bar and percentage readout tick upward in real time. Daniel’s right index finger enters the frame and points steadily at the advancing readout. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Each green square marks another successful exposure as the stepper tracks across the silicon wafer.</d> After this line the voice-over stays silent for the rest of the shot. While his finger stays fixed alongside the bar, three more rectangular dies sequentially illuminate across the grid.\n\noverall_soundscape: A steady, low mechanical hum fills the bay alongside the faint rhythmic pulsing whine of the stepper motor. Quiet cleanroom air circulation whispers continuously in the background.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The cleanroom etch bay maintains a subdued, sterile atmosphere, where cool overhead ambient lighting recedes against heavy industrial machinery. The stainless-steel vacuum chamber dominates the space, its brushed metallic surfaces catching faint clinical highlights. Deep within the chamber's sealed interior, an intense luminance takes over as process gases ignite. An ethereal magenta and electric-purple glow illuminates the dark cavity, casting shifting violet hues and dancing specular highlights across the surrounding bolted flanges and polished steel framework.\n\nThrough the thick, circular quartz viewport set into the heavy vacuum flange, the interior of the etch chamber is sharply detailed. The wafer rests flat upon a dark ceramic electrostatic chuck. A vibrant cloud of magenta-purple plasma burns steadily suspended just millimeters above the wafer. The luminous gas flickers with subtle, high-frequency turbulence, bombarding the exposed silicon with reactive ions to carve the GPU's intricate patterns into the dies. No person is visible in frame, leaving the automated microfabrication reaction to unfold in absolute isolation as the glowing violet light ripples across the wafer.\n\nThe camera remains locked in a tight macro insert framing the round glass viewport. The circular window and its heavy hex bolts anchor the composition, maintaining crisp focus on the wafer and the incandescent plasma hovering above it. The camera holds steady, capturing the subtle flutter of purple light as it casts iridescent reflections against the beveled glass and steel rim.",
+      "annotation": {
+        "title_en": "Plasma etch",
+        "scene": "fab_etch_bay",
+        "camera": "macro on a viewport",
+        "beat": "Through the round viewport of a vacuum etch chamber, a magenta-purple plasma glows above the wafer as the pattern is etched in, the light flickering on the steel frame.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "wafer in the etch chamber"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          231
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro insert shot of a cleanroom etch bay viewport, where Daniel is out of frame while the sealed vacuum chamber operates. The camera holds a static shot locked tightly on the circular quartz viewport, framed by heavy hex bolts on the stainless-steel vacuum flange. Inside the sealed chamber, an ethereal cloud of magenta and electric-purple plasma ignites and hovers steadily mere millimeters above the wafer resting flat upon a dark ceramic electrostatic chuck. The violet gas flickers with subtle, high-frequency turbulence, bombarding the silicon to etch intricate patterns. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Inside the chamber, the ignited plasma bombards the silicon, carving out the intricate GPU circuitry.</d> After this line the voice-over stays silent for the rest of the shot. Cool overhead cleanroom lighting recedes around the brushed metallic surfaces, while shifting violet luminance and dancing specular highlights ripple across the beveled glass and polished steel rim in complete isolation.\n\noverall_soundscape: A deep, resonant vacuum pump hum echoes steadily in the sterile room. An energetic, high-frequency electrical buzz vibrates subtly from the ignited plasma inside the chamber.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the cleanroom etch bay.\n\nTwo hands in blue nitrile gloves securely grasp the edges of a black wafer-handling frame. Centered inside sits the silicon wafer, etched into a dense grid of identical rectangular GPU dies separated by fine scribe lines. The gloved fingers steadily tilt the disc a few degrees backward and forward. As the flat plane angles against the light, the microscopic etched pathways act as a diffraction grating, sweeping vivid iridescent waves of violet, emerald green, cyan, and shimmering gold across the repetitive array of microchips.\n\nThe camera frames the disc in a sharp, object-focused close-up, executing a slow, graceful orbit around the edge of the wafer holder. A shallow depth of field isolates the glittering geometric surface against the out-of-focus glove tips and distant machine housings, keeping the dynamic prismatic reflections and die borders consistently centered and crisp throughout the smooth floating movement.",
+      "annotation": {
+        "title_en": "The finished wafer",
+        "scene": "fab_etch_bay",
+        "camera": "close-up, slow orbit",
+        "beat": "Gloved blue hands hold up the finished wafer in a wafer holder. Its surface is now a precise grid of hundreds of identical rectangular dies that split the light into rainbow colours as it tilts.",
+        "state": {
+          "outfit": "blue gloves",
+          "gpu_stage": "patterned wafer with a rainbow grid of dies"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          214,
+          148
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot inside the cleanroom etch bay, where Daniel holds a black wafer-handling frame with both gloved hands. Daniel’s hands in blue nitrile gloves securely grasp the edges of the black wafer-handling frame. Centered inside, the silicon wafer displays a dense grid of identical rectangular GPU dies separated by fine scribe lines. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Tilting the wafer reveals sharp geometric pathways, scattering the light into vivid iridescent waves across each die.</d> After this line the voice-over stays silent for the rest of the shot. The camera performs a slow, graceful orbit around the edge of the wafer holder with a shallow depth of field, keeping the out-of-focus glove tips and distant machine housings soft in the background. His gloved fingers steadily tilt the disc a few degrees backward and forward, causing the microscopic etched pathways to sweep iridescent waves of violet, emerald green, cyan, and shimmering gold across the repetitive array of microchips.\n\noverall_soundscape: A continuous low, steady drone of cleanroom laminar flow filtration hums in the space, subtly shifting as nitrile gloves make faint handling contact with the composite frame.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The automated testing bay of the fabrication facility is bathed in cool, clinical LED light, supplemented by an intense circular illuminator focused directly onto the probe workstation. Precision-machined steel surfaces, matte black vacuum stages, and sterile machine enclosures define the immediate surroundings, while the wafer below glints with faint prism highlights. The atmosphere is quiet, sterile, and technologically exacting, capturing a stage of rigorous automated verification.\n\nThe wafer rests securely atop a circular, dark-grey vacuum chuck. Positioned directly above it, a specialized probe card features dozens of hair-thin, angled metallic needles clustered in a tight geometric array matching the die's contact pads. No human hands enter the frame during the automated sequence. The chuck indexes beneath the probe head with rigid, microscopic lateral steps. Each time the stage pauses, the cluster of needle tips descends smoothly to touch the microscopic pads of a single rectangular die. A tiny, pinpoint contact flash of bright white-gold light glints at the needle junctions as test current pulses through the integrated circuitry, before the needles retract fractionally and the chuck shifts to align the adjacent die on the wafer grid.\n\nThe camera holds an extreme macro close-up at a shallow, low-angled perspective, maintaining a razor-thin depth of field locked onto the needle array and the die surface beneath. The surrounding machinery blurs softly into the background, keeping the entire focus on the rhythmic stepping motion, the electrical flashes, and the wafer surface throughout the shot.",
+      "annotation": {
+        "title_en": "Probe test",
+        "scene": "fab_test_floor",
+        "camera": "macro close-up",
+        "beat": "Macro of a probe card: dozens of fine needles touch down on one die after another on the wafer resting on a probe-station chuck, a tiny contact flash each time.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "patterned wafer under probe test"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          248,
+          241
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme macro close-up of the fabrication facility's automated testing bay, where Daniel monitors the probe workstation off-camera. Under cool, clinical LED light and an intense circular illuminator, the camera holds a static extreme macro close-up at a shallow, low-angled perspective, locking focus onto the probe card and wafer below. The dark-grey vacuum chuck indexes with rigid, microscopic lateral steps. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Each microscopic die gets tested individually, pulsing electrical current through every contact pad across the wafer grid.</d> After this line the voice-over stays silent for the rest of the shot. The cluster of dozens of hair-thin, angled metallic needles descends smoothly, touching the contact pads of a rectangular die. A pinpoint contact flash of bright white-gold light glints at the needle junctions as test current pulses through the circuitry. The needles retract fractionally, and the chuck shifts laterally to align the adjacent die, while blurred machine enclosures recede into the soft background.\n\noverall_soundscape: Rhythmic, high-precision stepper motor clicks and soft pneumatic hisses accompany the lateral indexing of the vacuum stage. A subtle, sharp electrical zap sizzles faintly as current contacts the silicon pads, surrounded by the quiet hum of sterile cleanroom air filtration.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the automated testing bay.\n\nThe screen displays an interface centered on a circular wafer map partitioned into hundreds of die segments. Across the grid, the individual dies register their probe results, steadily populating the interior with solid green passing indicators, leaving only a tiny scatter of red failure markers around the extreme outer edge. Daniel's gloved hand enters from the lower right of the frame, pausing directly before the map. He gives a firm, steady thumbs-up gesture against the screen's glow, celebrating the yield on the freshly probed wafer.\n\nThe camera holds a steady close-up on the monitor, framing the wafer yield graph squarely in the middle of the composition. The die boundaries remain in sharp focus throughout the shot, with the fab machinery lingering in the soft background. His gloved hand stays partially silhouetted against the bright display before the shot concludes.",
+      "annotation": {
+        "title_en": "The wafer map",
+        "scene": "fab_test_floor",
+        "camera": "close-up on a monitor",
+        "beat": "A monitor shows a circular wafer map filling with mostly green squares and a few red ones at the edge. A gloved blue hand gives a thumbs-up in front of the screen.",
+        "state": {
+          "outfit": "blue glove visible",
+          "gpu_stage": "tested wafer with a mostly green yield map"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          231,
+          145
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot of a glowing monitor in the automated testing bay, where Daniel stands just beside the screen framing the circular wafer map. The camera holds a steady close-up on the monitor, framing the wafer yield graph squarely in the middle of the composition while fab machinery lingers in the soft background. On screen, an interface centered on a circular wafer map partitioned into hundreds of die segments steadily populates its interior with solid green passing indicators, leaving only a tiny scatter of red failure markers around the extreme outer edge. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Seeing nearly every single die light up green across the wafer map proves the process finally works.</d> After this line the voice-over stays silent for the rest of the shot. Daniel's gloved hand enters from the lower right of the frame, pausing directly before the map. He gives a firm, steady thumbs-up gesture against the screen's glow, celebrating the yield on the freshly probed wafer, his hand remaining partially silhouetted against the bright display before the shot concludes.\n\noverall_soundscape: A steady, low hum emanates from the display monitor alongside the quiet whirring and precise mechanical clicking of testing equipment in the background bay.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Inside the enclosed work chamber of an automated wafer dicing station within the cleanroom fab, crisp, neutral-white LED illumination reflects off wet brushed-steel fixtures, drainage channels, and clear polycarbonate splash shields. A fine aerosolized mist hangs in the air, catching the cool industrial light and coating the surrounding metal surfaces with tiny, glistening condensation droplets in a sterile, intensely mechanical atmosphere.\n\nSecured on a vacuum chuck below, the patterned wafer rests flat against adhesive blue dicing tape stretched tight inside a circular metal ring frame. Above it, an ultra-thin diamond-grit saw blade spins at tens of thousands of revolutions per minute, blurrily transparent from sheer velocity. A dual nozzle directs a continuous, pressurized stream of deionized water right onto the contact point. The spinning blade glides steadily along a narrow street between the microscopic circuits, slicing cleanly through the crystalline silicon to cut precise straight channels while leaving the underlying blue tape intact. Fine liquid spray shears outward across the wafer as the grid divides into separate, freestanding square dies.\n\nThe camera holds a macro close-up framing, positioned at a low angle that emphasizes the razor-thin profile of the spinning blade against the silicon plane. The depth of field remains exceptionally shallow, maintaining tack-sharp focus on the cutting contact zone and the dancing water droplets while the edges of the wafer softly blur. A smooth, subtle horizontal tracking motion follows just behind the advancing blade, keeping the glistening saw kerf and the newly separated silicon edges continuously in view.",
+      "annotation": {
+        "title_en": "Dicing",
+        "scene": "fab_dicing_room",
+        "camera": "macro close-up",
+        "beat": "A thin diamond saw blade spins and cuts straight lines through the wafer under a fine spray of water, separating the grid into individual dies.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "wafer being diced into dies"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          279,
+          249
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up of the enclosed work chamber inside an automated wafer dicing station in the cleanroom fab, framed at a low angle toward the spinning saw blade and patterned wafer. Under crisp, neutral-white LED illumination reflecting off wet brushed-steel fixtures, drainage channels, and clear polycarbonate splash shields, fine aerosolized mist hangs in the chamber. On the vacuum chuck, the patterned wafer rests flat against adhesive blue dicing tape in a circular metal ring frame. The ultra-thin diamond-grit saw blade spins at extreme velocity, appearing blurrily transparent, as dual nozzles shoot pressurized deionized water directly onto the cutting point. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] The diamond saw slices cleanly along the microscopic streets, separating each die without piercing the blue tape below.</d> After this line the voice-over stays silent for the rest of the shot. The spinning blade advances along a narrow street between microscopic circuits, slicing through crystalline silicon while fine spray shears outward. The camera smoothly tracks horizontally just behind the blade, holding tack-sharp focus on the kerf and separated silicon edges with shallow depth of field.\n\noverall_soundscape: A high-pitched, turbine-like whine of the high-speed spindle blade whirs steadily above the rush of pressurized water. Fine coolant mist hisses and splatters against polycarbonate shields as the blade cuts through silicon.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the cleanroom dicing station.\n\nDaniel's hands work at the workstation stage, where the cut wafer rests on the dicing ring's tape. A slender vacuum pick-up tool gently lifts one die away from the film. Holding a pair of fine-tipped ESD tweezers in his right hand, he carefully takes hold of the die by its edges. He raises the chip directly beneath the magnifier. By the end of the shot, the bare die remains steadily held in the tweezers.\n\nThe camera frames an extreme close-up macro insert, focusing first on the delicate lift of the die from the membrane before slightly tilting up to track the tweezers into the light. A razor-thin depth of field keeps the die tack-sharp, while the tape and stage soften into an indistinct background.",
+      "annotation": {
+        "title_en": "One die",
+        "scene": "fab_dicing_room",
+        "camera": "extreme close-up",
+        "beat": "The diced wafer sits on blue tape in a metal ring. A pick-up tool lifts one die; tweezers in a blue-gloved hand hold the fingernail-sized, mirror-like silicon die under a magnifier lamp.",
+        "state": {
+          "outfit": "blue glove",
+          "gpu_stage": "single bare silicon die in tweezers"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          241,
+          130
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme close-up macro shot at the cleanroom dicing station, where Daniel's hands work over a cut wafer mounted on a dicing ring. The extreme close-up macro insert maintains a razor-thin depth of field on the workstation stage, keeping the cut wafer's die tack-sharp while the dicing tape and stage blur into the background. A slender vacuum pick-up tool gently lifts one die away from the film. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I release the tiny die from the adhesive film and secure it with the tweezers.</d> After this line the voice-over stays silent for the rest of the shot. Holding a pair of fine-tipped ESD tweezers in his right hand, Daniel carefully takes hold of the die by its edges. The camera tilts up slightly at slow speed to track the tweezers as he raises the chip into the light directly beneath the magnifier, where the bare die remains steadily held.\n\noverall_soundscape: A gentle hiss of vacuum suction accompanies the die detaching from the tape, followed by the microscopic click of fine metal tweezers grasping the silicon edges. The soft, continuous ambient drone of cleanroom air filtration hums steadily.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back in the fab gowning room.\n\nIn a methodical sequence, Daniel takes off the goggles and mask, pulls back the hood, and unzips the cleanroom suit to step out of it. He smoothly dons an anti-static lab coat, buttoning the front. On the bench beside him rests a small carrier housing the silicon die.\n\nThe camera remains static in a medium-wide framing throughout the sequence, observing Daniel from the mid-thighs up as he transitions between garments. The composition ensures both his steady de-gowning routine and the carrier on the bench stay clearly visible and sharp, avoiding any facial close-up to maintain an objective focus on his workflow.",
+      "annotation": {
+        "title_en": "Out of the suit",
+        "scene": "fab_gowning_room",
+        "camera": "medium-wide, static",
+        "beat": "Back in the gowning room at medium-wide distance, Daniel pulls off the hood, mask and goggles, steps out of the bunny suit and puts on a light-blue anti-static lab coat over his grey sweater. A small die carrier sits on the bench.",
+        "state": {
+          "outfit": "light-blue anti-static lab coat over charcoal-grey sweater, glasses",
+          "gpu_stage": "bare die in a small carrier"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          107
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium-wide shot of the fab gowning room, where Daniel stands beside a bench. The camera holds a static shot in medium-wide framing, observing Daniel from the mid-thighs up beside the bench where a small carrier housing the silicon die rests. In a methodical sequence, Daniel takes off the goggles and mask, then pulls back the hood. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] After hours inside the cleanroom, shedding the protective suit means the critical fabrication stage is finally behind us.</d> After this line the voice-over stays silent for the rest of the shot. He unzips the cleanroom suit and steps out of it. Daniel smoothly dons an anti-static lab coat and buttons the front, keeping both his steady routine and the carrier on the bench clearly visible.\n\noverall_soundscape: The rustle of cleanroom fabric shifting and a zipper opening, followed by soft clicks as buttons fasten. A low, continuous ambient hum of gowning room ventilation runs in the background.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The packaging lab is bathed in bright, cool cleanroom lighting that reflects sharply off polished metal stages and glass enclosures. In the soft-focused background, an alignment monitor displays high-magnification crosshairs, casting a faint technical glow across the workstation. The atmosphere is clinical and sterile, filled with the focused hum of micro-actuators and vacuum pickups.\n\nCentered on the vacuum stage rests a dark green substrate patterned with a microscopic grid of silver solder bumps and flanked by four tall, rectangular stacks of dark HBM memory. Daniel steadies his arm against the machine frame. The motorized bonding head flips the silicon die circuit-side down, reorienting its contact pads over the board. Guided by the vision system, the precision arm lowers the die smoothly between the four flanking memory stacks, placing it squarely onto the solder bumps. By the end of the motion, the die sits seated flush on the substrate beside the four HBM towers.\n\nThe camera maintains a macro close-up with a razor-thin depth of field, keeping the tiny solder bumps and the descending die in sharp focus while the background monitor blurs softly. A subtle downward tilt follows the chip's final descent as it docks into position. The seated die, the four surrounding HBM stacks, and the textured green substrate remain cleanly visible across the final frame.",
+      "annotation": {
+        "title_en": "Flip-chip bonding",
+        "scene": "packaging_lab",
+        "camera": "macro close-up",
+        "beat": "In a bright packaging lab, a bonding head flips the die and places it onto a green substrate covered in tiny solder bumps, beside four tall stacks of HBM memory, while an alignment camera image glows on a side screen.",
+        "state": {
+          "outfit": "light-blue lab coat sleeve",
+          "gpu_stage": "die bonded on a green substrate with four HBM stacks"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          237,
+          217
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up of a vacuum stage in a cleanroom packaging lab, where Daniel steadies his arm against the machine frame. Bright, cool cleanroom lighting reflects sharply off polished metal stages and glass enclosures, while an alignment monitor in the soft-focused background displays high-magnification crosshairs. Centered on the vacuum stage, a dark green substrate bears a microscopic grid of silver solder bumps flanked by four tall, rectangular stacks of dark HBM memory. Daniel steadies his arm against the machine frame as the motorized bonding head flips the silicon die circuit-side down over the board. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Now the bonding head flips the die and lowers it carefully right onto the silver bumps.</d> After this line the voice-over stays silent for the rest of the shot. Guided by the vision system, the precision arm lowers the die smoothly between the four memory stacks. The camera maintains a macro close-up with razor-thin depth of field, tilting subtly downward as the die seats flush onto the solder bumps beside the four HBM towers.\n\noverall_soundscape: A focused electric hum of micro-actuators and vacuum pickups fills the sterile room. Subtle mechanical whirs sound as the motorized bonding head articulates and docks the die into place.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the packaging lab.\n\nResting on a metal mesh conveyor, the substrate carries the mounted die flanked by the four HBM stacks. The conveyor smoothly advances, carrying the assembly into a reflow oven where heat melts the solder bumps to fuse the contacts. Once emerged and cooled, the assembly rests on an inspection plate where Daniel's gloved hand carefully introduces a precision dispensing stylus. The fine metallic needle glides steadily along the perimeter seam of the die, depositing a smooth, viscous bead of dark underfill epoxy that wicks into the microscopic clearance underneath through capillary action.\n\nThe camera holds an object-focused close-up, tracking the substrate's movement into the oven before refocusing on the macro mechanics of the underfill process. The framing strictly excludes Daniel's face, revealing only his gloved hand guiding the applicator. Crisp macro depth of field keeps the substrate, the die, and the dark fluid line sharply defined against the background.",
+      "annotation": {
+        "title_en": "Reflow and underfill",
+        "scene": "packaging_lab",
+        "camera": "close-up",
+        "beat": "The substrate rides a conveyor into a reflow oven glowing orange inside; then a fine needle held in a hand in a light-blue sleeve runs a bead of underfill along the edge of the die.",
+        "state": {
+          "outfit": "light-blue lab coat sleeve",
+          "gpu_stage": "bonded package being underfilled"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          241,
+          154
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an object-focused close-up in the packaging lab, where a substrate rests on a metal mesh conveyor while Daniel works nearby. The substrate carries the mounted die flanked by four HBM stacks along the moving metal mesh conveyor. The camera tracks the assembly as the conveyor smoothly advances it into the reflow oven to melt the solder bumps and fuse the contacts. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] After reflowing the contacts inside the oven, I dispense underfill along the seam to secure the die.</d> After this line the voice-over stays silent for the rest of the shot. Once cooled on an inspection plate, the camera refocuses with crisp macro depth of field as Daniel's gloved hand introduces a precision dispensing stylus, framing strictly excluding his face. The fine metallic needle glides steadily along the perimeter seam of the die, depositing a smooth bead of dark underfill epoxy that wicks into the microscopic clearance underneath.\n\noverall_soundscape: The mechanical hum of the conveyor and the low thermal whir of the reflow oven fill the room. A subtle pneumatic hiss accompanies the dispensing needle as it deposits the fluid.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the packaging lab workstation.\n\nOn the assembly stage rests the substrate carrying the silicon die. Daniel's fingers align a polished silver metal heat-spreader lid directly over the package and press it firmly into position until it seals flush against the base. He clamps his fingers lightly onto the narrow edges of the board and lifts the completed GPU package from the mount. Turning it toward the camera, he briefly exposes the dense grid of tiny gold contact pads on the underside before tilting the silver lid upward to catch the overhead light. By the end of the action, the finished, lidded chip is held upright and steady.\n\nThe camera operates in an extreme macro close-up, performing a subtle, slow push toward the elevated processor. The shallow depth of field keeps the reflective bevels of the silver lid, the printed traces of the substrate, and his fingertips in razor-sharp focus while dissolving the background into a soft haze.",
+      "annotation": {
+        "title_en": "The lid",
+        "scene": "packaging_lab",
+        "camera": "macro close-up, slow push",
+        "beat": "A polished silver heat-spreader lid is pressed onto the package. Two fingers lift the finished GPU chip, a silver square on a green substrate with gold contact pads underneath, and turn it toward the lens.",
+        "state": {
+          "outfit": "fingers only",
+          "gpu_stage": "finished packaged GPU chip with silver lid"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          230,
+          159
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme macro close-up of the packaging lab workstation, where Daniel's hands hover over the assembly stage. On the assembly stage, the substrate rests carrying the silicon die. Daniel's fingers align a polished silver metal heat-spreader lid directly over the package and press it firmly into position until it seals flush against the base. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Once the polished heat spreader seals flush, our completed graphics processor is finally ready for inspection.</d> After this line the voice-over stays silent for the rest of the shot. He clamps his fingers lightly onto the narrow edges of the board and lifts the completed GPU package from the mount. Turning it toward the camera, he briefly exposes the dense grid of tiny gold contact pads on the underside before tilting the silver lid upward to catch the overhead light. By the end of the action, the finished, lidded chip is held upright and steady. The camera performs a subtle, slow push toward the elevated processor with shallow depth of field.\n\noverall_soundscape: A firm, precise click echoes as the metal lid seals flush onto the package. A gentle ambient hum of ventilation persists in the packaging lab.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the packaging lab workstation.\n\nDaniel carefully lowers the finished GPU chip directly into the open gold pins of the test socket. He smoothly swings the hinged metal retention clamp downward until it latches securely with a tactile click, firmly seating the package. His hands withdraw entirely from view. Within seconds, the connected monitor rapidly scrolls lines of sensor telemetry, frequency checks, and voltage data before flashing a large, solid green PASS graphic that casts vibrant reflections across the locked fixture.\n\nThe camera holds a steady, stationary close-up focused tightly on the test socket, angled slightly upward so both the latch mechanism and the diagnostic display remain simultaneously visible. The depth of field keeps the mechanical fixture crisp, letting the dramatic shift in monitor glow from neutral blue to vivid emerald green wash directly over the brushed metal surfaces.",
+      "annotation": {
+        "title_en": "Final test",
+        "scene": "packaging_lab",
+        "camera": "close-up",
+        "beat": "The chip drops into a test socket and the clamp closes. A monitor runs a test sequence and flashes a large green PASS.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "packaged GPU chip passing final test"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          230,
+          140
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady close-up shot at the packaging lab workstation, where Daniel works over the open gold pins of the test socket. The camera holds a steady, stationary close-up focused tightly on the test socket, angled slightly upward so both the latch mechanism and the diagnostic display remain simultaneously visible. Daniel carefully lowers the finished GPU chip directly into the open gold pins of the test socket. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Now for the moment of truth, locking the clamp down to see if our silicon posts.</d> After this line the voice-over stays silent for the rest of the shot. He smoothly swings the hinged metal retention clamp downward until it latches securely with a tactile click, firmly seating the package, before his hands withdraw entirely from view. Within seconds, the connected monitor rapidly scrolls lines of sensor telemetry, frequency checks, and voltage data before flashing a large, solid green PASS graphic. The dramatic shift in monitor glow from neutral blue to vivid emerald green washes directly over the crisp brushed metal surfaces.\n\noverall_soundscape: A faint contact sound occurs as the chip aligns with the socket, followed by a sharp, crisp metallic snap of the retention clamp locking. A subtle electronic hum accompanies the rapid cycling of the monitor display.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Afternoon light streams into the home electronics workshop, mingling with the warm glow of domestic ambient lighting and an articulated desk magnifier lamp. The spacious room feels quiet, organized, and focused. At the center of the wooden workbench lies a wide green anti-static mat, upon which rests a bare, matte-black graphics card circuit board with an unpopulated, empty square footprint waiting for its processor. Component drawers, spools of fine wire, and testing equipment subtly fill the softly lit background shelves.\n\nSeated on a stool at the bench, Daniel appears as a modest figure within the wide room. He leans forward attentively over the work surface. With a steady hand, he places the GPU chip onto the mat right beside the board's empty footprint. He then gently tugs the articulated magnifier lamp closer to inspect the contact pads on the bare circuit board, preparing for assembly without rushing.\n\nThe camera holds a locked-off wide shot at room level, observing the entire setting without panning or zooming. Daniel's full seated posture and the expansive workbench dominate the frame, prioritizing the physical environment and the precision electronics over close facial detail. The bare black board and the chip stay clearly visible atop the green mat beneath the warm task light throughout the duration.",
+      "annotation": {
+        "title_en": "Back at the bench",
+        "scene": "home_electronics_bench",
+        "camera": "wide, static",
+        "beat": "Afternoon in the home studio. Daniel, back in his charcoal-grey sweater, sits at an electronics bench with a magnifier lamp, small in the frame. A bare black graphics card circuit board with an empty square footprint lies on a green mat.",
+        "state": {
+          "outfit": "charcoal-grey sweater, glasses",
+          "gpu_stage": "bare black graphics card board and the chip on the bench"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          210
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a spacious home electronics workshop illuminated by afternoon light, where Daniel sits on a stool at a wooden workbench. The camera holds a static wide shot at room level. Afternoon light streams into the spacious workshop, mingling with warm domestic ambient lighting and an articulated desk magnifier lamp above softly lit shelves with component drawers, spools of fine wire, and testing equipment. Daniel leans forward attentively over the central wooden workbench, where a bare, matte-black graphics card circuit board rests on a wide green anti-static mat with an unpopulated, empty square footprint. With a steady hand, he places the GPU chip onto the mat right beside the board's empty footprint. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I set the processor down beside the bare board, checking the contact pads before starting.</d> After this line the voice-over stays silent for the rest of the shot. He then gently tugs the articulated magnifier lamp closer to inspect the contact pads on the bare circuit board, preparing for assembly without rushing.\n\noverall_soundscape: A faint, quiet room tone fills the calm workshop. The chip settles with a tiny click onto the mat, accompanied by the gentle metallic creak of the lamp's articulated arm being moved.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home electronics workbench.\n\nCentered on the mat rests the circuit board with an empty footprint of solder pads. Using fine-tipped metal tweezers, Daniel delicately aligns and lowers the chip onto the footprint. He then brings a cylindrical hot-air rework nozzle into frame, sweeping heated air in steady circular passes around the edges. As the solder liquefies with a faint gleam, the chip shifts imperceptibly and settles completely flat against the board, drawn flush by surface tension. By the end, the chip rests permanently bonded to the board.\n\nThe camera maintains a locked macro close-up tilted slightly downward at the circuit board. A shallow depth of field keeps the chip and surrounding circuit traces sharply defined while the background recedes into soft blur. The framing stays perfectly motionless throughout the delicate assembly, documenting the exact physical instant the processor solders securely into place.",
+      "annotation": {
+        "title_en": "Chip on the board",
+        "scene": "home_electronics_bench",
+        "camera": "macro close-up",
+        "beat": "Tweezers place the silver-lidded chip onto the empty footprint of the black board; a hot-air rework nozzle heats it until it settles flat.",
+        "state": {
+          "outfit": "grey sweater sleeve",
+          "gpu_stage": "chip soldered onto the black graphics card board"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          231,
+          145
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a locked macro close-up at the home electronics workbench, where Daniel works over a circuit board centered on the mat. The camera holds a static macro close-up tilted slightly downward at the circuit board, keeping the solder footprint and surrounding circuit traces sharply defined against a softly blurred background. Using fine-tipped metal tweezers, Daniel delicately aligns and lowers the chip onto the empty footprint. He brings a cylindrical hot-air rework nozzle into frame, sweeping heated air in steady circular passes around the edges. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Surface tension pulls the chip flush into place once the solder liquefies under the hot air.</d> After this line the voice-over stays silent for the rest of the shot. As the solder liquefies with a faint gleam, the chip shifts imperceptibly and settles completely flat against the board, drawn flush by surface tension to rest permanently bonded.\n\noverall_soundscape: A gentle, steady hiss of hot air rushes from the rework nozzle. Tiny, precise metallic scrapes resonate as the tweezers guide the component onto the board.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the electronics workbench.\n\nOnly Daniel's steady hands enter the frame. At the center lies the graphics card board, with the GPU chip already soldered flat in place. Using fine-tipped tweezers and an ultra-slender soldering iron with a gleaming tip, his hands carefully solder small, rectangular black memory packages in a tight perimeter around the central processor. Tiny beads of silver solder melt cleanly onto the microscopic leads. He shifts toward the outer edge to attach a straight row of dark, blocky power chokes and miniature capacitors. As the hot tip touches liquid flux at a joint, a delicate, translucent wisp of flux smoke curls lazily upward through the conical beam of lamplight, leaving behind a fully populated board with all components seated flat.\n\nThe camera holds an intimate macro close-up with a razor-thin depth of field, focused squarely on the molten solder joints and dark silicon chips. A subtle, steady drift follows the soldering iron's slow progression across the board, keeping Daniel's face completely out of view while emphasizing the intricate, microscopic craftsmanship of the assembling circuit.",
+      "annotation": {
+        "title_en": "Memory and power",
+        "scene": "home_electronics_bench",
+        "camera": "macro close-up",
+        "beat": "A fine soldering iron solders black memory chips around the GPU and a row of power chokes along the board edge; a thin wisp of flux smoke curls up under the lamp.",
+        "state": {
+          "outfit": "grey sweater sleeve",
+          "gpu_stage": "populated graphics card board"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          253,
+          179
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate macro close-up at the electronics workbench, where Daniel's steady hands work over a graphics card board under a conical beam of lamplight. The camera holds an intimate macro close-up with a razor-thin depth of field on the graphics card board, keeping Daniel's face out of view. With the GPU chip already soldered flat, Daniel's steady hands use fine-tipped tweezers and an ultra-slender soldering iron with a gleaming tip to solder small, rectangular black memory packages around the processor. Tiny beads of silver solder melt cleanly onto microscopic leads. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Surrounding the core with memory modules requires extreme patience before finishing the power delivery stages.</d> After this line the voice-over stays silent for the rest of the shot. A subtle, steady drift follows the soldering iron as Daniel shifts toward the outer edge to attach a straight row of dark, blocky power chokes and miniature capacitors. Touching liquid flux, the hot tip sends a delicate, translucent wisp of flux smoke curling upward through the conical beam of lamplight, leaving the board fully populated with components seated flat.\n\noverall_soundscape: A subtle electric hum accompanies the microscopic click of metal tweezers. A faint, soft hiss sizzles briefly as the hot soldering tip touches the liquid flux.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the electronics workbench.\n\nResting on the mat is the graphics card with the central GPU. Daniel's hands enter the frame. Holding an applicator syringe, he extrudes a neat dot of viscous grey thermal paste onto the center of the chip's silver lid. Taking a small flat spatula, his fingers delicately draw the paste outward in smooth, deliberate strokes. He works the compound across the metal, leveling it into a thin, even, opaque grey square that fully coats the die without spilling onto the underlying substrate.\n\nThe camera maintains a tight macro close-up angled over the chip, maintaining razor-sharp focus on the metallic lid and spatula tip. The shallow depth of field leaves the surrounding board components in a soft blur. A static frame preserves the precision of the delicate spreading motion, ending on the cleanly coated processor lid.",
+      "annotation": {
+        "title_en": "Thermal paste",
+        "scene": "home_electronics_bench",
+        "camera": "macro close-up",
+        "beat": "A small dot of grey thermal paste is squeezed onto the chip's silver lid and spread into a thin even layer with a small spatula.",
+        "state": {
+          "outfit": "fingers only",
+          "gpu_stage": "board with thermal paste on the chip"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          222,
+          140
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro close-up angled over an electronics workbench, where Daniel's hands hover above a graphics card resting on a mat. The camera holds a static shot in tight macro close-up angled over the graphics card chip, maintaining razor-sharp focus on its silver lid while the surrounding board components stay in a soft blur. Daniel's hands enter the frame holding an applicator syringe and extrude a neat dot of viscous grey thermal paste onto the center of the lid. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I apply a drop of thermal paste, spreading it out into a smooth, even layer over the die.</d> After this line the voice-over stays silent for the rest of the shot. Taking a small flat spatula, his fingers delicately draw the paste outward in smooth, deliberate strokes. He levels the compound across the metal into a thin, even, opaque grey square that fully coats the die without spilling onto the underlying substrate, ending on the cleanly coated processor lid.\n\noverall_soundscape: A soft plastic click of the syringe plunger precedes a faint squelch as the viscous paste extrudes. The spatula makes an extremely subtle, smooth scraping sound against the polished metal lid.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the electronics workbench.\n\nThe circuit board rests flat on the mat, its central die coated in thermal paste. Daniel's hands carefully carry a heavy cooling unit into frame. The heatsink comprises a dense stack of silver-toned aluminium fins threaded with four thick, lustrous copper heat pipes that emerge from a solid baseplate. He lowers the heatsink squarely onto the circuit board, aligning it over the pasted die and mounting holes. Holding a magnetic precision screwdriver, he drives four spring-loaded screws into place using a diagonal criss-cross pattern, gradually tightening opposite corners to distribute tension evenly. By the end, the hefty heatsink is firmly mounted to the board with the springs neatly compressed.\n\nThe camera holds a stable, high-angle close-up insert centered directly over the circuit board. The framing keeps the heatsink, the circuit components, and Daniel's working fingers clearly visible in sharp focus, following the mechanical assembly with smooth, unhurried documentary precision.",
+      "annotation": {
+        "title_en": "The heatsink",
+        "scene": "home_electronics_bench",
+        "camera": "close-up",
+        "beat": "A large heatsink with thick copper heat pipes and a dense aluminium fin stack is lowered onto the board and four spring screws are tightened in a cross pattern.",
+        "state": {
+          "outfit": "grey sweater sleeves",
+          "gpu_stage": "board with copper-pipe heatsink mounted"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          154
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle close-up insert of the electronics workbench, where Daniel's hands position the heatsink over the circuit board. The camera holds a stable high-angle shot centered directly over the circuit board resting flat on the mat, its central die coated in thermal paste. Daniel's hands carefully carry the heavy cooling unit into frame, showing a heatsink with a dense stack of silver-toned aluminium fins threaded with four thick, lustrous copper heat pipes emerging from a solid baseplate. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I carefully align the cooler, then tighten the spring screws in a criss-cross pattern for balanced pressure.</d> After this line the voice-over stays silent for the rest of the shot. He lowers the heatsink squarely onto the circuit board over the die and mounting holes. Holding a magnetic precision screwdriver, he drives four spring-loaded screws into place diagonally, gradually tightening opposite corners to distribute tension evenly until the hefty heatsink is firmly mounted with the springs neatly compressed.\n\noverall_soundscape: A soft metallic tap as the heatsink base seats onto the board, accompanied by the gentle scraping and mechanical clicks of the screwdriver threading spring-loaded screws into the mounting holes.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the electronics workbench.\n\nThe graphics card begins with its aluminium fin stack and copper heat pipes exposed on the board. Daniel aligns a matte-black and emerald-green shroud housing three cooling fans over the assembly. He presses the shroud down until the retaining tabs seat with positive clicks, then fastens a brushed black metal backplate using a precision hex driver. Once the final screw is snug, his hands withdraw completely from the frame, leaving the finished NVIDIA graphics card resting solitary on the mat, its triple-fan enclosure and backplate fully unified.\n\nThe camera holds a low-angle object-focused perspective and initiates a slow, continuous orbit around the stationary card. As the camera circles, focused reflections glide smoothly across the angled fan blades, the matte shroud, and the polished metallic edges, keeping the graphics card crisp and prominent against the softly blurred workbench environment.",
+      "annotation": {
+        "title_en": "The card is born",
+        "scene": "home_electronics_bench",
+        "camera": "slow orbit around the card",
+        "beat": "A black-and-green fan shroud with three fans clicks on and a black backplate is screwed on. The finished NVIDIA graphics card lies on the green mat as the camera slowly orbits it, light gliding over the fans and metal.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "finished black-and-green triple-fan NVIDIA graphics card"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          209,
+          143
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot at an electronics workbench, where Daniel works over an exposed graphics card on a mat. The camera maintains a low-angle, object-focused perspective on the graphics card, which begins with its aluminium fin stack and copper heat pipes exposed on the board. Daniel aligns a matte-black and emerald-green shroud housing three cooling fans over the assembly, pressing it down until the retaining tabs seat with positive clicks. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Snapping the shroud into place and securing the backplate brings the entire custom assembly together.</d> After this line the voice-over stays silent for the rest of the shot. Using a precision hex driver, he fastens a brushed black metal backplate. Once the final screw is snug, Daniel's hands withdraw completely from the frame, leaving the finished NVIDIA graphics card resting solitary on the mat. The camera initiates a slow, continuous orbit around the stationary card, catching reflections across the angled fan blades, matte shroud, and polished metallic edges against the softly blurred workbench environment.\n\noverall_soundscape: Plastic retaining tabs click crisply into place on the PCB. A precision hex driver squeaks lightly as miniature screws are torqued snug against metal.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home electronics workbench.\n\nMounted horizontally in the PCIe slot of the test bench sits the graphics card. Daniel's hands reach into frame toward the corner of the board and depress a small tactile power switch. Upon activation, the green light strip along the card's top edge instantly ignites with a bright glow washing over the casing. Simultaneously, all three fans spin up smoothly, rapidly accelerating until their blades blur into fluid rotation. His hands retreat out of frame, leaving the card running under its own power.\n\nThe camera maintains a low-angle close-up framing the front three-quarter profile of the graphics card. As power flows, the lens executes a slow, steady macro drift along the illuminated edge and the spinning fans, keeping the mechanical motion razor-sharp. A shallow depth of field blurs the test rig and surrounding room into soft bokeh, accentuating the glow.",
+      "annotation": {
+        "title_en": "First light",
+        "scene": "home_electronics_bench",
+        "camera": "close-up",
+        "beat": "On a bench test rig the card powers up: its three fans spin up and a green light strip along its edge glows in the dim studio.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "graphics card powered on, fans spinning"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          146
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle close-up at the home electronics workbench, where Daniel's hands reach toward a graphics card mounted on a test bench. From a low-angle close-up framing the front three-quarter profile of the graphics card mounted horizontally in the PCIe slot of the test bench, Daniel's hands reach toward the corner of the board. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Hitting the power switch now, watching for the light strip to glow and the fans to spin.</d> After this line the voice-over stays silent for the rest of the shot. He depresses a small tactile power switch. The green light strip along the card's top edge instantly ignites with a bright glow washing over the casing, while all three fans spin up smoothly, rapidly accelerating until their blades blur into fluid rotation. Daniel's hands retreat out of frame, leaving the card running under its own power. The camera executes a slow, steady macro drift along the illuminated edge and the spinning fans, keeping the mechanical motion razor-sharp while a shallow depth of field blurs the test rig and surrounding room into soft bokeh.\n\noverall_soundscape: A crisp, tactile plastic click sounds as the switch is pressed. Three cooling fans produce a rising whir that accelerates into a continuous, smooth mechanical hum over a quiet room tone.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Evening light fills a quiet domestic room where a spacious wooden gaming desk holds an open computer build. Warm practical lighting from a desk lamp mixes with the dim evening atmosphere, casting soft highlights over the hardware. A modern black PC case sits prominently on the surface with its tempered glass side panel set aside, exposing the dark motherboard inside where the long primary PCIe slot stands completely vacant. Beside the open chassis, the graphics card rests flat upon a crinkled silver-grey anti-static bag, waiting to be installed.\n\nDaniel stands beside the desk, seen in wide profile at a distance. He pauses thoughtfully next to the open tower, looking down between the waiting graphics card and the exposed slot inside the case. With deliberate, calm focus, he adjusts his posture and rests one hand lightly against the edge of the desk, preparing for the final assembly without rushing.\n\nThe camera holds a steady wide shot that prioritizes the workspace and hardware components over portraiture. Daniel remains visible as a full figure to the side, establishing scale while the illuminated PC case and the resting graphics card dominate the center and foreground. The fixed framing maintains a clear, documentary perspective across the desk surface, keeping the empty PCIe socket, the card on its protective bag, and Daniel's focused stance in sharp, balanced view throughout.",
+      "annotation": {
+        "title_en": "An open case",
+        "scene": "home_gaming_desk",
+        "camera": "wide",
+        "beat": "Evening at a gaming desk. An open black PC case with a tempered glass panel stands on the desk; the long PCIe slot of the motherboard inside is empty. The graphics card waits on an anti-static bag. Daniel stands beside it, seen from the side at a distance.",
+        "state": {
+          "outfit": "charcoal-grey sweater",
+          "gpu_stage": "graphics card next to an open PC case"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          260,
+          223
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a quiet domestic room illuminated by evening light, where Daniel stands beside a spacious wooden gaming desk holding an open computer build. The camera holds a steady wide shot across the workspace, where warm light from a desk lamp mixes with the dim evening atmosphere. Dominating the center, the modern black PC case sits with its tempered glass side panel set aside, exposing the dark motherboard and vacant primary PCIe slot. Beside the chassis, the graphics card lies flat upon a crinkled silver-grey anti-static bag. Standing in wide profile at a distance, Daniel pauses thoughtfully beside the open tower, looking down between the waiting graphics card and the exposed slot. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Now comes the centerpiece of the build, taking a final pause before slotting it home.</d> After this line the voice-over stays silent for the rest of the shot. With calm focus, he adjusts his posture and rests one hand lightly against the edge of the desk, while the camera maintains its fixed documentary framing throughout.\n\noverall_soundscape: A gentle domestic room tone hums softly in the evening quiet. Subtle fabric rustling accompanies Daniel shifting his posture, followed by a faint wooden tap as his hand rests against the desk surface.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the open computer case at the gaming desk.\n\nDaniel's hands align the graphics card directly above the motherboard slot. He presses downward with firm, even pressure until the latch snaps shut with a crisp click. One hand steadies the rear bracket flush against the case while he tightens a mounting screw. Finally, his fingers grasp a braided power cable and firmly insert its connector into the socket along the top edge of the card, leaving the graphics card fully anchored inside the chassis.\n\nThe camera holds a macro close-up with shallow depth of field, locked tightly onto the connection points inside the case. A slight, smooth push emphasizes the latch engagement, bracket fastener, and power plug in sharp focus. The framing never tilts upward, entirely excluding Daniel's face and upper body to keep the mechanical assembly process at the center of the frame.",
+      "annotation": {
+        "title_en": "Into the slot",
+        "scene": "home_gaming_desk",
+        "camera": "macro close-up",
+        "beat": "Hands in grey sleeves press the graphics card into the PCIe slot until the latch clicks, screw its bracket to the case and plug in the power cable.",
+        "state": {
+          "outfit": "grey sweater sleeves",
+          "gpu_stage": "graphics card installed in the PC"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          223,
+          145
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up inside the open computer case at the gaming desk, where Daniel's hands work above the motherboard slot. The camera holds a macro close-up with shallow depth of field, focused tightly on connection points inside the chassis. Daniel's hands align the graphics card directly above the motherboard slot, pressing downward with firm, even pressure until the latch snaps shut with a crisp click. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] I seat the graphics card firmly until the latch snaps, then secure the bracket and power cable.</d> After this line the voice-over stays silent for the rest of the shot. With a slight, smooth push forward, the camera emphasizes the latch engagement, bracket fastener, and power plug in sharp focus, never tilting upward and entirely excluding Daniel's face and upper body. One hand steadies the rear bracket flush against the case while he tightens a mounting screw. Finally, his fingers grasp a braided power cable and firmly insert its connector into the socket along the top edge of the card, leaving the graphics card fully anchored inside the chassis.\n\noverall_soundscape: A sharp plastic click sounds as the graphics card seats firmly into the slot. Metal threads quietly turn as the mounting screw tightens against the case bracket, followed by the solid tactile snap of the power cable connector seating.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the gaming desk.\n\nDaniel slides the tinted tempered glass side panel smoothly into place along the chassis rails, securing it flush against the metal frame. His finger reaches to the top panel and firmly presses the circular power switch. Immediately, the internal cooling fans begin spinning as diffused rainbow RGB lighting ripples across the motherboard components. Behind the glass, the graphics card’s emerald-green accent strip ignites with a steady, vibrant glow. Simultaneously, the adjacent monitor flickers to life, displaying a crisp white motherboard boot logo on a dark background as his finger withdraws.\n\nThe camera begins in an intimate close-up on the glass seam and the top power button, capturing the decisive press. It then executes a steady, slow pull-back, expanding the framing to encompass both the brightly illuminated interior of the computer case and the glowing monitor screen beside it. The vivid green GPU accent remains crisp and prominently defined through the glass panel throughout the shot.",
+      "annotation": {
+        "title_en": "Power on",
+        "scene": "home_gaming_desk",
+        "camera": "close-up, slow pull-back",
+        "beat": "The glass side panel slides shut and a finger presses the power button. Rainbow lighting comes alive inside the case, the card's green strip glows through the glass and the monitor beside it shows a boot screen.",
+        "state": {
+          "outfit": "finger only",
+          "gpu_stage": "PC with the graphics card booting"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          245,
+          160
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up shot at the gaming desk, where Daniel stands beside the computer chassis and an adjacent monitor. The camera begins in an intimate close-up on the glass seam and top power button as Daniel slides the tinted tempered glass side panel smoothly along chassis rails, securing it flush against the metal frame. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] With the side panel secured, it is finally time for the first official power on.</d> After this line the voice-over stays silent for the rest of the shot. His finger reaches to the top panel and firmly presses the circular power switch. The camera executes a steady, slow pull-back as internal cooling fans begin spinning and diffused rainbow RGB lighting ripples across motherboard components. Behind the glass, the graphics card's emerald-green accent strip ignites with a steady, vibrant glow. Simultaneously, as his finger withdraws, the adjacent monitor flickers to life, displaying a crisp white motherboard boot logo on a dark background. The expanding framing encompasses the illuminated case interior and glowing monitor, with the green GPU accent remaining prominently defined.\n\noverall_soundscape: A soft sliding friction and muted metallic click of the glass panel mounting into place, followed by a crisp mechanical click of the power button. The quiet whir and gentle rushing air of cooling fans spinning up softly hums across the desk.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the gaming desk, now late at night.\n\nViewed from behind, Daniel sits centered in the ergonomic gaming chair. He reaches forward, lifts a pair of black over-ear gaming headphones from the desk with both hands, and slips them over his head, settling the padded band into place. He then grasps the mouse and double-clicks an icon. Instantly, an elaborate fantasy game title screen bursts onto the monitor, flooding his back, shoulders, and the desk with vibrant cinematic illumination.\n\nThe camera holds a steady medium shot from behind Daniel at desk level, framed waist-up without showing any facial close-ups. His seated form, the newly donned headset, and the illuminated screen remain clearly visible alongside the glowing computer case. The soft shift in room luminance cast by the launching game is captured with crisp documentary realism, maintaining focus on the operating system and the vivid display.",
+      "annotation": {
+        "title_en": "Headset on",
+        "scene": "home_gaming_desk",
+        "camera": "medium shot from behind",
+        "beat": "Night, room lights off. Seen from behind at medium distance, Daniel sits in a gaming chair, puts on a black over-ear headset and launches a game; a fantasy title screen lights up the monitor and the room.",
+        "state": {
+          "outfit": "charcoal-grey sweater, black headset",
+          "gpu_stage": "game launching"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          146
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium shot from behind Daniel at desk level, where Daniel sits centered in an ergonomic gaming chair before his desk late at night. The camera holds a static shot framed waist-up from behind Daniel. He reaches forward and lifts a pair of black over-ear gaming headphones from the desk with both hands, slipping them over his head and settling the padded band into place. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Everything is set up, so now it is time to put on the headset and launch the game.</d> After this line the voice-over stays silent for the rest of the shot. He then grasps the mouse and double-clicks an icon. An elaborate fantasy game title screen immediately bursts onto the monitor, flooding Daniel's back, shoulders, and the desk with vibrant cinematic illumination while the glowing computer case shines beside him.\n\noverall_soundscape: The subtle rustle of headset padding settling against hair, followed by the crisp snap of a mouse double-click. A gentle, quiet hum emanates from the running computer case in the otherwise still room.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the gaming desk.\n\nDaniel's hands are visible in the lower foreground. His left hand rests over the WASD keys of the mechanical keyboard, while his right hand gently grips the mouse on the mat. On the monitor, the graphics card drives an expansive open-world fantasy environment in fluid motion. A cloaked rider gallops along the shallow edge of a wide lake at sunset, casting realistic ray-traced reflections across the rippling water and illuminated gravel shores. Daniel lightly presses the directional keys and nudges the mouse to pan the virtual camera, guiding the rider toward distant mountain silhouettes as dynamic sunlight glints off the virtual horizon.\n\nThe camera frames the scene from a tight over-the-shoulder insert angle, keeping Daniel's hands and peripherals in the lower edge while the vibrant monitor fills the rest of the frame. The camera remains steady with only subtle organic drift, maintaining sharp focus on both the physical controls and the smooth real-time rendering.",
+      "annotation": {
+        "title_en": "Into the world",
+        "scene": "home_gaming_desk",
+        "camera": "over the shoulder toward the monitor",
+        "beat": "The monitor fills most of the frame: a breathtaking open-world fantasy landscape with ray-traced reflections on a lake at sunset as a rider gallops across it. Daniel's hands on the keyboard and mouse are in the foreground.",
+        "state": {
+          "outfit": "hands only",
+          "gpu_stage": "open-world game running on his GPU"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          233,
+          159
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight over-the-shoulder insert shot at the gaming desk, where Daniel rests his hands over the mechanical keyboard and mouse. The camera holds a steady framing with subtle organic drift, keeping Daniel's hands and peripherals along the lower edge while the vibrant monitor fills the rest of the frame. In the lower foreground, Daniel's left hand rests over the WASD keys of the mechanical keyboard as his right hand grips the mouse on the mat. On the monitor, an expansive open-world fantasy environment moves in fluid motion as a cloaked rider gallops along a shallow lake edge at sunset, casting realistic ray-traced reflections across rippling water and illuminated gravel shores. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Firing up the open world, the card renders realistic water reflections and smooth movement without hesitation.</d> After this line the voice-over stays silent for the rest of the shot. Daniel lightly presses the directional keys and nudges the mouse to pan the virtual camera, guiding the rider toward distant mountain silhouettes as dynamic sunlight glints off the virtual horizon.\n\noverall_soundscape: Quiet, tactile clicks from the mechanical keyboard switches accompany the soft friction of the mouse gliding across the mat. Faint, immersive game audio emits the rhythmic splashing of galloping hooves through shallow water.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the gaming desk late at night.\n\nOn the monitor, a massive, photorealistic dragon sweeps down across a crumbling fantasy citadel, unleashing a roaring plume of ray-traced fire that fills the screen with hyper-realistic particle physics, blooming light, and dynamic cast shadows. Directly adjacent within the PC chassis, the graphics card operates under heavy load. Its three cooling fans spin at high speed into a semi-translucent blur, pulling cool air through the heatsink fins. Along the card's exposed top edge, the green illuminated branding pulses rhythmically against the shroud and cabling. Daniel's hands remain outside the frame, leaving the machine and its visual output front and center.\n\nThe camera is positioned in a close-up, angled shot framing the screen's right edge alongside the computer’s illuminated interior. A slow, subtle rack focus travels smoothly from the fiery dragon battle on the monitor to the spinning fan blades and pulsing green logo inside the case. The composition stays steady, capturing the direct link between the hardware and the rendered game world.",
+      "annotation": {
+        "title_en": "The dragon",
+        "scene": "home_gaming_desk",
+        "camera": "close-up on the screen and the glowing case",
+        "beat": "On screen a huge dragon breathes fire in a ray-traced battle; beside the monitor, the PC's glass panel shows the graphics card's fans spinning and its green light pulsing.",
+        "state": {
+          "outfit": "not visible",
+          "gpu_stage": "dragon battle on screen, card working hard"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          242,
+          170
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up angled shot at the gaming desk late at night, where the edge of a vivid monitor sits beside an illuminated computer chassis. On the monitor, a photorealistic dragon sweeps down across a crumbling fantasy citadel, unleashing a roaring plume of ray-traced fire with blooming light and dynamic cast shadows. The camera holds a steady close-up angled shot framing the screen's right edge alongside the computer's illuminated interior. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] Pushing the new graphics card to its absolute limits renders the dragon's fire in gorgeous real-time.</d> After this line the voice-over stays silent for the rest of the shot. The camera slowly and subtly rack focuses from the dragon battle to the adjacent graphics card inside the chassis. Under heavy load, the card's three cooling fans spin at high speed into a semi-translucent blur, drawing air through the heatsink fins while its green illuminated branding pulses rhythmically against the shroud and cabling. Daniel's hands remain outside the frame throughout the shot.\n\noverall_soundscape: The high-pitched, steady whir of rapid cooling fans blends with the low electronic hum of the computer chassis. In-game audio plays from the monitor with the rumbling whoosh of roaring dragon fire.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the gaming desk.\n\nViewed from behind, Daniel sits centered in the gaming chair, framed in silhouette against the radiant setup. As the gameplay resolves, an ornate \"VICTORY\" banner flashes boldly across the display. Daniel abruptly thrusts both arms high into the air with open hands, leaning back slightly in the chair in spontaneous, triumphant relief. He holds the celebratory gesture against the glare of the screen, while the graphics card continues running smoothly beside him.\n\nThe camera holds a static wide shot positioned directly behind the workstation, emphasizing the glowing technology and room atmosphere. The wide perspective keeps Daniel's celebratory posture, the illuminated graphics card, and the victory screen fully visible together throughout the sequence.",
+      "annotation": {
+        "title_en": "Victory",
+        "scene": "home_gaming_desk",
+        "camera": "wide from behind",
+        "beat": "A VICTORY banner fills the screen. Seen from behind in the glowing dark room, Daniel throws both arms up from his chair.",
+        "state": {
+          "outfit": "charcoal-grey sweater, black headset",
+          "gpu_stage": "victory screen"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          233,
+          117
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static wide shot of a glowing workstation, where Daniel sits centered in a gaming chair viewed from behind against a radiant setup. The camera holds a static wide shot positioned directly behind the workstation, framing Daniel in silhouette against the radiant setup. As the gameplay resolves on the display, an ornate VICTORY banner flashes boldly across the screen. Daniel abruptly thrusts both arms high into the air with open hands, leaning back slightly in the gaming chair in spontaneous, triumphant relief. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] The new build held perfectly stable under full load, finally giving me a completely seamless win.</d> After this line the voice-over stays silent for the rest of the shot. He holds the celebratory gesture against the glare of the screen. Beside him, the illuminated graphics card continues running smoothly, with Daniel's celebratory posture, the hardware, and the victory screen remaining fully visible throughout.\n\noverall_soundscape: A quiet, steady whir hums from the graphics card fans beside the desk. The gaming chair emits a soft creak as Daniel leans back.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back at the cork board in the home studio.\n\nDaniel sits in his chair beside the workstation. Having just celebrated, he lowers his arms to the armrests and leans back in relief, admiring the humming rig. He does not speak directly to the camera, as his voice-over reflects on how the intricate engineering endeavour originated from a humble graphite pencil sketch. He remains calm and motionless, becoming a modest presence within the expanding frame.\n\nThe camera begins focused on the PC tower and the paused game display before executing a smooth, continuous pull-back into a comprehensive wide shot. As the frame widens, it draws past the corkboard in the foreground, establishing a balanced composition that simultaneously reveals the original pencil schematic, the functioning computer, and the running game in one unified view.",
+      "annotation": {
+        "title_en": "Full circle",
+        "scene": "home_studio_wall",
+        "camera": "slow pull-back to a wide shot",
+        "beat": "The camera starts on the glowing PC and the paused game, then pulls back past the cork board where the original pencil architecture sketch is still pinned, so the sketch, the PC and the game are seen together. In voice-over Daniel says it all started with a pencil.",
+        "state": {
+          "outfit": "Daniel small in the frame or out of frame",
+          "gpu_stage": "sketch on the board and the running PC in one frame"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          240,
+          132
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot of a PC tower and display in a home studio, where Daniel sits in a chair beside the workstation. The camera begins focused on the PC tower and the paused game display, then executes a smooth, continuous pull-back into a comprehensive wide shot. Beside the workstation, Daniel sits in his chair, lowers his arms to the armrests, and leans back in relief while admiring the humming rig. Daniel, speaking in voice-over, a man in his early thirties with a calm, warm baritone voice, an unhurried pace and a neutral American accent (S1) says: <d>[English] It still amazes me that this entire intricate build began with a simple graphite pencil sketch.</d> After this line the voice-over stays silent for the rest of the shot. Daniel remains calm and motionless as the frame expands around him. The camera draws past the corkboard in the foreground, establishing a balanced composition that simultaneously reveals the original pencil schematic, the functioning computer, and the running game in one unified view.\n\noverall_soundscape: The steady, low hum of cooling fans echoes gently through the quiet room. A soft rustle of clothing sounds as Daniel leans back onto the armrests.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    }
+  ]
+}

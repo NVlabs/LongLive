@@ -1,0 +1,52 @@
+{
+ "name": "30_place_hammer_on_basket",
+ "title": "Organizing Tabletop and Covering Items",
+ "summary": "The robot places a hammer and banana on a basket while temporarily covering a medicine box with a cloth.",
+ "camera": "fixed third-person camera",
+ "robot": "one white arm with a parallel gripper",
+ "setting": "tabletop with a woven basket and assorted small items",
+ "first_frame": "30_place_hammer_on_basket.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "108e395ecb0f971af3c0cebc0cff32d6",
+  "frame_index": 0,
+  "original_prompt": "pick up the hammer and place it on the basket",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "9e5d901086f22ec0a5cd6cd72b8f9c812154c2e3caab3b9b56ba9e8438a3a3e4"
+ },
+ "segments": [
+  {
+   "instruction": "Reach down and grasp the toy hammer on the table; the camera remains stationary.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the hammer and place it on top of the basket; the camera remains stationary.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Move to the front of the basket and pick up the blue cloth; the camera remains stationary.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Drape the blue cloth completely over the medicine box on the right; the camera remains stationary.",
+   "memory_event": "hide: medicine box covered completely by the blue cloth"
+  },
+  {
+   "instruction": "Move to the center and grasp the banana; the camera remains stationary.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the banana and set it beside the hammer on top of the basket; the camera remains stationary.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the blue cloth to uncover what was covered; the camera remains stationary.",
+   "memory_event": "return: medicine box reappears upright in its original position"
+  },
+  {
+   "instruction": "Place the cloth back onto the table in front of the basket and retract upward; the camera remains stationary.",
+   "memory_event": "none"
+  }
+ ]
+}

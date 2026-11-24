@@ -1,0 +1,115 @@
+{
+ "id": "plein_air",
+ "setup": {
+  "title": "One Canvas, Many Places",
+  "style": "Live-action, cinematic travel film with natural light and rich landscapes across the seasons; the same canvas travels with the painter and keeps every element she has painted; one continuous shot per prompt.",
+  "cast": [
+   {
+    "id": "elena",
+    "name": "Elena",
+    "description": "Elena, a painter in her fifties with silver hair in a loose bun, round tortoiseshell glasses, a mustard-yellow knit sweater, olive canvas trousers and a paint-stained brown leather satchel."
+   },
+   {
+    "id": "canvas",
+    "name": "the canvas",
+    "description": "the canvas, one large landscape canvas on a wooden field easel, which Elena carries from place to place and paints a little more at each stop."
+   }
+  ],
+  "extras": {
+   "music": "Gentle solo piano with soft strings, warm and unhurried.",
+   "voice": "Elena, speaking in voice-over, a woman in her fifties with a warm, soft and thoughtful voice and a light Italian accent (S1),"
+  }
+ },
+ "shots": [
+  {
+   "prompt": "A medium shot of a sunlit painting studio, where Elena stands beside a large blank white canvas. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, folds a wooden field easel, tucks brushes and paint tubes into her brown leather satchel and lifts the blank white canvas under her arm. The camera holds a medium shot by the studio window.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a sunlit painting studio, where Elena stands beside a large blank white canvas. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, folds a wooden field easel, tucks brushes and paint tubes into her brown leather satchel and lifts the blank white canvas under her arm. The camera holds a medium shot by the studio window. Elena, speaking in voice-over, a woman in her fifties with a warm, soft and thoughtful voice and a light Italian accent (S1), says: <d>[English] One canvas, and every place I visit goes into it.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: Brushes rattling into the satchel, the creak of the folding easel and birds outside.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A medium shot inside a train carriage in morning light, where Elena sits by the window. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, sketches the passing green valleys in a small notebook with a pencil. The blank white canvas and the folded wooden easel lean against the seat beside her. The camera holds a medium shot from the opposite seat, the landscape streaming past the window.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot inside a train carriage in morning light, where Elena sits by the window. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, sketches the passing green valleys in a small notebook with a pencil. The blank white canvas and the folded wooden easel lean against the seat beside her. The camera holds a medium shot from the opposite seat, the landscape streaming past the window.\n\noverall_soundscape: The rhythmic clatter of the train, a soft pencil scratch and a distant whistle.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A wide shot of a mountain lake at sunrise, where Elena paints at her easel on the rocky shore. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints jagged snowy mountain peaks across the top of the canvas, with a turquoise lake beneath them, matching the real peaks glowing pink and gold across the water. The rest of the canvas is still blank white. The camera holds a wide shot with the real mountains behind the canvas.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a mountain lake at sunrise, where Elena paints at her easel on the rocky shore. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints jagged snowy mountain peaks across the top of the canvas, with a turquoise lake beneath them, matching the real peaks glowing pink and gold across the water. The rest of the canvas is still blank white. The camera holds a wide shot with the real mountains behind the canvas.\n\noverall_soundscape: Lapping water, a soft breeze and the dab of a brush on canvas.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A medium shot of the same lakeshore later in the morning, where Elena adds a detail to the canvas. A small red wooden rowboat drifts on the real lake. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints a tiny red rowboat onto the turquoise lake of her canvas. The canvas shows the snowy peaks and the turquoise lake with the little red boat at the top; the lower half is still blank white. The camera looks over her shoulder at the canvas, with the real boat soft in the background.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the same lakeshore later in the morning, where Elena adds a detail to the canvas. A small red wooden rowboat drifts on the real lake. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints a tiny red rowboat onto the turquoise lake of her canvas. The canvas shows the snowy peaks and the turquoise lake with the little red boat at the top; the lower half is still blank white. The camera looks over her shoulder at the canvas, with the real boat soft in the background.\n\noverall_soundscape: Water lapping, oars creaking in the distance and a gentle brushstroke.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A wide shot of high sea cliffs on a windy afternoon, where Elena paints at her easel near the edge. Elena, her silver bun blowing loose, adds rolling deep-blue waves with white foam to the lower left of the canvas. The canvas now shows the snowy peaks and the turquoise lake with the red rowboat at the top and the waves below them. The camera holds a wide shot with the crashing sea behind her.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of high sea cliffs on a windy afternoon, where Elena paints at her easel near the edge. Elena, her silver bun blowing loose, adds rolling deep-blue waves with white foam to the lower left of the canvas. The canvas now shows the snowy peaks and the turquoise lake with the red rowboat at the top and the waves below them. The camera holds a wide shot with the crashing sea behind her.\n\noverall_soundscape: Crashing waves, gusting wind and crying seagulls.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A wide shot of a white lighthouse on a grassy headland at golden hour, where Elena paints at her easel. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints a small white lighthouse with a red top on a cliff at the left edge of the canvas, just above the blue waves. The canvas now holds the snowy peaks and turquoise lake with the red rowboat, the waves at the lower left and the lighthouse above them. The camera holds a wide shot with the real lighthouse glowing behind the easel.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a white lighthouse on a grassy headland at golden hour, where Elena paints at her easel. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints a small white lighthouse with a red top on a cliff at the left edge of the canvas, just above the blue waves. The canvas now holds the snowy peaks and turquoise lake with the red rowboat, the waves at the lower left and the lighthouse above them. The camera holds a wide shot with the real lighthouse glowing behind the easel.\n\noverall_soundscape: Distant surf, a faraway foghorn and the call of a gull.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A medium shot of a golden sunflower field in summer, where Elena paints at her easel among the flowers. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints a band of bright sunflowers along the lower right of the canvas. The canvas now holds the snowy peaks and turquoise lake with the red rowboat, the lighthouse and blue waves at the lower left and the sunflowers at the lower right. The camera slowly circles from behind her to show the canvas next to the real field.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a golden sunflower field in summer, where Elena paints at her easel among the flowers. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints a band of bright sunflowers along the lower right of the canvas. The canvas now holds the snowy peaks and turquoise lake with the red rowboat, the lighthouse and blue waves at the lower left and the sunflowers at the lower right. The camera slowly circles from behind her to show the canvas next to the real field.\n\noverall_soundscape: Buzzing bees, rustling leaves and a soft brushstroke.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A wide shot of a country road lined with poplar trees in late summer, where Elena rides an old bicycle. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, pedals an old green bicycle past golden wheat fields, the canvas wrapped in brown paper and strapped to the rack behind her and the folded easel across the handlebars. Her silver bun bobs as she rides. The camera tracks alongside her from a low angle.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a country road lined with poplar trees in late summer, where Elena rides an old bicycle. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, pedals an old green bicycle past golden wheat fields, the canvas wrapped in brown paper and strapped to the rack behind her and the folded easel across the handlebars. Her silver bun bobs as she rides. The camera tracks alongside her from a low angle.\n\noverall_soundscape: A ticking bicycle chain, tires on gravel and a cheerful bell ring.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A medium shot of a red maple forest in autumn, where Elena paints at her easel on a leaf-covered path. Falling red leaves drift around Elena as she paints a cluster of red maple trees in the middle of the canvas, between the mountains and the sunflowers. The canvas now holds the snowy peaks, the turquoise lake with the red rowboat, the lighthouse and waves, the sunflowers and the red maples. The camera holds a medium shot with the canvas facing the viewer.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a red maple forest in autumn, where Elena paints at her easel on a leaf-covered path. Falling red leaves drift around Elena as she paints a cluster of red maple trees in the middle of the canvas, between the mountains and the sunflowers. The canvas now holds the snowy peaks, the turquoise lake with the red rowboat, the lighthouse and waves, the sunflowers and the red maples. The camera holds a medium shot with the canvas facing the viewer.\n\noverall_soundscape: Leaves crunching underfoot, a light breeze and a distant woodpecker.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A wide shot of a small snowy mountain village in winter, where Elena paints at her easel in the snow. Snowflakes settle on her silver hair as Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints a small snow-covered cottage with a warm glowing window at the foot of the snowy peaks on the canvas. The canvas now holds the peaks and lake with the red rowboat, the cottage, the red maples, the lighthouse and waves, and the sunflowers. The camera holds a wide shot with the real village's lit windows behind her.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a small snowy mountain village in winter, where Elena paints at her easel in the snow. Snowflakes settle on her silver hair as Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, paints a small snow-covered cottage with a warm glowing window at the foot of the snowy peaks on the canvas. The canvas now holds the peaks and lake with the red rowboat, the cottage, the red maples, the lighthouse and waves, and the sunflowers. The camera holds a wide shot with the real village's lit windows behind her.\n\noverall_soundscape: Softly falling snow, a distant church bell and the crunch of boots.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A wide shot of a quiet hilltop at night under a starry sky, where Elena paints by lantern light. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, with a small lantern beside the easel, paints a crescent moon and swirls of stars into the sky at the very top of the canvas, above the snowy peaks. The canvas now shows the stars and moon, the peaks and lake with the red rowboat, the cottage, the red maples, the lighthouse and waves, and the sunflowers. The camera holds a wide shot with the real Milky Way overhead.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a quiet hilltop at night under a starry sky, where Elena paints by lantern light. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, with a small lantern beside the easel, paints a crescent moon and swirls of stars into the sky at the very top of the canvas, above the snowy peaks. The canvas now shows the stars and moon, the peaks and lake with the red rowboat, the cottage, the red maples, the lighthouse and waves, and the sunflowers. The camera holds a wide shot with the real Milky Way overhead.\n\noverall_soundscape: Crickets, a soft night wind and the faint hiss of the lantern.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A medium shot of the sunlit painting studio the next morning, where Elena studies the canvas on the easel. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, steps back from the canvas with her palette, tilts her head, then adds warm golden highlights to the lake and the sunflowers with a few light strokes. The canvas holds every place she visited. The camera holds a medium shot from beside the window, Elena and the canvas in soft light.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the sunlit painting studio the next morning, where Elena studies the canvas on the easel. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, steps back from the canvas with her palette, tilts her head, then adds warm golden highlights to the lake and the sunflowers with a few light strokes. The canvas holds every place she visited. The camera holds a medium shot from beside the window, Elena and the canvas in soft light.\n\noverall_soundscape: A quiet room, the dab of the brush and a pleased hum.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A close-up of the finished canvas on the easel in the sunlit painting studio. The full painting fills the frame: stars and a crescent moon at the top, snowy peaks over a turquoise lake with a little red rowboat, a snow-covered cottage with a glowing window at the foot of the peaks, red maples in the middle, a white lighthouse above rolling blue waves at the lower left and sunflowers at the lower right. Elena's hand enters with a fine brush and signs her name in the lower right corner. The camera slowly drifts across the canvas, then settles on the signature.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up of the finished canvas on the easel in the sunlit painting studio. The full painting fills the frame: stars and a crescent moon at the top, snowy peaks over a turquoise lake with a little red rowboat, a snow-covered cottage with a glowing window at the foot of the peaks, red maples in the middle, a white lighthouse above rolling blue waves at the lower left and sunflowers at the lower right. Elena's hand enters with a fine brush and signs her name in the lower right corner. The camera slowly drifts across the canvas, then settles on the signature. Elena, speaking in voice-over, a woman in her fifties with a warm, soft and thoughtful voice and a light Italian accent (S1), says: <d>[English] Every place, all on one canvas.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: The soft scratch of the fine brush and a contented sigh.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A wide shot of a cobblestone street at dusk, where Elena carries the framed painting home. Elena, with silver hair in a loose bun, round tortoiseshell glasses, her mustard-yellow sweater and her paint-stained brown leather satchel, walks along the glowing street carrying the painting, now in a simple wooden frame, under her arm. She passes lit shop windows and smiles to herself. The camera tracks in front of her as she walks toward the camera.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a cobblestone street at dusk, where Elena carries the framed painting home. Elena, with silver hair in a loose bun, round tortoiseshell glasses, her mustard-yellow sweater and her paint-stained brown leather satchel, walks along the glowing street carrying the painting, now in a simple wooden frame, under her arm. She passes lit shop windows and smiles to herself. The camera tracks in front of her as she walks toward the camera.\n\noverall_soundscape: Footsteps on cobblestones, distant café chatter and a church bell.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  },
+  {
+   "prompt": "A wide shot of Elena's living room in warm evening light, where Elena hangs the painting on the wall. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, hangs the painting in its simple wooden frame above a sofa: stars and moon, snowy peaks over the lake with the red rowboat, the cottage, red maples, the lighthouse and blue waves, and sunflowers. She steps back with a cup of tea and smiles at it. The camera holds a wide shot, then slowly pushes in toward the framed painting.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of Elena's living room in warm evening light, where Elena hangs the painting on the wall. Elena, a painter with silver hair in a loose bun, round tortoiseshell glasses and a mustard-yellow knit sweater, hangs the painting in its simple wooden frame above a sofa: stars and moon, snowy peaks over the lake with the red rowboat, the cottage, red maples, the lighthouse and blue waves, and sunflowers. She steps back with a cup of tea and smiles at it. The camera holds a wide shot, then slowly pushes in toward the framed painting.\n\noverall_soundscape: A soft knock of the frame against the wall, the clink of a teacup and quiet room tone.\n\nnon_diegetic_music: Gentle solo piano with soft strings, warm and unhurried."
+   }
+  }
+ ]
+}

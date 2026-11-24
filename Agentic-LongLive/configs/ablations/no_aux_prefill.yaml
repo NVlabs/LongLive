@@ -1,0 +1,2 @@
+# Memory K/V are prefilled on the generator GPU at the shot boundary instead of ahead of time.
+runtime: {aux_prefill: false}

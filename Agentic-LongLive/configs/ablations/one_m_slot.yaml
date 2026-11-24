@@ -1,0 +1,2 @@
+# One M picture instead of two: [G, M_{i-1}].
+memory: {m_slots: 1}

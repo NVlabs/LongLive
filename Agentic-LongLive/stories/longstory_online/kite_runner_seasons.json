@@ -1,0 +1,411 @@
+{
+  "id": "kite_runner_seasons_terse",
+  "setup": {
+    "title": "The Red Kite",
+    "style": "Live-action, cinematic, natural light, lush countryside and a seaside festival.",
+    "cast": [
+      {
+        "id": "leo",
+        "name": "Leo",
+        "description": "Leo, a young adult man with freckles and thick auburn curls, wearing a denim jacket with a yellow star patch over a white T-shirt, brown trousers and brown boots, holding one red diamond kite."
+      }
+    ],
+    "extras": {
+      "voice": "Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1),",
+      "music": "Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout.",
+      "speech": "Leo talks to the camera like a vlogger."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "A lush, rolling green hilltop stretches out beneath an expansive blue sky dotted with a few drifting clouds. Brilliant natural sunlight illuminates the grassy terrain, accentuating the vibrant emerald hues of the slope and casting gentle shadows along the turf. A steady, brisk breeze visibly sweeps across the crest, rippling through the grass and carrying a fresh, invigorating countryside atmosphere.\n\nLeo, a young adult man with freckles and thick, windblown auburn curls, stands planted on the crest. He wears a blue denim jacket featuring a yellow star patch, layered over a white T-shirt, paired with brown trousers and sturdy brown boots. In his hands, he holds an intact red diamond kite, its vivid fabric taut and its tail fluttering behind him. His curls blow freely across his forehead as he looks toward the camera with an enthusiastic smile. He speaks warmly to the viewer, explaining that the crisp, gusty afternoon offers perfect kite-flying conditions, subtly lifting the red kite to display it while keeping his footing steady against the wind.\n\nThe camera remains in a steady wide shot at eye level, framing Leo's entire figure against the sweeping hillside and open sky. The wide composition captures the expansive landscape while keeping Leo and the red kite clearly defined against the green grass. The bright sunlight and swaying greenery remain consistent throughout, preserving the authentic outdoor feel.",
+      "annotation": {
+        "title_en": "Windy hill",
+        "scene": "green_hill",
+        "camera": "wide shot",
+        "beat": "Leo stands on a windy green hill under a bright blue sky holding his red diamond kite, his auburn curls blowing, and tells the camera today is perfect kite weather.",
+        "state": {
+          "outfit": "denim jacket with yellow star patch, brown trousers",
+          "kite_condition": "intact red diamond kite",
+          "weather": "sunny and windy"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          226,
+          226
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady wide shot of a lush, rolling green hilltop under an expansive blue sky, where Leo stands firmly on the crest holding a red kite. The camera holds a static wide shot at eye level, framing Leo's entire figure against the rolling hillside and open sky. Brilliant natural sunlight illuminates the grassy terrain, casting gentle shadows as a brisk breeze sweeps across the crest and ripples through the grass. Leo stands planted in his blue denim jacket featuring a yellow star patch, layered over a white T-shirt with brown trousers and sturdy brown boots. Thick auburn curls blow freely across his freckled forehead as he smiles at the camera. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] The wind is incredible today, making it an absolute dream for flying kites out on this hill.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. While speaking, he subtly lifts the intact red diamond kite to display it, its vivid fabric taut and tail fluttering behind him, maintaining his steady footing against the wind.\n\noverall_soundscape: A brisk wind rustles continuously through the hillside grass and buffets gently against the open crest. The taut fabric of the kite snaps and flutters rhythmically in the steady breeze.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still on the green hillside.\n\nLeo starts at a brisk jog down the slope, holding the spool of line and the kite. As his stride quickens, he releases the frame into the oncoming gusts and lets the string smoothly unspool through his fingers. Caught by the strong draft, the kite catches air, lifts sharply, and climbs steeply into the open sky. Leo glances upward with a focused, cheerful expression as he continues running down the hill. By the end of the shot, the kite is flying high above, pulling taut against the blue expanse while he keeps running below.\n\nThe camera tracks alongside him in a wide side tracking shot, moving smoothly parallel to his downhill run. The composition keeps Leo's full figure, the rushing green turf, and the ascending kite framed together in natural light as the kite rises toward the upper edge of the frame.",
+      "annotation": {
+        "title_en": "Launch",
+        "scene": "green_hill",
+        "camera": "side tracking shot",
+        "beat": "Leo runs down the slope letting out the line; the red kite lifts and climbs high into the sky.",
+        "state": {
+          "outfit": "denim jacket with yellow star patch",
+          "kite_condition": "flying high",
+          "weather": "sunny and windy"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          147
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot on the green hillside, where Leo jogs down the slope holding a spool of line and a kite. The camera tracks alongside Leo in a wide side tracking shot, moving smoothly parallel to his downhill run. In natural light, Leo starts at a brisk jog down the slope holding the spool of line and the kite. As his stride quickens, Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Here comes a strong gust of wind!</d> He releases the frame into the oncoming gusts and lets the string smoothly unspool through his fingers. Caught by the strong draft, the kite catches air, lifts sharply, and climbs steeply into the open sky. Leo glances upward with a focused, cheerful expression as he continues running down the hill. Leo (S1) adds: <d>[English] Look at it lift straight into the sky!</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. By the end of the shot, the kite flies high above, pulling taut against the blue expanse while Leo keeps running below.\n\noverall_soundscape: Rushing wind blows across the open hillside as footsteps thump rhythmically against the grassy turf. The spool whirs rapidly as line feeds through fingers alongside the taut fluttering of the rising kite.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Underneath the expansive canopy of a massive oak tree, turbulent wind rushes across the countryside. Dappled natural sunlight flickers through the dense lattice of dark green leaves and thick, gnarled boughs as sudden, aggressive gusts toss the upper branches against a bright sky. The atmosphere feels abruptly chaotic, shifting from a gentle rural breeze to unpredictable, swirling squalls that bend the outer foliage.\n\nLeo stands near the base of the trunk. He grips the taut spool of the airborne kite, but a sharp crosswind abruptly slams the kite sideways directly into the tree's upper crown. Leo frantically tugs backward on the string to dislodge it. Instead of coming loose, the line tightens against a rough branch, and the kite's fabric catches and rips violently down the center. He gasps in frustration, letting the slackened string drop slightly in his hands as the torn kite remains helplessly tangled high among the oak branches.\n\nThe camera holds a dramatic low-angle perspective, looking up from near the ground to capture Leo in the foreground and the towering, leaf-heavy crown soaring overhead. A subtle upward tilt follows the kite's flight path as it collides with the limbs, maintaining continuous focus on both Leo's anxious upward gaze and the torn fabric flapping uselessly against the sturdy wooden boughs.",
+      "annotation": {
+        "title_en": "Into the oak",
+        "scene": "oak_tree",
+        "camera": "low angle",
+        "beat": "A sudden gust drives the kite into the crown of a huge oak tree. Leo tugs the line, the fabric rips and the kite hangs torn among the branches.",
+        "state": {
+          "outfit": "denim jacket with yellow star patch",
+          "kite_condition": "torn and stuck in the oak tree",
+          "weather": "gusty"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          252,
+          213
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a dramatic low-angle shot beneath the canopy of a massive oak tree in the windy countryside, where Leo stands near the base of the trunk. The camera holds a dramatic low-angle perspective looking up from near the ground, capturing Leo in the foreground and the towering, leaf-heavy crown soaring overhead. Dappled natural sunlight flickers through dark green leaves and thick, gnarled boughs as sudden gusts toss the upper branches against a bright sky. Leo grips the taut spool of the airborne kite. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] The wind suddenly went wild, and now my kite is completely tangled in the branches!</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. A sharp crosswind abruptly slams the kite sideways into the upper crown. The camera tilts upward subtly following its path. Leo frantically tugs backward on the string, but it tightens against a rough branch, and the fabric rips violently down the center. He gasps in frustration, letting the slackened string drop slightly as he keeps an anxious upward gaze on the torn fabric flapping uselessly among the wooden boughs.\n\noverall_soundscape: Turbulent wind roars through the rural canopy, violently rustling dense leaves and creaking heavy oak branches. A loud, sharp tear of kite fabric cuts through the whistling gusts.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Up in the branches of the oak tree.\n\nLeo climbs carefully along a sturdy fork in the boughs. As he stretches his arm forward to rescue the kite, his left sleeve catches on a rough, jagged spur of bark; the fabric snags firmly and tears open at the left elbow, revealing his shirt underneath. Undeterred by the snag, he reaches into the twigs and detaches the kite from the branches. Balancing securely, he holds up the salvaged kite, showing its torn fabric and freshly broken spar alongside his newly torn sleeve.\n\nThe high-angle framing looks downward from above the bough, emphasizing the height while keeping Leo framed against the tree. A subtle downward tilt follows his movement as he works, maintaining clear focus on his torn sleeve and the kite held firmly in his hands.",
+      "annotation": {
+        "title_en": "Climbing",
+        "scene": "oak_tree",
+        "camera": "high angle looking down",
+        "beat": "Leo climbs the oak to rescue the kite, his denim jacket snagging on a branch and tearing at the elbow; he frees the ripped kite and holds it up.",
+        "state": {
+          "outfit": "denim jacket torn at the left elbow",
+          "kite_condition": "torn red kite with a broken spar",
+          "weather": "clouding over"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          135
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle shot looking downward into the branches of an oak tree, where Leo balances carefully along a sturdy fork in the boughs. Leo climbs carefully along the sturdy fork in the boughs, framed from above against the tree. As he stretches his arm forward to rescue the kite, his left sleeve catches on a rough, jagged spur of bark, snagging firmly and tearing open at the left elbow to reveal his shirt underneath. Undeterred by the snag, he reaches into the twigs and detaches the kite from the branches. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Caught my sleeve on that bark, but I finally rescued the kite.</d> Balancing securely while the camera tilts downward subtly to follow his motion, he holds up the salvaged kite to the camera. Leo (S1) adds: <d>[English] Look at this broken spar!</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. The camera maintains clear focus on his torn sleeve alongside the kite's torn fabric and freshly broken spar.\n\noverall_soundscape: Leaves rustle and oak branches creak under shifting weight in a gentle breeze. Fabric rips with a sharp tear against rough bark, accompanied by the light snapping of small twigs.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "A narrow country lane cuts between lush, dripping hedgerows under a slate-grey overcast sky. Heavy rain sheets down relentlessly, dimming the natural daylight into cool, silvery tones and turning the dirt track into dark, churning mud dotted with overflowing puddles. Water streams through deep ruts, giving the rural path a cold, saturated, and urgent atmosphere.\n\nHolding the kite, Leo reacts as the downpour intensifies, tucking it against his chest and pulling his jacket around it to shield it from the storm. He sprints forward along the track, his hair flattening and plastering against his forehead under the deluge. Wet mud splashes furiously over his boots and trousers with every stride. By the end, his jacket is completely soaked through and darkened with water, his trousers are spattered with grit, and the kite stays sheltered beneath his arm.\n\nThe camera tracks smoothly backward ahead of Leo in a medium framing, retreating along the lane at his running pace. The shot keeps him and the sheltered kite in consistent view, while the rain-streaked countryside blurs dynamically in the background.",
+      "annotation": {
+        "title_en": "Rain",
+        "scene": "country_lane",
+        "camera": "tracking shot",
+        "beat": "Rain starts pouring. Leo runs down a muddy country lane hugging the broken kite under his jacket, curls plastered to his forehead, mud splashing his boots and trousers.",
+        "state": {
+          "outfit": "soaked denim jacket torn at the elbow, muddy trousers",
+          "kite_condition": "torn kite under his jacket",
+          "weather": "heavy rain"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          230,
+          177
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a narrow country lane between dripping hedgerows under a slate-grey overcast sky, where Leo runs forward through the heavy rain. Heavy rain sheets down relentlessly, dimming daylight into cool, silvery tones over the churning mud track. The camera tracks smoothly backward ahead of Leo in a medium framing, retreating along the lane at his running pace while the rain-streaked countryside blurs behind him. Holding the kite, Leo reacts as the deluge intensifies, tucking it against his chest and pulling his jacket around it. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] The downpour hit us instantly!</d> He sprints forward, his hair flattening and plastering against his forehead. Leo (S1) adds: <d>[English] I have to shield this kite before the storm ruins it completely!</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. Wet mud splashes furiously over his boots and trousers. By the end, his jacket is completely soaked through and darkened, his trousers are spattered with grit, and the kite stays sheltered beneath his arm.\n\noverall_soundscape: Torrential rain roars relentlessly against lush hedgerows and the sodden ground. Heavy footsteps stomp and splash loudly through thick, squelching mud and deep puddles. Wet fabric flaps violently in the rushing wind.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "The interior of the rustic wooden garden shed provides a warm, dry refuge from the heavy downpour streaming down the small glass windowpane. A single incandescent bulb suspended by a twisted cord overhead casts a warm amber glow across rough timber walls lined with hand tools, dusty jars, and a sturdy workbench. Rain pats steadily against the roof, establishing a quiet, sheltered atmosphere inside the workshop.\n\nLeo stands in the shed. He gently draws the torn kite out from under his jacket, then shrugs the heavy, waterlogged jacket off his shoulders. Moving slightly, he hangs the dripping jacket onto a rusty iron nail in the timber wall. He then turns to the workbench and carefully lays the broken kite flat onto the surface, leaving its damaged frame resting under the lamplight.\n\nThe camera holds a steady medium wide shot at eye level, capturing Leo's movements between the tool-lined wall and the workbench. The composition keeps the hanging wet jacket, Leo, and the kite clearly visible together under the warm overhead bulb.",
+      "annotation": {
+        "title_en": "The workshop shed",
+        "scene": "garden_shed",
+        "camera": "medium wide",
+        "beat": "In a cosy wooden garden shed lit by a hanging bulb, Leo hangs his wet jacket on a nail and, in his white T-shirt, lays the broken kite on the workbench.",
+        "state": {
+          "outfit": "white T-shirt, wet jacket hanging on a nail",
+          "kite_condition": "broken kite on the bench",
+          "weather": "rain outside"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          238,
+          171
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium wide shot at eye level inside a rustic wooden garden shed, where Leo stands beside a sturdy workbench under a single suspended incandescent bulb. The camera holds a static medium wide shot at eye level inside the rustic wooden garden shed. Rain pats steadily against the roof and streams down the small glass windowpane. Under the incandescent bulb suspended by a twisted cord overhead, Leo gently draws the torn kite out from under his jacket. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] We barely made it inside, but at least the shed kept us dry.</d> He shrugs the heavy, waterlogged jacket off his shoulders and hangs the dripping jacket onto a rusty iron nail in the rough timber wall lined with hand tools and dusty jars. Turning to the sturdy workbench, he carefully lays the broken kite flat onto the surface. Leo (S1) adds: <d>[English] Let's see if we can salvage this frame.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. The damaged frame rests under the warm amber lamplight.\n\noverall_soundscape: Heavy rain beats steadily against the wooden shed roof and glass windowpane. Water drips from the wet jacket onto the floor alongside the faint rustle of fabric and the soft clatter of the kite settling onto the workbench.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the garden shed.\n\nLeo leans forward over the workbench. With focused determination, he saws a slender bamboo stick to size, shedding fine pale dust over the bench. He positions the new stick along the kite's frame to replace the broken spar, wrapping coarse twine firmly around the intersection. Leaning down, he grips one end of the twine between his teeth and pulls the other with his fingers, cinching a tight, secure knot. By the end of the task, the kite rests on the surface with the fresh bamboo spar securely fitted and bound.\n\nThe close-up camera stays focused on the workbench and Leo's working hands, tilting up slightly to capture his face as he pulls the knot with his teeth. The shallow depth of field emphasizes the tactile textures of the bamboo, twine, and fabric, keeping the repair work clearly legible throughout.",
+      "annotation": {
+        "title_en": "New spar",
+        "scene": "garden_shed",
+        "camera": "close-up",
+        "beat": "Leo saws a thin bamboo stick and binds it into the kite as a new spar with twine, tying a tight knot with his teeth.",
+        "state": {
+          "outfit": "white T-shirt",
+          "kite_condition": "new bamboo spar fitted",
+          "weather": "rain outside"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          224,
+          144
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot inside the garden shed, where Leo leans forward over the workbench with focused determination. The close-up camera stays focused on the workbench and Leo's working hands with a shallow depth of field, emphasizing the tactile textures of bamboo, twine, and fabric. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] I need to trim down this bamboo stick to replace our broken spar.</d> He saws a slender bamboo stick to size, shedding fine pale dust over the bench. He positions the new stick along the kite's frame to replace the broken spar, wrapping coarse twine firmly around the intersection. The camera tilts up slightly to capture his face as he grips one end of the twine between his teeth and pulls the other with his fingers, cinching a tight, secure knot. Leo (S1) adds: <d>[English] That should hold everything together firmly.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. The kite rests on the surface with the fresh bamboo spar securely fitted and bound.\n\noverall_soundscape: The rhythmic rasping of a small saw cutting through dry bamboo gives way to the rustle of coarse twine. Twine fibers creak as a knot cinches tight over the workbench.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the garden shed at the workbench.\n\nLeo leans over the bench. His hands dominate the frame as he applies glue around the rip in the kite and presses a bright blue fabric patch firmly over the damage, smoothing the edges flat. He then picks up a fine brush and paints a tidy five-pointed star onto the center of the blue patch using yellow paint. As he lifts the brush, his knuckle brushes against wet pigment, leaving a distinct smear of paint on his hand. By the end, the tear is securely covered by the blue patch and painted star, with paint marking his skin.\n\nThe camera remains in a steady top-down close-up, focused directly on the center of the kite atop the workbench. The overhead angle captures Leo's hands and the crown of his head dipping into the upper frame. The view stays sharply centered on the kite's surface, ensuring the blue patch and freshly painted star stay clearly visible against the fabric.",
+      "annotation": {
+        "title_en": "Patching",
+        "scene": "garden_shed",
+        "camera": "top-down close-up",
+        "beat": "Leo glues a patch of bright blue fabric over the rip in the red kite, then paints a yellow star on the patch to match his jacket.",
+        "state": {
+          "outfit": "white T-shirt, a smear of yellow paint on his hand",
+          "kite_condition": "red kite with a blue patch and painted yellow star",
+          "weather": "rain outside"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          244,
+          165
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a top-down close-up inside the garden shed, where Leo leans over the workbench with the kite laid out before him. The camera holds a steady top-down close-up, focused directly on the center of the kite atop the workbench, while the crown of Leo's head dips into the upper frame. His hands apply glue around the rip in the kite and press a bright blue fabric patch firmly over the damage, smoothing the edges flat. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Now we just smooth down this patch and add a little golden star right in the center.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. He picks up a fine brush and paints a tidy five-pointed star onto the center of the blue patch using yellow paint. As he lifts the brush, his knuckle brushes against wet pigment, leaving a distinct smear of paint on his hand, leaving the tear securely covered beneath the patch and star.\n\noverall_soundscape: Fingers rub and press firmly against taut fabric alongside the faint tacky squelch of glue. Fine brush bristles softly sweep across the patch surface amidst the quiet ambience of the shed.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the garden shed as the rain tapers off.\n\nLeo sits at the bench holding a needle and thread, completing the final stitches fastening a blue fabric scrap over the torn elbow of his jacket. He snips the thread, stands up, and pulls the jacket back on. Turning his arm, he inspects the newly secured elbow patch, smiling warmly at how it mirrors the kite's repair.\n\nThe camera holds a steady medium close-up at eye level, capturing the precision of his stitching before tilting gently upward as he stands to put the jacket on. The framing focuses on the repair work and his pleased expression, keeping Leo centered throughout.",
+      "annotation": {
+        "title_en": "Fixing the jacket",
+        "scene": "garden_shed",
+        "camera": "medium close-up",
+        "beat": "Leo sews the torn elbow of his denim jacket with a leftover piece of the same blue fabric, then puts the jacket back on and admires the matching patch.",
+        "state": {
+          "outfit": "denim jacket with yellow star patch and a blue elbow patch",
+          "kite_condition": "repaired red kite with blue patch",
+          "weather": "rain stopping"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          213,
+          110
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up of a garden shed as the rain tapers off, where Leo sits centered at a bench holding a needle and thread. The camera holds a steady medium close-up at eye level on Leo, capturing the precision of his stitching as he completes the final stitches fastening a blue fabric scrap over the torn elbow of his jacket. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Just finished the last stitches on the elbow, and it matches the kite repair perfectly.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. Leo snips the thread, stands up, and pulls the jacket back on. The camera tilts gently upward at slow speed as he stands, keeping Leo centered. Turning his arm, he inspects the newly secured elbow patch, smiling warmly at how it mirrors the kite's repair.\n\noverall_soundscape: Soft patter of light rain tapering off on the roof of the garden shed. A tiny metallic snip of thread is followed by the gentle rustle of jacket fabric as it is put on.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the garden shed.\n\nLeo stands near the threshold. As the rain stops, he pushes the door fully open and looks out across the countryside. Seeing the bright rainbow, an energetic grin spreads across his face. He reaches down and picks up the repaired kite, holding it firmly by his side with renewed excitement.\n\nThe camera remains fixed in a wide shot from inside the shed, using the doorframe to frame Leo against the luminous outdoors. Both the interior and the exterior remain sharply visible, capturing the rainbow across the wet fields alongside Leo's delighted expression and the kite in his hand.",
+      "annotation": {
+        "title_en": "Rainbow",
+        "scene": "garden_shed",
+        "camera": "wide shot through the doorway",
+        "beat": "The rain stops. Leo opens the shed door and a rainbow arches over the wet fields; he grabs the repaired kite and grins.",
+        "state": {
+          "outfit": "denim jacket with blue elbow patch",
+          "kite_condition": "repaired red kite",
+          "weather": "rainbow after rain"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          103
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot from inside a garden shed, where Leo stands near the threshold framed by the open doorway against the luminous countryside outdoors. The camera holds a static wide shot from inside the shed, using the doorframe to sharply frame Leo against the luminous exterior. As the rain stops, Leo pushes the door fully open and looks out across the wet fields of the countryside. Seeing the bright rainbow spanning the sky, an energetic grin spreads across his face. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] The storm finally cleared, and look at that rainbow over the fields!</d> Leo then reaches down and picks up the repaired kite, holding it firmly by his side with renewed excitement. Leo (S1) adds: <d>[English] Time to fly this kite!</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. Both the shed interior and the outdoors remain in crisp focus as he gazes outward.\n\noverall_soundscape: Raindrops patter gently on the shed roof and taper off into slow dripping from the eaves. The wooden door creaks lightly as it swings open, followed by a soft, refreshing breeze sweeping across the wet grass.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Bright midday sunlight floods an expansive sandy beach swept by a steady coastal sea breeze. High above the shoreline, the pale blue sky is filled with dozens of colourful kites in geometric and streaming shapes, dipping and fluttering in the wind. Along the background, gentle ocean waves roll into white surf against the coast, while loose clusters of spectators and colourful beach tents dot the dunes, establishing a lively, bustling outdoor festival atmosphere.\n\nLeo walks forward across the firm golden sand through the scattered crowd, holding his kite securely under his arm against the coastal gusts. As the sea breeze blows, he gazes upward in admiration at the airborne displays, grinning slightly as he navigates past other festivalgoers.\n\nThe camera frames the scene in a wide establishing shot, smoothly tracking sideways and slightly forward to follow Leo's progress along the shore. The composition keeps his full figure grounded in the midground, while allowing the sweeping ocean horizon and the vibrant, kite-filled sky above to dominate the frame under clear, natural daylight.",
+      "annotation": {
+        "title_en": "Seaside festival",
+        "scene": "beach_festival",
+        "camera": "wide establishing shot",
+        "beat": "Next day at a seaside kite festival: dozens of colourful kites fill the sky over a sandy beach. Leo walks through the crowd with his patched red kite.",
+        "state": {
+          "outfit": "denim jacket with blue elbow patch",
+          "kite_condition": "repaired red kite",
+          "weather": "sunny, sea breeze"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          214,
+          171
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide establishing shot of an expansive sunlit sandy beach, where Leo walks across the firm ground holding a kite under his arm. Bright midday sunlight illuminates the expansive beach as a steady coastal breeze sweeps across the shore. Leo walks forward across the firm golden sand, holding his kite securely under his arm against the gusts. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Look at all these incredible kites dancing in the sky today!</d> He gazes upward in admiration at dozens of colourful geometric and streaming kites dipping and fluttering across the pale blue sky. Grinning slightly, he navigates past scattered festivalgoers and colourful beach tents on the dunes. Leo (S1) adds: <d>[English] The sea breeze is absolutely perfect out here.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. The camera smoothly tracks sideways and slightly forward, keeping Leo's full figure in the midground against the sweeping ocean horizon and rolling white surf.\n\noverall_soundscape: A steady coastal sea breeze rushes across the open sand with the rhythmic roaring and hissing of ocean surf. Fluttering kite fabric whips softly overhead among the distant, dispersed chatter of spectators.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still on the sunlit festival beach.\n\nLeo sprints forward with buoyant energy, with his boots tied together by their laces and slung over his shoulder, his bare feet kicking up thin sprays of wet sand. In his hands, he grips the spool, feeding line out while glancing upward with an exhilarated smile. Above him, the kite catches the wind, lifting gracefully into the air.\n\nThe camera tracks smoothly alongside him in a lateral medium-wide shot, keeping pace with his stride along the waterline. The framing balances his running figure, the dangling boots bouncing on his shoulder, and the taut string leading toward the soaring kite in the upper frame, preserving the documentary realism of the breezy coastal afternoon.",
+      "annotation": {
+        "title_en": "Flying again",
+        "scene": "beach_festival",
+        "camera": "side tracking shot",
+        "beat": "Leo runs barefoot along the wet sand, boots tied over his shoulder, and the patched red kite soars among the other kites, its blue patch and yellow star visible.",
+        "state": {
+          "outfit": "denim jacket with blue elbow patch, barefoot, boots over his shoulder",
+          "kite_condition": "repaired kite flying high",
+          "weather": "sunny"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          240,
+          118
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a lateral medium-wide shot along the waterline of the sunlit festival beach, where Leo sprints forward barefoot with boots slung over his shoulder. The camera tracks smoothly alongside Leo in a lateral medium-wide shot, keeping pace with his stride along the waterline. Leo sprints forward with buoyant energy, his bare feet kicking up thin sprays of wet sand while his boots, tied together by their laces, bounce against his shoulder. In his hands, he grips the spool, feeding line out while glancing upward with an exhilarated smile. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Look at it catch the breeze! We are finally getting this kite up in the air!</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. Above him, the kite catches the wind and lifts gracefully into the air. The framing balances his running figure, the bouncing boots on his shoulder, and the taut string leading toward the soaring kite in the upper frame on the breezy afternoon.\n\noverall_soundscape: Wet sand splashes lightly under rapid bare footfalls alongside the gentle sound of coastal waves lapping the shore. A steady breeze rushes past, joined by the faint flutter of kite fabric and the rapid whir of line releasing from the spool.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still along the beach at the kite festival.\n\nLeo holds the spool of line attached to the soaring kite. Beside him, a little girl with twin pigtails gazes upward in wide-eyed wonder. Smiling warmly, Leo kneels down onto the damp sand to meet her eye level and extends the spool toward her. He gently places her hands around the handles, softly explaining how to balance the line against the wind. By the end of the shot, the girl firmly grips the spool and bursts into delighted laughter, while Leo keeps his hands loosely beneath hers to steady the pull.\n\nThe camera captures the interaction in a medium two-shot, smoothly lowering as Leo kneels to remain at eye level with both characters. The framing keeps Leo, the smiling child, and the upward angle of the kite string clearly visible against the beach backdrop.",
+      "annotation": {
+        "title_en": "A child's wish",
+        "scene": "beach_festival",
+        "camera": "medium two-shot",
+        "beat": "A little girl with pigtails stares up at Leo's kite. Leo kneels down and hands her the line, helping her hold it as she laughs.",
+        "state": {
+          "outfit": "denim jacket with blue elbow patch",
+          "kite_condition": "kite flying, line in the girl's hands",
+          "weather": "sunny"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          242,
+          142
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium two-shot along the beach at the kite festival, where Leo holds a spool of line attached to a soaring kite. Beside him, a little girl with twin pigtails gazes upward in wide-eyed wonder. Smiling warmly, Leo kneels down onto the damp sand to meet her eye level and extends the spool toward her. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Just balance the line against the wind, and keep your hands steady on the handles.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. He gently places her hands around the handles, softly explaining how to balance the line against the wind. By the end of the shot, the girl firmly grips the spool and bursts into delighted laughter, while Leo keeps his hands loosely beneath hers to steady the pull. The camera smoothly lowers as Leo kneels, maintaining eye level with both characters to keep Leo, the smiling child, and the upward angle of the kite string clearly visible against the beach backdrop.\n\noverall_soundscape: A steady coastal breeze rushes by with the taut flutter of kite fabric high above. Ocean waves crash rhythmically along the damp sandy shore in the distance.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still on the beach, now at golden sunset.\n\nLeo sits resting on the sand. Next to him sits the girl, holding the spool of the kite string with both hands. Outlined against the sky, the two sit close together gazing upward. High above the water, the kite hovers steadily, its tail rippling smoothly in the evening wind. Leo raises a hand to point gently toward the drifting kite, nodding in encouragement as the girl watches it sail across the sunset.\n\nThe camera remains stationary in a wide silhouette shot, positioned at a low angle on the sand behind and to the side of the pair. The expansive framing keeps Leo and the girl seated in the lower third, while the horizon, the ocean, and the kite stay prominently visible throughout the shot.",
+      "annotation": {
+        "title_en": "Sunset",
+        "scene": "beach_festival",
+        "camera": "silhouette wide shot",
+        "beat": "At sunset Leo and the girl sit on the sand watching the red kite against an orange sky, the sea glittering gold.",
+        "state": {
+          "outfit": "denim jacket with blue elbow patch",
+          "kite_condition": "kite flying at sunset",
+          "weather": "golden sunset"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          245,
+          132
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide silhouette shot of a beach at golden sunset, where Leo sits resting on the sand beside a girl. The camera holds a static shot from a low angle on the sand behind and to the side of the pair, framing them in the lower third against the horizon and ocean. Leo sits resting on the sand while the girl sits next to him, holding the spool of the kite string with both hands. Outlined against the sky, they sit close together gazing upward. High above the water, the kite hovers steadily, its tail rippling smoothly in the evening wind. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Look at how steady it flies up there against the golden sky, soaring right above the water.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. Leo raises a hand to point gently toward the drifting kite, nodding in encouragement as the girl watches it sail across the sunset.\n\noverall_soundscape: Gentle ocean waves lap against the sandy shore under a steady evening breeze. The distant flutter of the kite tail whispers softly in the coastal wind.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still on the beach as dusk turns into deep twilight.\n\nInitially holding the taut string, Leo smoothly reels in the kite until it rests safely in his hands. He then turns and offers the kite to the girl, speaking a few quiet parting words. She beams and wraps her arms around the fabric, hugging the kite tightly to her chest. Having surrendered the kite, Leo turns toward the camera with a relaxed, contented smile.\n\nThe camera holds in an intimate close-up at eye level, tracking the handover before settling on Leo’s upper torso and face. The framing keeps both the girl hugging the kite and Leo’s face in view before centering on his expression. Soft seaside festival lights remain blurred in the background, preserving his warm smile in the dimming natural light.",
+      "annotation": {
+        "title_en": "The gift",
+        "scene": "beach_festival",
+        "camera": "close-up",
+        "beat": "Leo reels the kite in and gives it to the girl; she hugs the patched red kite. Leo smiles at the camera, freckles glowing in the last light.",
+        "state": {
+          "outfit": "denim jacket with blue elbow patch",
+          "kite_condition": "kite given to the girl",
+          "weather": "dusk"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          132
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up at eye level on the beach as dusk turns into deep twilight, where Leo holds the taut string of a kite. Leo smoothly reels in the kite until it rests safely in his hands, then turns and offers it to the girl. Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1) says: <d>[English] Take good care of it.</d> The girl beams and wraps her arms around the fabric, hugging the kite tightly to her chest. The camera holds in an intimate close-up at eye level, tracking the handover before settling on Leo’s upper torso and face, keeping both the girl hugging the kite and Leo in view before centering on his expression. Having surrendered the kite, Leo turns toward the camera with a relaxed, contented smile. Leo (S1) adds: <d>[English] Passing it along feels like the best way to close out this evening.</d> Exactly as his voice stops, Leo's lips close and his jaw stops moving; he stays silent for the rest of the shot. Soft seaside festival lights remain blurred in the background, preserving his warm smile in the dimming natural light.\n\noverall_soundscape: Gentle ocean waves lap against the sandy shore under a steady evening breeze. The lightweight kite fabric rustles softly as it is gathered and hugged against a chest, alongside distant murmurs of seaside festival activity.\n\nnon_diegetic_music: Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout."
+      }
+    }
+  ]
+}

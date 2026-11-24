@@ -1,0 +1,52 @@
+{
+ "name": "05_open_drawer_ego",
+ "title": "Storing and Retrieving Tube from Drawer",
+ "summary": "The robot opens a cabinet drawer, stores a green tube inside, looks away at a vase, turns back, and reopens the drawer to retrieve the tube.",
+ "camera": "head camera",
+ "robot": "two black dexterous robotic hands and arms with wrist-mounted enclosures",
+ "setting": "an office space with a wooden tabletop set above a white drawer unit",
+ "first_frame": "05_open_drawer_ego.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "218e6e266ce0814c9a1770f861850092",
+  "frame_index": 0,
+  "original_prompt": "Pull open the drawer with the left arm",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "20f8c768b85695434cc09559ae708838062355917ea235e2d444a13308499a9b"
+ },
+ "segments": [
+  {
+   "instruction": "Reach the left hand down toward the top left drawer knob while the camera tilts down slightly.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pull open the top left drawer with the left hand while the camera stays on the cabinet.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach the right hand to the green tube on the tabletop and grasp it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Place the green tube into the open drawer with the right hand and push the drawer closed with the left hand.",
+   "memory_event": "hide: green tube is concealed inside the closed top-left drawer"
+  },
+  {
+   "instruction": "Turn the head camera to the right to focus on the white vase on the table.",
+   "memory_event": "hide: central tabletop with charger, black device, and drawer cabinet leaves view"
+  },
+  {
+   "instruction": "Keep the camera focused on the vase while the right hand briefly hovers near it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the head camera back to the center facing the desk and drawers.",
+   "memory_event": "return: desk view returns with the white charger, black device, and closed drawers exactly as left"
+  },
+  {
+   "instruction": "Pull the top left drawer open again with the left hand and reach in with the right hand for what you put there.",
+   "memory_event": "return: top-left drawer reopens showing the green tube lying inside"
+  }
+ ]
+}

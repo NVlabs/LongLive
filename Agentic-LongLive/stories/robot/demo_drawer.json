@@ -1,0 +1,53 @@
+{
+ "name": "demo_drawer",
+ "title": "Tube in the drawer",
+ "summary": "The robot opens a drawer that holds only a folded white towel, puts a green tube inside, shuts it, turns right to the white vase, lifts it and sets it back, then turns back and opens the drawer again.",
+ "based_on": "05_open_drawer_ego",
+ "camera": "head camera",
+ "robot": "two black dexterous robotic hands and arms with wrist-mounted enclosures",
+ "setting": "an office space with a wooden tabletop set above a white drawer unit",
+ "first_frame": "05_open_drawer_ego.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "218e6e266ce0814c9a1770f861850092",
+  "frame_index": 0,
+  "original_prompt": "Pull open the drawer with the left arm",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "20f8c768b85695434cc09559ae708838062355917ea235e2d444a13308499a9b"
+ },
+ "segments": [
+  {
+   "instruction": "Reach the left hand down toward the top left drawer knob while the camera tilts down slightly.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The left hand grips the top left drawer knob and pulls the drawer open, keeping hold of the knob. The drawer is empty except for one folded white towel.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "While the left hand keeps holding the open drawer, the right hand reaches to the green tube on the tabletop and grasps it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The right hand places the green tube into the open drawer, then the left hand pushes the drawer front until it is closed.",
+   "memory_event": "hide: the green tube is concealed inside the closed top-left drawer"
+  },
+  {
+   "instruction": "Tilt the head camera up a little and turn it slightly to the right over the same wooden tabletop, where the black computer mouse and the white charger still lie, and move the right hand forward next to the white vase standing at the back right corner of this tabletop, so the vase stands close in front of the right hand.",
+   "memory_event": "hide: the central tabletop with the charger and the drawer cabinet leaves the view"
+  },
+  {
+   "instruction": "The right hand slowly closes its fingers around the neck of the white vase, lifts it a few centimetres and sets it back down in the same place, then lets go.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the head camera back to the center facing the desk and the white drawers with their small round copper knobs, with the black computer mouse and the white charger still on the tabletop, keeping both hands low in front of the drawers and away from the tabletop.",
+   "memory_event": "return: the desk comes back with the white charger and the closed drawers exactly as left"
+  },
+  {
+   "instruction": "The left hand grips the top left drawer knob and pulls the drawer open again, and the right hand points at what you put there.",
+   "memory_event": "return: the top-left drawer opens again showing the green tube lying inside next to one folded white towel"
+  }
+ ]
+}
