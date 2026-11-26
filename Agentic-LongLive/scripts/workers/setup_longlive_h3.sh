@@ -18,7 +18,7 @@ AGL=$(cd "$HERE/../.." && pwd)
 H3_ROOT=${H3_ROOT:-$HOME/agentic_longlive/longlive_h3}
 VENV=${VENV:-$H3_ROOT/venv}
 WEIGHTS=${WEIGHTS:-$H3_ROOT/weights}
-LONGLIVE_H3_REPO=${LONGLIVE_H3_REPO:-Efficient-Large-Model/LongLive-H3}  # weights release: coming soon
+LONGLIVE_H3_REPO=${LONGLIVE_H3_REPO:-Andyson/LongLive-H3}
 MINIMAX_H3_REPO=MiniMaxAI/MiniMax-H3
 MINIMAX_H3_REVISION=fa9c8ab1eaa21c8ae25e7e40b83b2e6002f340af
 

@@ -18,7 +18,7 @@ Changes: Add the independent Long-WAM and Agentic LongLive projects and group th
 </p>
 
 <p align="center">
-  <a href="Agentic-LongLive"><img src="https://img.shields.io/badge/Paper-Agentic_LongLive-2E7D32" alt="Paper: Agentic LongLive"></a>
+  <a href="https://arxiv.org/abs/2611.34907"><img src="https://img.shields.io/badge/Paper-Agentic_LongLive-2E7D32" alt="Paper: Agentic LongLive"></a>
   <a href="https://arxiv.org/abs/2610.10528"><img src="https://img.shields.io/badge/Paper-Long--WAM-76B900" alt="Paper: Long-WAM"></a>
   <a href="https://arxiv.org/abs/2609.38154"><img src="https://img.shields.io/badge/Paper-LongLive--Plug-brown" alt="Paper: LongLive-Plug"></a>
   <a href="https://arxiv.org/abs/2605.18739"><img src="https://img.shields.io/badge/Paper-LongLive_2.0-red" alt="Paper: LongLive 2.0"></a>
@@ -42,7 +42,7 @@ Changes: Add the independent Long-WAM and Agentic LongLive projects and group th
   <a href="Agentic-LongLive"><b>Agentic LongLive</b></a><br>
   Asynchronous agentic memory for long video generation.<br>
   <sub>Keep people, objects and places consistent over long interactive stories and robot videos, with an LLM memory agent running beside a real-time generator.</sub><br>
-  <sub><a href="Agentic-LongLive">Code</a> · <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/">Project page</a> · <a href="https://www.youtube.com/watch?v=czP61EBbaa4">Video</a></sub>
+  <sub><a href="https://arxiv.org/abs/2611.34907">Paper</a> · <a href="Agentic-LongLive">Code</a> · <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/">Project page</a> · <a href="https://www.youtube.com/watch?v=czP61EBbaa4">Video</a></sub>
 </td>
 </tr>
 <tr>
@@ -113,6 +113,7 @@ Agentic LongLive runs its LongLive-2.0 generator from `LongLive2.0/`
 
 ## News
 
+- 🔥 [2026.11.25] The [Agentic LongLive paper](https://arxiv.org/abs/2611.34907) is available on arXiv.
 - 🔥 [2026.11.24] We release **Agentic LongLive**: an asynchronous LLM memory agent for real-time long video generation, with the full system on LongLive-2.0 and MiniMax-H3 generators, the LongStory-Online benchmark, robot-video memory and RL training of the memory planner. → [`Agentic-LongLive/`](Agentic-LongLive) · [Project page](https://nvlabs.github.io/LongLive/Agentic-LongLive/)
 - 🔥 [2026.10.08] The [Long-WAM paper](https://arxiv.org/abs/2610.10528) is available on arXiv.
 - 🔥 [2026.10.07] We release **Long-WAM**: long-context world-action models, robot-video pretraining, benchmark training/evaluation and real-robot deployment demos. → [`Long-WAM/`](Long-WAM) · [Project page](https://nvlabs.github.io/LongLive/Long-WAM/)
@@ -174,10 +175,10 @@ and [FastH3-Omni](https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-
 | --- | --- |
 | [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | Real-time AR generator of the main LongStory-Online results |
 | [FastH3-Omni](https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1) | Few-step MiniMax-H3 generator with audio, used for the live demos |
-| LongLive-H3 (coming soon) | Few-step chunked-AR MiniMax-H3 generator used with the agent |
+| [LongLive-H3](https://huggingface.co/Andyson/LongLive-H3) | Few-step chunked-AR MiniMax-H3 generator used with the agent |
 | Agentic-LongLive-Planner-Qwen3-8B (coming soon) | RL memory planner (Qwen3-8B + GRPO LoRA, merged) |
 
-→ [Code and quick start](Agentic-LongLive) · [Checkpoints](Agentic-LongLive/README.md#checkpoints) ·
+→ [Paper](https://arxiv.org/abs/2611.34907) · [Code and quick start](Agentic-LongLive) · [Checkpoints](Agentic-LongLive/README.md#checkpoints) ·
 [Project page](https://nvlabs.github.io/LongLive/Agentic-LongLive/)
 
 ## Long-WAM — Scaling the Context of World-Action Models
@@ -327,7 +328,7 @@ Please consider citing our work if you find it useful. Click a paper to show its
 @article{liu2026agenticlonglive,
   title={Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation},
   author={Shaoteng Liu and Shuai Yang and Wei Huang and Luozhou Wang and Song Han and Yukang Chen},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv: 2611.34907},
   year={2026},
 }
 ```

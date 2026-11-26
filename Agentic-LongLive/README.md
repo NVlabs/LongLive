@@ -21,7 +21,7 @@ SPDX-License-Identifier: Apache-2.0
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-coming_soon-B31B1B" alt="Paper on arXiv"></a>
+  <a href="https://arxiv.org/abs/2611.34907"><img src="https://img.shields.io/badge/arXiv-2611.34907-B31B1B" alt="Paper on arXiv"></a>
   <a href="https://github.com/NVlabs/LongLive/tree/main/Agentic-LongLive"><img src="https://img.shields.io/badge/GitHub-Code-181717" alt="Code"></a>
   <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/"><img src="https://img.shields.io/badge/Project-Page-76B900" alt="Project page"></a>
   <a href="https://www.youtube.com/watch?v=czP61EBbaa4"><img src="https://img.shields.io/badge/YouTube-Video-FF0000" alt="Watch Agentic LongLive on YouTube"></a>
@@ -116,7 +116,7 @@ names (`agentic_longlive/agent`, `memory`, `runtime`, `backends`).
 | EAGLE-3 draft for the planner | [Tengyunw/qwen3_8b_eagle3](https://huggingface.co/Tengyunw/qwen3_8b_eagle3) | 0.8 GB | agent (speed only) |
 | Checker / scene router | [Qwen/Qwen3.6-35B-A3B-FP8](https://huggingface.co/Qwen/Qwen3.6-35B-A3B-FP8) | 37 GB | agent |
 | Memory pictures | [black-forest-labs/FLUX.2-klein-4B](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) | 16 GB | agent |
-| LongLive-H3 (optional) | `Efficient-Large-Model/LongLive-H3` — **coming soon** + [MiniMaxAI/MiniMax-H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) | 62 GB + base | H3 worker |
+| LongLive-H3 (optional) | [Andyson/LongLive-H3](https://huggingface.co/Andyson/LongLive-H3) + [MiniMaxAI/MiniMax-H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) | 62 GB + base | H3 worker |
 | G foreground masks (optional) | [ZhengPeng7/BiRefNet](https://huggingface.co/ZhengPeng7/BiRefNet) (downloaded on first use) | 0.4 GB | LongLive-H3 backend |
 | FastH3-Omni (optional) | [FastVideo/FastVideo-FastH3-Omni-8-Step-V1](https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1) | — | FastH3 worker |
 | LongStory-Online | in this repository: [`stories/longstory_online/`](stories/longstory_online) (+ `full/` control prompts) | 9 MB | benchmark |
@@ -208,7 +208,8 @@ Presets, the sink patch and running the worker by hand: [docs/generators.md](doc
 ### LongLive-H3
 
 LongLive-H3 is our few-step chunked autoregressive distillation of MiniMax-H3, with video and audio. Its weights are
-coming soon. The released worker is the exact reference sampler: one shot per GPU, not real time.
+[Andyson/LongLive-H3](https://huggingface.co/Andyson/LongLive-H3) on Hugging Face. The released worker is the exact
+reference sampler: one shot per GPU, not real time.
 
 ```bash
 H3_ROOT=/data/longlive_h3 bash scripts/workers/setup_longlive_h3.sh              # once: environment + weights
@@ -320,7 +321,7 @@ Agentic-LongLive/
 @article{liu2026agenticlonglive,
   title   = {Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation},
   author  = {Liu, Shaoteng and Yang, Shuai and Huang, Wei and Wang, Luozhou and Han, Song and Chen, Yukang},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2611.34907},
   year    = {2026}
 }
 ```

@@ -34,7 +34,7 @@ Every shot is 1344x768 at 24 fps with stereo audio. A worker exits on a job with
 
 ## LongLive-H3
 
-Weights: the LongLive-H3 transformer from `Efficient-Large-Model/LongLive-H3` (coming soon) and the text encoder,
+Weights: the LongLive-H3 transformer from [`Andyson/LongLive-H3`](https://huggingface.co/Andyson/LongLive-H3) and the text encoder,
 tokenizer and VAEs of `MiniMaxAI/MiniMax-H3` at revision `fa9c8ab1eaa21c8ae25e7e40b83b2e6002f340af` (accept its license
 on Hugging Face; log in with `hf auth login` or set `HF_TOKEN`). Environment: Python 3.12, PyTorch 2.11 (CUDA 13.0),
 diffusers at `b88b343`, pinned in [`requirements-h3.txt`](../requirements-h3.txt).
