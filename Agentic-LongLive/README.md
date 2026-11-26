@@ -35,8 +35,9 @@ python3 -m http.server 8765
 
 ## Updating links
 
-The arXiv and 🤗 Models buttons in `index.html` carry `data-pending` and show a "soon" badge. When a link is ready, set its
-`href` and remove `data-pending`. Add the arXiv id to the BibTeX block (`#bibtex`) at the same time.
+The 🤗 Models button in `index.html` carries `data-pending` and shows a "soon" badge. When its link is ready, set its `href`
+and remove `data-pending`. The arXiv button links to https://arxiv.org/abs/2611.34907, and the BibTeX block (`#bibtex`)
+carries the arXiv id.
 
 ## Size
 
