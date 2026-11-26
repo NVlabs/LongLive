@@ -35,6 +35,7 @@ All paths are relative to `Agentic-LongLive/`; `data/` and `outputs/` are git-ig
 
 ```
 data/rl/
+  stories/{terse,full}/           the 64 stories as written (storygen), the source of train/ and dev/
   train/terse/trNNN_xxxxxx.json   56 training stories (24-32 shots), terse prompts       } 112 files, 11 MB
   train/full/trNNN_xxxxxx.json    the same stories, full prompts (restate everything)    }
   dev/terse/tr05N_xxxxxx.json     8 development stories                                  8 files, 0.9 MB
@@ -51,18 +52,20 @@ Each story file uses the unified story format (`story.py`). Every shot also carr
 Each state row holds the planner's system and user prompt, the entity store before the decision, the teacher output
 and the hindsight `targets` (`targets.py`).
 
-**Download** (coming soon): the training data (about 190 MB) from the Hugging Face dataset
-`Efficient-Large-Model/Agentic-LongLive-RL-Data`, and the merged planner from
-`Efficient-Large-Model/Agentic-LongLive-Planner-Qwen3-8B` (16 GB, `scripts/download_weights.sh`).
+**Making the data.** The training data is not released. `bash scripts/rl/collect.sh` makes all of it with the
+Qwen3.6 judge (`bash scripts/rl/serve.sh judge`, step 1 below):
 
-```bash
-hf download Efficient-Large-Model/Agentic-LongLive-RL-Data --repo-type dataset --local-dir data/rl   # coming soon
-```
+1. **Stories**, only while `data/rl/train/terse` holds fewer than 56: Qwen3.6-35B-A3B writes the 64 stories with
+   `agentic_longlive.rl.storygen` into `data/rl/stories/`. The script then copies `tr050`-`tr057` (terse) to `dev/`
+   and the other 56 to `train/{terse,full}`. Story ids, themes, shot counts and sampling seeds are fixed, so the
+   stories match the paper's in ids, themes and length; the text the LLM writes can still differ slightly.
+2. **Teacher rollouts** -> `rollouts/states_teacher.jsonl`: about 40 minutes with the judge on two A100 GPUs.
+3. **Best of 4** -> `sft/bestof.jsonl`.
 
-To write new stories instead, run
-`python -m agentic_longlive.rl.storygen --urls http://127.0.0.1:31100/v1 --out data/rl/stories`. This needs the
-judge servers below. With the default seed it reproduces the story ids above. Move `tr050`-`tr057` (terse) to `dev/`
-and the other 56 to `train/{terse,full}`. `--preset hard` writes an entity-rich held-out set with Gemini.
+Story writing and best of 4 take extra time on top of the 40 minutes of the rollouts. Every step resumes where it
+stopped: run the script again after an interruption. The merged planner will be released as
+`Efficient-Large-Model/Agentic-LongLive-Planner-Qwen3-8B` (16 GB, `scripts/download_weights.sh`; coming soon).
+`storygen --preset hard` writes an entity-rich held-out set with Gemini.
 
 ## Requirements
 
@@ -86,7 +89,7 @@ environment overrides.
 
 ```bash
 bash scripts/rl/serve.sh            # 0. services: judges :31100/:31101, rollout :30100, image :32100-32103
-bash scripts/rl/collect.sh          # 1. teacher rollouts -> states_teacher.jsonl, best of 4 -> bestof.jsonl (skip with released data)
+bash scripts/rl/collect.sh          # 1. stories (if missing), teacher rollouts -> states_teacher.jsonl, best of 4 -> bestof.jsonl
 bash scripts/rl/sft.sh              # 2. SFT warm start -> outputs/rl/sft/adapter_final (no servers needed)
 bash scripts/rl/grpo.sh             # 3. GRPO, 80 steps -> outputs/rl/grpo_s0 (SEED=1, 2 for more seeds)
 bash scripts/rl/serve_planner.sh    # 4. merge + serve with EAGLE-3 as the agent planner (:30000, configs/agents/oss.yaml)
@@ -96,6 +99,7 @@ Step 1 needs only `bash scripts/rl/serve.sh judge`. Stop the RL services with `b
 step 4 if the GPUs are shared. The scripts wrap these module CLIs:
 
 ```bash
+python -m agentic_longlive.rl.storygen --urls $JUDGE_URLS --out data/rl/stories   # then split into train/ and dev/
 python -m agentic_longlive.rl.collect rollouts --stories data/rl/train/terse data/rl/train/full \
     --planner-urls $JUDGE_URLS --planner-model Qwen/Qwen3.6-35B-A3B-FP8 --tag teacher --out data/rl/rollouts
 python -m agentic_longlive.rl.collect bestofk --states data/rl/rollouts/states_teacher.jsonl \
@@ -114,10 +118,11 @@ from the newest checkpoint in `out`. The paper's ablations are separate configs:
 
 Run them with `CONFIG=<config> bash scripts/rl/grpo.sh`.
 
-**GPU budget.** SFT is 89 steps, about 75 minutes on one A100 80GB. In the paper, each GRPO seed trained on one H100.
-The three seeds shared the rollout, judge and image services on two 8×H100 nodes and took about 2-2.5 hours in
-parallel. The single-node layout above runs one seed. More image servers or judges shorten the scoring time. Each
-step logs `t_rollout` and `t_score` in `train_log.jsonl`.
+**GPU budget.** Making the data (step 1): the teacher rollouts take about 40 minutes with the judge on two A100 GPUs;
+story writing and best of 4 add to that. SFT is 89 steps, about 75 minutes on one A100 80GB. In the paper, each GRPO
+seed trained on one H100. The three seeds shared the rollout, judge and image services on two 8×H100 nodes and took
+about 2-2.5 hours in parallel. The single-node layout above runs one seed. More image servers or judges shorten the
+scoring time. Each step logs `t_rollout` and `t_score` in `train_log.jsonl`.
 
 ## Evaluation
 

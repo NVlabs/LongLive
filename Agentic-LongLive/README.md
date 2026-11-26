@@ -257,13 +257,16 @@ python scripts/run_robot.py --episode stories/robot/15_turn_fan_knob.json --imag
 ## Training the RL memory planner
 
 Teacher rollouts, an SFT warm start on the best of four, then GRPO with the v4 reward (text belief + image reward
-calibrated on downstream videos). Each seed trains on one H100; rollout, judge and image servers are shared. Details,
-data layout and the training data download are in [docs/rl.md](docs/rl.md).
+calibrated on downstream videos). Each seed trains on one H100; rollout, judge and image servers are shared.
+
+The training data is not released: `scripts/rl/collect.sh` makes it. It writes the 64 training and development
+stories with Qwen3.6-35B-A3B, runs the teacher rollouts (the GRPO state pool, about 40 minutes with the judge on two
+A100 GPUs) and picks the best of four for SFT; story writing and best of four take extra time. It resumes where it
+stopped. Details and the data layout are in [docs/rl.md](docs/rl.md).
 
 ```bash
-hf download Efficient-Large-Model/Agentic-LongLive-RL-Data --repo-type dataset --local-dir data/rl   # coming soon
 bash scripts/rl/serve.sh           # judge / teacher (Qwen3.6), rollout server (Qwen3-8B + LoRA), FLUX.2-klein
-bash scripts/rl/collect.sh         # teacher rollouts -> data/rl/rollouts, best of 4 -> data/rl/sft/bestof.jsonl
+bash scripts/rl/collect.sh         # stories -> data/rl/train, teacher rollouts -> data/rl/rollouts, best of 4 -> data/rl/sft
 bash scripts/rl/sft.sh             # SFT warm start -> outputs/rl/sft
 bash scripts/rl/grpo.sh            # GRPO, 80 steps -> outputs/rl/grpo_s0 (SEED=1, 2 for more seeds)
 bash scripts/rl/serve_planner.sh   # merge the adapter and serve it as the agent's planner
