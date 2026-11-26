@@ -24,6 +24,7 @@ SPDX-License-Identifier: Apache-2.0
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-coming_soon-B31B1B" alt="Paper on arXiv"></a>
   <a href="https://github.com/NVlabs/LongLive/tree/main/Agentic-LongLive"><img src="https://img.shields.io/badge/GitHub-Code-181717" alt="Code"></a>
   <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/"><img src="https://img.shields.io/badge/Project-Page-76B900" alt="Project page"></a>
+  <a href="https://www.youtube.com/watch?v=czP61EBbaa4"><img src="https://img.shields.io/badge/YouTube-Video-FF0000" alt="Watch Agentic LongLive on YouTube"></a>
   <a href="https://huggingface.co/Efficient-Large-Model"><img src="https://img.shields.io/badge/Hugging_Face-Models-FFD21E" alt="Models on Hugging Face"></a>
   <a href="#quick-start"><img src="https://img.shields.io/badge/Docs-Getting_Started-2563EB" alt="Getting started"></a>
   <a href="../LICENSE"><img src="https://img.shields.io/badge/Code_License-Apache_2.0-76B900" alt="Apache 2.0"></a>
@@ -56,7 +57,8 @@ MiniMax-H3 generators (LongLive-H3, FastH3-Omni) and into robot video generation
 ## Demos
 
 Long stories generated live with FastH3-Omni and our memory agent (one prompt per 8 s shot; excerpts of every other
-shot). Full videos and the agent's live log are on the [project page](https://nvlabs.github.io/LongLive/Agentic-LongLive/).
+shot). Full videos and the agent's live log are on the [project page](https://nvlabs.github.io/LongLive/Agentic-LongLive/),
+and an overview video is on [YouTube](https://www.youtube.com/watch?v=czP61EBbaa4).
 
 | Biscuit: a corgi shops and cooks a dinner | Plein Air: one canvas through five places |
 | :---: | :---: |
