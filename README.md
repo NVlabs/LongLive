@@ -113,7 +113,7 @@ Agentic LongLive runs its LongLive-2.0 generator from `LongLive2.0/`
 
 ## News
 
-- 🔥 [2026.11.25] The [Agentic LongLive paper](https://arxiv.org/abs/2611.34907) is available on arXiv.
+- 🔥 [2026.11.25] The [Agentic LongLive paper](https://arxiv.org/abs/2611.34907) is available on arXiv and [Hugging Face Papers](https://huggingface.co/papers/2611.34907).
 - 🔥 [2026.11.24] We release **Agentic LongLive**: an asynchronous LLM memory agent for real-time long video generation, with the full system on LongLive-2.0 and MiniMax-H3 generators, the LongStory-Online benchmark, robot-video memory and RL training of the memory planner. → [`Agentic-LongLive/`](Agentic-LongLive) · [Project page](https://nvlabs.github.io/LongLive/Agentic-LongLive/)
 - 🔥 [2026.10.08] The [Long-WAM paper](https://arxiv.org/abs/2610.10528) is available on arXiv.
 - 🔥 [2026.10.07] We release **Long-WAM**: long-context world-action models, robot-video pretraining, benchmark training/evaluation and real-robot deployment demos. → [`Long-WAM/`](Long-WAM) · [Project page](https://nvlabs.github.io/LongLive/Long-WAM/)
