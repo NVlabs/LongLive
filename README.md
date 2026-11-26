@@ -7,10 +7,8 @@ Changes: Add the independent Long-WAM and Agentic LongLive projects and group th
 -->
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/longlive-logo-dark.png">
-    <img src="assets/longlive-logo.png" width="500" alt="LongLive"/>
-  </picture>
+  <img src="assets/longlive-logo.png#gh-light-mode-only" width="500" alt="LongLive"/>
+  <img src="assets/longlive-logo-dark.png#gh-dark-mode-only" width="500" alt="LongLive"/>
 </p>
 
 <h2 align="center">LongLive Family</h2>
