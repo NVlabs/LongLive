@@ -1,0 +1,3978 @@
+{
+ "id": "hd01_d6dd3f_full",
+ "setup": {
+  "title": "A New Coat of Paint",
+  "style": "Naturalistic indie drama aesthetic with warm handheld cinematography, soft afternoon sunlight, and realistic domestic textures.",
+  "cast": [
+   {
+    "id": "maya",
+    "name": "Maya",
+    "description": "Maya, Woman in her mid-30s with athletic build, warm brown skin, and curly dark brown hair tied in a loose bun, navy henley shirt and dark denim jeans, worn beige work boots, bare hands."
+   }
+  ]
+ },
+ "bible": {
+  "entities": {
+   "maya": {
+    "id": "maya",
+    "kind": "character",
+    "name": "Maya",
+    "identity": "Woman in her mid-30s with athletic build, warm brown skin, and curly dark brown hair tied in a loose bun.",
+    "initial": {
+     "outfit": "navy henley shirt and dark denim jeans",
+     "footwear": "worn beige work boots",
+     "accessory": "bare hands"
+    },
+    "protagonist": true
+   },
+   "sam": {
+    "id": "sam",
+    "kind": "character",
+    "name": "Sam",
+    "identity": "Man in his mid-30s with tall broad build, fair skin, and straight sandy blonde hair.",
+    "initial": {
+     "outfit": "faded maroon t-shirt and grey sweatpants",
+     "footwear": "white running sneakers"
+    },
+    "protagonist": false
+   },
+   "leo": {
+    "id": "leo",
+    "kind": "character",
+    "name": "Leo",
+    "identity": "Seven-year-old boy with slender build, warm brown skin, and short bouncy dark curls.",
+    "initial": {
+     "outfit": "yellow graphic t-shirt under blue denim overalls",
+     "footwear": "red velcro sneakers"
+    },
+    "protagonist": false
+   },
+   "cleo": {
+    "id": "cleo",
+    "kind": "character",
+    "name": "Cleo",
+    "identity": "Slender ginger tabby domestic cat with vibrant green eyes and white paws.",
+    "initial": {
+     "accessory": "red nylon collar with silver bell"
+    },
+    "protagonist": false
+   },
+   "ceramic_lamp": {
+    "id": "ceramic_lamp",
+    "kind": "object",
+    "name": "Ceramic Lamp",
+    "identity": "Bulbous teal ceramic table lamp with a brass neck and pleated cream paper shade.",
+    "initial": {
+     "state": "intact teal glazed ceramic body with clean pleated shade, cord wrapped around base",
+     "placement": "standing on the bare living room floor"
+    },
+    "protagonist": false
+   },
+   "dino_backpack": {
+    "id": "dino_backpack",
+    "kind": "object",
+    "name": "Dino Backpack",
+    "identity": "Bright green canvas toddler backpack with yellow felt dinosaur dorsal plates along the spine.",
+    "initial": {
+     "state": "zipped shut, stuffed plumply with soft plush toys",
+     "placement": "slumped against the living room baseboard"
+    },
+    "protagonist": false
+   },
+   "tape_gun": {
+    "id": "tape_gun",
+    "kind": "object",
+    "name": "Tape Gun",
+    "identity": "Heavy red plastic handheld packing tape dispenser with a serrated steel blade.",
+    "initial": {
+     "state": "loaded with a fresh roll of clear acrylic packing tape"
+    },
+    "protagonist": false
+   },
+   "wardrobe_box": {
+    "id": "wardrobe_box",
+    "kind": "object",
+    "name": "Wardrobe Box",
+    "identity": "Tall rectangular brown corrugated cardboard wardrobe box with side hand-holes.",
+    "initial": {
+     "state": "open flaps standing upright, empty interior with metal hanger bar installed",
+     "placement": "resting against the hallway wall"
+    },
+    "protagonist": false
+   },
+   "cat_carrier": {
+    "id": "cat_carrier",
+    "kind": "object",
+    "name": "Cat Carrier",
+    "identity": "Rigid two-tone sky-blue and white plastic pet carrier with a black wire-mesh gate.",
+    "initial": {
+     "state": "unlatched, open wire door, clean blue fleece liner inside",
+     "placement": "sitting on the hallway runner rug"
+    },
+    "protagonist": false
+   },
+   "paint_roller_tray": {
+    "id": "paint_roller_tray",
+    "kind": "object",
+    "name": "Paint Roller Tray",
+    "identity": "Textured ribbed steel paint roller tray with sturdy stamped metal legs.",
+    "initial": {
+     "state": "dry, clean silver metal tray with an unwrapped sponge roller rest"
+    },
+    "protagonist": false
+   },
+   "wooden_toolbox": {
+    "id": "wooden_toolbox",
+    "kind": "object",
+    "name": "Wooden Toolbox",
+    "identity": "Vintage open-top oak toolbox with dovetailed corners and a dowel carrying handle.",
+    "initial": {
+     "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+     "placement": "resting on the living room floorboards"
+    },
+    "protagonist": false
+   },
+   "bubble_wrap_roll": {
+    "id": "bubble_wrap_roll",
+    "kind": "object",
+    "name": "Bubble Wrap Roll",
+    "identity": "Wide cylindrical roll of clear polyethylene air bubble cushioning wrap.",
+    "initial": {
+     "state": "full thick roll of clear bubble wrap with loose end trailing"
+    },
+    "protagonist": false
+   },
+   "stepladder": {
+    "id": "stepladder",
+    "kind": "object",
+    "name": "Stepladder",
+    "identity": "Lightweight two-step aluminum utility ladder with black grooved rubber treads.",
+    "initial": {
+     "state": "folded flat with locking brace disengaged",
+     "placement": "leaning against the living room window frame"
+    },
+    "protagonist": false
+   },
+   "framed_family_photo": {
+    "id": "framed_family_photo",
+    "kind": "object",
+    "name": "Framed Family Photo",
+    "identity": "Square blonde oak picture frame enclosing a colour photo of Maya, Sam, and infant Leo on a beach.",
+    "initial": {
+     "state": "clean glass pane, pristine light oak frame",
+     "placement": "resting flat on the living room radiator cover"
+    },
+    "protagonist": false
+   }
+  },
+  "locations": {
+   "flat_living_room": {
+    "id": "flat_living_room",
+    "name": "Flat Living Room",
+    "look": "Cluttered urban apartment living room with stripped wood floors, faded floral wallpaper, and tall sash windows letting in pale morning light."
+   },
+   "flat_hallway": {
+    "id": "flat_hallway",
+    "name": "Flat Hallway",
+    "look": "Narrow apartment corridor with scuffed white baseboards, faded runner rug, and a front entrance door with brass deadbolts."
+   },
+   "moving_van": {
+    "id": "moving_van",
+    "name": "Moving Van Interior",
+    "look": "Cavernous ribbed cargo box of a rental truck with wooden tie-rails along dark plywood walls and a slatted aluminium roll-up back door."
+   },
+   "suburban_driveway": {
+    "id": "suburban_driveway",
+    "name": "Suburban Driveway",
+    "look": "Sloped concrete driveway fronting a two-story brick suburban home under bright afternoon sunshine with a modest green front lawn."
+   },
+   "kid_bedroom": {
+    "id": "kid_bedroom",
+    "name": "Kid's Bedroom",
+    "look": "Upstairs bedroom with golden pine floorboards, large south-facing window, and unpainted matte cream drywall walls."
+   }
+  }
+ },
+ "shots": [
+  {
+   "prompt": "Pale morning light streams through the tall sash windows of the cluttered urban flat living room, illuminating stripped wood floors and faded floral wallpaper.\n\nMaya, a woman in her mid-30s with an athletic build, warm brown skin, and curly dark brown hair tied in a loose bun, wears a navy henley shirt, dark denim jeans, and worn beige work boots with bare hands. She smiles nostalgically as she picks up the framed family photo—a square blonde oak frame holding a beach picture of her, Sam, and infant Leo—from the radiator cover and hands it over to Sam. Sam, a tall broad man in his mid-30s with fair skin and straight sandy blonde hair, wearing a faded maroon t-shirt, grey sweatpants, and white running sneakers, bites his lower lip in concentration as he operates a heavy red plastic tape gun to seal a moving carton.\n\nAn eye-level medium shot tracks Maya as she hands off the picture frame to Sam.",
+   "annotation": {
+    "title_en": "Maya holds the framed beach photo gently before handing it t",
+    "scene": "flat_living_room",
+    "camera": "Eye-level medium shot tracking Maya as she hands off the frame.",
+    "beat": "Maya holds the framed beach photo gently before handing it to Sam, who seals another moving box with the tape gun.",
+    "present": [
+     "maya",
+     "sam",
+     "framed_family_photo",
+     "tape_gun"
+    ],
+    "first_appearance": [
+     "maya",
+     "sam",
+     "framed_family_photo",
+     "tape_gun"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Maya smiling nostalgically; Sam biting his lower lip in concentration while applying tape.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "framed_family_photo.state": "clean glass pane, pristine light oak frame",
+     "framed_family_photo.placement": "resting flat on the living room radiator cover",
+     "tape_gun.state": "loaded with a fresh roll of clear acrylic packing tape"
+    }
+   }
+  },
+  {
+   "prompt": "The cluttered apartment living room is scattered with cardboard boxes, stripped floorboards glowing softly under the morning sash windows.\n\nLeo, a slender seven-year-old boy with warm brown skin and short bouncy dark curls, wears a yellow graphic t-shirt under blue denim overalls and red velcro sneakers. Sitting cross-legged on the floor beside a wide cylindrical roll of clear polyethylene bubble wrap, he makes playful engine noises while tucking his toy cars into his dino backpack—a bright green canvas toddler backpack with yellow felt dinosaur dorsal plates along its spine—before zipping it securely shut.\n\nA low-angle shot looks down over Leo's shoulder as he packs his bag.",
+   "annotation": {
+    "title_en": "Leo sits cross-legged on the floor, tucking his favourite to",
+    "scene": "flat_living_room",
+    "camera": "Low-angle shot looking down over Leo's shoulder at the backpack.",
+    "beat": "Leo sits cross-legged on the floor, tucking his favourite toy cars into his dino backpack beside the bubble wrap.",
+    "present": [
+     "leo",
+     "dino_backpack",
+     "bubble_wrap_roll"
+    ],
+    "first_appearance": [
+     "leo",
+     "dino_backpack",
+     "bubble_wrap_roll"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Leo making engine noises and zipping the backpack closed.",
+    "start_state": {
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "dino_backpack.state": "zipped shut, stuffed plumply with soft plush toys",
+     "dino_backpack.placement": "slumped against the living room baseboard",
+     "bubble_wrap_roll.state": "full thick roll of clear bubble wrap with loose end trailing"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the flat living room, morning light catches the faded floral wallpaper and bare wooden floorboards, where packed boxes crowd the corners.\n\nMaya, dressed in her navy henley and dark denim jeans with beige work boots and bare hands, sighs with fatigue and wipes stray hair from her forehead with her wrist. Kneeling beside a folded two-step aluminum utility ladder leaning against the window frame, she tears a sheet of bubble wrap from the wide polyethylene roll and loosely wraps it around an intact bulbous teal ceramic table lamp, covering its glazed base and pleated cream shade.\n\nA medium close-up focuses intimately on Maya's hands wrapping the teal lamp base.",
+   "annotation": {
+    "title_en": "Maya tears a sheet of bubble wrap from the roll and drapes i",
+    "scene": "flat_living_room",
+    "camera": "Medium close-up focusing on Maya's hands wrapping the lamp base.",
+    "beat": "Maya tears a sheet of bubble wrap from the roll and drapes it hastily around the teal ceramic lamp near the stepladder.",
+    "present": [
+     "maya",
+     "ceramic_lamp",
+     "bubble_wrap_roll",
+     "stepladder"
+    ],
+    "first_appearance": [
+     "ceramic_lamp",
+     "stepladder"
+    ],
+    "changes": [
+     {
+      "entity": "ceramic_lamp",
+      "attr": "state",
+      "value": "unplugged, wrapped loosely in half-torn bubble wrap"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya sighing with fatigue, wiping stray hair from her forehead with her wrist.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands"
+     },
+     "ceramic_lamp": {
+      "state": "intact teal glazed ceramic body with clean pleated shade, cord wrapped around base",
+      "placement": "standing on the bare living room floor"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "standing on the bare living room floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "ceramic_lamp.state": "unplugged, wrapped loosely in half-torn bubble wrap",
+     "ceramic_lamp.placement": "standing on the bare living room floor",
+     "bubble_wrap_roll.state": "full thick roll of clear bubble wrap with loose end trailing",
+     "stepladder.state": "folded flat with locking brace disengaged",
+     "stepladder.placement": "leaning against the living room window frame"
+    }
+   }
+  },
+  {
+   "prompt": "In the narrow flat hallway, pale light reveals scuffed white baseboards, a faded runner rug, and the brass deadbolts on the heavy front door.\n\nLeo, wearing his yellow graphic t-shirt under denim overalls and red velcro sneakers, crouches quietly on the faded runner rug beside an open two-tone sky-blue and white plastic cat carrier with a clean blue fleece liner. Cleo, a slender ginger tabby cat wearing a red nylon collar with a silver bell, blinks her green eyes and meows softly as Leo whispers soothingly, coaxing her inside before latching the black wire-mesh gate shut.\n\nA low floor-level shot frames Leo crouched right beside the carrier door.",
+   "annotation": {
+    "title_en": "Leo gently coaxes Cleo the cat into the carrier and latches ",
+    "scene": "flat_hallway",
+    "camera": "Low floor-level shot framing Leo crouched beside the carrier door.",
+    "beat": "Leo gently coaxes Cleo the cat into the carrier and latches the wire mesh door shut.",
+    "present": [
+     "leo",
+     "cleo",
+     "cat_carrier"
+    ],
+    "first_appearance": [
+     "cleo",
+     "cat_carrier"
+    ],
+    "changes": [
+     {
+      "entity": "cat_carrier",
+      "attr": "state",
+      "value": "latched closed with Cleo inside peering through the wire mesh"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Leo whispering soothingly through the grate; Cleo blinking green eyes and meowing softly.",
+    "start_state": {
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "unlatched, open wire door, clean blue fleece liner inside",
+      "placement": "sitting on the hallway runner rug"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "standing on the bare living room floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "cleo.accessory": "red nylon collar with silver bell",
+     "cat_carrier.state": "latched closed with Cleo inside peering through the wire mesh",
+     "cat_carrier.placement": "sitting on the hallway runner rug"
+    }
+   }
+  },
+  {
+   "prompt": "The narrow hallway remains tight and utilitarian, lined with scuffed white baseboards and moving debris along the faded floor runner.\n\nSam, in his faded maroon t-shirt, grey sweatpants, and white running sneakers, works briskly over a tall rectangular brown cardboard wardrobe box standing open against the wall with its interior metal hanger bar exposed. He folds down the top flaps and firmly runs two screeching lengths of clear acrylic packing tape across the seam using the red tape gun, pressing the tape down hard with the heel of his hand before writing 'BEDROOM CLOTHES' across the cardboard with a black felt pen.\n\nA static waist-height shot frames Sam working briskly over the carton.",
+   "annotation": {
+    "title_en": "Sam folds the top flaps of the tall wardrobe box down and ru",
+    "scene": "flat_hallway",
+    "camera": "Static waist-height shot framing Sam working briskly over the carton.",
+    "beat": "Sam folds the top flaps of the tall wardrobe box down and runs two screeching strips of tape across them.",
+    "present": [
+     "sam",
+     "wardrobe_box",
+     "tape_gun"
+    ],
+    "first_appearance": [
+     "wardrobe_box"
+    ],
+    "changes": [
+     {
+      "entity": "wardrobe_box",
+      "attr": "state",
+      "value": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Sam pressing the tape down firmly with the heel of his hand and writing the label with a felt pen.",
+    "start_state": {
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "wardrobe_box": {
+      "state": "open flaps standing upright, empty interior with metal hanger bar installed",
+      "placement": "resting against the hallway wall"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "standing on the bare living room floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "resting against the hallway wall"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "wardrobe_box.state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+     "wardrobe_box.placement": "resting against the hallway wall",
+     "tape_gun.state": "loaded with a fresh roll of clear acrylic packing tape"
+    }
+   }
+  },
+  {
+   "prompt": "The hallway's narrow runner rug stretches toward the brass-deadbolted front door, shadowed beneath soft ambient daylight.\n\nMaya stands beside the tall taped wardrobe box marked 'BEDROOM CLOTHES'. Wearing her navy henley shirt, dark denim jeans, and beige work boots, she pulls on a pair of heavy grey cotton work gloves with grippy rubber palms. Bending her knees, she grips the box's side hand-holes and grunts softly under her breath, lifting one edge slightly off the floor to test its balance and heft.\n\nA medium shot follows Maya as she bends her knees to test the box's weight.",
+   "annotation": {
+    "title_en": "Maya pulls on a pair of thick rubber-palmed work gloves and ",
+    "scene": "flat_hallway",
+    "camera": "Medium shot following Maya as she bends her knees to test the box's weight.",
+    "beat": "Maya pulls on a pair of thick rubber-palmed work gloves and grabs the side hand-holes of the wardrobe box.",
+    "present": [
+     "maya",
+     "wardrobe_box"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "maya",
+      "attr": "accessory",
+      "value": "wearing heavy grey cotton work gloves with rubber palms"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya grunting softly as she lifts one edge slightly to gauge the balance.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "resting against the hallway wall"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "standing on the bare living room floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "resting against the hallway wall"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "wardrobe_box.state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+     "wardrobe_box.placement": "resting against the hallway wall"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the cavernous ribbed cargo box of a rental truck, wooden tie-rails line the dark plywood walls beneath a slatted aluminium roll-up door.\n\nSam, a tall, broad man in his mid-30s with fair skin and sandy blonde hair, wears a faded maroon t-shirt, grey sweatpants, and white running sneakers. A tall brown corrugated wardrobe box, taped shut and labeled 'BEDROOM CLOTHES' in thick marker, sits inside.\n\nSam turns a blue baseball cap backwards onto his head, positioning the box flush against the inner plywood wall. He pulls a ratcheting strap taut around the box, securing it firmly against the ribbed wall. An interior wide shot frames him looking toward the open back of the van.",
+   "annotation": {
+    "title_en": "Inside the van, Sam turns his baseball cap backwards and sec",
+    "scene": "moving_van",
+    "camera": "Interior wide shot looking toward the open back of the van.",
+    "beat": "Inside the van, Sam turns his baseball cap backwards and secures the wardrobe box against the inner plywood wall.",
+    "present": [
+     "sam",
+     "wardrobe_box"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "sam",
+      "attr": "headwear",
+      "value": "backwards blue baseball cap"
+     },
+     {
+      "entity": "wardrobe_box",
+      "attr": "placement",
+      "value": "strapped against the ribbed wall of the van interior"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Sam pulling a ratcheting strap taut around the box.",
+    "start_state": {
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "resting against the hallway wall"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "standing on the bare living room floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "wardrobe_box.state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+     "wardrobe_box.placement": "strapped against the ribbed wall of the van interior"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the moving van's ribbed cargo box, stacks of loaded packing boxes flank the slatted roll-up entryway.\n\nMaya, a woman in her mid-30s with warm brown skin and curly dark hair in a bun, wears a navy henley, dark denim jeans, worn beige work boots, and heavy grey rubber-palmed work gloves. Sam stands inside wearing his faded maroon t-shirt, grey sweatpants, white sneakers, and backwards blue cap. Maya holds a bulbous teal ceramic table lamp loosely wrapped in torn bubble wrap.\n\nMaya hands the lamp up to Sam, pointing dubiously toward a narrow gap. Sam nods reassuringly, wedging the lamp atop a high stack of flat-pack cartons near the tailgate before stepping back. An over-the-shoulder shot looks up from Maya into the cargo bed.",
+   "annotation": {
+    "title_en": "Maya hands the bubble-wrapped ceramic lamp up to Sam, who we",
+    "scene": "moving_van",
+    "camera": "Over-the-shoulder shot from Maya looking up into the cargo bed.",
+    "beat": "Maya hands the bubble-wrapped ceramic lamp up to Sam, who wedges it atop a high stack of flat-pack cartons near the tailgate.",
+    "present": [
+     "maya",
+     "sam",
+     "ceramic_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "ceramic_lamp",
+      "attr": "placement",
+      "value": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya pointing dubiously at the high spot; Sam nodding reassuringly before stepping back.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "standing on the bare living room floor"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "ceramic_lamp.state": "unplugged, wrapped loosely in half-torn bubble wrap",
+     "ceramic_lamp.placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+    }
+   }
+  },
+  {
+   "prompt": "The narrow flat hallway features scuffed white baseboards, a faded runner rug, and a front entrance door fitted with brass deadbolts.\n\nMaya wears her navy henley, dark denim jeans, beige boots, and grey work gloves. Seven-year-old Leo, with warm brown skin and bouncy dark curls, wears a yellow graphic t-shirt over blue denim overalls and red velcro sneakers.\n\nLeo trips over a rolled rug, and Maya quickly drops to her knees to help him up. As Leo pouts slightly, grey dust smudges coat the knees of his overalls while Maya brushes them off and pats his knees affectionately. A two-shot at Leo's eye level captures Maya kneeling warmly before him.",
+   "annotation": {
+    "title_en": "Maya helps Leo stand after he trips over a rolled rug in the",
+    "scene": "flat_hallway",
+    "camera": "Two-shot eye level with Leo, capturing Maya kneeling before him.",
+    "beat": "Maya helps Leo stand after he trips over a rolled rug in the hallway, brushing off his dusty overalls.",
+    "present": [
+     "maya",
+     "leo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "leo",
+      "attr": "stains",
+      "value": "grey dust smudges across the knees of his denim overalls"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Leo pouting slightly; Maya patting his knees affectionately.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls"
+    }
+   }
+  },
+  {
+   "prompt": "The empty urban living room displays stripped wood floors, faded floral wallpaper, and tall sash windows letting in pale morning light.\n\nMaya wears her navy henley, dark denim jeans, beige boots, and grey work gloves. A full, thick roll of clear bubble wrap rests nearby with its loose end trailing. On the floorboards sits a vintage open-top oak toolbox with dovetailed corners and a dowel carrying handle, stocked with screwdrivers, utility knives, and epoxy tubes.\n\nMaya gathers the trailing bubble wrap roll and lifts the heavy wooden toolbox, pausing to glance around the stripped room with a quiet, bittersweet smile. A wide slow pan glides across the echoing, bare floorboards.",
+   "annotation": {
+    "title_en": "Back in the empty living room, Maya collects the trailing bu",
+    "scene": "flat_living_room",
+    "camera": "Wide slow pan across the echoey, bare floorboards.",
+    "beat": "Back in the empty living room, Maya collects the trailing bubble wrap roll and picks up the wooden toolbox.",
+    "present": [
+     "maya",
+     "bubble_wrap_roll",
+     "wooden_toolbox"
+    ],
+    "first_appearance": [
+     "wooden_toolbox"
+    ],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Maya glancing around the stripped room with a quiet, bittersweet smile.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "bubble_wrap_roll.state": "full thick roll of clear bubble wrap with loose end trailing",
+     "wooden_toolbox.state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+     "wooden_toolbox.placement": "resting on the living room floorboards"
+    }
+   }
+  },
+  {
+   "prompt": "The narrow apartment corridor features scuffed white baseboards, faded runner rug, and the open entrance doorway.\n\nSam wears his faded maroon t-shirt, grey sweatpants, white running sneakers, and backwards blue baseball cap. He holds a lightweight folded two-step aluminum stepladder with black rubber treads and takes the oak wooden toolbox filled with screwdrivers and utility knives.\n\nSam tucks the folded stepladder under his arm while taking the wooden toolbox at the doorway, carefully shifting his grip on the ladder's metal frame to prevent it from rattling as he strides out. A medium tracking shot backs down the hallway ahead of Sam.",
+   "annotation": {
+    "title_en": "Sam carries the folded aluminum stepladder under his arm whi",
+    "scene": "flat_hallway",
+    "camera": "Medium tracking shot backing down the hallway ahead of Sam.",
+    "beat": "Sam carries the folded aluminum stepladder under his arm while taking the toolbox from Maya at the apartment doorway.",
+    "present": [
+     "sam",
+     "stepladder",
+     "wooden_toolbox"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Sam shifting his grip on the stepladder's metal frame to prevent rattling.",
+    "start_state": {
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "stepladder.state": "folded flat with locking brace disengaged",
+     "stepladder.placement": "leaning against the living room window frame",
+     "wooden_toolbox.state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+     "wooden_toolbox.placement": "resting on the living room floorboards"
+    }
+   }
+  },
+  {
+   "prompt": "A sloped concrete driveway leads up to a two-story brick suburban home under bright afternoon sunshine, bordered by a modest green front lawn.\n\nSam wears his faded maroon t-shirt, grey sweatpants, white running sneakers, and backwards blue baseball cap. Leo wears his yellow graphic t-shirt, red velcro sneakers, and dusty blue denim overalls.\n\nSam unlatches the front passenger door of the truck, letting Leo leap out excitedly onto the sunlit concrete. Leo shields his eyes from the sharp afternoon glare while Sam stretches his arms overhead with relief. A sunny wide exterior shot captures the front garden and driveway.",
+   "annotation": {
+    "title_en": "Arriving at the new suburban house, Sam unlatches the front ",
+    "scene": "suburban_driveway",
+    "camera": "Sunny wide exterior shot showing the front garden and driveway.",
+    "beat": "Arriving at the new suburban house, Sam unlatches the front passenger door and Leo leaps excitedly onto the concrete driveway.",
+    "present": [
+     "sam",
+     "leo"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Leo shielding his eyes from the afternoon glare; Sam stretching his arms overhead.",
+    "start_state": {
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls"
+    }
+   }
+  },
+  {
+   "prompt": "On the sloped concrete Suburban Driveway fronting a two-story brick suburban home under bright afternoon sunshine with a modest green front lawn.\n\nMaya, a woman in her mid-30s with athletic build, warm brown skin, and curly dark brown hair tied in a loose bun, wears a navy henley shirt, dark denim jeans, worn beige work boots, and heavy grey cotton work gloves with rubber palms. She carries the Tape Gun, a heavy red plastic handheld packing tape dispenser loaded with a fresh roll of clear acrylic packing tape. Maya walks around the back of the parked moving van holding the dispenser, jingling a brass key ring against her palm as she checks the front door keys tucked in her pocket.\n\nFollowing medium tracking shot from behind Maya, capturing the sun-baked driveway surface and the rear corner of the rental van.",
+   "annotation": {
+    "title_en": "Maya walks around the back of the parked van holding the tap",
+    "scene": "suburban_driveway",
+    "camera": "Following medium tracking shot from behind Maya.",
+    "beat": "Maya walks around the back of the parked van holding the tape gun, checking the front door keys in her pocket.",
+    "present": [
+     "maya",
+     "tape_gun"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Maya jingling a brass key ring against her palm.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "tape_gun.state": "loaded with a fresh roll of clear acrylic packing tape"
+    }
+   }
+  },
+  {
+   "prompt": "On the sloped concrete Suburban Driveway beside the emerald grass lawn under the midday glare.\n\nLeo, a slender seven-year-old boy with warm brown skin and short bouncy dark curls, wears a yellow graphic t-shirt under blue denim overalls smudged with grey dust across the knees, paired with red velcro sneakers. Beside him sits the Cat Carrier, a rigid sky-blue and white plastic pet box with a black wire-mesh gate, latched shut. Inside sits Cleo, a slender ginger tabby cat with vibrant green eyes, white paws, and a red nylon collar with a silver bell. Leo gently lowers the carrier onto the shady lawn, plucks a blade of grass, and pokes the stalk through the metal mesh, which Cleo curiously sniffs.\n\nLow close-up focusing sharply on the carrier's wire door, catching sunlight dancing in Cleo's vibrant eyes and Leo's attentive expression.",
+   "annotation": {
+    "title_en": "Leo carefully sets Cleo's carrier onto the shady grass besid",
+    "scene": "suburban_driveway",
+    "camera": "Low close-up focusing on the carrier door.",
+    "beat": "Leo carefully sets Cleo's carrier onto the shady grass beside the driveway, peering in through the gate.",
+    "present": [
+     "leo",
+     "cleo",
+     "cat_carrier"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Leo poking a grass stalk through the carrier wire; Cleo sniffing the green tip curiously.",
+    "start_state": {
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls",
+     "cleo.accessory": "red nylon collar with silver bell",
+     "cat_carrier.state": "latched closed with Cleo inside peering through the wire mesh",
+     "cat_carrier.placement": "sitting on the hallway runner rug"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the Moving Van Interior, a cavernous ribbed cargo box of a rental truck with wooden tie-rails along dark plywood walls and a slatted aluminium roll-up back door.\n\nMaya, wearing her navy henley shirt, dark denim jeans, worn beige work boots, and heavy grey cotton work gloves with rubber palms, stands beside Sam, a tall broad man in his mid-30s with fair skin, straight sandy blonde hair, faded maroon t-shirt, grey sweatpants, white running sneakers, and a backwards blue baseball cap. The vintage oak Wooden Toolbox sits ready with its dovetailed corners and dowel handle. Together, Maya and Sam heave upward on the slatted aluminium door, setting the toolbox down onto the bumper ledge as bright exterior sunlight floods into the dark cavern. Maya shields her squinting eyes against the sudden glare.\n\nInside-looking-out shot as blinding suburban sunshine breaks across the dark cargo interior.",
+   "annotation": {
+    "title_en": "Maya and Sam heave open the metal roll-up door of the van, p",
+    "scene": "moving_van",
+    "camera": "Inside-looking-out shot as sunlight floods into the dark cargo interior.",
+    "beat": "Maya and Sam heave open the metal roll-up door of the van, placing the wooden toolbox down on the bumper ledge.",
+    "present": [
+     "maya",
+     "sam",
+     "wooden_toolbox"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Maya shielding her eyes against the sudden burst of sun.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "wooden_toolbox.state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+     "wooden_toolbox.placement": "resting on the living room floorboards"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the sunlit Moving Van Interior, surrounded by ribbed cargo walls and dark plywood boards.\n\nMaya stands wearing her navy henley shirt, dark denim jeans, worn beige work boots, and heavy grey cotton work gloves. Spread across the corrugated metal floor lies the shattered Ceramic Lamp, its bulbous teal ceramic base fractured into two large clean halves, brass neck bent askew, and pleated cream paper shade crumpled and torn. Maya looks down and gasps in shock, clapping both of her bulky gloved hands to her cheeks in dismay at the sight of the ruined lamp.\n\nHigh-angle close-up looking directly down at the broken teal ceramic shards and crumpled shade strewn across the floor beside Maya's worn beige work boots.",
+   "annotation": {
+    "title_en": "Maya gasps as she sees that the ceramic lamp tumbled from th",
+    "scene": "moving_van",
+    "camera": "High-angle close-up looking down at the broken shards by Maya's boots.",
+    "beat": "Maya gasps as she sees that the ceramic lamp tumbled from the boxes during transit and shattered on the metal floor.",
+    "present": [
+     "maya",
+     "ceramic_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "ceramic_lamp",
+      "attr": "state",
+      "value": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade"
+     },
+     {
+      "entity": "ceramic_lamp",
+      "attr": "placement",
+      "value": "shattered across the corrugated van floor"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya clapping both gloved hands to her cheeks in dismay.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "ceramic_lamp": {
+      "state": "unplugged, wrapped loosely in half-torn bubble wrap",
+      "placement": "perched precariously atop a stack of flat-pack boxes near the tailgate"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "ceramic_lamp.state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+     "ceramic_lamp.placement": "shattered across the corrugated van floor"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the bright Moving Van Interior, amidst stacks of moving boxes and ribbed truck walls.\n\nMaya wears her navy henley, dark jeans, worn work boots, and heavy work gloves. Beside her, Sam wears his faded maroon t-shirt, grey sweatpants, backwards blue baseball cap, and white sneakers. The Ceramic Lamp lies on the corrugated floor with its teal base cracked cleanly in two pieces and bent brass neck. Sam steps in, kneeling beside the debris, and carefully lifts the two ceramic halves into his open palms. He angles one half upward to show Maya the smooth, glueable fracture line, and Maya slowly lets out a relieved breath.\n\nOverhead two-shot of Sam and Maya huddled close together over the broken lamp pieces on the van floor.",
+   "annotation": {
+    "title_en": "Sam joins Maya in the van, kneeling to carefully gather the ",
+    "scene": "moving_van",
+    "camera": "Overhead two-shot of Sam and Maya huddled over the wreckage.",
+    "beat": "Sam joins Maya in the van, kneeling to carefully gather the clean-broken ceramic halves into his palms.",
+    "present": [
+     "maya",
+     "sam",
+     "ceramic_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Sam tilting a ceramic piece to show the clean break line; Maya exhaling slowly.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "wearing heavy grey cotton work gloves with rubber palms",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "ceramic_lamp.state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+     "ceramic_lamp.placement": "shattered across the corrugated van floor"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the sun-filled Moving Van Interior against the dark plywood and metal-ribbed walls.\n\nMaya wears her navy henley shirt, dark denim jeans, and worn beige work boots. The tall brown Wardrobe Box remains lashed to the wall tie-rail, sealed tight with packing tape and marked 'BEDROOM CLOTHES' in black marker. Maya pulls off her heavy grey cotton work gloves, tossing them aside to bare her hands so she can work the tie knots. As she reaches past the metal rail, a sharp bracket scrapes her outer right forearm, leaving a bright red scratch. She flinches, wincing with a hiss as she gently rubs the tender skin beside the fresh scrape.\n\nClose-up on Maya's right arm and bare hand as she winces and inspects the superficial red scrape.",
+   "annotation": {
+    "title_en": "Maya removes her bulky work gloves to untie the wardrobe box",
+    "scene": "moving_van",
+    "camera": "Close-up on Maya's right arm as she inspects the fresh superficial scrape.",
+    "beat": "Maya removes her bulky work gloves to untie the wardrobe box, accidentally scraping her forearm against a sharp metal tie-rail bracket.",
+    "present": [
+     "maya",
+     "wardrobe_box"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "maya",
+      "attr": "accessory",
+      "value": "bare hands"
+     },
+     {
+      "entity": "maya",
+      "attr": "injury",
+      "value": "small red scrape along the outer edge of her right forearm"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya wincing and rubbing the skin beside the red scrape.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "wearing heavy grey cotton work gloves with rubber palms"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "wardrobe_box.state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+     "wardrobe_box.placement": "strapped against the ribbed wall of the van interior"
+    }
+   }
+  },
+  {
+   "prompt": "In the upstairs kid's bedroom, golden pine floorboards catch soft afternoon sunshine from a large south-facing window, surrounded by unpainted matte cream drywall walls.\n\nSam, a tall broad man in his mid-30s with fair skin and straight sandy blonde hair, wears a faded maroon t-shirt, grey sweatpants, white running sneakers, and a backwards blue baseball cap. He lugs the tall rectangular corrugated cardboard wardrobe box, labeled 'BEDROOM CLOTHES' in thick black marker and taped shut, into the room and thuds it down upright in the center of the bare floor. Sam exhales, wiping sweat from his forehead with the hem of his maroon shirt.\n\nA naturalistic medium wide shot captures the empty room's warm cream drywall as Sam catches his breath.",
+   "annotation": {
+    "title_en": "Sam lugs the heavy wardrobe box up the stairs and thuds it d",
+    "scene": "kid_bedroom",
+    "camera": "Medium wide shot showing the bare cream walls of the new room.",
+    "beat": "Sam lugs the heavy wardrobe box up the stairs and thuds it down into the center of Leo's new bedroom.",
+    "present": [
+     "sam",
+     "wardrobe_box"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "wardrobe_box",
+      "attr": "placement",
+      "value": "set upright in the center of the kid's bare bedroom floor"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Sam wiping sweat from his forehead with the hem of his maroon shirt.",
+    "start_state": {
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "strapped against the ribbed wall of the van interior"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "wardrobe_box.state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+     "wardrobe_box.placement": "set upright in the center of the kid's bare bedroom floor"
+    }
+   }
+  },
+  {
+   "prompt": "The upstairs kid's bedroom remains bright with golden pine floorboards illuminated by the wide south-facing window across matte cream walls.\n\nLeo, a slender seven-year-old boy with warm brown skin and short bouncy dark curls, wears a yellow graphic t-shirt under blue denim overalls with grey dust smudges across the knees, paired with red velcro sneakers. Carrying his bright green canvas dino backpack stuffed plumply with plush toys, he dashes in and drops it slumped against the corner wall beside the folded two-step aluminum stepladder. Leo eagerly jumps up to touch the wooden windowsill before spinning around in excitement.\n\nA low dynamic handheld tracking shot follows Leo as he sprints into the empty, sunny space.",
+   "annotation": {
+    "title_en": "Leo runs into his new bedroom carrying his dino backpack, dr",
+    "scene": "kid_bedroom",
+    "camera": "Low dynamic shot tracking Leo sprinting into the empty sunny space.",
+    "beat": "Leo runs into his new bedroom carrying his dino backpack, dropping it proudly beside the unfolded stepladder.",
+    "present": [
+     "leo",
+     "dino_backpack",
+     "stepladder"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "dino_backpack",
+      "attr": "placement",
+      "value": "slumped against the corner wall near the stepladder"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Leo jumping up to touch the windowsill before spinning around.",
+    "start_state": {
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the living room baseboard"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls",
+     "dino_backpack.state": "zipped shut, stuffed plumply with soft plush toys",
+     "dino_backpack.placement": "slumped against the corner wall near the stepladder",
+     "stepladder.state": "folded flat with locking brace disengaged",
+     "stepladder.placement": "leaning against the living room window frame"
+    }
+   }
+  },
+  {
+   "prompt": "Within the empty kid's bedroom, soft afternoon daylight reflects off the pale pine floorboards and blank matte cream drywall walls.\n\nMaya, an athletic woman in her mid-30s with warm brown skin, curly dark hair in a loose bun, and a small red scrape on her outer right forearm, enters wearing a navy henley shirt, dark denim jeans, and worn beige work boots. She rests her bare hand on the folded aluminum stepladder beside Leo, who wears his dust-smudged denim overalls and yellow t-shirt. Maya smiles warmly, tracing an imaginary rectangle on the wall with both hands to show Leo where his bed will go, as Leo nods eagerly.\n\nA warm, handheld medium two-shot frames Maya and Leo looking together at the bare wall.",
+   "annotation": {
+    "title_en": "Maya steps into the bedroom and rests her hand on the stepla",
+    "scene": "kid_bedroom",
+    "camera": "Medium two-shot framing Maya and Leo looking at the bare wall.",
+    "beat": "Maya steps into the bedroom and rests her hand on the stepladder, tracing a square on the wall to show Leo where his bed will go.",
+    "present": [
+     "maya",
+     "leo",
+     "stepladder"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Maya smiling warmly and gesturing with both hands; Leo nodding eagerly.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls",
+     "stepladder.state": "folded flat with locking brace disengaged",
+     "stepladder.placement": "leaning against the living room window frame"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the kid's bedroom, warm afternoon light streams across the golden pine floorboards and unpainted cream drywall.\n\nMaya, dressed in her navy henley shirt, dark denim jeans, and beige work boots with her curly hair tied up and a minor red scrape on her forearm, kneels beside the tall brown wardrobe box. Slicing through the sealed packing tape, she leaves the top flaps open and hanging loose. Maya reaches in and pulls out several wire hangers hung with children's jackets, shaking wrinkles out of a small blue windbreaker as the half-empty box rests on the floor.\n\nA handheld close-up focuses on Maya lifting wire hangers loaded with jackets directly out of the box.",
+   "annotation": {
+    "title_en": "Maya slices through the carton's packing tape and begins pul",
+    "scene": "kid_bedroom",
+    "camera": "Close-up of Maya lifting wire hangers loaded with jackets out of the box.",
+    "beat": "Maya slices through the carton's packing tape and begins pulling clothes out from the wardrobe box.",
+    "present": [
+     "maya",
+     "wardrobe_box"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "wardrobe_box",
+      "attr": "state",
+      "value": "flaps sliced open with tape hanging loose, half-empty of hanging clothes"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya shaking wrinkles out of a small blue windbreaker.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "wardrobe_box": {
+      "state": "taped shut with packing tape, labeled 'BEDROOM CLOTHES' in thick black marker",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "navy henley shirt and dark denim jeans",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "wardrobe_box.state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+     "wardrobe_box.placement": "set upright in the center of the kid's bare bedroom floor"
+    }
+   }
+  },
+  {
+   "prompt": "Sunlight bathes the kid's bedroom, highlighting the texture of the golden pine floorboards and unfinished cream drywall walls.\n\nMaya changes into faded grey canvas dungarees worn over a white crewneck t-shirt, keeping her beige work boots on. Rolling up the pant legs, she fastens the dungaree straps over her shoulders while Leo, standing nearby in his dusty denim overalls, watches with wide, excited eyes. Maya briskly claps her hands together to signal work is about to begin, and Leo playfully mimics her ready stance.\n\nA full-body handheld shot captures Maya securing her dungaree shoulder straps and clapping her hands alongside Leo.",
+   "annotation": {
+    "title_en": "Maya changes into comfortable painting dungarees, rolling up",
+    "scene": "kid_bedroom",
+    "camera": "Full-body shot of Maya securing the dungaree straps over her shoulders.",
+    "beat": "Maya changes into comfortable painting dungarees, rolling up her pant legs as Leo watches with wide eyes.",
+    "present": [
+     "maya",
+     "leo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "maya",
+      "attr": "outfit",
+      "value": "faded grey canvas dungarees over a white crewneck t-shirt"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya clapping her hands together briskly; Leo mimicking her stance.",
+    "start_state": {
+     "maya": {
+      "outfit": "navy henley shirt and dark denim jeans",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls"
+    }
+   }
+  },
+  {
+   "prompt": "In the bright kid's bedroom, warm afternoon light pours through the large south-facing window, illuminating the bare pine floorboards and clean wooden sill.\n\nSam, dressed in his maroon t-shirt, grey sweatpants, and backwards blue cap, gently hands the square oak framed family photo—showing Maya, Sam, and baby Leo—over to Leo. Wearing his dust-marked overalls, Leo carefully sets the photo upright on the sunlit windowsill, nudging the oak frame straight against the glass pane. Sam smiles and affectionately ruffles Leo's bouncy dark curls.\n\nAn intimate close-up frames Leo's small hands carefully aligning the oak frame on the sun-drenched wooden windowsill.",
+   "annotation": {
+    "title_en": "Sam hands Leo the beach family photo, and Leo carefully sets",
+    "scene": "kid_bedroom",
+    "camera": "Close-up of small hands aligning the oak frame against the window glass.",
+    "beat": "Sam hands Leo the beach family photo, and Leo carefully sets it upright on the sunny windowsill.",
+    "present": [
+     "sam",
+     "leo",
+     "framed_family_photo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "framed_family_photo",
+      "attr": "placement",
+      "value": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Leo checking if the frame stands straight; Sam ruffling his hair.",
+    "start_state": {
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "resting flat on the living room radiator cover"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "sam.outfit": "faded maroon t-shirt and grey sweatpants",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls",
+     "framed_family_photo.state": "clean glass pane, pristine light oak frame",
+     "framed_family_photo.placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+    }
+   }
+  },
+  {
+   "prompt": "In the upstairs kid's bedroom, warm afternoon light pours through the large south-facing window onto golden pine floorboards and unpainted matte cream drywall walls.\n\nSam, a tall, broad man in his mid-30s with fair skin and sandy blonde hair, wears a backwards blue baseball cap and white running sneakers. Having just changed from a maroon t-shirt and sweatpants into a navy tank top and grey cargo shorts, he kneels beside the vintage open-top oak wooden toolbox. He rummages through its compartments of tools, pulling out a roll of blue masking tape and tossing it lightly in his hand.\n\nLow angle showing Sam kneeling over the toolbox.",
+   "annotation": {
+    "title_en": "Having changed into cooler painting clothes, Sam rummages th",
+    "scene": "kid_bedroom",
+    "camera": "Low angle showing Sam kneeling over the toolbox.",
+    "beat": "Having changed into cooler painting clothes, Sam rummages through the wooden toolbox for painter's tape.",
+    "present": [
+     "sam",
+     "wooden_toolbox"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "sam",
+      "attr": "outfit",
+      "value": "navy tank top and grey cargo shorts"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Sam pulling out a roll of blue masking tape and tossing it lightly in his hand.",
+    "start_state": {
+     "sam": {
+      "outfit": "faded maroon t-shirt and grey sweatpants",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "sam.outfit": "navy tank top and grey cargo shorts",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "wooden_toolbox.state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+     "wooden_toolbox.placement": "resting on the living room floorboards"
+    }
+   }
+  },
+  {
+   "prompt": "Sunlight floods the kid's bedroom, illuminating the bare cream drywall and golden pine floorboards.\n\nMaya, an athletic woman in her mid-30s with warm brown skin and curly hair in a loose bun, wears faded grey canvas dungarees over a white t-shirt, beige work boots, and has a small scrape on her right forearm. Kneeling beside the Paint Roller Tray—a clean, silver ribbed steel tray with stamped legs—she opens a fresh paint can. She tilts it steadily, pouring pale sage green wall paint until the tray fills and the roller rest is thoroughly saturated.\n\nOverhead close-up of thick green paint cascading into the metal tray ribs.",
+   "annotation": {
+    "title_en": "Maya opens a fresh paint can and pours smooth, pale sage gre",
+    "scene": "kid_bedroom",
+    "camera": "Overhead close-up of thick green paint cascading into the metal tray ribs.",
+    "beat": "Maya opens a fresh paint can and pours smooth, pale sage green wall paint into the metal tray.",
+    "present": [
+     "maya",
+     "paint_roller_tray"
+    ],
+    "first_appearance": [
+     "paint_roller_tray"
+    ],
+    "changes": [
+     {
+      "entity": "paint_roller_tray",
+      "attr": "state",
+      "value": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya tilting the metal can steadily, watching the liquid spread.",
+    "start_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "paint_roller_tray": {
+      "state": "dry, clean silver metal tray with an unwrapped sponge roller rest"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "paint_roller_tray.state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+    }
+   }
+  },
+  {
+   "prompt": "The kid's bedroom glows with soft natural light across the golden pine floor and bare matte cream walls.\n\nMaya, in her faded grey canvas dungarees and white t-shirt, stands on the first step of the lightweight two-step aluminum stepladder. Seven-year-old Leo, slender with bouncy dark curls, wears his yellow t-shirt and dust-smudged denim overalls with red sneakers. Maya leans over Leo's shoulder, gently guiding his hand as they press the saturated roller to the wall, creating a bold stroke of green paint while Leo grins with an open mouth.\n\nMedium tracking shot following the roller moving up the cream wall.",
+   "annotation": {
+    "title_en": "Standing atop the first rung of the stepladder, Maya guides ",
+    "scene": "kid_bedroom",
+    "camera": "Medium tracking shot following the roller moving up the cream wall.",
+    "beat": "Standing atop the first rung of the stepladder, Maya guides Leo's hand as they apply the first bold stroke of green to the wall.",
+    "present": [
+     "maya",
+     "leo",
+     "stepladder"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Leo grinning with wide mouth; Maya leaning over his shoulder guiding the handle.",
+    "start_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls",
+     "stepladder.state": "folded flat with locking brace disengaged",
+     "stepladder.placement": "leaning against the living room window frame"
+    }
+   }
+  },
+  {
+   "prompt": "Afternoon light highlights the textured cream drywall and pine flooring inside the upstairs kid's bedroom.\n\nMaya, dressed in grey canvas dungarees and beige work boots with a scrape on her forearm, crouches over the ribbed steel paint roller tray filled with wet sage green paint. As she reloads her roller, it skids against the tray, splattering droplets of sage green paint across the bib and knees of her dungarees. Maya looks down at the fresh splatters and shrugs merrily with a bright laugh.\n\nEye-level medium shot capturing Maya laughing at the mess.",
+   "annotation": {
+    "title_en": "As Maya reloads her roller from the tray, the roller skids, ",
+    "scene": "kid_bedroom",
+    "camera": "Eye-level medium shot capturing Maya laughing at the mess.",
+    "beat": "As Maya reloads her roller from the tray, the roller skids, splattering green droplets across her canvas dungarees.",
+    "present": [
+     "maya",
+     "paint_roller_tray"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "maya",
+      "attr": "stains",
+      "value": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Maya looking down at her spotted dungarees and shrugging merrily.",
+    "start_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "paint_roller_tray.state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+    }
+   }
+  },
+  {
+   "prompt": "The kid's bedroom features warm golden floorboards bordering clean unpainted baseboards beneath sunny window illumination.\n\nLeo, wearing his yellow t-shirt and dust-smudged blue denim overalls, crouches near the floor alongside Sam, who wears a navy tank top, grey cargo shorts, and a backwards blue cap. Beside the paint roller tray brimming with wet sage green paint, Sam helps Leo dip a smaller trim brush into the paint, gently tapping the excess off the bristles against the steel tray lip.\n\nLow floor-level angle focusing on the brush dipping into the sage green paint.",
+   "annotation": {
+    "title_en": "Sam helps Leo dip a smaller trim brush into the paint tray t",
+    "scene": "kid_bedroom",
+    "camera": "Low floor-level angle focusing on the brush dipping into the sage green paint.",
+    "beat": "Sam helps Leo dip a smaller trim brush into the paint tray to cut in around the baseboards.",
+    "present": [
+     "leo",
+     "sam",
+     "paint_roller_tray"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Sam tapping the excess paint off the brush bristles against the tray lip.",
+    "start_state": {
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "grey dust smudges across the knees of his denim overalls",
+     "sam.outfit": "navy tank top and grey cargo shorts",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "paint_roller_tray.state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+    }
+   }
+  },
+  {
+   "prompt": "Sunlight bathes the kid's bedroom, illuminating the pine floorboards and the freshly painted sage green accent wall contrasting against the cream drywall.\n\nMaya, wearing paint-splattered grey dungarees over her white t-shirt and sporting a small forearm scrape, leans against the folded aluminum stepladder beside Sam, who is in a navy tank top, cargo shorts, and backwards cap. Sam rests an arm comfortably across Maya's shoulder while she leans into his side, both admiring the vibrant sage green accent wall.\n\nTwo-shot looking past the green wall at their satisfied expressions.",
+   "annotation": {
+    "title_en": "Maya and Sam lean against the stepladder together, admiring ",
+    "scene": "kid_bedroom",
+    "camera": "Two-shot looking past the green wall at their satisfied expressions.",
+    "beat": "Maya and Sam lean against the stepladder together, admiring the freshly painted vibrant sage green accent wall.",
+    "present": [
+     "maya",
+     "sam",
+     "stepladder"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Sam resting an arm across Maya's shoulder; Maya leaning into his side.",
+    "start_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "sam.outfit": "navy tank top and grey cargo shorts",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "stepladder.state": "folded flat with locking brace disengaged",
+     "stepladder.placement": "leaning against the living room window frame"
+    }
+   }
+  },
+  {
+   "prompt": "The upstairs bedroom glows with golden pine floorboards, a large south-facing window, and unpainted matte cream drywall walls.\n\nSeven-year-old Leo, with slender build, warm brown skin, and short bouncy dark curls, wears a yellow graphic t-shirt under blue denim overalls smudged with grey dust and red velcro sneakers. Maya, a woman in her mid-30s with athletic build, warm brown skin, and dark curly hair in a loose bun, wears paint-splattered faded grey canvas dungarees over a white crewneck, showing a red forearm scrape and beige work boots. Giggling mischievously, Leo stamps his green paint-covered palm directly onto his right denim thigh, leaving a vibrant handprint. Maya gasps playfully and wags a mock-stern finger.\n\nThe camera frames a waist-level shot as Leo points proudly down to his fresh handprint.",
+   "annotation": {
+    "title_en": "Leo playfully presses his paint-covered hand onto the leg of",
+    "scene": "kid_bedroom",
+    "camera": "Waist-level shot as Leo points proudly down to his leg.",
+    "beat": "Leo playfully presses his paint-covered hand onto the leg of his own overalls, showing Maya his custom handprint.",
+    "present": [
+     "leo",
+     "maya"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "leo",
+      "attr": "stains",
+      "value": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Leo giggling mischievously; Maya gasping and wagging a mock-stern finger.",
+    "start_state": {
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "grey dust smudges across the knees of his denim overalls"
+     },
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+    }
+   }
+  },
+  {
+   "prompt": "The kid's bedroom features warm golden pine floorboards, unpainted matte cream drywall walls, and soft afternoon light spilling through the large south-facing window.\n\nCleo, a slender ginger tabby cat with vibrant green eyes, white paws, and a red nylon collar with a silver bell, wanders into the room. She approaches the bright green canvas dino backpack with yellow felt dorsal plates, which sits plumply stuffed with soft plush toys against the wall near the ladder. Cleo purrs with half-shut eyes, scent-marking the fabric by rubbing her ginger chin against the backpack strap.\n\nClose-up on Cleo's tail curling happily around the backpack's yellow felt spines.",
+   "annotation": {
+    "title_en": "Cleo wanders into the bedroom through the open door and curi",
+    "scene": "kid_bedroom",
+    "camera": "Close-up on Cleo's tail curling happily around the backpack spines.",
+    "beat": "Cleo wanders into the bedroom through the open door and curiously rubs her ginger chin against the strap of the dino backpack.",
+    "present": [
+     "cleo",
+     "dino_backpack"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Cleo purring with half-shut eyes, scent-marking the green fabric.",
+    "start_state": {
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "cleo.accessory": "red nylon collar with silver bell",
+     "dino_backpack.state": "zipped shut, stuffed plumply with soft plush toys",
+     "dino_backpack.placement": "slumped against the corner wall near the stepladder"
+    }
+   }
+  },
+  {
+   "prompt": "The upstairs bedroom retains its warm golden pine floorboards and matte cream drywall walls under gentle afternoon illumination.\n\nMaya, athletic with warm brown skin, wears paint-stained faded grey dungarees, a white t-shirt, and worn beige work boots, her right forearm marked by a red scrape. Tall and broad with sandy blonde hair, Sam stands beside her in a navy tank top, grey cargo shorts, white running sneakers, and a backwards blue cap. Maya opens the vintage oak wooden toolbox and retrieves two tubes of epoxy adhesive and a mixing stick. Sam watches her preparations with an encouraging nod.\n\nMedium close-up on Maya's bare hands opening the adhesive packaging.",
+   "annotation": {
+    "title_en": "Maya retrieves two tubes of two-part epoxy adhesive and a mi",
+    "scene": "kid_bedroom",
+    "camera": "Medium close-up on Maya's hands opening the adhesive packages.",
+    "beat": "Maya retrieves two tubes of two-part epoxy adhesive and a mixing stick from the open wooden toolbox.",
+    "present": [
+     "maya",
+     "sam",
+     "wooden_toolbox"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Sam watching Maya's preparations with an encouraging nod.",
+    "start_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "sam.outfit": "navy tank top and grey cargo shorts",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "wooden_toolbox.state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+     "wooden_toolbox.placement": "resting on the living room floorboards"
+    }
+   }
+  },
+  {
+   "prompt": "The kid's bedroom features golden pine floorboards and unpainted cream drywall walls bathed in amber late-afternoon sunshine.\n\nSam, tall with sandy blonde hair, wears a navy tank top, grey cargo shorts, white running sneakers, and a backwards blue cap. Slender seven-year-old Leo wears his yellow t-shirt, red velcro sneakers, and blue denim overalls marked with dust smudges and a sage green palm print. Sitting beneath the window, they admire the framed family photo resting on the sill, its clean glass and blonde oak frame glowing in the sunlight. Leo points to his infant self and chatters about the beach, while Sam laughs softly.\n\nA soft profile two-shot bathed in warm late-afternoon window light.",
+   "annotation": {
+    "title_en": "Sitting under the window, Sam and Leo gaze at the framed fam",
+    "scene": "kid_bedroom",
+    "camera": "Soft profile two-shot bathed in warm late-afternoon window light.",
+    "beat": "Sitting under the window, Sam and Leo gaze at the framed family photo on the sill, chatting about the beach trip.",
+    "present": [
+     "sam",
+     "leo",
+     "framed_family_photo"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Leo pointing at his younger self in the photo; Sam laughing softly.",
+    "start_state": {
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "sam.outfit": "navy tank top and grey cargo shorts",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh",
+     "framed_family_photo.state": "clean glass pane, pristine light oak frame",
+     "framed_family_photo.placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+    }
+   }
+  },
+  {
+   "prompt": "The kid's bedroom is bright and airy, with golden pine floorboards, unpainted matte cream drywall walls, and incoming afternoon light.\n\nMaya, with warm brown skin and curly hair in a bun, wears her paint-splattered faded grey canvas dungarees, white t-shirt, and beige boots, a red scrape visible on her right forearm. Nearby sits the vintage oak wooden toolbox. Sitting cross-legged on the floor, Maya attends to the cracked teal ceramic lamp with its split base, bent brass neck, and crumpled pleated shade. Biting her lip in deep concentration, she carefully spreads golden-tinted epoxy along the fractured seams, joining the ceramic pieces.\n\nTight macro shot on Maya's scraped forearm and steady fingers aligning the broken shards.",
+   "annotation": {
+    "title_en": "Sitting cross-legged on the floor, Maya meticulously applies",
+    "scene": "kid_bedroom",
+    "camera": "Tight macro shot on Maya's scraped forearm and steady fingers aligning the broken shards.",
+    "beat": "Sitting cross-legged on the floor, Maya meticulously applies golden-tinted epoxy along the cracked seams of the teal ceramic lamp.",
+    "present": [
+     "maya",
+     "wooden_toolbox",
+     "ceramic_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Maya biting her lip in intense concentration as the ceramic edges meet.",
+    "start_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "wooden_toolbox.state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+     "wooden_toolbox.placement": "resting on the living room floorboards",
+     "ceramic_lamp.state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+     "ceramic_lamp.placement": "shattered across the corrugated van floor"
+    }
+   }
+  },
+  {
+   "prompt": "The upstairs bedroom is quiet, with golden pine floorboards, unpainted matte cream drywall, and soft afternoon light filling the space.\n\nMaya, wearing paint-smudged grey dungarees, white t-shirt, and beige work boots, sits with seven-year-old Leo, who wears his yellow graphic t-shirt, red velcro sneakers, and green-palm-printed overalls. Maya gently straightens the brass neck, smooths the pleated cream shade, and sets the re-glued teal ceramic lamp upright by the baseboard, revealing a luminous gold epoxy seam. Wonderstruck, Leo gently runs a careful fingertip along the smooth golden repair line.\n\nEye-level medium shot of Maya presenting the restored lamp to Leo.",
+   "annotation": {
+    "title_en": "Maya smooths out the pleated shade of the repaired lamp and ",
+    "scene": "kid_bedroom",
+    "camera": "Eye-level medium shot of Maya presenting the restored lamp to Leo.",
+    "beat": "Maya smooths out the pleated shade of the repaired lamp and sets it upright beside Leo, showing off the golden seam.",
+    "present": [
+     "maya",
+     "leo",
+     "ceramic_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "ceramic_lamp",
+      "attr": "state",
+      "value": "re-glued teal ceramic base with a prominent gold epoxy seam line, straightened brass neck, smoothed shade"
+     },
+     {
+      "entity": "ceramic_lamp",
+      "attr": "placement",
+      "value": "standing proudly on the bedroom floor next to the baseboard"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Leo running a careful finger along the smooth golden repair line in wonder.",
+    "start_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "ceramic_lamp": {
+      "state": "cracked teal ceramic base split into two large pieces, bent brass neck, torn crumpled shade",
+      "placement": "shattered across the corrugated van floor"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "re-glued teal ceramic base with a prominent gold epoxy seam line, straightened brass neck, smoothed shade",
+      "placement": "standing proudly on the bedroom floor next to the baseboard"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh",
+     "ceramic_lamp.state": "re-glued teal ceramic base with a prominent gold epoxy seam line, straightened brass neck, smoothed shade",
+     "ceramic_lamp.placement": "standing proudly on the bedroom floor next to the baseboard"
+    }
+   }
+  },
+  {
+   "prompt": "The kid's bedroom is bathed in afternoon light slanting across golden pine floorboards, large south-facing windows, and unpainted matte cream drywall walls.\n\nSam, a tall broad man with fair skin and sandy blonde hair wearing a navy tank top, grey cargo shorts, white running sneakers, and a backwards blue baseball cap, unlatches the sky-blue and white plastic cat carrier. Cleo, a slender ginger tabby cat wearing a red nylon collar with a silver bell, hops playfully out over the threshold. Sam slides the empty carrier with its black wire gate resting ajar neatly into the open bedroom closet, pushing the closet door halfway shut while Cleo sniffs curiously along the baseboard.\n\nA wide handheld shot captures Sam tucking the carrier away while the curious cat explores the sunny perimeter.",
+   "annotation": {
+    "title_en": "Sam pushes the empty, open pet carrier into the bedroom clos",
+    "scene": "kid_bedroom",
+    "camera": "Wide shot capturing Sam tucking the carrier away while the cat explores.",
+    "beat": "Sam pushes the empty, open pet carrier into the bedroom closet while Cleo hops playfully over the threshold.",
+    "present": [
+     "sam",
+     "cleo",
+     "cat_carrier"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "cat_carrier",
+      "attr": "state",
+      "value": "unlatched, empty, wire door resting ajar"
+     },
+     {
+      "entity": "cat_carrier",
+      "attr": "placement",
+      "value": "stowed neatly inside the open bedroom closet"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Sam closing the closet door halfway; Cleo sniffing the baseboard.",
+    "start_state": {
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "latched closed with Cleo inside peering through the wire mesh",
+      "placement": "sitting on the hallway runner rug"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "re-glued teal ceramic base with a prominent gold epoxy seam line, straightened brass neck, smoothed shade",
+      "placement": "standing proudly on the bedroom floor next to the baseboard"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "unlatched, empty, wire door resting ajar",
+      "placement": "stowed neatly inside the open bedroom closet"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "sam.outfit": "navy tank top and grey cargo shorts",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "cleo.accessory": "red nylon collar with silver bell",
+     "cat_carrier.state": "unlatched, empty, wire door resting ajar",
+     "cat_carrier.placement": "stowed neatly inside the open bedroom closet"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the kid's bedroom, soft twilight creeps through the large south-facing window across golden pine floorboards and freshly painted sage green drywall.\n\nMaya, with warm brown skin and curly hair in a loose bun, wears faded grey canvas dungarees stained with sage green paint over a white t-shirt, showing a small red scrape on her forearm as she plugs in the repaired teal ceramic lamp, its gold epoxy seam shining beside the pleated cream shade. Sam, in his navy tank top and backwards blue cap, sits relaxed on the floor while Leo, wearing blue denim overalls marked with a green palm print, leans back comfortably into Sam's lap. Maya looks up, smiling contentedly at her family.\n\nA slow pulling-back wide shot drifts out through the bedroom doorway as evening falls outside the window.",
+   "annotation": {
+    "title_en": "Maya plugs in the repaired lamp, and its warm amber glow ill",
+    "scene": "kid_bedroom",
+    "camera": "Slow pulling-back wide shot through the doorway as evening falls outside the window.",
+    "beat": "Maya plugs in the repaired lamp, and its warm amber glow illuminates the new sage green room as the family gathers on the floor.",
+    "present": [
+     "maya",
+     "sam",
+     "leo",
+     "ceramic_lamp"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Leo leaning back into Sam's lap; Maya smiling contentedly at her family.",
+    "start_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "ceramic_lamp": {
+      "state": "re-glued teal ceramic base with a prominent gold epoxy seam line, straightened brass neck, smoothed shade",
+      "placement": "standing proudly on the bedroom floor next to the baseboard"
+     }
+    },
+    "entity_state": {
+     "maya": {
+      "outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+      "footwear": "worn beige work boots",
+      "accessory": "bare hands",
+      "injury": "small red scrape along the outer edge of her right forearm",
+      "stains": "splashes of sage green paint across the bib and knees of her grey dungarees"
+     },
+     "sam": {
+      "outfit": "navy tank top and grey cargo shorts",
+      "footwear": "white running sneakers",
+      "headwear": "backwards blue baseball cap"
+     },
+     "framed_family_photo": {
+      "state": "clean glass pane, pristine light oak frame",
+      "placement": "standing upright on the sunlit wooden windowsill of the kid's bedroom"
+     },
+     "tape_gun": {
+      "state": "loaded with a fresh roll of clear acrylic packing tape"
+     },
+     "leo": {
+      "outfit": "yellow graphic t-shirt under blue denim overalls",
+      "footwear": "red velcro sneakers",
+      "stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh"
+     },
+     "dino_backpack": {
+      "state": "zipped shut, stuffed plumply with soft plush toys",
+      "placement": "slumped against the corner wall near the stepladder"
+     },
+     "bubble_wrap_roll": {
+      "state": "full thick roll of clear bubble wrap with loose end trailing"
+     },
+     "ceramic_lamp": {
+      "state": "re-glued teal ceramic base with a prominent gold epoxy seam line, straightened brass neck, smoothed shade",
+      "placement": "standing proudly on the bedroom floor next to the baseboard"
+     },
+     "stepladder": {
+      "state": "folded flat with locking brace disengaged",
+      "placement": "leaning against the living room window frame"
+     },
+     "cleo": {
+      "accessory": "red nylon collar with silver bell"
+     },
+     "cat_carrier": {
+      "state": "unlatched, empty, wire door resting ajar",
+      "placement": "stowed neatly inside the open bedroom closet"
+     },
+     "wardrobe_box": {
+      "state": "flaps sliced open with tape hanging loose, half-empty of hanging clothes",
+      "placement": "set upright in the center of the kid's bare bedroom floor"
+     },
+     "wooden_toolbox": {
+      "state": "stocked with screwdrivers, utility knives, and tubes of epoxy adhesive",
+      "placement": "resting on the living room floorboards"
+     },
+     "paint_roller_tray": {
+      "state": "filled with wet sage green paint, roller thoroughly saturated in green paint"
+     }
+    },
+    "state": {
+     "maya.outfit": "faded grey canvas dungarees over a white crewneck t-shirt",
+     "maya.footwear": "worn beige work boots",
+     "maya.accessory": "bare hands",
+     "maya.injury": "small red scrape along the outer edge of her right forearm",
+     "maya.stains": "splashes of sage green paint across the bib and knees of her grey dungarees",
+     "sam.outfit": "navy tank top and grey cargo shorts",
+     "sam.footwear": "white running sneakers",
+     "sam.headwear": "backwards blue baseball cap",
+     "leo.outfit": "yellow graphic t-shirt under blue denim overalls",
+     "leo.footwear": "red velcro sneakers",
+     "leo.stains": "dust smudges on overalls overlaid by a bright sage green palm print on his right thigh",
+     "ceramic_lamp.state": "re-glued teal ceramic base with a prominent gold epoxy seam line, straightened brass neck, smoothed shade",
+     "ceramic_lamp.placement": "standing proudly on the bedroom floor next to the baseboard"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,426 @@
+{
+  "id": "astronaut_tomatoes_terse",
+  "setup": {
+    "title": "Tomatoes in Orbit",
+    "style": "Live-action, cinematic science-fiction realism: clean white station modules, green grow lights, the blue Earth in the windows.",
+    "cast": [
+      {
+        "id": "imani",
+        "name": "Commander Imani",
+        "description": "Commander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, wearing a silver-white astronaut suit marked with a blue circular mission patch on the chest."
+      }
+    ],
+    "extras": {
+      "voice": "Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1),",
+      "music": "Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout.",
+      "speech": "Imani records a mission log, speaking to the camera."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "The interior of the long orbital greenhouse module stretches forward in clean, functional symmetry, lined with dense vertical trellises of hydroponic tomato foliage. Bright pink-violet LED grow lights illuminate the rows from above and the sides, casting vivid magenta highlights and saturated shadows across the lush green leaves and white module walls. Clinical white station panels, padded handrails, and utility conduits line the cylindrical corridor, contrasted by the deep darkness of space visible through small reinforced observation ports. The atmosphere is quiet, controlled, and intensely focused on agricultural science in microgravity.\n\nCommander Imani, a Black woman in her late thirties with close-cropped dark hair and an oval face, floats gently along the center of the module in zero gravity. She wears a clean silver-white astronaut suit bearing a circular blue mission patch on the chest, without a helmet, leaving her composed expression fully visible. Her body drifts forward at a slow, controlled pace, one hand lightly brushing a guide rail to steady herself. She turns her gaze toward the dense foliage, leaning in slightly to inspect a cluster of small, hard green tomatoes hanging securely from a vine. Her dark eyes study the unripened fruit with calm professional focus, her suit reflecting the soft magenta glow of the overhead lamps.\n\nThe camera executes a smooth steadicam follow, gliding backward just ahead of Imani to maintain a steady medium shot of her upper body and the surrounding plant racks. The framing keeps her face, the blue mission patch, and the vibrant vine clusters with their small green tomatoes in clear view as she advances through the compartment. The balanced motion conveys the weightless drift of the environment while anchoring her thorough inspection within the glowing botanical corridor.",
+      "annotation": {
+        "title_en": "The orbital greenhouse",
+        "scene": "orbital_greenhouse",
+        "camera": "steadicam follow",
+        "beat": "Imani, in her silver-white suit without helmet, floats slowly through a long orbital greenhouse module, inspecting tomato vines heavy with small hard green tomatoes under pink-violet grow lights.",
+        "state": {
+          "outfit": "silver-white astronaut suit, blue mission patch",
+          "helmet": "no helmet",
+          "tomatoes": "small green tomatoes on the vine",
+          "location": "greenhouse"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          286,
+          286
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot inside a cylindrical orbital greenhouse module illuminated by pink-violet grow lights, where Imani floats along the center corridor between trellises of hydroponic tomato foliage. Commander Imani drifts forward at a slow, controlled pace in zero gravity wearing a silver-white astronaut suit with a circular blue mission patch on her chest. As the camera glides backward just ahead of her to maintain a steady medium shot of her upper body, pink-violet LED grow lights cast vivid magenta highlights over lush hydroponic tomato trellises, clinical white station panels, and utility conduits. Observation ports reveal the deep darkness of space outside. Her hand lightly brushes a padded guide rail to steady herself. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Hydroponic growth remains steady, with healthy green tomatoes developing along the trellises under the module lights.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. Imani turns her gaze to the foliage, leaning in slightly as her dark eyes study a cluster of small, hard green tomatoes hanging securely from a vine with calm focus.\n\noverall_soundscape: A low, steady mechanical hum of ventilation and hydroponic circulation systems reverberates through the cylindrical module. A faint, muffled rustle sounds as a hand lightly brushes against the padded guide rail.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the orbital greenhouse module.\n\nCommander Imani floats in microgravity beside the vine, holding a small green tomato gently between two fingers to stabilize herself. She looks directly toward the lens and speaks steadily, recording her day-one log about how the first fruit has set and outlining her goal to ripen it before the next resupply arrives.\n\nThe camera remains in a steady medium close-up at eye level, holding Imani from the chest up alongside the green foliage. A subtle, floating drift conveys the zero-gravity environment while keeping her face and her fingers holding the tomato clearly in focus.",
+      "annotation": {
+        "title_en": "Day one log",
+        "scene": "orbital_greenhouse",
+        "camera": "medium close-up",
+        "beat": "Imani holds one green tomato gently between two fingers and records a log to the camera: the first fruit has set and she will try to ripen it before resupply.",
+        "state": {
+          "outfit": "silver-white astronaut suit, blue mission patch",
+          "helmet": "no helmet",
+          "tomatoes": "small green tomatoes",
+          "location": "greenhouse"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          222,
+          100
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up of an orbital greenhouse module, where Commander Imani floats in microgravity at eye level beside a vine. Framed from the chest up alongside green foliage, Commander Imani floats in microgravity beside the vine. She holds a small green tomato gently between two fingers to stabilize herself, looking directly toward the lens. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Day one log. Our first fruit has set on the vine,</d> Imani (S1) adds: <d>[English] and I aim to ripen it before the resupply arrives.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. The camera holds a steady medium close-up at eye level, maintaining a subtle floating drift that conveys the zero-gravity environment while keeping her face and her fingers holding the tomato clearly in focus.\n\noverall_soundscape: The steady low hum of life-support circulation fans reverberates through the greenhouse module. Gentle air currents produce a faint, soft rustling among the suspended plant leaves.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The narrow space station corridor is bathed in rhythmic pulses of crimson as emergency warning lights flash across the sterile white bulkheads. Cylindrical walls lined with utility conduits, silver grab rails, and padded panels alternate between cool fluorescent baseline illumination and harsh red strobes. The atmosphere is tense and urgent, reflecting an immediate mechanical crisis deep within the pressurized module.\n\nCommander Imani maneuvers weightlessly through the corridor. Her expression is intensely focused as she grips a wall handle, pulls herself forward, and kicks lightly off a bulkhead rib to accelerate down the passageway. While gliding swiftly in microgravity toward the distant airlock hatch, she raises her forearm to check an integrated digital wrist display, scanning the illuminated schematic showing a solar panel fault before steadying her trajectory along the overhead handrails.\n\nThe camera uses a dynamic handheld tracking motion, retreating backwards down the center of the corridor just ahead of Imani to capture her rapid approach. Maintained at eye level in a medium framing, the shot keeps her torso, determined face, and maneuvering hands clearly in view throughout the glide. The pulsing red reflections sweep continuously across her and the metallic tunnel walls, maintaining a realistic documentary perspective of zero-gravity emergency response.",
+      "annotation": {
+        "title_en": "Alarm",
+        "scene": "station_corridor",
+        "camera": "handheld tracking",
+        "beat": "Red warning lights flash in a white station corridor. Imani pushes off the walls, gliding quickly toward the airlock, checking a wrist display that shows a solar panel fault.",
+        "state": {
+          "outfit": "silver-white astronaut suit, blue mission patch",
+          "helmet": "no helmet",
+          "tomatoes": "green, in the greenhouse",
+          "location": "corridor"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          202
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a narrow space station corridor pulsing with crimson emergency lights, where Imani glides weightlessly toward the camera. At eye level in a medium framing, the camera retreats backwards down the center of the corridor in a dynamic handheld tracking motion. Rhythmic pulses of crimson emergency warning strobes flash across sterile white bulkheads lined with utility conduits, silver grab rails, and padded panels. Imani grips a wall handle, pulls herself forward, and kicks lightly off a bulkhead rib to glide smoothly in microgravity. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] The primary solar array reports an immediate fault. I am maneuvering toward the airlock hatch now.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. Focused intently, she raises her forearm to check an integrated digital wrist display, scanning an illuminated schematic showing a solar panel fault before steadying her trajectory along the overhead handrails toward the distant airlock hatch.\n\noverall_soundscape: Rhythmic emergency alert tones pulse down the pressurized corridor alongside the low mechanical hum of life-support fans. A soft metallic tap resonates as feet kick off a bulkhead rib, accompanied by the faint scrape and grip of hands catching metal handrails.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The interior of the orbital station's airlock is cramped, functional, and intensely utilitarian. Brushed metallic wall panels, thick umbilical conduits, and heavy mechanical hatch latches define the narrow chamber. Cool white overhead LED strips mix with amber standby lights on the bulkhead interface panels, casting sharp, clinical highlights across the polished fixtures. The atmosphere is taut, sterile, and focused, conveying the pressurized isolation of a functional staging area preparing for extravehicular activity.\n\nCommander Imani stands braced in the compact module, holding a helmet with its visor in the raised position. With steady, practiced movements, she brings the helmet up and lowers it over her head, seating it precisely onto the suit's neck ring. She rotates the collar lock until it fastens with a definitive mechanical click, securing the seal while her determined expression remains fully visible beneath the upward-tilted visor.\n\nThe camera maintains a steady medium shot framed from her mid-torso up, keeping Imani centered against the airlock's reinforced circular hatchway. The framing remains stable with only subtle, organic micro-drift, ensuring that her face and the mechanical coupling of the helmet remain sharply in focus throughout the sequence.",
+      "annotation": {
+        "title_en": "Helmet on",
+        "scene": "airlock",
+        "camera": "medium shot",
+        "beat": "In the cramped airlock Imani lowers a white helmet with a gold reflective visor onto her suit and locks it with a click; her face is visible through the raised visor.",
+        "state": {
+          "outfit": "silver-white astronaut suit, blue mission patch",
+          "helmet": "white helmet on, gold visor raised",
+          "tomatoes": "green",
+          "location": "airlock"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          248,
+          188
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the cramped orbital station airlock, where Imani stands centered before the reinforced circular hatchway. In the utilitarian airlock illuminated by cool white overhead LED strips and amber standby lights on bulkhead interface panels, brushed metallic wall panels and thick umbilical conduits surround Imani. Braced in the compact module, she holds her helmet with its visor in the raised position. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Airlock seal engaged and collar locked into place. Commencing final suit pressure checks before external egress.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. With steady, practiced movements, she brings the helmet up and lowers it over her head, seating it precisely onto the suit's neck ring. She rotates the collar lock until it fastens with a definitive mechanical click, securing the seal while her determined expression remains visible beneath the upward-tilted visor. The camera holds a steady medium shot framed from her mid-torso up with only subtle, organic micro-drift.\n\noverall_soundscape: A steady, sterile hum of life support systems and pressurized ventilation fills the narrow chamber. The smooth metallic friction of the helmet ring is followed by a crisp, heavy mechanical click as the collar lock fastens.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The exterior of the orbital research station hangs suspended in the profound blackness of space, illuminated by the intense, unfiltered glare of sunlight. Below the modular metallic complex, the massive curving horizon of Earth stretches across the lower frame in vivid hues of ocean blue, swirling white cloud banks, and sunlit atmospheric glow. High-contrast illumination catches the crisp edges of white radiator panels, metallic docking rings, and the intricate lattice of the station's exterior truss, casting deep, sharp shadows across the machinery in the silent vacuum.\n\nCommander Imani emerges through the open circular airlock portal into the void, her face initially visible through the clear inner faceplate with the gold visor raised. Pausing at the threshold, she reaches up to lower the visor, locking it smoothly down so her features are replaced by an opaque, mirrored golden surface reflecting the blue planet. Securing her tether, she grips the exterior yellow handrail and pulls herself forward hand over hand along the station truss, moving with calm, disciplined weightlessness.\n\nThe camera maintains a sweeping wide exterior angle, drifting smoothly beside the station's framework. The composition holds Imani in the mid-ground, emphasizing her lone, tethered silhouette against the vast curvature of the Earth beneath her and the infinite darkness above. Her steady forward progression along the metal truss remains consistently framed throughout the duration, capturing the sheer physical scale and silent stillness of the orbital spacewalk.",
+      "annotation": {
+        "title_en": "Spacewalk",
+        "scene": "station_exterior",
+        "camera": "wide shot with Earth below",
+        "beat": "The hatch opens onto the black void. Imani, helmeted with the gold visor down, pulls herself hand over hand along the station truss, the blue curve of Earth vast beneath her.",
+        "state": {
+          "outfit": "silver-white astronaut suit, blue mission patch",
+          "helmet": "helmet on, gold visor down",
+          "tomatoes": "green",
+          "location": "outside the station"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          266,
+          233
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a sweeping wide shot of the exterior orbital research station suspended above Earth's curving horizon, where Commander Imani emerges from an open circular airlock portal. Under the intense, unfiltered glare of sunlight, the orbital research station hangs above the vast blue and white curvature of Earth. Emerging from the open circular airlock portal into the void with her gold visor raised, Imani pauses at the threshold. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Airlock egress complete. Lowering golden visor and securing tether to the rail.</d> She reaches up and lowers the visor, locking it smoothly down into an opaque, mirrored golden surface reflecting the planet. Securing her tether, she grips the exterior yellow handrail and pulls herself hand over hand along the intricate truss in calm weightlessness. Imani (S1) adds: <d>[English] Translation along the station truss is underway.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. The camera drifts smoothly beside the metallic framework, maintaining a sweeping wide exterior angle that keeps Imani steadily framed in the mid-ground against deep shadows, the brilliant planet below, and the infinite darkness above.\n\noverall_soundscape: Muffled, rhythmic breathing resonates inside the spacesuit helmet alongside the faint hum of internal air-circulation fans. Subtle metallic clicks and dull conductive vibrations echo as the tether latches into place and pressurized gloves grip the handrail.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still outside on the orbital station exterior by the solar array.\n\nImani works beside the jammed mechanism. Gripping a heavy, tethered ratchet wrench in her gloves, she carefully aligns the socket over the jammed hinge bolt. She braces her left hand against the support strut and slowly torques the tool clockwise. As she applies steady pressure, the bolt creeps forward with stiff resistance, gradually loosening the jammed joint while her body absorbs the counter-force.\n\nThe camera maintains a crisp, documentary-style close-up framed on the mechanical hinge, the cracked photovoltaic glass, and Imani’s hands. A very slight, controlled pan follows the arc of the wrench as it turns, keeping the bolt and her arm sharply in focus against the harsh glare of space.",
+      "annotation": {
+        "title_en": "The broken panel",
+        "scene": "station_exterior",
+        "camera": "close-up",
+        "beat": "Imani reaches a solar panel with a jammed hinge and a cracked cell, fits a wrench to the hinge bolt and turns it slowly in the harsh sunlight.",
+        "state": {
+          "outfit": "silver-white astronaut suit, blue mission patch",
+          "helmet": "helmet on, visor down",
+          "tomatoes": "green",
+          "location": "solar array"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          122
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a documentary-style close-up on the orbital station exterior by the solar array, where Imani works beside a jammed mechanical hinge. Framed closely alongside cracked photovoltaic glass, Imani grips a heavy, tethered ratchet wrench in her gloves and carefully aligns the socket over the jammed hinge bolt. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Applying clockwise torque to the jammed hinge bolt now.</d> She braces her left hand against the support strut and slowly torques the tool clockwise. The camera pans with very slight, controlled motion to follow the arc of the wrench as it turns, keeping her arm and the bolt sharply in focus against the harsh glare of space. Imani (S1) adds: <d>[English] The joint is slowly giving way under steady pressure.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. As she applies steady pressure, the bolt creeps forward with stiff resistance, gradually loosening the jammed joint while her body absorbs the counter-force.\n\noverall_soundscape: Muffled metallic clicks resonate through solid contact as the ratchet wrench engages. A low, strained mechanical groaning vibrates through the strut as the jammed bolt slowly yields.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still along the orbital station exterior as sunrise crests over the horizon.\n\nCommander Imani floats securely tethered near the repair site. Behind her, the repaired solar panel steadily articulates outward, its accordion-like joints extending smoothly until the wide grid of photovoltaic cells locks into place, catching the full glare of the sun. Holding onto the handrail with one gloved hand, she turns slightly toward the viewer and raises her free hand to give a decisive thumbs-up. The gleaming sunlight flares brightly around her silhouette as the sunrise intensifies.\n\nThe camera holds a majestic wide shot, drifting with a very slow, stable backward motion to maintain full view of the station module, the expansive deployed array, and the curvature of the planet. Imani remains prominently centered in the mid-ground throughout her gesture. The composition balances the industrial geometry of the station against the radiant orbital dawn, sustaining an authentic, awe-inspiring documentary perspective.",
+      "annotation": {
+        "title_en": "Panel deployed",
+        "scene": "station_exterior",
+        "camera": "wide shot",
+        "beat": "The repaired solar panel unfolds smoothly behind Imani and catches the sunlight. She gives a thumbs-up to the camera, the sunrise flaring over Earth's horizon.",
+        "state": {
+          "outfit": "silver-white astronaut suit, blue mission patch",
+          "helmet": "helmet on, visor down",
+          "tomatoes": "green",
+          "location": "solar array"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          258,
+          151
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a majestic wide shot of the orbital station exterior as sunrise crests over the planet's horizon, where Imani floats securely tethered near the repair site. The camera drifts with a very slow, stable backward motion in a wide shot, maintaining full view of the station module, the expansive array, and the curvature of the planet. Behind Imani, who remains centered in the mid-ground, the repaired solar panel steadily articulates outward, its accordion-like joints extending smoothly until the wide grid of photovoltaic cells locks into place, catching the full glare of the sun. Holding onto the handrail with one gloved hand, she turns slightly toward the viewer. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] The repaired solar array is fully deployed and locked in place. Station power levels are nominal.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. Imani raises her free hand to give a decisive thumbs-up as gleaming sunlight flares brightly around her silhouette with the intensifying sunrise.\n\noverall_soundscape: A steady, muffled hum of spacesuit life-support systems and faint air circulation fill the space. A subtle mechanical whine ends with a muffled metallic latch resonating through the station frame as the solar panel locks.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back inside the station's airlock.\n\nCommander Imani stands inside with her helmet initially sealed and the visor down. Raising both hands, she twists the neck collar to unlock it and smoothly lifts the helmet off over her head. She exhales deeply with relief, sending a few tiny beads of sweat floating weightlessly off her forehead into the zero-gravity air. By the end of the shot, she cradles the detached helmet securely under her arm, her expression settling into calm satisfaction.\n\nThe camera maintains a stable medium close-up at eye level, subtly shifting to accommodate the helmet's upward movement. The framing keeps her face, upper torso, and the drifting sweat droplets clearly visible against the softly blurred background.",
+      "annotation": {
+        "title_en": "Back inside",
+        "scene": "airlock",
+        "camera": "medium close-up",
+        "beat": "Back in the airlock Imani unlocks and lifts off her helmet; a few beads of sweat float off her forehead and she exhales with relief.",
+        "state": {
+          "outfit": "silver-white astronaut suit, blue mission patch, a black scuff on the right sleeve",
+          "helmet": "helmet off, held under her arm",
+          "tomatoes": "green",
+          "location": "airlock"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          218,
+          117
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a stable medium close-up at eye level inside the station's airlock, where Commander Imani stands with her helmet sealed and visor down. Imani raises both hands, twists the neck collar to unlock it, and smoothly lifts the helmet off over her head. The camera maintains a stable medium close-up at eye level, subtly shifting upward to accommodate the helmet's movement. Keeping her face, upper torso, and the softly blurred background in frame, she exhales deeply with relief, sending a few tiny beads of sweat floating weightlessly off her forehead into the zero-gravity air. She cradles the detached helmet securely under her arm. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Airlock repressurization complete. I am safely back inside the station, and mission objectives are fulfilled.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. Her expression settles into calm satisfaction.\n\noverall_soundscape: A mechanical click and a soft hiss of equalizing pressure accompany the unlocking of the neck collar. The low hum of airlock environmental systems gently fills the room alongside a relieved exhalation.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The interior of a compact, utilitarian crew quarters module aboard the space station features padded off-white composite walls and recessed storage compartments lining the narrow space, alongside a vertical sleeping berth equipped with elastic restraint straps. Gentle, warm-white LED strips embedded in the ceiling panels cast soft, even illumination across brushed metallic fixtures, creating a quiet, restful sanctuary contrasting with the harsh vacuum outside.\n\nCommander Imani begins the shot holding the helmet under one arm. Working methodically in microgravity, she secures the helmet in a wall net, unzips and peels out of the suit, and gently guides the empty garment as it floats smoothly into an open locker. She fastens the locker shut, now in a polo shirt and cargo trousers. She rolls her shoulders with visible physical relief.\n\nThe camera maintains a steady eye-level medium shot, subtly floating with minimal drift to accommodate her weightless movements in the tight cabin. The framing keeps her upper body, face, and the locker mechanism clearly visible throughout under the soft, uniform interior light.",
+      "annotation": {
+        "title_en": "Out of the suit",
+        "scene": "crew_quarters",
+        "camera": "medium shot",
+        "beat": "In her small crew quarters Imani peels off the suit and changes into a navy-blue station polo shirt and grey cargo trousers, floating her suit into a locker.",
+        "state": {
+          "outfit": "navy-blue polo shirt with mission patch and grey cargo trousers",
+          "helmet": "none",
+          "tomatoes": "green",
+          "location": "crew quarters"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          171
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady eye-level medium shot inside a compact crew quarters module aboard the space station, where Imani floats holding her helmet under one arm. Under gentle, warm-white LED strips embedded in ceiling panels illuminating padded off-white composite walls and brushed metallic fixtures, Imani secures her helmet into a wall net in microgravity. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Airlock cycle complete. Stowing the suit in crew quarters before beginning the mandatory sleep rotation.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. She unzips and peels out of her suit, gently guiding the empty garment as it floats smoothly into an open recessed locker beside a vertical sleeping berth equipped with elastic restraint straps. Now in a polo shirt and cargo trousers, she fastens the locker shut. She rolls her shoulders with visible physical relief. The camera maintains a steady eye-level medium shot under the soft, uniform interior light, subtly floating with minimal drift to accommodate her weightless movements while keeping her upper body, face, and the locker mechanism clearly visible.\n\noverall_soundscape: A low, steady ventilation hum resonates softly through the quiet cabin. Fabric rustles alongside the smooth rasp of a zipper, followed by the muffled metallic click of a locker latch closing.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back in the orbital greenhouse module.\n\nImani floats gently beside one of the vertical trellis racks. Gripping a handrail with one hand to stabilize herself, she reaches out with the other to carefully inspect a hanging cluster of tomatoes. The fruit has visibly ripened into rich tones of bright orange and blushing red nestled among the leaves. A soft, genuine smile breaks across her face as she gently turns a ripening tomato to check its surface, her expression reflecting quiet relief and pride.\n\nThe camera remains locked in a static wide shot throughout, capturing Imani's full body alongside the hydroponic shelving. The steady composition maintains a balanced view of the greenery, the ripening produce, and the distant blue planet through the portal, emphasizing the quiet success of the orbital harvest.",
+      "annotation": {
+        "title_en": "Days pass",
+        "scene": "orbital_greenhouse",
+        "camera": "static wide",
+        "beat": "Back in the greenhouse days later, Imani in her navy polo checks the vines: the tomatoes have turned orange and red-blushed under the grow lights. She smiles.",
+        "state": {
+          "outfit": "navy-blue polo shirt and grey cargo trousers",
+          "helmet": "none",
+          "tomatoes": "orange and red-blushed tomatoes",
+          "location": "greenhouse"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          256,
+          130
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static wide shot of the orbital greenhouse module, where Imani floats gently beside one of the vertical trellis racks. The camera holds a static wide shot throughout, framing Imani's full body alongside the hydroponic shelving, greenery, and the distant blue planet visible through the portal. Gripping a handrail with one hand to stabilize herself, Imani reaches out with the other hand to carefully inspect a hanging cluster of tomatoes visibly ripened into rich tones of bright orange and blushing red nestled among the leaves. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] The tomato harvest is progressing nicely, with vibrant color showing across the entire orbital trellis.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. A soft, genuine smile breaks across her face as she gently turns a ripening tomato to check its surface, her expression reflecting quiet relief and pride.\n\noverall_soundscape: The low, continuous hum of hydroponic water pumps and air circulation fans fills the cabin. Soft rustling whispers from tomato leaves moving gently in the microgravity airflow.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the orbital greenhouse module.\n\nCommander Imani holds a pair of compact stainless-steel scissors as she leans toward the trellis where several tomatoes hang. She carefully positions the blades against the slender stem of a plump, bright red tomato that contrasts with neighboring orange-blushed fruit. With a clean snip, she severs the stem. The tomato immediately drifts free, tumbling gently in zero gravity for a brief moment. She smoothly extends her hand and catches the floating red tomato safely in her open palm, gazing down at the fresh harvest with quiet satisfaction.\n\nThe camera remains in a steady close-up, focused tightly on her hands and the vine. As the tomato detaches and floats, the framing smoothly tracks its slight upward drift until it rests in her palm. A shallow depth of field keeps the glistening red skin razor-sharp against the softly blurred background.",
+      "annotation": {
+        "title_en": "Harvest",
+        "scene": "orbital_greenhouse",
+        "camera": "close-up",
+        "beat": "Imani snips a bright red ripe tomato from the vine with small scissors; it floats for a moment before she catches it in her palm.",
+        "state": {
+          "outfit": "navy-blue polo shirt and grey cargo trousers",
+          "helmet": "none",
+          "tomatoes": "ripe red tomato in her palm",
+          "location": "greenhouse"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          219,
+          144
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady close-up inside the orbital greenhouse module, where Imani leans close to a trellis of hanging tomatoes with compact stainless-steel scissors in hand. Focused tightly on her hands and the vine with a shallow depth of field keeping glistening red skin razor-sharp against the softly blurred background, Imani carefully positions the blades against the slender stem of a plump, bright red tomato neighboring orange-blushed fruit. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Our orbital greenhouse harvest is proceeding on schedule.</d> With a clean snip of the scissors, she severs the stem. The tomato immediately drifts free, tumbling gently in zero gravity. The camera smoothly tracks the tomato's slight upward drift as Imani smoothly extends her hand and catches the floating red tomato safely in her open palm. Imani (S1) adds: <d>[English] The vine-ripened fruit has matured perfectly in microgravity.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. She gazes down at the fresh harvest with quiet satisfaction.\n\noverall_soundscape: A steady, low hum of orbital module ventilation echoes softly in the background. The sharp metallic snip of scissors slicing through the plant stem rings out crisp and clear, followed by a faint rustle of nearby leaves.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The space station galley is framed with utilitarian white cabinetry, magnetic tool rails, and flush stainless-steel storage compartments. Cool, even LED illumination fills the compact interior, bouncing off clean brushed-metal surfaces and velcro-lined food prep stations. Small packets, utensils, and drinking pouches are secured neatly along the walls, lending the orbital kitchen an organized, lived-in realism. The atmosphere is quiet and calm, defined by functional technology adapted for life in weightlessness.\n\nCommander Imani stands anchored by foot loops before the galley counter. Holding the tomato, she places it against a small velcro cutting board attached to the counter surface. She draws a short stainless prep knife across the tomato, cutting neat, vibrant red disks. Free of gravity, a couple of juicy slices gently float upward into the air. Imani watches them rise, chuckles softly with amused ease, and carefully plucks the drifting slices from the air, pressing them back onto the board. By the end, the tomato sits cleanly sliced into bright red rounds across the prep surface.\n\nThe camera holds a steady medium shot at chest height, capturing Imani’s upper body, her expressive face, and the floating culinary activity on the counter. Gentle ambient light highlights the rich red flesh of the sliced fruit against the neutral tones of the galley. The framing remains centered, letting the subtle drifting motion of the tomato slices and Imani's relaxed reaction unfold naturally within the frame.",
+      "annotation": {
+        "title_en": "Galley",
+        "scene": "station_galley",
+        "camera": "medium shot",
+        "beat": "In the station galley Imani slices the red tomato on a velcro cutting board; the slices drift slightly and she catches them with a laugh.",
+        "state": {
+          "outfit": "navy-blue polo shirt and grey cargo trousers",
+          "helmet": "none",
+          "tomatoes": "sliced red tomato",
+          "location": "galley"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          263,
+          234
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium shot at chest height of a space station galley, where Imani stands anchored by foot loops before the counter. The camera holds a steady medium shot at chest height, keeping Imani centered before the galley counter. Cool, even LED illumination fills the utilitarian interior, reflecting off white cabinetry, magnetic tool rails, and flush stainless-steel compartments. Holding the tomato against a small velcro cutting board attached to the counter, Imani draws a short stainless prep knife across it, cutting neat, vibrant red disks. As a couple of juicy slices gently float upward into the air, Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Even simple meal prep requires quick reflexes up here when fresh produce decides to float away.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. Imani watches them rise, chuckles softly with amused ease, and carefully plucks the drifting slices from the air, pressing them back onto the board until the tomato sits cleanly sliced into bright red rounds.\n\noverall_soundscape: A continuous low mechanical hum of life support and galley ventilation fills the quiet cabin. The faint, clean slice of a knife through crisp tomato skin is followed by soft rustles and the light grip of velcro on the board.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the station galley.\n\nCommander Imani holds a small, folded tortilla cradling a slice of the red tomato. She lifts the tortilla to her mouth and takes a bite. As she chews, she closes her eyes in visible bliss, taking a quiet moment to savour the fresh acidity and sweetness. A radiant smile spreads across her face before she opens her eyes and looks directly into the lens. She speaks warmly to the camera, explaining that it is the best thing she has tasted in six months.\n\nThe camera maintains a stable, eye-level close-up with a faint, fluid drift that conveys the microgravity environment. The tight framing keeps Imani’s face, her upper torso, and the partially eaten tomato tortilla clearly visible against the soft-focus galley interior.",
+      "annotation": {
+        "title_en": "First taste",
+        "scene": "station_galley",
+        "camera": "close-up",
+        "beat": "Imani eats a slice of tomato on a tortilla, closes her eyes and savours it, then tells the camera it is the best thing she has tasted in six months.",
+        "state": {
+          "outfit": "navy-blue polo shirt and grey cargo trousers",
+          "helmet": "none",
+          "tomatoes": "tomato on a tortilla being eaten",
+          "location": "galley"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          219,
+          127
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an eye-level close-up in the station galley, where Imani holds a small, folded tortilla cradling a slice of red tomato. Imani lifts the folded tortilla to her mouth and takes a bite. As she chews, she closes her eyes in visible bliss, taking a quiet moment to savour the fresh acidity and sweetness. A radiant smile spreads across her face before she opens her eyes and looks directly into the lens. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] That fresh tomato is honestly the best thing I have tasted in six months.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. The camera maintains an eye-level close-up with a faint, fluid drift, keeping her face, upper torso, and the partially eaten tomato tortilla clearly visible against the soft-focus station galley interior.\n\noverall_soundscape: A gentle crunch of the fresh tomato bite is followed by quiet chewing. In the background, the low, steady ambient hum of ventilation in the station galley hums softly.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The cupola module of the space station forms a quiet, panoramic sanctuary wrapped in large, curved multi-pane observation windows. Outside, the pitch-black void of space gives way to the deep curving horizon of Earth's night side, illuminated by sprawling clusters and webs of golden city lights glittering like scattered dust below. The interior walls of the cupola are clad in clean, utilitarian pale grey panels fitted with dark handrails, bathed in the faint ambient glow of station indicator lights and the warm reflection rising from the planet. The atmosphere is contemplative, hushed, and serene.\n\nCommander Imani enters the module in zero gravity. Clasped gently in both hands, she carries a small cylindrical pot containing a vibrant green tomato seedling with delicate leaves anchored in dark growth medium. Drifting weightlessly toward the central bay window, she secures one foot under a padded rail and gazes down at the glowing terrestrial networks. She smiles softly in quiet awe, tilting the tiny potted plant slightly toward the glass as if sharing the view.\n\nThe camera begins in a medium-wide shot positioned behind Imani as she floats into the frame, executing a smooth, slow push-in over her shoulder toward the massive windows. As the camera creeps closer, her silhouette, the crisp green leaves of the seedling, and the breathtaking golden arc of the night Earth remain centrally composed and sharply visible.",
+      "annotation": {
+        "title_en": "Window to Earth",
+        "scene": "cupola",
+        "camera": "slow push-in from behind",
+        "beat": "Imani floats into the domed cupola window module and looks down at the night side of Earth, city lights scattered like gold dust, a small potted tomato seedling in her hands.",
+        "state": {
+          "outfit": "navy-blue polo shirt and grey cargo trousers",
+          "helmet": "none",
+          "tomatoes": "new tomato seedling in a small pot",
+          "location": "cupola"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          255,
+          227
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium-wide shot of the space station cupola module, where Imani floats in zero gravity toward the large curved observation windows. Imani drifts weightlessly into the cupola module, whose utilitarian pale grey panels and dark handrails catch the faint glow of station indicator lights and the warm reflection from the planet. Gently clasping a small cylindrical pot with a vibrant green tomato seedling anchored in dark growth medium, she floats toward the central bay window. The camera pushes in slowly and smoothly over her shoulder toward the curved panes, framing the pitch-black void and Earth's night horizon glowing with golden city lights. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] Log entry. Our tomato seedling is thriving, and the night view below is as breathtaking as ever.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. Securing one foot under a padded rail, Imani gazes down at the terrestrial networks and smiles softly in quiet awe, tilting the tiny plant slightly toward the glass.\n\noverall_soundscape: A hushed, low mechanical hum of environmental life support permeates the cupola. The faint, soft rustle of tiny leaves accompanies the gentle brush of Imani's foot tucking under the padded rail.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the station's cupola module.\n\nFloating gently in microgravity, Imani cradles the potted seedling in one hand. She turns smoothly toward the lens, her gaze settling directly on the viewer. She speaks calmly to conclude her research log, her expression measured and reflective. As she finishes her report, her features ease into a warm, gentle smile. She lifts her free hand toward the lens to give a small, reassuring wave, keeping the potted plant nestled securely against her torso.\n\nThe camera remains in a steady medium close-up at eye level, framing Imani from the chest up while keeping both the seedling and Earth clearly visible. The subtle float of the camera preserves a natural, documentary realism without distracting movement, ending the scene on her calm, contented face.",
+      "annotation": {
+        "title_en": "Sign-off",
+        "scene": "cupola",
+        "camera": "medium close-up",
+        "beat": "Imani turns to the camera, Earth glowing behind her through the cupola windows, and ends her log with a smile and a small wave.",
+        "state": {
+          "outfit": "navy-blue polo shirt and grey cargo trousers",
+          "helmet": "none",
+          "tomatoes": "seedling",
+          "location": "cupola"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          128
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up of Imani inside the station's cupola module, floating gently in microgravity with Earth visible in the background. Floating gently in microgravity, Imani cradles the potted seedling in one hand and turns smoothly toward the lens, her gaze settling directly on the viewer with a measured, reflective expression. The camera floats subtly in a steady medium close-up at eye level, framing her from the chest up while keeping both the seedling and Earth clearly visible. Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1) says: <d>[English] The seedling continues to show healthy growth, so I am concluding today's research log now.</d> Exactly as her voice stops, Imani's lips close and her jaw stops moving; she stays silent for the rest of the shot. As she finishes her report, her features ease into a warm, gentle smile. She lifts her free hand toward the lens to give a small, reassuring wave while keeping the potted plant nestled securely against her torso, ending on her calm, contented face.\n\noverall_soundscape: A low, continuous hum of station ventilation and gentle air circulation fills the background. Faint fabric rustling accompanies her subtle movement in microgravity.\n\nnon_diegetic_music: Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout."
+      }
+    }
+  ]
+}

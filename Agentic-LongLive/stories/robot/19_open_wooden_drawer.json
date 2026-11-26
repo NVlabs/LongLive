@@ -1,0 +1,52 @@
+{
+ "name": "19_open_wooden_drawer",
+ "title": "Storing and Retrieving Puck From Drawer",
+ "summary": "A robotic arm opens a wooden desk drawer, places a circular black puck inside, closes the drawer, and later reopens it to retrieve the puck.",
+ "camera": "fixed third-person camera",
+ "robot": "one arm with a black parallel gripper",
+ "setting": "an office desk with a wooden drawer unit",
+ "first_frame": "19_open_wooden_drawer.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "4edcd5e3c17b42d618b819e5b31212df",
+  "frame_index": 0,
+  "original_prompt": "pull the drawer",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "24657291c50ae4e7a3319d3d9464f82c33187ce958bb757b123092975bd1b05a"
+ },
+ "segments": [
+  {
+   "instruction": "The robot reaches forward and grasps the black handle of the top drawer. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot pulls the top drawer completely open and releases the handle. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot moves across to the round black puck on the desk and grasps it. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot places the round black puck inside the open drawer and pushes the drawer shut. The camera remains fixed.",
+   "memory_event": "hide: the round black puck is enclosed inside the shut drawer"
+  },
+  {
+   "instruction": "The robot lifts its gripper above the wooden cabinet and rests on the top surface. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot moves its arm back toward the center of the workspace and hovers. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot grasps the top drawer handle and pulls it open. The camera remains fixed.",
+   "memory_event": "return: the top drawer opens to reveal the round black puck inside exactly as placed"
+  },
+  {
+   "instruction": "The robot reaches into the drawer, picks up what was stored inside, and places it back onto the table. The camera remains fixed.",
+   "memory_event": "none"
+  }
+ ]
+}

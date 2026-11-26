@@ -1,0 +1,13 @@
+# LongLive-H3 worker environment (agentic_longlive.workers.longlive_h3): Python 3.12, NVIDIA driver for CUDA 13.0.
+# Separate from the agent environment (requirements.txt). scripts/workers/setup_longlive_h3.sh installs it with uv.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.11.0
+torchvision==0.26.0
+diffusers @ git+https://github.com/huggingface/diffusers.git@b88b343e71e38bd404f7f082ac4a2cbde63713e1
+transformers==5.12.1
+accelerate==1.14.0
+safetensors==0.8.0
+av==16.1.0
+huggingface_hub>=1.0
+pillow
+numpy

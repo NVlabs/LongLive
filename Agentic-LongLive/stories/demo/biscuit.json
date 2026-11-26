@@ -1,0 +1,109 @@
+{
+ "id": "biscuit",
+ "setup": {
+  "title": "Biscuit Cooks Dinner",
+  "style": "3D animated cartoon with soft rounded shapes, warm saturated colors and gentle lighting, a sunny little town, a small corner supermarket and a cozy home kitchen; one continuous shot per prompt.",
+  "cast": [
+   {
+    "id": "biscuit",
+    "name": "Biscuit",
+    "description": "Biscuit, a cheerful corgi with orange-and-white fur, big upright ears and a short fluffy tail, who walks on two legs and wears a tall white chef's hat and a small blue apron."
+   }
+  ],
+  "extras": {
+   "music": "Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+  }
+ },
+ "shots": [
+  {
+   "prompt": "A medium shot of a cozy home kitchen in morning light, where Biscuit stands at the counter. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, reads a handwritten recipe card with drawings of three dishes and a soup. He wags his short fluffy tail, grabs an empty woven shopping basket and heads for the door. The camera holds a medium shot across the kitchen counter.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a cozy home kitchen in morning light, where Biscuit stands at the counter. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, reads a handwritten recipe card with drawings of three dishes and a soup. He wags his short fluffy tail, grabs an empty woven shopping basket and heads for the door. The camera holds a medium shot across the kitchen counter.\n\noverall_soundscape: A happy bark, the tick of a wall clock and birds outside.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A wide shot of a sunny little town street, where Biscuit rides a little red scooter toward a corner supermarket. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, scoots along the sidewalk on a little red kick scooter with the empty woven basket hanging from the handlebar. His ears flap in the wind and he waves at a passing bird. The camera tracks beside him at his eye level.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a sunny little town street, where Biscuit rides a little red scooter toward a corner supermarket. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, scoots along the sidewalk on a little red kick scooter with the empty woven basket hanging from the handlebar. His ears flap in the wind and he waves at a passing bird. The camera tracks beside him at his eye level.\n\noverall_soundscape: Scooter wheels rolling, a happy yip and birds chirping.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of a bright supermarket produce aisle, where Biscuit fills his woven basket. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, picks plump red tomatoes and a big head of green broccoli and places them in his woven basket, sniffing each one first. The camera tracks beside him along the colorful shelves.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a bright supermarket produce aisle, where Biscuit fills his woven basket. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, picks plump red tomatoes and a big head of green broccoli and places them in his woven basket, sniffing each one first. The camera tracks beside him along the colorful shelves.\n\noverall_soundscape: Soft supermarket music, a squeaky cart wheel and a satisfied sniff.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the supermarket's egg and tofu shelf, where Biscuit chooses carefully. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, opens a carton of eggs and checks each egg with a gentle sniff, then adds the carton and a white block of tofu to his woven basket next to the red tomatoes and green broccoli. The camera holds a medium shot at his eye level.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the supermarket's egg and tofu shelf, where Biscuit chooses carefully. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, opens a carton of eggs and checks each egg with a gentle sniff, then adds the carton and a white block of tofu to his woven basket next to the red tomatoes and green broccoli. The camera holds a medium shot at his eye level.\n\noverall_soundscape: Soft supermarket music, a carton lid opening and a careful sniff.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the supermarket's seafood counter, where a penguin fishmonger serves Biscuit. A friendly penguin fishmonger in a white cap wraps a whole silver fish in paper and hands it across the counter. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, standing on tiptoe, adds it to his woven basket, which is now full: red tomatoes, green broccoli, eggs, tofu and the fish. The camera holds a medium shot across the counter.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the supermarket's seafood counter, where a penguin fishmonger serves Biscuit. A friendly penguin fishmonger in a white cap wraps a whole silver fish in paper and hands it across the counter. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, standing on tiptoe, adds it to his woven basket, which is now full: red tomatoes, green broccoli, eggs, tofu and the fish. The camera holds a medium shot across the counter.\n\noverall_soundscape: Paper rustling, crushed ice crunching and a cheerful little woof.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the supermarket checkout, where Biscuit pays at the counter. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, lifts the full woven basket onto the counter: red tomatoes, green broccoli, eggs, tofu and the paper-wrapped fish. A smiling panda cashier scans each item, and Biscuit pays with coins from a small blue coin purse, wagging his tail. The camera holds a medium shot across the counter.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the supermarket checkout, where Biscuit pays at the counter. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, lifts the full woven basket onto the counter: red tomatoes, green broccoli, eggs, tofu and the paper-wrapped fish. A smiling panda cashier scans each item, and Biscuit pays with coins from a small blue coin purse, wagging his tail. The camera holds a medium shot across the counter.\n\noverall_soundscape: A beeping scanner, jingling coins and a cheerful thank-you bark.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A wide shot of a sunny tree-lined street, where Biscuit rides home with the full basket. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, rides his little red scooter home, the full woven basket hanging from the handlebar with tomatoes, broccoli, eggs, tofu and a fish poking out, his fluffy tail wagging. The camera tracks in front of him as he rides toward the camera.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a sunny tree-lined street, where Biscuit rides home with the full basket. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, rides his little red scooter home, the full woven basket hanging from the handlebar with tomatoes, broccoli, eggs, tofu and a fish poking out, his fluffy tail wagging. The camera tracks in front of him as he rides toward the camera.\n\noverall_soundscape: Scooter wheels on the pavement, rustling leaves and a happy hum.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the home kitchen sink, where Biscuit washes the groceries. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, rinses the red tomatoes, the green broccoli and the silver fish under running water, shakes the drops off and sets everything in a colander on the counter. The camera holds a medium shot from beside the sink.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the home kitchen sink, where Biscuit washes the groceries. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, rinses the red tomatoes, the green broccoli and the silver fish under running water, shakes the drops off and sets everything in a colander on the counter. The camera holds a medium shot from beside the sink.\n\noverall_soundscape: Running water, happy splashing and a tiny sneeze from the spray.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the kitchen counter, where Biscuit cuts tofu on a wooden board. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, cuts one white block of tofu into neat cubes with slow, careful strokes and slides the cubes into a small bowl. He is alone in the kitchen. The camera holds a medium shot from the side of the counter.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the kitchen counter, where Biscuit cuts tofu on a wooden board. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, cuts one white block of tofu into neat cubes with slow, careful strokes and slides the cubes into a small bowl. He is alone in the kitchen. The camera holds a medium shot from the side of the counter.\n\noverall_soundscape: A soft knife on the board and a happy hum.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the stove, where Biscuit stir-fries in a big wok. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, tosses tomatoes and scrambled eggs in a wok over a blue flame, then slides the bright red-and-yellow tomato and egg stir-fry onto a white plate. He is alone in the kitchen. The camera holds a medium shot at stove height, steam rising through the frame.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the stove, where Biscuit stir-fries in a big wok. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, tosses tomatoes and scrambled eggs in a wok over a blue flame, then slides the bright red-and-yellow tomato and egg stir-fry onto a white plate. He is alone in the kitchen. The camera holds a medium shot at stove height, steam rising through the frame.\n\noverall_soundscape: Sizzling oil and the clang of the spatula.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the stove, where Biscuit steams the fish in a bamboo steamer. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, lays the whole silver fish on a plate with ginger and green scallions, slides it into a bamboo steamer and closes the lid. A puff of steam rises, and when he lifts the lid the fish is perfectly steamed. He is alone in the kitchen. The camera holds a medium shot at stove height.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the stove, where Biscuit steams the fish in a bamboo steamer. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, lays the whole silver fish on a plate with ginger and green scallions, slides it into a bamboo steamer and closes the lid. A puff of steam rises, and when he lifts the lid the fish is perfectly steamed. He is alone in the kitchen. The camera holds a medium shot at stove height.\n\noverall_soundscape: Bubbling water, the hiss of steam and an impressed little woof.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the stove, where Biscuit stir-fries the broccoli. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, stir-fries the broccoli with garlic in the wok and slides the bright green garlic broccoli onto a white plate. He is alone in the kitchen. The camera holds a medium shot at stove height.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the stove, where Biscuit stir-fries the broccoli. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, stir-fries the broccoli with garlic in the wok and slides the bright green garlic broccoli onto a white plate. He is alone in the kitchen. The camera holds a medium shot at stove height.\n\noverall_soundscape: Sizzling garlic, the clink of a plate and a happy hum.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of the stove, where Biscuit finishes a pot of tofu soup. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, stirs a pot of soup with the tofu cubes and green onions, tastes it from a ladle, adds a pinch of salt and ladles the tofu soup into a big white bowl. He is alone in the kitchen. The camera holds a medium shot as steam curls up from the pot.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the stove, where Biscuit finishes a pot of tofu soup. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, stirs a pot of soup with the tofu cubes and green onions, tastes it from a ladle, adds a pinch of salt and ladles the tofu soup into a big white bowl. He is alone in the kitchen. The camera holds a medium shot as steam curls up from the pot.\n\noverall_soundscape: A gently bubbling pot, the clink of the ladle and a satisfied slurp.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A medium shot of a small dining table by the window, where Biscuit brings the soup. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, carries the big white bowl of tofu soup to the table with both paws and sets it down in the middle, where the tomato and egg stir-fry, the steamed fish and the garlic broccoli already wait. The table is set for one, with a single chair and one pair of chopsticks. Biscuit is alone in the room. The camera holds a medium shot from the window side of the table.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a small dining table by the window, where Biscuit brings the soup. Biscuit, a cheerful corgi with orange-and-white fur and big upright ears, in a tall white chef's hat and a small blue apron, carries the big white bowl of tofu soup to the table with both paws and sets it down in the middle, where the tomato and egg stir-fry, the steamed fish and the garlic broccoli already wait. The table is set for one, with a single chair and one pair of chopsticks. Biscuit is alone in the room. The camera holds a medium shot from the window side of the table.\n\noverall_soundscape: A bowl set down softly on the table and quick paw steps.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  },
+  {
+   "prompt": "A wide shot of the small dining table by the window in evening light, where Biscuit sits down to eat alone. Biscuit, the corgi with orange-and-white fur, takes off his tall white chef's hat and sits alone at the table in his blue apron, on its single chair. In front of him are three dishes, tomato and egg stir-fry, steamed fish and garlic broccoli, and a big bowl of tofu soup. He picks up his one pair of chopsticks and wags his tail. The camera holds a wide shot, then slowly pushes in toward the table.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of the small dining table by the window in evening light, where Biscuit sits down to eat alone. Biscuit, the corgi with orange-and-white fur, takes off his tall white chef's hat and sits alone at the table in his blue apron, on its single chair. In front of him are three dishes, tomato and egg stir-fry, steamed fish and garlic broccoli, and a big bowl of tofu soup. He picks up his one pair of chopsticks and wags his tail. The camera holds a wide shot, then slowly pushes in toward the table.\n\noverall_soundscape: Soft evening room tone, chopsticks clicking and a delighted woof.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and a light guitar, kept soft under the action."
+   }
+  }
+ ]
+}

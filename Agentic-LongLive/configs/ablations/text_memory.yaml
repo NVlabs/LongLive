@@ -1,0 +1,2 @@
+# No entity layer: G / M are drawn directly from the prompt history (no entity images, no checks per entity).
+memory: {mode: text}

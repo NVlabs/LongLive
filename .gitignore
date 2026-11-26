@@ -5,7 +5,7 @@
 # Changes: Document the Long-WAM project's independent ignore rules.
 
 # Repository-wide ignores only.
-# LongLive1.0/, LongLive2.0/, LongLive-Plug/ and Long-WAM/ each keep their own
+# LongLive1.0/, LongLive2.0/, LongLive-Plug/, Long-WAM/ and Agentic-LongLive/ each keep their own
 # .gitignore for rules specific to that codebase.
 
 __pycache__/

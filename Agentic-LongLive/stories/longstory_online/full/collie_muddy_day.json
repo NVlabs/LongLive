@@ -1,0 +1,217 @@
+{
+ "id": "collie_muddy_day",
+ "setup": {
+  "title": "Pip's Muddy Day",
+  "style": "Live-action, cinematic, natural documentary footage of a dog's day from beach to farm to home.",
+  "cast": [
+   {
+    "id": "pip",
+    "name": "Pip",
+    "description": "Pip, one black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a teal collar with a round silver tag."
+   }
+  ],
+  "extras": {
+   "voice": "An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1),",
+   "music": "Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+   "speech": "Only the off-screen owner speaks, a few short words to Pip; there is no on-screen speaker."
+  }
+ },
+ "shots": [
+  {
+   "prompt": "A wide, quiet stretch of sandy beach unfolds under the gentle, clear light of early morning. Pale golden sand stretches along the shoreline, damp and glassy where the receding tide leaves a smooth sheen. In the background, rolling white surf breaks rhythmically against the cool blue-gray ocean under an expansive coastal sky. The atmosphere is brisk, natural, and undisturbed, defined by the steady movement of ocean swells and a soft sea breeze.\n\nPip, a black-and-white border collie, charges across the shoreline with high energy. Her clean, glossy coat contrasts against the pale sand, featuring an asymmetrical white blaze sitting slightly left of center on her face, one black ear raised upright, one ear folded forward, and a single white-tipped front paw. Around her neck rests a teal collar fitted with a circular silver tag. Clamping a bright yellow-green tennis ball securely between her jaws, she gallops along the water's edge before sweeping into a graceful curve. She circles back smoothly, running straight toward the viewer with focused eyes, her pristine coat and collar fully intact as she holds the ball tight.\n\nThe camera moves in a smooth, low-angle tracking shot positioned just above the damp sand. Moving steadily backward, the frame keeps Pip in dynamic full-body view throughout her turn and approach. Her fluid running motion, the bright tennis ball in her mouth, and the crashing white surf behind her remain clearly defined across the open beach.",
+   "annotation": {
+    "title_en": "Beach run",
+    "scene": "beach",
+    "camera": "low tracking shot",
+    "beat": "Pip runs along a quiet morning beach, white surf behind her, and circles back toward the camera with a tennis ball in her mouth.",
+    "state": {
+     "coat_condition": "clean black-and-white coat",
+     "accessory": "teal collar, tennis ball in mouth",
+     "location": "beach"
+    }
+   }
+  },
+  {
+   "prompt": "Morning light on the open beach casts a crisp, pale glow over the wet sand and rolling surf. Cool blue-gray waves break gently in the shallows, churning white seafoam against the shoreline. The damp, packed sand mirrors the pale coastal sky, while the breezy ocean air creates an authentic, refreshing seaside atmosphere.\n\nPip, a black-and-white border collie with a white blaze slightly left of center, one ear raised and one folded, and a white-tipped front paw, wears a teal collar with a round silver tag. Starting with a clean, dry coat, she carries a yellow tennis ball in her mouth. She drops the ball into the foam and bounds into the shallow water, splashing energetically through the cresting wavelets. Grabbing the ball again, she trots out onto the wet sand, her coat now visibly soaked, flattened, and dripping seawater. Halting on the shore, she vigorously shakes her entire body from head to tail, releasing an explosive burst of glistening water spray while her fur remains thoroughly drenched.\n\nThe camera holds a low medium shot at eye level, tracking smoothly as Pip splashes into the surf and emerges onto the sand. The framing keeps her full body, the teal collar, and the dynamic burst of shaking water droplets clearly in view, while the foaming tide and open beach horizon provide a steady, natural backdrop.",
+   "annotation": {
+    "title_en": "Into the waves",
+    "scene": "beach",
+    "camera": "medium shot",
+    "beat": "Pip bounds into the shallow waves after the ball and comes out soaked, fur dripping, then shakes herself in a burst of spray.",
+    "state": {
+     "coat_condition": "soaking wet coat",
+     "accessory": "teal collar",
+     "location": "beach"
+    }
+   }
+  },
+  {
+   "prompt": "The sunny upper shore of the beach features an expanse of soft, pale golden sand warmed by the midday sun. Natural coastal daylight streams across the granular ground, highlighting tiny shells, textured ripples, and the powdery dry surface. In the soft-focus distance, the gentle ocean breeze and distant shoreline create an open, bright seaside atmosphere, bathed in warm, documentary-style natural light.\n\nPip, the black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, and a white-tipped front paw, wears her teal collar with a round silver tag. Her coat is soaking wet and slicked down flat from the sea. She drops enthusiastically onto her side and rolls onto her back, squirming vigorously against the dry ground with her paws paddling in the air. As she writhes and rubs her head, chest, and shoulders into the sediment, the loose grains cling instantly to the damp fur. When she stands up on all fours, her wet coat is heavily crusted with sand, forming a thick, gritty layer especially concentrated across her white chest and face, while her teal collar is also dusted with sand.\n\nThe camera maintains a low-angle close-up at dog height, tilting slightly as Pip rolls on the ground and adjusting as she rises. Crisp focus emphasizes the gritty texture of the sand adhering to her wet coat, while the shallow depth of field keeps the sunny background gently softened.",
+   "annotation": {
+    "title_en": "Sandy dog",
+    "scene": "beach",
+    "camera": "close-up",
+    "beat": "Pip rolls happily in the dry sand; when she stands up her wet coat is crusted with sand, especially her white chest and face.",
+    "state": {
+     "coat_condition": "wet and covered in sand",
+     "accessory": "teal collar",
+     "location": "beach"
+    }
+   }
+  },
+  {
+   "prompt": "A weathered wooden boardwalk cuts through coastal dunes draped in tall, pale green marram grass. Bright, natural daylight washes over the rolling dunes, casting soft shadows across the graying timber planks of the pathway. The trail gently ascends toward distant inland farmland visible beneath a pale blue sky, filled with a fresh ocean breeze and a peaceful seaside atmosphere.\n\nPip, a black-and-white border collie, trots eagerly along the wooden planks. She features a distinctive white facial blaze positioned slightly left of center, one upright ear paired with one folded ear, a single white-tipped front paw, and a bright teal collar with a round silver tag. Her damp coat is visibly crusted with clung beach sand, particularly over her white chest, muzzle, and flanks. She moves with a confident, rhythmic trot up the incline, her plume-like tail wagging high in contentment. As she advances, tiny flecks of loose sand shake loose from her fur, though a thick sandy texture remains clearly embedded throughout her coat.\n\nThe camera tracks backward smoothly ahead of Pip in a low-angle medium shot, maintaining her lively trot at dog-eye level. The wooden walkway continuously rolls beneath her moving paws while swaying dune grasses blur naturally in the flanking background. The framing keeps her determined forward motion, sandy coat, and wagging tail fully visible throughout the journey.",
+   "annotation": {
+    "title_en": "Dune path",
+    "scene": "dune_path",
+    "camera": "tracking shot",
+    "beat": "Pip trots up a wooden path through grassy dunes toward a farm, tail wagging, sand still clinging to her coat.",
+    "state": {
+     "coat_condition": "sandy coat",
+     "accessory": "teal collar",
+     "location": "dunes"
+    }
+   }
+  },
+  {
+   "prompt": "An expansive green pasture stretches across the farm under soft, natural daylight. Lush rolling grass carpeted in deep emerald tones meets a rustic wooden fence line in the background beneath an open countryside sky. In the middle of the field, a scattered flock of woolly white sheep grazes peacefully, occasionally lifting their heads in the gentle breeze. The atmosphere feels airy, calm, and grounded in working rural life.\n\nPip, a black-and-white border collie, pauses on the grass. A white blaze runs slightly left of center down her face, one black ear stands upright while the other folds forward, and one front paw is tipped with white. Around her neck sits a bright teal collar with a round silver tag, and pale beach sand still clings visibly to her dark flank fur. Lowering her chest close to the sod, she drops into a classic, focused herding crouch, her dark eyes locked intently onto the grazing sheep. A moment later, she springs forward into a low, swift gallop, sweeping around the flock in a wide, graceful arc to steer them inward. Her sand-dusted coat stays ruffled by the wind as she drives toward the far side of the pasture.\n\nThe camera holds a sweeping wide shot at pasture height, gently panning across the field to track Pip’s broad curving trajectory. The expansive framing keeps both the low-running collie and the shifting sheep visible within the lush landscape, emphasizing her instinctive speed and herding control across the open terrain.",
+   "annotation": {
+    "title_en": "Sheep!",
+    "scene": "farm_field",
+    "camera": "wide shot",
+    "beat": "At a green farm field Pip drops into a herding crouch, eyes fixed on a flock of white sheep, then sweeps around them in a wide arc.",
+    "state": {
+     "coat_condition": "sandy coat",
+     "accessory": "teal collar",
+     "location": "farm field"
+    }
+   }
+  },
+  {
+   "prompt": "The farm field features a wide tract of churned earth and damp green pasture under soft, overcast daylight. In the middle of the worn dirt track lies an expansive, deep brown mud puddle filled with murky water and bordered by slick clay and flattened weeds. The cool, diffused lighting keeps the rich earth tones vibrant, creating an authentic, rugged rural atmosphere.\n\nPursuing a stray lamb just ahead, Pip charges forward at full speed. The energetic black-and-white border collie displays her distinct white blaze slightly left of center, one raised black ear, one folded ear, one white-tipped front paw, and a teal collar with a round silver tag, her fur still carrying a light dusting of pale sand. Eyes locked on the lamb, she bounds straight into the huge puddle. A dynamic burst of murky water and wet silt sprays into the air as she splashes violently through the hollow. As Pip scrambles out onto the grass, her lower body is transformed: her four legs, underbelly, and once-white chest are completely smothered in dripping, dark brown mud, and her teal collar is spattered with thick muck.\n\nThe camera tracks smoothly in a medium shot at dog eye-level, panning to follow her leap across the puddle. The framing captures both the explosive splash and Pip's full body, clearly displaying the sudden transition from sandy fur to thick, caked mud before she continues her pursuit.",
+   "annotation": {
+    "title_en": "The mud puddle",
+    "scene": "farm_field",
+    "camera": "medium shot",
+    "beat": "Chasing a stray lamb, Pip leaps straight through a huge brown mud puddle; she emerges with her legs, belly and white chest completely brown with mud.",
+    "state": {
+     "coat_condition": "legs, belly and chest covered in brown mud",
+     "accessory": "teal collar, muddy",
+     "location": "farm field"
+    }
+   }
+  },
+  {
+   "prompt": "The farm pasture stretches under bright, diffuse daytime light, illuminating the lush green blades of grass and moist dark soil. In the softly blurred background, woolly cream-colored shapes of the gathered sheep graze calmly across the open paddock. A gentle countryside breeze stirs the taller stalks of clover, lending an earthy, serene, and grounded documentary atmosphere to the open rural setting.\n\nPip, the black-and-white border collie, sits squarely upright facing forward. Her distinctive white facial blaze sits slightly left of center, and one black ear stands upright while the other folds over. Thick brown mud heavily cakes her chest, belly, and front legs, while dark flecks are splattered across her muzzle and cheeks up to her ears. Her teal collar is smeared with damp grit, its round silver tag glinting faintly against her dirty fur. She pants contentedly, her pink tongue lolling out in a wide, proud grin. Hearing her off-screen owner laugh warmly and call her name, Pip tilts her head, her dark eyes brightening as her tail swishes through the damp grass.\n\nThe camera remains in a low close-up at Pip’s eye level, holding steady with natural, subtle handheld stabilization. The tight framing captures the rich textures of her mud-speckled fur and expressive panting face, while keeping the resting flock softly out of focus in the backdrop throughout the shot.",
+   "annotation": {
+    "title_en": "Proud and filthy",
+    "scene": "farm_field",
+    "camera": "close-up",
+    "beat": "Pip sits proudly beside the gathered flock, tongue out, splattered with mud up to her ears; the off-screen owner laughs and calls her name.",
+    "state": {
+     "coat_condition": "mud splattered up to her ears",
+     "accessory": "teal collar, muddy",
+     "location": "farm field"
+    }
+   }
+  },
+  {
+   "prompt": "The scene unfolds in a gravel farmyard adjoining a traditional stone farmhouse with a weathered red door. Soft, natural late-afternoon daylight illuminates the open space, casting gentle shadows across the pale grey stones and rustic masonry. Earthy tones of crushed flint, aged timber, and pale mortar dominate the setting, establishing a peaceful, grounded rural atmosphere at the end of an active day.\n\nPip, the black-and-white border collie, trots briskly across the yard. Her characteristic white blaze slightly left of center, one upright black ear, and one folded ear remain distinct, while thick mud splatters coat her legs, flanks, and fur up to her ears. Around her neck, her teal collar and round silver tag carry flecks of dirt. Trotting purposefully toward the house, her white-tipped front paw and hind feet leave dark, damp muddy prints across the pale gravel. She moves with an easy, contented rhythm, her feathered tail swishing gently as she heads straight for the red door.\n\nThe camera tracks smoothly alongside Pip in a low-angle medium shot, matching her steady walking pace across the yard. The framing keeps her muddy coat and the trailing line of dark paw prints clearly visible against the stones. The weathered stone facade and red door remain in soft focus in the background, anchoring her destination throughout the continuous, documentary-style glide.",
+   "annotation": {
+    "title_en": "Walking home",
+    "scene": "farmhouse_yard",
+    "camera": "tracking shot",
+    "beat": "Pip trots across a gravel farmyard toward a stone farmhouse with a red door, leaving muddy paw prints.",
+    "state": {
+     "coat_condition": "muddy",
+     "accessory": "teal collar",
+     "location": "farmyard"
+    }
+   }
+  },
+  {
+   "prompt": "Inside a rustic farmhouse bathroom lined with pale ceramic tiles, soft daylight filters through a frosted window to blend with warm overhead lamplight. A vintage galvanized metal tub rests on the dark slate floor, collecting warm water that releases a faint, humid haze of steam. The atmosphere is quiet, cozy, and reassuringly domestic, centered on the comforting routine of an indoor wash.\n\nPip, a black-and-white border collie with a white blaze slightly left of center, one raised black ear, one folded ear, and one white-tipped front paw, stands in the basin. Her coat is heavily spattered with dark farm mud, and she initially wears her teal collar with its round silver tag. As the bath begins, the teal collar is unclipped and set aside on the tub rim. Warm water streams over her fur as dog shampoo is worked into a creamy lather. Fluffy white foam piles playfully atop her head between her mismatched ears. The swirling water beneath her paws turns murky brown as the grit rinses away, leaving Pip thoroughly drenched, with her fur flattened and covered in thick soap suds.\n\nThe camera remains in a steady, eye-level medium shot framing Pip squarely within the metal wash tub. The composition keeps her lathered face, mismatched ears, and the soapy, brown-tinted water in clear focus throughout the shot, maintaining a grounded documentary feel without any abrupt movement.",
+   "annotation": {
+    "title_en": "The bath",
+    "scene": "farmhouse_bathroom",
+    "camera": "medium shot",
+    "beat": "In a tiled farmhouse bathroom Pip stands in a metal tub while warm water and bubbles stream over her; foam piles on her head and the water turns brown.",
+    "state": {
+     "coat_condition": "wet, covered in white soap foam",
+     "accessory": "collar removed",
+     "location": "bathroom"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the rustic farmhouse bathroom, soft daylight mingles with warm overhead lighting against wet ceramic tiles. Beads of condensation cling to the tiled walls and the rim of the galvanized wash tub. Fine water mist hangs in the warm, humid air, reflecting subtle golden highlights. The atmosphere captures an intimate, everyday farm bath suspended in time.\n\nPip, the black-and-white border collie with her off-center white blaze and collar removed, starts out drenched, with thick white soap foam matted across her head and chest. Suddenly, she initiates a vigorous shake captured in cinematic slow motion. Squinting her eyes shut, her muzzle twists sharply, rippling loose skin across her jowls. Her one upright black ear and folded ear flap wildly in opposite directions as the momentum rolls through her shoulders. Droplets of water and clusters of white foam fly outward in spiraling arcs, scattering across the air. By the end of the motion, the soap suds have been completely flung away, leaving her black-and-white coat flattened, clean, and soaking wet.\n\nThe camera maintains a slow-motion close-up centered tightly on Pip's expressive face and upper torso. A shallow depth of field keeps her churning fur and spinning droplets pin-sharp while rendering the bathroom walls into a soft blur. Glinting water arcs toward and across the lens, while the steady framing preserves the full kinetic release of the shake.",
+   "annotation": {
+    "title_en": "The shake",
+    "scene": "farmhouse_bathroom",
+    "camera": "slow-motion close-up",
+    "beat": "Pip shakes violently in slow motion, water droplets flying everywhere, ears flapping.",
+    "state": {
+     "coat_condition": "clean but soaking wet",
+     "accessory": "no collar",
+     "location": "bathroom"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the rustic farmhouse bathroom is warm, quiet, and faintly humid after a wash. Soft, diffuse light spills in from a high frosted window, reflecting gently across the pale ceramic wall tiles and the worn wooden floorboards. The domestic space feels peaceful and sheltered, with muted neutral tones in the background highlighting the vibrant yellow of clean bath linens draped near the floor.\n\nPip, the black-and-white border collie, sits swaddled snugly inside a thick, fluffy yellow towel without her collar. Only her face emerges from the warm fabric, showcasing her clean, damp black fur and the distinct white blaze running slightly to the left of center down her muzzle. One black ear pokes perkily straight up out of the towel while the folded ear stays neatly tucked beneath the terrycloth. She appears distinctly sheepish and completely subdued, blinking her warm brown eyes with a mild, apologetic expression. She gives a brief, delicate lick to her wet black nose, remaining utterly still as the soft yellow towel continues to absorb the dampness from her clean coat.\n\nThe camera stays in an intimate eye-level close-up centered on Pip’s face. A gentle, imperceptible handheld drift keeps the shot organic while maintaining sharp focus on her damp muzzle, soft whiskers, and sheepish eyes. The bright yellow bundle fills the lower half of the frame, cleanly isolating her expressive features against the softly blurred bathroom setting behind her throughout the shot.",
+   "annotation": {
+    "title_en": "Towel",
+    "scene": "farmhouse_bathroom",
+    "camera": "close-up",
+    "beat": "Pip is wrapped in a fluffy yellow towel, only her face with the white blaze and raised ear poking out, looking sheepish.",
+    "state": {
+     "coat_condition": "clean, damp",
+     "accessory": "wrapped in a yellow towel",
+     "location": "bathroom"
+    }
+   }
+  },
+  {
+   "prompt": "The cosy farmhouse living room glows with warm afternoon light filtering onto a braided rug and polished wooden floorboards. In the background, muted armchairs and rustic shelves provide an inviting domestic setting. Soft amber and cream tones fill the space, creating a calm, comfortable atmosphere that feels distinctly lived-in and quiet.\n\nPip, a black-and-white border collie with an off-center white blaze, one raised ear, one folded ear, and one white-tipped front paw, sits patiently on the rug. Her coat is clean, completely dry, and exceptionally fluffy, puffing out across her chest and shoulders. Gentle human hands reach into the frame holding her teal collar with its round silver tag, clicking it securely around her neck. Next, a small folded red bandana is draped over the collar and tied neatly beneath her chin. Pip tilts her head slightly, panting happily with an alert expression, her bushy tail sweeping against the floor. By the end of the action, both the teal collar and the vibrant red bandana sit comfortably against her voluminous, pristine white chest fur.\n\nThe camera remains stationary in a medium shot at Pip’s eye level, keeping her seated form, expressive face, and chest clearly visible as the accessories are fastened. Soft natural light highlights the bright red fabric against her clean black-and-white coat, while the living room background stays gently blurred.",
+   "annotation": {
+    "title_en": "Fluffy",
+    "scene": "farmhouse_living_room",
+    "camera": "medium shot",
+    "beat": "In a cosy living room Pip, now dry and extra fluffy, gets her teal collar clipped back on and a small red bandana tied around her neck.",
+    "state": {
+     "coat_condition": "clean, dry, extra fluffy",
+     "accessory": "teal collar and red bandana",
+     "location": "living room"
+    }
+   }
+  },
+  {
+   "prompt": "The shot takes place in the cozy corner of a rustic farmhouse living room beside an open stone fireplace. Golden, flickering flames dance in the hearth, casting a warm amber glow across the dark wooden floorboards and illuminating a thick woven rug laid out before the fire. Soft shadows wrap around the periphery of the room, creating an intimate, tranquil evening atmosphere enriched by the quiet crackle of burning logs.\n\nPip, the black-and-white border collie, is lying on the hearth rug. Her coat is completely clean, dry, and exceptionally fluffy. She wears her teal collar with its round silver tag, along with a neat red bandana knotted around her neck. Her distinct markings—the white blaze angled slightly left of center, one upright black ear, one folded ear, and a single white-tipped front paw—are clearly visible in the firelight. Holding a classic yellow-green tennis ball between her paws, she gives it a few gentle, rhythmic chews. She then lets out a soft sigh, resting her muzzle comfortably over the ball and tucking her paws closer, eyes blinking sleepily as she settles into the deep warmth of the hearth.\n\nThe camera is positioned low to the ground at the dog's eye level, executing a very slow, smooth push-in throughout the shot. Beginning in a medium shot that establishes the wide hearth and Pip curled upon the rug, the lens glides steadily closer to frame her cozy resting posture. The flickering fire, her bright red bandana, the shiny silver tag on her teal collar, and the tennis ball remain sharply visible and in focus as the shot progresses.",
+   "annotation": {
+    "title_en": "By the fire",
+    "scene": "farmhouse_living_room",
+    "camera": "slow push-in",
+    "beat": "Pip curls up on a rug in front of a crackling fireplace, red bandana on, chewing her tennis ball.",
+    "state": {
+     "coat_condition": "clean and fluffy",
+     "accessory": "teal collar, red bandana, tennis ball",
+     "location": "fireplace"
+    }
+   }
+  },
+  {
+   "prompt": "The farmhouse living room is bathed in the tranquil, flickering glow of the crackling fireplace. Warm amber and golden light dances across the textured woven rug on the floor, while soft shadows stretch into the quiet corners of the room. The glowing embers inside the stone hearth cast an inviting, radiant warmth across the wooden floorboards. The atmosphere is deeply calm, peaceful, and cozy, capturing the restful hush of a late evening indoors.\n\nPip, the black-and-white border collie, lies fast asleep on her side upon the rug. Her clean, fluffy coat is completely dry, and she wears her teal collar with a round silver tag layered beneath a red bandana. A fuzzy yellow-green tennis ball rests stationary beside her curled body. Pip's white facial blaze, set slightly left of center, catches the shifting firelight, while one black ear stays folded and the other rests slightly lifted. Her white-tipped front paw lies outstretched on the rug. As she slumbers, her eyes remain gently shut and her breathing is slow and rhythmic. Midway through, her paws give delicate, subtle twitches as if running in a dream, accompanied by a faint flutter of her muzzle, before she settles back into deep, peaceful breathing.\n\nThe camera holds a static, intimate close-up framed low to the floor, level with the sleeping dog. Pip's serene face, the pulsing firelight on her white blaze, and her twitching front paw remain in sharp focus throughout. The warm brick hearth and glowing embers soften into a quiet, blurred background, keeping the focus entirely on her peaceful rest.",
+   "annotation": {
+    "title_en": "Asleep",
+    "scene": "farmhouse_living_room",
+    "camera": "close-up, static",
+    "beat": "Pip falls asleep by the fire, paws twitching in a dream, firelight on her clean white blaze.",
+    "state": {
+     "coat_condition": "clean and fluffy",
+     "accessory": "teal collar, red bandana",
+     "location": "fireplace"
+    }
+   }
+  }
+ ]
+}

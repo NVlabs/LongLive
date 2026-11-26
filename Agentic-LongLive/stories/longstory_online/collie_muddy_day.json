@@ -1,0 +1,399 @@
+{
+  "id": "collie_muddy_day_terse",
+  "setup": {
+    "title": "Pip's Muddy Day",
+    "style": "Live-action, cinematic, natural documentary footage of a dog's day from beach to farm to home.",
+    "cast": [
+      {
+        "id": "pip",
+        "name": "Pip",
+        "description": "Pip, one black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a teal collar with a round silver tag."
+      }
+    ],
+    "extras": {
+      "voice": "An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1),",
+      "music": "Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+      "speech": "Only the off-screen owner speaks, a few short words to Pip; there is no on-screen speaker."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "A wide, quiet stretch of sandy beach unfolds under the gentle, clear light of early morning. Pale golden sand stretches along the shoreline, damp and glassy where the receding tide leaves a smooth sheen. In the background, rolling white surf breaks rhythmically against the cool blue-gray ocean under an expansive coastal sky. The atmosphere is brisk, natural, and undisturbed, defined by the steady movement of ocean swells and a soft sea breeze.\n\nPip, a black-and-white border collie, charges across the shoreline with high energy. Her clean, glossy coat contrasts against the pale sand, featuring an asymmetrical white blaze sitting slightly left of center on her face, one black ear raised upright, one ear folded forward, and a single white-tipped front paw. Around her neck rests a teal collar fitted with a circular silver tag. Clamping a bright yellow-green tennis ball securely between her jaws, she gallops along the water's edge before sweeping into a graceful curve. She circles back smoothly, running straight toward the viewer with focused eyes, her pristine coat and collar fully intact as she holds the ball tight.\n\nThe camera moves in a smooth, low-angle tracking shot positioned just above the damp sand. Moving steadily backward, the frame keeps Pip in dynamic full-body view throughout her turn and approach. Her fluid running motion, the bright tennis ball in her mouth, and the crashing white surf behind her remain clearly defined across the open beach.",
+      "annotation": {
+        "title_en": "Beach run",
+        "scene": "beach",
+        "camera": "low tracking shot",
+        "beat": "Pip runs along a quiet morning beach, white surf behind her, and circles back toward the camera with a tennis ball in her mouth.",
+        "state": {
+          "coat_condition": "clean black-and-white coat",
+          "accessory": "teal collar, tennis ball in mouth",
+          "location": "beach"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          237,
+          237
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle tracking shot of a quiet sandy beach at early morning, where Pip gallops along the damp shoreline with a tennis ball in her mouth. Under the clear early morning light, rolling white surf breaks rhythmically against the cool blue-gray ocean behind pale golden sand. Pip, a black-and-white border collie with an asymmetrical white facial blaze, one upright ear, one folded ear, a white-tipped front paw, and a teal collar with a circular silver tag, charges along the damp shoreline holding a bright yellow-green tennis ball in her jaws. The camera moves steadily backward in a low-angle tracking shot just above the wet sand, maintaining Pip in dynamic full-body view. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, bring it here!</d> After this line the voice-over stays silent for the rest of the shot. Pip sweeps into a graceful curve and runs straight toward the moving camera with focused eyes, her pristine coat intact as she keeps the ball clamped tight.\n\noverall_soundscape: Rhythmic ocean waves crash and wash over the shoreline under a soft, steady coastal breeze. Fast pawbeats splash and thud rhythmically against the damp, packed sand.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide, low-angle tracking shot of a quiet sandy beach at early morning, where Pip gallops with high energy along the shoreline near the breaking surf. The camera moves steadily backward at a low angle just above the damp, glassy sand, keeping Pip in dynamic full-body view against pale golden sand and rolling white surf breaking into the cool blue-gray ocean. Pip, a black-and-white border collie with an asymmetrical white blaze slightly left of center, one black ear raised upright, one ear folded forward, a single white-tipped front paw, and a teal collar fitted with a circular silver tag, charges along the water's edge while clamping a bright yellow-green tennis ball firmly between her jaws. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, bring it here!</d> After this line the voice-over stays silent for the rest of the shot. Sweeping into a graceful curve along the shore, Pip circles back smoothly and runs straight toward the camera with focused eyes, her pristine coat intact and the bright ball held tightly as sea breezes stir the coastal air.\n\noverall_soundscape: Rhythmic ocean waves break and hiss onto the damp sand beneath a gentle coastal breeze. Rapid, rhythmic paw pads thump against the wet shoreline.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still on the open beach.\n\nCarrying the tennis ball in her mouth, Pip drops it into the foam and bounds into the shallow water, splashing energetically through the cresting wavelets. Grabbing the ball again, she trots out onto the wet sand, her coat now visibly soaked, flattened, and dripping seawater. Halting on the shore, she vigorously shakes her entire body from head to tail, releasing an explosive burst of glistening water spray while her coat remains thoroughly drenched.\n\nThe camera holds a low medium shot at eye level, tracking smoothly as Pip splashes into the surf and emerges onto the sand. The framing keeps her full body and the dynamic burst of shaking water droplets clearly in view, while the foaming tide and open beach horizon provide a steady, natural backdrop.",
+      "annotation": {
+        "title_en": "Into the waves",
+        "scene": "beach",
+        "camera": "medium shot",
+        "beat": "Pip bounds into the shallow waves after the ball and comes out soaked, fur dripping, then shakes herself in a burst of spray.",
+        "state": {
+          "coat_condition": "soaking wet coat",
+          "accessory": "teal collar",
+          "location": "beach"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          223,
+          131
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low medium shot of an open beach at eye level, where Pip moves near the foaming tide with a tennis ball in her mouth. Carrying the tennis ball in her mouth, Pip drops it into the foam and bounds into the shallow water, splashing energetically through cresting wavelets. Grabbing the ball again, she trots out onto the wet sand, her coat visibly soaked, flattened, and dripping seawater. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, shake it off!</d> After this line the voice-over stays silent for the rest of the shot. Halting on the shore, Pip vigorously shakes her entire body from head to tail, releasing an explosive burst of glistening water spray while her coat remains thoroughly drenched. The camera tracks smoothly at eye level, maintaining a low medium shot that keeps her full body and the dynamic burst of shaking droplets clearly in view against the foaming tide and open beach horizon.\n\noverall_soundscape: Ocean surf rolls and foams steadily in the background. Energetic splashing water gives way to wet sand footfalls, followed by the rapid, rhythmic fluttering thrum of a dog shaking drenched fur.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low medium shot of the wide beach shoreline at eye level, where Pip bounds near the foaming white surf with a tennis ball. Carrying the tennis ball in her mouth, Pip—a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a teal collar with a round silver tag—drops it into the foam and bounds into the shallow water, splashing energetically through the cresting wavelets. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, Pip!</d> After this line the voice-over stays silent for the rest of the shot. Grabbing the ball again, she trots out onto the wet, pale golden sand, her coat now visibly soaked, flattened, and dripping seawater. Halting on the shore, she vigorously shakes her entire body from head to tail, releasing an explosive burst of glistening water spray while her coat remains thoroughly drenched. The camera tracks smoothly at eye level, keeping her full body and the dynamic burst of shaking droplets in view against the foaming tide and open beach horizon.\n\noverall_soundscape: Gentle ocean waves roll and foam against the shore, accompanied by lively splashing in shallow water and the vigorous, fluttering whir of a dog shaking off seawater.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still on the sunny beach.\n\nPip drops enthusiastically onto her side and rolls onto her back, squirming vigorously against the dry ground with her paws paddling in the air. As she writhes and rubs her head, chest, and shoulders into the sediment, loose grains cling instantly to her damp fur. When she stands up on all fours, her coat is heavily crusted with sand, forming a thick, gritty layer especially concentrated across her chest and face, while her collar is also dusted with sand.\n\nThe camera maintains a low-angle close-up at dog height, tilting slightly as Pip rolls on the ground and adjusting as she rises. Crisp focus emphasizes the gritty texture of the sand adhering to her coat, while the shallow depth of field keeps the background gently softened.",
+      "annotation": {
+        "title_en": "Sandy dog",
+        "scene": "beach",
+        "camera": "close-up",
+        "beat": "Pip rolls happily in the dry sand; when she stands up her wet coat is crusted with sand, especially her white chest and face.",
+        "state": {
+          "coat_condition": "wet and covered in sand",
+          "accessory": "teal collar",
+          "location": "beach"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          130
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle close-up shot on the sunny beach at dog height, where Pip drops enthusiastically onto the dry ground. Pip drops enthusiastically onto her side and rolls onto her back, squirming vigorously against the dry ground with her paws paddling in the air. As she writhes and rubs her head, chest, and shoulders into the sediment, loose grains cling instantly to her damp fur. The camera maintains a low-angle close-up at dog height, tilting slightly as Pip rolls on the ground while shallow depth of field keeps the background gently softened. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Pip, look at you!</d> After this line the voice-over stays silent for the rest of the shot. When Pip stands up on all fours, the camera adjusts upward with her motion. Her coat is now heavily crusted with sand, forming a thick, gritty layer especially concentrated across her chest and face, while her collar is visibly dusted with sand in crisp focus.\n\noverall_soundscape: The dry rasp and scuffle of sand shifting under wriggling fur mixes with light canine panting. In the background, soft coastal wind and gentle distant ocean surf hum continuously.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle close-up at dog height on the pale golden beach shoreline, where Pip drops enthusiastically onto the dry sand. Pip, a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, a white-tipped front paw, and a teal collar with a round silver tag, flops onto her side and rolls onto her back. She squirms vigorously against the dry pale golden sand with her paws paddling in the air. The camera maintains a low-angle close-up at dog height, tilting slightly as she writhes, rubbing her head, chest, and shoulders into the sediment so loose grains instantly cling to her damp fur. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Pip, you silly dog!</d> After this line the voice-over stays silent for the rest of the shot. As Pip stands up on all fours, the camera adjusts upward to follow her rise, keeping crisp focus on the gritty texture adhering to her coat while a shallow depth of field gently softens the background surf. Her coat is now heavily crusted with sand, forming a thick layer across her chest and face, with her teal collar also dusted in grit.\n\noverall_soundscape: Coarse sand crunches and shifts softly under the dog's rolling body. Light panting mixes with the distant, rhythmic roar of breaking surf.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "A weathered wooden boardwalk cuts through coastal dunes draped in tall, pale green marram grass. Bright, natural daylight washes over the rolling dunes, casting soft shadows across the graying timber planks of the pathway. The trail gently ascends toward distant inland farmland visible beneath a pale blue sky, filled with a fresh ocean breeze and a peaceful seaside atmosphere.\n\nPip trots eagerly along the wooden planks. She moves with a confident, rhythmic trot up the incline, her tail wagging high in contentment. As she advances, tiny flecks of loose sand shake loose from her fur.\n\nThe camera tracks backward smoothly ahead of Pip in a low-angle medium shot, maintaining her lively trot at dog-eye level. The wooden walkway continuously rolls beneath her moving paws while swaying dune grasses blur naturally in the flanking background. The framing keeps her determined forward motion and wagging tail fully visible throughout the journey.",
+      "annotation": {
+        "title_en": "Dune path",
+        "scene": "dune_path",
+        "camera": "tracking shot",
+        "beat": "Pip trots up a wooden path through grassy dunes toward a farm, tail wagging, sand still clinging to her coat.",
+        "state": {
+          "coat_condition": "sandy coat",
+          "accessory": "teal collar",
+          "location": "dunes"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          220,
+          149
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle medium shot of a weathered wooden boardwalk cutting through coastal dunes draped in tall, pale green marram grass, where Pip trots eagerly up the gentle incline. Bright, natural daylight illuminates the pathway, casting soft shadows across the graying timber planks beneath a pale blue sky. The camera tracks backward smoothly ahead of Pip at dog-eye level, maintaining her lively trot in frame. Pip moves with a confident, rhythmic trot up the incline, her tail wagging high in contentment as the wooden walkway rolls beneath her moving paws. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, Pip!</d> After this line the voice-over stays silent for the rest of the shot. Tiny flecks of loose sand shake loose from Pip's fur as she advances. Flanking tall dune grasses sway and blur naturally in the fresh ocean breeze, with distant inland farmland visible along the rising trail.\n\noverall_soundscape: The rhythmic, light patter of dog paws and claws taps steadily across hollow wooden planks. A soft, steady coastal breeze rustles through tall grasses in the surrounding dunes.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle medium shot of a weathered wooden boardwalk cutting through pale green coastal dunes, where Pip trots eagerly up the gentle incline. Bright, natural daylight washes over the rolling dunes draped in tall, pale green marram grass, casting soft shadows across the graying timber planks. Pip, a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a teal collar with a round silver tag dusted with sand, moves with a confident, rhythmic trot up the incline toward distant inland farmland beneath a pale blue sky. Her tail wags high in contentment, and tiny flecks of loose sand shake loose from her fur as she advances. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, keep going!</d> After this line the voice-over stays silent for the rest of the shot. The camera tracks backward smoothly ahead of Pip at dog-eye level, keeping her determined forward motion and wagging tail fully visible while the walkway rolls beneath her paws and swaying dune grasses blur in the flanking background.\n\noverall_soundscape: Paws click and patter rhythmically against weathered wooden planks as ocean breezes rustle through tall marram grass.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "An expansive green pasture stretches across the farm under soft, natural daylight. Lush rolling grass carpeted in deep emerald tones meets a rustic wooden fence line in the background beneath an open countryside sky. In the middle of the field, a scattered flock of woolly white sheep grazes peacefully, occasionally lifting their heads in the gentle breeze. The atmosphere feels airy, calm, and grounded in working rural life.\n\nPip pauses on the grass. Lowering her chest close to the sod, she drops into a classic, focused herding crouch, her eyes locked intently onto the grazing sheep. A moment later, she springs forward into a low, swift gallop, sweeping around the flock in a wide, graceful arc to steer them inward, driving toward the far side of the pasture.\n\nThe camera holds a sweeping wide shot at pasture height, gently panning across the field to track Pip’s broad curving trajectory. The expansive framing keeps both Pip and the shifting sheep visible within the lush landscape, emphasizing her instinctive speed and herding control across the open terrain.",
+      "annotation": {
+        "title_en": "Sheep!",
+        "scene": "farm_field",
+        "camera": "wide shot",
+        "beat": "At a green farm field Pip drops into a herding crouch, eyes fixed on a flock of white sheep, then sweeps around them in a wide arc.",
+        "state": {
+          "coat_condition": "sandy coat",
+          "accessory": "teal collar",
+          "location": "farm field"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          175
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a sweeping wide shot of an expansive green pasture on a farm under soft natural daylight, where Pip pauses low on the rolling grass facing a scattered flock of sheep. Under an open countryside sky, the camera holds a sweeping wide shot at pasture height, keeping a rustic wooden fence line in the background and woolly white sheep grazing peacefully across the deep emerald grass. Pip pauses on the sod before lowering her chest into a focused herding crouch, locking her gaze intently on the flock. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Away to me, steady.</d> After this line the voice-over stays silent for the rest of the shot. Pip immediately springs forward into a low, swift gallop, sweeping around the flock in a wide, graceful arc to steer them inward toward the far side of the pasture. The camera gently pans across the field to track her broad curving trajectory, keeping both Pip and the shifting sheep visible across the open terrain.\n\noverall_soundscape: A gentle rural breeze rustles through the lush pasture grass alongside occasional distant sheep bleating. Soft, rhythmic paw thuds strike against the turf as Pip gallops across the field.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a sweeping wide shot of an expansive green pasture under soft natural daylight, where Pip pauses on the lush emerald grass facing a scattered flock of sheep. Pip, a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a teal collar with a round silver tag, carries dried sand crusts on her damp chest and face while her collar is dusted with sand. In the pasture, beneath an open countryside sky and a distant rustic wooden fence line, a scattered flock of woolly white sheep grazes peacefully, occasionally lifting their heads in the gentle breeze. Pip lowers her chest close to the sod into a classic, focused herding crouch, eyes locked intently on the sheep. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Away to me, Pip!</d> After this line the voice-over stays silent for the rest of the shot. She springs forward into a low, swift gallop, sweeping around the flock in a wide, graceful arc to steer them inward toward the far side. The camera holds a sweeping wide shot at pasture height, gently panning across the field to track Pip's curving trajectory while keeping her and the shifting sheep visible.\n\noverall_soundscape: A gentle breeze whispers through the open pasture grass accompanied by the occasional distant bleat of sheep. Rhythmic, muffled thuds of running paws pad across the soft turf as the grazing flock begins to stir and rustle.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still in the farm field.\n\nPursuing a stray lamb just ahead, Pip charges forward at full speed. Eyes locked on the lamb, she bounds straight into a huge mud puddle. A dynamic burst of murky water and wet silt sprays into the air as she splashes violently through the hollow. As she scrambles out onto the grass, her four legs, underbelly, and chest are completely smothered in dripping, dark brown mud, and her collar is spattered with thick muck.\n\nThe camera tracks smoothly in a medium shot at dog eye-level, panning to follow her leap across the puddle. The framing captures both the explosive splash and Pip's full body, clearly displaying the thick, caked mud covering her before she continues her pursuit.",
+      "annotation": {
+        "title_en": "The mud puddle",
+        "scene": "farm_field",
+        "camera": "medium shot",
+        "beat": "Chasing a stray lamb, Pip leaps straight through a huge brown mud puddle; she emerges with her legs, belly and white chest completely brown with mud.",
+        "state": {
+          "coat_condition": "legs, belly and chest covered in brown mud",
+          "accessory": "teal collar, muddy",
+          "location": "farm field"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          232,
+          122
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium tracking shot at dog eye-level in a farm field, where Pip charges forward across the grass pursuing a stray lamb just ahead. Pursuing the stray lamb just ahead, Pip charges forward at full speed with her eyes locked on the lamb. The camera tracks smoothly in a medium shot at dog eye-level, panning to follow her charge. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Watch the mud, Pip!</d> After this line the voice-over stays silent for the rest of the shot. Pip bounds straight into a huge mud puddle. A dynamic burst of murky water and wet silt sprays into the air as she splashes violently through the hollow. As she scrambles out onto the grass, her four legs, underbelly, and chest are completely smothered in dripping, dark brown mud, and her collar is spattered with thick muck. The framing captures the explosive splash and Pip's full body, clearly displaying the thick, caked mud covering her before she continues her pursuit.\n\noverall_soundscape: Fast-paced thudding paws on turf abruptly turn into a violent, heavy splash of murky water and spraying silt. Thick mud squelches wetly as Pip scrambles back onto the grass amid rapid, heavy canine panting.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium tracking shot in a farm field at dog eye-level, where Pip sprints across the open grass in pursuit of a stray lamb. Pip is a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a teal collar with a round silver tag, her damp coat initially marked with dried sand crusts on her chest and face and her collar dusted with sand. Eyes locked on the lamb just ahead, she charges forward at full speed. The camera tracks smoothly in a medium shot at dog eye-level, panning to follow her leap across a huge mud puddle. She bounds straight in, sending an explosive, dynamic burst of murky water and wet silt spraying high into the air. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Pip, look out!</d> After this line the voice-over stays silent for the rest of the shot. As Pip scrambles out onto the grass, her four legs, underbelly, and chest become completely smothered in dripping, dark brown mud, and her collar is spattered with thick muck. The framing clearly displays the thick, caked mud covering her full body before she continues her pursuit.\n\noverall_soundscape: Pounding paws thud across grass, followed by a heavy, explosive splash of churning water and wet silt. Dripping squelches sound as paws scramble out onto sodden turf, accompanied by canine panting and a faint breeze.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still in the farm pasture.\n\nPip sits squarely upright facing forward. She pants contentedly, her tongue lolling out in a wide grin. Hearing her off-screen owner laugh warmly and call her name, she tilts her head, her eyes brightening as her tail swishes through the grass.\n\nThe camera remains in a low close-up at Pip’s eye level, holding steady with natural, subtle handheld stabilization. The tight framing captures her expressive panting face, while keeping the resting flock softly out of focus in the backdrop throughout the shot.",
+      "annotation": {
+        "title_en": "Proud and filthy",
+        "scene": "farm_field",
+        "camera": "close-up",
+        "beat": "Pip sits proudly beside the gathered flock, tongue out, splattered with mud up to her ears; the off-screen owner laughs and calls her name.",
+        "state": {
+          "coat_condition": "mud splattered up to her ears",
+          "accessory": "teal collar, muddy",
+          "location": "farm field"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          222,
+          87
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low close-up in the farm pasture, where Pip sits squarely upright facing forward at eye level with the resting flock softly out of focus in the backdrop. Pip pants contentedly with her tongue lolling out in a wide grin. The camera holds steady in a low close-up at Pip's eye level with natural, subtle handheld stabilization, capturing her expressive panting face while keeping the resting flock softly out of focus in the backdrop throughout the shot. Her off-screen owner laughs warmly, and An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, Pip!</d> After this line the voice-over stays silent for the rest of the shot. Upon hearing her name, Pip tilts her head, her eyes brightening as her tail swishes through the grass.\n\noverall_soundscape: Rhythmic canine panting and the soft swish of blades of grass brushing against a tail. A light breeze rustles over the open pasture with faint, muffled sheep sounds in the distance.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low close-up in the expansive green farm pasture, where Pip, the black-and-white border collie, sits squarely upright facing forward at eye level. The camera holds a low close-up at Pip's eye level with subtle handheld stabilization, keeping the resting flock softly out of focus against the expansive pasture in the background. Pip, a black-and-white border collie with a white blaze slightly left of center, one black ear raised, one folded, a white-tipped front paw, and a teal collar with a round silver tag, sits squarely upright facing forward. She pants contentedly, her tongue lolling out in a wide grin. Her off-screen owner chuckles warmly. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, Pip!</d> After this line the voice-over stays silent for the rest of the shot. Hearing her name, Pip tilts her head, her eyes brightening with alert attention as her tail swishes gently through the lush emerald grass blades.\n\noverall_soundscape: Soft, rhythmic canine panting fills the foreground alongside the gentle swishing of grass stems brushing against a wagging tail. A subtle countryside breeze rustles the pasture while faint, muffled sheep bleats sound in the far distance.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "A gravel farmyard adjoins a traditional stone farmhouse with a weathered red door. Soft, natural late-afternoon daylight illuminates the open space, casting gentle shadows across the pale grey stones and rustic masonry. Earthy tones of crushed flint, aged timber, and pale mortar dominate the setting, establishing a peaceful, grounded rural atmosphere at the end of an active day.\n\nPip trots briskly across the yard. Trotting purposefully toward the house, her paws leave dark, damp muddy prints across the pale gravel. She moves with an easy, contented rhythm, her tail swishing gently as she heads straight for the red door.\n\nThe camera tracks smoothly alongside Pip in a low-angle medium shot, matching her steady walking pace across the yard. The framing keeps her and the trailing line of dark paw prints clearly visible against the stones. The weathered stone facade and red door remain in soft focus in the background, anchoring her destination throughout the continuous, documentary-style glide.",
+      "annotation": {
+        "title_en": "Walking home",
+        "scene": "farmhouse_yard",
+        "camera": "tracking shot",
+        "beat": "Pip trots across a gravel farmyard toward a stone farmhouse with a red door, leaving muddy paw prints.",
+        "state": {
+          "coat_condition": "muddy",
+          "accessory": "teal collar",
+          "location": "farmyard"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          219,
+          157
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle medium shot of a gravel farmyard beside a traditional stone farmhouse, where Pip trots briskly across the pale stones toward a weathered red door. The camera tracks smoothly alongside Pip in a low-angle medium shot, matching her steady pace as she trots briskly across the gravel farmyard. Soft, natural late-afternoon daylight illuminates the open space, casting gentle shadows across the pale grey stones and rustic masonry of the farmhouse. Pip moves with an easy, contented rhythm, her tail swishing gently as she heads straight for the weathered red door. Her paws leave dark, damp muddy prints trailing behind her across the pale gravel. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Come inside, good girl.</d> After this line the voice-over stays silent for the rest of the shot. Throughout the continuous glide, the weathered stone facade and red door remain in soft focus in the background while her trailing prints stay visible.\n\noverall_soundscape: Paws crunch steadily across loose gravel with soft, damp scuffs. A gentle rural breeze rustles softly in the open farmyard.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle medium shot of a gravel farmyard beside a traditional stone farmhouse, where Pip trots purposefully across the pale stones. Under soft, natural late-afternoon daylight casting gentle shadows across pale grey stones and rustic masonry, Pip trots briskly across the farmyard toward a weathered red door. Pip, a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a muck-spattered teal collar with a round silver tag, has her coat completely smothered in dripping, dark brown mud. She moves with an easy, contented rhythm, her tail swishing gently as her paws leave dark, damp muddy prints across the pale crushed flint gravel. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Pip, wait! Don't go inside!</d> After this line the voice-over stays silent for the rest of the shot. The camera tracks smoothly alongside Pip in a low-angle medium shot, matching her steady walking pace across the yard to keep her and the trailing line of paw prints visible against the stones, while the stone facade and red door remain in soft focus in the background.\n\noverall_soundscape: Rhythmic crunching of trotting paws across loose gravel intermingled with wet, squelching mud impacts. A light late-afternoon rural breeze rustles faintly across the open yard.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Inside a rustic farmhouse bathroom lined with pale ceramic tiles, soft daylight filters through a frosted window to blend with warm overhead lamplight. A vintage galvanized metal tub rests on the dark slate floor, collecting warm water that releases a faint, humid haze of steam. The atmosphere is quiet, cozy, and reassuringly domestic, centered on the comforting routine of an indoor wash.\n\nPip stands in the basin. As the bath begins, her collar is unclipped and set aside on the tub rim. Warm water streams over her fur as dog shampoo is worked into a creamy lather. Fluffy white foam piles playfully atop her head. The swirling water beneath her paws turns murky brown as the grit rinses away, leaving Pip thoroughly drenched, with her fur flattened and covered in thick soap suds.\n\nThe camera remains in a steady, eye-level medium shot framing Pip squarely within the metal wash tub. The composition keeps her lathered face and the soapy, brown-tinted water in clear focus throughout the shot, maintaining a grounded documentary feel without any abrupt movement.",
+      "annotation": {
+        "title_en": "The bath",
+        "scene": "farmhouse_bathroom",
+        "camera": "medium shot",
+        "beat": "In a tiled farmhouse bathroom Pip stands in a metal tub while warm water and bubbles stream over her; foam piles on her head and the water turns brown.",
+        "state": {
+          "coat_condition": "wet, covered in white soap foam",
+          "accessory": "collar removed",
+          "location": "bathroom"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          228,
+          176
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady eye-level medium shot of a rustic farmhouse bathroom with pale ceramic tiles, where Pip stands inside a vintage galvanized metal tub. The camera holds a static eye-level medium shot, framing Pip squarely inside the vintage galvanized metal tub on the dark slate floor. Soft daylight through a frosted window blends with warm overhead lamplight, illuminating the pale ceramic tiles and a faint haze of steam from the warm water. Pip stands patiently in the basin as her collar is unclipped and placed on the tub rim. Warm water streams over her coat, and shampoo is worked into a rich, creamy lather. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Hold still, good girl.</d> After this line the voice-over stays silent for the rest of the shot. Fluffy white foam piles atop Pip's head. Beneath her paws, the swirling water turns murky brown as grit rinses away, leaving her thoroughly drenched, with flattened fur covered in thick soap suds.\n\noverall_soundscape: Warm water splashes and streams softly into the metal wash tub. Wet squelches of lathering soap suds accompany the gentle drip and swirl of bathwater against galvanized metal.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an eye-level medium shot of a rustic farmhouse bathroom lined with pale ceramic tiles, where Pip stands inside a vintage galvanized metal tub on the dark slate floor. Soft daylight filters through a frosted window to blend with warm overhead lamplight, while a faint, humid haze of steam rises from the warm water. Pip, a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a teal collar with a round silver tag, stands completely smothered in dripping, dark brown mud. The camera holds a steady, eye-level medium shot framing Pip squarely within the metal wash tub. Her mud-spattered collar is unclipped and set aside on the tub rim. Warm water streams over her fur as dog shampoo is worked into a creamy lather. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, let's get you clean.</d> After this line the voice-over stays silent for the rest of the shot. Fluffy white foam piles playfully atop her head. The swirling water beneath her paws turns murky brown as the grit rinses away, leaving Pip thoroughly drenched, with her fur flattened and covered in thick soap suds, her lathered face and the soapy water kept in clear focus.\n\noverall_soundscape: Warm water streams and splashes steadily into the galvanized metal tub with a resonant metallic patter. Rich soap lather squelches gently against wet fur over continuous trickling and dripping.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still in the farmhouse bathroom.\n\nPip initiates a vigorous shake in cinematic slow motion. Squinting her eyes shut, her muzzle twists sharply, rippling loose skin across her jowls. Her ears flap wildly in opposite directions as the momentum rolls through her shoulders. Droplets of water and clusters of white foam fly outward in spiraling arcs, scattering across the air. By the end of the motion, the soap suds have been completely flung away, leaving her coat flattened, clean, and soaking wet.\n\nThe camera maintains a slow-motion close-up centered tightly on Pip's face and upper torso. A shallow depth of field keeps her churning fur and spinning droplets pin-sharp while rendering the bathroom walls into a soft blur. Glinting water arcs toward and across the lens, while the steady framing preserves the full kinetic release of the shake.",
+      "annotation": {
+        "title_en": "The shake",
+        "scene": "farmhouse_bathroom",
+        "camera": "slow-motion close-up",
+        "beat": "Pip shakes violently in slow motion, water droplets flying everywhere, ears flapping.",
+        "state": {
+          "coat_condition": "clean but soaking wet",
+          "accessory": "no collar",
+          "location": "bathroom"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          225,
+          137
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a slow-motion close-up in the farmhouse bathroom, where Pip is framed tightly from the chest up. The camera maintains a slow-motion close-up centered tightly on Pip's face and upper torso, holding steady framing with a shallow depth of field that softens the bathroom walls. Pip initiates a vigorous shake in cinematic slow motion. Squinting her eyes shut, her muzzle twists sharply, rippling loose skin across her jowls. Her ears flap wildly in opposite directions as the momentum rolls through her shoulders. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Shake it off, girl!</d> After this line the voice-over stays silent for the rest of the shot. Droplets of water and clusters of white foam fly outward in spiraling arcs, scattering across the air. Glinting water arcs toward and across the lens while the soap suds are completely flung away, leaving Pip's coat flattened, clean, and soaking wet.\n\noverall_soundscape: The deep, muffled fluttering of flapping ears and shaking wet fur reverberates in slow motion. Water droplets and clusters of suds hiss as they arc outward through the air and land with soft, dispersed splatters.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a slow-motion close-up in the rustic farmhouse bathroom, where Pip stands shaking off bathwater with her face and upper torso centered in the frame. Pip, a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, and a teal collar with a round silver tag, initiates a vigorous shake in cinematic slow motion under warm overhead lamplight. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Shake it off, Pip!</d> After this line the voice-over stays silent for the rest of the shot. The camera maintains a slow-motion close-up centered tightly on Pip's face and upper torso, using a shallow depth of field that blurs the pale ceramic tiled bathroom walls while keeping her churning fur pin-sharp. Squinting her eyes shut, Pip twists her muzzle sharply, rippling loose skin across her jowls as her ears flap wildly in opposite directions and momentum rolls through her shoulders. Droplets of water and clusters of white foam fly outward in spiraling arcs, glinting as they spray toward and across the lens. By the end of the motion, the soap suds have been completely flung away, leaving her coat flattened, clean, and soaking wet.\n\noverall_soundscape: Heavy, rhythmic flapping thuds resonate in deep slow-motion as fur and ears oscillate. Thick droplets of water and spray hiss through the air and splatter softly against ceramic surfaces.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the rustic farmhouse bathroom.\n\nPip sits swaddled snugly inside a thick, fluffy yellow towel. Only her face emerges from the warm fabric. One ear pokes perkily straight up out of the towel while the other stays neatly tucked beneath the terrycloth. She appears distinctly sheepish and completely subdued, blinking with a mild, apologetic expression. She gives a brief, delicate lick to her nose, remaining utterly still as the towel continues to absorb dampness from her coat.\n\nThe camera stays in an intimate eye-level close-up centered on Pip’s face. A gentle, imperceptible handheld drift keeps the shot organic while maintaining sharp focus on her muzzle, whiskers, and eyes. The yellow bundle fills the lower half of the frame, cleanly isolating her expressive features against the softly blurred bathroom background throughout the shot.",
+      "annotation": {
+        "title_en": "Towel",
+        "scene": "farmhouse_bathroom",
+        "camera": "close-up",
+        "beat": "Pip is wrapped in a fluffy yellow towel, only her face with the white blaze and raised ear poking out, looking sheepish.",
+        "state": {
+          "coat_condition": "clean, damp",
+          "accessory": "wrapped in a yellow towel",
+          "location": "bathroom"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          133
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate eye-level close-up in a rustic farmhouse bathroom, where Pip sits swaddled snugly inside a thick fluffy yellow towel. Pip sits swaddled snugly in the yellow towel with only her face emerging, one ear poking perkily straight up while the other remains tucked beneath the terrycloth. She appears distinctly sheepish and completely subdued, blinking with a mild, apologetic expression against the softly blurred bathroom background. The yellow bundle fills the lower half of the frame. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] All clean now, sweet girl.</d> After this line the voice-over stays silent for the rest of the shot. Pip gives a brief, delicate lick to her nose, remaining utterly still as the towel continues to absorb dampness from her coat. The camera holds an intimate eye-level close-up centered on Pip's face, drifting with a gentle, imperceptible handheld motion while maintaining sharp focus on her muzzle, whiskers, and eyes.\n\noverall_soundscape: A quiet farmhouse bathroom room tone echoes with gentle damp warmth. Pip breathes softly, accompanied by the tiny wet sound of her delicate nose lick.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate eye-level close-up in the rustic farmhouse bathroom, where Pip sits swaddled snugly inside a thick, fluffy yellow towel. Pip, the black-and-white border collie with a white blaze slightly left of center, sits swaddled snugly inside a thick, fluffy yellow towel that fills the lower half of the frame against the softly blurred pale ceramic tiles and warm overhead lamplight of the bathroom. Only her face emerges from the warm fabric, with one black ear poking perkily straight up out of the towel while the other stays neatly tucked beneath the terrycloth. She appears distinctly sheepish and completely subdued, blinking her eyes with a mild, apologetic expression. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] All clean now, good girl.</d> After this line the voice-over stays silent for the rest of the shot. Pip gives a brief, delicate lick to her dark nose, remaining utterly still as the towel continues to absorb dampness from her coat. The camera holds an intimate eye-level close-up centered on Pip's face, drifting with a gentle, imperceptible handheld motion while maintaining sharp focus on her muzzle, whiskers, and eyes.\n\noverall_soundscape: Soft, warm ambient room tone fills the quiet bathroom alongside the faint distant ping of a water droplet hitting the galvanized tub. A gentle, faint rustle whispers from the terrycloth fabric followed by a soft, delicate flick of Pip licking her nose.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "The cozy farmhouse living room glows with warm afternoon light filtering onto a braided rug and polished wooden floorboards. In the background, muted armchairs and rustic shelves provide an inviting domestic setting. Soft amber and cream tones fill the space, creating a calm, comfortable atmosphere that feels distinctly lived-in and quiet.\n\nPip sits patiently on the rug. Gentle human hands reach into the frame holding her collar, clicking it securely around her neck. Next, a bandana is draped over the collar and tied neatly beneath her chin. Pip tilts her head slightly, panting happily with an alert expression, her tail sweeping against the floor. By the end of the action, both the collar and the bandana sit comfortably in place.\n\nThe camera remains stationary in a medium shot at Pip’s eye level, keeping her seated form, expressive face, and chest clearly visible as the accessories are fastened. Soft natural light illuminates her, while the living room background stays gently blurred.",
+      "annotation": {
+        "title_en": "Fluffy",
+        "scene": "farmhouse_living_room",
+        "camera": "medium shot",
+        "beat": "In a cosy living room Pip, now dry and extra fluffy, gets her teal collar clipped back on and a small red bandana tied around her neck.",
+        "state": {
+          "coat_condition": "clean, dry, extra fluffy",
+          "accessory": "teal collar and red bandana",
+          "location": "living room"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          222,
+          160
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at eye level in a cozy farmhouse living room, where Pip sits patiently on a braided rug amidst warm afternoon light. The camera holds a static medium shot at Pip's eye level, keeping her seated form, expressive face, and chest clearly visible against a gently blurred background of muted armchairs and rustic shelves. Warm afternoon light illuminates Pip on the braided rug over polished wooden floorboards in soft amber and cream tones. Gentle human hands reach into the frame holding her collar, clicking it securely around her neck. Next, a bandana is draped over the collar and tied neatly beneath her chin. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, let's get you ready.</d> After this line the voice-over stays silent for the rest of the shot. Pip tilts her head slightly, panting happily with an alert expression as her tail sweeps against the floor, leaving both the collar and the bandana sitting comfortably in place.\n\noverall_soundscape: A crisp plastic click sounds as the collar fastens, accompanied by the gentle rustling of fabric being tied. Soft dog panting and the rhythmic brushing of a wagging tail against the floorboards drift through the quiet room.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at eye level in a cozy farmhouse living room glowing with warm afternoon light, where Pip sits patiently on a braided rug. The camera holds a static medium shot at eye level, keeping Pip—a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, and one white-tipped front paw—clearly in frame against the softly blurred background of muted armchairs and rustic shelves. Gentle human hands reach into view holding her teal collar with a round silver tag, clicking it securely around her neck. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, all dressed up.</d> After this line the voice-over stays silent for the rest of the shot. Next, a bandana is draped over the collar and tied neatly beneath her chin. Pip tilts her head slightly, panting happily with an alert expression, her tail sweeping against the floorboards. Both the collar and bandana rest comfortably in place as warm afternoon light illuminates her chest and face.\n\noverall_soundscape: A sharp metallic click sounds as the collar fastens, accompanied by the gentle rustle of fabric. Pip pants softly while her tail makes a quiet, rhythmic thumping against the wooden floor.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still in the farmhouse living room, now beside the fireplace in the evening.\n\nPip lies on the hearth rug. Holding the tennis ball between her paws, she gives it a few gentle, rhythmic chews. She then lets out a soft sigh, resting her muzzle comfortably over the ball and tucking her paws closer, eyes blinking sleepily as she settles into the deep warmth of the hearth.\n\nThe camera is positioned low to the ground at eye level, executing a very slow, smooth push-in throughout the shot. Beginning in a medium shot that establishes the wide hearth and Pip curled upon the rug, the lens glides steadily closer to frame her resting posture. The flickering fire, her face, and the tennis ball remain sharply visible and in focus as the shot progresses.",
+      "annotation": {
+        "title_en": "By the fire",
+        "scene": "farmhouse_living_room",
+        "camera": "slow push-in",
+        "beat": "Pip curls up on a rug in front of a crackling fireplace, red bandana on, chewing her tennis ball.",
+        "state": {
+          "coat_condition": "clean and fluffy",
+          "accessory": "teal collar, red bandana, tennis ball",
+          "location": "fireplace"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          265,
+          131
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle medium shot of the farmhouse living room in the evening, where Pip lies on the hearth rug beside the wide fireplace. Positioned low to the ground at eye level, the camera pushes in at a very slow, smooth speed from a medium shot of the wide hearth toward Pip curled upon the rug. Holding the tennis ball between her paws, Pip gives it a few gentle, rhythmic chews. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, rest now.</d> After this line the voice-over stays silent for the rest of the shot. She then lets out a soft sigh, resting her muzzle comfortably over the ball and tucking her paws closer. Her eyes blink sleepily as she settles into the deep warmth of the hearth. The camera glides steadily closer to frame her resting posture, keeping the flickering fire, her face, and the tennis ball sharply visible and in focus throughout the shot.\n\noverall_soundscape: The gentle crackle and pop of burning wood from the fireplace fill the room. The rhythmic, soft squeaking and chewing of the tennis ball end with an audible dog sigh.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle medium shot of the farmhouse living room beside the fireplace in the evening, where Pip lies curled upon the hearth rug. The camera sits low to the ground at eye level, executing a very slow, smooth push-in throughout the shot. In the evening glow beside the fireplace with flickering fire, polished wooden floorboards, muted armchairs, and rustic shelves, Pip—a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, and a teal collar with a round silver tag—rests upon the hearth rug. Holding a tennis ball between her paws, she gives it a few gentle, rhythmic chews. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Good girl, sleep tight.</d> After this line the voice-over stays silent for the rest of the shot. Pip then lets out a soft sigh, resting her muzzle comfortably over the ball and tucking her paws closer. Her eyes blink sleepily as she settles into the deep warmth of the hearth, the lens steadily gliding closer while her face, the tennis ball, and the warm fire remain sharply in focus.\n\noverall_soundscape: The gentle crackle and pop of burning firewood fills the room alongside the soft, muffled squish of rhythmic chewing on a tennis ball. Pip releases a long, contented canine sigh into the quiet warmth.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still in the farmhouse living room by the hearth.\n\nPip lies fast asleep on her side upon the rug, with the tennis ball resting stationary beside her curled body. As she slumbers, her eyes remain gently shut and her breathing is slow and rhythmic. Midway through, her paws give delicate, subtle twitches as if running in a dream, accompanied by a faint flutter of her muzzle, before she settles back into deep, peaceful breathing.\n\nThe camera holds a static, intimate close-up framed low to the floor, level with Pip. Her serene face and twitching front paws remain in sharp focus throughout, while the background softens into a quiet blur, keeping the focus entirely on her peaceful rest.",
+      "annotation": {
+        "title_en": "Asleep",
+        "scene": "farmhouse_living_room",
+        "camera": "close-up, static",
+        "beat": "Pip falls asleep by the fire, paws twitching in a dream, firelight on her clean white blaze.",
+        "state": {
+          "coat_condition": "clean and fluffy",
+          "accessory": "teal collar, red bandana",
+          "location": "fireplace"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          258,
+          117
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up low to the floor in the farmhouse living room by the hearth, where Pip lies fast asleep on her side upon the rug. The camera holds a static, intimate close-up framed low to the floor, level with Pip. Pip lies fast asleep on her side upon the rug, with the tennis ball resting stationary beside her curled body. Her serene face and front paws remain in sharp focus throughout, while the background softens into a quiet blur. Her eyes remain gently shut as her breathing is slow and rhythmic. Midway through, her front paws give delicate, subtle twitches as if running in a dream, accompanied by a faint flutter of her muzzle. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Sweet dreams, Pip.</d> After this line the voice-over stays silent for the rest of the shot. Following the soft whisper, her paws relax and she settles back into deep, peaceful breathing.\n\noverall_soundscape: The gentle, rhythmic sound of quiet canine breathing fills the space alongside the soft, distant crackle of the hearth fire. A tiny, muffled snuffle accompanies the gentle flutter of her muzzle.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up framed low to the floor in the farmhouse living room by the hearth, where Pip lies fast asleep upon the braided rug. The camera holds a static, intimate close-up framed low to the floor, level with Pip. Pip, a black-and-white border collie with a white blaze slightly left of center, one black ear raised and one folded, one white-tipped front paw, a teal collar with a round silver tag, and a bandana tied beneath her chin, lies fast asleep on her side upon the braided rug. A tennis ball rests stationary beside her curled body. Her eyes remain gently shut and her breathing is slow and rhythmic against the warm afternoon light softly illuminating the cozy living room, whose polished wooden floorboards, muted armchairs, and rustic shelves soften into a quiet blur. An off-screen owner, a man with a kind, warm baritone voice, a playful pace and a gentle Scottish accent (S1) says: <d>[English] Sweet dreams, Pip.</d> After this line the voice-over stays silent for the rest of the shot. Midway through, her paws give delicate, subtle twitches as if running in a dream, accompanied by a faint flutter of her muzzle, before she settles back into deep, peaceful breathing while her serene face and twitching front paws remain in sharp focus.\n\noverall_soundscape: Soft, rhythmic breathing from the sleeping dog fills the quiet space. Faint rustles whisper across the weave of the rug as her paws delicately twitch.\n\nnon_diegetic_music: Playful pizzicato strings with a light marimba, kept at low volume throughout."
+      }
+    }
+  ]
+}

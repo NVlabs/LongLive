@@ -1,0 +1,2 @@
+# No image checks: every composed picture is committed.
+agent: {check_images: false}

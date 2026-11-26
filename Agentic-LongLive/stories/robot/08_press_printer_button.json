@@ -1,0 +1,52 @@
+{
+ "name": "08_press_printer_button",
+ "title": "Copying and Checking Printer Bed",
+ "summary": "The robot presses a printer copy button, places an item inside the scanner, pans away to inspect a stand, and returns to retrieve the item.",
+ "camera": "head camera",
+ "robot": "two white robotic arms with black dexterous hands",
+ "setting": "an office or lab with a white table, a printer, and floor tape markings",
+ "first_frame": "08_press_printer_button.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "27d76d5d1a19094f9d29f54464d6b625",
+  "frame_index": 0,
+  "original_prompt": "Press the black and white copy button on the printer with the left arm",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "0e98b48af36f7e1b9b77acda44ffe08f3e5c0888e498f4d40c581d0a79adde98"
+ },
+ "segments": [
+  {
+   "instruction": "Reach the left hand toward the button panel on the left side of the printer.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Press the copy button on the left panel with the left index finger, then retract slightly.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the printer scanner lid with the left hand and place the small black item on the glass bed using the right hand.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lower the scanner lid fully with the left hand to cover the glass bed.",
+   "memory_event": "hide: black item on the scanner glass is covered by the closed lid"
+  },
+  {
+   "instruction": "Turn the head camera to the left to look at the rolling stand and floor tape.",
+   "memory_event": "hide: printer and tabletop leave the field of view"
+  },
+  {
+   "instruction": "Keep looking at the rolling stand while lowering both hands toward the side.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the head camera back to center on the table and printer.",
+   "memory_event": "return: tabletop, printer, closed lid, and cabling reappear as left"
+  },
+  {
+   "instruction": "Lift the scanner lid again with the left hand.",
+   "memory_event": "return: black item is visible on the scanner glass in its original position"
+  }
+ ]
+}

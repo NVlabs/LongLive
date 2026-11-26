@@ -1,0 +1,245 @@
+{
+ "id": "kintsugi_robot_k7",
+ "setup": {
+  "title": "Unit K7 and the Golden Crack",
+  "style": "Live-action, cinematic, a gentle futuristic city with misty blue mornings and warm craft workshops.",
+  "cast": [
+   {
+    "id": "k7",
+    "name": "Unit K7",
+    "description": "Unit K7, a small knee-high cream ceramic robot with a round head, two glowing blue eyes, a hairline crack over its right eye, two brass antennae, and an orange canvas satchel worn across its body."
+   }
+  ],
+  "extras": {
+   "voice": "Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1),",
+   "music": "Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+   "speech": "K7 speaks only a few short, curious sentences to itself."
+  }
+ },
+ "shots": [
+  {
+   "prompt": "A wide, gently futuristic city plaza stretches under a cool, misty morning sky. Pale blue fog hangs low between sleek architectural towers, softening distant holographic signs and storefront illuminations into diffuse pastel glows of amber and cyan. The dark paving stones are slick with moisture, mirroring the hazy lights in long, glossy reflections. The atmosphere is calm and peaceful, enveloped in cool, damp air as the waking city stirs in the soft light.\n\nUnit K7, a small, knee-high robot made of smooth cream ceramic, journeys across the wet plaza tiles. The automaton features a round head with two glowing circular blue eyes, two thin brass antennae, and a distinct hairline crack over its right eye. A small, empty orange canvas satchel hangs across its torso by a diagonal strap. Unit K7 waddles steadily across the damp stones, its little feet pattering against the ground while the orange satchel bobs against its ceramic flank. The brass antennae vibrate faintly with each step, and the hairline crack over its luminous right eye remains visible as it moves forward without stopping.\n\nThe camera tracks smoothly in a wide shot, positioned at a low angle just above the damp pavement. This framing accentuates Unit K7’s modest stature against the vast, towering backdrop of the foggy plaza. The reflective ground, the gentle sway of the satchel, and the hazy glowing signs in the distance remain visible throughout the shot, presenting a grounded, documentary-style record of the robot's morning journey.",
+   "annotation": {
+    "title_en": "The foggy plaza",
+    "scene": "wet_plaza",
+    "camera": "wide tracking shot",
+    "beat": "Morning in a wet futuristic plaza with glowing signs. Unit K7 waddles across the reflective pavement, satchel bouncing, the hairline crack visible over its right eye.",
+    "state": {
+     "body_condition": "cream ceramic with a hairline crack over the right eye",
+     "satchel_contents": "empty",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The morning plaza remains slick and damp, its dark pavement reflecting muted turquoise and pale blue light from distant city fixtures. Cool, dewy air hangs low to the ground, where shallow puddles gather beside a raised stone curb. Embedded in the walkway, a circular metal utility grate sits flush with the paving stones, venting faint wisps of heat into the chilled dawn atmosphere before building sudden pressure.\n\nUnit K7 waddles forward, standing knee-high with smooth cream ceramic plating, two glowing circular blue eyes, and two slender brass antennae atop its round head. A faint hairline crack sits above its right eye, and an empty orange canvas satchel hangs across its torso. Just as it approaches the curb, a violent plume of white steam erupts straight from the floor grate, instantly engulfing the small robot in dense fog. When the swirling vapor quickly disperses, K7 is sprawled on the wet paving stones, having tripped over the curb during the blast. The impact has damaged its casing: the hairline crack has split into a prominent, jagged fracture cutting across its face plate, while its blue optical sensors dim slightly in shock.\n\nThe camera maintains a low-angle medium shot, keeping K7, the vent, and the curb centered in frame. The lens remains steady as the steam explodes and drifts away, ensuring the robot's fall and resulting damage are plainly legible. The newly widened, dark crack stands out sharply against the pale cream ceramic face plate on the glistening, wet ground.",
+   "annotation": {
+    "title_en": "Steam vent",
+    "scene": "wet_plaza",
+    "camera": "medium shot",
+    "beat": "A white steam cloud bursts from a vent and swallows K7; when it clears, K7 has tripped over a curb and fallen, and the crack has widened into a jagged split across its face plate.",
+    "state": {
+     "body_condition": "jagged widened crack across the face plate",
+     "satchel_contents": "empty",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The wet urban plaza stretches out under a cool, misty morning light that washes the scene in muted blues and slate greys. Smooth paving stones glisten with moisture, pooling shallow rainwater into clear puddles that mirror the pale futuristic sky above. Soft atmospheric fog drifts along the ground, lending a quiet, contemplative mood to the open pedestrian space.\n\nUnit K7, a knee-high cream ceramic robot with two slender brass antennae and an empty orange canvas satchel across its chest, sits upright on the damp pavers. Across its smooth round face plate, a jagged widened crack is prominently visible. K7 lowers its gaze toward a shallow puddle, where a small curved ceramic shard lies in the water. Its glowing blue eyes dim and flicker with a faint, sorrowful tremor. Tilting forward, the robot carefully reaches out with its ceramic hand, pinches the wet fragment, and lifts it from the puddle. Above K7’s right eye, a corresponding small chip is now plainly absent at the edge of the fracture. Moving deliberately, K7 opens the orange satchel flap, places the recovered shard inside, and seals it shut.\n\nThe close-up camera remains low to the glistening ground, holding a tight focus on K7’s cracked head, expressive flickering eyes, and hands. A subtle downward tilt follows the retrieval of the shard from the puddle before resting level as the piece enters the satchel, maintaining crisp clarity on the robot's damaged porcelain-like shell throughout the shot.",
+   "annotation": {
+    "title_en": "A broken piece",
+    "scene": "wet_plaza",
+    "camera": "close-up",
+    "beat": "K7 sits up and finds a small curved ceramic shard broken off its head lying in a puddle. It picks the shard up carefully and puts it in its orange satchel, eyes flickering sadly.",
+    "state": {
+     "body_condition": "missing a small chip above the right eye, jagged crack",
+     "satchel_contents": "ceramic shard",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "A bustling covered market street stretches beneath an arched glass canopy, where cool morning mist filters through to mix with the golden glow of hanging paper lanterns. Rows of wooden artisan stalls display handcrafted goods, pottery, and woven textiles, bathed in amber lamplight that reflects softly off damp paving stones. The atmosphere is quiet yet lively, filled with the gentle presence of shoppers and drifting steam rising into the cool blue morning shadows of the corridor.\n\nUnit K7, a knee-high robot crafted from smooth cream ceramic, walks steadily along the flagstones. It features a round head, two glowing blue eyes, and thin brass antennae, though a jagged crack runs over its right eye where a small ceramic chip is visibly missing. An orange canvas satchel, holding the broken shard inside, hangs diagonally across its torso. K7 toddles forward with small, measured steps, constantly tilting its round head upward to scan the suspended wooden signs. Navigating carefully around market baskets and passing legs, the small automaton gradually slows to a halt as its blue gaze locks onto a small hanging sign painted with an illustration of a golden bowl.\n\nThe camera moves in a smooth, low-angle tracking shot, retreating backward just above pavement level to match K7's walking pace. The framing keeps the compact robot centered in full view, emphasizing its diminutive scale against the bustling market and tall stall posts. As K7 stops, the camera eases to a rest and tilts slightly upward, keeping K7's uplifted face and the illuminated sign framed together in the warm ambient light.",
+   "annotation": {
+    "title_en": "Searching the streets",
+    "scene": "market_street",
+    "camera": "low tracking shot",
+    "beat": "K7 walks through a busy covered market street of lantern-lit stalls, looking up at signs until it spots a small sign with a golden bowl painted on it.",
+    "state": {
+     "body_condition": "missing chip, jagged crack",
+     "satchel_contents": "ceramic shard",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the kintsugi workshop glows with soft amber light spilling from hanging paper lanterns and small workbench lamps. Natural cedar paneling wraps the walls, lined with shelves displaying dozens of repaired ceramic vessels joined by gleaming seams of polished gold. Worktables are organized with horsehair brushes, jars of natural lacquer, and dusting powders. The atmosphere is quiet, contemplative, and still, carrying the faint, earthy scent of cured resin and aged wood.\n\nAt the threshold, Unit K7, a knee-high cream ceramic robot with a round head, glowing blue eyes, two brass antennae, and an orange canvas satchel worn across its body, pushes open the slatted wooden sliding door. A jagged crack with a missing chip is clearly visible above its right eye. K7 steps quietly onto the timber floorboards. Across the room, an elderly craftswoman with silver hair pinned in a neat bun, wearing an indigo apron over a work shirt, looks up from her bench. Setting down a fine tool, she smiles warmly at the small visitor.\n\nThe camera holds in a steady medium wide shot, framing both the entrance and the artisan's workstation in balanced view. The composition stays stationary at a low-neutral height, preserving K7’s modest stature alongside the seated craftswoman. Soft lighting catches the golden seams of pottery resting on the background shelves, keeping the entire interaction quiet and intimate.",
+   "annotation": {
+    "title_en": "The kintsugi workshop",
+    "scene": "kintsugi_workshop",
+    "camera": "medium wide",
+    "beat": "K7 pushes open the sliding door of a warm wooden workshop full of repaired bowls with gold seams. An old craftswoman with silver hair in a bun and an indigo apron looks up from her bench and smiles.",
+    "state": {
+     "body_condition": "missing chip, jagged crack",
+     "satchel_contents": "ceramic shard",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the kintsugi workshop is bathed in warm amber task lighting that mingles with soft morning daylight spilling through paper screens. The polished wooden workbench is lined with ceramic bowls repaired with lustrous golden seams, slender horsehair brushes, and small jars of natural lacquer. The atmosphere is quiet, reverent, and heavy with the calm scent of aged cedar and cured resin.\n\nUnit K7, the knee-high cream ceramic robot with two glowing blue eyes, twin brass antennae, and an orange canvas satchel, stands beside the worktable with a jagged crack and missing chip over its right eye. Facing K7 is the silver-haired craftswoman in her indigo apron. K7 reaches into its satchel, pulls out the missing cream ceramic shard, and presents it upward with both little hands, leaving the satchel empty. The craftswoman receives the fragment into her weathered palms and raises a brass loupe to her eye to inspect the broken edge. Lowering the lens, she offers a gentle, knowing smile and reaches out to softly tap the hairline fracture on K7’s brow. K7 tilts its rounded head slightly upward, its blue optic lights dimming and brightening in quiet relief.\n\nThe camera holds a steady close-up two-shot at workbench height, framing K7’s damaged head alongside the artisan’s skilled hands. The shallow depth of field keeps the delicate transfer of the shard and the tender touch against the ceramic forehead in crisp focus, while the golden-seamed pottery softly blurs in the warm background.",
+   "annotation": {
+    "title_en": "Showing the shard",
+    "scene": "kintsugi_workshop",
+    "camera": "close-up two-shot",
+    "beat": "K7 hands the ceramic shard to the craftswoman with both little hands. She examines it with a loupe and gently taps the crack on K7's head.",
+    "state": {
+     "body_condition": "missing chip, jagged crack",
+     "satchel_contents": "empty",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the quiet kintsugi workshop, focused amber task lighting illuminates a weathered wooden work surface. Soft golden highlights pick out natural cedar grain, shallow ceramic dishes of resin, and fine bamboo tools resting nearby. The surrounding room recedes into gentle shadows, maintaining a hushed, contemplative atmosphere centered entirely on delicate, patient craft.\n\nUnit K7, a small knee-high cream ceramic robot with a round head, two brass antennae, and an empty orange canvas satchel across its body, sits completely motionless on the bench. Its two circular blue eyes are dimmed to a faint, resting glow. Over its right eye, a jagged crack and a missing chip interrupt the smooth glaze. An artisan’s steady, weathered hands enter the frame wielding a slender brush tipped with dark, glossy urushi lacquer. With smooth precision, she paints the fracture with the dark resin. She then uses wooden tweezers to guide the detached ceramic shard back into place, pressing it flush into the gap. By the end of the shot, the shard is securely reseated, leaving the break filled and sealed with a neat line of dark lacquer.\n\nThe camera holds a tight macro close-up focused squarely on K7’s forehead and the artisan’s fingertips. A shallow depth of field keeps the repair zone pin-sharp while softening the rest of the cream-colored chassis and background bench. The framing remains virtually static, preserving full view of the brushwork and the newly bonded seam.",
+   "annotation": {
+    "title_en": "Lacquer",
+    "scene": "kintsugi_workshop",
+    "camera": "macro close-up",
+    "beat": "With a fine brush the craftswoman fills the crack with dark urushi lacquer and sets the shard back into place; K7 sits very still on the bench, eyes dimmed.",
+    "state": {
+     "body_condition": "crack filled with dark lacquer, shard reattached",
+     "satchel_contents": "empty",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the kintsugi workshop is bathed in warm, shifting afternoon light. Golden sunlight streams through timber-framed windows, illuminating floating dust motes and slowly creeping across the worn wooden benches and floor. Earthenware pots, lacquer brushes, and jars of pigments rest quietly along the perimeter shelves. The atmosphere is peaceful and unhurried, defined by rich amber tones and lengthening soft shadows.\n\nUnit K7 sits steadily on a woven indigo cushion atop a low bench. The small, knee-high robot has a smooth cream ceramic body, a round head, two brass antennae, and an empty orange canvas satchel across its chest. Over its right eye, the hairline crack is neatly filled with dark, glossy lacquer, holding the reattached shard firmly in place. Its circular blue eyes glow with a gentle, dimmed light. Curled beside K7, the craftswoman’s calico cat sleeps soundly, breathing in slow, rhythmic pulses. K7 remains patient, tilting its head slightly downward to watch the resting animal. Aside from this subtle motion, the robot stays tranquil and still, waiting for the lacquer to cure.\n\nThe camera holds a static wide shot, framing K7, the sleeping cat, and the surrounding workshop. Without any camera movement, the gradual movement of golden sunlight across the table visually conveys the passage of time. Both figures remain in crisp view within the quiet, textured workspace from start to finish.",
+   "annotation": {
+    "title_en": "Waiting",
+    "scene": "kintsugi_workshop",
+    "camera": "static wide, light changing",
+    "beat": "Afternoon light moves across the workshop as K7 waits patiently on a cushion, watching the craftswoman's cat sleep beside it.",
+    "state": {
+     "body_condition": "crack filled with dark lacquer",
+     "satchel_contents": "empty",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The kintsugi workshop is quiet and filled with warm afternoon sunlight, creating a tranquil, intimate atmosphere. Amber rays cut across the wooden workbench, catching minute motes in the air. The surrounding space blurs into soft, out-of-focus wood tones and ceramic pottery, directing complete visual attention to the delicate craftsmanship unfolding on the table.\n\nUnit K7, the small knee-high cream ceramic robot with a round head and glowing blue eyes, sits perfectly still. Its brass antennae catch the light, an empty orange canvas satchel rests across its chest, and the fracture above its right eye is filled with dark, tacky lacquer. An artisan's hand enters the frame holding a slender, soft-tipped brush dusted with fine gold powder. With slow, precise sweeps, she dusts the powder directly onto the dark seam. The shimmering grains instantly adhere to the wet lacquer, turning the dark fissure into an intricate ribbon of lustrous gold. K7 remains motionless as the transformation unfolds. By the end of the shot, the formerly dark crack across its face has become a brilliant, shining golden kintsugi seam gleaming cleanly against the cream ceramic.\n\nThe macro close-up holds an extremely shallow depth of field, focused tightly on K7's right eye and brow. The camera tracks with a slow, almost imperceptible drift downward alongside the brush's path. K7's soft blue eye glow, the brush bristles, and the newly radiant golden line stay crisply in focus throughout the movement.",
+   "annotation": {
+    "title_en": "Gold dust",
+    "scene": "kintsugi_workshop",
+    "camera": "macro close-up",
+    "beat": "The craftswoman dusts fine gold powder along the lacquered seam with a soft brush; the crack becomes a shining golden line across K7's face.",
+    "state": {
+     "body_condition": "shining golden kintsugi seam across the face",
+     "satchel_contents": "empty",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The quiet kintsugi workshop is bathed in the warm, amber glow of a low-hanging task lamp, complemented by soft daylight filtering through frosted windowpanes. Upon the worn timber workbench rest ceramic mixing dishes, delicate horsehair brushes, and fine specks of gold dust settled into the wood grain. The atmosphere is intimate and serene, centered around a circular polished hand mirror propped upon the table, which catches the warm ambient reflections of the artisanal room.\n\nUnit K7 is a knee-high cream ceramic robot with a smooth round head, twin brass antennae, and an empty orange canvas satchel strapped across its small torso. A newly sealed, raised golden kintsugi seam shines distinctly over its right eye. Looking into the glass, K7 gazes at its reflection as its circular blue eyes brighten with quiet wonder. It raises one small ceramic finger to gently trace the shimmering golden line across its brow. Pleased with the mended seam, the robot turns slightly toward the craftsperson off-angle and emits a soft series of melodic chime tones to express its gratitude.\n\nThe camera maintains an intimate over-the-shoulder angle from behind K7, framing the back of its rounded head and brass antenna in soft focus while keeping the mirror reflection sharply defined. A very gentle push-in slightly tightens the framing around the mirror, ensuring the robot's illuminated blue gaze, exploring finger, and radiant golden seam remain clearly visible through the end of the shot.",
+   "annotation": {
+    "title_en": "The mirror",
+    "scene": "kintsugi_workshop",
+    "camera": "over-the-shoulder into a mirror",
+    "beat": "K7 looks into a round hand mirror and sees the golden seam. Its blue eyes brighten and it touches the gold line with one finger and says thank you.",
+    "state": {
+     "body_condition": "golden kintsugi seam",
+     "satchel_contents": "empty",
+     "accessory": "none"
+    }
+   }
+  },
+  {
+   "prompt": "The kintsugi workshop is filled with quiet warmth, illuminated by soft amber task lighting and gentle daylight filtering through misty windows. The polished timber workbench displays wooden trays, fine lacquer brushes, and ceramic pots resting quietly in the background. The serene atmosphere feels intimate and unhurried, steeped in the rich textures of aged wood and traditional craft.\n\nUnit K7 stands on the low bench, a knee-high cream ceramic robot with glowing blue eyes, two upright brass antennae, an empty orange canvas satchel across its torso, and a prominent golden kintsugi seam over its right eye. The craftswoman carefully ties a small red silk ribbon around K7’s left antenna, letting its short tails flutter gently. She then takes a tiny ceramic teacup, detailed with delicate golden seams, and places it tenderly inside K7's satchel. K7 remains still, its blue eyes pulsing with a soft, appreciative glow. By the end, the red ribbon adorns the left antenna and the miniature teacup rests securely inside the satchel.\n\nThe camera holds a steady medium close-up at K7’s eye level, keeping the robot’s head, antennae, and satchel in clear view. The framing captures the artisan’s hands performing each action, allowing warm light to pick out the vivid red ribbon and the golden luster on K7's face. The workshop background stays gently blurred, preserving an authentic documentary feel.",
+   "annotation": {
+    "title_en": "A gift",
+    "scene": "kintsugi_workshop",
+    "camera": "medium close-up",
+    "beat": "The craftswoman ties a small red silk ribbon to one of K7's brass antennae and puts a tiny gold-seamed teacup into its satchel.",
+    "state": {
+     "body_condition": "golden kintsugi seam",
+     "satchel_contents": "tiny gold-seamed teacup",
+     "accessory": "red ribbon on the left antenna"
+    }
+   }
+  },
+  {
+   "prompt": "The evening market street glows beneath suspended amber lanterns, casting warm light across the smooth paving stones. Overhead, the twilight sky deepens to a soft indigo between fabric awnings and quiet craft stalls. Light steam drifts from roadside tea carts, mingling with the calm pedestrian bustle to create an inviting, gentle atmosphere in the futuristic quarter.\n\nUnit K7 walks along the street with proud, rhythmic steps. The knee-high robot has a smooth cream ceramic body, a round head with two glowing blue eyes, two upright brass antennae, and an orange canvas satchel slung across its torso with a tiny gold-seamed teacup tucked securely inside. A delicate red silk ribbon is tied around its left antenna, while a luminous golden kintsugi seam glints across its right eye, transforming the former crack into a beautiful feature. As K7 moves forward, the red ribbon flutters softly in the evening draft. Passing market-goers glance downward and turn toward the little robot, their faces showing genuine admiration for the gleaming gold repair. K7 tilts its head slightly upward, emitting a soft chime of satisfaction as it continues its steady stroll.\n\nThe camera tracks backward at a low knee-height angle, maintaining a steady medium shot directly in front of K7. The smooth retreat keeps the robot fully in view from head to base, preserving sharp focus on its glowing blue eyes, fluttering red ribbon, and radiant golden seam while the warm lantern-lit market and admiring bystanders drift naturally past in the background.",
+   "annotation": {
+    "title_en": "Back into the city",
+    "scene": "market_street",
+    "camera": "tracking shot",
+    "beat": "Evening. K7 walks proudly back through the lantern-lit market street, red ribbon fluttering, people turning to admire the golden seam on its face.",
+    "state": {
+     "body_condition": "golden kintsugi seam",
+     "satchel_contents": "teacup",
+     "accessory": "red ribbon on the antenna"
+    }
+   }
+  },
+  {
+   "prompt": "The scene unfolds on an open rooftop garden overlooking a gentle futuristic city beneath a serene dusk. A deep purple and rose-colored sky casts soft, diffused evening light across the weathered stone terrace. Lush potted ferns, flowering shrubs, and trailing ivy crowd the edges, creating a quiet botanical haven high above the streets. The atmosphere is peaceful and cool, with gentle evening air rustling the leaves against the distant skyline.\n\nUnit K7, a small knee-high cream ceramic robot with a round head and glowing blue eyes, enters the terrace. A prominent golden kintsugi seam repairs the crack over its right eye, a bright red ribbon flutters from one brass antenna, and an orange canvas satchel hangs across its torso. K7 steps carefully between the terracotta planters toward a flat stone ledge. It reaches into its satchel, lifts out a delicate teacup, and places it upright onto the ledge. By the end of the action, the teacup rests securely on the stone, leaving the satchel empty and flat against K7's ceramic flank as its blue eyes glow steadily in contemplation.\n\nThe camera holds a wide, static shot at mid-terrace level, framing K7's small stature against the sprawling plants and the vast purple sky. The wide composition keeps the robot, the ledge, and the teacup in clear view without cutting or pushing in, allowing the gentle placement to anchor the quiet moment.",
+   "annotation": {
+    "title_en": "Rooftop garden",
+    "scene": "rooftop_garden",
+    "camera": "wide shot",
+    "beat": "K7 climbs onto a rooftop garden full of potted plants under a purple dusk sky and carefully sets the teacup on a ledge.",
+    "state": {
+     "body_condition": "golden kintsugi seam",
+     "satchel_contents": "empty",
+     "accessory": "red ribbon"
+    }
+   }
+  },
+  {
+   "prompt": "A misty rooftop garden is enveloped in the cool violet tones of twilight as a gentle drizzle begins to fall. Fine raindrops patter softly against broad green foliage and dark, damp soil in weathered terracotta planters. Soft ambient evening light catches the moisture gathering on stone ledges and leafy surfaces, creating an intimate, quiet atmosphere filled with the fresh coolness of incoming rainfall.\n\nUnit K7, a small knee-high cream ceramic robot, kneels beside a planter. It has two softly glowing blue circular eyes, twin brass antennae with a small red ribbon tied at the base, and an empty orange canvas satchel slung across its torso. Across its right eye, a prominent golden kintsugi repair gleams brightly. K7 carefully holds a delicate porcelain teacup forward into the open air, angling it to catch descending raindrops. After gathering a few fresh drops inside the basin, the robot smoothly tilts the cup, letting the clear water trickle down onto a tiny green seedling emerging from the earth. By the end of the action, glistening rain beads coat K7's glossy cream surface, resting prominently along the metallic ridges of the golden seam.\n\nThe camera remains in an intimate close-up at plant height, tilting subtly to follow the teacup as it tips toward the seedling. The focus stays crisp on K7's ceramic fingers, the shimmering golden kintsugi line, and the emerging sprout, while the rain-slicked rooftop foliage softens into a blurred, dusky purple background.",
+   "annotation": {
+    "title_en": "Catching rain",
+    "scene": "rooftop_garden",
+    "camera": "close-up",
+    "beat": "Light rain begins. K7 holds the teacup out to catch raindrops, then waters a small seedling with them, rain beading on its gold seam.",
+    "state": {
+     "body_condition": "golden kintsugi seam, wet with rain",
+     "satchel_contents": "empty",
+     "accessory": "red ribbon"
+    }
+   }
+  },
+  {
+   "prompt": "Night has fallen over the rooftop garden as the recent rain clears away. The wet slate pavers and dark potting soil glisten with reflections from a vast, gentle futuristic skyline filled with soft amber windowpanes, warm lantern glow, and misty blue architectural lights. Low planters and trailing vines surround the rooftop perimeter, beaded with fresh moisture under the deep indigo sky. The atmosphere is quiet, serene, and expansive, filled with the distant, gentle hum of the illuminated city below.\n\nUnit K7 sits quietly on the damp stone beside a small green seedling rooted in a patch of moist earth. The knee-high cream ceramic robot features a round head with two softly glowing blue eyes, two delicate brass antennae, and a prominent golden kintsugi seam running across its right eye, initially wet with droplets of rainwater. An empty orange canvas satchel hangs across its torso alongside a neat red ribbon. K7 rests its smooth ceramic hands near its knees, looking out toward the open horizon. Its golden seam catches and reflects the warm city lights, shimmering faintly in the nocturnal air as the robot remains peacefully still beside the fragile plant.\n\nThe camera begins in a medium framing focused on K7 and the seedling before executing a smooth, continuous pull-back upward and outward. As the lens retreats, the garden ledge widens into the full rooftop terrace, gradually unveiling the sweeping panorama of towering buildings, softly lit skyways, and quiet atmospheric mist. K7 and the tiny plant remain visible at the centre of the wide composition, resting quietly above the glowing metropolis.",
+   "annotation": {
+    "title_en": "Night lights",
+    "scene": "rooftop_garden",
+    "camera": "slow pull-back to wide",
+    "beat": "Night. The rain stops and the city lights glow. K7 sits beside the seedling, its golden seam reflecting the lights, and the camera pulls back over the skyline.",
+    "state": {
+     "body_condition": "golden kintsugi seam",
+     "satchel_contents": "empty",
+     "accessory": "red ribbon"
+    }
+   }
+  },
+  {
+   "prompt": "Pale morning light spills across the wide, wet plaza of the futuristic city, illuminating sleek stone flagstones damp with early dew. A soft blue mist hangs low across the expansive square, diffusing the gentle silhouettes of curved buildings in the distant background. Faint reflections of the cool sky shimmer on the ground, while a round metal steam vent set into the pavement quietly hums, releasing thin tendrils of vapor into the brisk, tranquil atmosphere.\n\nUnit K7, a knee-high cream ceramic robot with a smooth round head, two glowing blue eyes, and twin brass antennae, walks steadily across the wet surface. A bright red ribbon is neatly tied to the base of its left antenna, and its orange canvas satchel hangs flat and empty against its torso. Across the ceramic over its right eye, an intricate golden kintsugi seam glints warmly under the daylight. As K7 advances, the ground grate suddenly releases a burst of dense, hissing white steam that plumes upward into its walking path. K7 pauses for a fraction of a second, adjusts its footing, and smoothly arcs around the cloud of vapor. The gleaming golden line across its face catches the morning sun as it steps past the vent and resumes its steady stride.\n\nThe camera moves alongside in a low-angle wide tracking shot, traveling parallel to K7 at ground level. The wide perspective maintains K7's full body in view against the open expanse, clearly showing the steam vent erupting and the small robot successfully circling the plume before continuing into the foggy distance.",
+   "annotation": {
+    "title_en": "Morning again",
+    "scene": "wet_plaza",
+    "camera": "wide tracking shot",
+    "beat": "The next morning K7 crosses the same foggy plaza from the first shot; the steam vent bursts again, and this time K7 steps around it, golden seam gleaming.",
+    "state": {
+     "body_condition": "golden kintsugi seam",
+     "satchel_contents": "empty",
+     "accessory": "red ribbon"
+    }
+   }
+  }
+ ]
+}

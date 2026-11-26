@@ -1,0 +1,3 @@
+# G is composed inside the planner's scene instead of on a neutral backdrop (and keeps its backdrop on H3).
+agent: {neutral_g: false}
+backend: {params: {g_masks: false}}

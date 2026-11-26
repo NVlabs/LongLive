@@ -1,0 +1,2 @@
+# Baseline: the generator alone. On LongLive-2.0 this is its built-in multi-shot memory (K/V carried across shots).
+memory: {mode: none}

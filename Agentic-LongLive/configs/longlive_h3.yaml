@@ -1,0 +1,11 @@
+# Agentic LongLive, full system, on LongLive-H3 (our few-step chunked-AR MiniMax-H3 distillation, video + audio).
+# Start the LongLive-H3 worker first (scripts/workers/serve_longlive_h3.sh, docs/generators.md).
+defaults: [agents/oss.yaml, backends/h3.yaml]
+story: stories/longstory_online/collie_muddy_day.json
+output_dir: outputs/longlive_h3
+seed: 0
+memory: {mode: entity, use_g: true, m_slots: 2}
+agent: {policy: llm, refine_rounds: 3, neutral_g: true}
+runtime: {mode: async, aux_prefill: true, entity_cards: true}
+backend:
+  params: {queue_dir: "${oc.env:AGL_H3_QUEUE,outputs/queues/longlive_h3}"}

@@ -1,0 +1,2 @@
+# No entity cards: memory enters only as pictures.
+runtime: {entity_cards: false}

@@ -1,0 +1,115 @@
+{
+ "id": "exposure",
+ "setup": {
+  "title": "The Fox on Film",
+  "style": "Live-action, cinematic, natural light, a misty forest meadow at dawn, a riverside road, a darkroom lit by a red safelight and a cozy apartment; one continuous shot per prompt.",
+  "cast": [
+   {
+    "id": "hana",
+    "name": "Hana",
+    "description": "Hana, a woman in her twenties with a short black bob, wearing a mustard corduroy jacket over a white T-shirt, dark jeans and brown boots, with a single camera, a silver-and-black vintage film camera, on a brown leather strap."
+   },
+   {
+    "id": "fox",
+    "name": "the fox",
+    "description": "the fox, a young red fox with a white chest, black socks and a bushy white-tipped tail."
+   }
+  ],
+  "extras": {
+   "music": "Warm fingerpicked acoustic guitar with a soft cello line.",
+   "voice": "Hana, speaking in voice-over, a woman in her twenties with a gentle, bright voice and a neutral American accent (S1),"
+  }
+ },
+ "shots": [
+  {
+   "prompt": "A wide shot of a misty forest meadow at dawn, where Hana walks through tall grass with her camera. Hana, a woman with a short black bob, in a mustard corduroy jacket, dark jeans and brown boots, carries a single camera, the silver-and-black vintage film camera on a brown leather strap around her neck. She opens its back, loads a roll of black-and-white film and winds it on with her thumb. The camera holds a wide shot with soft golden mist behind her.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a misty forest meadow at dawn, where Hana walks through tall grass with her camera. Hana, a woman with a short black bob, in a mustard corduroy jacket, dark jeans and brown boots, carries a single camera, the silver-and-black vintage film camera on a brown leather strap around her neck. She opens its back, loads a roll of black-and-white film and winds it on with her thumb. The camera holds a wide shot with soft golden mist behind her. Hana, speaking in voice-over, a woman in her twenties with a gentle, bright voice and a neutral American accent (S1), says: <d>[English] Thirty-six frames. Let's find something worth one.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: Birdsong, the click and whir of the film advance lever and grass brushing her boots.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of a muddy forest path at dawn, where Hana kneels over fresh paw prints. Hana, a woman with a short black bob, in her mustard corduroy jacket with her single vintage film camera on its brown leather strap around her neck, kneels and touches a line of small fresh fox paw prints in the mud. She looks toward a misty meadow ahead and follows the tracks quietly. The camera holds a low medium shot by the prints, then rises as she moves on.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a muddy forest path at dawn, where Hana kneels over fresh paw prints. Hana, a woman with a short black bob, in her mustard corduroy jacket with her single vintage film camera on its brown leather strap around her neck, kneels and touches a line of small fresh fox paw prints in the mud. She looks toward a misty meadow ahead and follows the tracks quietly. The camera holds a low medium shot by the prints, then rises as she moves on.\n\noverall_soundscape: Dripping leaves, soft footsteps and a distant crow.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A wide shot of the meadow, where a red fox sits among wildflowers and Hana crouches at the edge. A young red fox with a white chest, black socks and a bushy white-tipped tail sits upright in the wet grass among small yellow wildflowers, facing the camera with its ears up and its tail curled around its front paws. At the edge of the meadow Hana, in her mustard corduroy jacket, slowly crouches and raises her single film camera to her eye. The camera holds a long lens shot with the fox sharp in the foreground and Hana soft behind.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of the meadow, where a red fox sits among wildflowers and Hana crouches at the edge. A young red fox with a white chest, black socks and a bushy white-tipped tail sits upright in the wet grass among small yellow wildflowers, facing the camera with its ears up and its tail curled around its front paws. At the edge of the meadow Hana, in her mustard corduroy jacket, slowly crouches and raises her single film camera to her eye. The camera holds a long lens shot with the fox sharp in the foreground and Hana soft behind.\n\noverall_soundscape: A hush, a light breeze and a single distant bird.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A close-up of Hana behind her vintage film camera, where she takes the picture. Hana, a woman with a short black bob, holds her single camera, the silver-and-black vintage film camera on its brown leather strap, focuses the lens with her fingertips, holds her breath and presses the shutter. Click. She lowers the camera with a delighted smile as, in the soft background, the red fox stands up from among the wildflowers and trots into the trees. The camera holds a close-up on her face and hands, then racks focus to the fox leaving.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up of Hana behind her vintage film camera, where she takes the picture. Hana, a woman with a short black bob, holds her single camera, the silver-and-black vintage film camera on its brown leather strap, focuses the lens with her fingertips, holds her breath and presses the shutter. Click. She lowers the camera with a delighted smile as, in the soft background, the red fox stands up from among the wildflowers and trots into the trees. The camera holds a close-up on her face and hands, then racks focus to the fox leaving.\n\noverall_soundscape: A crisp mechanical shutter click, then her quiet laugh.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of Hana sitting on a fallen log at the edge of the meadow, where she rewinds the film. Hana, a woman with a short black bob, in her mustard corduroy jacket, turns the small rewind crank on top of her single vintage film camera, opens the back and drops the black-and-white film canister into her jacket pocket, patting it with a grin. The camera holds a medium shot with soft morning light through the trees.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of Hana sitting on a fallen log at the edge of the meadow, where she rewinds the film. Hana, a woman with a short black bob, in her mustard corduroy jacket, turns the small rewind crank on top of her single vintage film camera, opens the back and drops the black-and-white film canister into her jacket pocket, patting it with a grin. The camera holds a medium shot with soft morning light through the trees.\n\noverall_soundscape: The ratcheting rewind crank, the camera back clicking open and birdsong.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A wide shot of a quiet riverside road in morning sun, where Hana cycles home. Hana, a woman with a short black bob, in her mustard corduroy jacket with her single vintage film camera hanging at her chest, rides a pale blue bicycle along the river toward a small town, smiling. The camera tracks alongside her, the river glittering behind.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a quiet riverside road in morning sun, where Hana cycles home. Hana, a woman with a short black bob, in her mustard corduroy jacket with her single vintage film camera hanging at her chest, rides a pale blue bicycle along the river toward a small town, smiling. The camera tracks alongside her, the river glittering behind.\n\noverall_soundscape: Bicycle wheels humming, the river flowing and a bicycle bell.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of a small darkroom lit only by a red safelight, where Hana develops the film. Hana, a woman with a short black bob, in a white T-shirt, holds a small closed steel developing tank in both hands and slowly turns it upside down and back, again and again, while a timer ticks on the counter. Her mustard jacket and her camera hang on a hook behind her. The camera holds a medium shot, everything bathed in deep red light.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a small darkroom lit only by a red safelight, where Hana develops the film. Hana, a woman with a short black bob, in a white T-shirt, holds a small closed steel developing tank in both hands and slowly turns it upside down and back, again and again, while a timer ticks on the counter. Her mustard jacket and her camera hang on a hook behind her. The camera holds a medium shot, everything bathed in deep red light.\n\noverall_soundscape: The soft slosh of liquid inside the tank and a ticking timer.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of the darkroom with the white light on, where one strip of film hangs to dry. Hana, a woman with a short black bob, in her white T-shirt, clips the top of one long wet strip of black-and-white film to a line, and the strip hangs straight down, dripping. She steps back and smiles. The camera holds a medium shot with the hanging film strip in the foreground.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the darkroom with the white light on, where one strip of film hangs to dry. Hana, a woman with a short black bob, in her white T-shirt, clips the top of one long wet strip of black-and-white film to a line, and the strip hangs straight down, dripping. She steps back and smiles. The camera holds a medium shot with the hanging film strip in the foreground.\n\noverall_soundscape: Slow drips and a soft exhale.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A close-up of Hana holding a strip of developed film up to a lightbox in the red-lit darkroom. Hana, a woman with a short black bob, holds the long black-and-white negative strip against the glowing lightbox. Through one frame we see the fox as a tiny negative image: a pale fox sitting upright among dark flowers, facing the camera with its ears up and its tail curled around its front paws. She smiles. The camera pushes in slowly until the negative frame with the fox fills most of the view.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up of Hana holding a strip of developed film up to a lightbox in the red-lit darkroom. Hana, a woman with a short black bob, holds the long black-and-white negative strip against the glowing lightbox. Through one frame we see the fox as a tiny negative image: a pale fox sitting upright among dark flowers, facing the camera with its ears up and its tail curled around its front paws. She smiles. The camera pushes in slowly until the negative frame with the fox fills most of the view. Hana, speaking in voice-over, a woman in her twenties with a gentle, bright voice and a neutral American accent (S1), says: <d>[English] There you are.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: The buzz of the lightbox and a soft, pleased exhale.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of the darkroom enlarger under the red safelight, where Hana projects the negative. Hana, a woman with a short black bob, in her white T-shirt, slides the fox negative into the enlarger and switches it on. The fox image appears on the white easel below, the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws, and she bends close with a small focusing magnifier, turning the knob until it is sharp. The camera holds a medium shot from the side, the projected image glowing on the easel.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the darkroom enlarger under the red safelight, where Hana projects the negative. Hana, a woman with a short black bob, in her white T-shirt, slides the fox negative into the enlarger and switches it on. The fox image appears on the white easel below, the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws, and she bends close with a small focusing magnifier, turning the knob until it is sharp. The camera holds a medium shot from the side, the projected image glowing on the easel.\n\noverall_soundscape: The click of the enlarger lamp, a fan hum and the turn of the focus knob.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of the darkroom's developer tray under the red safelight, where the print appears. Hana slides a sheet of photo paper into the developer tray and rocks it gently. The black-and-white picture slowly appears: the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws. The camera looks down into the tray as the image rises out of the white paper.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the darkroom's developer tray under the red safelight, where the print appears. Hana slides a sheet of photo paper into the developer tray and rocks it gently. The black-and-white picture slowly appears: the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws. The camera looks down into the tray as the image rises out of the white paper.\n\noverall_soundscape: Gently lapping liquid and the low hum of the enlarger fan.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of the darkroom, where the fox print hangs drying on a line. The black-and-white fox print, the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws, hangs from a line by one wooden clothespin, dripping. Hana, a woman with a short black bob, in her white T-shirt, studies it closely with a small magnifying loupe and nods. The camera holds a medium shot with the print sharp and Hana in profile.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the darkroom, where the fox print hangs drying on a line. The black-and-white fox print, the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws, hangs from a line by one wooden clothespin, dripping. Hana, a woman with a short black bob, in her white T-shirt, studies it closely with a small magnifying loupe and nods. The camera holds a medium shot with the print sharp and Hana in profile.\n\noverall_soundscape: Slow drips into a tray and a quiet satisfied hum.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of a wooden table by the window in Hana's apartment, where she frames the print. Hana, a woman with a short black bob, in her mustard corduroy jacket, trims the white border of the dry black-and-white fox print, the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws, with a paper cutter and slides it into a light wooden frame, pressing the glass down and fastening the back. The camera holds a medium shot looking down at the table.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a wooden table by the window in Hana's apartment, where she frames the print. Hana, a woman with a short black bob, in her mustard corduroy jacket, trims the white border of the dry black-and-white fox print, the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws, with a paper cutter and slides it into a light wooden frame, pressing the glass down and fastening the back. The camera holds a medium shot looking down at the table.\n\noverall_soundscape: The slice of the paper cutter, glass sliding into the frame and a soft click.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A wide shot of Hana's cozy apartment living room in afternoon light, where she hangs the framed print. Hana, a woman with a short black bob, in her mustard corduroy jacket, hangs the black-and-white fox photograph in its light wooden frame on a wall of framed photos, straightens it and steps back to look. In the photograph the young fox is sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws. The camera holds a wide shot, then slowly pushes in to the framed fox photograph.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of Hana's cozy apartment living room in afternoon light, where she hangs the framed print. Hana, a woman with a short black bob, in her mustard corduroy jacket, hangs the black-and-white fox photograph in its light wooden frame on a wall of framed photos, straightens it and steps back to look. In the photograph the young fox is sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws. The camera holds a wide shot, then slowly pushes in to the framed fox photograph.\n\noverall_soundscape: A soft tap of the frame on the wall and warm, quiet room tone.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  },
+  {
+   "prompt": "A medium shot of Hana's living room at dusk, where Hana sits on the sofa below the framed fox photograph. Hana, a woman with a short black bob, in her mustard corduroy jacket, sips tea and looks up at the framed black-and-white photograph of the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws. Through the window behind her, a young red fox with a bushy white-tipped tail trots across the garden. She spots it, laughs and reaches for her single film camera on the side table. The camera holds a medium shot with the window and the framed photograph both in view.",
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of Hana's living room at dusk, where Hana sits on the sofa below the framed fox photograph. Hana, a woman with a short black bob, in her mustard corduroy jacket, sips tea and looks up at the framed black-and-white photograph of the young fox sitting upright in the grass among small yellow wildflowers, facing the camera with its ears up and its bushy tail curled around its front paws. Through the window behind her, a young red fox with a bushy white-tipped tail trots across the garden. She spots it, laughs and reaches for her single film camera on the side table. The camera holds a medium shot with the window and the framed photograph both in view.\n\noverall_soundscape: A quiet room, the clink of a teacup and her surprised laugh.\n\nnon_diegetic_music: Warm fingerpicked acoustic guitar with a soft cello line."
+   }
+  }
+ ]
+}

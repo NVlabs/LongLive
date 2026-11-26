@@ -1,0 +1,171 @@
+[
+ {
+  "id": "model",
+  "ranks": [
+   {
+    "node": "localhost",
+    "device": "cuda:0"
+   },
+   {
+    "node": "localhost",
+    "device": "cuda:1"
+   },
+   {
+    "node": "localhost",
+    "device": "cuda:2"
+   },
+   {
+    "node": "localhost",
+    "device": "cuda:3"
+   },
+   {
+    "node": "localhost",
+    "device": "cuda:4"
+   },
+   {
+    "node": "localhost",
+    "device": "cuda:5"
+   },
+   {
+    "node": "localhost",
+    "device": "cuda:6"
+   },
+   {
+    "node": "localhost",
+    "device": "cuda:7"
+   }
+  ],
+  "components": {
+   "transformer_ref": {
+    "ranks": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "parallel_config": {
+     "sequence_parallel": {
+      "kind": "ulysses",
+      "ulysses_degree": 8
+     }
+    }
+   },
+   "text_encoder": {
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "parallel_config": {
+     "tensor_parallel_size": 4
+    }
+   },
+   "video_decoder": {
+    "ranks": [
+     0,
+     1
+    ],
+    "parallel_config": {}
+   },
+   "audio_decoder": {
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "parallel_config": {},
+    "distribution": "temporal_units"
+   },
+   "latent_encoder": {
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "parallel_config": {},
+    "distribution": "temporal_units"
+   }
+  },
+  "queue_depth": 6
+ },
+ {
+  "id": "host",
+  "ranks": [
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   },
+   {
+    "node": "localhost",
+    "device": "cpu"
+   }
+  ],
+  "components": {
+   "video_codec": {
+    "ranks": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "parallel_config": {}
+   },
+   "muxer": {
+    "ranks": [
+     8
+    ],
+    "parallel_config": {}
+   },
+   "media_reader": {
+    "ranks": [
+     9
+    ],
+    "parallel_config": {}
+   }
+  },
+  "queue_depth": 6
+ }
+]

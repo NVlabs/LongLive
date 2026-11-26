@@ -1,0 +1,52 @@
+{
+ "name": "13_hand_card_to_person",
+ "title": "Handing Card and Desk Organization",
+ "summary": "The robot finishes handing a card to a person, closes the laptop, retrieves an adapter from a side cart, and reopens the laptop.",
+ "camera": "head camera",
+ "robot": "silver robotic arm with a black dexterous hand",
+ "setting": "office desk with a laptop, organizer tray, and a white side cart",
+ "first_frame": "13_hand_card_to_person.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "ec7e7f229c5abb32ff7796b7d0de8eff",
+  "frame_index": 0,
+  "original_prompt": "pick up card and give it to the person",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "2940a41fb19b8a1dc031e17431308a516f7b78bb0413f8f4551eb713ab637075"
+ },
+ "segments": [
+  {
+   "instruction": "Extend the card forward until the person grasps it, keeping the camera pointed at the person and laptop.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the card as the person takes it, and retract the hand back over the wooden organizer.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach toward the laptop display and push it down until the lid is completely closed.",
+   "memory_event": "hide: laptop screen and keyboard hidden beneath the closed lid"
+  },
+  {
+   "instruction": "Turn the camera left toward the white side cart and reach toward the white adapter on its top surface.",
+   "memory_event": "hide: the main desk, organizer, and laptop leave the view as the camera turns away"
+  },
+  {
+   "instruction": "Grasp the white adapter from the top shelf of the side cart while keeping the camera focused on the cart.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the camera back to the main desk while holding the adapter.",
+   "memory_event": "return: main desk reappears with the wooden organizer and closed laptop exactly as left"
+  },
+  {
+   "instruction": "Place the white adapter onto the desk surface beside the wooden organizer.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach forward and lift the laptop lid open again.",
+   "memory_event": "return: laptop lid opened, revealing the screen and keyboard as originally seen"
+  }
+ ]
+}

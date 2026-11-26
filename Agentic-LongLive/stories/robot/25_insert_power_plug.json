@@ -1,0 +1,52 @@
+{
+ "name": "25_insert_power_plug",
+ "title": "Plug Power Cord and Cover Cube",
+ "summary": "A dual-arm robot inserts a power plug, hides a red cube beneath a book, arranges other blocks, and uncovers the cube.",
+ "camera": "fixed third-person camera",
+ "robot": "two white robot arms with parallel grippers",
+ "setting": "an office laboratory with white desks and computer equipment",
+ "first_frame": "25_insert_power_plug.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "136e43c1599653127c58282e3eb905e3",
+  "frame_index": 0,
+  "original_prompt": "insert white plug into power strip",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "bb89c2ad78462edeaf88e646b8bf26eaf3ea634c9ee78d1626674dc5c5c81744"
+ },
+ "segments": [
+  {
+   "instruction": "Grasp the white power plug lying on the black mat with the right gripper. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift and insert the white plug into the power strip socket. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the plug and move the right gripper to grasp the green book. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the green book and set it flat over the red cube to cover it entirely. The camera remains fixed.",
+   "memory_event": "hide: red cube covered under the green book"
+  },
+  {
+   "instruction": "Pick up the yellow cube with the left gripper and place it onto the pink stand. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pick up the green cube and move it beside the tape measure. The camera remains fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the book off the table and set it back to its starting spot. The camera remains fixed.",
+   "memory_event": "return: red cube reappears undisturbed on the white table"
+  },
+  {
+   "instruction": "Pick up the red cube and place it on top of the yellow cube. The camera remains fixed.",
+   "memory_event": "none"
+  }
+ ]
+}

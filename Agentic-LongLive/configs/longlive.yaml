@@ -1,0 +1,13 @@
+# Agentic LongLive, full system, on LongLive-2.0 (the paper's main setting).
+#   agent:   RL memory planner + Qwen3.6-35B-A3B checker / scene router + FLUX.2-klein-4B pictures (agents/oss.yaml)
+#   memory:  entity memory -> G (neutral backdrop) + M per shot; entity cards; LLM scene routing; sink injection
+#   runtime: asynchronous agent (never waits), memory prefilled on an auxiliary GPU, streaming VAE decode
+# Every switch is documented in agentic_longlive/config.py; ablations are overlays in configs/ablations/.
+#   python scripts/run_story.py --config configs/longlive.yaml --story stories/longstory_online/collie_muddy_day.json
+defaults: [agents/oss.yaml, backends/longlive.yaml]
+story: stories/longstory_online/collie_muddy_day.json
+output_dir: outputs/longlive
+seed: 0
+memory: {mode: entity, use_g: true, m_slots: 2}
+agent: {policy: llm, refine_rounds: 3, neutral_g: true}
+runtime: {mode: async, aux_prefill: true, entity_cards: true}

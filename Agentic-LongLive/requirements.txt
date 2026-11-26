@@ -1,0 +1,14 @@
+# Agentic LongLive: agent, runtime and generator clients. The LongLive-2.0 backend runs in this environment and also
+# needs ../LongLive2.0/requirements.txt; the MiniMax-H3 workers have their own environment (requirements-h3.txt).
+omegaconf>=2.3
+pillow>=10.0
+numpy>=1.24
+scipy>=1.10              # foreground masks of G (H3 generators)
+# LongLive-H3 G masks with matting (backend g_masks: matte, default): torch, torchvision, transformers, timm,
+# kornia, einops (BiRefNet); g_masks: key needs none of them
+imageio>=2.31
+imageio-ffmpeg>=0.4.9
+requests>=2.31
+google-auth>=2.20        # optional: Gemini via Vertex AI (API agent / judge)
+# Agent model servers (separate environment is fine): sglang>=0.5 (scripts/serve_agent.sh)
+# RL training: transformers, peft (see docs/rl.md); tests: pytest

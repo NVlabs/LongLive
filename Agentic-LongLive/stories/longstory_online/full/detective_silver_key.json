@@ -1,0 +1,261 @@
+{
+ "id": "detective_silver_key",
+ "setup": {
+  "title": "The Silver Key",
+  "style": "Live-action, cinematic neo-noir: rain, neon reflections, warm interiors, a cold blue dawn.",
+  "cast": [
+   {
+    "id": "sol",
+    "name": "Detective Sol",
+    "description": "Detective Sol, a middle-aged Latino man with a shaved head, a thin scar through his right eyebrow, a navy overcoat over a grey shirt, and a copper sun-shaped badge pinned on the coat lapel."
+   }
+  ],
+  "extras": {
+   "voice": "Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1),",
+   "music": "Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout.",
+   "speech": "Sol narrates the case in a quiet voice-over style, sometimes speaking aloud to himself."
+  }
+ },
+ "shots": [
+  {
+   "prompt": "Night envelops a narrow, claustrophobic alleyway battered by relentless heavy rain. Overhead neon signage casts vibrant reflections in pools of magenta, electric cyan, and warm amber across slick asphalt and wet brick surfaces. Deep shadows fill the recesses between fire escapes, while dense sheets of falling water shimmer under the glow of distant streetlamps and hanging commercial fixtures. The air is thick with cold mist and urban dampness, creating an atmospheric neo-noir environment filled with glistening surfaces, steam, and dark, rippling puddles.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar cutting through his right eyebrow, walks deliberately into the alley. He wears a heavy navy overcoat over a muted grey shirt, with a distinct copper sun-shaped badge pinned to his lapel. Gripping a sturdy flashlight, he clicks it on, casting a piercing white beam through the deluge. Rain runs continuously down his bare scalp and brow as he steadily advances. By the end of his walk, the shoulders and collar of his navy overcoat are visibly saturated and darkened, becoming heavily rain-soaked while he scans the ground without finding anything of note.\n\nThe camera captures the entrance in a wide establishing shot, holding a stable, slowly drifting perspective that emphasizes the scale of the alley. The framing keeps Sol's full figure, the flashing neon reflections, and the towering, sodden brick walls continuously visible throughout, establishing his solitary presence within the drenched urban setting.",
+   "annotation": {
+    "title_en": "The rainy alley",
+    "scene": "rainy_alley",
+    "camera": "wide establishing shot",
+    "beat": "Night, heavy rain in a narrow alley with neon signs. Sol in his navy overcoat walks in with his flashlight, rain running off his shaved head.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "rain-soaked",
+     "key_status": "not found",
+     "clue": "none"
+    }
+   }
+  },
+  {
+   "prompt": "Rain continues to fall steadily into the narrow, shadowy alleyway, sending constant ripples across the surface of a murky puddle. Distant neon signs cast deep cobalt and amber highlights across the wet pavement and churned dirt. The atmosphere feels heavy and damp, with cold urban grime clinging to the slick asphalt around the accumulating rainwater.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar cutting through his right eyebrow, wears a rain-soaked navy overcoat over a grey shirt with a copper sun-shaped badge pinned to the lapel. He lowers himself onto one knee on the sodden ground. As he crouches, the lower hem of his heavy coat dips into the slush, picking up thick dark streaks of mud along the bottom edge. He reaches down into the puddle with one hand, his fingers dipping into the cold water to retrieve an ornate silver key resting on the gravel beneath. Lifting it up into the dim light, water drips from its metallic surface, clearly revealing a tiny engraved number 214 along its stem. He clutches the silver key firmly between his fingers, examining the newly found clue.\n\nThe camera stays in a low-angle close-up near the street surface, maintaining focus on the rippling puddle before framing Sol’s mud-stained coat hem and his hand as he retrieves the object. The metallic glint of the key and the muddy texture of the fabric remain sharply defined throughout the steady framing.",
+   "annotation": {
+    "title_en": "The key in the puddle",
+    "scene": "rainy_alley",
+    "camera": "close-up",
+    "beat": "Sol kneels beside a puddle, the hem of his coat dropping into the mud, and picks up an ornate silver key with a tiny engraved number 214.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "rain-soaked with a muddy hem",
+     "key_status": "silver key in his hand",
+     "clue": "number 214 engraved on the key"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the quiet late-night cafe, amber light from low-hanging vintage lamps casts a warm, golden glow across polished dark wood tables and checkered tile. Raindrops streak steadily down the large windowpane in the background, blurring the neon lights of the street outside. The interior feels humid and sheltered, accented by the faint aroma and rising steam of a fresh cup of black coffee sitting on a corner table.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, enters the booth. He initially wears his rain-soaked navy overcoat with a copper sun-shaped badge pinned to the lapel and a visibly muddy hem, over a plain grey shirt, while holding an ornate silver key in his wet fingers. He shakes the excess droplets from the coat, shrugs it off his shoulders, and hangs it over the back of his chair. Now visible in his fitted grey shirt, Sol sits down and places the silver key onto the table beside the mug of black coffee. He leans in closer to inspect the tiny number 214 engraved into the polished metal.\n\nThe camera remains in a steady medium profile shot at table height, framing Sol from the side. The shot clearly keeps his focused face, his grey-clad torso, the steaming coffee cup, and the silver key on the table in frame, while the wet navy overcoat with its muddy hem and copper badge remains visible draped on the chair behind him throughout.",
+   "annotation": {
+    "title_en": "Shelter in a cafe",
+    "scene": "cafe",
+    "camera": "medium profile shot",
+    "beat": "Inside a quiet late-night cafe with warm lamps, Sol shakes water off his coat, hangs it on the chair and studies the silver key on the table next to a cup of black coffee, now in his grey shirt.",
+    "state": {
+     "outfit": "grey shirt, navy overcoat hung on the chair",
+     "coat_condition": "wet, muddy hem",
+     "key_status": "silver key on the table",
+     "clue": "number 214"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the quiet, late-night cafe, a low-hanging brass table lamp casts a focused pool of amber light across the dark wood tabletop. Outside the rain-streaked window, blurred city neon glimmers softly in the wet dark. A ceramic mug of black coffee rests beside a paper napkin. The empty cafe feels secluded and moody, wrapped in deep neo-noir shadows and quiet warmth.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, sits in his grey shirt, with his wet navy overcoat and copper sun-shaped badge draped over the chair behind him. He lifts the silver key from the table and aligns a small magnifying glass under the lamp. Through the lens, past the stamped number 214, a tiny engraved train symbol becomes sharply visible. Sol pauses, his furrowed expression shifting to quiet realization that the key belongs to a station locker. He lowers the glass onto the tabletop, keeping the silver key held in his hand as he looks up.\n\nThe shot begins in an extreme close-up on the key's surface through the magnifying glass, capturing the fine metallic details. The camera then smoothly dollies back and tilts up into a medium shot, revealing Sol’s face and torso, maintaining clear view of the key in his fingers and his damp coat draped behind him.",
+   "annotation": {
+    "title_en": "The engraving",
+    "scene": "cafe",
+    "camera": "extreme close-up then medium",
+    "beat": "Sol holds the key under the lamp with a magnifying glass and reads a second engraving: a tiny train symbol. He looks up, realising it belongs to a station locker.",
+    "state": {
+     "outfit": "grey shirt",
+     "coat_condition": "on the chair",
+     "key_status": "silver key in his hand",
+     "clue": "train symbol: a station locker"
+    }
+   }
+  },
+  {
+   "prompt": "The grand concourse of a central train station opens up late at night, cavernous and almost completely deserted. Cold shadows gather beneath soaring vaulted arches, punctuated by the warm amber radiance of brass wall fixtures and a monumental, glowing analog clock mounted high above the terminal floor. The polished marble floor stretches out like dark water, capturing distorted reflections of overhead chandeliers and distant neon departure boards. Outside, rain softly drums against towering clerestory windows, casting a quiet, moody noir atmosphere across the vast architectural expanse.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar cutting through his right eyebrow, strides purposefully across the open hall. He has his navy overcoat back on over his muted grey shirt, with his distinctive copper sun-shaped badge pinned securely to the lapel. The hem of his overcoat is visibly drying, carrying dark speckles of street mud from outside. Keeping his right hand buried deep inside his overcoat pocket around the concealed silver key, Sol walks at a determined, rhythmic pace. His focused gaze sweeps across the empty space, looking past rows of vacant wooden benches and homing in on the corridor signs that indicate the station lockers.\n\nThe camera moves in a smooth, wide tracking shot backward ahead of Sol, keeping him centered within the overwhelming emptiness of the terminal. The low-angle framing preserves the immense scale of the hall, keeping his entire figure, the gleaming reflections beneath his boots, and the illuminated clock face clearly visible throughout the stride.",
+   "annotation": {
+    "title_en": "Central station",
+    "scene": "train_station",
+    "camera": "wide tracking shot",
+    "beat": "Sol, coat back on, strides through a grand, almost empty train station hall at night with a big clock and marble floor, his footsteps echoing.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "drying, muddy hem",
+     "key_status": "silver key in his pocket",
+     "clue": "station locker"
+    }
+   }
+  },
+  {
+   "prompt": "A recessed alcove in the grand train station houses a bank of aged brass lockers, tarnished with decades of patinated scratches. Warm amber overhead lights cast soft shadows across the metallic grid, contrasting with cold blue ambient spill from the distant station hall. The air is quiet and still, carrying a tense neo-noir gloom beneath the muted illumination.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, stands before the lockers. He wears a navy overcoat with a drying, muddy hem over a grey shirt, with a copper sun-shaped badge pinned to his lapel. Scanning the engraved plates, he locates locker 214. He reaches into his coat pocket, pulls out a small silver key, and slips it into the tarnished keyhole. He turns the key, and the brass door creaks open to reveal a small wooden box sitting inside the dark compartment, leaving the silver key resting in the lock.\n\nThe camera frames Sol in a medium close-up, holding an eye-level perspective that encompasses his focused profile and the locker doors. As the door opens, the camera adjusts slightly, maintaining a clear view of Sol's reaction, the copper badge on his coat lapel, the silver key protruding from the lock, and the newly uncovered wooden box nestled inside.",
+   "annotation": {
+    "title_en": "Locker 214",
+    "scene": "train_station",
+    "camera": "medium close-up",
+    "beat": "Sol stops at a wall of old brass lockers, finds number 214, turns the silver key and the door swings open with a creak, revealing a small wooden box.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "drying, muddy hem",
+     "key_status": "key in the lock of locker 214",
+     "clue": "small wooden box in the locker"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the quiet terminal of the train station, a weathered wooden bench rests beneath the warm glow of an overhead brass pendant lamp. Cold blue morning light filters through tall, rain-streaked windows in the background, creating a sharp neo-noir contrast with the amber interior shadows. Reflections of distant neon signs shimmer faintly across the damp floor tiles. The cavernous station remains subdued, cloaked in an atmosphere of solitary tension and quiet anticipation.\n\nDetective Sol, a middle-aged Latino man with a shaved head, a thin scar slicing through his right eyebrow, and a navy overcoat over a grey shirt, stands beside the bench. His coat is noticeably drying but still bears a muddy hem, and his copper sun-shaped badge glints dully on his lapel. After sliding the silver key into his coat pocket, he places his hands on the small, dark-stained wooden box resting on the seat. Sol unlatches the tarnished metal clasp and lifts the hinged lid. Inside lies an old, folded paper map of the harbour alongside a small, curling black-and-white photograph of a desolate coastal lighthouse. Sol looks down at the newly revealed clues with steady, silent intensity.\n\nThe camera maintains a high-angle close-up framing the box on the bench and Sol's hands. As he lifts the lid, the camera executes a gentle push-in, bringing the intricate street grids of the harbour map and the grain of the lighthouse photograph into sharp, tactile focus while his navy cuffs frame the periphery.",
+   "annotation": {
+    "title_en": "The box",
+    "scene": "train_station",
+    "camera": "close-up",
+    "beat": "Sol opens the wooden box on a bench: inside are an old folded map of the harbour and a black-and-white photo of a lighthouse.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "drying, muddy hem",
+     "key_status": "key back in his pocket",
+     "clue": "harbour map and lighthouse photo"
+    }
+   }
+  },
+  {
+   "prompt": "The scene unfolds within a quiet train station concourse beside darkened storefronts. Dim platform lamps and faint cyan neon cast wet reflections across the polished stone floor. The cavernous station feels chilly and desolate, dominated by heavy steel columns, deep shadows, and the glossy pane of an unlit boutique window that acts as a dark mirror.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, stands before the glass. He wears a navy overcoat with a drying, muddy hem over a grey shirt, a copper sun-shaped badge pinned to his lapel, and the key hidden in his pocket. He begins holding the folded harbour map and lighthouse photo in his hands. Glancing up at the dark window pane, he spots the reflection of a shadowy figure in a brimmed hat watching him from across the concourse. Sol’s expression hardens. Without turning around, he smoothly tucks the map and photo deep inside the breast pocket of his navy overcoat, completely concealing them. He then pivots abruptly and strides briskly away along the concourse.\n\nThe camera maintains an over-the-shoulder framing behind Sol. The shot begins focused on his close silhouette before executing a rack focus into the dark glass reflection, bringing the distant, stationary watcher in the hat into crisp clarity. As Sol conceals the map and turns away, the camera pans smoothly to track his sudden departure, keeping his hurried stride visible against the receding station lights.",
+   "annotation": {
+    "title_en": "Being followed",
+    "scene": "train_station",
+    "camera": "over-the-shoulder, rack focus",
+    "beat": "In the reflection of a dark shop window Sol notices a figure in a hat watching him. He tucks the map inside his coat and walks away quickly.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "drying, muddy hem",
+     "key_status": "in pocket",
+     "clue": "map hidden in his coat"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the yellow taxi moves through the rainy city night, bathed in fluctuating shadows and passing neon glows. Raindrops streak across the wet glass, smearing reflections of amber streetlamps, cold cyan shopfronts, and red brake lights into fluid streaks of color. The cab's enclosed cabin feels secluded and damp, surrounded by the muted hum of night traffic.\n\nIn the back seat sits Detective Sol, a middle-aged Latino man with a shaved head and a distinct thin scar running vertically through his right eyebrow. He wears a dark navy overcoat, drying from the rain, over a muted grey shirt, with a tarnished copper sun-shaped badge pinned to his lapel. Sol reaches inside his coat, withdraws the paper, and unfolds the harbour map flat across his knee. As the taxi travels, shifting bands of neon light slide across his weathered face and focused gaze. His fingers steady the paper as he studies the docks, the silver key remaining hidden in his pocket.\n\nThe camera frames Sol in a close-up viewed through the taxi’s front windscreen, shooting from the dashboard toward the rear seat. Beaded water droplets on the exterior glass create a textured foreground, yet Sol’s concentrated expression, the copper badge, and the unfolded map on his knee remain continuously clear. The camera holds a stable, smooth perspective as city illumination drifts over his features.",
+   "annotation": {
+    "title_en": "Taxi to the harbour",
+    "scene": "taxi_night",
+    "camera": "close-up through the windscreen",
+    "beat": "In the back of a yellow taxi, rain streaking the windows, Sol unfolds the harbour map on his knee, city lights sliding across his scarred face.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "drying",
+     "key_status": "in pocket",
+     "clue": "harbour map"
+    }
+   }
+  },
+  {
+   "prompt": "A stormy coastal pier of dark, glistening stone stretches out toward a towering white lighthouse under a bruised, overcast sky. The atmosphere is cold, raw, and dominated by deep oceanic blues and slate-grey tones. Enormous waves relentlessly batter the slick breakwater, sending plumes of frothing white spray into the howling gale, while the distant, weathered lighthouse stands resolute amidst the turbulent marine mist.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar cutting through his right eyebrow, walks along the slippery masonry. He wears a grey shirt under a navy overcoat bearing a small copper sun-shaped badge pinned to the left lapel. At the start of his walk, the overcoat appears damp but drying; however, as he trudges toward the beacon, violent crests of saltwater wash across the walkway, thoroughly soaking his coat until the heavy wool is visibly darkened and dripping with sea spray. His coat whips violently in the wind as he leans into the blast, keeping his hands jammed deep into his coat pockets while his gaze remains fixed directly ahead on the looming structure.\n\nThe camera holds a dramatic wide shot, executing a continuous, slow push forward along the length of the pier behind Sol. The framing keeps his solitary, walking figure centered in the lower-middle frame against the expansive, wave-swept stone, preserving the imposing verticality of the white lighthouse and the violent, churning surf across the entire duration.",
+   "annotation": {
+    "title_en": "The lighthouse",
+    "scene": "lighthouse_exterior",
+    "camera": "wide shot, slow push",
+    "beat": "Sol walks along a stormy stone pier toward a tall white lighthouse, waves crashing beside him, his coat whipping in the wind.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "soaked by sea spray",
+     "key_status": "in pocket",
+     "clue": "lighthouse from the photo"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the vertical hollow of the lighthouse tower, a narrow cast-iron spiral staircase coils steeply upward through the shadowy, damp interior. Rust and condensation slick the curving steps and peeling whitewashed masonry walls. Deep gloom engulfs the space, broken only by the sharp, wandering beam of a handheld flashlight that throws harsh geometric shadows across the ribbed ironwork. The atmosphere is cold, echoing, and claustrophobic, dense with the smell of wet salt and oxidized metal.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, climbs the winding steps. He wears a heavy navy overcoat over a grey shirt, with a copper sun-shaped badge pinned to his coat lapel; the dark wool of his coat is thoroughly soaked from sea spray, clinging heavily to his shoulders. In one hand, he directs a flashlight upward toward the distant lamp room, while his other hand grips the cold iron handrail for balance. He breathes hard from the continuous ascent, his chest rising and falling as his boots make rhythmic metallic contact with the treads. The silver key stays concealed within his wet pocket as he pushes steadily higher.\n\nThe camera shoots from a steep low angle looking upward through the center of the spiral structure. It slowly tilts and tracks upward, maintaining a wide framing that captures Sol's ascending figure against the dizzying geometric repetition of the staircase. The sweeping cone of flashlight illumination and his glistening, damp coat remain distinctly visible throughout the climb.",
+   "annotation": {
+    "title_en": "The spiral stairs",
+    "scene": "lighthouse_interior",
+    "camera": "low angle looking up",
+    "beat": "Inside the lighthouse Sol climbs a narrow iron spiral staircase by flashlight, breathing hard, his hand on the cold rail.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "soaked",
+     "key_status": "in pocket",
+     "clue": "climbing to the lamp room"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the lighthouse lamp room, the massive multi-faceted glass Fresnel lens dominates the space, catching cold blue dawn light filtering through panoramic curved windows. Rain trickles down the outer panes, leaving the circular chamber immersed in deep shadows and pale reflections. Dust motes drift across aged brass mountings and the heavy iron console beneath the optic assembly. The atmosphere is quiet, damp, and steeped in cold maritime history.\n\nDetective Sol stands beside the tarnished console. A middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, he wears a rain-soaked navy overcoat over a grey shirt, with a copper sun-shaped badge pinned to his lapel. Crouching slightly, he inspects the underside of the console and spots a hidden keyhole. Sol pulls the silver key from his coat pocket, slides it into the lock, and turns it. He eases open a concealed drawer, revealing a bundle of yellowed old letters tied with red string. The key remains inserted in the lock as he pauses, looking directly down at the bundle.\n\nThe camera maintains a stable medium shot at console height, framing Sol from the waist up beside the curving glass lens. A subtle, gradual push-in tracks his movement as the drawer slides open, keeping his focused expression, the soaked fabric of his overcoat, and the red-stringed letters clearly visible.",
+   "annotation": {
+    "title_en": "The hidden drawer",
+    "scene": "lighthouse_lamp_room",
+    "camera": "medium shot",
+    "beat": "In the lamp room beside the huge glass lens, Sol finds a keyhole under the console, uses the same silver key and pulls out a drawer containing a bundle of old letters tied with red string.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "soaked",
+     "key_status": "key in a hidden drawer lock",
+     "clue": "bundle of letters tied with red string"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the circular lamp room of the lighthouse, rhythmic beams from the massive rotating glass lens cut through deep shadows and condensation-streaked curved windows. Outside, a cold blue dawn filters through the coastal rain, contrasting sharply with the intermittent, pulsing amber warmth thrown by the revolving mechanism. The damp, enclosed space feels suspended in time, filled with the faint hum of mechanical gears and a brooding neo-noir stillness.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar running through his right eyebrow, wears a heavily soaked navy overcoat over a muted grey shirt. His copper sun-shaped badge is initially pinned to his lapel. Holding an unfolded paper letter under the focused beam of a small flashlight, his eyes scan the handwritten lines. As he absorbs the words, his hardened gaze softens into a look of quiet realization. Sol reaches up with a deliberate hand, carefully unpins the copper sun badge from his wet lapel, and cradles it in his palm, studying its metallic contours thoughtfully while the letter rests loosely in his other hand.\n\nThe camera maintains an intimate close-up on Sol’s face and upper chest, gently reframing slightly downward as his hand removes the pin. The sweeping glow of the lighthouse lamp passes rhythmically across the background, casting periodic rim light on his shaved head and wet coat, keeping his subdued emotional shift and the badge in his hand clearly in focus.",
+   "annotation": {
+    "title_en": "Reading the letters",
+    "scene": "lighthouse_lamp_room",
+    "camera": "close-up",
+    "beat": "Sol reads one letter by flashlight as the great lamp rotates behind him; his expression softens and he takes off his badge and holds it thoughtfully.",
+    "state": {
+     "outfit": "navy overcoat, badge in his hand",
+     "coat_condition": "soaked",
+     "key_status": "in the drawer",
+     "clue": "letters read"
+    }
+   }
+  },
+  {
+   "prompt": "The scene opens on an open city rooftop at the break of dawn. The heavy rain has stopped, leaving calm puddles that reflect a cold blue sky across the gravelled surface. Along the eastern horizon, faint amber light cuts through the pale morning mist, contrasting against the dark silhouettes of distant skyscrapers. The air appears crisp and completely still, settling into a quiet, atmospheric neo-noir dawn.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, stands near the perimeter railing. His navy overcoat over a grey shirt is now dry and creased, with a faint mud stain on the hem, and his copper sun-shaped badge is pinned back onto the coat lapel. The packet of letters is tucked securely under his arm. Sol raises his hand, holding up the silver key toward the pale sunrise. The metal catches the first glint of golden light against the cold morning sky. His expression is calm and contemplative as he studies the key, maintaining his steady posture.\n\nThe camera frames Sol in a wide shot at eye level, capturing his three-quarter profile alongside the vast urban skyline. The camera glides forward very slowly, keeping Sol, the letters under his arm, and the raised key visible against the emerging horizon throughout the shot.",
+   "annotation": {
+    "title_en": "Dawn on the rooftop",
+    "scene": "city_rooftop",
+    "camera": "wide shot at dawn",
+    "beat": "Dawn on a city rooftop, the rain gone, cold blue light. Sol, coat now dry and creased, holds up the silver key against the sunrise with the letters under his arm.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge back on the lapel",
+     "coat_condition": "dry and creased, mud stain on the hem",
+     "key_status": "silver key held up",
+     "clue": "letters under his arm"
+    }
+   }
+  },
+  {
+   "prompt": "Morning light fills an apartment doorway on a quiet residential landing. Gentle amber warmth spills from inside the open apartment, contrasting with the pale daylight filtering down the corridor. Worn wooden moldings, muted cream walls, and a tarnished brass door number establish a peaceful domestic interior. The atmosphere feels subdued and tender, carrying a poignant sense of closure.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, stands at the threshold opposite an elderly woman in a knitted cardigan. Sol wears a grey shirt under his dry, creased navy overcoat, which retains dried mud on the hem, with his copper sun-shaped badge pinned to the lapel. Holding the bundle of letters with the silver key resting on top, Sol extends his hands forward. The elderly woman takes the bundle and key, clutching them tightly to her chest as tears gather in her eyes. Sol speaks quietly, offering brief words of reassurance, before resting his empty hands at his sides while she holds the recovered items close.\n\nThe camera remains in a steady eye-level medium shot, framing both figures from the waist up across the open doorway. A subtle forward drift keeps the physical handoff at the center of the frame. Sol's creased coat, the copper badge, and the woman's tearful embrace of the letters stay clearly visible throughout the gentle exchange.",
+   "annotation": {
+    "title_en": "Returning the letters",
+    "scene": "apartment_doorway",
+    "camera": "medium shot",
+    "beat": "Morning at an apartment doorway, Sol hands the bundle of letters and the silver key to an elderly woman in a cardigan, who presses them to her chest with tears in her eyes.",
+    "state": {
+     "outfit": "navy overcoat, copper sun badge",
+     "coat_condition": "dry, creased",
+     "key_status": "given to the elderly woman",
+     "clue": "case closed"
+    }
+   }
+  },
+  {
+   "prompt": "A city sidewalk stretches forward under crisp morning sunlight, casting long diagonal shadows across the pale pavement and adjacent brick facades. Golden light glints softly off storefront windows and parked vehicles down the block, replacing cold darkness with a warm, natural glow. The atmosphere feels calm and peacefully resolved, filled with the gentle stillness of a clear day.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, strides along the sidewalk. He begins wearing a creased navy overcoat over a grey shirt, with his copper sun badge pinned to the lapel. As he walks, Sol unbuttons the dry coat, slips his arms out of the sleeves, and slings it casually over his shoulder. Now in his grey shirt, with the coat resting hooked over his back, his posture eases. The tension leaves his face, and he allows himself a small, quiet smile. By the shot's end, he walks freely in his grey shirt with the coat slung over his shoulder and the badge hidden in the fabric folds.\n\nA wide tracking shot glides backward ahead of him, maintaining a steady pace that keeps his full upper body and easy stride centered. The warm side lighting clearly reveals his shaved head, the eyebrow scar, and the grey fabric of his shirt against the dark overcoat. The sunlit streetscape drifts smoothly behind him, preserving an unhurried, documentary-realistic perspective as he continues along the walkway.",
+   "annotation": {
+    "title_en": "Walking away",
+    "scene": "sunny_street",
+    "camera": "wide tracking shot",
+    "beat": "Sol walks down a sunny street, takes off his overcoat and slings it over his shoulder, now in his grey shirt, and allows himself a small smile.",
+    "state": {
+     "outfit": "grey shirt, overcoat slung over his shoulder",
+     "coat_condition": "dry",
+     "key_status": "gone",
+     "clue": "case closed"
+    }
+   }
+  }
+ ]
+}
