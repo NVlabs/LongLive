@@ -174,7 +174,7 @@ and [FastH3-Omni](https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-
 | --- | --- |
 | [LongLive-2.0-5B](https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B) | Real-time AR generator of the main LongStory-Online results |
 | [FastH3-Omni](https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1) | Few-step MiniMax-H3 generator with audio, used for the live demos |
-| LongLive-H3 (coming soon) | Few-step chunked-AR MiniMax-H3 generator used with the agent |
+| [LongLive-H3](https://huggingface.co/Andyson/LongLive-H3) | Few-step chunked-AR MiniMax-H3 generator used with the agent |
 | Agentic-LongLive-Planner-Qwen3-8B (coming soon) | RL memory planner (Qwen3-8B + GRPO LoRA, merged) |
 
 → [Code and quick start](Agentic-LongLive) · [Checkpoints](Agentic-LongLive/README.md#checkpoints) ·
