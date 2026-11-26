@@ -251,7 +251,7 @@ document.querySelectorAll('.speed-controls').forEach(group => {
 
         const source = document.createElement('source');
         // Encode URI to handle spaces and non-ASCII filenames
-        source.src = encodeURI(`./assets/interactive/${file}`);
+        source.src = encodeURI(`https://huggingface.co/datasets/Efficient-Large-Model/LongLive-assets/resolve/main/assets/interactive/${file}`);
         source.type = 'video/mp4';
         video.appendChild(source);
         // Ensure autoplay works reliably on various browsers
