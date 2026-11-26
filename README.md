@@ -36,13 +36,13 @@ Changes: Add the independent Long-WAM and Agentic LongLive projects and group th
 <table>
 <tr>
 <td width="40%" align="center">
-  <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/"><img src="Agentic-LongLive/assets/project_page.jpg" width="100%" alt="Agentic LongLive project page: the video streams on while the memory agent reads each prompt, updates its entity memory and draws the memory picture for the next shot"></a>
+  <a href="https://www.youtube.com/watch?v=czP61EBbaa4"><img src="Agentic-LongLive/assets/project_page.jpg" width="100%" alt="Agentic LongLive overview video — watch on YouTube"></a>
 </td>
 <td width="60%">
   <a href="Agentic-LongLive"><b>Agentic LongLive</b></a><br>
   Asynchronous agentic memory for long video generation.<br>
   <sub>Keep people, objects and places consistent over long interactive stories and robot videos, with an LLM memory agent running beside a real-time generator.</sub><br>
-  <sub><a href="Agentic-LongLive">Code</a> · <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/">Project page</a></sub>
+  <sub><a href="Agentic-LongLive">Code</a> · <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/">Project page</a> · <a href="https://www.youtube.com/watch?v=czP61EBbaa4">Video</a></sub>
 </td>
 </tr>
 <tr>
@@ -91,7 +91,7 @@ Changes: Add the independent Long-WAM and Agentic LongLive projects and group th
 </tr>
 </table>
 
-<p align="center"><sub>Click a thumbnail to watch the overview video on YouTube. The Agentic LongLive picture opens its project page.</sub></p>
+<p align="center"><sub>Click a thumbnail to watch the overview video on YouTube.</sub></p>
 
 ## Download one project
 
