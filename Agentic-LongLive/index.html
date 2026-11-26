@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agentic LongLive</title>
+<meta name="description" content="Real-time video generators forget. Agentic LongLive runs a memory agent next to the generator, on its own GPUs, so people, objects and places stay consistent over minutes of video while it streams in real time.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nvlabs.github.io/LongLive/Agentic-LongLive/">
+<meta property="og:title" content="Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation">
+<meta property="og:description" content="Real-time video generators forget. Agentic LongLive runs a memory agent next to the generator, on its own GPUs, so people, objects and places stay consistent over minutes of video while it streams in real time.">
+<meta property="og:image" content="https://nvlabs.github.io/LongLive/Agentic-LongLive/media/wall/fh/gpu_build_pc.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Agentic LongLive: asynchronous agentic memory for real-time long video generation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/robot_long.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg transform='rotate(-35 16 16)' fill='none' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M2 16c3.5-9 7-9 10.5 0s7 9 10.5 0 5-6 7-3' stroke='%23E1B64B'/%3E%3Cpath d='M2 16c3.5 9 7 9 10.5 0s7-9 10.5 0 5 6 7 3' stroke='%235E9A12'/%3E%3C/g%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#paper"><svg viewBox="0 0 32 32" aria-hidden="true"><g transform="rotate(-35 16 16)" fill="none" stroke-width="2.6" stroke-linecap="round"><path d="M2 16c3.5-9 7-9 10.5 0s7 9 10.5 0 5-6 7-3" stroke="#E1B64B"/><path d="M2 16c3.5 9 7 9 10.5 0s7-9 10.5 0 5 6 7 3" stroke="#5E9A12"/></g></svg><span class="bt">Agentic LongLive</span></a>
+    <ul>
+      <li><a href="#tldr">TL;DR</a></li>
+      <li><a href="#method">The System</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#robotics">Robotics</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero intro" id="hero" aria-label="Animated overview of the system. Scroll or click to continue.">
+  <div class="hero-inner" id="heroInner">
+    <p class="hero-tag" id="heroTag">A real-time video generator and a memory agent, running <em>in parallel</em>.</p>
+    <div class="stage-box" id="heroBox"><div class="stage" id="heroStage"></div></div>
+    <p class="hero-q" id="heroQ"><span class="qn"></span><span class="qt"></span></p>
+  </div>
+  <a class="hero-hint" href="#paper"><span>Continue to the paper</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+</header>
+
+<section class="title" id="paper">
+  <div class="wrap">
+    <div class="tline reveal"><h1>Agentic LongLive</h1><canvas id="helix" aria-hidden="true"></canvas></div>
+    <p class="sub reveal">Asynchronous Agentic Memory for Long Video Generation</p>
+    <p class="authors reveal">
+      <a href="https://www.shaotengliu.com/" target="_blank" rel="noopener">Shaoteng Liu</a>
+      <a href="https://andysonys.github.io/" target="_blank" rel="noopener">Shuai Yang</a>
+      <a href="https://aaron-weihuang.com/" target="_blank" rel="noopener">Wei Huang</a>
+      <a href="https://wileewang.github.io/" target="_blank" rel="noopener">Luozhou Wang</a>
+      <a href="https://hanlab.mit.edu/songhan" target="_blank" rel="noopener">Song Han</a>
+      <a href="https://yukangchen.com/" target="_blank" rel="noopener">Yukang Chen</a>
+    </p>
+    <p class="affils reveal">NVIDIA<i>·</i>MIT<i>·</i>CUHK</p>
+    <div class="links reveal">
+      <a class="btn" href="#" data-pending aria-label="arXiv (link pending)">
+        <svg viewBox="0 0 24 24"><path d="M6 2h8l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V8h4.5L13 3.5zM7 12h10v1.6H7V12zm0 3.4h10V17H7v-1.6zm0-6.8h5v1.6H7V8.6z"/></svg>arXiv</a>
+      <a class="btn" href="https://github.com/NVlabs/LongLive/tree/main/Agentic-LongLive" target="_blank" rel="noopener" aria-label="Code on GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>Code</a>
+      <a class="btn" href="#" data-pending aria-label="Models on Hugging Face (link pending)"><span class="emo" aria-hidden="true">🤗</span>Models</a>
+      <a class="btn ghost" href="#cite">
+        <svg viewBox="0 0 24 24"><path d="M7 6h4v5H8.5c0 2 .8 3 2.5 3.3V16c-3-.3-4-2.4-4-5.5V6zm7 0h4v5h-2.5c0 2 .8 3 2.5 3.3V16c-3-.3-4-2.4-4-5.5V6z"/></svg>BibTeX</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="tldr">
+  <div class="wrap">
+    <h2 class="reveal">TL;DR</h2>
+    <ul class="tl reveal">
+      <li>Real-time video generators stream minutes of video with a new prompt for every shot, but <b>they forget</b>, so a face, a jacket or a kitchen you come back to has changed a few shots later. <b>Agentic LongLive adds a memory agent that remembers them.</b></li>
+      <li>Existing video agents work only offline: they read the whole script in advance and plan each shot while the generator waits. We run ours <b>next to the generator instead of in front of it</b>, on its own GPUs, where it keeps images of the people, objects and places and passes them to the generator, so the video never waits for memory.</li>
+      <li>With the agent running, <b>FastH3-Omni, LongLive-H3 and LongLive-2.0 all stay real time</b> on B200s, at 29.0, 34.7 and 34.3&#8239;FPS for 24&#8239;FPS video.</li>
+      <li>Compared with LongLive-2.0, <b>characters, story details and revisited places stay consistent</b>, with gains of 26 to 45 points, and identity still holds after 14 minutes. <a class="go" href="#results">Watch the long stories&nbsp;&darr;</a></li>
+      <li>The same agent also gives <b>robot video models a memory</b>, so a tube shut in a drawer or a fan the robot turned away from is still the same when it comes back. <a class="go" href="#robotics">Watch the robot videos&nbsp;&darr;</a></li>
+    </ul>
+
+    <h3 class="subh reveal">Efficiency</h3>
+    <p class="lead reveal">The agent runs on its own GPUs, so memory never holds up the video. Below, both real-time systems run Overclock, the first of the long stories further down the page. While the generator makes one shot, the agent prepares the memory for the next one. <b>The video plays in real time and never waits for memory.</b></p>
+    <figure class="gpubox reveal">
+      <div class="gp-sw"><div class="seg2 model" id="gpSeg" role="group" aria-label="System"><button data-k="fh" aria-pressed="true"><span class="pfx">Agentic LongLive (</span>FastH3-Omni<span class="pfx">)</span></button><button data-k="ar" aria-pressed="false"><span class="pfx">Agentic LongLive (</span>AR<span class="pfx">)</span></button></div></div>
+      <div class="dia" id="gpuDia"></div>
+      <figcaption class="gp-note"><span data-gk="fh">FastH3-Omni takes all eight GPUs of one 8×B200 node, and the agent runs on three B200s of a second node. FastH3-Omni makes a whole shot at once, so a shot can play only when all of it is made. The bars at the bottom keep time. The next shot is ready after 6.6&#8239;s and the agent’s memory after 5.2&#8239;s, both before the 8&#8239;s on screen run out.</span><span data-gk="ar" hidden>LongLive-H3 and the agent share one 8×B200 node. Four GPUs make each shot chunk by chunk, a fifth decodes every chunk as soon as it is made, and three run the agent. The first frames are ready 1.5&#8239;s after the prompt and play while the rest of the shot is still being made, and the whole shot is done after 5.5&#8239;s. The agent’s memory for the next shot is ready after 5.8&#8239;s, before the next prompt arrives at 8&#8239;s.</span> The animation runs at real pace, and the agent’s draw and check steps are simplified. <span data-gk="fh">Times are means of a live 40-shot run (paper appendix).</span><span data-gk="ar" hidden>Times are from the paper: the generator’s timing runs, with the agent driven at the same 8&#8239;s pace.</span></figcaption>
+    </figure>
+
+    <p class="lead reveal">How fast is that in frames per second? <b>With the agent running, FastH3-Omni, LongLive-H3 and LongLive-2.0 all stay above 24&#8239;FPS, and Agentic LongLive (Offline) does not.</b> The gray bars are the generators alone. LongLive-2.0 runs as fast with the agent as without it (34.3 and 34.1&#8239;FPS), because the agent has GPUs of its own. LongLive-H3 and FastH3-Omni lose about 4&#8239;FPS and stay 5 to 11&#8239;FPS above real time. H3 models put the prompt first in their input, so the memory pictures can only go in after the prompt arrives, on the generator’s own GPUs (about 0.5&#8239;s per shot on LongLive-H3). Like most existing agent systems for video, the offline system is far from real time: it needs almost ten minutes for one 8&#8239;s shot.</p>
+    <div class="ecard wide reveal">
+      <h3>Frames per second, with the agent running</h3>
+      <div class="chart" id="fpsChart"></div>
+      <div class="legend"><span><i style="background:var(--g)"></i>real time</span><span><i style="background:var(--base)"></i>generator alone</span><span><i style="background:var(--p)"></i>not real time</span></div>
+      <p class="fps-note">LongLive-2.0 needs six B200s in total (one for the generator, two for decoding and memory prefill, three for the agent). LongLive-H3 fills one 8×B200 node. FastH3-Omni takes a whole 8×B200 node for the generator, because H3’s attention heads split only over 4, 7 or 8 GPUs, so its agent runs on three B200s of a second node. The FastH3-Omni and LongLive-2.0 rows are live runs of a 40-shot story with prompts arriving at playback pace, and the LongLive-H3 row is the paper’s timing run with the agent driven at the same pace. FastH3-Omni delivers a shot to the viewer in 7.7&#8239;s including the transfer between the two nodes (24.9&#8239;FPS). The Agentic LongLive (Offline) row counts 556&#8239;s of generation and the 25&#8239;s prompt rewrite per 8&#8239;s shot. <span class="hv">Hover over</span><span class="tc">Tap</span> a bar for its setup.</p>
+    </div>
+
+    <h3 class="subh reveal">Long streams</h3>
+    <p class="lead reveal">Forgetting adds up over a long stream. We extended nine hand-written stories to 80 shots, about 14 minutes each, and ran them on LongLive-2.0 with two seeds, once with our memory and once with its built-in memory. <b>With our memory, the protagonist stays recognizable for all 14 minutes.</b> Identity stays near 90%, while the built-in memory drops from 65% to about 30% after two minutes. Image quality behaves the same way. Ours stays flat, and the built-in memory decays over the whole story. The switch above the chart shows both.</p>
+    <div class="ecard wide reveal">
+      <h3>Over 14 minutes <span class="seg2" id="lhSeg"><button aria-pressed="true" data-k="identity">identity</button><button aria-pressed="false" data-k="imaging">image quality</button></span></h3>
+      <div class="chart" id="lhChart"></div>
+      <div class="legend"><span><i class="ln" style="background:var(--g)"></i>with our memory</span><span><i class="ln" style="background:var(--base)"></i>LongLive-2.0, built-in memory</span></div>
+      <p class="fps-note">Nine hand-written stories extended to 80 shots (14 min), two seeds. Per-minute means with 95% intervals, as in the paper. <span class="hv">Hover over</span><span class="tc">Tap</span> the chart for each minute.</p>
+    </div>
+
+    <h3 class="subh reveal" id="tldr-results">Results</h3>
+    <p class="lead reveal">Two of our long stories. The prompts arrive one shot at a time, and <b>each video is one take of the whole story</b>. The buttons switch between our system on two real-time generators and an offline version with no time limit. Six more stories, and how each system runs, are in <a href="#results">More Results</a>.</p>
+    <div class="wallbar reveal"><p class="wallhint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3l12 9-5.2 1.1L15.6 19l-2.4 1.1-2.8-5.9L6 18z"/></svg><span class="hv">Hover over a video to watch the agent behind it.</span><span class="tc">Tap a video to watch the agent behind it.</span><span class="of">Agentic LongLive (Offline): not real time, so no agent view. Hover to read the prompts.</span></p>
+      <div class="seg2 model" id="tlSeg" role="group" aria-label="System"><button data-m="fasth3" aria-pressed="true"><span class="pfx">Agentic LongLive (</span>FastH3-Omni<span class="pfx">)</span></button><button data-m="longlive_h3" aria-pressed="false"><span class="pfx">Agentic LongLive (</span>AR<span class="pfx">)</span></button><button data-m="offline" aria-pressed="false"><span class="pfx">Agentic LongLive (</span>Offline<span class="pfx">)</span></button></div></div>
+    <div class="wallbox reveal" id="tlWall"><div class="wall"></div><div class="insp" aria-hidden="true"><div class="ibox" role="dialog" aria-label="Agent view"></div></div></div>
+    <p class="lead reveal tl-rl">One robot example, generated by a robot video model. Left: the video model alone. Right: <b>the same model with our agent</b>, which remembers the fan while the robot looks away. More examples, and how the agent works with robots, are in <a href="#robotics">Robotics</a>.</p>
+    <div class="rl-list" id="tlRl" data-rl="fan"></div>
+  </div>
+</section>
+
+<section class="sec" id="method">
+  <div class="wrap">
+    <h2 class="reveal"><span class="sn">1</span>The System</h2>
+    <p class="lead reveal">Agentic LongLive pairs a real-time video generator with a memory agent that runs next to it on separate GPUs. The generator keeps streaming, and the agent keeps a memory of the story and hands it over before each shot. Here is how the pieces fit together.</p>
+
+    <article class="mblk">
+      <h3 class="reveal"><span class="sn">1.1</span>Memory is built while the video plays</h3>
+      <div class="mtxt reveal">
+        <p>In a live stream, nobody knows the next prompt in advance. It arrives only when its shot starts. Drawing and checking a memory image takes seconds, so an agent that worked between shots would freeze the video every time a prompt came in.</p>
+        <p><b>So the agent runs in parallel, on its own GPUs, one shot ahead of the generator.</b> While shot <i>i</i>−1 plays, it reads the prompts revealed so far and prepares the memory for shot <i>i</i>. The first version is committed as soon as it is drawn, and a redraw replaces it only if it passes a check. At the boundary, the generator simply takes the newest version that is ready.</p>
+        <p>The agent reads prompts and never the generated video. <b>A mistake in one shot is therefore never written back into memory, and it cannot spread to the next shot.</b></p>
+      </div>
+      <figure class="mfig reveal"><div class="dia" data-dia="async"></div>
+        <figcaption>When <i>p<sub>i</sub></i> arrives, v2 is still being drawn, so the generator uses v1 and moves on. The video waits <span style="white-space:nowrap">0.00&#8239;s.</span></figcaption></figure>
+    </article>
+
+    <article class="mblk">
+      <h3 class="reveal"><span class="sn">1.2</span>Two layers of memory</h3>
+      <div class="mtxt reveal">
+        <p>A real-time generator has no notebook. <b>Everything it remembers lives in its attention.</b> An autoregressive model like LongLive keeps the key/value (KV) cache of its last few chunks, plus a few sink slots at the very start that are never dropped. Both are filled with the model’s own output. The sink keeps the opening frames and the window keeps the last few seconds. Everything in between, such as the jacket from shot 3 or the kitchen from shot 5, is lost, and a small mistake in the last shot becomes part of what the model remembers.</p>
+        <p>That raises a simple question. <b>Could the agent maintain this sink and KV cache for the generator, or even generate them?</b> The agent reads every prompt, never drops an entity and has time to check its work. It needs two things for this: a memory of the story that it updates as prompts arrive, and a way to write that memory in a form the video model can read. These are the two layers.</p>
+        <p>Take a short story from the paper. Leo and his bichon Mochi have a picnic in the park, get caught in a sudden rain, change into rain gear at home, and go for a walk down a rainy street. What should the agent remember?</p>
+        <p><b>The first layer is an entity memory.</b> Every person, object and place gets a short text state and an image, and both change only when a prompt changes them. When the rain comes, Leo, Mochi and the blanket each get a new, wet version. At home, Leo puts on a rain jacket and Mochi a yellow raincoat. The images keep what should last, such as identity, clothing and wetness, and leave pose and action to the next prompt.</p>
+        <p><b>The second layer turns these entities into pictures the video model can read.</b> A sink is made of frames, so whatever the agent wants remembered has to look like a frame. A global image G shows the main characters and key objects as they are now. A shot memory image M shows the current place with the entities that are active there. Both are composed from the entity images instead of being redrawn from text, so Mochi keeps the same face from shot to shot.</p>
+      </div>
+      <figure class="mfig reveal"><div class="dia" data-dia="layers"></div>
+        <figcaption>The Leo and Mochi story from the paper. A version appears when a prompt changes it, and G and M are then composed for the next shot.</figcaption></figure>
+    </article>
+
+    <article class="mblk">
+      <h3 class="reveal"><span class="sn">1.3</span>Memory enters through the attention sink</h3>
+      <div class="mtxt reveal">
+        <p>Now the agent has pictures, and the generator already has a place it never forgets. The video model generates the video chunk by chunk, and each new chunk looks back at a short window of earlier ones. The first slots of that window, the attention sink, are always kept. G and M are encoded by the VAE and prefilled as key/value blocks into exactly these slots before the shot that uses them. Without the agent, the sink keeps the first frames of the video. <b>Now it keeps what the agent chose to remember.</b></p>
+        <p>A shot starts from G and the two latest memory images, followed by a short gap as at a scene cut. Once its first chunk is generated, that chunk is pinned in place of the memory images, next to G, and the window rolls on as new chunks push old ones out. <b>Memory sets the look at the start of a shot and then steps aside,</b> so the video follows the prompt instead of copying the layout of the memory image.</p>
+        <p><b>Few-step generators that make a whole shot at once, such as FastH3-Omni, need no sink of chunks.</b> The memory images are placed just before the shot on the model’s time axis, like frames of an earlier shot followed by a cut, and the shot is generated after them. The memory and the agent are the same.</p>
+        <p>When the next prompt arrives, the agent decides where the story is. The same place keeps the memory. An earlier place recalls the newest image drawn there. A new place keeps only G. <b>This short choice is the only model call on the critical path.</b></p>
+      </div>
+      <figure class="mfig reveal"><div class="dia" data-dia="sink"></div>
+        <figcaption>Top: the window over three shots. Memory starts each shot and is dropped, the first chunk is pinned, and old chunks are pushed out. Bottom: the routing choice when the next prompt arrives.</figcaption></figure>
+    </article>
+
+    <article class="mblk">
+      <h3 class="reveal"><span class="sn">1.4</span>Learning what to remember</h3>
+      <div class="mtxt reveal">
+        <p>The memory images have only a few slots, and the agent has to fill them before it knows the next prompt. Should it draw Leo’s umbrella now, or the street? <b>A small planner, Qwen3-8B with LoRA, learns this with reinforcement learning.</b> For every shot it writes one JSON update from the prompts revealed so far.</p>
+        <p>After shot 8 of the Leo story, for example, it notes that Leo is in rain gear and the umbrella is wet. It puts Leo, Mochi and the umbrella into G, and the street, Leo and Mochi into M. A <b>hindsight reward</b> then scores this update against annotations of later shots. Those shots stay hidden from the policy and are used only for scoring.</p>
+        <p>A text judge checks the states that later shots need. An image judge renders G and M and checks that the next shot’s entities are recognizable. <b>The image weights come from real video outcomes:</b> an entity gains about as much from being in G as from being in M, and each M member that never appears costs a little. GRPO updates the policy, while the image, video and judge models stay frozen.</p>
+      </div>
+      <figure class="mfig reveal"><div class="dia" data-dia="rl"></div>
+        <figcaption>Only revealed prompts go into the policy. Hidden prompts score the update, and the reward then flows back to the policy.</figcaption></figure>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="results">
+  <div class="wrap">
+    <h2 class="reveal"><span class="sn">2</span>More Results</h2>
+    <p class="lead reveal">In every story below the prompts arrive one shot at a time, and nobody knows the next one in advance. For the two real-time systems you can open the agent behind each video and watch everything it did while the story played. <b>Each video is a single rollout of the whole multi-shot story, generated in one pass.</b> It is not stitched together from shots that were generated and picked one by one. One take per story.</p>
+
+    <h3 class="subh reveal"><span class="sn">2.1</span>Long stories</h3>
+    <p class="lead reveal">The buttons switch between three systems, all built on MiniMax-H3. <b>Agentic LongLive (FastH3-Omni)</b> runs our system with FastH3-Omni, a few-step distillation of MiniMax-H3 released by <a href="https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1" target="_blank" rel="noopener">FastVideo</a> that generates each 8&#8239;s shot at once. <b>Agentic LongLive (AR)</b> runs it with LongLive-H3, which is autoregressive and streams the shot chunk by chunk, so its first frames appear 1.5&#8239;s after the prompt. <b>Both run in real time with the same memory agent.</b></p>
+    <p class="lead reveal"><b>Agentic LongLive (Offline)</b> shows how far the same idea goes without a time limit. Its agent runs on commercial APIs: <b>Gemini 3.8 Flash</b> plans the memory, checks every image and rewrites each prompt into H3’s reference format, and an image model draws the entity images (<b>Gemini 3 Pro Image</b> for these stories, <b>GPT Image 2.5</b> in the paper). The generator is the original 50-step <b>MiniMax-H3 Ref2VA</b>, which takes up to six of these images as references for each shot. <b>It is not real time.</b> One 8&#8239;s shot takes about 556&#8239;s of generation on four H100s. A memory update takes one to two minutes of API time, so it is ready before the shot that uses it, and only the 25&#8239;s prompt rewrite waits for the new prompt. Because nothing here runs live, these videos have no agent view.</p>
+    <p class="lead reveal">For each story and system we ran only four seeds and picked one of them for this demo, except Spare Parts, which is hard for the base model and got more seeds on Agentic LongLive (AR).</p>
+    <div class="wallbar reveal"><p class="wallhint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3l12 9-5.2 1.1L15.6 19l-2.4 1.1-2.8-5.9L6 18z"/></svg><span class="hv">Hover over a video to read its prompts and watch the agent behind it: what it remembers, draws and checks for each shot.</span><span class="tc">Tap a video to read its prompts and watch the agent behind it: what it remembers, draws and checks for each shot.</span><span class="of">Agentic LongLive (Offline): not real time, so no agent view. Hover to read the prompts, and click the speaker for sound.</span></p>
+      <div class="seg2 model" id="modelSeg" role="group" aria-label="System"><button data-m="fasth3" aria-pressed="true"><span class="pfx">Agentic LongLive (</span>FastH3-Omni<span class="pfx">)</span></button><button data-m="longlive_h3" aria-pressed="false"><span class="pfx">Agentic LongLive (</span>AR<span class="pfx">)</span></button><button data-m="offline" aria-pressed="false"><span class="pfx">Agentic LongLive (</span>Offline<span class="pfx">)</span></button></div></div>
+    <div class="wallbox reveal" id="rtWall"><div class="wall"></div><div class="insp" aria-hidden="true"><div class="ibox" role="dialog" aria-label="Agent view"></div></div></div>
+
+    <h3 class="subh reveal" id="robotics"><span class="sn">2.2</span>Robotics</h3>
+    <p class="simnote reveal">Every robot video in this section is generated by a robot video model. It is a video-generation simulation, not footage of a real robot.</p>
+    <p class="lead reveal">Robot video models are used to simulate what a robot will see. A robot keeps turning away from things and shutting them inside drawers, and later it comes back for them. A robot video model that continues each instruction from its last frame has nothing left of what went out of view, so it makes something new up. <a href="https://nvlabs.github.io/LongLive/Long-WAM/" target="_blank" rel="noopener">Long-WAM</a>, our companion work in the LongLive family, scales how much visual history a world-action model can use while staying real time. Our agent complements it by remembering what has already left that history, and the paper also tests our memory on Long-WAM’s robot video model. A robot works in one continuous scene, not a sequence of separate shots, so the agent has to watch the generated video itself to know what to remember. It writes down where each object is and what it looks like, and keeps pictures of the scene, of the inside of open containers and close-ups of objects. When an instruction brings something back, it hands the right pictures to the generator. While a segment is being generated, it watches the last finished one and prepares the next, so its time stays hidden inside generation. For this, each instruction is given one segment in advance. <b>After the robot turns away and comes back, the green tube is still in the drawer and the square desk fan is still the same fan.</b></p>
+    <p class="lead reveal">Each example is one 64&#8239;s video generated from a single input image (from RoVid-X) and eight robot instructions of 8&#8239;s each, with no cuts. Left: the video model alone, FastH3-Omni (8 steps), with the same instructions. Right: <b>Agentic LongLive (FastH3-Omni)</b>, the same model with our agent (Qwen3.6-35B-A3B), which passes it up to two memory pictures. Because the agent works while the video is generated, its notes trail the video by one instruction. Green parts of the timeline are where something should come back. Across 30 such videos, a blind judge finds the returning thing unchanged and in the same place at 56% of these moments with our agent and at 20% without it. The desk fan in the Results above follows one of those 30 scripts. The drawer and card examples below use short scripts with one simple action per instruction, written for this page on two of the same input images. In all three examples, the video model alone starts from the same first instruction as ours and runs on its own from there.</p>
+    <div class="rl-list" id="rlList"></div>
+  </div>
+</section>
+
+<section class="sec" id="cite">
+  <div class="wrap">
+    <h2 class="reveal">BibTeX</h2>
+    <div class="bib reveal"><button class="copy" id="copyBib">Copy</button><pre id="bibtex">@article{liu2026agenticlonglive,
+  title   = {Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation},
+  author  = {Liu, Shaoteng and Yang, Shuai and Huang, Wei and Wang, Luozhou and Han, Song and Chen, Yukang},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</pre></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/robot_long.js"></script>
+<script src="assets/robot_long_app.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
