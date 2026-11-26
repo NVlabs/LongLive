@@ -22,6 +22,7 @@ SPDX-License-Identifier: Apache-2.0
 
 <p align="center">
   <a href="https://arxiv.org/abs/2611.34907"><img src="https://img.shields.io/badge/arXiv-2611.34907-B31B1B" alt="Paper on arXiv"></a>
+  <a href="https://huggingface.co/papers/2611.34907"><img src="https://img.shields.io/badge/Hugging_Face-Paper-FFD21E" alt="Paper on Hugging Face"></a>
   <a href="https://github.com/NVlabs/LongLive/tree/main/Agentic-LongLive"><img src="https://img.shields.io/badge/GitHub-Code-181717" alt="Code"></a>
   <a href="https://nvlabs.github.io/LongLive/Agentic-LongLive/"><img src="https://img.shields.io/badge/Project-Page-76B900" alt="Project page"></a>
   <a href="https://www.youtube.com/watch?v=czP61EBbaa4"><img src="https://img.shields.io/badge/YouTube-Video-FF0000" alt="Watch Agentic LongLive on YouTube"></a>
