@@ -1,0 +1,53 @@
+{
+ "name": "demo_card",
+ "title": "Handing over a card",
+ "summary": "The robot hands a card to the person and closes the laptop, turns to the side cart where a white mug stands, picks it up, turns back and puts it down on the desk.",
+ "based_on": "13_hand_card_to_person",
+ "camera": "head camera",
+ "robot": "silver robotic arm with a black dexterous hand",
+ "setting": "office desk with a laptop, organizer tray, and a white side cart",
+ "first_frame": "13_hand_card_to_person.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "ec7e7f229c5abb32ff7796b7d0de8eff",
+  "frame_index": 0,
+  "original_prompt": "pick up card and give it to the person",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "2940a41fb19b8a1dc031e17431308a516f7b78bb0413f8f4551eb713ab637075"
+ },
+ "segments": [
+  {
+   "instruction": "Extend the card forward until the person grasps it, keeping the camera pointed at the person and laptop.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the card as the person takes it, and retract the hand back over the wooden organizer.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach toward the laptop display and push it down until the lid is completely closed.",
+   "memory_event": "hide: laptop screen and keyboard hidden beneath the closed lid"
+  },
+  {
+   "instruction": "Turn the camera left toward the white side cart, where a white mug stands next to the white adapter on its top surface, and reach toward the mug.",
+   "memory_event": "hide: the main desk, organizer, laptop and person leave the view as the camera turns away"
+  },
+  {
+   "instruction": "Grasp the white mug standing on top of the side cart next to the white adapter by its handle and lift it a little, keeping the camera on the cart.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the camera back to the main desk, holding the white mug.",
+   "memory_event": "return: the main desk reappears with the wooden organizer, the closed laptop and the person exactly as left"
+  },
+  {
+   "instruction": "Put the white mug down on the desk in front of the person, next to the closed laptop.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Let go of the white mug and pull the hand back beside the wooden organizer.",
+   "memory_event": "none"
+  }
+ ]
+}

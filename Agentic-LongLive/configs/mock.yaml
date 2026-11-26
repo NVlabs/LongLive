@@ -1,0 +1,8 @@
+# Offline dry run on CPU: mock planner / checker / image models and a mock video generator.
+#   python scripts/run_story.py --config configs/mock.yaml
+defaults: [agents/mock.yaml, backends/mock.yaml]
+story: stories/longstory_online/collie_muddy_day.json
+output_dir: outputs/mock
+seed: 0
+max_shots: 6
+runtime: {entity_cards: true}

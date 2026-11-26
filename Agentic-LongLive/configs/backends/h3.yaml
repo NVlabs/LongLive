@@ -1,0 +1,17 @@
+# MiniMax-H3 generators (LongLive-H3, FastH3-Omni) through a worker queue; start a worker first
+# (docs/generators.md). Memory pictures at 0 / 0.25 / 0.5 s on H3's clock, the shot starts after a cut at 2 s.
+backend:
+  name: h3
+  injection: sink
+  params:
+    queue_dir: ${oc.env:AGL_H3_QUEUE,outputs/queues/h3}
+    prompt_variant: h3          # per-shot H3 audio-video prompts stored in the story files
+    ref_seconds: [0.0, 0.25, 0.5]
+    video_start_seconds: 2.0
+    g_masks: matte              # drop G's studio-backdrop tokens: BiRefNet matting OR backdrop key (key: no model)
+    scene_routing: llm
+    route_llm_url: ${oc.env:AGL_ROUTE_URL,http://127.0.0.1:31001/v1}
+    route_llm_model: ${oc.env:AGL_ROUTE_MODEL,Qwen/Qwen3.6-35B-A3B-FP8}
+    route_llm_style: sglang
+    fps: 24
+    timeout_s: 1200

@@ -1,0 +1,453 @@
+{
+  "id": "detective_silver_key_terse",
+  "setup": {
+    "title": "The Silver Key",
+    "style": "Live-action, cinematic neo-noir: rain, neon reflections, warm interiors, a cold blue dawn.",
+    "cast": [
+      {
+        "id": "sol",
+        "name": "Detective Sol",
+        "description": "Detective Sol, a middle-aged Latino man with a shaved head, a thin scar through his right eyebrow, a navy overcoat over a grey shirt, and a copper sun-shaped badge pinned on the coat lapel."
+      }
+    ],
+    "extras": {
+      "voice": "Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1),",
+      "music": "Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout.",
+      "speech": "Sol narrates the case in a quiet voice-over style, sometimes speaking aloud to himself."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "Night envelops a narrow, claustrophobic alleyway battered by relentless heavy rain. Overhead neon signage casts vibrant reflections in pools of magenta, electric cyan, and warm amber across slick asphalt and wet brick surfaces. Deep shadows fill the recesses between fire escapes, while dense sheets of falling water shimmer under the glow of distant streetlamps and hanging commercial fixtures. The air is thick with cold mist and urban dampness, creating an atmospheric neo-noir environment filled with glistening surfaces, steam, and dark, rippling puddles.\n\nDetective Sol, a middle-aged Latino man with a shaved head and a thin scar cutting through his right eyebrow, walks deliberately into the alley. He wears a heavy navy overcoat over a muted grey shirt, with a distinct copper sun-shaped badge pinned to his lapel. Gripping a sturdy flashlight, he clicks it on, casting a piercing white beam through the deluge. Rain runs continuously down his bare scalp and brow as he steadily advances. By the end of his walk, the shoulders and collar of his navy overcoat are visibly saturated and darkened, becoming heavily rain-soaked while he scans the ground without finding anything of note.\n\nThe camera captures the entrance in a wide establishing shot, holding a stable, slowly drifting perspective that emphasizes the scale of the alley. The framing keeps Sol's full figure, the flashing neon reflections, and the towering, sodden brick walls continuously visible throughout, establishing his solitary presence within the drenched urban setting.",
+      "annotation": {
+        "title_en": "The rainy alley",
+        "scene": "rainy_alley",
+        "camera": "wide establishing shot",
+        "beat": "Night, heavy rain in a narrow alley with neon signs. Sol in his navy overcoat walks in with his flashlight, rain running off his shaved head.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "rain-soaked",
+          "key_status": "not found",
+          "clue": "none"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          239,
+          239
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide establishing shot of a rain-swept narrow alleyway at night, where Sol walks deliberately into the entrance beneath towering brick walls. Under relentless heavy rain, the camera holds a stable, slowly drifting wide perspective of the narrow alleyway. Overhead neon signage casts vibrant reflections in magenta, electric cyan, and warm amber across slick asphalt and wet brick between fire escapes and rising steam. Sol, a middle-aged Latino man with a shaved head and a thin scar through his right eyebrow, wears a heavy navy overcoat over a muted grey shirt with a copper sun-shaped lapel badge. He clicks on a sturdy flashlight, casting a piercing white beam through the deluge as rain runs down his bare scalp and brow. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The rain washes every clue away down here, leaving only neon lights and cold shadows.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Sol steadily advances while scanning the ground without finding anything, his coat shoulders and collar visibly darkening and becoming heavily rain-soaked.\n\noverall_soundscape: Heavy rain pours relentlessly onto slick asphalt and brick walls, splashing into dark puddles amidst urban mist. A distinct mechanical click echoes as the flashlight is switched on.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the rainy alleyway.\n\nSol lowers himself onto one knee on the sodden ground. As he crouches, the lower hem of his coat dips into the slush, picking up thick dark streaks of mud along the bottom edge. He reaches down into the puddle with one hand, his fingers dipping into the cold water to retrieve an ornate silver key resting on the gravel beneath. Lifting it up into the dim light, water drips from its metallic surface, clearly revealing a tiny engraved number 214 along its stem. He clutches the silver key firmly between his fingers, examining the newly found clue.\n\nThe camera stays in a low-angle close-up near the street surface, maintaining focus on the rippling puddle before framing Sol’s mud-stained coat hem and his hand as he retrieves the object. The metallic glint of the key and the muddy texture of the fabric remain sharply defined throughout the steady framing.",
+      "annotation": {
+        "title_en": "The key in the puddle",
+        "scene": "rainy_alley",
+        "camera": "close-up",
+        "beat": "Sol kneels beside a puddle, the hem of his coat dropping into the mud, and picks up an ornate silver key with a tiny engraved number 214.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "rain-soaked with a muddy hem",
+          "key_status": "silver key in his hand",
+          "clue": "number 214 engraved on the key"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          242,
+          154
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle close-up in the rainy alleyway, where Sol crouches near a rippling puddle on the sodden ground. The camera holds a steady low-angle close-up near the street surface, maintaining focus on the rippling puddle before framing Sol's coat hem and hand. Sol lowers himself onto one knee on the sodden ground. As he crouches, the lower hem of his coat dips into the slush, picking up thick dark streaks of mud along the bottom edge. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] Left behind in the muddy water, a key marked with the number two hundred fourteen.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Sol reaches down into the puddle with one hand, his fingers dipping into the cold water to retrieve an ornate silver key resting on the gravel beneath. Lifting it up into the dim light, water drips from its metallic surface, clearly revealing a tiny engraved number 214 along its stem. He clutches the silver key firmly between his fingers, examining the newly found clue.\n\noverall_soundscape: Rain patters steadily across the alleyway pavement and splashes softly into puddles. Cold water sloshes as fingers dip beneath the surface, accompanied by the wet dripping of water from lifted metal.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Inside the quiet late-night cafe, amber light from low-hanging vintage lamps casts a warm, golden glow across polished dark wood tables and checkered tile. Raindrops streak steadily down the large windowpane in the background, blurring the neon lights of the street outside. The interior feels humid and sheltered, accented by the faint aroma and rising steam of a fresh cup of black coffee sitting on a corner table.\n\nDetective Sol enters the booth holding the key in his wet fingers. He shakes excess droplets from his coat, shrugs it off his shoulders, and hangs it over the back of his chair. Sol sits down and places the key onto the table beside the mug of black coffee, then leans in closer to inspect the engraved number 214.\n\nThe camera remains in a steady medium profile shot at table height, framing Sol from the side. The framing keeps his face, torso, the steaming coffee cup, and the key on the table in frame, while his coat remains visible draped on the chair behind him throughout.",
+      "annotation": {
+        "title_en": "Shelter in a cafe",
+        "scene": "cafe",
+        "camera": "medium profile shot",
+        "beat": "Inside a quiet late-night cafe with warm lamps, Sol shakes water off his coat, hangs it on the chair and studies the silver key on the table next to a cup of black coffee, now in his grey shirt.",
+        "state": {
+          "outfit": "grey shirt, navy overcoat hung on the chair",
+          "coat_condition": "wet, muddy hem",
+          "key_status": "silver key on the table",
+          "clue": "number 214"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          247,
+          174
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium profile shot of a quiet late-night cafe at table height, where Sol enters a booth beside a steaming mug of black coffee. The camera holds a static medium profile shot at table height, framing Sol from the side. Amber light from low-hanging vintage lamps casts a warm, golden glow across polished dark wood tables and checkered tile, while raindrops streak down the large windowpane blurring exterior neon lights. Holding the key in his wet fingers, Sol shakes droplets from his coat, shrugs it off his shoulders, and hangs it over the chair back. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] Stepping out of the rain, I finally get a close look at room two one four.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Sol sits down and places the key onto the table beside the steaming cup of black coffee. Keeping his face, torso, the cup, the key, and the draped coat in frame, he leans in closer to inspect the engraved number.\n\noverall_soundscape: Steady rain patters against the large glass windowpane alongside the muted rumble of outside street traffic. Wet fabric rustles as droplets shake from the coat, followed by the metallic tap of a key placed onto the wooden tabletop.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the booth inside the quiet late-night cafe.\n\nSol sits at the table, with his coat draped over the chair behind him. He lifts the key and aligns a small magnifying glass under the lamp. Through the lens, past the stamped number 214, a tiny engraved train symbol becomes sharply visible. Sol pauses, his furrowed expression shifting to quiet realization that the key belongs to a station locker. He lowers the glass onto the tabletop, keeping the key held in his hand as he looks up.\n\nThe shot begins in an extreme close-up on the key's surface through the magnifying glass, capturing the fine metallic details. The camera then smoothly dollies back and tilts up into a medium shot, revealing Sol’s face and torso, maintaining clear view of the key in his fingers and his coat draped behind him.",
+      "annotation": {
+        "title_en": "The engraving",
+        "scene": "cafe",
+        "camera": "extreme close-up then medium",
+        "beat": "Sol holds the key under the lamp with a magnifying glass and reads a second engraving: a tiny train symbol. He looks up, realising it belongs to a station locker.",
+        "state": {
+          "outfit": "grey shirt",
+          "coat_condition": "on the chair",
+          "key_status": "silver key in his hand",
+          "clue": "train symbol: a station locker"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          222,
+          140
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme close-up inside a quiet late-night cafe booth, where Sol sits at a table holding a key beneath a magnifying glass. The shot begins in an extreme close-up on the key's surface through the small magnifying glass under the lamp, capturing fine metallic details. Through the lens, past the stamped number 214, a tiny engraved train symbol becomes sharply visible. The camera smoothly dollies back and tilts up into a medium shot, revealing Sol's face and torso at the table, his coat draped over the chair behind him. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] It is not a room number. That tiny train symbol belongs to a station locker.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Sol pauses, his furrowed expression shifting to quiet realization. He lowers the magnifying glass onto the tabletop, keeping the key held in his fingers as he looks up.\n\noverall_soundscape: A low ambient room tone hums quietly in the cafe. A soft metallic scrape accompanies the movement of the key, followed by the dull tap of the magnifying glass resting on the tabletop.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The grand concourse of a central train station opens up late at night, cavernous and almost completely deserted. Cold shadows gather beneath soaring vaulted arches, punctuated by the warm amber radiance of brass wall fixtures and a monumental, glowing analog clock mounted high above the terminal floor. The polished marble floor stretches out like dark water, capturing distorted reflections of overhead chandeliers and distant neon departure boards. Outside, rain softly drums against towering clerestory windows, casting a quiet, moody noir atmosphere across the vast architectural expanse.\n\nDetective Sol strides purposefully across the open hall. Keeping his right hand buried deep inside his coat pocket around the concealed key, he walks at a determined, rhythmic pace. His focused gaze sweeps across the empty space, looking past rows of vacant wooden benches and homing in on the corridor signs that indicate the station lockers.\n\nThe camera moves in a smooth, wide tracking shot backward ahead of Sol, keeping him centered within the overwhelming emptiness of the terminal. The low-angle framing preserves the immense scale of the hall, keeping his entire figure, the gleaming reflections beneath his boots, and the illuminated clock face clearly visible throughout the stride.",
+      "annotation": {
+        "title_en": "Central station",
+        "scene": "train_station",
+        "camera": "wide tracking shot",
+        "beat": "Sol, coat back on, strides through a grand, almost empty train station hall at night with a big clock and marble floor, his footsteps echoing.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "drying, muddy hem",
+          "key_status": "silver key in his pocket",
+          "clue": "station locker"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          252,
+          195
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle wide shot of the grand, deserted train station concourse late at night, where Sol strides purposefully across the polished marble floor. The camera moves backward ahead of Sol in a smooth, wide tracking shot, keeping his entire figure centered from a low angle against the cavernous hall beneath soaring vaulted arches. Warm amber glow from brass wall fixtures and a monumental glowing analog clock high above illuminate the shadows. The dark, polished marble floor reflects the chandeliers and distant neon departure boards beneath his boots. Keeping his right hand buried deep inside his coat pocket around the concealed key, Sol maintains a determined pace. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The station was quiet, with only the key in my coat pocket guiding me toward the lockers.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. His focused gaze sweeps past rows of vacant wooden benches, homing in on the corridor signs indicating the station lockers.\n\noverall_soundscape: Rhythmic footsteps echo softly across the vast, empty marble hall. Outside, rain drums gently against the high clerestory windows with a hollow, ambient resonance.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the train station, by the bank of lockers.\n\nSol stands before the lockers. Scanning the engraved plates, he locates locker 214. He reaches into his pocket, pulls out the key, and slips it into the tarnished keyhole. He turns the key, and the brass door creaks open to reveal a small wooden box sitting inside the dark compartment, leaving the key resting in the lock.\n\nThe camera frames Sol in a medium close-up, holding an eye-level perspective that encompasses his focused profile and the locker doors. As the door opens, the camera adjusts slightly, maintaining a clear view of Sol's reaction, the key protruding from the lock, and the newly uncovered wooden box nestled inside.",
+      "annotation": {
+        "title_en": "Locker 214",
+        "scene": "train_station",
+        "camera": "medium close-up",
+        "beat": "Sol stops at a wall of old brass lockers, finds number 214, turns the silver key and the door swings open with a creak, revealing a small wooden box.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "drying, muddy hem",
+          "key_status": "key in the lock of locker 214",
+          "clue": "small wooden box in the locker"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          217,
+          117
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up of the train station by a bank of lockers, where Sol stands facing the engraved plates at eye level. The camera holds an eye-level perspective framing Sol's focused profile and the locker doors in medium close-up. Sol stands before the lockers, scanning the engraved plates until he locates locker two hundred and fourteen. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] Locker two hundred and fourteen. Finally, what we have been searching for all this time.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. He reaches into his pocket, pulls out a key, and slips it into the tarnished keyhole. Sol turns the key, and the brass door creaks open, leaving the key resting in the lock. The camera adjusts slightly as the door swings open, maintaining a clear view of Sol's reaction, the key protruding from the lock, and a small wooden box sitting inside the dark compartment.\n\noverall_soundscape: The ambient rumble and distant echoes of a train station reverberate in the background. A metallic scraping sound accompanies the key sliding into the lock, followed by a firm click and the slow creak of the brass locker door opening.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the train station, now in the early morning.\n\nDetective Sol stands beside a bench. After sliding the silver key into his pocket, he places his hands on the wooden box resting on the seat. He unlatches the tarnished metal clasp and lifts the hinged lid. Inside lies an old, folded paper map of the harbour alongside a small, curling black-and-white photograph of a desolate coastal lighthouse. Sol looks down at the newly revealed clues with steady, silent intensity.\n\nThe camera maintains a high-angle close-up framing the box on the bench and Sol's hands. As he lifts the lid, the camera executes a gentle push-in, bringing the intricate street grids of the harbour map and the grain of the lighthouse photograph into sharp, tactile focus while his hands frame the periphery.",
+      "annotation": {
+        "title_en": "The box",
+        "scene": "train_station",
+        "camera": "close-up",
+        "beat": "Sol opens the wooden box on a bench: inside are an old folded map of the harbour and a black-and-white photo of a lighthouse.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "drying, muddy hem",
+          "key_status": "key back in his pocket",
+          "clue": "harbour map and lighthouse photo"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          132
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle close-up inside the train station in the early morning, where Detective Sol stands beside a bench with a wooden box resting on the seat. From a high angle framing the wooden box and his hands, Detective Sol slides the silver key into his pocket and places his hands on the box resting on the seat. He unlatches the tarnished metal clasp and begins lifting the hinged lid. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The key yielded its secret, pointing toward an old harbor map and a lonely lighthouse.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. As he raises the lid, the camera executes a gentle push-in, bringing the intricate street grids of the folded paper map of the harbour and the grain of the curling black-and-white photograph of the desolate coastal lighthouse into sharp, tactile focus. His hands frame the periphery as Sol looks down at the newly revealed clues with steady, silent intensity.\n\noverall_soundscape: A quiet, hollow train station ambiance echoes faintly in the background. The tarnished metal clasp snaps open with a light metallic click, followed by the soft wooden scrape of the hinged lid opening.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the train station concourse.\n\nDetective Sol stands before the glass, holding the map and photo in his hands. Glancing up at the window pane, he spots the reflection of a shadowy figure in a brimmed hat watching him from across the concourse. Sol’s expression hardens. Without turning around, he smoothly tucks the map and photo deep inside the breast pocket of his coat, completely concealing them. He then pivots abruptly and strides briskly away along the concourse.\n\nThe camera maintains an over-the-shoulder framing behind Sol. The shot begins focused on his close silhouette before executing a rack focus into the dark glass reflection, bringing the distant, stationary watcher in the hat into crisp clarity. As Sol conceals the map and turns away, the camera pans smoothly to track his sudden departure, keeping his hurried stride visible against the receding station lights.",
+      "annotation": {
+        "title_en": "Being followed",
+        "scene": "train_station",
+        "camera": "over-the-shoulder, rack focus",
+        "beat": "In the reflection of a dark shop window Sol notices a figure in a hat watching him. He tucks the map inside his coat and walks away quickly.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "drying, muddy hem",
+          "key_status": "in pocket",
+          "clue": "map hidden in his coat"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          245,
+          143
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an over-the-shoulder shot inside a train station concourse, where Sol stands before the glass holding a map and photo. The shot begins focused on Sol's close silhouette as he gazes toward the window pane. The camera executes a rack focus into the dark glass reflection, bringing a distant, stationary shadowy figure in a brimmed hat into crisp clarity. Sol’s expression hardens. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] Eyes in the glass reflection. Someone is watching every step I take through this station.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Without turning around, Sol smoothly tucks the map and photo deep inside the breast pocket of his coat, completely concealing them. He pivots abruptly and strides briskly away along the concourse, while the camera pans smoothly to track his sudden departure, keeping his hurried stride visible against receding station lights.\n\noverall_soundscape: The cavernous reverberation of a train concourse carries distant echoes and murmurs. Paper rustles against coat fabric as the items are tucked away, followed by the firm, brisk cadence of shoe leather clicking across the concourse floor.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The interior of the yellow taxi moves through the rainy city night, bathed in fluctuating shadows and passing neon glows. Raindrops streak across the wet glass, smearing reflections of amber streetlamps, cold cyan shopfronts, and red brake lights into fluid streaks of color. The cab's enclosed cabin feels secluded and damp, surrounded by the muted hum of night traffic.\n\nIn the back seat, Detective Sol reaches inside his coat, withdraws the harbour map, and unfolds it flat across his knee. As the taxi travels, shifting bands of neon light slide across his face. His fingers steady the paper as he studies the docks, the key remaining hidden in his pocket.\n\nThe camera frames Sol in a close-up viewed through the taxi’s front windscreen, shooting from the dashboard toward the rear seat. Beaded water droplets on the exterior glass create a textured foreground, yet Sol’s concentrated expression and the unfolded map on his knee remain continuously clear. The camera holds a stable, smooth perspective as city illumination drifts over his features.",
+      "annotation": {
+        "title_en": "Taxi to the harbour",
+        "scene": "taxi_night",
+        "camera": "close-up through the windscreen",
+        "beat": "In the back of a yellow taxi, rain streaking the windows, Sol unfolds the harbour map on his knee, city lights sliding across his scarred face.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "drying",
+          "key_status": "in pocket",
+          "clue": "harbour map"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          225,
+          170
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot of the interior of a yellow taxi moving through a rainy city night, where Detective Sol sits in the back seat. From the dashboard, the camera holds a stable, smooth perspective through the front windscreen toward the rear seat, keeping beaded water droplets in the foreground while rain streaks smear reflections of amber streetlamps, cold cyan shopfronts, and red brake lights across the glass. In the back seat, Detective Sol reaches inside his coat, withdraws the harbour map, and unfolds it flat across his knee. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The docks held the answer, hidden somewhere along those wet piers before midnight arrived.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Shifting bands of neon light slide over Sol's face as his fingers steady the paper. Sol studies the docks with a concentrated expression, the map remaining clear while the key remains hidden in his pocket.\n\noverall_soundscape: Raindrops patter and streak continuously against the taxi windshield. The muffled hum of the engine and tires rolling over wet asphalt fills the enclosed cabin, blending with distant, muted city traffic.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "A stormy coastal pier of dark, glistening stone stretches out toward a towering white lighthouse under a bruised, overcast sky. The atmosphere is cold, raw, and dominated by deep oceanic blues and slate-grey tones. Enormous waves relentlessly batter the slick breakwater, sending plumes of frothing white spray into the howling gale, while the distant, weathered lighthouse stands resolute amidst the turbulent marine mist.\n\nSol walks along the slippery masonry. As he trudges toward the beacon, violent crests of saltwater wash across the walkway, thoroughly soaking his coat until the heavy fabric is visibly darkened and dripping with sea spray. His coat whips violently in the wind as he leans into the blast, keeping his hands jammed deep into his pockets while his gaze remains fixed directly ahead on the looming structure.\n\nThe camera holds a dramatic wide shot, executing a continuous, slow push forward along the length of the pier behind Sol. The framing keeps his solitary figure centered in the lower-middle frame against the expansive, wave-swept stone, preserving the imposing verticality of the white lighthouse and the violent, churning surf across the entire duration.",
+      "annotation": {
+        "title_en": "The lighthouse",
+        "scene": "lighthouse_exterior",
+        "camera": "wide shot, slow push",
+        "beat": "Sol walks along a stormy stone pier toward a tall white lighthouse, waves crashing beside him, his coat whipping in the wind.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "soaked by sea spray",
+          "key_status": "in pocket",
+          "clue": "lighthouse from the photo"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          185
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a dramatic wide shot of a stormy coastal pier under a bruised, overcast sky, where Sol walks along the glistening stone toward a towering white lighthouse. The camera executes a continuous, slow push forward along the length of the pier behind Sol, keeping his solitary figure centered in the lower-middle frame against the dark, glistening stone and churning surf. Sol trudges along the slippery masonry toward the weathered beacon, leaning into the howling gale with his hands jammed deep into his pockets. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The freezing spray cuts through everything, but the distant light stands resolute against the storm.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Enormous waves relentlessly batter the slick breakwater, sending plumes of frothing white spray across the walkway. Violent crests of saltwater wash over the pier, thoroughly soaking his coat until the heavy fabric is visibly darkened and dripping while it whips violently in the wind.\n\noverall_soundscape: Howling gale-force winds roar continuously over the booming impact of massive waves crashing against the slick stone pier. Heavy sea spray hisses across the walkway amidst dripping water and wet gusts.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Inside the vertical hollow of the lighthouse tower, a narrow cast-iron spiral staircase coils steeply upward through the shadowy, damp interior. Rust and condensation slick the curving steps and peeling whitewashed masonry walls. Deep gloom engulfs the space, broken only by the sharp, wandering beam of a handheld flashlight that throws harsh geometric shadows across the ribbed ironwork. The atmosphere is cold, echoing, and claustrophobic, dense with the smell of wet salt and oxidized metal.\n\nSol climbs the winding steps. In one hand, he directs the flashlight upward toward the distant lamp room, while his other hand grips the cold iron handrail for balance. He breathes hard from the continuous ascent, his chest rising and falling as his boots make rhythmic metallic contact with the treads. The silver key stays concealed within his pocket as he pushes steadily higher.\n\nThe camera shoots from a steep low angle looking upward through the center of the spiral structure. It slowly tilts and tracks upward, maintaining a wide framing that captures Sol's ascending figure against the dizzying geometric repetition of the staircase. The sweeping cone of flashlight illumination remains distinctly visible throughout the climb.",
+      "annotation": {
+        "title_en": "The spiral stairs",
+        "scene": "lighthouse_interior",
+        "camera": "low angle looking up",
+        "beat": "Inside the lighthouse Sol climbs a narrow iron spiral staircase by flashlight, breathing hard, his hand on the cold rail.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "soaked",
+          "key_status": "in pocket",
+          "clue": "climbing to the lamp room"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          251,
+          191
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot looking up inside the vertical hollow of the lighthouse tower, where Sol ascends a narrow cast-iron spiral staircase. From a steep low angle looking upward through the center of the spiral structure, the camera slowly tilts and tracks upward, maintaining wide framing. Rust and condensation slick the curving steps and peeling whitewashed masonry walls within the deep gloom. Sol climbs steadily, gripping the cold iron handrail with one hand while directing the handheld flashlight toward the distant lamp room. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The spiral staircase feels endless, each heavy step echoing into the damp, shadowed hollow above.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. The sweeping cone of the flashlight casts harsh geometric shadows across the ribbed ironwork. Sol's chest rises and falls with hard breaths, his boots striking the treads in rhythmic metallic contact as he keeps the silver key concealed inside his pocket.\n\noverall_soundscape: Heavy boots clang rhythmically against the damp cast-iron treads, reverberating through the hollow vertical shaft. Strained breathing mingles with the faint drip of condensation along the slick masonry walls.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Inside the lighthouse lamp room, the massive multi-faceted glass Fresnel lens dominates the space, catching cold blue dawn light filtering through panoramic curved windows. Rain trickles down the outer panes, leaving the circular chamber immersed in deep shadows and pale reflections. Dust motes drift across aged brass mountings and the heavy iron console beneath the optic assembly. The atmosphere is quiet, damp, and steeped in cold maritime history.\n\nDetective Sol stands beside the tarnished console. Crouching slightly, he inspects the underside of the console and spots a hidden keyhole. He pulls the key from his pocket, slides it into the lock, and turns it. Sol eases open a concealed drawer, revealing a bundle of yellowed old letters tied with red string. The key remains inserted in the lock as he pauses, looking directly down at the bundle.\n\nThe camera maintains a stable medium shot at console height, framing Sol from the waist up beside the curving glass lens. A subtle, gradual push-in tracks his movement as the drawer slides open, keeping his focused expression and the red-stringed letters clearly visible.",
+      "annotation": {
+        "title_en": "The hidden drawer",
+        "scene": "lighthouse_lamp_room",
+        "camera": "medium shot",
+        "beat": "In the lamp room beside the huge glass lens, Sol finds a keyhole under the console, uses the same silver key and pulls out a drawer containing a bundle of old letters tied with red string.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "soaked",
+          "key_status": "key in a hidden drawer lock",
+          "clue": "bundle of letters tied with red string"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          223,
+          180
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at console height inside the lighthouse lamp room, where Sol stands beside a tarnished iron console framed by a massive Fresnel lens. Cold blue dawn light filters through panoramic curved windows where rain trickles outside, casting pale reflections and deep shadows across the circular chamber and dust motes drifting over aged brass mountings. Sol crouches slightly beside the tarnished iron console beneath the multi-faceted glass Fresnel lens, inspecting its underside before spotting a hidden keyhole. He pulls a key from his pocket and slides it into the lock, turning it smoothly. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The keeper left his secrets right beneath the beacon, waiting for someone to unlock them.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. As Sol eases open a concealed drawer, revealing a bundle of yellowed old letters tied with red string, the camera pushes in gradually with small amplitude at slow speed toward him. Sol pauses with the key still in the lock, looking directly down at the letters with a focused expression.\n\noverall_soundscape: Gentle rain patters against exterior curved glass panes accompanied by the faint, hollow hum of coastal wind. A metallic click echoes softly as the key turns in the lock, followed by the faint scrape of a concealed drawer sliding open.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the lighthouse lamp room.\n\nHolding an unfolded letter under the beam of the flashlight, Detective Sol scans the handwritten lines. As he absorbs the words, his gaze softens into a look of quiet realization. Sol reaches up with a deliberate hand, carefully unpins the badge from his lapel, and cradles it in his palm, studying its contours thoughtfully while the letter rests loosely in his other hand.\n\nThe camera maintains an intimate close-up on Sol’s face and upper chest, gently reframing slightly downward as his hand removes the pin. The sweeping glow of the lighthouse lamp passes rhythmically across the background, casting periodic rim light across him, keeping his subdued emotional shift and the badge in his hand clearly in focus.",
+      "annotation": {
+        "title_en": "Reading the letters",
+        "scene": "lighthouse_lamp_room",
+        "camera": "close-up",
+        "beat": "Sol reads one letter by flashlight as the great lamp rotates behind him; his expression softens and he takes off his badge and holds it thoughtfully.",
+        "state": {
+          "outfit": "navy overcoat, badge in his hand",
+          "coat_condition": "soaked",
+          "key_status": "in the drawer",
+          "clue": "letters read"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          238,
+          123
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up of Sol inside the lighthouse lamp room, holding an unfolded letter illuminated under the flashlight beam. Sol scans the handwritten lines on the unfolded letter held under the flashlight beam. As he absorbs the words, his gaze softens into a look of quiet realization. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The truth was written clearly on the page, and my duty had finally reached its end.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Sol reaches up with a deliberate hand and carefully unpins the badge from his lapel. The camera gently reframes slightly downward as his hand removes the pin. Sol cradles the badge in his palm, studying its contours thoughtfully while the letter rests loosely in his other hand. In the background, the sweeping glow of the lighthouse lamp passes rhythmically, casting periodic rim light across Sol, keeping his subdued emotional shift and the badge in his hand clearly in focus.\n\noverall_soundscape: A rhythmic mechanical hum of the rotating lighthouse lamp echoes through the room. The soft crinkle of paper accompanies the metallic click of an unfastened pin.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "An open city rooftop stands at the break of dawn. The heavy rain has stopped, leaving calm puddles that reflect a cold blue sky across the gravelled surface. Along the eastern horizon, faint amber light cuts through the pale morning mist, contrasting against the dark silhouettes of distant skyscrapers. The air is crisp and completely still, settling into a quiet, atmospheric neo-noir dawn.\n\nDetective Sol stands near the perimeter railing with the packet of letters tucked securely under his arm. He raises his hand, holding up the key toward the pale sunrise. The metal catches the first glint of golden light against the cold morning sky. His expression is calm and contemplative as he studies the key, maintaining his steady posture.\n\nThe camera frames Sol in a wide shot at eye level, capturing his three-quarter profile alongside the vast urban skyline. The camera glides forward very slowly, keeping Sol, the letters under his arm, and the raised key visible against the emerging horizon throughout the shot.",
+      "annotation": {
+        "title_en": "Dawn on the rooftop",
+        "scene": "city_rooftop",
+        "camera": "wide shot at dawn",
+        "beat": "Dawn on a city rooftop, the rain gone, cold blue light. Sol, coat now dry and creased, holds up the silver key against the sunrise with the letters under his arm.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge back on the lapel",
+          "coat_condition": "dry and creased, mud stain on the hem",
+          "key_status": "silver key held up",
+          "clue": "letters under his arm"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          218,
+          166
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of an open city rooftop at dawn, where Sol stands near the perimeter railing with a packet of letters tucked under his arm. The camera frames Sol at eye level in three-quarter profile, gliding forward very slowly across the gravelled rooftop where calm puddles reflect a cold blue sky. Along the eastern horizon, faint amber light cuts through the pale morning mist behind the dark silhouettes of distant skyscrapers. Sol maintains a steady posture near the perimeter railing with the packet of letters tucked securely under his arm. He raises his hand, holding up the key toward the pale sunrise, the metal catching the first glint of golden light. His expression remains calm and contemplative as he studies it. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The morning light brings no easy answers, just cold reflections and a key waiting for its lock.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. The slow forward glide keeps Sol, the letters, and the raised key framed against the emerging skyline.\n\noverall_soundscape: A muffled, distant city hum rises faintly from the streets far below. A stray drop of rainwater taps softly into a puddle across the gravelled surface.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Morning light fills an apartment doorway on a quiet residential landing. Gentle amber warmth spills from inside the open apartment, contrasting with the pale daylight filtering down the corridor. Worn wooden moldings, muted cream walls, and a tarnished brass door number establish a peaceful domestic interior. The atmosphere feels subdued and tender, carrying a poignant sense of closure.\n\nDetective Sol stands at the threshold opposite an elderly woman in a knitted cardigan. Holding the bundle of letters with the key resting on top, Sol extends his hands forward. The elderly woman takes the bundle and key, clutching them tightly to her chest as tears gather in her eyes. Sol speaks quietly, offering brief words of reassurance, before resting his empty hands at his sides while she holds the recovered items close.\n\nThe camera remains in a steady eye-level medium shot, framing both figures from the waist up across the open doorway. A subtle forward drift keeps the physical handoff at the center of the frame. Sol and the woman's tearful embrace of the letters stay clearly visible throughout the gentle exchange.",
+      "annotation": {
+        "title_en": "Returning the letters",
+        "scene": "apartment_doorway",
+        "camera": "medium shot",
+        "beat": "Morning at an apartment doorway, Sol hands the bundle of letters and the silver key to an elderly woman in a cardigan, who presses them to her chest with tears in her eyes.",
+        "state": {
+          "outfit": "navy overcoat, copper sun badge",
+          "coat_condition": "dry, creased",
+          "key_status": "given to the elderly woman",
+          "clue": "case closed"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          230,
+          181
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady eye-level medium shot of an apartment doorway on a quiet residential landing, where Sol stands at the threshold opposite an elderly woman. Morning light filters down the corridor past muted cream walls, while gentle amber warmth spills from inside the open apartment framed by worn wooden moldings and a tarnished brass door number. The camera drifts forward with subtle amplitude at slow speed across the open doorway, keeping both figures framed from the waist up. Sol holds the bundle of letters with the key resting on top and extends his hands forward. The elderly woman in a knitted cardigan takes the bundle and key, clutching them tightly to her chest as tears gather in her eyes. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] They are safely back with you now. Everything you waited for has finally found its way home.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. Sol then rests his empty hands at his sides while she holds the recovered items close.\n\noverall_soundscape: A gentle rustle of paper and the soft metallic clink of a resting key accompany the handoff. Muted morning silence fills the residential corridor alongside quiet sniffling.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "A city sidewalk stretches forward under crisp morning sunlight, casting long diagonal shadows across the pale pavement and adjacent brick facades. Golden light glints softly off storefront windows and parked vehicles down the block, replacing cold darkness with a warm, natural glow. The atmosphere feels calm and peacefully resolved, filled with the gentle stillness of a clear day.\n\nSol strides along the sidewalk. As he walks, he unbuttons his coat, slips his arms out of the sleeves, and slings it casually over his shoulder. His posture eases, the tension leaves his face, and he allows himself a small, quiet smile, walking freely with the coat resting hooked over his back.\n\nA wide tracking shot glides backward ahead of Sol, maintaining a steady pace that keeps his full upper body and easy stride centered. The sunlit streetscape drifts smoothly behind him under warm side lighting, preserving an unhurried, documentary-realistic perspective as he continues along the walkway.",
+      "annotation": {
+        "title_en": "Walking away",
+        "scene": "sunny_street",
+        "camera": "wide tracking shot",
+        "beat": "Sol walks down a sunny street, takes off his overcoat and slings it over his shoulder, now in his grey shirt, and allows himself a small smile.",
+        "state": {
+          "outfit": "grey shirt, overcoat slung over his shoulder",
+          "coat_condition": "dry",
+          "key_status": "gone",
+          "clue": "case closed"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          241,
+          155
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide tracking shot of a city sidewalk under crisp morning sunlight, where Sol strides forward along the pale pavement. The camera tracks backward at a steady pace ahead of Sol, keeping his full upper body and centered stride in view as crisp morning sunlight casts long diagonal shadows across the pale pavement and adjacent brick facades. Golden light glints softly off storefront windows and parked vehicles down the block. As Sol walks, he unbuttons his coat, slips his arms out of the sleeves, and slings it casually over his shoulder. Detective Sol, a middle-aged man with a low, gravelly baritone voice, a slow deliberate pace and a soft Latin American accent (S1) says: <d>[English] The cold darkness had finally passed, leaving the morning calm and peaceful at last.</d> Exactly as his voice stops, Sol's lips close and his jaw stops moving; he stays silent for the rest of the shot. His posture eases, the tension leaves his face, and he allows himself a small, quiet smile, continuing freely along the walkway with the coat hooked over his back while the sunlit streetscape drifts smoothly behind him under warm side lighting.\n\noverall_soundscape: Steady footsteps tap rhythmically against the pavement alongside the soft rustle of coat fabric being unbuttoned and shifted over a shoulder. A faint, distant hum of early morning city traffic carries down the block.\n\nnon_diegetic_music: Slow noir jazz with a muted trumpet, soft piano and brushed snare, kept at low volume beneath the narration throughout."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1035 @@
+{
+  "id": "gpu_from_sketch_terse",
+  "setup": {
+    "title": "From a Pencil Sketch to a Frame of Game: One Engineer Builds an NVIDIA GPU",
+    "style": "Live-action, cinematic, realistic documentary look with warm practical lighting at home and cool industrial lighting in the fab.",
+    "cast": [
+      {
+        "id": "lin",
+        "name": "Lin",
+        "description": "Lin, an East Asian woman in her early thirties with shoulder-length straight black hair tied in a low ponytail, round tortoiseshell glasses and a small silver stud earring in each ear, wearing a moss-green zip hoodie over a white T-shirt, black jeans and white sneakers."
+      }
+    ],
+    "extras": {
+      "voice": "Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1),",
+      "music": "Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout.",
+      "speech": "Lin narrates her own build in first person, like a maker video; inside the cleanroom she speaks through her face mask."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "Inside a quiet home studio at midnight, a warm desk lamp casts a pool of soft amber light across a dark wooden work surface. Outside the focused glow, the room falls away into deep shadows, with the faint silhouettes of bookshelves and inactive computer monitors in the background. A ceramic coffee mug sits beside drafting pens, framing a closed, grid-lined notebook resting near the desk's edge. The atmosphere is calm, concentrated, and solitary, capturing the quiet stillness of an engineer's late-night workspace.\n\nLin, an East Asian woman in her early thirties with shoulder-length straight black hair tied in a low ponytail, wears round tortoiseshell glasses and small silver stud earrings. Dressed in a moss-green zip hoodie over a white T-shirt, black jeans, and white sneakers, she pulls up an office chair and sits down. Reaching forward, she flips open the notebook to reveal a completely blank grid page under the lamplight. She picks up a mechanical pencil, clicks the top to advance the lead, and settles her hands beside the page. Looking directly into the camera, she speaks with calm confidence about her plan to build an NVIDIA GPU entirely from scratch.\n\nThe shot begins in an eye-level medium framing and performs a slow, steady push-in toward Lin and her desktop. Her upper torso, face, and deliberate hand movements remain in clear view throughout the push. The lamp's warm illumination keeps the pristine grid paper and her focused expression sharp, anchoring the scene as the dim room stays softly blurred.",
+      "annotation": {
+        "title_en": "A blank notebook at midnight",
+        "scene": "home_studio_desk",
+        "camera": "slow push-in, medium shot",
+        "beat": "Night in Lin's small home studio. A warm desk lamp, a coffee mug and a blank grid notebook. Lin sits down, opens the notebook to an empty page, clicks a pencil and tells the camera she is going to build her own NVIDIA GPU from scratch.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "blank notebook page"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          250,
+          250
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an eye-level medium shot of a quiet home studio at midnight, where Lin pulls up an office chair to a dark wooden work surface. Lin, an East Asian woman in her early thirties with shoulder-length straight black hair in a low ponytail, wears round tortoiseshell glasses, small silver stud earrings, a moss-green zip hoodie over a white T-shirt, black jeans, and white sneakers. Sitting in the office chair, she reaches across the dark wooden work surface, past a ceramic coffee mug and drafting pens, and flips open the closed grid-lined notebook to reveal a blank grid page under amber lamplight. The camera pushes in slowly and steadily at eye level toward Lin and her desktop. In the deep shadows behind her, bookshelves and inactive monitors remain softly blurred. She picks up a mechanical pencil, clicks the top to advance the lead, and settles her hands beside the page. Looking directly into the camera, Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Tonight, I am setting out to build an entire graphics processing unit completely from scratch.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot.\n\noverall_soundscape: The soft roll of office chair casters and a gentle rustle accompany the opening of the notebook. A crisp, metallic click echoes as the mechanical pencil lead advances, set against a quiet late-night room tone.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the desk in Lin's home studio.\n\nLin holds the mechanical pencil over the blank page and briskly draws out a GPU architecture. She sketches an organized grid of streaming multiprocessor blocks, runs a wide horizontal bar representing the L2 cache across the middle, and positions rectangular memory controllers along the outer edges. After scribbling neat labels beside the units, she lifts the pencil away from the finished graphite schematic and looks up, her face settling into a proud, satisfied smile.\n\nThe camera starts in a top-down close-up tightly framed on the notebook and her sketching hand. Once she finishes labeling the diagram, the camera tilts smoothly upward from the paper to her face. Lin remains centered as her warm expression comes into view, with the freshly completed block diagram staying anchored in the lower portion of the frame.",
+      "annotation": {
+        "title_en": "The block diagram",
+        "scene": "home_studio_desk",
+        "camera": "top-down close-up then tilt up to her face",
+        "beat": "Close on the notebook as Lin sketches the GPU architecture in pencil: a grid of streaming multiprocessor blocks, an L2 cache bar across the middle and memory controllers on the edges. She labels the blocks, then looks up satisfied.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "pencil block diagram of a GPU on paper"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          249,
+          140
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a top-down close-up shot at the desk in Lin's home studio, tightly framed on a notebook and her sketching hand. Lin holds a mechanical pencil over the blank page and briskly draws out a GPU architecture, sketching an organized grid of streaming multiprocessor blocks, running a wide horizontal bar representing the L2 cache across the middle, and positioning rectangular memory controllers along the outer edges. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I sketch out the streaming multiprocessors and cache, laying the exact groundwork for the hardware design.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. After scribbling neat labels beside the units, she lifts the pencil away from the finished graphite schematic. The camera tilts smoothly upward from the paper to her face. Centered in frame, Lin looks up, her face settling into a proud, satisfied smile as the freshly completed block diagram remains anchored in the lower portion of the frame.\n\noverall_soundscape: Rhythmic scratching of graphite scribbling across paper, followed by the soft clatter of a pencil lifting, with subtle quiet room tone in the background.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The interior of Lin's home studio centers on a wide cork board mounted on a neutral wall, densely layered with colorful sticky notes, printed silicon die photos, and technical diagrams. To the side, a tall window reveals the first faint cool-blue glow of early dawn, mingling softly with the warm amber light of an indoor desk lamp. The room feels still, calm, and steeped in the quiet concentration of an overnight engineering session.\n\nLin stands by the board holding her open notebook. She carefully tears out the page containing the pencil sketch of the GPU architecture. Picking up a pushpin, she anchors the sheet securely into the vacant center of the cork board, surrounded by the reference die photos. Once it is pinned flat, she lowers her hands and steps back slightly, her expression focused and satisfied.\n\nThe camera holds static in a medium-wide framing at eye level, keeping Lin, the cork board, and the adjacent window all in view. The steady composition emphasizes her deliberate actions without moving, maintaining a clear visual focus on the newly pinned sheet as the subtle dawn light registers against the window pane.",
+      "annotation": {
+        "title_en": "Pinning the plan",
+        "scene": "home_studio_wall",
+        "camera": "medium wide, static",
+        "beat": "Lin tears the architecture page out of the notebook and pins it to the centre of a cork board covered with sticky notes and printed die photos. The first blue light of dawn appears in the window beside the board.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "architecture sketch pinned on the cork board"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          189
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium-wide shot of Lin's home studio at dawn, where Lin stands beside a dense cork board near a tall window. Lin stands by the cork board holding her open notebook. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I spent all night working on this GPU architecture sketch.</d> She carefully tears out the page containing the pencil sketch of the GPU architecture. Picking up a pushpin, she anchors the sheet securely into the vacant center of the cork board, surrounded by reference die photos, colorful sticky notes, and technical diagrams. Lin (S1) adds: <d>[English] Now it takes its place right in the center.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Once it is pinned flat, she lowers her hands and steps back slightly, her expression focused and satisfied. The camera holds a static shot at eye level, keeping Lin, the cork board, and the adjacent window showing faint cool-blue dawn light mingling with warm amber lamp light in view.\n\noverall_soundscape: The crisp tearing of paper from a notebook precedes the sharp, dull click of a pushpin seating into cork. The subtle, quiet rustle of paper settles into early morning stillness.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The home studio is filled with the quiet ambience of early morning, illuminated by a mix of pale dawn filtering through a side window and warm domestic lighting overhead. A wide magnetic whiteboard mounted against the pale wall dominates the space, catching clean ambient light with minimal glare. The edges of nearby studio shelves and the home workstation remain softly visible in the background, framing an organized workspace dedicated to technical design.\n\nHolding a chisel-tip black dry-erase marker, Lin rapidly inks the final interconnections of an arithmetic unit circuit, detailing logic NAND gate symbols, inputs, and a square block representing a full adder. Once the lines connect, she clicks the cap onto the marker, turns slightly toward the lens, and taps the plastic cap directly against the full adder schematic. She speaks directly to the camera with animated confidence, explaining the logic flow and how these individual gates compute fundamental graphics math.\n\nThe camera maintains a medium framing at chest level, executing a steady, slow lateral track that glides horizontally alongside Lin as she shifts from sketching to speaking. The whiteboard schematic and her expressive gestures remain centered and sharp, keeping her face, hands, and the newly drafted circuit diagram simultaneously in view throughout the shot.",
+      "annotation": {
+        "title_en": "Gates on the whiteboard",
+        "scene": "home_studio_whiteboard",
+        "camera": "medium shot, slow lateral track",
+        "beat": "At a large whiteboard Lin draws a transistor-level circuit for one arithmetic unit with a black marker: NAND gates, a full adder and wires. She taps the adder with the marker cap and explains it to the camera.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "circuit schematic on the whiteboard"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          252,
+          206
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at chest level in a home studio, where Lin stands before a wide magnetic whiteboard illuminated by early morning dawn and overhead light. The camera executes a steady, slow lateral track gliding horizontally alongside Lin at chest level. Holding a chisel-tip black dry-erase marker, she rapidly inks the final interconnections of an arithmetic unit circuit on the whiteboard, detailing logic NAND gate symbols, inputs, and a square block full adder while studio shelves and a workstation sit softly visible behind her. Once the lines connect, she clicks the cap onto the marker, turns slightly toward the lens, and taps the plastic cap directly against the full adder schematic. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] These simple logic gates link directly into the adder to handle our core graphics math.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. With animated confidence and expressive gestures, her face, hands, and the newly drafted circuit diagram remain centered and sharply in view as she speaks.\n\noverall_soundscape: The squeak of a dry-erase marker gliding across the whiteboard surface ends with a crisp plastic click of a cap snapping shut. The cap gently taps against the board amid the quiet room tone of an early morning studio.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back at the home studio desk.\n\nLin sits upright at the workstation. Resting her hand on the mouse, she scrolls smoothly to manipulate the chip layout software. On the main screen, tightly packed rectangles of microscopic metal interconnects in cyan, red, and gold begin to contract. As she zooms out, the microscopic traces resolve into an entire glowing silicon die floorplan, forming a dense mosaic of processing cores and memory arrays that visually echoes her paper sketch. She watches intently as the complete layout fills the display.\n\nThe camera starts in an over-the-shoulder framing, keeping Lin's shoulder and hand on the mouse in view, before gliding slowly forward into a crisp close-up of the primary monitor. The shot finishes tight on the vibrant, luminous architecture of the completed die layout, keeping every dense circuit block distinct and razor-sharp.",
+      "annotation": {
+        "title_en": "Layout on screen",
+        "scene": "home_studio_desk",
+        "camera": "over-the-shoulder, then close on screen",
+        "beat": "Lin works at two monitors running chip layout software. Colourful rectangles of metal layers fill the screen; she zooms out until the whole die floorplan appears as a dense, glowing mosaic that matches her paper sketch.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "full die layout on the monitor"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          138
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an over-the-shoulder shot at a home studio desk, where Lin sits upright at her workstation with her hand resting on the mouse. The camera begins in an over-the-shoulder framing, keeping Lin's shoulder and hand on the mouse in view. Lin scrolls smoothly to manipulate the chip layout software. On the main screen, tightly packed rectangles of microscopic metal interconnects in cyan, red, and gold begin to contract. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Zooming out on the layout software, the microscopic interconnects resolve into the complete silicon die.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. As she zooms out, the microscopic traces resolve into an entire glowing silicon die floorplan, forming a dense mosaic of processing cores and memory arrays that visually echoes her paper sketch. Lin watches intently as the complete layout fills the display. The camera glides slowly forward into a crisp close-up of the primary monitor, finishing tight on the vibrant, luminous architecture of the completed die layout.\n\noverall_soundscape: The quiet, continuous scrolling of a computer mouse wheel sounds alongside the steady, low hum of workstation cooling fans.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The interior entryway beside the front door of Lin's home studio is bathed in warm practical morning light. Neutral walls, a minimalist coat rack, and a small wooden console table create an orderly, lived-in domestic space. Outside the entryway, vibrant morning sun awaits, casting a bright sliver along the edge of the doorframe. The mood is quiet and focused, capturing the purposeful routine of an early departure.\n\nLin takes a jacket, slips her arms into the sleeves, and settles it on. She then picks up a rolled paper printout of the die layout from the console, slides it into a rigid poster tube, caps it, and slings the strap across her shoulder. She turns the door handle and pushes the door open into the intense morning glare.\n\nThe camera tracks alongside Lin in a steady medium shot, moving smoothly as she steps toward the exit. Eye-level framing keeps her upper body, the jacket adjustment, and the handling of the poster tube clearly in view. When the door swings open, the camera maintains focus as bright exterior daylight washes across her, framing her poised exit in a realistic, unembellished documentary manner.",
+      "annotation": {
+        "title_en": "Off to the fab",
+        "scene": "home_studio_door",
+        "camera": "medium shot following her to the door",
+        "beat": "Morning. Lin pulls a denim jacket on over her hoodie, slides a rolled printout of the layout into a black poster tube, slings it over her shoulder and opens the front door into bright daylight.",
+        "state": {
+          "outfit": "denim jacket over moss-green hoodie",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "layout printout in a poster tube"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          256,
+          190
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium shot of the interior entryway beside the front door of Lin's home studio, where Lin prepares to depart. Warm practical morning light bathes neutral walls, a minimalist coat rack, and a small wooden console table, while a sliver of bright sunlight outlines the doorframe. Lin takes a jacket, slips her arms into the sleeves, and settles it on. Moving toward the console, she picks up a rolled paper printout of the die layout, slides it into a rigid poster tube, caps it, and slings the strap across her shoulder. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I pack the physical die layout for safe transport before heading out into the morning light.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. The camera tracks alongside Lin at eye level, maintaining smooth focus on her upper body as she reaches the exit. Lin turns the door handle and pushes the door open, letting intense exterior daylight wash across her silhouette as she steps forward.\n\noverall_soundscape: Soft rustle of jacket fabric settles as arms slide into sleeves. Smooth paper slides into the rigid tube, followed by the firm click of the plastic cap. The metallic latch clicks open, admitting the soft rush of morning outdoor air.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The wide concrete plaza outside the semiconductor fabrication plant sits bathed in the crisp, pale gold light of early morning. Looming ahead, the monumental facility features a sleek glass-and-steel facade that mirrors the clear blue sky, accented by clean architectural lines and brushed metal paneling. Long, sharp morning shadows stretch across the light-grey pavers of the walkway. Near the building's entrance, polished turnstiles and glass security barriers establish an orderly, high-tech industrial atmosphere.\n\nLin walks briskly across the plaza with the poster tube slung across her shoulder. With purposeful steps, she approaches the entrance gate, lifts a keycard badge clipped to her jacket, and taps it against the scanner terminal. The reader beeps softly with a green flash, and she smoothly pushes through the waist-high barrier, keeping her stride steady.\n\nThe camera tracks smoothly in a wide shot, moving alongside Lin against the imposing scale of the fab. The framing maintains a clean view of her approach and badge tap, with the towering glass building and sunny plaza remaining prominent throughout. The crisp morning sunlight cleanly outlines her movement, lending a grounded documentary clarity to her arrival.",
+      "annotation": {
+        "title_en": "Arriving at the fab",
+        "scene": "fab_exterior",
+        "camera": "wide tracking shot",
+        "beat": "Lin walks across a plaza toward a huge modern semiconductor fab with a glass-and-steel facade under a clear morning sky, poster tube on her shoulder, and taps her badge at the entrance gate.",
+        "state": {
+          "outfit": "denim jacket over moss-green hoodie",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "layout printout in a poster tube"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          241,
+          187
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide tracking shot of the sunlit concrete plaza outside the semiconductor fabrication plant, where Lin walks briskly toward the facility's entrance. The camera tracks smoothly in a wide shot, moving alongside Lin as she walks briskly across the light-grey pavers of the plaza with a poster tube slung across her shoulder. Crisp early morning sunlight casts sharp shadows across the walkway, highlighting the sleek glass-and-steel facade towering above. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I am arriving early at the fabrication plant to get our prototype run underway.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. With purposeful steps, Lin approaches the entrance gate lined with polished turnstiles and glass security barriers. She lifts the keycard badge clipped to her jacket and taps it against the scanner terminal. The reader flashes green with a soft beep, and Lin smoothly pushes through the waist-high barrier, keeping her stride steady.\n\noverall_soundscape: Rhythmic footsteps echo crisply against concrete pavers across an open plaza. An electronic terminal emits a gentle confirmation beep, followed by the faint mechanical sound of a security barrier unlocking.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The brightly lit semiconductor fab gowning room is lined with stainless steel benches, sealed lockers, and glossy, seamless white wall panels. Recessed overhead LED panels cast a cool, uniform illumination across the pristine floor, creating a sterile, tightly regulated industrial atmosphere devoid of dust or clutter.\n\nLin stands beside a bench where the poster tube rests. She steps into a white cleanroom coverall, pulls the fabric up over her shoulders, smoothly pulls the zipper closed to her chin, and draws the tight hood over her head, tucking away her hair. She then hooks an elastic white face mask over her nose and mouth before sliding clear safety goggles directly over her glasses. By the end of the shot, she is completely enclosed in the suit, leaving only her focused eyes and glasses visible behind the clear visor.\n\nThe camera holds a static medium shot at chest level, capturing Lin’s methodical gowning sequence without panning or tilting. The cleanroom background and steel bench remain steadily in frame as the cool lighting highlights the crisp white fabric, keeping her precise routine as the clear central focus.",
+      "annotation": {
+        "title_en": "Gowning up",
+        "scene": "fab_gowning_room",
+        "camera": "medium shot, static",
+        "beat": "In a bright white gowning room with steel benches, Lin steps into a white cleanroom coverall, zips it up, pulls on the white hood, a white face mask and clear safety goggles over her glasses. Only her eyes and glasses remain visible.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "none in hand"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          184
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static medium shot at chest level of a brightly lit semiconductor fab gowning room, where Lin stands beside a stainless steel bench. The camera holds a static shot at chest level. Beside the stainless steel bench where the poster tube rests, Lin steps into a white cleanroom coverall and pulls the crisp white fabric up over her shoulders. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Gowning up properly is crucial before stepping into the fab, so every particle stays locked out.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. She smoothly pulls the zipper closed to her chin, then draws the tight hood over her head, tucking away her hair. Next, she hooks an elastic white face mask over her nose and mouth before sliding clear safety goggles directly over her glasses under the cool overhead LED lighting. By the end, she is completely enclosed in the suit, leaving only her focused eyes and glasses visible behind the clear visor while the lockers and seamless white wall panels remain steady behind her.\n\noverall_soundscape: The low continuous hum of cleanroom airflow filters through the sterile room. Rustling synthetic fabric accompanies the sharp slide of a zipper and the snap of elastic straps.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The narrow air shower chamber features brushed stainless-steel walls studded with circular high-velocity nozzles. Cool industrial fluorescent lighting reflects sharply off the polished metal surfaces and the clear glass doors enclosing the space. Overhead, a small status panel provides a clean, clinical glow. The atmosphere is stark, sterile, and pressurized, conveying the extreme cleanliness standards required before entering the semiconductor fabrication floor.\n\nLin stands inside. She holds her arms slightly raised as strong jets of air blast from the nozzles, violently rippling the fabric of her suit. She turns slightly in place to catch the airflow across her torso. After several seconds, the buffeting air stops, and the suit settles. A small indicator light shifts to green, and the inner door smoothly slides open to the side.\n\nThe camera remains stationary in a medium shot, viewing Lin through the transparent glass door at eye level. The framing captures her from the waist up, keeping her centered amidst the metallic walls. Her steady stance, the rippling fabric, and the green signal light stay clearly in focus, while faint ambient reflections on the glass accentuate the sealed, clinical environment.",
+      "annotation": {
+        "title_en": "Air shower",
+        "scene": "fab_air_shower",
+        "camera": "static medium shot through the glass door",
+        "beat": "Lin, fully suited in white, stands inside a narrow stainless-steel air shower with her arms raised while strong jets of air ripple the fabric of her suit. A green light turns on and the inner door slides open.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "none in hand"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          235,
+          187
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a narrow air shower chamber, where Lin stands enclosed behind clear glass doors. The camera holds a static shot at eye level through the transparent glass door, framing Lin from the waist up between brushed stainless-steel walls studded with circular high-velocity nozzles under cool industrial fluorescent lighting. An overhead status panel casts a clinical glow across the metallic surfaces. Strong jets of air blast from the nozzles, violently rippling the fabric of Lin's suit as she stands with arms slightly raised and turns slightly in place to catch the airflow across her torso. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] A quick blast in the air shower removes any remaining dust before stepping into the cleanroom.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. After several seconds, the buffeting air stops, and the suit settles. A small indicator light shifts to green, and the inner door smoothly slides open to the side.\n\noverall_soundscape: A deafening roar of high-velocity air jets hissing through metal nozzles and flapping suit fabric violently, followed by the sudden silence of the jets cutting out and the smooth mechanical whir of an automatic sliding door.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The photolithography bay unfolds as a vast, pristine cleanroom bathed in saturated amber-yellow safety lighting. Massive white lithography scanner systems line the polished floor panels, their towering enclosures accented with stainless-steel trim and glowing status indicators. Filtered air grates in the ceiling and perforated floor tiles maintain continuous laminar airflow, creating an ultra-sterile, precisely controlled industrial atmosphere where every surface gleams under the monochromatic yellow wash.\n\nLin walks steadily forward carrying a specialized transparent reticle pod that houses the patterned glass photomask of her GPU design. Moving with deliberate care, she approaches the automated interface port on the front of a lithography machine. She gently positions the clear pod onto the receiving dock and guides it forward until the mechanical port clamps firmly engage, transferring the photomask into the scanner's internal mechanism. By the end of the action, her hands pull back, resting empty at her sides.\n\nThe camera executes a slow dolly forward, starting in a medium-wide framing that tracks Lin walking down the amber-lit aisle before tightening as she interfaces with the machine. The framing stays smooth and level at chest height, maintaining a clear view of her precise hand movements and the reticle port throughout the loading sequence.",
+      "annotation": {
+        "title_en": "The yellow room",
+        "scene": "fab_lithography_bay",
+        "camera": "slow dolly forward",
+        "beat": "Lin walks into the photolithography bay, a long cleanroom bathed in amber-yellow light with tall white lithography machines. She carries a clear pod holding the photomask made from her design and loads it into a reticle port.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "photomask of her design loaded into the scanner"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          242,
+          201
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium-wide shot of a pristine cleanroom bathed in amber-yellow safety lighting, where Lin walks toward a massive lithography scanner system. The camera executes a slow dolly forward at chest height, tracking Lin as she walks steadily down the aisle past towering white scanner enclosures accented with stainless-steel trim and glowing status indicators. In her hands, she carries a transparent reticle pod housing the patterned glass photomask. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I am loading my custom photomask into the lithography scanner to transfer the layout.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. As the framing tightens smoothly around her, Lin approaches the automated interface port on the front of a lithography machine. She carefully positions the transparent pod onto the receiving dock and guides it forward until the mechanical port clamps engage, transferring the photomask inside. Her hands then pull back, resting empty at her sides.\n\noverall_soundscape: A deep, constant rushing hum of laminar airflow through ceiling grates and perforated floor tiles fills the space. A distinct plastic slide is followed by the crisp mechanical click and pneumatic hiss of automated port clamps engaging.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the cleanroom photolithography bay.\n\nLin stands beside the load port. A precision robotic arm engages, carefully sliding under and lifting a blank, circular 300-millimetre silicon wafer from the pod's interior racks. As the disc rises, Lin leans slightly forward to observe the process. The mirror-polished surface of the wafer catches the overhead lighting and casts back a clear reflection of Lin watching the silicon ready for printing.\n\nThe camera frames a close-up starting on the mechanical gripper holding the wafer's edge, then performs a slow, fluid tilt upward as the robotic arm elevates the disc. The camera movement maintains razor-sharp focus on the gleaming reflective surface, keeping both the amber reflections and Lin's reflection visible throughout the steady motion.",
+      "annotation": {
+        "title_en": "A mirror of silicon",
+        "scene": "fab_lithography_bay",
+        "camera": "close-up, slow tilt",
+        "beat": "A robotic arm lifts a blank, mirror-polished 300 millimetre silicon wafer out of a front-opening pod. The wafer reflects the amber light and Lin's goggled face as she leans in to watch.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "blank mirror-polished silicon wafer"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          121
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot in the cleanroom photolithography bay, where Lin stands beside the load port watching a robotic arm engage. The camera frames a close-up starting on the mechanical gripper holding the edge of the wafer. The precision robotic arm engages, sliding under and lifting a blank, circular three-hundred-millimetre silicon wafer from the pod's interior racks. Lin leans slightly forward to observe the process. The camera performs a slow, fluid tilt upward as the robotic arm elevates the disc, maintaining razor-sharp focus on the gleaming reflective surface. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Here the robotic arm carefully lifts the fresh silicon wafer, getting it perfectly ready for printing.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. The mirror-polished surface of the wafer catches the overhead lighting, keeping both amber reflections and a clear reflection of Lin watching visible throughout the steady upward motion.\n\noverall_soundscape: The quiet, continuous hum of laminar cleanroom airflow fills the room. A subtle motorized whine and soft pneumatic hiss sound as the robotic arm lifts the silicon wafer smoothly.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the cleanroom's photolithography bay.\n\nLin stands beside the viewport. At first, the silicon wafer rests on the vacuum chuck. An automated nozzle dispenses a droplet of liquid photoresist directly onto the centre. The chuck accelerates into a high-speed spin, flinging the liquid outward into an ultra-thin film that flashes with brilliant iridescent rings of violet, cyan, and gold before settling into a uniform, coated surface. Lin observes intently, her hand resting against the machine casing as her eyes follow the rapid fluid motion.\n\nThe camera frames a tight close-up through the viewport glass, maintaining crisp focus on the spinning wafer while Lin's profile reflects softly in the transparent pane. The camera holds nearly stationary with a minute drift inward, keeping the vibrant rainbow interference patterns and smooth rotation fully visible.",
+      "annotation": {
+        "title_en": "Spin coating",
+        "scene": "fab_lithography_bay",
+        "camera": "close-up through a machine window",
+        "beat": "Inside a coater, a drop of photoresist lands on the wafer and the wafer spins fast, the liquid spreading into a thin film that flashes with iridescent colours. Lin watches through the window with her gloved hand on the panel.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "wafer coated with photoresist"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          210,
+          132
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight close-up through the viewport glass in the cleanroom's photolithography bay, where Lin stands watching the silicon wafer. The silicon wafer rests on the vacuum chuck as an automated nozzle dispenses a droplet of liquid photoresist directly onto the centre. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Now I dispense the resist, spinning it out to form an even, ultra-thin coating across the surface.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. The chuck accelerates into a high-speed spin, flinging the liquid outward into an ultra-thin film that flashes with brilliant iridescent rings of violet, cyan, and gold before settling into a uniform coated surface. Lin's profile reflects softly in the transparent pane as she observes intently, her hand resting against the machine casing and her eyes following the rapid fluid motion. The camera holds nearly stationary with a minute drift inward, maintaining crisp focus on the spinning wafer.\n\noverall_soundscape: A faint pneumatic click and hiss accompany the droplet dispensing, followed by the rising high-speed mechanical whine of the spinning chuck. Steady cleanroom ventilation hums continuously in the background.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the photolithography bay.\n\nLin stands beside the operator console, resting her hands on the desk edge as she monitors the automated process. Inside the lithography scanner, a rhythmic pulse of deep violet light flashes intermittently through an inspection seam as the high-speed stage steps across fields. On the primary screen, a graphical map of the wafer populates field by field, filling each square die location as the UV beam imprints the GPU circuitry onto the coated surface. Lin watches the display with focused concentration, occasionally shifting her gaze toward the machine's viewport as the violet pulses count down the stepping exposure.\n\nThe camera starts in a medium shot showing Lin in three-quarter profile alongside the workstation, slowly pushing in toward the illuminated monitors. Her torso, the subtle violet flicker reflecting against the cleanroom panels, and the expanding grid on the wafer map remain visible throughout the move.",
+      "annotation": {
+        "title_en": "Exposure",
+        "scene": "fab_lithography_bay",
+        "camera": "medium shot, slow push toward the monitors",
+        "beat": "Lin stands at the lithography scanner's control monitors. A pulsing violet glow comes from inside the machine as the wafer stage steps across hundreds of fields; on screen a progress map of the wafer fills in field by field.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "wafer being exposed with her pattern"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          218,
+          149
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the photolithography bay, where Lin stands in three-quarter profile beside an operator console, resting her hands on the desk edge. Lin monitors the automated process at the console, her torso visible alongside the workstation as the camera slowly pushes in toward the illuminated monitors. Inside the lithography scanner, a rhythmic pulse of deep violet light flashes intermittently through an inspection seam as the high-speed stage steps across fields. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] The scanner steps across each die,</d> Lin (S1) adds: <d>[English] imprinting the GPU circuitry with rapid pulses of ultraviolet light.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. On the primary screen, a graphical map of the wafer populates field by field, filling each square die location while the expanding grid progresses. Lin watches the display with focused concentration, occasionally shifting her gaze toward the machine's viewport as subtle violet reflections flicker against the cleanroom panels.\n\noverall_soundscape: The cleanroom hums with a steady ventilation drone, punctuated by the rhythmic, mechanical whir of the high-speed stepping stage. Soft electronic clicks accompany each pulse inside the scanner.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Inside the fab's etch bay, clean and sterile white overhead illumination bounces off brushed stainless steel surfaces and high-grade composite panels. The expansive cleanroom aisle is anchored by modular plasma processing tools interconnected by vacuum lines and specialized gas manifolds. Set into the front of a primary reaction chamber, a thick circular quartz viewport offers a direct view inside, where an electric magenta-purple glow of ionized plasma hums with concentrated energy, casting vivid violet reflections across the surrounding metallic chassis as the wafer undergoes dry etching.\n\nLin stands adjacent to the etch chamber. Holding a slender, chemical-resistant white tablet displaying real-time pressure curves and radio-frequency power metrics, she tracks the telemetry data, lightly tapping the screen to log the current process cycle. She then raises her gaze to observe the glowing viewport, checking the uniformity of the violet plasma enveloping the wafer within the vacuum.\n\nThe shot begins in a tight close-up on the circular viewport, filling the frame with the swirling, vibrant magenta-purple plasma glow. The camera then smoothly pulls back along a straight diagonal axis, steadily revealing the massive cylindrical chamber and Lin beside it. The final composition settles into a medium shot that holds Lin, her active tablet, and the intensely glowing viewport in balanced, sharp view.",
+      "annotation": {
+        "title_en": "Plasma etch",
+        "scene": "fab_etch_bay",
+        "camera": "close-up on a viewport then pull back to Lin",
+        "beat": "In a white-lit bay of etch tools, a magenta-purple plasma glows through the round viewport of a vacuum chamber as the pattern is etched into the wafer. The camera pulls back to Lin, suited in white, checking a tablet.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "wafer in the etch chamber"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          247,
+          210
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot of a glowing quartz viewport in the etch bay, where Lin stands beside a cylindrical reaction chamber. The frame opens tight on the circular quartz viewport, filled with a swirling, vibrant magenta-purple plasma glow. The camera smoothly pulls back along a straight diagonal axis, steadily revealing the massive cylindrical chamber with its vacuum lines, gas manifolds, and brushed stainless steel surfaces under sterile white overhead illumination. Lin stands adjacent to the chamber, holding a slender, chemical-resistant white tablet that displays pressure curves and radio-frequency power metrics. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] The plasma etch is running smoothly, keeping the RF power perfectly balanced across the entire wafer.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Lin lightly taps the screen to log the current process cycle, then raises her gaze to observe the glowing viewport, checking the uniformity of the violet plasma enveloping the wafer. The camera settles into a medium shot holding Lin, her active tablet, and the glowing viewport in sharp, balanced view.\n\noverall_soundscape: A deep, resonant electric hum emanates from the ionized plasma chamber alongside the steady low drone of vacuum lines. Cleanroom air handling creates a continuous soft rushing ambience, punctuated by a faint plastic tap on the tablet screen.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the fab's etch bay.\n\nWith both hands, Lin steadily holds up a specialized wafer handling tool grasping the finished silicon wafer. As she gently tilts the wafer under the overhead illumination, its mirror-like surface reveals a dense, immaculate grid of hundreds of microscopic rectangular dies. The microscopic circuitry acts as a diffraction grating, scattering the light into vivid bands of iridescent rainbow hues that shimmer across the silicon. Her eyes crinkle into an unmistakable, proud smile.\n\nThe camera frames Lin and the suspended wafer in a medium close-up, executing a slow, continuous orbit from front to three-quarter profile. This gentle rotational move accentuates the shifting chromatic spectrum flaring across the wafer's grid while keeping her expressive eyes and steady posture clearly visible. The machinery behind her remains softly diffused, highlighting the glittering centerpiece of completed silicon.",
+      "annotation": {
+        "title_en": "The finished wafer",
+        "scene": "fab_etch_bay",
+        "camera": "medium close-up, slow orbit",
+        "beat": "Lin holds the finished wafer up in a gloved wafer holder. Its surface is now a precise grid of hundreds of identical rectangular dies that split the light into rainbow colours as she tilts it. Her eyes smile above the mask.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "patterned wafer with a rainbow grid of dies"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          251,
+          138
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up in the fab's etch bay, where Lin steadily holds a finished silicon wafer before softly diffused machinery. With both hands, Lin steadily holds up a specialized wafer handling tool grasping the finished silicon wafer. The camera executes a slow, continuous orbit around Lin and the suspended wafer from front to three-quarter profile. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] The etch finished cleanly, scattering the overhead light into vivid rainbow bands across every single die.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. As Lin gently tilts the wafer under the overhead illumination, its mirror-like surface reveals a dense, immaculate grid of hundreds of microscopic rectangular dies. The microscopic circuitry scatters the light into vivid bands of iridescent rainbow hues that shimmer across the silicon. The machinery behind her remains softly diffused, and Lin's eyes crinkle into an unmistakable, proud smile.\n\noverall_soundscape: A continuous low-frequency hum of fab machinery resonates through the bay alongside the steady hiss of laminar airflow. A faint, subtle resonance emanates from the wafer handling tool as Lin shifts its angle.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Inside the fab test floor, clean industrial overhead lights cast an immaculate, cool white glow across rows of specialized automated testing equipment. The atmosphere is quiet and clinical, defined by the low hum of mechanical drive stages and continuous HEPA air filtration. At the center of the station sits a high-precision wafer prober, its vacuum chuck holding the circular silicon disc beneath an intricate stereo microscope assembly, accompanied by diagnostic test screens displaying technical readouts in the background.\n\nLin leans forward over the equipment and peers into the binocular microscope eyepieces. Below, the wafer rests on the motorized chuck as the microscopic needles of a probe card descend with micrometer precision, making physical contact with the tiny pads of an individual die. Lin delicately adjusts the stage controls, maintaining focus while the probe system runs electrical tests before automatically indexing to the next die on the wafer grid.\n\nThe shot begins in a sharp close-up on the fine probe needles touching down upon the iridescent die surface, capturing the minute mechanical contact. The camera then smoothly glides back and tilts up into a stable medium shot, keeping Lin, the microscope optics, and the stepping probe chuck continuously visible within the coolly lit cleanroom interior.",
+      "annotation": {
+        "title_en": "Probe test",
+        "scene": "fab_test_floor",
+        "camera": "close-up of the probe card then medium shot",
+        "beat": "On the test floor the wafer sits on a probe station chuck. Fine needles of a probe card touch down on one die after another while Lin, still suited, leans over the microscope eyepiece.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "patterned wafer under probe test"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          204
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a sharp close-up of a wafer prober stage inside the coolly lit fab test floor, where Lin leans over the equipment. Microscopic needles of the probe card descend with micrometer precision, touching down upon the iridescent die surface of the circular silicon disc held on the vacuum chuck. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I lower the needles onto the die pads, checking contact before running the electrical tests.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. The camera smoothly glides back and tilts up into a stable medium shot, revealing Lin leaning forward as she peers into the binocular microscope eyepieces and delicately adjusts the stage controls to maintain focus. The automated probe system executes electrical tests before indexing to the next die on the wafer grid, keeping Lin, the microscope optics, the motorized stepping chuck, and background diagnostic test screens continuously visible under immaculate, cool white overhead lights.\n\noverall_soundscape: A steady, low hum of HEPA air filtration fills the room alongside the faint whir of mechanical drive stages. Subtle motorized stepping clicks emit from the wafer prober as the chuck indexes.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still on the fab test floor.\n\nOn an industrial monitor, the grid squares of a circular wafer yield map rapidly populate with bright green across the center, dotted with a few isolated red squares near the perimeter. Initially turned toward the screen, Lin watches the final rows resolve into solid green. As the successful readout completes, she pivots toward the camera. Her eyes crinkle with unmistakable joy as she smiles broadly, raising her right hand to flash a firm, enthusiastic thumbs-up to celebrate the high yield.\n\nThe camera holds an over-the-shoulder medium shot at eye level, keeping the monitor screen and Lin in crisp focus. A gentle static frame accommodates her pivot without panning away, allowing her celebratory gesture, expressive face, and the bright green wafer map behind her to remain clearly visible together until the shot ends.",
+      "annotation": {
+        "title_en": "The wafer map",
+        "scene": "fab_test_floor",
+        "camera": "over-the-shoulder on a monitor",
+        "beat": "A monitor shows a circular wafer map filling with mostly green squares and a few red ones at the edge. Lin turns from the screen to the camera and gives a big thumbs-up with her gloved hand.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "tested wafer with a mostly green yield map"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          138
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an over-the-shoulder medium shot at eye level on the fab test floor, where Lin stands facing an industrial monitor. On the industrial monitor, the grid squares of a circular wafer yield map rapidly populate with bright green across the center, dotted with a few isolated red squares near the perimeter. Lin watches as the final rows resolve into solid green. The camera holds a static shot at eye level, keeping both the monitor screen and Lin in crisp focus. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] The yield map populated almost entirely green across the center, confirming our fabrication run was a massive success.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. As the readout completes, Lin pivots toward the camera. Her eyes crinkle with joy as she smiles broadly, raising her right hand to flash a firm, enthusiastic thumbs-up to celebrate the high yield, while the bright green wafer map remains visible beside her.\n\noverall_soundscape: The low, continuous ambient hum of cleanroom air filtration fills the room alongside faint digital processing tones from the testing rig.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Inside the semiconductor fab's dicing bay, cool blue-white industrial lighting illuminates the sterile workspace and the sealed interior of an automated dicing saw. The pristine chamber is framed by stainless steel fixtures and a clear protective observation window. Fine jets of deionized coolant continuously spray across the cutting stage, scattering glistening micro-droplets against interior surfaces and catching brilliant, sharp reflections from high-intensity internal LEDs. The atmosphere is clinical, quiet, and rigorously controlled.\n\nPositioned just behind the transparent viewing window, Lin monitors the automated operation. Inside the machine, an ultra-thin diamond saw blade spins at high speed, tracing along microscopic streets between circuits on the silicon wafer. Cooled by the fine water spray, the blade cuts smooth, straight lines through the grid, steadily separating the disc into individual rectangular dies. Lin leans forward slightly, watching every motorized pass with steady focus.\n\nThe camera maintains a macro close-up framed on the spinning blade and the water-slicked silicon surface, with Lin visible in soft focus through the chamber window in the upper background. A subtle sideways tracking movement follows the cutting axis, keeping the blade, the fine water mist, and the newly separated dies in sharp view throughout.",
+      "annotation": {
+        "title_en": "Dicing",
+        "scene": "fab_dicing_room",
+        "camera": "macro close-up",
+        "beat": "A thin diamond saw blade spins inside a dicing machine and cuts straight lines through the wafer under a fine spray of water, separating the grid into individual dies. Lin watches from behind the machine's window.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "wafer being diced into dies"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          195
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up shot of the automated dicing saw chamber in a semiconductor fab's dicing bay, where Lin stands watching behind the clear observation window. Cool blue-white industrial lighting illuminates the sterile workspace and the sealed chamber of the automated dicing saw. In sharp macro focus, the ultra-thin diamond saw blade spins at high speed, cutting smooth, straight lines across the water-slicked silicon wafer to separate it into individual rectangular dies. Continuous fine jets of deionized coolant spray over the stage, scattering glistening micro-droplets illuminated by internal LEDs. Behind the transparent protective window in the upper background, Lin leans forward slightly in soft focus, monitoring the motorized passes. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] The high-speed diamond blade cuts along the wafer grid, steadily separating each microcircuit into individual dies.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. The camera tracks sideways with small amplitude at slow speed along the cutting axis, keeping the spinning blade, water mist, and cut dies in sharp view.\n\noverall_soundscape: A high-pitched, steady whine of the spinning saw blade blends with the continuous hissing rush of fine coolant spray hitting the silicon surface. A muted low electrical hum vibrates quietly through the sterile chamber.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the cleanroom dicing station.\n\nLin stands beside the station. A fine vacuum pick-up tool lifts one fingernail-sized silicon die from the adhesive blue tape. She smoothly transfers the chip to fine-tipped anti-static tweezers held in her right hand. She carefully raises the bare die beneath an articulated magnifier ring lamp, tilting it slightly so iridescent microscopic circuit patterns glint across the polished surface. Her eyes narrow in silent, methodical inspection.\n\nThe camera begins in an extreme close-up on the blue tape as the single die separates from the wafer grid, then smoothly pulls back and tilts up into a medium close-up showing Lin's hands, chest, and face. The framing keeps both the tiny, reflective die in the tweezers and Lin's focused gaze sharp and central as the background softens.",
+      "annotation": {
+        "title_en": "One die",
+        "scene": "fab_dicing_room",
+        "camera": "extreme close-up then medium close-up",
+        "beat": "The diced wafer sits on blue tape in a metal ring. A pick-up tool lifts one die. Lin takes it with tweezers and holds the fingernail-sized, mirror-like silicon die up to the light under a magnifier lamp.",
+        "state": {
+          "outfit": "white cleanroom bunny suit with hood, face mask and goggles",
+          "glasses": "round tortoiseshell under goggles",
+          "gpu_stage": "single bare silicon die in tweezers"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          131
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme close-up at the cleanroom dicing station, where Lin stands beside the station over adhesive blue tape. A fine vacuum pick-up tool lifts one fingernail-sized silicon die from the adhesive blue tape. She smoothly transfers the chip to fine-tipped anti-static tweezers held in her right hand. The camera smoothly pulls back and tilts up into a medium close-up showing Lin's hands, chest, and face. She carefully raises the bare die beneath an articulated magnifier ring lamp, tilting it slightly so iridescent microscopic circuit patterns glint across the polished surface. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I lift the freshly diced silicon die to inspect its iridescent circuits under the magnifier.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Her eyes narrow in silent, methodical inspection, while the framing keeps both the tiny, reflective die in the tweezers and Lin's focused gaze sharp and central as the background softens.\n\noverall_soundscape: A gentle hiss of vacuum suction gives way to a faint adhesive release as the die lifts. Anti-static tweezers produce a delicate metallic tick amidst the low, steady ambient airflow of the cleanroom.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back inside the fab gowning room.\n\nLin begins by pulling off her goggles and mask, then peels back her hood. She unzips her suit, steps out of the fabric, and slips on a lab coat. She finishes by glancing down at the die resting safely inside a small, clear anti-static carrier on the bench.\n\nThe camera remains in a static medium shot at eye level, holding Lin and the bench in sharp focus throughout the degowning process. The framing keeps both her deliberate change of attire and the small die carrier visible against the background, capturing the quiet shift in cleanroom protocol with steady documentary realism.",
+      "annotation": {
+        "title_en": "Out of the suit",
+        "scene": "fab_gowning_room",
+        "camera": "medium shot, static",
+        "beat": "Back in the white gowning room, Lin pulls off the goggles, mask and hood, revealing her face, glasses and ponytail again, steps out of the bunny suit and puts on a light-blue anti-static lab coat over her hoodie. A small die carrier sits on the bench.",
+        "state": {
+          "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "bare die in a small carrier"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          106
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static medium shot at eye level inside the fab gowning room, where Lin stands beside a bench. The camera holds a static medium shot at eye level, keeping Lin and the bench in sharp focus. Lin begins by pulling off her goggles and mask, then peels back her hood. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Now I can step out of the cleanroom suit and check on our finished die.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. She unzips her suit, steps out of the fabric, and slips on a lab coat. Lin finishes by glancing down at the die resting safely inside a small, clear anti-static carrier on the bench.\n\noverall_soundscape: The rustle of cleanroom suit fabric mingles with the sliding sound of a zipper and shifting garments. A quiet, steady mechanical airflow hums continuously in the gowning room.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The packaging lab is brightly illuminated by crisp, cool overhead LED fixtures, casting clean reflections across polished anti-static flooring, brushed aluminum tool bays, and transparent safety enclosures. The environment possesses a sterile, industrial high-tech atmosphere, dominated by surgical whites, metallic grays, and the deep green hues of semiconductor circuit boards. Automated precision equipment hums quietly throughout the spacious room.\n\nLin stands by the primary packaging station with the carrier resting open nearby. Inside the bonding chamber, a robotic flip-chip placement head secures the silicon die, flips it inverted, and presses it delicately onto a green substrate patterned with thousands of microscopic solder bumps, positioned directly adjacent to four tall stacks of HBM memory. Lin intently tracks the micro-alignment crosshairs displayed across an adjacent monitor, her hands resting near the console as the die bonds firmly to the substrate.\n\nThe shot begins in a tight macro close-up focused on the robotic bonding head descending toward the green substrate and HBM memory towers. As the component settles into position, the camera smoothly pans upward and pulls back slightly into a medium close-up of Lin, keeping her focused expression and the edge of the alignment monitor visible.",
+      "annotation": {
+        "title_en": "Flip-chip bonding",
+        "scene": "packaging_lab",
+        "camera": "close-up on the machine, then Lin",
+        "beat": "In a bright packaging lab, a bonding machine flips the die and places it onto a green substrate covered in tiny solder bumps, with four tall stacks of HBM memory placed beside it. Lin, in her blue lab coat, monitors the alignment camera.",
+        "state": {
+          "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "die bonded on a green substrate with HBM stacks"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          245,
+          194
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up in a brightly illuminated packaging lab, where Lin stands by the primary packaging station beside an open carrier and transparent safety enclosure. Inside the bonding chamber, the robotic flip-chip placement head secures the silicon die, flips it inverted, and descends toward the green substrate patterned with microscopic solder bumps adjacent to four tall stacks of HBM memory. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] The robotic head flips the die, pressing it delicately into place beside the memory stacks.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. The robotic head presses the die delicately onto the substrate as it bonds firmly. As the component settles, the camera smoothly pans upward and pulls back slightly into a medium close-up of Lin standing by the primary packaging station with the carrier resting open nearby. Lin intently tracks the micro-alignment crosshairs displayed across the adjacent monitor, her hands resting near the console while her focused expression and the monitor edge remain visible under the bright overhead LED fixtures.\n\noverall_soundscape: A steady, low hum from automated precision equipment fills the sterile lab. The robotic placement head emits a soft mechanical whir and quiet pneumatic hiss as it inverts and contacts the substrate.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still in the packaging lab.\n\nLin monitors the substrate—carrying the die and four adjacent HBM stacks—as it glides along a narrow conveyor into an orange-glowing reflow oven to melt the solder bumps. Once it emerges onto an assembly jig, she takes hold of a fine pneumatic needle dispenser. Leaning close with her tongue tucked slightly at the corner of her mouth in deep concentration, she carefully applies a thin, glossy bead of liquid underfill along the seam of the die, allowing capillary action to draw the resin underneath the silicon.\n\nThe camera holds a steady medium shot at eye level, capturing Lin from the waist up alongside the tabletop apparatus. The framing keeps her concentrated facial expression and the delicate motion of the dispenser needle in sharp focus, while the reflow oven's warm orange interior softly illuminates the edge of the frame.",
+      "annotation": {
+        "title_en": "Reflow and underfill",
+        "scene": "packaging_lab",
+        "camera": "medium shot",
+        "beat": "The substrate rides a conveyor into a reflow oven glowing orange inside. Lin then uses a fine needle dispenser to run a bead of underfill along the edge of the die, carefully, her tongue at the corner of her mouth.",
+        "state": {
+          "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "bonded package being underfilled"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          242,
+          142
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady eye-level medium shot in the packaging lab, where Lin stands waist-up beside a tabletop apparatus near a glowing reflow oven. The camera holds a steady medium shot at eye level, framing Lin waist-up beside the tabletop apparatus while the reflow oven's warm orange interior softly illuminates the frame's edge. Lin monitors the substrate carrying the die and four adjacent HBM stacks gliding along a narrow conveyor into the orange-glowing reflow oven to melt the solder bumps. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] After reflow melts the solder bumps, I dispense underfill along the seam to let capillary action seal the silicon.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Once it emerges onto an assembly jig, she takes hold of a fine pneumatic needle dispenser. Leaning close with her tongue tucked slightly at the corner of her mouth in deep concentration, she carefully applies a thin, glossy bead of liquid underfill along the seam of the die, allowing capillary action to draw the resin underneath the silicon, keeping her concentrated expression and the needle's delicate motion in sharp focus.\n\noverall_soundscape: The gentle mechanical hum of the motorized conveyor belt blends with a low thermal whir from the reflow oven. A soft pneumatic hiss emits from the needle dispenser as liquid resin beads onto the substrate.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the packaging lab workbench.\n\nWearing purple nitrile gloves, Lin carefully lowers and presses a polished silver heat-spreader lid onto the die, securing it squarely against the substrate. She then gently picks up the completed GPU chip by its outer edges between her thumb and index finger. Raising it upward, she displays the finished component toward the camera, revealing the lustrous silver heat spreader mounted atop the rigid green circuit board with micro-soldered gold contact pads gleaming faintly on its underside. Her face shows a quiet, genuine sense of pride.\n\nThe camera frames her hands in a crisp close-up before executing a steady, slow push-in as she elevates the chip. The shallow depth of field keeps the sharp edges and brushed metallic texture of the heat spreader in razor-sharp focus, while Lin's subtle, proud smile and the softly blurred background form an evocative backdrop.",
+      "annotation": {
+        "title_en": "The lid",
+        "scene": "packaging_lab",
+        "camera": "close-up, slow push",
+        "beat": "Lin presses a polished silver heat-spreader lid onto the package. She lifts the finished GPU chip, a silver square on a green substrate with gold contact pads underneath, and holds it toward the camera between two fingers.",
+        "state": {
+          "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "finished packaged GPU chip with silver lid"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          145
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a crisp close-up of the packaging lab workbench, where Lin works in purple nitrile gloves. Wearing purple nitrile gloves, Lin carefully lowers and presses a polished silver heat-spreader lid onto the die, securing it squarely against the substrate. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I press the silver heat spreader in place, finally completing our custom graphics processing unit.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. She then gently picks up the completed GPU chip by its outer edges between her thumb and index finger. Raising it upward, she displays the finished component toward the camera, revealing the lustrous silver heat spreader mounted atop the rigid green circuit board with micro-soldered gold contact pads gleaming faintly on its underside. The camera executes a steady, slow push-in as she elevates the chip, keeping the brushed metallic texture in sharp focus while Lin's subtle, proud smile rests in the softly blurred background.\n\noverall_soundscape: A gentle metallic click sounds as the heat spreader seats firmly into place, followed by the faint rustle of nitrile gloves. A low, steady ambient hum from the packaging lab ventilation hums continuously.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the test station in the packaging lab.\n\nLin stands behind the bench, holding the completed GPU chip. She carefully aligns it into the open test socket and latches the retention clamp down securely. Her gaze shifts to the adjacent monitor, where lines of diagnostic test code rapidly stream across the interface before resolving into a bright green PASS signal. Seeing the result, Lin's tense posture immediately relaxes; she pumps her right fist in triumph and laughs with pure relief and satisfaction.\n\nThe camera remains in a steady medium shot at chest height, keeping Lin, the test fixture, and the monitor screen within a single balanced composition. The framing maintains sharp focus on Lin's face and hands as she clamps the chip, while keeping the monitor clearly readable in the background. The steady framing captures both the technical milestone and her spontaneous emotional reaction without cutting away.",
+      "annotation": {
+        "title_en": "Final test",
+        "scene": "packaging_lab",
+        "camera": "medium shot",
+        "beat": "Lin drops the chip into a test socket and closes the clamp. A monitor runs a test sequence and flashes a large green PASS. Lin pumps her fist and laughs.",
+        "state": {
+          "outfit": "light-blue anti-static lab coat over moss-green hoodie",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "packaged GPU chip passing final test"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          254,
+          148
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium shot at chest height of the test station in the packaging lab, where Lin stands behind the bench. The camera holds a static medium shot at chest height, keeping Lin, the test fixture, and the monitor screen in a single balanced composition. Lin carefully aligns the completed GPU chip into the open test socket and latches the retention clamp down securely. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Now for the moment of truth, seating the chip into the socket.</d> Her gaze shifts to the adjacent monitor as lines of diagnostic test code rapidly stream across the interface before resolving into a bright green PASS signal. Lin (S1) adds: <d>[English] And it passed on the very first try.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Seeing the result, Lin's tense posture immediately relaxes, and she pumps her right fist in triumph while laughing with pure relief and satisfaction.\n\noverall_soundscape: A crisp mechanical click sounds as the retention clamp latches shut over the socket. A low ambient hum of lab machinery and cooling fans fills the room.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The home electronics studio is bathed in warm, quiet afternoon daylight filtering through nearby windows, accented by the cool circular glow of an articulated magnifier lamp poised over the wooden workbench. The organized surface holds neatly arranged hand tools, spool holders, and digital meters. At the center of a blue anti-static mat lies a bare, matte-black graphics card printed circuit board, completely unpopulated except for printed copper traces and a prominent empty square footprint right in the middle.\n\nLin sits attentively at the desk. Gripping a pair of tweezers, she delicately lifts the GPU chip from a foam container. Leaning forward slightly, she guides the chip directly above the empty footprint on the board. With deliberate, steady motion, she lowers the processor into position, seating it cleanly against the square contacts before releasing her grip on the tweezers.\n\nThe camera remains completely static in a medium-wide shot, holding Lin’s upper body and the working surface of the bench in stable view. The soft domestic lighting and the desk lamp keep her focused expression, her hands, and the circuit board clearly illuminated without any sudden shifts in perspective.",
+      "annotation": {
+        "title_en": "Back at the bench",
+        "scene": "home_electronics_bench",
+        "camera": "medium wide, static",
+        "beat": "Afternoon back in her home studio, now in just her moss-green hoodie again. On an electronics bench with a magnifier lamp lies a bare black graphics card circuit board with an empty square footprint in the centre. Lin places her chip onto the footprint with tweezers.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "chip placed on a bare black graphics card board"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          235,
+          187
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium-wide shot of a home electronics studio bathed in afternoon daylight, where Lin sits attentively at a wooden workbench. The camera holds a static medium-wide shot, keeping Lin's upper body and the wooden workbench in view. Gripping a pair of tweezers, Lin delicately lifts the GPU chip from a foam container. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Now I carefully align the graphics processor directly over the empty footprint on our bare board.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Leaning forward slightly, she guides the chip directly above the empty square footprint on the matte-black printed circuit board resting on the blue anti-static mat. With deliberate, steady motion, she lowers the processor into position, seating it cleanly against the square contacts before releasing her grip on the tweezers. The circular glow of the magnifier lamp illuminates her focused expression.\n\noverall_soundscape: Quiet room tone with a faint electrical hum in the background. A delicate metallic click of tweezers is followed by the tiny, precise snap of the processor seating onto the circuit board contacts.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the electronics workbench, now in the evening.\n\nLin leans forward over the bench, wielding a hot-air rework nozzle with practiced precision as she sweeps the heated stream in tight circles above the central chip to reflow its contacts. Setting the wand in its cradle, she takes up a pencil-thin soldering iron and fine solder wire, methodically soldering memory chips and miniature power components around the processor. A delicate wisp of pale grey smoke curls upward through the lamp's beam, leaving the board fully populated with cleanly seated components.\n\nThe camera holds a close-up perspective angled down toward the circuit board, executing a very slow macro drift across the workspace. Lin’s focused face remains softly blurred in the upper background, keeping visual attention fixed on her steady hands, the iron's glowing tip, and the newly populated graphics card.",
+      "annotation": {
+        "title_en": "Soldering",
+        "scene": "home_electronics_bench",
+        "camera": "close-up",
+        "beat": "Close on the board as Lin heats the chip with a hot-air rework station, then solders memory chips and power components around it with a fine soldering iron; a thin wisp of smoke curls up under the lamp.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "populated graphics card board"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          252,
+          139
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot angled down toward an electronics workbench in the evening, where Lin leans over a circuit board with her face softly blurred in the background. Lin leans forward over the workbench, wielding a hot-air rework nozzle with practiced precision as she sweeps the heated stream in tight circles above the central chip to reflow its contacts. The camera executes a very slow macro drift across the workspace, keeping visual attention fixed on her steady hands. Lin sets the wand in its cradle, then takes up a pencil-thin soldering iron and fine solder wire. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] With the main chip reflowed, I'm carefully soldering in the memory and tiny power stages.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. She methodically solders memory chips and miniature power components around the processor, her iron's glowing tip working across the newly populated graphics card. A delicate wisp of pale grey smoke curls upward through the lamp's beam, leaving the board fully populated with cleanly seated components.\n\noverall_soundscape: The soft rushing hiss of the hot-air rework station lowers as the nozzle clicks into its metallic cradle. A faint electric hum and quiet metallic taps accompany the subtle sizzle of flux and melting solder.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home electronics workbench.\n\nLin leans close over the board with her sleeves pulled back, holding a small plastic syringe of thermal paste in one hand. With careful pressure, she squeezes a neat, pea-sized bead of viscous grey compound onto the exact center of the chip's lid. Setting the tube aside, she picks up a miniature flat-edged spatula and gently spreads the paste outward with controlled, smooth strokes. By the end of the action, the lid is fully covered in a uniform, paper-thin layer of matte grey paste.\n\nThe camera maintains a crisp macro close-up framed tightly on the central processor and Lin’s steady hands. A shallow depth of field keeps the spreading grey compound in sharp relief while the surrounding components blur softly into the background. The shot remains static, letting the tactile precision of her spreading motion dominate the frame.",
+      "annotation": {
+        "title_en": "Thermal paste",
+        "scene": "home_electronics_bench",
+        "camera": "macro close-up",
+        "beat": "Lin squeezes a small dot of grey thermal paste onto the silver lid of the chip on the populated board and spreads it into a thin even layer with a small spatula.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "board with thermal paste on the chip"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          251,
+          144
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up at the home electronics workbench, where Lin leans close over the board with her sleeves pulled back. The camera holds a static shot tightly focused on the central processor and Lin’s steady hands, with a shallow depth of field softly blurring the surrounding components. Lin holds a small plastic syringe of thermal paste in one hand and carefully squeezes a neat, pea-sized bead of viscous grey compound onto the exact center of the chip's lid. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I squeeze a small drop in the center.</d> She sets the tube aside and picks up a miniature flat-edged spatula. Lin (S1) adds: <d>[English] Now gently spread it out until it forms a thin, even coat.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Using controlled, smooth strokes, she gently spreads the paste outward. By the end of the action, the lid is fully covered in a uniform, paper-thin layer of matte grey paste.\n\noverall_soundscape: A faint squelch sounds as the viscous paste extrudes from the nozzle. The plastic tube taps softly against the workbench, followed by the delicate, microscopic scraping of the spatula smoothing across the metal chip lid.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home electronics workbench.\n\nLin leans over the bench in deep concentration. She lifts a substantial heatsink featuring a dense stack of aluminium fins and thick copper heat pipes, carefully aligning its mounting posts over the board before lowering it smoothly onto the prepared die. Picking up a small precision screwdriver, she fastens the four spring-loaded screws in an alternating diagonal cross pattern, applying measured turns to each corner until the cooling assembly is firmly and evenly clamped into place.\n\nThe camera remains in a steady medium close-up, angled downward to frame Lin's attentive face and her hands at work on the bench. The composition keeps both her focused gaze and the metallic textures of the heatsink in clear view throughout the delicate mechanical assembly.",
+      "annotation": {
+        "title_en": "The heatsink",
+        "scene": "home_electronics_bench",
+        "camera": "medium close-up",
+        "beat": "Lin lowers a large heatsink with thick copper heat pipes and a dense aluminium fin stack onto the board and tightens the four spring screws in a cross pattern with a small screwdriver.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "board with copper-pipe heatsink mounted"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          127
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up angled downward at the home electronics workbench, where Lin leans forward in deep concentration over the assembly surface. The camera holds a static medium close-up angled downward, keeping Lin's attentive face and hands in clear view. Lin lifts a substantial heatsink featuring a dense stack of aluminium fins and thick copper heat pipes, carefully aligning its mounting posts over the board before lowering it smoothly onto the prepared die. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Now I set the heatsink down and tighten the spring screws diagonally for even pressure.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Picking up a small precision screwdriver, she fastens the four spring-loaded screws in an alternating diagonal cross pattern, applying measured turns to each corner until the cooling assembly is firmly and evenly clamped into place.\n\noverall_soundscape: A soft metallic clink sounds as the heatsink posts meet the board. The delicate, rhythmic clicking of a precision screwdriver turning spring-loaded screws echoes over the quiet ambient hum of the room.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home electronics workbench.\n\nBefore Lin lies the circuit board with its heatsink mounted. Working with practiced efficiency, she carefully clips a sculpted black-and-green shroud housing three cooling fans onto the front, then secures a matte black backplate across the reverse side. Now holding the fully assembled graphics card, Lin raises the hardware in both hands and turns it directly toward the viewer, her focused demeanor softening into a broad, proud grin.\n\nThe camera maintains a medium shot at eye level, beginning with Lin over the workbench and executing a steady, slow push-in. The framing smoothly narrows to emphasize both her triumphant expression and the graphics card, keeping the workshop backdrop gently softened behind her.",
+      "annotation": {
+        "title_en": "The card is born",
+        "scene": "home_electronics_bench",
+        "camera": "medium shot, slow push-in",
+        "beat": "Lin clips on a black-and-green fan shroud with three fans and screws on a black backplate. She lifts the finished NVIDIA graphics card with both hands and turns it toward the camera with a proud grin.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "finished black-and-green triple-fan NVIDIA graphics card"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          221,
+          117
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at eye level of the home electronics workbench, where Lin stands over the circuit board and mounted heatsink. Before Lin lies the circuit board with its heatsink mounted. Working with practiced efficiency, she clips a sculpted black-and-green shroud housing three cooling fans onto the front. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] I snap on the three-fan shroud, screw down the backplate, and the custom card is finally complete.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. She secures a matte black backplate across the reverse side. The camera executes a steady, slow push-in at eye level, smoothly narrowing the framing toward her. Now holding the fully assembled graphics card, Lin raises the hardware in both hands and turns it directly toward the viewer, her focused demeanor softening into a broad, proud grin while the workshop backdrop softens behind her.\n\noverall_soundscape: Crisp plastic clicks snap cleanly into place, followed by subtle metallic scuffs as the backplate is secured. Faint handling sounds of the assembled graphics card mix with the quiet, resting ambient hum of the workshop.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home electronics workbench.\n\nLin handles the graphics card, slotting it firmly into the test bench's PCIe riser and clicking the power cables into place. She flips the power toggle. After a momentary pause, the card's three cooling fans spin up into a steady whir, and a vivid green LED strip along the upper edge illuminates cleanly, bathing the components in emerald light. Her shoulders drop as she releases a long, relieved breath, her tense focus giving way to an open, radiant smile as she watches the card operate flawlessly.\n\nThe camera begins in a tight close-up on the graphics card and Lin's hands plugging in the connectors. As the green lights engage, it smoothly pulls back and tilts up into a medium shot, keeping both Lin's relieved face and the spinning, illuminated graphics card clearly visible on the bench.",
+      "annotation": {
+        "title_en": "First light",
+        "scene": "home_electronics_bench",
+        "camera": "close-up then medium",
+        "beat": "Lin connects the card to a bench power supply and test rig. The three fans spin up and a green light strip along the edge of the card glows. She lets out a relieved breath.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "graphics card powered on the test rig, fans spinning"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          142
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight close-up at the home electronics workbench, where Lin positions her hands over the test bench and graphics card. Lin slots the graphics card firmly into the test bench's PCIe riser and clicks the power cables into place. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Cables are locked in, so let us flip the switch and see if the card spins up.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Lin flips the power toggle. After a momentary pause, the card's three cooling fans spin up into a steady whir, and a vivid green LED strip along the upper edge illuminates cleanly, bathing the components in emerald light. As the green lights engage, the camera smoothly pulls back and tilts up into a medium shot. Lin's shoulders drop as she releases a long, relieved breath, her tense focus giving way to an open, radiant smile while she watches the graphics card operate flawlessly on the bench.\n\noverall_soundscape: Plastic connectors snap securely into the PCIe slot and socket, followed by the sharp mechanical click of a toggle switch. Cooling fans spin up with a rising hum into a steady whir alongside a soft, relieved exhale.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "The evening setting centers on Lin’s home gaming desk, bathed in the soft, warm illumination of an angled desk lamp and muted ambient room light. The spacious dark desk provides an organized workstation, flanked by keyboard peripherals and shadowed shelving in the background. The atmosphere is quiet, purposeful, and domestic, capturing the focused intimacy of a late-night hardware assembly inside a cozy personal space.\n\nLin stands beside the desk. With steady, practiced hands, she loosens the thumbscrews on a matte black mid-tower PC case and carefully lifts away its tempered glass side panel, setting it gently aside. Inside the open chassis, a motherboard with a mounted CPU cooler and RAM sticks is already fitted, leaving the primary PCIe slot completely bare. Resting beside the chassis on a shiny grey anti-static bag sits the graphics card, fans stationary and awaiting installation. She pauses, closely examining the interior layout with a quiet, thoughtful expression.\n\nThe camera holds a steady medium wide shot at desk height, framing Lin from the waist up alongside the computer case and the resting graphics card. The fixed composition keeps her deliberate hands, the vacant motherboard slot, and the GPU continuously visible without panning. Soft practical lighting neatly defines the contours of the open chassis throughout the shot.",
+      "annotation": {
+        "title_en": "An empty case",
+        "scene": "home_gaming_desk",
+        "camera": "medium wide",
+        "beat": "At her gaming desk in the evening, Lin opens an empty black PC case with a tempered glass side panel. A motherboard with a CPU cooler and RAM is already inside; the long PCIe slot is empty. Her graphics card waits on an anti-static bag beside it.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "graphics card next to an open PC case"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          258,
+          210
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium wide shot at desk height of a quiet room illuminated by soft evening light, where Lin stands beside her dark gaming workstation. The camera holds a static shot at desk height, framing Lin from the waist up alongside her workstation under the warm glow of an angled desk lamp. With steady hands, Lin loosens the thumbscrews on the matte black mid-tower PC case and carefully lifts away the tempered glass side panel, setting it gently aside. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Taking off the side panel reveals our motherboard layout.</d> Inside the chassis, the mounted CPU cooler and RAM sticks flank the bare primary PCIe slot, while the graphics card rests stationary on a shiny grey anti-static bag nearby. Lin pauses, studying the internal layout with a quiet, thoughtful expression. Lin (S1) adds: <d>[English] The main slot is completely clear and ready for the card.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot.\n\noverall_soundscape: The soft metallic clicks of thumbscrews unscrewing from the chassis, followed by the gentle handling and setting down of the tempered glass panel. A quiet, muffled interior room tone hums faintly in the background.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at her home gaming desk.\n\nLeaning forward, Lin grips the graphics card and aligns it with the motherboard's empty PCIe slot. With deliberate, balanced pressure from both thumbs, she presses the card downward until the PCIe retention latch snaps firmly into place. She immediately secures the rear bracket to the chassis frame with a small screw, tightening it by hand, and then plugs the power connector into the side socket of the card, confirming the fit with a gentle push.\n\nThe camera holds a close-up framing focused directly on her hands and the internal bay of the computer tower. The shallow depth of field keeps the mechanical connection razor-sharp while her face remains softly blurred just above the work area. The camera remains steady throughout the installation, keeping the card, slot, and cables clearly visible until the hardware sits fully assembled.",
+      "annotation": {
+        "title_en": "Click into the slot",
+        "scene": "home_gaming_desk",
+        "camera": "close-up",
+        "beat": "Lin lines up the graphics card and presses it into the PCIe slot until the latch clicks, screws the bracket to the case and plugs in the power cable.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "graphics card installed in the PC"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          251,
+          142
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot at her home gaming desk, where Lin leans forward over the open internal bay of her computer tower. The camera holds a steady close-up framing focused directly on Lin's hands and the internal bay of the computer tower, with shallow depth of field keeping the mechanical connection sharp while her face remains softly blurred above. Lin grips the graphics card and aligns it with the motherboard's empty PCIe slot. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Now I seat the graphics card firmly into the slot until it clicks.</d> With balanced pressure from both thumbs, she presses downward until the PCIe retention latch snaps firmly into place. She immediately secures the rear bracket to the chassis frame with a small screw, tightening it by hand. Lin (S1) adds: <d>[English] Then I secure the screw and plug in power.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. She then plugs the power connector into the side socket of the card, confirming the fit with a gentle push.\n\noverall_soundscape: A crisp plastic click resonates as the PCIe retention latch snaps into place. Metallic friction sounds softly while the screw is hand-tightened, followed by the firm click of the power connector seating into the socket.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home gaming desk.\n\nLin stands beside the desk and carefully slides the tempered glass side panel shut against the PC chassis. Reaching over, she presses the chassis power button. The system immediately springs to life as internal fans illuminate with soft rainbow lighting, and the graphics card emits a bright green light strip through the glass. Simultaneously, the adjacent monitor wakes to show a clean boot screen. Relieved and thrilled by the successful power-on, Lin turns directly toward the camera with a broad, genuine grin.\n\nThe camera remains fixed in a steady eye-level medium shot, framing Lin from the waist up alongside the computer case and monitor. The composition captures both the physical closure of the chassis and the colorful illumination of the components, keeping her joyful expression and the glowing green GPU clearly visible throughout.",
+      "annotation": {
+        "title_en": "Power on",
+        "scene": "home_gaming_desk",
+        "camera": "medium shot",
+        "beat": "Lin slides the glass panel shut and presses the power button. The case lights up with soft rainbow lighting, the card's green light strip glows through the glass and the monitor shows a boot screen. She grins at the camera.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "PC with her graphics card booting up"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          233,
+          139
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady eye-level medium shot at the home gaming desk, where Lin stands beside the desk alongside her computer case and monitor. The camera holds a static eye-level medium shot framing Lin from the waist up alongside the computer case and monitor. Lin carefully slides the tempered glass side panel shut against the PC chassis. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Panel closed, moment of truth, let us see if it boots up.</d> Reaching over, she presses the chassis power button. The system immediately springs to life as internal fans illuminate with soft rainbow lighting, and the graphics card emits a bright green light strip through the glass. Simultaneously, the adjacent monitor wakes to show a clean boot screen. Relieved and thrilled by the successful power-on, Lin turns directly toward the camera with a broad, genuine grin, the glowing green GPU clearly visible behind her. Lin (S1) adds: <d>[English] First try, and the lighting looks absolutely perfect.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot.\n\noverall_soundscape: A gentle slide and click as the glass panel fits into the chassis, followed by the crisp snap of a power button. Cooling fans quietly spin up into a soft whir, accompanied by the subtle electronic activation hum of a monitor.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the gaming desk late at night.\n\nLin sits facing the display, smiling with focused anticipation. She reaches down, lifts a pair of black over-ear gaming headphones, and settles them snugly over her ears. She briefly interlaces her fingers, cracking her knuckles with relaxed confidence before taking hold of the mouse. With a decisive click, she launches the game, prompting an ornate fantasy title screen to flare to life and cast shifting amber and azure light across her face and upper body.\n\nThe camera holds in a steady medium close-up at eye level, focusing on Lin’s expressive face and upper torso. The framing keeps her headset adjustment, focused gaze, and the dynamic interplay of monitor reflections clearly visible throughout the shot. The surrounding room recedes into natural soft-focus shadow, highlighting her joyful, solitary gaming ritual.",
+      "annotation": {
+        "title_en": "Headset on",
+        "scene": "home_gaming_desk",
+        "camera": "medium close-up",
+        "beat": "Night. The room lights are off except for the glowing PC and monitor. Lin puts on a black over-ear gaming headset, cracks her knuckles and launches a game; a fantasy title screen lights her face.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt, black gaming headset",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "game launching on her PC"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          136
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium close-up at eye level of a dimly lit room, where Lin sits facing her display at the gaming desk late at night. The camera holds in a steady medium close-up at eye level, focusing on Lin’s expressive face and upper torso while the surrounding room recedes into soft-focus shadow. Lin sits facing the display, smiling with focused anticipation. She reaches down, lifts a pair of black over-ear gaming headphones, and settles them snugly over her ears. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Headset on and knuckles cracked, let us launch into tonight's run and see what happens.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Lin briefly interlaces her fingers, cracking her knuckles with relaxed confidence before taking hold of the mouse. With a decisive click, she launches the game, prompting an ornate fantasy title screen to flare to life and cast shifting amber and azure light across her face and upper body.\n\noverall_soundscape: A gentle rustle of cushioned ear pads sliding on, followed by the subtle popping sound of cracked knuckles. A distinct plastic mouse click resonates in the quiet late-night room.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the darkened gaming desk.\n\nFrom behind her right side, Lin rests her left hand over the keyboard keys while her right hand maneuvers the mouse with fluid precision. On the screen, the launched game opens into an expansive fantasy landscape where her avatar rides on horseback across a glassy lake, casting complex ray-traced reflections of sunset clouds and ripples across the water. She watches intently, her posture relaxed yet engaged as her fingers make smooth control inputs while the photorealistic graphics render seamlessly.\n\nThe camera frames an over-the-shoulder medium shot, keeping the curve of Lin's shoulder and her active hands grounded in the lower foreground while centering the breathtaking gameplay on the monitor. A subtle, steady push-in draws closer toward the vibrant screen, preserving the crisp digital visuals while maintaining her quiet concentration.",
+      "annotation": {
+        "title_en": "Into the world",
+        "scene": "home_gaming_desk",
+        "camera": "over-the-shoulder toward the monitor",
+        "beat": "Over Lin's shoulder, the monitor shows a breathtaking open-world fantasy landscape with ray-traced reflections on a lake at sunset as her character rides across it. Her hands move on the keyboard and mouse.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt, black gaming headset",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "open-world game running on her GPU"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          247,
+          135
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an over-the-shoulder medium shot at a darkened gaming desk, where Lin sits with her shoulder and active hands in the foreground. From behind her right side, Lin rests her left hand over the keyboard keys while her right hand maneuvers the mouse with fluid precision. On the centered monitor, the launched game displays an expansive fantasy landscape where her avatar rides on horseback across a glassy lake, casting complex ray-traced reflections of sunset clouds and ripples across the water. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] The frame rates hold steady across the water reflections, running as smooth as I hoped.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Watching intently with a relaxed yet engaged posture, she provides smooth control inputs as the photorealistic graphics render seamlessly. The camera pushes in steadily at slow speed toward the vibrant screen, preserving the crisp visuals while keeping her quiet concentration framed.\n\noverall_soundscape: Subtle mechanical keyboard clatter and soft mouse clicks blend with the gentle hum of computer cooling fans. Faint in-game audio of rhythmic horse hooves and splashing water ripples emanates quietly from the desk setup.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home gaming desk late into the evening.\n\nFlashes of fiery orange and electric blue from the screen reflect across Lin's glasses as she tracks an intense boss fight. Her eyes are wide with absolute focus. Leaning slightly forward, she tenses her shoulders and parts her lips in quiet concentration while her fingers execute rapid, decisive clicks on the mouse. Her expression stays gripped by adrenaline, shifting subtly between tense anticipation and fierce determination as the encounter peaks.\n\nThe camera maintains a tight, intimate close-up on Lin's face at eye level, slowly creeping forward by a fraction of an inch to emphasize the mounting tension. The depth of field is shallow, keeping the background and the outer edges of her headset softly out of focus while keeping her eyes, glasses, and the shifting colored light crisply detailed.",
+      "annotation": {
+        "title_en": "Boss fight",
+        "scene": "home_gaming_desk",
+        "camera": "close-up on her face lit by the screen",
+        "beat": "Close on Lin's face, flickering with orange and blue light from the screen, eyes wide behind her glasses as she fights a huge dragon in the game; she leans forward, clicking rapidly.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt, black gaming headset",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "dragon battle on screen"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          248,
+          139
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight close-up at eye level of Lin seated at her home gaming desk late into the evening, wearing her glasses and headset. Flashes of fiery orange and electric blue from the screen reflect across Lin's glasses as she tracks an intense boss fight with wide eyes in absolute focus. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Late into the evening, I stay completely locked in through the final stage of this boss fight.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Leaning slightly forward, she tenses her shoulders and parts her lips in quiet concentration while executing rapid, decisive clicks on the mouse. Her expression shifts subtly between tense anticipation and fierce determination as the encounter peaks. The camera slowly creeps forward by a fraction of an inch at eye level, maintaining a shallow depth of field where the background and headset edges stay softly blurred while her eyes, glasses, and shifting colored light remain crisply detailed.\n\noverall_soundscape: Rapid, sharp mouse clicks sound steadily in the quiet room. A subtle electronic drone and faint computer fan whirring hum softly in the background.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Still at the home gaming desk.\n\nOn the monitor, the dragon collapses in a cascade of visual effects, quickly giving way to a radiant golden victory banner. Watching from the desk, Lin instantly erupts with joy, pushing back from her chair and leaping to her feet with both arms pumped high in the air. The rapid jump knocks her headset slightly askew, leaving one earcup tipped back over her temple. She breaks into bright, breathless laughter, beaming with genuine exhilaration as she celebrates her triumph.\n\nThe camera remains in a steady medium shot at eye level, subtly tilting upward and drifting back slightly to smoothly follow her vertical movement as she stands. The framing comfortably preserves her upper body, raised fists, askew headset, and the blazing victory screen beside her, maintaining clear visibility of both her joyful expression and the game interface.",
+      "annotation": {
+        "title_en": "Victory",
+        "scene": "home_gaming_desk",
+        "camera": "medium shot",
+        "beat": "The dragon falls on screen and a VICTORY banner appears. Lin jumps up from her gaming chair with both arms raised, her headset knocked slightly askew, laughing.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt, black gaming headset",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "victory screen in the game"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          262,
+          142
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at eye level in front of the home gaming desk, where Lin sits before her monitor. On the monitor, the dragon collapses in a cascade of visual effects, quickly giving way to a radiant golden victory banner. Watching from the desk, Lin instantly erupts with joy, pushing back from her chair and leaping to her feet with both arms pumped high in the air. The rapid jump knocks her headset slightly askew, leaving one earcup tipped back over her temple. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] We finally took down the dragon on that last run, and the golden victory screen appeared!</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. She breaks into bright, breathless laughter, beaming with genuine exhilaration as she celebrates her triumph. The camera subtly tilts upward and drifts back slightly at eye level to smoothly follow her vertical movement, keeping her upper body, raised fists, askew headset, and the blazing victory screen in frame.\n\noverall_soundscape: Explosive in-game fantasy impact effects give way to a resonant sparkling chime from monitor speakers. The caster wheels of a desk chair scrape sharply across the floor as it rolls back.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back at the home studio desk beside the cork board.\n\nSmiling with quiet satisfaction, Lin lifts her hands, pulls the headset down around her neck, and gently pats the top of the illuminated PC case. She then turns toward the cork board, gazing directly at the pinned pencil architecture sketch as her expression softens in contemplation.\n\nThe camera begins in a medium shot of Lin at the desk and slowly pulls back in a smooth, continuous motion. The widening frame gracefully incorporates the pinned pencil sketch, Lin standing peacefully, the glowing PC tower, and the paused monitor display into a single balanced wide shot that maintains crisp focus across the entire setup.",
+      "annotation": {
+        "title_en": "Full circle",
+        "scene": "home_studio_wall",
+        "camera": "slow pull-back to a wide shot",
+        "beat": "Lin pulls the headset down around her neck, pats the glowing PC case and turns to the cork board where her pencil architecture sketch is still pinned. The camera pulls back to show the sketch, the glowing PC and the paused game together.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt, headset around her neck",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "sketch on the board and the running PC in one frame"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          237,
+          112
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a home studio desk beside a cork board, where Lin stands smiling with quiet satisfaction. Smiling with quiet satisfaction, Lin lifts her hands, pulls the headset down around her neck, and gently pats the top of the illuminated PC case. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] Seeing the finished build running right beside my original sketch makes all that hard work worth it.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. She then turns toward the cork board, gazing directly at the pinned pencil architecture sketch as her expression softens in contemplation. The camera slowly pulls back in a smooth, continuous motion from Lin at the desk, widening the frame to gracefully incorporate the pinned pencil sketch, Lin standing peacefully, the glowing PC tower, and the paused monitor display into a single balanced wide shot that maintains crisp focus across the entire setup.\n\noverall_soundscape: The soft plastic rustle of headset adjustment is accompanied by a gentle pat on the PC chassis. A quiet, continuous hum from the computer fans fills the room.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    },
+    {
+      "prompt": "Back at the home gaming desk.\n\nSettling back into her desk chair, Lin turns directly toward the lens. Her expression softens into a warm, accomplished smile as she speaks to the viewer, explaining that the intricate game frame paused behind her originated from the pencil sketch. Radiating quiet pride, she leans forward slightly and reaches her right hand directly toward the front of the lens to turn off the recording.\n\nThe camera remains static in a medium close-up framing Lin from the chest up at eye level. The composition keeps her expressive face sharply defined against the soft ambient backdrop. The shot concludes cleanly as her reaching hand enters the immediate foreground toward the lens.",
+      "annotation": {
+        "title_en": "Sign-off",
+        "scene": "home_gaming_desk",
+        "camera": "medium close-up, static",
+        "beat": "Lin sits back down in the glow of the monitor, turns to the camera and smiles; she says that this frame started as a pencil sketch, then reaches toward the camera to switch the recording off.",
+        "state": {
+          "outfit": "moss-green zip hoodie over white T-shirt, headset around her neck",
+          "glasses": "round tortoiseshell",
+          "gpu_stage": "game paused on screen"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          243,
+          115
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up of the home gaming desk at eye level, where Lin sits settled in her desk chair framed from the chest up against a soft ambient backdrop. The camera holds a static medium close-up at eye level, keeping Lin sharply defined against the soft ambient backdrop. Settling back into her desk chair, Lin turns directly toward the lens. Her expression softens into a warm, accomplished smile as she speaks directly to the viewer. Lin, a woman in her early thirties with a clear, warm alto voice, an energetic but relaxed pace and a neutral American accent (S1) says: <d>[English] That intricate game frame paused right behind me all originated from that simple pencil sketch.</d> Exactly as her voice stops, Lin's lips close and her jaw stops moving; she stays silent for the rest of the shot. Radiating quiet pride, Lin leans forward slightly. She reaches her right hand directly toward the front of the lens to turn off the recording, her hand entering the immediate foreground as the shot concludes cleanly.\n\noverall_soundscape: A faint hum of computer fans fills the quiet room. The desk chair subtly creaks as Lin shifts and leans forward toward the camera.\n\nnon_diegetic_music: Minimal electronic ambient score with a soft pulsing synth arpeggio and light percussion, kept at low volume beneath the narration throughout."
+      }
+    }
+  ]
+}

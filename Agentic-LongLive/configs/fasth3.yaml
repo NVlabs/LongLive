@@ -1,0 +1,12 @@
+# Agentic LongLive, full system, on FastH3-Omni (8-step bidirectional MiniMax-H3 distillation, UniServe server).
+# A shot is shown after it is fully generated (~7 s); with prompts every 8 s the agent keeps memory current.
+# Start the UniServe server and the FastH3 worker first (scripts/workers/serve_fasth3.sh, docs/generators.md).
+defaults: [agents/oss.yaml, backends/h3.yaml]
+story: stories/longstory_online/collie_muddy_day.json
+output_dir: outputs/fasth3
+seed: 0
+memory: {mode: entity, use_g: true, m_slots: 2}
+agent: {policy: llm, refine_rounds: 3, neutral_g: true}
+runtime: {mode: async, aux_prefill: true, entity_cards: true, prompt_interval_s: 8.0}
+backend:
+  params: {queue_dir: "${oc.env:AGL_H3_QUEUE,outputs/queues/fasth3}", g_masks: false}

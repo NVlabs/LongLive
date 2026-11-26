@@ -1,0 +1,52 @@
+{
+ "name": "03_fold_towel",
+ "title": "Folding Cloth and Clearing Counter",
+ "summary": "The robot folds a cloth, covers a sponge with it while inspecting the sink, and returns to uncover and use the sponge.",
+ "camera": "head camera",
+ "robot": "two white robot arms with parallel grippers",
+ "setting": "a kitchen counter next to a stainless steel sink",
+ "first_frame": "03_fold_towel.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "e6c178ca77296696ae58b3c98fe338fe",
+  "frame_index": 0,
+  "original_prompt": "Fold the cloth from right to left",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "17c08d66d865db784f677be8ca912b44c829d01e2c5352189d8c08cc50aae3e2"
+ },
+ "segments": [
+  {
+   "instruction": "Grasp the right edge of the brown cloth with the right gripper and lift it toward the center while the camera stays fixed.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Fold the cloth over to the left side and release it, then pat it flat with both grippers.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pick up the folded cloth with the right gripper and drape it over the yellow sponge near the sink corner.",
+   "memory_event": "hide: yellow sponge covered entirely by the folded brown cloth"
+  },
+  {
+   "instruction": "Turn the camera down toward the sink basin and reach the left gripper toward the drain.",
+   "memory_event": "hide: countertop and covered sponge exit camera view to the right"
+  },
+  {
+   "instruction": "Inspect the sink drain and rinse the left gripper under the faucet area while keeping the camera focused on the basin.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the camera back up and right to center on the countertop.",
+   "memory_event": "return: countertop view returns showing the green bottle and the folded brown cloth covering the sponge at the sink edge"
+  },
+  {
+   "instruction": "Grasp the folded cloth with the right gripper, lift it off, and place it to the right.",
+   "memory_event": "return: yellow sponge is uncovered and resting in the same position"
+  },
+  {
+   "instruction": "Pick up the sponge with the left gripper and wipe down the empty counter area.",
+   "memory_event": "none"
+  }
+ ]
+}

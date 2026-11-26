@@ -1,0 +1,3686 @@
+{
+ "id": "hd15_464363_terse",
+ "setup": {
+  "title": "The Master of Strings",
+  "style": "Warm cinematic realism with rich amber workshop lighting, theatrical stage glows, and tactile woodcraft textures",
+  "cast": [
+   {
+    "id": "clara",
+    "name": "Clara",
+    "description": "Clara, Female puppeteer in her late 20s with a slender build, pale skin, wavy brown hair, and hazel eyes, linen smock over brown corduroys, worn leather work boots, wavy brown hair tied in a loose low bun."
+   }
+  ]
+ },
+ "bible": {
+  "entities": {
+   "clara": {
+    "id": "clara",
+    "kind": "character",
+    "name": "Clara",
+    "identity": "Female puppeteer in her late 20s with a slender build, pale skin, wavy brown hair, and hazel eyes",
+    "initial": {
+     "outfit": "linen smock over brown corduroys",
+     "footwear": "worn leather work boots",
+     "hairstyle": "wavy brown hair tied in a loose low bun"
+    },
+    "protagonist": true
+   },
+   "mateo": {
+    "id": "mateo",
+    "kind": "character",
+    "name": "Mateo",
+    "identity": "Male stage apprentice in his early 20s with a stocky build, tan skin, and short black curly hair",
+    "initial": {
+     "outfit": "faded denim overalls over gray tee",
+     "footwear": "scuffed work clogs"
+    },
+    "protagonist": false
+   },
+   "barnaby": {
+    "id": "barnaby",
+    "kind": "character",
+    "name": "Barnaby",
+    "identity": "Elderly orange tabby cat with a notched left ear and pale green eyes",
+    "initial": {
+     "accessory": "brass bell on red leather collar"
+    },
+    "protagonist": false
+   },
+   "madame_vane": {
+    "id": "madame_vane",
+    "kind": "character",
+    "name": "Madame Vane",
+    "identity": "Female theater patron in her 60s, tall and gaunt, with an aquiline nose and an elegant silver updo",
+    "initial": {
+     "outfit": "high-collared midnight silk gown",
+     "footwear": "black pointed heeled slippers"
+    },
+    "protagonist": false
+   },
+   "harlequin_marionette": {
+    "id": "harlequin_marionette",
+    "kind": "object",
+    "name": "Harlequin Marionette",
+    "identity": "Carved pine marionette of a court jester with articulated limbs and pointed chin",
+    "initial": {
+     "state": "raw unvarnished pine with carved facial features, unstrung"
+    },
+    "protagonist": false
+   },
+   "pegasus_marionette": {
+    "id": "pegasus_marionette",
+    "kind": "object",
+    "name": "Pegasus Marionette",
+    "identity": "Carved pearwood winged horse marionette with hinged joints and painted gold hooves",
+    "initial": {
+     "state": "fully painted ivory and gold, strung to its control bar"
+    },
+    "protagonist": false
+   },
+   "woodcarving_chisel": {
+    "id": "woodcarving_chisel",
+    "kind": "object",
+    "name": "Woodcarving Chisel",
+    "identity": "Carbon-steel bevelled chisel with an octagonal ash handle",
+    "initial": {
+     "state": "sharp polished blade with oiled wooden handle"
+    },
+    "protagonist": false
+   },
+   "waxed_linen_spool": {
+    "id": "waxed_linen_spool",
+    "kind": "object",
+    "name": "Waxed Linen Spool",
+    "identity": "Cylindrical wooden spool wound with thick braided black linen thread",
+    "initial": {
+     "state": "full spool of heavy black waxed cord"
+    },
+    "protagonist": false
+   },
+   "control_cross": {
+    "id": "control_cross",
+    "kind": "object",
+    "name": "Control Cross",
+    "identity": "Crossed birchwood marionette controller bar fitted with polished brass screw-eyes",
+    "initial": {
+     "state": "smooth birch cross without strings attached"
+    },
+    "protagonist": false
+   },
+   "varnish_pot": {
+    "id": "varnish_pot",
+    "kind": "object",
+    "name": "Varnish Pot",
+    "identity": "Glazed earthy stoneware pot with a wide rim and brass wire handle",
+    "initial": {
+     "state": "sealed stoneware jar, full of amber resin"
+    },
+    "protagonist": false
+   },
+   "velvet_travel_trunk": {
+    "id": "velvet_travel_trunk",
+    "kind": "object",
+    "name": "Velvet Travel Trunk",
+    "identity": "Rectangular cedar chest with brass corner braces and plum-colored quilted velvet lining",
+    "initial": {
+     "state": "open cedar trunk with empty padded compartments"
+    },
+    "protagonist": false
+   },
+   "stage_backdrop": {
+    "id": "stage_backdrop",
+    "kind": "object",
+    "name": "Stage Backdrop",
+    "identity": "Heavy scenic canvas depicting a moonlit clock tower above cobblestone rooftops",
+    "initial": {
+     "state": "rolled tightly around a counterweighted wooden pole"
+    },
+    "protagonist": false
+   },
+   "brass_sconce_lantern": {
+    "id": "brass_sconce_lantern",
+    "kind": "object",
+    "name": "Brass Sconce Lantern",
+    "identity": "Hexagonal antique brass lantern with bevelled glass panes and candle mount",
+    "initial": {
+     "state": "unlit brass lantern with trimmed wick and clear glass"
+    },
+    "protagonist": false
+   },
+   "tuning_peg_case": {
+    "id": "tuning_peg_case",
+    "kind": "object",
+    "name": "Tuning Peg Case",
+    "identity": "Small mahogany hinged case with brass clasp and velvet dividers",
+    "initial": {
+     "state": "closed mahogany box with brass latch"
+    },
+    "protagonist": false
+   }
+  },
+  "locations": {
+   "workshop_main": {
+    "id": "workshop_main",
+    "name": "Clara's Workshop Ground Floor",
+    "look": "Sunlit timber workshop with cluttered workbenches, curls of wood shavings on the floorboards, and dangling suspension hooks"
+   },
+   "workshop_loft": {
+    "id": "workshop_loft",
+    "name": "Clara's Workshop Loft",
+    "look": "Cozy mezzanine loft under angled rafters, featuring a patchwork daybed, drafting table, and dormer window"
+   },
+   "theater_backstage": {
+    "id": "theater_backstage",
+    "name": "Grand Marionette Backstage",
+    "look": "Dim theater wings crowded with rope fly-systems, sandbags, painted scenery flats, and wooden floorboards"
+   },
+   "stage_floor": {
+    "id": "stage_floor",
+    "name": "The Proscenium Marionette Stage",
+    "look": "Polished miniature oak stage with red velvet curtain wings, an elevated bridge overhead, and warm footlights"
+   },
+   "dressing_room": {
+    "id": "dressing_room",
+    "name": "Puppeteer Dressing Room",
+    "look": "Cramped backstage dressing nook with an illuminated mirror, garment racks, and prop crates"
+   }
+  }
+ },
+ "shots": [
+  {
+   "prompt": "Clara's Workshop Ground Floor is sunlit with cluttered timber workbenches, curls of wood shavings on floorboards, and dangling suspension hooks. Clara, a slender female puppeteer in her late 20s with wavy brown hair in a loose low bun, wearing a linen smock over brown corduroys and worn leather boots, carves diamond notches into the Harlequin Marionette, an unstrung raw pine jester. Barnaby, an elderly orange tabby with a notched ear and a brass bell on a red collar, naps beside the vice. Clara uses a sharp woodcarving chisel with an oiled handle and gently blows off pine dust. Close-up tracking her hands as wood curls peel.",
+   "annotation": {
+    "title_en": "In the quiet morning light, Clara sits at her workbench carv",
+    "scene": "workshop_main",
+    "camera": "Close-up tracking Clara's focused hands as wood curls peel beneath the chisel blade.",
+    "beat": "In the quiet morning light, Clara sits at her workbench carving delicate diamond notches into the Harlequin's chest.",
+    "present": [
+     "clara",
+     "barnaby",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [
+     "clara",
+     "barnaby",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Clara gently blows pine dust off the carved figurine; Barnaby naps beside the vice.",
+    "start_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "brass bell on red leather collar"
+     },
+     "harlequin_marionette": {
+      "state": "raw unvarnished pine with carved facial features, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "brass bell on red leather collar"
+     },
+     "harlequin_marionette": {
+      "state": "raw unvarnished pine with carved facial features, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "state": {
+     "clara.outfit": "linen smock over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "barnaby.accessory": "brass bell on red leather collar",
+     "harlequin_marionette.state": "raw unvarnished pine with carved facial features, unstrung",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot in the sunlit ground floor of Clara's workshop, where Clara works over a cluttered timber workbench carving an unstrung pine jester. The camera tracks Clara's hands in close-up as thin wood curls peel away under a sharp woodcarving chisel with an oiled handle. Clara, a slender puppeteer in her late twenties with wavy brown hair tied in a loose low bun, wears a linen smock over brown corduroys and worn leather boots. She carves diamond notches into the Harlequin Marionette, an unstrung raw pine jester resting on the cluttered timber workbench beneath dangling suspension hooks and above floorboards covered in wood shavings. The narrator says: <d>[English] Just a few more diamond notches, little jester, and your wooden costume will finally be complete.</d> After this line the voice-over stays silent for the rest of the shot. Clara leans in and gently blows off pine dust from the fresh cuts. Beside the vice, Barnaby, an elderly orange tabby with a notched ear and a brass bell on a red collar, naps peacefully.\n\noverall_soundscape: The crisp slicing and scraping sound of a sharp chisel carving into soft pine, followed by the quiet whoosh of Clara gently blowing away wood dust. A faint, muffled metallic chime rings softly from Barnaby's collar.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Clara lays the Woodcarving Chisel aside to paint Harlequin Marionette, coating its sanded facets until it shines in checkered crimson and ivory lacquer. Clara inspects the wet checkered paint under the lamp with a satisfied smile. Medium shot over Clara's shoulder watching the vibrant paint coat the pale pine.",
+   "annotation": {
+    "title_en": "Clara lays the chisel aside to brush rich crimson and ivory ",
+    "scene": "workshop_main",
+    "camera": "Medium shot over Clara's shoulder watching the vibrant paint coat the pale pine.",
+    "beat": "Clara lays the chisel aside to brush rich crimson and ivory lacquer across the sanded facets of the puppet.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "harlequin_marionette",
+      "attr": "state",
+      "value": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara inspects the wet checkered paint under the lamp, a satisfied smile on her lips.",
+    "start_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "raw unvarnished pine with carved facial features, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "brass bell on red leather collar"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "state": {
+     "clara.outfit": "linen smock over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "smoothly sanded and painted in checkered crimson and ivory, unstrung",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot over Clara's shoulder at Clara's Workshop Ground Floor, with Clara beside Harlequin Marionette under a lamp. The camera holds a static medium shot over Clara's shoulder, watching the vibrant paint coat the pale pine. Clara lays the Woodcarving Chisel aside to paint Harlequin Marionette, coating its sanded facets until it shines in checkered crimson and ivory lacquer. The narrator says: <d>[English] The crimson lacquer brings these facets to life just as I imagined.</d> Clara (S1) adds: <d>[English] Now for the ivory checks.</d> After this line the voice-over stays silent for the rest of the shot. Clara inspects the wet checkered paint under the lamp with a satisfied smile.\n\noverall_soundscape: The soft click of a metal chisel resting on a surface is followed by the gentle, rhythmic glide of wet bristles over wood. A faint, steady hum comes from the overhead lamp.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Clara's Workshop Loft is a cozy mezzanine under angled rafters, featuring a patchwork daybed, drafting table, and dormer window. Clara pets Barnaby as the old cat scratches against a table leg until his jingling bell pops off, leaving his plain red leather collar. Barnaby rolls onto his back purring as Clara unhooks the broken bell fragment. Static eye-level two-shot of Clara and Barnaby on the loft rug.",
+   "annotation": {
+    "title_en": "Clara heads up to the loft for tea, petting Barnaby as the o",
+    "scene": "workshop_loft",
+    "camera": "Static eye-level two-shot of Clara and Barnaby on the loft rug.",
+    "beat": "Clara heads up to the loft for tea, petting Barnaby as the old cat scratches off his jingling bell against the table leg.",
+    "present": [
+     "clara",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "barnaby",
+      "attr": "accessory",
+      "value": "plain red leather collar without bell"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Barnaby rolls onto his back purring as Clara unhooks the broken bell fragment.",
+    "start_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "brass bell on red leather collar"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "state": {
+     "clara.outfit": "linen smock over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "barnaby.accessory": "plain red leather collar without bell"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static eye-level two-shot of Clara's workshop loft, where Clara sits on the loft rug beside Barnaby under angled rafters near a drafting table. The camera holds a static eye-level two-shot on the loft rug in the cozy mezzanine workshop loft under angled rafters, showing the patchwork daybed, drafting table, and dormer window. Clara pets Barnaby while the old cat scratches against a leg of the drafting table. His jingling bell suddenly pops off, leaving only his plain red leather collar around his neck. Barnaby rolls onto his back and purrs. The narrator says: <d>[English] There goes your little bell, Barnaby, but you seem much happier without that constant noise.</d> After this line the voice-over stays silent for the rest of the shot. Clara reaches down and unhooks the broken bell fragment.\n\noverall_soundscape: Scratching sounds of cat claws scrape against the wooden table leg, punctuated by a faint metallic tinkle as the bell pops loose. Deep, steady cat purring softly resonates across the quiet loft.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at Clara's Workshop Ground Floor. Clara ties on a heavy leather-paneled apron over her brown corduroys to begin the rigging phase. She tests the flexibility of the Harlequin Marionette's elbow hinges with her fingertips, leaving the Woodcarving Chisel resting on the bench. Medium low-angle shot as Clara ties the apron straps behind her waist.",
+   "annotation": {
+    "title_en": "Returning downstairs, Clara puts on her heavy leather-panele",
+    "scene": "workshop_main",
+    "camera": "Medium low-angle shot as Clara ties the apron straps behind her waist.",
+    "beat": "Returning downstairs, Clara puts on her heavy leather-paneled apron to begin the intricate rigging phase.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "leather-paneled apron over brown corduroys"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Clara tests the flexibility of Harlequin's elbow hinges with her fingertips.",
+    "start_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "smoothly sanded and painted in checkered crimson and ivory, unstrung",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium low-angle shot of Clara's workshop ground floor, where Clara stands beside a workbench while securing her apron straps behind her waist. Clara finishes tying on a heavy leather-paneled apron over her brown corduroys to begin the rigging phase. The narrator says: <d>[English] Time to rig the joints; let us see if these elbow hinges move smoothly enough.</d> After this line the voice-over stays silent for the rest of the shot. Leaving the woodcarving chisel resting on the bench, she leans over the workspace. Clara reaches toward the Harlequin marionette and tests the flexibility of its elbow hinges with her fingertips, feeling the tension of the joints. The camera maintains its medium low-angle framing throughout the motion.\n\noverall_soundscape: Tough leather creaks and corduroy fabric rustles as the apron straps are pulled tight. Subtle wooden clicks and light scraping sounds echo softly as Clara flexes the marionette's elbow joints.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Clara measures long cords from the Waxed Linen Spool, a cylindrical wooden spool wound with thick braided black linen thread, while Barnaby watches lazily from a toolbox. Clara bites through the waxed thread, tensioning it between both hands. Wide shot capturing the sunbeams cutting across the string lines stretched between pegs.",
+   "annotation": {
+    "title_en": "Clara measures out long strands of waxed cord from the heavy",
+    "scene": "workshop_main",
+    "camera": "Wide shot capturing the sunbeams cutting across the string lines stretched between pegs.",
+    "beat": "Clara measures out long strands of waxed cord from the heavy spool while Barnaby watches lazily from a toolbox.",
+    "present": [
+     "clara",
+     "waxed_linen_spool",
+     "barnaby"
+    ],
+    "first_appearance": [
+     "waxed_linen_spool"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara bites through the wax thread, tensioning it between both hands.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "waxed_linen_spool.state": "full spool of heavy black waxed cord",
+     "barnaby.accessory": "plain red leather collar without bell"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of Clara's Workshop Ground Floor, where Clara stands measuring long cords beside string lines stretched between pegs under cutting sunbeams. The camera holds a static wide shot across the room as sunbeams cut across the string lines stretched between pegs. Clara measures long cords from the Waxed Linen Spool, a cylindrical wooden spool wound with thick braided black linen thread, while Barnaby watches lazily from a toolbox. The narrator says: <d>[English] This thick braided linen thread should hold firmly enough once stretched between all these pegs.</d> After this line the voice-over stays silent for the rest of the shot. Clara then bites through the waxed thread, tensioning it between both hands.\n\noverall_soundscape: The dry unwinding of thick thread rattles softly from a wooden spool. A faint tensioned snap sounds as the waxed cord is pulled and bitten taut.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Clara holds the Control Cross, a smooth birchwood crossed bar with brass screw-eyes, calibrating it against the Pegasus Marionette, an articulated pearwood winged horse painted ivory and gold and strung to its control bar. Clara rocks the cross gently, making Pegasus's carved wings flutter softly. High-angle view looking down through the puppet bridge at Pegasus hovering above the floor.",
+   "annotation": {
+    "title_en": "Clara pauses to calibrate a control cross against Pegasus, e",
+    "scene": "workshop_main",
+    "camera": "High-angle view looking down through the puppet bridge at Pegasus hovering above the floor.",
+    "beat": "Clara pauses to calibrate a control cross against Pegasus, ensuring the wing-flapping counterbalance is balanced.",
+    "present": [
+     "clara",
+     "pegasus_marionette",
+     "control_cross"
+    ],
+    "first_appearance": [
+     "pegasus_marionette",
+     "control_cross"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara rocks the cross gently, making Pegasus's carved wings flutter softly.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "pegasus_marionette.state": "fully painted ivory and gold, strung to its control bar",
+     "control_cross.state": "smooth birch cross without strings attached"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle shot looking down through the puppet bridge on Clara's workshop ground floor, where Clara holds the control cross above the floor. The camera holds a static high-angle shot looking down through the puppet bridge at the articulated pearwood winged horse, painted ivory and gold, hovering above the floor. Clara holds the control cross, a smooth birchwood crossed bar with brass screw-eyes, calibrating it against the strung Pegasus marionette. The narrator says: <d>[English] Keep your balance now, little wings.</d> Clara rocks the cross gently, making Pegasus's carved wings flutter softly. Clara (S1) adds: <d>[English] Just a soft flutter to test how the strings respond.</d> After this line the voice-over stays silent for the rest of the shot. The winged marionette hovers steadily above the workshop ground floor.\n\noverall_soundscape: The soft clicking of pearwood joints and light rustling of carved wings fluttering in the air. Faint creaks of tensioned marionette strings and the subtle shifting of the birchwood bar.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Beside Harlequin Marionette sits Varnish Pot, a glazed earthy stoneware pot with a wide rim and brass wire handle, sealed with cork and full of amber resin. Clara pops the cork seal off Varnish Pot and leaves a brush resting in the amber resin. She stirs the fragrant liquid and taps off excess on the rim. Tight close-up of the thick amber resin swirling in the jar.",
+   "annotation": {
+    "title_en": "Clara pops the cork seal off the varnish pot and stirs the f",
+    "scene": "workshop_main",
+    "camera": "Tight close-up of the thick amber resin swirling in the jar.",
+    "beat": "Clara pops the cork seal off the varnish pot and stirs the fragrant resin with a hog-bristle brush.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "varnish_pot"
+    ],
+    "first_appearance": [
+     "varnish_pot"
+    ],
+    "changes": [
+     {
+      "entity": "varnish_pot",
+      "attr": "state",
+      "value": "uncapped stoneware jar, brush resting inside amber resin"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara dips the brush and taps off excess liquid on the pot rim.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "varnish_pot": {
+      "state": "sealed stoneware jar, full of amber resin"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "smoothly sanded and painted in checkered crimson and ivory, unstrung",
+     "varnish_pot.state": "uncapped stoneware jar, brush resting inside amber resin"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot of Clara's Workshop Ground Floor, where Clara stands beside Harlequin Marionette and Varnish Pot. Beside Harlequin Marionette on Clara's Workshop Ground Floor rests Varnish Pot, a glazed earthy stoneware pot with a wide rim and brass wire handle, sealed with cork and full of amber resin. Clara pops the cork seal off Varnish Pot and leaves a brush resting in the amber resin. The narrator says: <d>[English] The amber resin is finally stirred and ready to seal the wood with a clean finish.</d> After this line the voice-over stays silent for the rest of the shot. She stirs the fragrant liquid and taps off excess on the rim. The camera pushes in at moderate speed into a tight close-up of the thick amber resin swirling in the jar.\n\noverall_soundscape: A hollow pop echoes as the cork seal is pulled from the stoneware pot. The brush gently swishes through the thick resin, followed by light tapping against the ceramic rim.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Clara secures the final knots from Harlequin Marionette to Control Cross, turning it into glossy varnished pine with complete waxed cords tethered to the birch controller bar. She admires the glossy finished pair beside Pegasus Marionette, tilting her head to evaluate the smooth articulation of Harlequin's knees. Medium tracking shot as Clara tests Harlequin's walking motion beside Pegasus.",
+   "annotation": {
+    "title_en": "Clara secures the final knots from Harlequin to the birch co",
+    "scene": "workshop_main",
+    "camera": "Medium tracking shot as Clara tests Harlequin's walking motion beside Pegasus.",
+    "beat": "Clara secures the final knots from Harlequin to the birch control cross, admiring the glossy finished pair.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "control_cross",
+     "pegasus_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "harlequin_marionette",
+      "attr": "state",
+      "value": "glossy varnished pine with complete waxed cords tethered to cross"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara tilts her head, evaluating the smooth articulation of Harlequin's knees.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "control_cross.state": "smooth birch cross without strings attached",
+     "pegasus_marionette.state": "fully painted ivory and gold, strung to its control bar"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of Clara's workshop ground floor, where Clara stands beside Pegasus Marionette while holding Harlequin Marionette and Control Cross. Clara secures the final knots from Harlequin Marionette to Control Cross, turning it into glossy varnished pine with complete waxed cords tethered to the birch controller bar. She admires the glossy finished pair beside Pegasus Marionette, tilting her head to evaluate the smooth articulation of Harlequin's knees. The narrator says: <d>[English] The joints move smoothly, balanced just right beside Pegasus.</d> The camera follows in a medium tracking shot as Clara tests Harlequin's walking motion beside Pegasus. Clara (S1) adds: <d>[English] Step by step, the strings hold true.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: Waxed cords pull taut with faint tension against the wooden controller. Polished wooden joints click softly as the marionette's knees lift and articulate.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Barnaby taps playfully at Harlequin Marionette's dangling foot as Clara lowers the finished puppet to rest on the stool. Clara laughs and gently scoots Barnaby away from the freshly dried strings. Low-angle shot from the floor beside Barnaby's paws.",
+   "annotation": {
+    "title_en": "Barnaby taps playfully at Harlequin's dangling foot as Clara",
+    "scene": "workshop_main",
+    "camera": "Low-angle shot from the floor beside Barnaby's paws.",
+    "beat": "Barnaby taps playfully at Harlequin's dangling foot as Clara lowers the finished puppet to rest on the stool.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara laughs and gently scoots Barnaby away from the freshly dried strings.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "barnaby.accessory": "plain red leather collar without bell"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle shot from the floor beside Barnaby's paws in Clara's Workshop Ground Floor, where Clara leans over a stool. The camera holds a static low-angle shot from the floor beside Barnaby's paws. Barnaby taps playfully at the Harlequin Marionette's dangling foot as Clara slowly lowers the finished puppet to rest on the stool. Clara laughs at the playful tapping. The narrator says: <d>[English] Careful there, Barnaby, do not touch those freshly dried strings just yet, silly boy.</d> After this line the voice-over stays silent for the rest of the shot. Clara then gently scoots Barnaby away from the freshly dried strings, keeping the Harlequin Marionette in place on the stool as the shot concludes.\n\noverall_soundscape: Soft patter of paws lightly tapping against a wooden foot. Faint tension of marionette strings followed by a gentle thud of the puppet settling onto the stool. Subtle ambient room resonance throughout the workshop ground floor.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Clara stands before Velvet Travel Trunk, an open rectangular cedar chest with brass corner braces, empty padded compartments, and plum-colored quilted velvet lining. She carefully lays Harlequin Marionette and Pegasus Marionette into the plush velvet pockets. Clara closes the trunk lid and fastens the two heavy brass toggles. Top-down shot of the puppets nested securely into the purple velvet.",
+   "annotation": {
+    "title_en": "Clara carefully lays Harlequin and Pegasus into the plush ve",
+    "scene": "workshop_main",
+    "camera": "Top-down shot of the puppets nested securely into the purple velvet.",
+    "beat": "Clara carefully lays Harlequin and Pegasus into the plush velvet pockets of her cedar travel trunk.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "pegasus_marionette",
+     "velvet_travel_trunk"
+    ],
+    "first_appearance": [
+     "velvet_travel_trunk"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara closes the trunk lid and fastens the two heavy brass toggles.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "pegasus_marionette.state": "fully painted ivory and gold, strung to its control bar",
+     "velvet_travel_trunk.state": "open cedar trunk with empty padded compartments"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a top-down shot at Clara's Workshop Ground Floor, where Clara stands directly before the Velvet Travel Trunk. The camera holds a static top-down shot looking into the open rectangular cedar chest with brass corner braces, revealing its empty padded compartments and plum-colored quilted velvet lining. Clara carefully lays Harlequin Marionette and Pegasus Marionette into the plush velvet pockets. The narrator says: <d>[English] Rest safely now, my precious travelers, tucked away securely until our next grand performance begins.</d> After this line the voice-over stays silent for the rest of the shot. With the puppets nested securely into the purple velvet, Clara brings down and closes the trunk lid over them. She firmly fastens the two heavy brass toggles against the chest.\n\noverall_soundscape: Soft rustling of plush velvet fabric accompanies the placement of the marionettes into their compartments. A solid wooden thud echoes as the cedar lid closes, followed by the firm metallic clicking of brass toggles locking in place.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Grand Marionette Backstage: dim theater wings crowded with rope fly-systems, sandbags, painted scenery flats, and wooden floorboards. Mateo, a stocky stage apprentice in his early 20s with tan skin, short black curly hair, faded denim overalls over a gray tee, and scuffed work clogs, helps Clara hoist Velvet Travel Trunk past the hanging counterweights. Mateo wipes sweat from his brow, gesturing toward the backstage call board. Dolly shot leading Clara and Mateo down the shadowy backstage hallway.",
+   "annotation": {
+    "title_en": "At the theater backstage, Mateo helps Clara hoist the cedar ",
+    "scene": "theater_backstage",
+    "camera": "Dolly shot leading Clara and Mateo down the shadowy backstage hallway.",
+    "beat": "At the theater backstage, Mateo helps Clara hoist the cedar trunk past the hanging counterweights.",
+    "present": [
+     "clara",
+     "mateo",
+     "velvet_travel_trunk"
+    ],
+    "first_appearance": [
+     "mateo"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Mateo wipes sweat from his brow, gesturing toward the backstage call board.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "mateo.outfit": "faded denim overalls over gray tee",
+     "mateo.footwear": "scuffed work clogs",
+     "velvet_travel_trunk.state": "open cedar trunk with empty padded compartments"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot in the dim theater wings crowded with rope fly-systems and sandbags, where Clara hoists a trunk alongside Mateo. The camera dollies backward at medium speed down the shadowy backstage hallway, leading Clara and Mateo across the wooden floorboards. In the dim theater wings crowded with rope fly-systems, sandbags, and painted scenery flats, Mateo, a stocky stage apprentice in his early 20s with tan skin, short black curly hair, faded denim overalls over a gray tee, and scuffed work clogs, helps Clara hoist the Velvet Travel Trunk past the hanging counterweights. The narrator says: <d>[English] Careful around those heavy counterweights, we can set the travel trunk right by the call board.</d> After this line the voice-over stays silent for the rest of the shot. Mateo wipes sweat from his brow, gesturing toward the backstage call board as the camera continues backward.\n\noverall_soundscape: Ropes creak against pulleys as heavy counterweights shift faintly overhead. Wooden floorboards groan under footsteps, accompanied by the muffled shifting and thud of a hefty trunk being carried.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Grand Marionette Backstage. After catching her thumb in a snagged stage cable, Clara wraps a white bandage tightly around her left thumb using clean white medical tape. She flexes her thumb with a brief wince before nodding reassuringly to Mateo. Close-up on Clara's hands as she finishes knotting the bandage tape around her thumb.",
+   "annotation": {
+    "title_en": "After catching her thumb in a snagged stage cable, Clara bin",
+    "scene": "theater_backstage",
+    "camera": "Close-up on Clara's hands as she finishes knotting the bandage tape around her thumb.",
+    "beat": "After catching her thumb in a snagged stage cable, Clara binds the cut firmly with clean white medical tape.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "injury",
+      "value": "white bandage wrapped tightly around left thumb"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara flexes her thumb with a brief wince before nodding reassuringly to Mateo.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "faded denim overalls over gray tee",
+     "mateo.footwear": "scuffed work clogs"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot at Grand Marionette Backstage, where Clara wraps her injured thumb with medical tape. The camera frames a close-up shot on Clara's hands at Grand Marionette Backstage. Having caught her thumb in a snagged stage cable, Clara wraps a white bandage tightly around her left thumb using clean white medical tape. The camera maintains its close framing as she pulls the tape taut and finishes knotting the bandage tape around her thumb. The narrator says: <d>[English] It caught on the cable, but it is bandaged securely now and I am fine.</d> After this line the voice-over stays silent for the rest of the shot. Clara then slowly flexes her thumb, showing a brief wince across her expression before looking over and nodding reassuringly to Mateo.\n\noverall_soundscape: The soft rustle of cloth and the slight tugging sound of medical adhesive tape wrapping tightly around skin. Faint backstage ambiance with distant, muted creaks of stage rigging.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "In the Puppeteer Dressing Room, a cramped backstage dressing nook with an illuminated mirror, garment racks, and prop crates, Clara unclasps the open Velvet Travel Trunk to withdraw Harlequin Marionette, verifying his strings have not tangled during transit. She hangs Harlequin from a dressing rack and smooths his painted collar. Medium shot reflecting off the warm vanity mirrors.",
+   "annotation": {
+    "title_en": "In the dressing room, Clara unclasps the trunk to withdraw H",
+    "scene": "dressing_room",
+    "camera": "Medium shot reflecting off the warm vanity mirrors.",
+    "beat": "In the dressing room, Clara unclasps the trunk to withdraw Harlequin, verifying the strings have not tangled during transit.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "velvet_travel_trunk"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Clara hangs Harlequin from a dressing rack and smooths his painted collar.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "velvet_travel_trunk.state": "open cedar trunk with empty padded compartments"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot reflecting off the warm vanity mirrors in the cramped Puppeteer Dressing Room, where Clara stands before the open Velvet Travel Trunk. The camera holds a static medium shot reflecting off the warm vanity mirrors of the cramped backstage dressing nook, showing the illuminated mirror, garment racks, and prop crates. Clara unclasps the open Velvet Travel Trunk and withdraws Harlequin Marionette, carefully verifying that his strings have not tangled during transit. The narrator says: <d>[English] Not a single knot after the long trip, my silent friend. You look entirely ready for tonight.</d> After this line the voice-over stays silent for the rest of the shot. She then hangs Harlequin from a dressing rack and smooths his painted collar.\n\noverall_soundscape: Metallic clasps snap open with a sharp click, followed by the delicate rattle of wooden limbs and tension on thin strings. A gentle ambient hum radiates softly from the illuminated vanity lights.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Grand Marionette Backstage, Mateo emerges from the crew alcove having swapped his overalls for a tailored burgundy waistcoat over a gray dress shirt, ready for opening night duty while Clara watches. Mateo straightens his shirt collar with a proud, nervous grin. Full-body pan following Mateo as he adjusts his brass waistcoat buttons.",
+   "annotation": {
+    "title_en": "Mateo emerges from the crew alcove wearing his formal theate",
+    "scene": "theater_backstage",
+    "camera": "Full-body pan following Mateo as he adjusts his brass waistcoat buttons.",
+    "beat": "Mateo emerges from the crew alcove wearing his formal theater waistcoat, ready for opening night duty.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "mateo",
+      "attr": "outfit",
+      "value": "tailored burgundy waistcoat over gray dress shirt"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Mateo straightens his shirt collar with a proud, nervous grin.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a full-body shot of the Grand Marionette Backstage, where Clara watches as Mateo emerges from the crew alcove. Mateo emerges from the crew alcove into the Grand Marionette Backstage, having swapped his overalls for a tailored burgundy waistcoat over a gray dress shirt, ready for opening night duty while Clara watches. Mateo straightens his shirt collar with a proud, nervous grin. The narrator says: <d>[English] Does the waistcoat look all right? I am definitely ready for opening night duty.</d> Clara (S1) adds: <d>[English] You look sharp and ready.</d> After this line the voice-over stays silent for the rest of the shot. The camera executes a full-body pan following Mateo as he adjusts his brass waistcoat buttons.\n\noverall_soundscape: Footsteps tap gently against the wooden floorboards backstage. Fabric rustles softly as the collar is straightened, accompanied by the faint metallic clicking of brass buttons.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "The Proscenium Marionette Stage is a polished miniature oak stage with red velvet curtain wings, an overhead bridge, and footlights. Clara and Mateo haul the Stage Backdrop—a heavy scenic canvas depicting a moonlit clock tower rolled tightly around a counterweighted wooden pole—up toward the fly rigging. Mateo secures the hemp tie line around a bronze belaying pin. Wide low-angle view looking upward toward the wooden battens.",
+   "annotation": {
+    "title_en": "Out on the stage, Clara and Mateo haul the heavy rolled canv",
+    "scene": "stage_floor",
+    "camera": "Wide low-angle view looking upward toward the wooden battens in the fly loft.",
+    "beat": "Out on the stage, Clara and Mateo haul the heavy rolled canvas backdrop up toward the overhead fly rigging.",
+    "present": [
+     "clara",
+     "mateo",
+     "stage_backdrop"
+    ],
+    "first_appearance": [
+     "stage_backdrop"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Mateo secures the hemp tie line around a bronze belaying pin.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide low-angle shot of the Proscenium Marionette Stage looking upward toward the wooden battens, where Clara and Mateo haul the Stage Backdrop toward the fly rigging. From a wide low-angle view looking upward toward the wooden battens, the camera holds a static shot of the polished miniature oak stage with red velvet curtain wings, an overhead bridge, and footlights. Clara and Mateo haul the Stage Backdrop—a heavy scenic canvas depicting a moonlit clock tower rolled tightly around a counterweighted wooden pole—up toward the fly rigging. The narrator says: <d>[English] Keep hauling the heavy canvas upward until it reaches the overhead battens.</d> Clara (S1) adds: <d>[English] Tie the line tight to the bronze pin.</d> After this line the voice-over stays silent for the rest of the shot. Mateo secures the hemp tie line around a bronze belaying pin.\n\noverall_soundscape: The rough scraping of heavy rolled canvas and wood lifting through the fly rigging. Creaking rope rubbing over wooden battens, followed by the friction and solid clink of hemp wrapping firmly around a bronze belaying pin.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the The Proscenium Marionette Stage. Madame Vane, a tall, gaunt theater patron in her 60s with an aquiline nose, elegant silver updo, high-collared midnight silk gown, and pointed slippers, glides onto the stage to inspect the Stage Backdrop's positioning with Clara. Madame Vane gestures with a manicured hand toward the wings. Profile two-shot of Madame Vane and Clara.",
+   "annotation": {
+    "title_en": "Madame Vane glides onto the stage to inspect the positioning",
+    "scene": "stage_floor",
+    "camera": "Profile two-shot of Madame Vane and Clara standing on the empty stage boards.",
+    "beat": "Madame Vane glides onto the stage to inspect the positioning of the moonlit clock tower backdrop.",
+    "present": [
+     "clara",
+     "madame_vane",
+     "stage_backdrop"
+    ],
+    "first_appearance": [
+     "madame_vane"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Madame Vane gestures with a manicured hand toward the stage left wings.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "madame_vane.outfit": "high-collared midnight silk gown",
+     "madame_vane.footwear": "black pointed heeled slippers",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a profile two-shot at The Proscenium Marionette Stage, where Clara stands facing Madame Vane before the Stage Backdrop. The camera holds a static profile two-shot of Clara and Madame Vane. Madame Vane, a tall, gaunt theater patron in her sixties with an aquiline nose, elegant silver updo, high-collared midnight silk gown, and pointed slippers, glides onto the stage to inspect the Stage Backdrop's positioning with Clara. The narrator says: <d>[English] Ensure this backdrop hangs perfectly straight before tonight's premiere begins.</d> Madame Vane gestures with a manicured hand toward the wings. Clara (S1) adds: <d>[English] I will secure the ropes right away, Madame.</d> After this line the voice-over stays silent for the rest of the shot. Clara nods while looking toward the wings alongside Madame Vane.\n\noverall_soundscape: Pointed slippers softly tap against the wooden stage floorboards. Heavy fabric rustles gently as the backdrop sways faintly in the backstage draft.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the The Proscenium Marionette Stage. Clara trims the Brass Sconce Lantern—a hexagonal antique brass lantern with bevelled glass panes and candle mount—beside the proscenium arch, preparing footlights near the Stage Backdrop. She checks the lantern's brass catch to ensure it will not swing during the act. Close-up on the lantern as Clara adjusts the bevelled glass door.",
+   "annotation": {
+    "title_en": "Clara trims the sconce lantern mounted by the proscenium arc",
+    "scene": "stage_floor",
+    "camera": "Close-up on the lantern as Clara adjusts the bevelled glass door.",
+    "beat": "Clara trims the sconce lantern mounted by the proscenium arch, preparing the footlighting for the opening scene.",
+    "present": [
+     "clara",
+     "brass_sconce_lantern",
+     "stage_backdrop"
+    ],
+    "first_appearance": [
+     "brass_sconce_lantern"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara checks the lantern's brass catch to ensure it will not swing during the act.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "brass_sconce_lantern.state": "unlit brass lantern with trimmed wick and clear glass",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot at the Proscenium Marionette Stage beside the proscenium arch, where Clara stands near the stage backdrop. Clara trims the hexagonal antique brass sconce lantern with bevelled glass panes and candle mount beside the proscenium arch, preparing footlights near the stage backdrop. The narrator says: <d>[English] This brass catch must stay completely secure, or the flame will waver across the stage.</d> After this line the voice-over stays silent for the rest of the shot. The camera holds a close-up on the lantern as Clara tests the lantern's brass catch to ensure it will not swing during the act. Her hands adjust the bevelled glass door, settling it securely into place.\n\noverall_soundscape: The metallic click of a brass catch fastening, followed by the faint clink of bevelled glass against metal. Quiet ambient room tone echoes softly across the empty stage.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Puppeteer Dressing Room. Clara changes into a formal black velvet vest over a crisp white collared shirt and black slacks, readying herself before grabbing Harlequin Marionette's controller. She buttons her vest and tucks her hair neatly behind her ears. Medium shot of Clara in front of the warm vanity lights.",
+   "annotation": {
+    "title_en": "Clara changes into her performance attire, donning her crisp",
+    "scene": "dressing_room",
+    "camera": "Medium shot of Clara in front of the vanity lights.",
+    "beat": "Clara changes into her performance attire, donning her crisp black velvet vest before grabbing Harlequin's controller.",
+    "present": [
+     "clara",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "formal black velvet vest over crisp white collared shirt and black slacks"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Clara buttons her vest and tucks her hair neatly behind her ears.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the puppeteer dressing room, where Clara stands in front of the warm vanity lights. The camera holds a static medium shot on Clara in front of the warm vanity lights. Clara buttons her formal black velvet vest over her crisp white collared shirt and black slacks, readying herself. She tucks her hair neatly behind her ears. The narrator says: <d>[English] Just one more check before the curtain rises, then we bring Harlequin to life tonight.</d> After this line the voice-over stays silent for the rest of the shot. She then reaches forward and grabs the Harlequin Marionette's controller, lifting it steadily into her hands.\n\noverall_soundscape: Soft fabric rustles as buttons fasten securely against the vest. The gentle electrical hum of warm vanity lights fills the quiet room, followed by the light wooden clack of a marionette controller being lifted.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Puppeteer Dressing Room.\n\nMadame Vane pins a feathered emerald fascinator into her updo and steps into the doorway to announce five minutes until curtain. She gives a sharp nod of encouragement, tapping her program folded under her arm as Clara turns to greet her.\n\nTwo-shot framing Madame Vane in the doorway and Clara turning to greet her.",
+   "annotation": {
+    "title_en": "Madame Vane steps into the dressing room wearing an emerald ",
+    "scene": "dressing_room",
+    "camera": "Two-shot framing Madame Vane in the doorway and Clara turning to greet her.",
+    "beat": "Madame Vane steps into the dressing room wearing an emerald fascinator to announce five minutes until curtain.",
+    "present": [
+     "clara",
+     "madame_vane"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "madame_vane",
+      "attr": "headwear",
+      "value": "feathered emerald fascinator pinned to silver updo"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Madame Vane delivers a sharp nod of encouragement, tapping her program folded under her arm.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "madame_vane.outfit": "high-collared midnight silk gown",
+     "madame_vane.footwear": "black pointed heeled slippers",
+     "madame_vane.headwear": "feathered emerald fascinator pinned to silver updo"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a two-shot of the puppeteer dressing room, where Madame Vane stands in the doorway and Clara turns toward her. The camera holds a static two-shot framing Madame Vane in the doorway and Clara turning to greet her in the puppeteer dressing room. Madame Vane pins a feathered emerald fascinator into her updo and steps into the doorway. The narrator says: <d>[English] Five minutes until curtain, my dear. Give them a performance to remember.</d> She gives a sharp nod of encouragement, tapping her program folded under her arm as Clara turns to greet her. Clara (S1) adds: <d>[English] Thank you, Madame, I am completely ready.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: The soft rustle of feathers and the metallic slide of a hair pin echo faintly in the room. A muted paper thud sounds as the folded program taps against an arm, accompanied by the subtle rustle of clothing as Clara shifts.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at The Proscenium Marionette Stage.\n\nClara climbs onto the puppeteer bridge behind the proscenium as the house lights dim and the Brass Sconce Lantern glows. Resting below is the Harlequin Marionette. Clara takes a deep breath, resting her bandaged thumb on the guide rod.\n\nLow-angle shot from the stage floor looking up at Clara poised on the gantry.",
+   "annotation": {
+    "title_en": "Clara climbs onto the puppeteer bridge behind the proscenium",
+    "scene": "stage_floor",
+    "camera": "Low-angle shot from the stage floor looking up at Clara poised on the gantry.",
+    "beat": "Clara climbs onto the puppeteer bridge behind the proscenium as the house lights dim and the lantern glows.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "brass_sconce_lantern"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Clara takes a deep breath, resting her bandaged thumb on the guide rod.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "brass_sconce_lantern.state": "unlit brass lantern with trimmed wick and clear glass"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle shot from the stage floor of The Proscenium Marionette Stage looking up at Clara poised on the puppeteer bridge gantry. The camera holds a static low-angle shot from the stage floor looking up at Clara on the gantry. Clara climbs onto the puppeteer bridge behind the proscenium as the house lights dim and the Brass Sconce Lantern glows. Resting below is the Harlequin Marionette. Clara takes a deep breath, resting her bandaged thumb on the guide rod. The narrator says: <d>[English] Just like we practiced. Stay steady now, and do not let the strings tangle up tonight.</d> After this line the voice-over stays silent for the rest of the shot. She stays poised in place above the stage.\n\noverall_soundscape: Wooden floorboards creak underfoot as Clara steps onto the gantry. The low electrical hum of dimming house lights and the faint click of the metal guide rod resonate softly in the quiet hall.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at The Proscenium Marionette Stage.\n\nAct One opens with the Pegasus Marionette soaring across the painted clock tower canvas of the Stage Backdrop to audience gasps. Clara expertly tilts the wing wires, creating a smooth gliding arc.\n\nWide proscenium framing Pegasus suspended against the painted moonlight.",
+   "annotation": {
+    "title_en": "Act One opens with Pegasus soaring across the painted clock ",
+    "scene": "stage_floor",
+    "camera": "Wide proscenium framing Pegasus suspended against the painted moonlight.",
+    "beat": "Act One opens with Pegasus soaring across the painted clock tower canvas to the gasps of the audience.",
+    "present": [
+     "clara",
+     "pegasus_marionette",
+     "stage_backdrop"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara expertly tilts the wing wires, creating a smooth gliding arc.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "pegasus_marionette.state": "fully painted ivory and gold, strung to its control bar",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of The Proscenium Marionette Stage, where Clara manipulates the Pegasus Marionette before the painted Stage Backdrop. The camera holds a static wide proscenium framing the Pegasus Marionette suspended against the painted moonlight of the Stage Backdrop. As Act One opens, the Pegasus Marionette soars across the painted clock tower canvas. Clara expertly tilts the wing wires, creating a smooth gliding arc for the figure. The narrator says: <d>[English] Behold the winged steed taking flight into the midnight sky above the slumbering clock tower.</d> After this line the voice-over stays silent for the rest of the shot. The audience gasps as Clara gently guides the marionette across the painted backdrop.\n\noverall_soundscape: The soft friction of suspended wires and the faint rustle of puppet wings echo alongside collective audience gasps across the auditorium.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at The Proscenium Marionette Stage.\n\nHolding the Control Cross, Clara brings the Harlequin Marionette dancing into the spotlight, commanding nimble pirouettes and grand bows. Clara's fingers work the controller with effortless, fluid dexterity.\n\nMedium tracking shot keeping pace with Harlequin's rhythmic leaps across the stage.",
+   "annotation": {
+    "title_en": "Clara brings Harlequin dancing into the spotlight, commandin",
+    "scene": "stage_floor",
+    "camera": "Medium tracking shot keeping pace with Harlequin's rhythmic leaps across the stage.",
+    "beat": "Clara brings Harlequin dancing into the spotlight, commanding nimble pirouettes and grand bows with the cross.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "control_cross"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara's fingers work the controller with effortless, fluid dexterity.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "control_cross.state": "smooth birch cross without strings attached"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at the proscenium marionette stage, where Clara stands holding the control cross. The medium camera tracks across the proscenium marionette stage, keeping pace with the Harlequin Marionette's rhythmic leaps. Clara brings the Harlequin Marionette dancing into the spotlight while her fingers work the control cross with effortless, fluid dexterity. The narrator says: <d>[English] Dance into the spotlight, my nimble Harlequin, and take your grand bow before the audience.</d> After this line the voice-over stays silent for the rest of the shot. Clara commands nimble pirouettes from the Harlequin Marionette with smooth shifts of the controller. The puppet completes its dance and lowers into grand bows under the spotlight as the camera continues tracking.\n\noverall_soundscape: Wooden joints clatter softly against the stage floor with each leap and pirouette. Taut strings hum and rub against the wooden control cross as Clara manipulates the marionette.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at The Proscenium Marionette Stage.\n\nFrom the wings, Madame Vane watches intently as Clara guides the Harlequin Marionette through a complex acrobatic sequence. Madame Vane's expression shifts from skeptical scrutiny to genuine delight.\n\nOver-the-shoulder shot from Madame Vane's perspective in the shadows.",
+   "annotation": {
+    "title_en": "From the wings, Madame Vane watches intently as Clara guides",
+    "scene": "stage_floor",
+    "camera": "Over-the-shoulder shot from Madame Vane's perspective in the shadows.",
+    "beat": "From the wings, Madame Vane watches intently as Clara guides Harlequin through a complex acrobatic sequence.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "madame_vane"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Madame Vane's expression shifts from skeptical scrutiny to genuine delight.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "madame_vane.outfit": "high-collared midnight silk gown",
+     "madame_vane.footwear": "black pointed heeled slippers",
+     "madame_vane.headwear": "feathered emerald fascinator pinned to silver updo"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an over-the-shoulder shot from Madame Vane's perspective in the shadows of the wings at the proscenium marionette stage, looking toward Clara guiding the marionette. The camera holds a static over-the-shoulder shot from Madame Vane's perspective in the shadows. From the wings, Madame Vane watches intently as Clara guides the Harlequin Marionette through a complex acrobatic sequence across the proscenium marionette stage. The narrator says: <d>[English] Remarkable precision, she truly commands every single delicate leap and landing of this intricate sequence.</d> After this line the voice-over stays silent for the rest of the shot. During the performance, Madame Vane's expression shifts from skeptical scrutiny to genuine delight while Clara continues maneuvering the Harlequin Marionette.\n\noverall_soundscape: Faint wooden clicks and rustling strings accompany the marionette's acrobatic movements. Soft breathing and the quiet creak of the wooden stage floor echo subtly in the background.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at The Proscenium Marionette Stage.\n\nMidway through a high aerial leap, an audible snap echoes as Harlequin Marionette's shoulder and wrist cords shear, leaving snapped cords dangling limp and its left arm hanging loose as it hits the floor. Clara gasps on the bridge, fighting the Control Cross to keep the remaining strings from entangling.\n\nDramatic zoom-in on Harlequin hitting the wooden stage floor as severed cords recoil upward.",
+   "annotation": {
+    "title_en": "Midway through a high aerial leap, an audible snap echoes as",
+    "scene": "stage_floor",
+    "camera": "Dramatic zoom-in on Harlequin hitting the wooden stage floor as severed cords recoil upward.",
+    "beat": "Midway through a high aerial leap, an audible snap echoes as Harlequin's left cords shear and the puppet drops.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "control_cross"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "harlequin_marionette",
+      "attr": "state",
+      "value": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara gasps on the bridge, fighting to keep the remaining strings from entangling.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose",
+     "control_cross.state": "smooth birch cross without strings attached"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of The Proscenium Marionette Stage, where Clara stands high up on the bridge above the wooden stage floor. Harlequin Marionette flies midway through a high aerial leap above the wooden stage floor. An audible snap echoes as Harlequin Marionette's shoulder and wrist cords shear, leaving snapped cords dangling limp and its left arm hanging loose. The camera performs a dramatic zoom-in at fast speed toward Harlequin Marionette hitting the wooden stage floor as the severed cords recoil upward. High above on the bridge, Clara gasps and fights the Control Cross to keep the remaining strings from entangling. The narrator says: <d>[English] Hold on, do not tangle now, please stay upright until I can steady this cross!</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: A sharp, resonant snap echoes through the proscenium as the tensioned cords rupture. Harlequin crashes down onto the wooden stage floor with a loud, hollow thud as the severed cords whip upward through the air.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at The Proscenium Marionette Stage.\n\nMateo rapidly pulls the fly rope to lower the heavy intermission curtain, shouting an emergency cue toward the booth, while Clara swoops down and gathers the Harlequin Marionette from the floorboards.\n\nFast-moving eye-level tracking shot behind the descending red velvet curtain.",
+   "annotation": {
+    "title_en": "Mateo swiftly lowers the velvet intermission traveler curtai",
+    "scene": "stage_floor",
+    "camera": "Fast-moving eye-level tracking shot behind the descending red curtain.",
+    "beat": "Mateo swiftly lowers the velvet intermission traveler curtain while Clara scoops Harlequin from the floor.",
+    "present": [
+     "clara",
+     "mateo",
+     "harlequin_marionette",
+     "stage_backdrop"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Mateo calls out the emergency intermission cue to the booth as Clara cradles the broken puppet.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a fast-moving eye-level tracking shot behind the descending red velvet curtain at The Proscenium Marionette Stage, where Clara swoops down toward the floorboards. The camera tracks rapidly at eye level behind the descending red velvet curtain across The Proscenium Marionette Stage. Mateo vigorously pulls the fly rope hand over hand to lower the heavy intermission curtain, shouting an emergency cue toward the booth. The narrator says: <d>[English] Drop the curtain right now, cut the house lights, and secure the overhead rig immediately!</d> After this line the voice-over stays silent for the rest of the shot. Simultaneously, Clara swoops down to the floorboards and gathers the Harlequin Marionette into her grasp. The camera maintains its swift lateral tracking motion behind the falling velvet as Mateo finishes pulling the fly rope and Clara rises while holding the marionette.\n\noverall_soundscape: A continuous heavy rustle of thick velvet rushing downward fills the air alongside the friction of rope sliding swiftly through rigging pulleys. Subtle wooden clicks echo as the marionette is scooped up from the floorboards.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Puppeteer Dressing Room. The Velvet Travel Trunk (rectangular cedar chest with brass corner braces and plum-colored quilted velvet lining, open with empty padded compartments) sits on a bench.\n\nClara rushes in and places the Harlequin Marionette across the Velvet Travel Trunk. She bites her lower lip as her trembling hands inspect the frayed cords and see the anchor screw-eye torn completely from the shoulder.\n\nClose-up over the trunk, focusing on Clara's shaking hands parting the snapped cords.",
+   "annotation": {
+    "title_en": "Clara rushes into the dressing room, laying Harlequin across",
+    "scene": "dressing_room",
+    "camera": "Close-up over the trunk as Clara separates the frayed ends with shaking hands.",
+    "beat": "Clara rushes into the dressing room, laying Harlequin across the open trunk to inspect the sheared cords.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "velvet_travel_trunk"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Clara bites her lower lip, realizing the anchor screw-eye has torn clean out of the shoulder.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose",
+     "velvet_travel_trunk.state": "open cedar trunk with empty padded compartments"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up in the puppeteer dressing room, where Clara rushes toward an open velvet travel trunk resting upon a bench. Clara rushes to the open rectangular cedar chest with brass corner braces and plum-colored quilted velvet lining resting on the bench, and lays the Harlequin Marionette across its empty padded compartments. The camera pushes in to a close-up over the trunk, focusing on her shaking hands parting the snapped cords. Clara bites her lower lip as her trembling fingers inspect the frayed cords and discover the anchor screw-eye torn completely from the shoulder. The narrator says: <d>[English] The shoulder screw torn clean out, and these cords are completely frayed.</d> Still surveying the damage, Clara (S1) adds: <d>[English] I need to fix this right away.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: Hurried footsteps scuff the floor, followed by the soft clatter of the wooden marionette set against the velvet-lined chest. Frayed cords rustle quietly under trembling fingers.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Puppeteer Dressing Room.\n\nMateo bursts in bearing an emergency repair pouch and raises a pair of pliers questioningly, but Clara shakes her head, insisting the structural damage needs her workbench. Mateo sets the pliers down in defeat beside the Harlequin Marionette.\n\nTight two-shot over the dressing table framing Clara and Mateo.",
+   "annotation": {
+    "title_en": "Mateo bursts in with an emergency repair pouch, but Clara sh",
+    "scene": "dressing_room",
+    "camera": "Tight two-shot framing Clara and Mateo over the dressing table.",
+    "beat": "Mateo bursts in with an emergency repair pouch, but Clara shakes her head, needing her workshop tools for a structural repair.",
+    "present": [
+     "clara",
+     "mateo",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Mateo holds up a pair of pliers questioningly before setting them down.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight two-shot in the puppeteer dressing room over the dressing table, framing Clara alongside Mateo. Mateo bursts into the puppeteer dressing room bearing an emergency repair pouch and raises a pair of pliers questioningly. The narrator says: <d>[English] Can we fix it right here with these pliers?</d> Clara shakes her head, insisting the structural damage needs her workbench. Clara (S1) adds: <d>[English] No, the damage needs my proper workbench.</d> After this line the voice-over stays silent for the rest of the shot. Mateo sets the pliers down in defeat beside the Harlequin Marionette on the dressing table. The camera holds a static tight two-shot framing Clara and Mateo over the dressing table.\n\noverall_soundscape: Quick footsteps rush across the floorboards as the pouch rustles. A metallic clatter sounds as the pliers make contact with the dressing table.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Puppeteer Dressing Room.\n\nHurrying to clear Clara's path, Mateo knocks over a glass vial from the counter. Lavender oil splashes across his chest, soaking a dark lavender oil stain into his waistcoat lapel. He grimaces, rubbing frantically and futilely at the wet spot with a dry towel.\n\nLow-angle shot emphasizing the dark puddle spreading over Mateo's lapel.",
+   "annotation": {
+    "title_en": "In his haste to clear the path, Mateo knocks over an oil via",
+    "scene": "dressing_room",
+    "camera": "Low-angle shot focusing on the dark liquid spreading across Mateo's burgundy fabric.",
+    "beat": "In his haste to clear the path, Mateo knocks over an oil vial from the vanity, splashing lavender oil across his waistcoat.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "mateo",
+      "attr": "stains",
+      "value": "dark lavender oil stain soaked into waistcoat lapel"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Mateo dabs fruitlessly at his lapel with a dry towel, grimacing.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle shot of the puppeteer dressing room, where Clara stands while Mateo rushes past the counter. Hurrying to clear Clara's path in the puppeteer dressing room, Mateo knocks over a glass vial from the counter. Lavender oil splashes across his chest, soaking a dark lavender oil stain into his waistcoat lapel. The low-angle camera holds a static shot, emphasizing the dark puddle spreading over Mateo's lapel. He grimaces. The narrator says: <d>[English] Oh no, I knocked the vial over and this lavender oil is soaking right into my waistcoat lapel.</d> After this line the voice-over stays silent for the rest of the shot. Mateo then rubs frantically and futilely at the wet spot with a dry towel.\n\noverall_soundscape: The glass vial clatters across the counter followed by the wet splash of liquid. Cloth rustles briskly as the dry towel rubs vigorously against the waistcoat fabric.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Puppeteer Dressing Room.\n\nClara wraps the Harlequin Marionette securely in a scrap of velvet and kicks open the rear exit door to the alley. She glances anxiously up toward the theater clock tower to check the remaining intermission minutes.\n\nFollowing shot moving behind Clara as she pushes through the heavy door into the lane.",
+   "annotation": {
+    "title_en": "Clara wraps Harlequin in a velvet cloth and heads out throug",
+    "scene": "dressing_room",
+    "camera": "Following shot tracking Clara as she kicks open the alley exit door.",
+    "beat": "Clara wraps Harlequin in a velvet cloth and heads out through the back door toward her workshop across the lane.",
+    "present": [
+     "clara",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara glances up at the theater clock tower, checking the remaining intermission minutes.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium following shot inside the puppeteer dressing room, where Clara stands near the rear exit door. Clara wraps the Harlequin Marionette securely in a scrap of velvet. She kicks open the rear exit door to the alley. The camera moves behind Clara in a following shot as she pushes through the heavy door into the lane. The narrator says: <d>[English] I only have minutes left before intermission ends to get this puppet away safely.</d> After this line the voice-over stays silent for the rest of the shot. Stepping outside, she glances anxiously up toward the theater clock tower to check the remaining intermission minutes.\n\noverall_soundscape: Velvet cloth rustles softly, followed by a dull thud and metallic creak as the heavy door swings open. Footsteps echo into the quiet alleyway alongside the faint mechanical ticking of the distant clock tower.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at Clara's Workshop Ground Floor.\n\nClara and Mateo burst through the entrance door, their boots scattering swirls of curled wood shavings across the floorboards. Mateo catches his breath against the doorframe, bracing the heavy wooden door open.\n\nWide shot from inside the amber-lit workshop framing their hurried entrance.",
+   "annotation": {
+    "title_en": "Clara and Mateo burst into the sun-drenched workshop, scatte",
+    "scene": "workshop_main",
+    "camera": "Wide shot from the interior of the workshop as the heavy entrance door swings wide.",
+    "beat": "Clara and Mateo burst into the sun-drenched workshop, scattering loose wood shavings across the threshold.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Mateo holds the door steady while catching his breath against the jamb.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot inside the amber-lit ground floor of Clara's workshop, where Clara and Mateo burst through the entrance door. The camera holds a static wide shot from inside the amber-lit workshop ground floor, framing the hurried entrance. Clara and Mateo burst through the entrance door in haste. As they rush across the floorboards, their boots scatter swirls of curled wood shavings in all directions. Mateo pauses against the doorframe to catch his breath, bracing the heavy wooden door open with his arm. Clara slows her momentum and looks toward him. The narrator says: <d>[English] Hold that heavy wooden door open for a moment while I catch my breath inside.</d> After this line the voice-over stays silent for the rest of the shot. Clara turns back to the room as the scattered wood shavings settle across the floor.\n\noverall_soundscape: A door bangs loudly open against the wooden frame, followed by heavy boots thumping against hollow floorboards. Curled wood shavings rustle and scatter with a dry scraping noise as air rushes through the entryway.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Clara unlatches the tuning peg case, a small mahogany hinged case with brass clasp and velvet dividers, leaving it open as she grabs two violin pegs beside the woodcarving chisel. Testing the chisel edge against her apron thumb, she readies her tools. Close-up on Clara's bandaged hand picking out pegs and the polished chisel blade.",
+   "annotation": {
+    "title_en": "Clara flings open the tuning peg box and grabs two sturdy vi",
+    "scene": "workshop_main",
+    "camera": "Close-up on Clara's bandaged hand picking out pegs and the polished chisel blade.",
+    "beat": "Clara flings open the tuning peg box and grabs two sturdy violin pegs alongside her trusty chisel.",
+    "present": [
+     "clara",
+     "tuning_peg_case",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [
+     "tuning_peg_case"
+    ],
+    "changes": [
+     {
+      "entity": "tuning_peg_case",
+      "attr": "state",
+      "value": "open mahogany box with brass wires and two pegs removed"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara tests the sharpness of the chisel edge against her apron thumb.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "tuning_peg_case": {
+      "state": "closed mahogany box with brass latch"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "tuning_peg_case.state": "open mahogany box with brass wires and two pegs removed",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot of the work surface in Clara's Workshop Ground Floor, where Clara leans forward over a small mahogany hinged case. Clara uses her bandaged hand to unlatch the brass clasp on the small mahogany hinged case with velvet dividers, leaving it open. As the lid stays back, The narrator says: <d>[English] These new pegs will fit neatly into the scroll once I smooth the edges with this blade.</d> After this line the voice-over stays silent for the rest of the shot. The camera holds a static shot on Clara's bandaged hand picking out two violin pegs positioned beside the woodcarving chisel. Reaching down to the polished chisel blade, she tests the chisel edge against her apron thumb and readies her tools.\n\noverall_soundscape: The metallic click of a brass clasp snapping open is followed by the light wooden clink of violin pegs shifting in velvet. A soft, dry friction sounds as a sharp chisel edge brushes against apron cloth.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Clara uses the woodcarving chisel to re-bore Harlequin Marionette's broken shoulder recess, blowing a loose lock of hair from her eyes. In her haste, she brushes a charcoal and amber varnish smudge across her right cheek. Tight profile shot focusing on Clara's face and the flying pine dust.",
+   "annotation": {
+    "title_en": "Clara re-bores the damaged shoulder socket with the chisel, ",
+    "scene": "workshop_main",
+    "camera": "Tight profile shot focusing on Clara's face and the flying pine dust.",
+    "beat": "Clara re-bores the damaged shoulder socket with the chisel, accidentally wiping a greasy varnish smudge across her cheek.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "stains",
+      "value": "charcoal and amber varnish smudge across right cheek"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara blows a lock of loose hair from her eyes while carving the new shoulder recess.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight profile shot on Clara's Workshop Ground Floor, where Clara leans close to her work. The camera holds a static tight profile shot focusing on Clara's face and the flying pine dust. Clara uses the woodcarving chisel to re-bore the Harlequin Marionette's broken shoulder recess. The narrator says: <d>[English] Just hold steady for one moment longer, and this shoulder socket will finally set right.</d> After this line the voice-over stays silent for the rest of the shot. As pine dust billows upward, Clara puffs her breath, blowing a loose lock of hair from her eyes. In her haste, she raises her hand and brushes a charcoal and amber varnish smudge across her right cheek, continuing to carve without pause.\n\noverall_soundscape: The sharp rasping sound of a woodcarving chisel biting into dry pine repeats steadily. A quick puff of exhaled breath is followed by the faint rustling of wood dust settling.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Using the waxed linen spool, Clara threads and ties the black braided cord through Harlequin Marionette's shoulder, pulling the knot tight with a sharp snap of tension until the puppet is fully re-strung. Extreme close-up of Clara's needle pulling the black waxed cord through the shoulder socket.",
+   "annotation": {
+    "title_en": "Using the heavy waxed linen spool, Clara threads double-knot",
+    "scene": "workshop_main",
+    "camera": "Extreme close-up of Clara's needle pulling the black waxed cord through the shoulder socket.",
+    "beat": "Using the heavy waxed linen spool, Clara threads double-knotted cord through Harlequin's newly carved joint.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "waxed_linen_spool"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "harlequin_marionette",
+      "attr": "state",
+      "value": "fully re-strung with reinforced double-knotted braided cord"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara draws the knot tight with a sharp snap of tension.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "waxed_linen_spool.state": "full spool of heavy black waxed cord"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme close-up shot at Clara's Workshop Ground Floor, where Clara holds a needle near the Harlequin Marionette's shoulder socket. The camera holds a static extreme close-up view focused on the wooden joint. Clara draws the needle smoothly, pulling the black waxed braided cord through the Harlequin Marionette's shoulder socket. The narrator says: <d>[English] Hold steady now, just one final knot through the shoulder and you are completely whole again.</d> After this line the voice-over stays silent for the rest of the shot. Using the thread from the waxed linen spool, Clara loops the cord and carefully ties it at the shoulder. She pulls the knot tight with a sharp snap of tension until the puppet is fully re-strung, steadying the newly secured joint with her fingertips.\n\noverall_soundscape: The dry friction of waxed cord sliding through a wooden socket is clearly audible. A distinct, sharp snap echoes as the knot pulls taut.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Clara's Workshop Ground Floor. Clara anchors the fresh cord lines to the control cross and lifts Harlequin Marionette into a mock pirouette above the workbench, smiling as the repaired arm rises smoothly in unison with the cross tilt. Medium shot of Clara swinging Harlequin through the pirouette.",
+   "annotation": {
+    "title_en": "Clara anchors the new cord lines to the birch control cross,",
+    "scene": "workshop_main",
+    "camera": "Medium shot of Clara swinging Harlequin through a mock pirouette above the workbench.",
+    "beat": "Clara anchors the new cord lines to the birch control cross, lifting Harlequin to test the restored articulation.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "control_cross"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Harlequin's repaired arm rises smoothly in unison with the cross tilt.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "control_cross.state": "smooth birch cross without strings attached"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of Clara's workshop ground floor, where Clara stands by the workbench holding a control cross. Clara anchors the fresh cord lines to the control cross. She lifts the Harlequin Marionette above the workbench into a mock pirouette. The narrator says: <d>[English] Look at that, dancing just like new again.</d> The camera holds a static medium shot as Clara swings Harlequin through the pirouette. She smiles as the repaired arm rises smoothly in unison with the tilt of the cross. Clara (S1) adds: <d>[English] Your repaired arm rises smoothly with every single tilt.</d> After this line the voice-over stays silent for the rest of the shot. She continues guiding the marionette through its graceful turn above the workbench.\n\noverall_soundscape: Taut cords creak faintly as small wooden joints clack gently together in the air. Soft shuffling on the floorboards accompanies the rhythmic swinging of the marionette.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at Grand Marionette Backstage. Clara sprints through the wings carrying Harlequin Marionette, slipping a brass loupe necklace over her head to rest against her chest. Mateo yells ahead to the stage manager that the puppet is restored. Tracking shot moving backward in front of Clara as she runs through the theater wings.",
+   "annotation": {
+    "title_en": "Sprinting back through the stage door, Clara slips her brass",
+    "scene": "theater_backstage",
+    "camera": "Tracking shot moving backward in front of Clara as she runs through the theater wings.",
+    "beat": "Sprinting back through the stage door, Clara slips her brass loupe necklace over her head for emergency checks.",
+    "present": [
+     "clara",
+     "mateo",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "accessory",
+      "value": "brass loupe necklace resting against chest"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Mateo yells ahead to the stage manager that the puppet is restored.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium tracking shot of Grand Marionette Backstage, where Clara sprints through the wings carrying Harlequin Marionette. The camera tracks backward at a brisk pace in front of Clara as she runs through the theater wings of Grand Marionette Backstage. Sprinting forward, Clara carries Harlequin Marionette and slips a brass loupe necklace over her head to rest against her chest. Mateo yells ahead to the stage manager. The narrator says: <d>[English] Stage manager, heads up! The Harlequin is completely restored and ready for the stage right now!</d> After this line the voice-over stays silent for the rest of the shot. Clara continues sprinting through the wings without slowing down.\n\noverall_soundscape: Rhythmic, heavy footsteps thud against the wooden backstage floorboards as Clara sprints. The faint metallic click of the brass loupe necklace echoes amidst the muffled ambient backstage rustling.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at Grand Marionette Backstage. At the base of the gantry ladder, Mateo gives Clara a thumbs-up as the intermission bell rings its final chime. Gathering the strings in her uninjured hand, Clara nods firmly back down at him. Low-angle shot framing Clara on the first rungs of the ladder looking down at Mateo.",
+   "annotation": {
+    "title_en": "At the base of the gantry ladder, Mateo gives Clara a thumbs",
+    "scene": "theater_backstage",
+    "camera": "Low-angle shot framing Clara on the first rungs of the ladder looking down at Mateo.",
+    "beat": "At the base of the gantry ladder, Mateo gives Clara a thumbs-up as the intermission bell rings its final chime.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara nods firmly, gathering Harlequin's strings in her uninjured hand.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle shot at Grand Marionette Backstage, where Clara stands on the first rungs of the gantry ladder looking down at Mateo. The camera holds a static low-angle shot framing Clara on the first rungs of the gantry ladder as she looks down at Mateo, who stands at the base of the ladder. An intermission bell rings out its final resonant chime across Grand Marionette Backstage. Mateo looks up toward Clara and gives her an encouraging thumbs-up from below. The narrator says: <d>[English] You have got this; I will manage everything from down here while you climb up.</d> After this line the voice-over stays silent for the rest of the shot. Gathering the strings securely into her uninjured hand, Clara looks down at Mateo and nods firmly back down at him.\n\noverall_soundscape: The clear metallic chime of an intermission bell reverberates and slowly fades through the backstage space. Marionette strings whisper and rustle faintly as they are gathered together.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at The Proscenium Marionette Stage.\n\nClara regains her place above the stage as the traveler curtain opens to reveal Harlequin Marionette poised tall before the set. The audience erupts into startled, thunderous applause at the sight of the repaired puppet standing proudly.\n\nWide shot from the auditorium perspective as the curtain parts in full.",
+   "annotation": {
+    "title_en": "Clara regains her place above the stage as the traveler curt",
+    "scene": "stage_floor",
+    "camera": "Wide shot from the auditorium perspective as the curtain parts in full.",
+    "beat": "Clara regains her place above the stage as the traveler curtain opens to reveal Harlequin poised before the clock tower.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "stage_backdrop"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "The audience erupts into startled applause upon seeing the repaired puppet standing tall.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot from the auditorium perspective of the proscenium marionette stage, where Clara stands above the stage. The camera holds a static wide shot from the auditorium perspective toward the proscenium marionette stage. Above the stage, Clara regains her place as the traveler curtain begins to part. The traveler curtain opens in full across the stage to reveal Harlequin Marionette poised tall before the set. The narrator says: <d>[English] Look at him, he is fully repaired and standing completely on his own again!</d> After this line the voice-over stays silent for the rest of the shot. In response, the audience instantly erupts into startled, thunderous applause at the sight of the repaired puppet standing proudly.\n\noverall_soundscape: The soft sliding rustle of the traveler curtain parting across the stage. A sudden collective gasp from the theater seats, followed immediately by massive, thunderous clapping and cheering echoing through the auditorium.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at The Proscenium Marionette Stage.\n\nMadame Vane beams from the prompt box, clutching her theater program to her chest in visible relief and joyfully applauding, as Clara commands Harlequin Marionette into a breathtaking, spinning bravura encore dance.\n\nEye-level medium shot cutting between Harlequin's spinning form and Madame Vane's joyful applause.",
+   "annotation": {
+    "title_en": "Madame Vane beams from the prompt box as Clara commands Harl",
+    "scene": "stage_floor",
+    "camera": "Eye-level medium shot cutting between Harlequin's spinning form and Madame Vane's joyful applause.",
+    "beat": "Madame Vane beams from the prompt box as Clara commands Harlequin into a bravura encore dance.",
+    "present": [
+     "clara",
+     "madame_vane",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Madame Vane clutches her program to her chest with visible relief.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "madame_vane.outfit": "high-collared midnight silk gown",
+     "madame_vane.footwear": "black pointed heeled slippers",
+     "madame_vane.headwear": "feathered emerald fascinator pinned to silver updo",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an eye-level medium shot at The Proscenium Marionette Stage, where Clara commands the Harlequin Marionette while Madame Vane watches from the prompt box. The camera holds an eye-level medium shot before panning smoothly across the stage between Harlequin Marionette and Madame Vane. Clara commands Harlequin Marionette into a breathtaking, spinning bravura encore dance. Over in the prompt box, Madame Vane beams with visible relief, clutching her theater program tightly against her chest. The narrator says: <d>[English] Magnificent work, you have truly brought the marionette to life for this grand encore!</d> After this line the voice-over stays silent for the rest of the shot. Madame Vane joyfully applauds as the marionette executes rapid spins under Clara's direction.\n\noverall_soundscape: The wooden clicking of marionette joints and the light whirring of moving strings resonate across the stage. Enthusiastic clapping sounds from the prompt box alongside the crisp rustle of paper.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at The Proscenium Marionette Stage.\n\nHigh on the backstage catwalk, Barnaby watches quietly from a rope basket, blinking calmly down at the footlights as Clara guides Harlequin Marionette through a flawless triple backflip.\n\nHigh-angle perspective past Barnaby's notched ear looking down onto the illuminated puppet.",
+   "annotation": {
+    "title_en": "High on the backstage catwalk, Barnaby watches quietly from ",
+    "scene": "stage_floor",
+    "camera": "High-angle perspective past Barnaby's notched ear looking down onto the illuminated puppet.",
+    "beat": "High on the backstage catwalk, Barnaby watches quietly from a rope basket as Harlequin completes a flawless triple backflip.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Barnaby blinks calmly at the bright footlights below.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "barnaby.accessory": "plain red leather collar without bell"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle shot from high on the backstage catwalk at The Proscenium Marionette Stage, looking down past Barnaby's notched ear toward Clara below. High on the backstage catwalk, Barnaby watches quietly from a rope basket, blinking calmly down at the footlights. The camera holds a static high-angle perspective past Barnaby's notched ear looking down onto the illuminated puppet. Clara maneuvers the control strings below. The narrator says: <d>[English] And now into the air you leap, finishing perfectly upright upon your wooden toes.</d> After this line the voice-over stays silent for the rest of the shot. Clara guides Harlequin Marionette through a flawless triple backflip in the illumination of the stage footlights, the puppet spinning smoothly before completing its turn.\n\noverall_soundscape: A faint creak of rope resonates in the high catwalk area. Rapid clicking of strings and small wooden limbs echoes from the illuminated stage below.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at The Proscenium Marionette Stage, near the Brass Sconce Lantern.\n\nClara tips Harlequin Marionette forward in a deep courtly bow while grinning broadly at Mateo, both taking a triumphant bow as floral bouquets shower across the illuminated floorboards.\n\nSlow pull-back wide shot capturing the stage, the puppeteers, and the showering floral bouquets.",
+   "annotation": {
+    "title_en": "As the brass lantern casts warm golden light across the stag",
+    "scene": "stage_floor",
+    "camera": "Slow pull-back wide shot capturing the stage, the puppeteers, and the showering floral bouquets.",
+    "beat": "As the brass lantern casts warm golden light across the stage, Clara and Mateo take a triumphant bow alongside Harlequin.",
+    "present": [
+     "clara",
+     "mateo",
+     "harlequin_marionette",
+     "brass_sconce_lantern"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara tips Harlequin forward in a deep courtly bow while grinning broadly at Mateo.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "brass_sconce_lantern.state": "unlit brass lantern with trimmed wick and clear glass"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a slow pull-back wide shot of The Proscenium Marionette Stage near the Brass Sconce Lantern, where Clara stands with Mateo over illuminated floorboards. Clara tips the Harlequin Marionette forward in a deep courtly bow while grinning broadly at Mateo. The narrator says: <d>[English] Look at them cheer for us, Mateo; take a bow for our grand harlequin performance!</d> After this line the voice-over stays silent for the rest of the shot. Both puppeteers take a triumphant bow together beside the Brass Sconce Lantern. Floral bouquets shower across the illuminated floorboards around them. The camera pulls back at slow speed to maintain a wide shot, capturing the stage, the puppeteers, and the showering floral bouquets tumbling onto the wood.\n\noverall_soundscape: Loud applause and cheering echo across the auditorium. The soft rustle and light thuds of floral bouquets landing on the floorboards blend with the creak of wooden stage planks.\n\nnon_diegetic_music: "
+   }
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "name": "15_turn_fan_knob",
+ "title": "Operating Electric Fan and Inspecting Workspace",
+ "summary": "A dual-arm robot turns on an electric fan, turns away to inspect items on a side table, and returns to turn the fan off.",
+ "camera": "head camera",
+ "robot": "two robotic arms with black multi-jointed grippers",
+ "setting": "an indoor office room with a white table and an orange chair",
+ "first_frame": "15_turn_fan_knob.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "717bce54f7743f78e73c514d202b4bed",
+  "frame_index": 0,
+  "original_prompt": "Twist the knob on the electric fan with right arm",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "433d6684bd2637a519b3fad24b900f778e4cd8c044dd91dcc06a11f6329a6c87"
+ },
+ "segments": [
+  {
+   "instruction": "Right gripper reaches up toward the control knob on the top right of the white electric fan while left gripper stabilizes the frame.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Right gripper turns the knob clockwise to switch on the fan, then releases it.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Both grippers retract, and the camera turns left to face the side table with a miniature tree and blue bag.",
+   "memory_event": "hide: electric fan and main table leave view as the camera turns left"
+  },
+  {
+   "instruction": "Left gripper reaches toward the blue bag on the side table and gently adjusts its position.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Left gripper releases the blue bag and retracts while the camera remains focused on the side table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Camera turns back to the center table, re-centering on the electric fan.",
+   "memory_event": "return: electric fan on the white table with its knob in the turned-on position and the orange chair behind it"
+  },
+  {
+   "instruction": "Right gripper reaches up and grasps the fan control knob again.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Right gripper turns the knob counterclockwise to turn off the fan, then releases it.",
+   "memory_event": "none"
+  }
+ ]
+}

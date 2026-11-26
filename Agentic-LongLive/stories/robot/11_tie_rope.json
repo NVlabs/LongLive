@@ -1,0 +1,52 @@
+{
+ "name": "11_tie_rope",
+ "title": "Tying Box and Arranging Flowers",
+ "summary": "The robot ties a red rope around a gift box, pans away to adjust a flower vase, and returns to inspect the tied box.",
+ "camera": "head camera",
+ "robot": "two black robotic arms with parallel grippers",
+ "setting": "a dining room with a grey table and a flower vase",
+ "first_frame": "11_tie_rope.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "15ca7209c682c9f817c2771fec17731f",
+  "frame_index": 0,
+  "original_prompt": "Tie the rope with both hands",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "58d1e936eb9de0a5776c6df97ff00491339bcb6360db34e278f5c617a655dcc8"
+ },
+ "segments": [
+  {
+   "instruction": "Cross the ends of the red rope tightly over the top of the box.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pull the rope ends through to tighten the knot securely against the box.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Pick up the tied box with both grippers and move it to the left side of the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the box and turn the head camera to the right toward the flower vase.",
+   "memory_event": "hide: the tied box on the left leaves the camera frame as the camera turns right"
+  },
+  {
+   "instruction": "Reach forward with the right gripper and gently adjust the flower vase on the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Release the vase, retract both grippers slightly, and keep the camera focused on the flowers.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the head camera back to the left side of the table.",
+   "memory_event": "return: the tied box reappears on the left side of the table, exactly where it was placed"
+  },
+  {
+   "instruction": "Reach toward the tied box with both grippers to inspect it.",
+   "memory_event": "none"
+  }
+ ]
+}

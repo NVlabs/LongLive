@@ -1,0 +1,469 @@
+{
+  "id": "chef_mei_long_day_terse",
+  "setup": {
+    "title": "Chef Mei's Longest Day",
+    "style": "Live-action, cinematic, warm realistic food-documentary look.",
+    "cast": [
+      {
+        "id": "mei",
+        "name": "Chef Mei",
+        "description": "Chef Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket."
+      }
+    ],
+    "extras": {
+      "voice": "Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1),",
+      "music": "Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+      "speech": "Mei talks to the camera like a cooking-show host."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "The shot opens on a bustling wet market bathed in early dawn light. Cool blue morning tones from outside mingle with warm, hanging incandescent bulbs strung over rows of vendor stalls. The concrete floor glistens with fresh water and damp reflections. Wooden tables are piled high with glistening crushed ice and freshly caught seafood, while soft vapor and gentle mist drift through the cool air, establishing a grounded, authentic documentary atmosphere.\n\nChef Mei, a petite East Asian woman in her forties with a round face and a single dimple, steps into view. She wears a clean white chef jacket beneath an open grey knit cardigan, black trousers, and a bright green bandana tied securely over her hair, with a red-handled wooden spoon tucked into her jacket's breast pocket. Carrying an oval woven basket on her arm, she pauses at a fishmonger's table. She reaches down with both hands to lift a firm, whole red snapper from the ice. Mei brings the fish toward her face, sniffing it approvingly, her dimple deepening with a satisfied smile, before carefully setting the fresh red snapper into her basket.\n\nA smooth tracking medium shot glides alongside Mei at eye level, following her steps through the aisle before settling into a steady frame as she inspects the catch. The composition keeps her upper body, the basket, and the pristine fish fully in view, maintaining sharp focus on her movements against the softly blurred motion of the early morning market around her.",
+      "annotation": {
+        "title_en": "Dawn market",
+        "scene": "wet_market",
+        "camera": "tracking medium shot",
+        "beat": "Dawn at a bustling wet market. Mei, in a grey cardigan over her white chef jacket, green bandana on, walks between stalls with a woven basket, picks up a whole red snapper and sniffs it approvingly.",
+        "state": {
+          "outfit": "grey cardigan over white chef jacket",
+          "jacket_condition": "clean",
+          "bandana": "green bandana on",
+          "dish_stage": "fresh red snapper in her basket"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          246,
+          246
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium tracking shot of a bustling dawn wet market, where Mei walks along an aisle of seafood stalls. A smooth tracking medium shot glides alongside Mei at eye level through the aisle, bathed in cool blue morning tones mixed with warm hanging incandescent bulbs over glistening wet concrete floors. Petite Mei, in her forties with a round face, wears a clean white chef jacket beneath an open grey knit cardigan, black trousers, a bright green bandana, and a red-handled wooden spoon in her breast pocket, carrying an oval woven basket. She pauses by a wooden table piled with crushed ice and fresh seafood while the camera settles into a steady frame. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] The morning catch is truly incredible today. This red snapper is absolutely perfect for our dish.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Mei reaches down with both hands to lift a firm, whole red snapper, sniffing it approvingly with a deepening dimple and satisfied smile before placing it into her basket amid drifting mist.\n\noverall_soundscape: Distant vendor chatter and footsteps echo against a wet concrete floor amidst the gentle dripping of water. Soft rustling and shifting crushed ice sound as the fresh fish is lifted and placed inside the woven basket.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tracking medium shot at eye level in a bustling wet market, where Mei steps along stalls illuminated by warm hanging bulbs and cool dawn light. The camera glides smoothly alongside Mei at eye level through the aisle, then settles into a steady medium frame as she pauses beside a wooden table piled with glistening crushed ice and freshly caught seafood. Soft vapor drifts across the damp, reflective concrete floor under hanging incandescent bulbs. Mei, a petite East Asian woman in her forties with a round face, bright green bandana, white chef jacket under an open grey knit cardigan, black trousers, and a red-handled wooden spoon in her pocket, carries an oval woven basket. Reaching down with both hands, she lifts a firm red snapper from the ice. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Always check the morning catch closely before deciding.</d> Bringing the fish to her face, she sniffs it approvingly with a dimpled smile. Mei (S1) adds: <d>[English] This red snapper has that perfect, clean ocean scent.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Mei then carefully sets the fresh red snapper into her woven basket.\n\noverall_soundscape: Distant wet market vendor murmurs echo across water sloshing over damp concrete. Crushed ice crunches and shifts softly as the cold fish is lifted and placed into the woven basket.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still at the wet market.\n\nStanding before an elderly vegetable vendor, Mei carries her basket holding the red snapper. She bargains cheerfully, smiling as she gestures toward the produce. The vendor hands her crisp bok choy, fresh ginger root, and several bright red chillies. Mei carefully arranges these into her basket beside the fish, then takes several coins from her pocket and hands them over with a gracious nod. Her basket now holds the snapper, chillies, ginger, and bok choy.\n\nThe camera maintains a stable medium two-shot at eye level, framing Mei and the vendor from the waist up. A subtle handheld drift preserves the documentary realism while keeping Mei’s cheerful expressions, the vegetable counter, and the exchange of produce and coins cleanly in view.",
+      "annotation": {
+        "title_en": "Bargaining",
+        "scene": "wet_market",
+        "camera": "medium two-shot",
+        "beat": "Mei haggles cheerfully with an old vegetable seller, adds bright red chillies, ginger and bok choy to her basket and pays with coins.",
+        "state": {
+          "outfit": "grey cardigan over white chef jacket",
+          "jacket_condition": "clean",
+          "bandana": "green bandana on",
+          "dish_stage": "basket of snapper, chillies, ginger and bok choy"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          225,
+          125
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium two-shot at eye level in the wet market, where Mei stands before an elderly vegetable vendor with her basket. Framed from the waist up, Mei carries her basket holding the red snapper while bargaining cheerfully and smiling as she gestures toward the produce. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Crisp bok choy, fresh ginger, and chillies will complement our red snapper wonderfully.</d> The vendor hands her crisp bok choy, fresh ginger root, and several bright red chillies. Mei carefully arranges these into her basket beside the fish. Mei (S1) adds: <d>[English] Everything looks so vibrant and fresh today.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She takes several coins from her pocket and hands them over with a gracious nod, leaving the basket holding the snapper, chillies, ginger, and bok choy. Throughout the exchange, the camera maintains a stable eye-level framing with a subtle handheld drift that keeps the vegetable counter and transaction in view.\n\noverall_soundscape: Bustling wet market chatter and footsteps echo in the background. Fresh produce rustles as it is placed into the basket, followed by the faint metallic clinking of coins changing hands.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium two-shot at eye level in the wet market, where Mei stands before an elderly vegetable vendor at a produce counter. The camera maintains a stable medium two-shot at eye level with subtle handheld drift, framing Mei and the vendor from the waist up. Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket, carries an oval woven basket holding a firm, whole red snapper, fresh and pristine. Smiling cheerfully, Mei gestures toward the produce. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Crisp greens and fresh aromatics will balance the fish perfectly for our steamed dish today.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. The vendor hands her crisp bok choy, fresh ginger root, and several bright red chillies. Mei carefully arranges these into her basket beside the fish. She then takes several coins from her pocket and hands them over with a gracious nod, her basket now holding the snapper, chillies, ginger, and bok choy.\n\noverall_soundscape: Bustling wet market ambience hums with distant chatter and splashing water. Fresh greens rustle softly during the exchange, followed by the quiet clink of metal coins changing hands.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "The restaurant kitchen stands brightly lit and quiet in the early morning, filled with gleaming stainless steel surfaces, hanging pots, and orderly prep stations. Crisp daylight spills through the open back doorway, washing across the polished metallic countertops and tiled floor with a soft, clean glow. The atmosphere feels pristine and expectant, capturing the calm before daily prep begins.\n\nChef Mei steps inside carrying her basket of snapper, chillies, ginger, and bok choy. Stopping beside the entrance, she slips off her cardigan and hangs it on a wall hook. She then approaches the central stainless steel counter and unloads the basket, laying out the fish, chillies, ginger, and bok choy across the clean metal surface.\n\nA wide static camera captures the transition from the back entrance across the spacious kitchen to the central island. The locked-off framing keeps Mei's full figure in view as she enters, sheds her outerwear, and arranges her produce, preserving an authentic, observational look at the quiet morning routine.",
+      "annotation": {
+        "title_en": "Opening the kitchen",
+        "scene": "restaurant_kitchen",
+        "camera": "wide static",
+        "beat": "Mei pushes open the back door of her bright restaurant kitchen, hangs her grey cardigan on a hook, and unpacks the basket onto the steel counter.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "clean",
+          "bandana": "green bandana on",
+          "dish_stage": "ingredients laid out on the counter"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          226,
+          163
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a brightly lit restaurant kitchen, where Chef Mei steps through the open back doorway carrying a basket. The camera holds a static shot in locked-off framing, keeping Mei's full figure in view. Crisp daylight spills through the open back doorway across polished metallic countertops and the tiled floor, illuminating hanging pots and orderly prep stations. Chef Mei steps inside carrying her basket of snapper, chillies, ginger, and bok choy. Stopping beside the entrance, she slips off her cardigan and hangs it on a wall hook. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Good morning! Today we're starting fresh with beautiful snapper and crisp vegetables from the market.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She then approaches the central stainless steel counter and unloads the basket, laying out the fish, chillies, ginger, and bok choy across the clean metal surface.\n\noverall_soundscape: Footsteps echo lightly on the tiled kitchen floor alongside the soft rustle of fabric. Fresh produce and fish gently tap against the stainless steel countertop as they are unpacked.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of a brightly lit, quiet restaurant kitchen in the early morning, where Mei enters through an open back doorway. The camera holds a static wide shot across the spacious, pristine restaurant kitchen, where crisp early-morning daylight spills through the open doorway across polished metallic countertops, tiled floors, hanging pots, and orderly prep stations. Chef Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket, steps inside carrying a basket of snapper, chillies, ginger, and bok choy. Stopping beside the entrance, she slips off her cardigan and hangs it on a wall hook. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Back from the wet market with beautiful fresh snapper,</d> Approaching the central stainless steel counter, she unloads her basket, carefully laying out the fish, chillies, ginger, and bok choy across the clean metal surface. Mei (S1) adds: <d>[English] ready to begin our quiet morning prep.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. The locked-off framing keeps her full figure in view throughout the space.\n\noverall_soundscape: Soft footsteps echo lightly across the clean kitchen tile followed by the rustle of a cardigan being hung on a hook. The gentle scrape of a woven basket and damp produce settling onto a stainless steel table.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still in the restaurant kitchen.\n\nStanding over the prep counter, Chef Mei deftly guides a sharp knife, rapidly slicing the chillies and bok choy on the wooden cutting board. She swiftly chops the ginger, then uses the flat knife blade to scrape the ginger slices aside, leaving the chopped ginger, chillies, and bok choy spread across the board. Pausing, she glances up and breaks into a warm grin.\n\nThe shot begins in a close-up on the wooden cutting board, capturing her rapid knife work. As she scrapes the ginger aside, the camera tilts smoothly upward to a medium close-up of Mei's face and upper torso, keeping her clearly framed against the bright, softly blurred kitchen background.",
+      "annotation": {
+        "title_en": "Chopping",
+        "scene": "restaurant_kitchen",
+        "camera": "close-up on the board, tilt up to her face",
+        "beat": "Mei chops vegetables at lightning speed on a wooden board in the bright kitchen, then scrapes ginger slices aside and grins at the camera, her dimple showing.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "clean",
+          "bandana": "green bandana on",
+          "dish_stage": "chopped ginger, chillies and bok choy"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          227,
+          116
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot in the bright restaurant kitchen, where Mei stands over the prep counter rapidly slicing fresh ingredients on a wooden cutting board. The shot begins in a close-up on the wooden cutting board, capturing Mei's rapid knife work. Standing over the prep counter, Chef Mei deftly guides a sharp knife, rapidly slicing the chillies and bok choy on the wooden cutting board. She swiftly chops the ginger. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Slicing our fresh chillies and ginger quickly locks in all their vibrant heat and crisp fragrance.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She then uses the flat knife blade to scrape the ginger slices aside, leaving the chopped ginger, chillies, and bok choy spread across the board. As she scrapes the ginger aside, the camera tilts smoothly upward to a medium close-up of Mei's face and upper torso, keeping her clearly framed against the bright, softly blurred kitchen background. Pausing, she glances up and breaks into a warm grin.\n\noverall_soundscape: The rhythmic, crisp tapping of a sharp knife against the wooden cutting board punctuates the rapid chopping of vegetables. A metallic scrape echoes as the flat blade pushes the ginger aside, blended with the soft ambient hum of the restaurant kitchen.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot of a wooden cutting board on a prep counter in the restaurant kitchen, where Chef Mei stands ready with her knife. Chef Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket, deftly guides a sharp knife over the wooden cutting board, rapidly slicing bright red chillies and crisp bok choy. She swiftly chops the fresh ginger root, then uses the flat knife blade to scrape the ginger slices aside, leaving the chopped ginger, chillies, and bok choy spread across the board. As she scrapes the ginger aside, the camera tilts smoothly upward to a medium close-up of Mei's face and upper torso, keeping her clearly framed against the bright, softly blurred kitchen background. Pausing her knife work, she glances up and breaks into a warm grin, showing her dimple. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Finely slicing these fresh chillies and ginger will release all of their bright, fragrant flavour.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot.\n\noverall_soundscape: The rhythmic, rapid thumping and tapping of a sharp chef's knife against a wooden cutting board blends with the crisp slicing of fresh produce and the scrape of steel across wood. In the background, the soft hum and gentle clatter of a restaurant kitchen echo quietly.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still in the restaurant kitchen at the prep sink.\n\nMei stands over the basin, gripping the snapper by its tail as she briskly works a scaler along its skin. A spray of moisture and a few scales flutter onto her sleeve. She cuts neat diagonal scoring lines across the flank, then glances at her arm with an amused laugh. Mei quickly flicks the scales away with her thumb, leaving the scored snapper ready in the sink.\n\nThe camera maintains a medium close-up framing at chest height, capturing both Mei’s animated facial expressions and her deft hand movements. The framing remains steady with a very subtle handheld drift that accentuates the live documentary feel, keeping the fish and her upper body in sharp focus.",
+      "annotation": {
+        "title_en": "Scaling the fish",
+        "scene": "restaurant_kitchen",
+        "camera": "medium close-up",
+        "beat": "Mei scales and scores the red snapper at the sink; a few shiny scales fly onto her jacket sleeve and she laughs and flicks them off.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "clean",
+          "bandana": "green bandana on",
+          "dish_stage": "scored red snapper"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          123
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up shot at chest height in the restaurant kitchen, where Mei stands over the prep sink basin. Mei grips the snapper by its tail over the basin and briskly works a scaler along its skin. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Scale briskly toward the head, then score neat diagonal lines along the flank.</d> A spray of moisture and a few scales flutter onto her sleeve as she cuts neat diagonal scoring lines across the flank. Glancing at her arm with an amused laugh, Mei (S1) adds: <d>[English] Watch out for stray flying scales.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She quickly flicks the scales away with her thumb, leaving the scored snapper ready in the sink. The camera maintains a steady medium close-up framing at chest height with a very subtle handheld drift, keeping Mei's animated expressions and the fish in sharp focus.\n\noverall_soundscape: The raspy scraping of a fish scaler against taut scales mixes with faint droplets splashing into the metallic sink basin. A quiet slicing sound follows as a sharp knife scores through the skin.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up shot at chest height in the restaurant kitchen, where Mei stands directly over the prep sink basin. The camera maintains a chest-height framing with a very subtle handheld drift, keeping Mei—a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket—and the firm, whole red snapper in sharp focus. Gripping the fish by its tail in the basin, she briskly works a scaler along its skin. A spray of moisture and a few scales flutter onto her white sleeve. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Make sure you scale the fish thoroughly first, then score the skin to absorb all those rich flavours.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Mei cuts neat diagonal scoring lines across the flank of the fish. She then glances at her arm with an amused laugh, revealing her dimple, and quickly flicks the stray scales away with her thumb, leaving the scored snapper ready in the sink.\n\noverall_soundscape: The brisk, textured scraping of a fish scaler against taut scales mixes with faint water droplets hitting stainless steel. A clean, slicing sound follows as the knife scores the flesh, accompanied by low ambient kitchen hum.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still in the restaurant kitchen by the stovetop.\n\nMei stands over the burner, firmly gripping her spoon as she steadily stirs the thick, glossy chilli mixture simmering in a heavy copper pan. Suddenly, a large bubble ruptures at the surface, launching a thick splatter of bright red sauce across the chest of her jacket. Mei gasps with a startled jump, her eyebrows raising as she glances down at the sudden mess. Accepting the everyday mishap, she gives an easy shrug and immediately resumes stirring the bubbling pan, leaving a prominent, irregular splash of crimson sauce visibly staining the front of her jacket.\n\nThe camera holds a documentary-style close-up framed on Mei's upper torso and the copper pan. A gentle handheld drift captures the kitchen action while keeping both the bubbling sauce and the newly stained jacket in sharp focus, letting the small cooking accident unfold naturally.",
+      "annotation": {
+        "title_en": "The copper pan",
+        "scene": "restaurant_kitchen",
+        "camera": "close-up",
+        "beat": "Close-up as Mei stirs a chilli sauce in a copper pan with her red-handled wooden spoon. The sauce bubbles up and a big splash of red sauce lands across the front of her white jacket. She gasps, then shrugs and keeps stirring.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "large red chilli-sauce splash on the front",
+          "bandana": "green bandana on",
+          "dish_stage": "chilli sauce in the copper pan"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          243,
+          146
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a documentary-style close-up of a restaurant kitchen stovetop, where Mei stands over a burner stirring a heavy copper pan. Mei stands over the burner, firmly gripping her spoon as she steadily stirs the thick, glossy chilli mixture simmering in the heavy copper pan. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Keep that spoon moving constantly.</d> Suddenly, a large bubble ruptures at the surface, launching a thick splatter of bright red sauce across the chest of her jacket. Mei gasps with a startled jump, her eyebrows raising as she glances down at the sudden mess. Accepting the everyday mishap, she gives an easy shrug and immediately resumes stirring the bubbling pan, leaving a prominent, irregular splash of crimson sauce visibly staining the front of her jacket. Mei (S1) adds: <d>[English] Well, authentic chilli always demands a little sacrifice from the chef.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. The camera maintains a documentary-style close-up with a gentle handheld drift, keeping both the bubbling sauce and the newly stained jacket in sharp focus.\n\noverall_soundscape: A thick, wet bubbling and gentle sizzling emanate continuously from the copper pan on the burner. The spoon scrapes rhythmically against the metal surface, punctuated by a sharp, wet pop as a sauce bubble ruptures.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a documentary-style close-up in the brightly lit restaurant kitchen, where Chef Mei stands over the burner at the stovetop, framed from her upper torso to a copper pan. In the brightly lit restaurant kitchen with gleaming stainless steel surfaces and hanging pots, Chef Mei—a petite East Asian woman in her forties with a round face, one dimple, a green bandana, and her white chef jacket sleeves wet with a few scales stuck to them—stands over the burner. She firmly grips her spoon, steadily stirring the thick, glossy chilli mixture simmering in a heavy copper pan. The camera holds a documentary-style close-up with a gentle handheld drift, keeping her upper torso and the pan in focus. Suddenly, a large bubble ruptures at the surface, launching a thick splatter of bright red sauce across the chest of her jacket. Mei gasps with a startled jump, her eyebrows raising as she glances down at the sudden mess. Giving an easy shrug, Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Watch out for those bubbles, because a little splatter just means the sauce is packed with real flavor!</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Mei immediately resumes stirring the bubbling pan, leaving an irregular splash of crimson sauce visibly staining her jacket.\n\noverall_soundscape: Thick, glossy sauce bubbles and simmers heavily in the copper pan, culminating in a wet pop and a faint splatter against fabric. Mei takes a sharp, startled breath before the steady metallic scrape of her spoon stirring resumes amidst the low hiss of the stove burner.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still in the restaurant kitchen during the peak lunch rush.\n\nMei stands behind the plating counter. Working with practiced speed, she garnishes and arranges steaming plates of food directly under the radiant heat lamps. She calls out sharp, rhythmic firing orders to the line cooks, her focused expression unwavering as she maintains total command of the pass.\n\nThe camera operates in an organic handheld medium shot at chest height, subtly adjusting to follow Mei's fluid movements. The framing keeps her face, upper body, and the hot plates resting under the lamps clearly visible throughout the shot as kitchen activity pulses behind her.",
+      "annotation": {
+        "title_en": "Lunch rush",
+        "scene": "restaurant_kitchen",
+        "camera": "handheld medium shot",
+        "beat": "The lunch rush: ticket printers chatter, flames leap from the woks. Mei, sauce stain still on her jacket, shouts orders and plates dishes rapidly under the heat lamps, sweat on her forehead.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "red chilli-sauce stain on the front",
+          "bandana": "green bandana on",
+          "dish_stage": "plates of food under heat lamps"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          247,
+          102
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an organic handheld medium shot at chest height in a restaurant kitchen during the peak lunch rush, where Mei stands behind the plating counter. The organic handheld camera operates at chest height, subtly adjusting to follow Mei's fluid movements while keeping her face, upper body, and the steaming plates resting under radiant heat lamps clearly visible. Mei works behind the counter with practiced speed, garnishing and arranging the hot food. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] At the height of the rush, we garnish swiftly under the lamps to keep every plate sizzling.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Maintaining an unwavering, focused expression, she exercises total command of the pass and calls out sharp, rhythmic firing orders to the line cooks while kitchen activity pulses behind her.\n\noverall_soundscape: Steaming sizzles rise from hot plates alongside the low electrical hum of radiant heat lamps. Clattering pans, metal utensils, and active kitchen bustle reverberate continuously in the background.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a chest-height medium shot of Mei behind the plating counter in the brightly lit restaurant kitchen, surrounded by steaming plates under radiant heat lamps. Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, black trousers, a red-handled wooden spoon tucked into her white chef jacket, and a prominent, irregular splash of crimson sauce on the front, stands behind the counter. Surrounding her are gleaming stainless steel surfaces, hanging pots, orderly prep stations, and crisp daylight spilling through an open back doorway as peak lunch rush activity pulses behind her. Working with practiced speed, she garnishes and arranges steaming plates of food directly under radiant heat lamps. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Keep your plating fast and clean when the rush hits, and always stay ahead of the pass.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She calls out sharp, rhythmic firing orders to the line cooks, her focused expression unwavering as she maintains total command. The organic handheld camera subtly adjusts at chest height to follow Mei's fluid movements, keeping her face, upper body, and hot plates visible.\n\noverall_soundscape: Ceramic plates clatter rhythmically against the stainless steel counter beneath the low electrical hum of radiant heat lamps. Sizzling pans, venting steam, and the muffled hustle of line cooks echo through the kitchen.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still at the plating counter in the busy restaurant kitchen.\n\nMei leans intently over the steamed red snapper resting on a long white ceramic platter. Using a metal ladle, she pours the chilli sauce evenly along the spine of the fish, watching it coat the tender flesh. She then takes a pinch of finely julienned spring onions and fresh green coriander leaves, scattering them across the top to complete the presentation. The dish now sits finished.\n\nThe camera shoots from an overhead, top-down close-up angle, framing the long platter squarely in the centre. The shot holds steady with minimal drift, keeping Mei’s deft hands and sleeves clearly visible as she finishes plating. The sauce and the garnish remain sharply focused throughout the sequence.",
+      "annotation": {
+        "title_en": "The signature dish",
+        "scene": "restaurant_kitchen",
+        "camera": "top-down close-up",
+        "beat": "Mei pours the glossy chilli sauce over the whole steamed red snapper on a long white platter and scatters spring onions and coriander over it.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "red chilli-sauce stain on the front",
+          "bandana": "green bandana on",
+          "dish_stage": "finished chilli snapper on a white platter"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          235,
+          123
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an overhead, top-down close-up shot at the plating counter in the busy restaurant kitchen, where Mei leans over a long white ceramic platter. The camera holds steady with minimal drift from an overhead angle, framing the long white ceramic platter squarely in the centre. Mei's deft hands and sleeves remain clearly visible as she leans intently over the steamed red snapper. Using a metal ladle, she pours the chilli sauce evenly along the spine of the fish, watching it coat the tender flesh. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Now drizzle the warm chilli sauce down the spine, then finish with fresh herbs.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She then takes a pinch of finely julienned spring onions and fresh green coriander leaves, scattering them across the top to complete the presentation. The sauce and the garnish remain sharply focused as the dish now sits finished.\n\noverall_soundscape: The ambient clatter and low background hum of a busy restaurant kitchen resonate steadily. Liquid chilli sauce trickles softly over the warm steamed fish, accompanied by the gentle rustle of herbs dropping onto the platter.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an overhead close-up shot of the plating counter in the restaurant kitchen, where Mei leans over a long white ceramic platter. The camera holds steady from an overhead, top-down close-up angle with minimal drift, squarely framing the long white ceramic platter in the centre of the counter. Mei, wearing her white chef jacket with a prominent, irregular splash of crimson sauce on the front, leans intently over the steamed red snapper with her sleeves and hands clearly visible. Holding a metal ladle, Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Drizzle that rich chilli sauce down the spine, then finish with fresh coriander and crisp spring onions.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She pours the chilli sauce evenly along the spine of the fish, watching it coat the tender flesh. She then takes a pinch of finely julienned spring onions and fresh green coriander leaves, scattering them across the top to complete the presentation. The sauce and the garnish remain sharply focused as the dish sits finished.\n\noverall_soundscape: Thick sauce glistens and drips softly onto the steamed fish, followed by the light rustle of fresh herbs settling on top.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "The dining room glows with warm amber light cast by pendant lamps over crowded wooden tables. Rich tones of polished timber, dark upholstery, and soft golden reflections fill the space, creating an inviting, lively evening atmosphere. Diners chat over steaming dishes and clinking glasses, while swinging service doors lead back toward the kitchen.\n\nChef Mei pushes through the swinging doors. In both hands, she carefully balances the platter holding the steamed snapper. She walks steadily across the room, smiling as patrons notice the dish. Mei approaches a table occupied by an expectant family and sets the steaming platter gently into the center. The family members beam and break into enthusiastic applause, while Mei steps back with a modest, relieved nod.\n\nA smooth tracking camera glides backward ahead of Mei as she advances through the room, keeping the platter and her cheerful expression centrally framed. As she reaches the table, the camera arcs into a medium shot, capturing Mei, the served platter, and the clapping family.",
+      "annotation": {
+        "title_en": "Into the dining room",
+        "scene": "dining_room",
+        "camera": "tracking shot",
+        "beat": "Mei carries the platter through swinging doors into a warmly lit dining room full of guests and sets it down at a family's table to applause.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "red chilli-sauce stain on the front",
+          "bandana": "green bandana on",
+          "dish_stage": "snapper served at a family's table"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          224,
+          165
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium tracking shot of a warm, amber-lit dining room, where Mei emerges through swinging service doors carrying a platter. Pendant lamps cast warm amber light over crowded wooden tables, polished timber, and dark upholstery. Diners chat over steaming dishes and clinking glasses. Chef Mei pushes through the swinging service doors, carefully balancing a platter holding the steamed snapper in both hands. A smooth tracking camera glides backward ahead of her, keeping the platter and her cheerful expression centrally framed. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Here is our freshly steamed snapper, brought straight from the kitchen to share with the whole family.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Patrons notice the dish as Mei walks steadily toward an expectant family's table. She gently sets the steaming platter into the center. The camera arcs into a medium shot, capturing Mei, the platter, and the family members as they beam and break into enthusiastic applause while Mei steps back with a modest, relieved nod.\n\noverall_soundscape: Gentle dining room chatter mixes with the clink of glassware and the swinging of service doors. The platter settles softly onto the wooden table, followed by a burst of enthusiastic clapping.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium tracking shot of a glowing amber dining room, where Mei pushes through the swinging service doors balancing a steaming platter. Chef Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket marked by a prominent, irregular splash of crimson sauce on the front, black trousers, and a red-handled wooden spoon tucked into her jacket pocket, pushes through the swinging doors. In both hands, she carefully balances the long white ceramic platter holding the steaming red snapper coated in bright red chilli sauce and garnished with julienned spring onions and green coriander leaves. A smooth tracking camera glides backward ahead of Mei as she advances through the room of wooden tables, dark upholstery, and pendant lamps, keeping the platter and her cheerful expression centrally framed. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Here is our fragrant steamed snapper, served piping hot and ready for the family to enjoy.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Mei smiles as patrons notice the dish, approaches an expectant family's table, and sets the platter gently into the center. The camera arcs into a medium shot as the family beams with enthusiastic applause, and Mei steps back with a modest, relieved nod.\n\noverall_soundscape: Lively chatter and the clinking of glasses echo across the room alongside the muffled swish of swinging doors. The platter makes a gentle ceramic clink as it settles onto the timber tabletop, met by spontaneous, warm applause.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still in the restaurant dining room.\n\nMei stands beside the table, clutching a white kitchen towel as she nervously wrings and wipes her hands. Across from her, a serious food critic in a tailored grey suit uses his fork to sample a tender flake of the snapper. He chews with measured concentration while Mei watches his face. After an agonizing beat of contemplation, the critic's austere features soften into a slow, approving nod, culminating in a warm smile directed up at her.\n\nThe camera remains in a steady medium shot framing both the seated critic and Mei standing nearby. A gentle, imperceptible push inward keeps both figures in clear focus, capturing the fork movement, the sampled fish, Mei's nervous grip on the towel, and the subtle shift in the critic's expression.",
+      "annotation": {
+        "title_en": "A food critic",
+        "scene": "dining_room",
+        "camera": "medium shot",
+        "beat": "At a corner table a serious food critic in a grey suit tastes the snapper. Mei waits nervously, wiping her hands on a towel; the critic slowly nods and smiles.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "red chilli-sauce stain on the front",
+          "bandana": "green bandana on",
+          "dish_stage": "critic tasting the snapper"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          247,
+          131
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the restaurant dining room, where Mei stands nervously beside the table next to a seated food critic. The camera frames Mei and the seated critic in a medium shot. Mei stands beside the table, clutching a white kitchen towel as she nervously wrings and wipes her hands. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Now comes the moment of truth.</d> Across from her, a serious food critic in a tailored grey suit uses his fork to sample a tender flake of the snapper. Mei (S1) adds: <d>[English] Every single flavor rests on this first bite of snapper.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. He chews with measured concentration while Mei watches his face. After an agonizing beat of contemplation, the critic's austere features soften into a slow, approving nod, culminating in a warm smile directed up at her. The camera pushes in gently at an imperceptible, slow speed toward both figures.\n\noverall_soundscape: A metal fork gently clinks against the ceramic plate as a flake of fish is lifted. Muffled ambient murmurs and the faint rustle of cloth echo through the restaurant dining room.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium shot in the dining room with warm amber light from pendant lamps, where Mei stands anxiously beside the critic's table. The camera frames Mei and a seated food critic in a tailored grey suit at a table of polished timber, holding a steady medium shot with a gentle, imperceptible push inward. On the table rests the whole red snapper plated on a long white ceramic platter, coated in bright red chilli sauce and garnished with julienned spring onions and green coriander leaves. Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket bearing a prominent, irregular splash of crimson sauce on the front, black trousers, and a red-handled wooden spoon tucked into her pocket, stands beside the table. She clutches a white kitchen towel, nervously wringing and wiping her hands. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Now comes the true test, everyone. Let us see if this spicy snapper wins his approval.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Across from her, the critic uses his fork to sample a tender flake of the snapper, chewing with measured concentration as Mei watches his face. After an agonizing beat of contemplation, his austere features soften into a slow, approving nod, culminating in a warm smile directed up at her.\n\noverall_soundscape: The soft scrape of a fork lifting fish from a ceramic platter blends with the muffled ambient chatter of a busy dining room. Quiet rustling fabric accompanies hands wringing a kitchen towel.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Back in the restaurant kitchen after the evening rush.\n\nChef Mei stands between two young cooks wearing dark aprons. Beaming with relief, she vigorously high-fives both cooks in rapid succession. She then reaches up with both hands, swiftly unties her bandana, and pulls it free to reveal her hair. Laughing aloud, she exuberantly waves the cloth overhead, letting the fabric flutter in the warm kitchen air.\n\nThe camera holds a medium wide shot at eye level, capturing Mei and the cooks against the service line. A subtle, documentary-style handheld sway accommodates her joyful movement while keeping the pass and the waving bandana entirely within frame, preserving the spontaneous celebration from beginning to end.",
+      "annotation": {
+        "title_en": "Celebration in the kitchen",
+        "scene": "restaurant_kitchen",
+        "camera": "medium wide",
+        "beat": "Back in the kitchen Mei high-fives two young cooks, then pulls off her green bandana and waves it in the air, her short black hair now uncovered.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "red chilli-sauce stain on the front",
+          "bandana": "bandana off, waved in her hand, short black hair visible",
+          "dish_stage": "empty platters on the pass"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          235,
+          113
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium wide shot at eye level of a restaurant kitchen, where Chef Mei stands between two young cooks wearing dark aprons against the service line. The camera holds a medium wide shot at eye level with a subtle, documentary-style handheld sway. Chef Mei beams with relief and vigorously high-fives both cooks in rapid succession. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] We made it through the dinner rush!</d> She then reaches up with both hands, swiftly unties her bandana, and pulls it free to reveal her hair. Mei (S1) adds: <d>[English] Tonight was absolute madness, but our incredible crew pulled it off!</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Laughing aloud, she exuberantly waves the cloth overhead, letting the fabric flutter in the warm kitchen air as the handheld camera sways to keep the pass and the waving bandana entirely within frame.\n\noverall_soundscape: Crisp, resonant slaps of rapid high-fives echo through the space. The low hum of kitchen ventilation hoods mingles with the light flutter of waving cloth.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium wide shot at eye level of the restaurant kitchen after the evening rush, where Chef Mei stands between two cooks against the service line. Chef Mei, a petite East Asian woman in her forties with a round face, one dimple, black trousers, and a red-handled wooden spoon tucked into the pocket of her white chef jacket marked with a prominent, irregular splash of crimson sauce, stands between two young cooks in dark aprons. The camera holds a medium wide shot at eye level with a subtle, documentary-style handheld sway. Beaming with relief, Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] We survived the massive dinner rush, and every plate went out looking beautiful!</d> She vigorously high-fives both cooks in rapid succession. Reaching up with both hands, she swiftly unties her green bandana and pulls it free to reveal her hair. Laughing aloud, Mei (S1) adds: <d>[English] Tonight was an absolute triumph, team!</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She exuberantly waves the cloth overhead, letting the fabric flutter in the warm kitchen air while the camera gently sways to keep the pass and waving bandana framed.\n\noverall_soundscape: Loud, crisp slaps echo from the vigorous high-fives across the stainless steel pass. The soft flapping of fluttering cloth blends with the steady, low hum of kitchen ventilation hoods.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still in the restaurant kitchen as service winds down into the quiet evening.\n\nChef Mei stands by the counter, holding the bandana. She sets the bandana aside on a shelf, takes a cloth, and thoroughly wipes the stainless steel prep counter until it gleams. Moving along the line, she lifts the pan and hooks it securely onto the overhead rail. She then pulls the spoon from her pocket and hangs it beside the pan, stepping back with a quiet, satisfied smile.\n\nA static wide camera maintains a fixed, eye-level vantage across the kitchen interior. The steady framing encompasses Mei's full figure, the long polished counters, and the cookware suspended above. Without moving, the shot observes the serene rhythm of her closing routine, highlighting the pristine, shut-down kitchen as evening settles in.",
+      "annotation": {
+        "title_en": "Cleaning down",
+        "scene": "restaurant_kitchen",
+        "camera": "wide static",
+        "beat": "Evening. The kitchen is quiet. Mei, bandana off, wipes the steel counters until they shine and hangs the copper pan and her red-handled spoon on the rail.",
+        "state": {
+          "outfit": "white chef jacket",
+          "jacket_condition": "red chilli-sauce stain on the front",
+          "bandana": "off, short black hair visible",
+          "dish_stage": "clean kitchen"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          238,
+          131
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static wide shot of the quiet restaurant kitchen in the evening, where Mei stands by the counter holding a bandana. The static camera holds a fixed eye-level shot across the kitchen interior, encompassing Mei's full figure, the long counters, and cookware suspended above. Mei sets the bandana aside on a shelf, takes a cloth, and thoroughly wipes the stainless steel prep counter until it gleams. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] And with everything cleaned and hung in place, another wonderful evening of cooking comes to an end.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Moving along the line, she lifts the pan and hooks it securely onto the overhead rail. She then pulls the spoon from her pocket and hangs it beside the pan, stepping back with a quiet, satisfied smile across the shut-down kitchen.\n\noverall_soundscape: A cloth squeaks rhythmically across the smooth stainless steel counter. Metal clinks gently as the pan and spoon catch on the overhead rail, set against the low ambient hum of kitchen ventilation.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide, eye-level shot across the quiet restaurant kitchen, where Chef Mei stands by a polished stainless steel counter holding her green bandana. Chef Mei, a petite East Asian woman in her forties with a round face, one dimple, a white chef jacket bearing a prominent irregular crimson sauce splash, and black trousers, sets her green bandana aside on a shelf. The camera holds a static wide shot at fixed eye level, framing her full figure, the long polished counters, and cookware suspended above. Taking a cloth, she thoroughly wipes the stainless steel prep counter until it gleams. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] With the kitchen cleaned and every tool in place,</d> Moving along the line, she lifts the pan and hooks it securely onto the overhead rail. She then pulls the red-handled wooden spoon from her jacket pocket and hangs it beside the pan. Mei (S1) adds: <d>[English] we can finally call it a wonderful night.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Mei steps back with a quiet, satisfied smile in the pristine, shut-down kitchen as evening settles in.\n\noverall_soundscape: A damp cloth squeaks gently as it wipes across the smooth stainless steel counter. A metallic clink resonates when the pan catches on the overhead rail, followed by the soft tap of the wooden spoon settling against it.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "The compact staff locker room is illuminated by warm, practical overhead light that casts gentle shadows across rows of muted grey metal lockers. A sturdy wooden bench sits along the narrow passage beside a canvas laundry hamper resting near an open locker door. The utilitarian tiled flooring and functional fittings convey a calm, quiet backstage atmosphere, offering a restful contrast to the busy commercial kitchen.\n\nMei stands beside her open locker. With steady, unhurried motions, she unbuttons her jacket, peels it off her shoulders, and drops it into the laundry bin, revealing a plain short-sleeved black T-shirt beneath. She reaches into her locker, pulls out a bright yellow hooded raincoat, and slips her arms through the sleeves, letting it hang over the shirt.\n\nThe camera maintains a stationary medium shot at eye level, framing Mei from the waist up while keeping the locker interior and the top of the laundry bin in view. The framing remains steady throughout her actions, capturing the change of clothes in continuous documentary style.",
+      "annotation": {
+        "title_en": "Changing",
+        "scene": "staff_locker_room",
+        "camera": "medium shot",
+        "beat": "In a small staff locker room Mei unbuttons and takes off the stained chef jacket, drops it into a laundry bin and puts on a yellow raincoat over a black T-shirt.",
+        "state": {
+          "outfit": "yellow raincoat over black T-shirt",
+          "jacket_condition": "stained jacket in the laundry bin",
+          "bandana": "off, short black hair visible",
+          "dish_stage": "none"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          253,
+          169
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a stationary medium shot at eye level of a compact staff locker room, where Mei stands beside her open grey metal locker. The camera holds a static shot framing Mei from the waist up beside muted grey metal lockers, the open locker interior, and a canvas laundry hamper on utilitarian tiled flooring under warm practical overhead light. Along the narrow passage rests a sturdy wooden bench. With steady, unhurried motions, Mei unbuttons her jacket. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Now we step away from the hot line and get ready to head right into the damp evening.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. She peels the jacket off her shoulders and drops it into the laundry bin, revealing a plain short-sleeved black T-shirt beneath. Reaching into the locker, Mei pulls out a bright yellow hooded raincoat and slips her arms through the sleeves, letting it hang loosely over the shirt.\n\noverall_soundscape: A gentle hum of overhead lighting and distant kitchen muffle fills the room. Fabric rustles as the jacket is unbuttoned and thuds softly into the canvas bin, followed by the slick crinkling sound of the raincoat.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a stationary eye-level medium shot of the compact staff locker room, where Mei stands beside her open metal locker above a canvas laundry hamper. The camera holds a static medium shot at eye level under warm practical overhead light that casts gentle shadows across rows of muted grey metal lockers and utilitarian tiled flooring. Mei, a petite East Asian woman in her forties with a round face, one dimple, and a green bandana, stands beside her open locker near a sturdy wooden bench. Wearing a white chef jacket marked with a prominent irregular splash of crimson sauce and carrying a red-handled wooden spoon in the pocket, Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Shift is finished, time to shed the kitchen mess and head outside.</d> With steady motions, she unbuttons the jacket, peels it off her shoulders, and drops it into the canvas laundry hamper, revealing a plain short-sleeved black T-shirt beneath. Reaching into the locker, she pulls out a bright yellow hooded raincoat and slips her arms into the sleeves. Mei (S1) adds: <d>[English] Rain gear on, ready to go.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. The raincoat settles loosely around her as the shot holds steady.\n\noverall_soundscape: A soft ventilation hum fills the quiet room alongside the gentle clatter of metal lockers. Heavy cotton rustles as the jacket is unbuttoned and lands with a muffled thud into the canvas hamper, followed by the crisp swish of waterproof raincoat fabric.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "A narrow alleyway opens onto a glistening city street at night, soaked in steady rain. Neon signs from neighboring storefronts cast vibrant streaks of magenta, amber, and cool blue across the wet asphalt, reflecting off shallow puddles along the curb. Raindrops patter steadily against the dark brick walls and pavement under a dim exterior security lamp, establishing a quiet, atmospheric urban setting.\n\nChef Mei steps out through the restaurant's rear service door. She pulls the heavy metal door shut, turns back, and uses a key to lock the deadbolt. Turning toward the glistening street, Mei lifts a compact clear umbrella in front of her chest and pops it open with a crisp click, shielding her head from the downpour. Her posture relaxes with quiet relief as she adjusts her grip on the transparent canopy's handle.\n\nThe camera captures the action in a wide tracking shot, gliding smoothly alongside Mei as she transitions from the alleyway onto the open sidewalk. The composition keeps her full figure in view against the dark, neon-streaked backdrop. The lateral movement preserves a steady distance, tracking her footsteps as she begins walking into the rainy night.",
+      "annotation": {
+        "title_en": "Rainy street",
+        "scene": "rainy_street",
+        "camera": "wide tracking shot",
+        "beat": "Night rain on a neon-lit street. Mei in her yellow raincoat walks out of the restaurant's back alley, locks the door and pops open a clear umbrella.",
+        "state": {
+          "outfit": "yellow raincoat over black T-shirt, clear umbrella",
+          "jacket_condition": "n/a",
+          "bandana": "off",
+          "dish_stage": "none"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          240,
+          190
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide tracking shot of a rain-soaked narrow alleyway opening onto a glistening city street at night, where Mei steps out from a rear service door. Mei steps out into the dim exterior security lamp light, pulls the heavy metal rear service door shut, and locks the deadbolt with a key. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] That officially wraps up our dinner rush for tonight.</d> Turning toward the street where neon signs cast magenta, amber, and cool blue streaks across wet asphalt and puddles, she lifts a compact clear umbrella and pops it open with a crisp click to shield her head from the downpour. Her posture relaxes with quiet relief as she adjusts her grip on the handle. Mei (S1) adds: <d>[English] Time to head home and get ready for tomorrow's prep.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. The camera glides smoothly alongside Mei in a wide tracking shot, keeping her full figure framed at a steady distance as she steps from the alleyway onto the open sidewalk.\n\noverall_soundscape: Raindrops patter steadily against the brick walls and wet pavement. A heavy metal door latches shut with a solid clank, followed by the metallic click of a key turning in the deadbolt and an umbrella snapping open.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide tracking shot of a narrow alleyway opening onto a glistening city street at night, where Mei steps out through a restaurant's rear service door. Mei, a petite East Asian woman in her forties with a round face and one dimple, wearing a plain short-sleeved black T-shirt and a bright yellow hooded raincoat, steps outside under a dim exterior security lamp. She pulls the heavy metal door shut, turns back, and uses a key to lock the deadbolt. Turning toward the glistening street soaked in steady rain, Mei lifts a compact clear umbrella in front of her chest and pops it open with a crisp click, shielding her head from the downpour. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] That wraps up another busy dinner rush, so let us head out into the fresh night rain.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Her posture relaxes with quiet relief as she adjusts her grip on the transparent canopy's handle. The camera glides smoothly alongside Mei in a lateral tracking shot, keeping her full figure in view at a steady distance as she transitions from the alley onto the open sidewalk, neon signs reflecting magenta, amber, and cool blue streaks off wet puddles.\n\noverall_soundscape: Steady raindrops patter against dark brick walls and splash into shallow puddles on the pavement. The heavy metal service door thuds shut followed by the metallic click of a deadbolt locking. An umbrella canopy snaps open with a sharp, crisp click into the continuous rain.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "The shot is set on an open urban rooftop at night immediately following a rainfall, with wet concrete puddles reflecting the golden glow of incandescent string lights draped overhead. Cool night mist mingles with hot steam drifting upward into the dark air, framed by the softly blurred bokeh of distant city towers. Sturdy plastic stools and a shared folding table anchor the space, creating an authentic, intimate atmosphere for a post-shift staff supper.\n\nMei sits comfortably on a red plastic stool, her folded umbrella propped against its leg. She holds a steaming ceramic bowl of noodles close to her chest with one hand while lifting a portion with wooden chopsticks. After taking a bite, she chuckles warmly at a colleague's joke, speaking casually and gesturing with her chopsticks, thoroughly relaxed among her crew.\n\nThe camera captures the moment in a medium shot at eye level, executing a very slow, continuous push-in toward Mei. The framing keeps her face, the bowl of noodles, and the overlapping silhouettes of her seated team clearly visible throughout the gentle advance.",
+      "annotation": {
+        "title_en": "Rooftop supper",
+        "scene": "rooftop",
+        "camera": "medium shot, slow push-in",
+        "beat": "On a rooftop under string lights after the rain, Mei in her yellow raincoat sits on a plastic stool with her team, eating noodles from a bowl with chopsticks and laughing.",
+        "state": {
+          "outfit": "yellow raincoat over black T-shirt",
+          "jacket_condition": "n/a",
+          "bandana": "off",
+          "dish_stage": "bowl of noodles"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          231,
+          176
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at eye level on an open urban rooftop at night after rain, where Mei sits comfortably on a red plastic stool. On the wet rooftop, puddles on the concrete reflect the golden glow of incandescent string lights draped overhead, while night mist mingles with hot steam against distant city tower bokeh. Around a shared folding table with sturdy plastic stools, silhouettes of Mei's seated team surround her. Mei holds a steaming ceramic bowl of noodles close to her chest, her folded umbrella propped against the stool leg. She lifts a portion with wooden chopsticks and takes a bite. The camera pushes in at slow speed toward her at eye level. Mei chuckles warmly and gestures casually with her chopsticks. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Nothing beats a steaming bowl of hot noodles with the team after a long rainy shift.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Her face, the bowl, and the overlapping silhouettes remain framed throughout.\n\noverall_soundscape: Distant city traffic hums beneath the gentle dripping of residual rainwater on wet concrete. Quiet clinking of ceramic bowls and wooden chopsticks accompanies a soft nighttime breeze.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot at eye level on an open urban rooftop at night, where Mei sits comfortably on a red plastic stool by a folding table. Chef Mei, a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket, sits on the stool with her folded umbrella propped against its leg. Wet concrete puddles reflect the golden glow of incandescent string lights overhead as cool mist mingles with hot noodle steam against blurred distant city towers. Holding a steaming ceramic bowl close to her chest, Mei lifts noodles with wooden chopsticks and takes a bite. The camera executes a very slow, continuous push-in at eye level toward her, keeping the overlapping silhouettes of her seated team visible. Chuckling warmly, she gestures with her chopsticks. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] There is nothing better than sharing hot noodles together right after a long, rainy kitchen rush.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot.\n\noverall_soundscape: Distant city traffic hums in the cool night air as leftover rainwater drips softly into puddles on the concrete rooftop. A gentle evening breeze accompanies the soft clink of wooden chopsticks against ceramic.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    },
+    {
+      "prompt": "Still on the rooftop under the night sky.\n\nMei stands with a smartphone cradled in her hands, its cool light illuminating her face. As she reads a glowing five-star review, a wave of visible relief washes over her features. Her expression transforms into quiet pride as she turns the bright phone screen outward toward the camera, revealing the luminous review and offering a radiant, genuine smile.\n\nThe camera frames Mei in an intimate close-up at eye level, capturing the subtle micro-expressions across her illuminated face. A shallow depth of field keeps the focus crisply centered on her eyes, her smile, and the phone screen, while blurring the twinkling skyline behind her into cinematic bokeh. The frame holds steadily, preserving the quiet, celebratory authenticity of the documentary moment.",
+      "annotation": {
+        "title_en": "The review",
+        "scene": "rooftop",
+        "camera": "close-up",
+        "beat": "Mei reads a glowing five-star review on her phone, her face lit by the screen; her dimple deepens as she turns the phone toward the camera and smiles in the night city lights.",
+        "state": {
+          "outfit": "yellow raincoat over black T-shirt",
+          "jacket_condition": "n/a",
+          "bandana": "off",
+          "dish_stage": "phone showing a five-star review"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          127
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up shot of a rooftop under the night sky, where Mei stands holding a smartphone with the twinkling blurred skyline behind her. The camera holds a static shot at eye level in an intimate close-up with shallow depth of field, keeping crisp focus on Mei while the twinkling skyline behind her blurs into bokeh. Mei stands cradling a smartphone in her hands, its cool light illuminating her face. As she reads a glowing five-star review on the screen, a wave of visible relief washes over her features. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Look at this incredible review, everyone! We earned five stars on our very first night.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Her expression transforms into quiet pride as she turns the bright phone screen outward toward the camera, revealing the luminous review and offering a radiant, genuine smile.\n\noverall_soundscape: A gentle night breeze drifts across the rooftop against the distant, muffled rumble of urban traffic below. Faint quiet friction sounds occur as Mei tilts the smartphone in her hands.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up shot at eye level on the open urban rooftop at night, where Mei stands against the blurred city skyline. On the open urban rooftop at night amid cool night mist, hot steam, and blurred city towers, Mei—a petite East Asian woman in her forties with a round face, one dimple, a green bandana, a white chef jacket, black trousers, and a red-handled wooden spoon tucked into her jacket pocket—stands cradling a smartphone. The camera holds a static intimate close-up at eye level, shallow focus keeping her face crisp against twinkling skyline bokeh. Cool light from the phone illuminates her features as she reads a glowing five-star review, a wave of visible relief washing over her face before shifting into quiet pride. Chef Mei, a woman in her forties with a bright, lively mezzo voice, a quick confident pace and a light Singaporean English accent (S1) says: <d>[English] Look at this, five stars! They loved the broth, and that makes all the late nights worth it.</d> Exactly as her voice stops, Mei's lips close and her jaw stops moving; she stays silent for the rest of the shot. Mei turns the bright phone screen outward toward the camera to reveal the luminous review, beaming with a radiant, genuine smile.\n\noverall_soundscape: A soft night breeze and distant city hum drift across the open rooftop. A subtle rustle of fabric accompanies the gentle turn of the smartphone.\n\nnon_diegetic_music: Upbeat jazzy bossa nova with brushed drums and upright bass, kept at low volume beneath the dialogue throughout."
+      }
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+ "id": "astronaut_tomatoes",
+ "setup": {
+  "title": "Tomatoes in Orbit",
+  "style": "Live-action, cinematic science-fiction realism: clean white station modules, green grow lights, the blue Earth in the windows.",
+  "cast": [
+   {
+    "id": "imani",
+    "name": "Commander Imani",
+    "description": "Commander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, wearing a silver-white astronaut suit marked with a blue circular mission patch on the chest."
+   }
+  ],
+  "extras": {
+   "voice": "Commander Imani, a woman in her late thirties with a calm, warm contralto voice, a steady measured pace and a neutral American accent (S1),",
+   "music": "Spacious ambient synth pads with a slow piano motif, kept at low volume beneath the narration throughout.",
+   "speech": "Imani records a mission log, speaking to the camera."
+  }
+ },
+ "shots": [
+  {
+   "prompt": "The interior of the long orbital greenhouse module stretches forward in clean, functional symmetry, lined with dense vertical trellises of hydroponic tomato foliage. Bright pink-violet LED grow lights illuminate the rows from above and the sides, casting vivid magenta highlights and saturated shadows across the lush green leaves and white module walls. Clinical white station panels, padded handrails, and utility conduits line the cylindrical corridor, contrasted by the deep darkness of space visible through small reinforced observation ports. The atmosphere is quiet, controlled, and intensely focused on agricultural science in microgravity.\n\nCommander Imani, a Black woman in her late thirties with close-cropped dark hair and an oval face, floats gently along the center of the module in zero gravity. She wears a clean silver-white astronaut suit bearing a circular blue mission patch on the chest, without a helmet, leaving her composed expression fully visible. Her body drifts forward at a slow, controlled pace, one hand lightly brushing a guide rail to steady herself. She turns her gaze toward the dense foliage, leaning in slightly to inspect a cluster of small, hard green tomatoes hanging securely from a vine. Her dark eyes study the unripened fruit with calm professional focus, her suit reflecting the soft magenta glow of the overhead lamps.\n\nThe camera executes a smooth steadicam follow, gliding backward just ahead of Imani to maintain a steady medium shot of her upper body and the surrounding plant racks. The framing keeps her face, the blue mission patch, and the vibrant vine clusters with their small green tomatoes in clear view as she advances through the compartment. The balanced motion conveys the weightless drift of the environment while anchoring her thorough inspection within the glowing botanical corridor.",
+   "annotation": {
+    "title_en": "The orbital greenhouse",
+    "scene": "orbital_greenhouse",
+    "camera": "steadicam follow",
+    "beat": "Imani, in her silver-white suit without helmet, floats slowly through a long orbital greenhouse module, inspecting tomato vines heavy with small hard green tomatoes under pink-violet grow lights.",
+    "state": {
+     "outfit": "silver-white astronaut suit, blue mission patch",
+     "helmet": "no helmet",
+     "tomatoes": "small green tomatoes on the vine",
+     "location": "greenhouse"
+    }
+   }
+  },
+  {
+   "prompt": "The orbital greenhouse module is bathed in the glow of magenta agricultural grow lights and clean white utility fixtures. Lush tomato vines weave along specialized hydroponic trellises set against the sleek white curved walls of the station. In the background, a thick circular window reveals the luminous blue curve of Earth against the deep black of space. The atmosphere feels tranquil, sterile, and humid with the quiet hum of life support systems.\n\nCommander Imani, a Black woman in her late thirties with an oval face and close-cropped hair, floats in the microgravity without a helmet. She wears a silver-white astronaut suit marked with a circular blue mission patch on the chest. Holding a small, firm green tomato gently between two fingers, she stabilizes herself beside the vine. She looks directly toward the lens and speaks steadily, recording her day-one log about how the first fruit has set and outlining her goal to ripen it before the next resupply arrives. Her focused, gentle expression and the pristine appearance of her suit and the small tomato remain consistent throughout.\n\nThe camera remains in a steady medium close-up at eye level, holding Imani from the chest up alongside the green foliage. A subtle, floating drift conveys the zero-gravity environment while keeping her face, the mission patch, and her fingers holding the tomato clearly in focus.",
+   "annotation": {
+    "title_en": "Day one log",
+    "scene": "orbital_greenhouse",
+    "camera": "medium close-up",
+    "beat": "Imani holds one green tomato gently between two fingers and records a log to the camera: the first fruit has set and she will try to ripen it before resupply.",
+    "state": {
+     "outfit": "silver-white astronaut suit, blue mission patch",
+     "helmet": "no helmet",
+     "tomatoes": "small green tomatoes",
+     "location": "greenhouse"
+    }
+   }
+  },
+  {
+   "prompt": "The narrow space station corridor is bathed in rhythmic pulses of crimson as emergency warning lights flash across the sterile white bulkheads. Cylindrical walls lined with utility conduits, silver grab rails, and padded panels alternate between cool fluorescent baseline illumination and harsh red strobes. The atmosphere is tense and urgent, reflecting an immediate mechanical crisis deep within the pressurized module.\n\nCommander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, maneuvers weightlessly through the corridor. She wears her silver-white astronaut suit bearing the circular blue mission patch on her chest, with no helmet. Her expression is intensely focused as she grips a wall handle, pulls herself forward, and kicks lightly off a bulkhead rib to accelerate down the passageway. While gliding swiftly in microgravity toward the distant airlock hatch, she raises her forearm to check an integrated digital wrist display, scanning the illuminated schematic showing a solar panel fault before steadying her trajectory along the overhead handrails.\n\nThe camera uses a dynamic handheld tracking motion, retreating backwards down the center of the corridor just ahead of Imani to capture her rapid approach. Maintained at eye level in a medium framing, the shot keeps her torso, determined face, and maneuvering hands clearly in view throughout the glide. The pulsing red reflections sweep continuously across her white suit and the metallic tunnel walls, maintaining a realistic documentary perspective of zero-gravity emergency response.",
+   "annotation": {
+    "title_en": "Alarm",
+    "scene": "station_corridor",
+    "camera": "handheld tracking",
+    "beat": "Red warning lights flash in a white station corridor. Imani pushes off the walls, gliding quickly toward the airlock, checking a wrist display that shows a solar panel fault.",
+    "state": {
+     "outfit": "silver-white astronaut suit, blue mission patch",
+     "helmet": "no helmet",
+     "tomatoes": "green, in the greenhouse",
+     "location": "corridor"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the orbital station's airlock is cramped, functional, and intensely utilitarian. Brushed metallic wall panels, thick umbilical conduits, and heavy mechanical hatch latches define the narrow chamber. Cool white overhead LED strips mix with amber standby lights on the bulkhead interface panels, casting sharp, clinical highlights across the polished fixtures. The atmosphere is taut, sterile, and focused, conveying the pressurized isolation of a functional staging area preparing for extravehicular activity.\n\nCommander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, stands braced in the compact module. She wears a pressurized silver-white astronaut suit bearing a circular blue mission patch on the chest. At the start of the shot, her head is uncovered as she holds a bulky white space helmet equipped with a gold reflective visor that rests in the raised position. With steady, practiced movements, she brings the helmet up and lowers it over her head, seating it precisely onto the suit's rigid neck ring. She rotates the collar collar lock until it fastens with a definitive mechanical click, securing the seal while her determined expression remains fully visible through the opening beneath the upward-tilted gold visor.\n\nThe camera maintains a steady medium shot framed from her mid-torso up, keeping Imani centered against the airlock's reinforced circular hatchway. The framing remains stable with only subtle, organic micro-drift, ensuring that her face, the blue mission insignia, and the mechanical coupling of the helmet remain sharply in focus throughout the sequence.",
+   "annotation": {
+    "title_en": "Helmet on",
+    "scene": "airlock",
+    "camera": "medium shot",
+    "beat": "In the cramped airlock Imani lowers a white helmet with a gold reflective visor onto her suit and locks it with a click; her face is visible through the raised visor.",
+    "state": {
+     "outfit": "silver-white astronaut suit, blue mission patch",
+     "helmet": "white helmet on, gold visor raised",
+     "tomatoes": "green",
+     "location": "airlock"
+    }
+   }
+  },
+  {
+   "prompt": "The exterior of the orbital research station hangs suspended in the profound blackness of space, illuminated by the intense, unfiltered glare of sunlight. Below the modular metallic complex, the massive curving horizon of Earth stretches across the lower frame in vivid hues of ocean blue, swirling white cloud banks, and sunlit atmospheric glow. High-contrast illumination catches the crisp edges of white radiator panels, metallic docking rings, and the intricate lattice of the station's exterior truss, casting deep, sharp shadows across the machinery in the silent vacuum.\n\nCommander Imani emerges through the open circular airlock portal into the void. She wears a pressurized silver-white astronaut suit bearing a blue circular mission patch on the chest. At the beginning, her oval face and close-cropped hair are briefly visible through the clear inner faceplate of her white helmet with the gold reflective visor raised. Pausing at the threshold, her thick pressurized glove reaches up to lower the gold visor, locking it smoothly down so her features are replaced by an opaque, mirrored golden surface reflecting the blue planet. Securing her tether, she grips the exterior yellow handrail and pulls herself forward hand over hand along the station truss, moving with calm, disciplined weightlessness.\n\nThe camera maintains a sweeping wide exterior angle, drifting smoothly beside the station's framework. The composition holds Imani in the mid-ground, emphasizing her lone, tethered silhouette against the vast curvature of the Earth beneath her and the infinite darkness above. Her steady forward progression along the metal truss remains consistently framed throughout the duration, capturing the sheer physical scale and silent stillness of the orbital spacewalk.",
+   "annotation": {
+    "title_en": "Spacewalk",
+    "scene": "station_exterior",
+    "camera": "wide shot with Earth below",
+    "beat": "The hatch opens onto the black void. Imani, helmeted with the gold visor down, pulls herself hand over hand along the station truss, the blue curve of Earth vast beneath her.",
+    "state": {
+     "outfit": "silver-white astronaut suit, blue mission patch",
+     "helmet": "helmet on, gold visor down",
+     "tomatoes": "green",
+     "location": "outside the station"
+    }
+   }
+  },
+  {
+   "prompt": "The shot takes place on the exterior of the orbital station directly beside an extended solar array assembly. Unfiltered, searing sunlight glints off brushed metallic struts, contrasting sharply with the pitch-black abyss of deep space and ink-dark shadows cast across the truss framework. A damaged solar panel features a spiderweb of fine fractures across one deep blue crystalline cell, while the mechanical hinge beside it sits slightly misaligned and jammed. The vacuum atmosphere feels stark, silent, and technically rigorous.\n\nCommander Imani works beside the jammed mechanism, wearing her pressurized silver-white astronaut suit with the circular blue mission patch clearly visible on the upper chest. Her helmet remains securely locked in place with the reflective gold sun visor pulled down, completely concealing her face beneath brilliant mirrored reflections of the orbital environment. Gripping a heavy, tethered ratchet wrench in her thick white EVA gloves, she carefully aligns the socket over the jammed hinge bolt. She braces her left hand against the support strut and slowly torques the tool clockwise. As she applies steady pressure, the bolt creeps forward with stiff resistance, gradually loosening the jammed joint while her suited torso absorbs the counter-force.\n\nThe camera maintains a crisp, documentary-style close-up framed on the mechanical hinge, the cracked photovoltaic glass, and Imani’s gloved hands. A very slight, controlled pan follows the arc of the wrench as it turns, keeping the metal bolt and her suited arm sharply in focus against the harsh glare of space.",
+   "annotation": {
+    "title_en": "The broken panel",
+    "scene": "station_exterior",
+    "camera": "close-up",
+    "beat": "Imani reaches a solar panel with a jammed hinge and a cracked cell, fits a wrench to the hinge bolt and turns it slowly in the harsh sunlight.",
+    "state": {
+     "outfit": "silver-white astronaut suit, blue mission patch",
+     "helmet": "helmet on, visor down",
+     "tomatoes": "green",
+     "location": "solar array"
+    }
+   }
+  },
+  {
+   "prompt": "The exterior of the orbital station rests against the vast blackness of open space, floating directly above the sweeping curve of Earth. Stark, directional sunlight strikes the complex lattice of the station's white truss structure, throwing sharp, high-contrast shadows across the metallic hull. Below, the vivid blue ocean and swirling white cloud formations of the planet glow vibrantly, while a brilliant golden sunrise begins to crest along the horizon, casting radiant lens flares across the vacuum.\n\nCommander Imani floats securely tethered near the repair site, clad in her bulky silver-white astronaut suit bearing the blue circular mission patch on the chest. Her helmet is fully locked with the reflective gold visor pulled down, concealing her oval face and close-cropped hair beneath the protective shell. Behind her, the large repaired solar panel steadily articulates outward, its accordion-like joints extending smoothly until the wide grid of dark photovoltaic cells locks into place, catching the full glare of the sun. Holding onto a yellow exterior handrail with one gloved hand, Imani turns slightly toward the viewer and raises her free hand to give a decisive thumbs-up. The gleaming sunlight flares brightly around her silhouette as the sunrise intensifies.\n\nThe camera holds a majestic wide shot, drifting with a very slow, stable backward motion to maintain full view of the station module, the expansive deployed array, and the curvature of the planet. Imani remains prominently centered in the mid-ground throughout her gesture. The composition balances the industrial geometry of the station against the radiant orbital dawn, sustaining an authentic, awe-inspiring documentary perspective.",
+   "annotation": {
+    "title_en": "Panel deployed",
+    "scene": "station_exterior",
+    "camera": "wide shot",
+    "beat": "The repaired solar panel unfolds smoothly behind Imani and catches the sunlight. She gives a thumbs-up to the camera, the sunrise flaring over Earth's horizon.",
+    "state": {
+     "outfit": "silver-white astronaut suit, blue mission patch",
+     "helmet": "helmet on, visor down",
+     "tomatoes": "green",
+     "location": "solar array"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the station's compact airlock is utilitarian and orderly, lined with off-white padded panels, recessed grab bars, and mechanical valves. Cool white LED strips provide clean, bright illumination across the chamber, accented by subtle green and amber status lights on a bulkhead console. The repressurized environment feels still and secure, with soft ambient ventilation filling the quiet aerospace setting.\n\nCommander Imani, a Black woman in her late thirties with an oval face, stands inside wearing her silver-white astronaut suit, marked with a circular blue mission patch on the chest and a dark scuff across the right sleeve. Her helmet is initially sealed with the visor down. Raising both gloved hands, she twists the neck collar to unlock it and smoothly lifts the helmet off over her head. This reveals her close-cropped dark hair and damp brow. She exhales deeply with relief, sending a few tiny beads of sweat floating weightlessly off her forehead into the zero-gravity air. By the end of the shot, she cradles the detached helmet securely under her arm, her expression settling into calm satisfaction.\n\nThe camera maintains a stable medium close-up at eye level, subtly shifting to accommodate the helmet's upward movement. The framing keeps her face, upper torso, and the drifting sweat droplets clearly visible against the softly blurred airlock background.",
+   "annotation": {
+    "title_en": "Back inside",
+    "scene": "airlock",
+    "camera": "medium close-up",
+    "beat": "Back in the airlock Imani unlocks and lifts off her helmet; a few beads of sweat float off her forehead and she exhales with relief.",
+    "state": {
+     "outfit": "silver-white astronaut suit, blue mission patch, a black scuff on the right sleeve",
+     "helmet": "helmet off, held under her arm",
+     "tomatoes": "green",
+     "location": "airlock"
+    }
+   }
+  },
+  {
+   "prompt": "The scene is set inside a compact, utilitarian crew quarters module aboard the space station. Padded off-white composite walls and recessed storage compartments line the narrow interior, alongside a vertical sleeping berth equipped with elastic restraint straps. Gentle, warm-white LED strips embedded in the ceiling panels cast soft, even illumination across the brushed metallic fixtures, creating a quiet, restful sanctuary contrasting with the harsh vacuum outside.\n\nCommander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, begins the shot holding her bulky white helmet under one arm. She is dressed in her silver-white astronaut suit featuring a circular blue mission patch on the chest and a prominent black scuff mark across the right sleeve. Working methodically in microgravity, she secures the helmet in a wall net, unzips and peels out of the heavy outer suit, and gently guides the empty pressurized garment as it floats smoothly into an open locker. She fastens the locker shut, now dressed in comfortable station attire: a navy-blue polo shirt with the mission patch on the chest and durable grey cargo trousers. She rolls her shoulders with visible physical relief.\n\nThe camera maintains a steady eye-level medium shot, subtly floating with minimal drift to accommodate her weightless movements in the tight cabin. The framing keeps her upper body, facial expressions, and the locker mechanism clearly visible throughout, capturing the practical transition from bulky EVA equipment to casual station wear under the soft, uniform interior light.",
+   "annotation": {
+    "title_en": "Out of the suit",
+    "scene": "crew_quarters",
+    "camera": "medium shot",
+    "beat": "In her small crew quarters Imani peels off the suit and changes into a navy-blue station polo shirt and grey cargo trousers, floating her suit into a locker.",
+    "state": {
+     "outfit": "navy-blue polo shirt with mission patch and grey cargo trousers",
+     "helmet": "none",
+     "tomatoes": "green",
+     "location": "crew quarters"
+    }
+   }
+  },
+  {
+   "prompt": "The orbital greenhouse module is bathed in a distinct blend of vibrant magenta grow lights and clean white industrial illumination. Hydroponic racks line the curved station walls, filled with lush green foliage, trailing vines, and nutrient feed lines. A thick reinforced observation window on one side frames the brilliant curved blue limb of Earth against deep space, casting a cool ambient glow across the metallic ceiling and floor grids. The atmosphere is serene, functional, and humid with the quiet vitality of living plants thriving in microgravity.\n\nCommander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, floats gently beside one of the central vertical trellis racks. She wears a navy-blue station polo shirt with a blue circular mission patch on the chest, paired with utilitarian grey cargo trousers and no helmet. Gripping a padded handrail with one hand to stabilize herself, she reaches out with the other to carefully inspect a hanging cluster of tomatoes. The fruit has visibly ripened into rich tones of bright orange and blushing red nestled among the dark leaves. A soft, genuine smile breaks across her face as she gently turns a ripening tomato to check its surface, her expression reflecting quiet relief and pride.\n\nThe camera remains locked in a static wide shot throughout, capturing Imani's full body alongside the expansive hydroponic shelving. The steady composition maintains a balanced view of the lush greenery, the colorful ripening produce, and the distant blue planet through the portal, emphasizing the quiet success of the orbital harvest.",
+   "annotation": {
+    "title_en": "Days pass",
+    "scene": "orbital_greenhouse",
+    "camera": "static wide",
+    "beat": "Back in the greenhouse days later, Imani in her navy polo checks the vines: the tomatoes have turned orange and red-blushed under the grow lights. She smiles.",
+    "state": {
+     "outfit": "navy-blue polo shirt and grey cargo trousers",
+     "helmet": "none",
+     "tomatoes": "orange and red-blushed tomatoes",
+     "location": "greenhouse"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the orbital greenhouse, hydroponic tomato vines climb vertical white lattices beneath glowing pink and cool-white grow lights. The illumination gleams softly against plastic nutrient tubing and clean metallic panels. The air is warm, humid, and quiet, creating an intimate, scientifically controlled agricultural pocket aboard the high-tech station.\n\nCommander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, wears a navy-blue polo shirt and grey cargo trousers with no helmet. Holding a pair of compact stainless-steel scissors, she leans toward the trellis where several tomatoes hang. She carefully positions the blades against the slender stem of a plump, bright red tomato that contrasts with neighboring orange-blushed fruit. With a clean snip, she severs the stem. The tomato immediately drifts free, tumbling gently in zero gravity for a brief moment. Imani smoothly extends her hand and catches the floating red tomato safely in her open palm, gazing down at the fresh harvest with quiet satisfaction.\n\nThe camera remains in a steady close-up, focused tightly on her hands and the vine. As the tomato detaches and floats, the framing smoothly tracks its slight upward drift until it rests in her palm. A shallow depth of field keeps the glistening red skin razor-sharp against the softly blurred backdrop of lush green leaves and white module walls.",
+   "annotation": {
+    "title_en": "Harvest",
+    "scene": "orbital_greenhouse",
+    "camera": "close-up",
+    "beat": "Imani snips a bright red ripe tomato from the vine with small scissors; it floats for a moment before she catches it in her palm.",
+    "state": {
+     "outfit": "navy-blue polo shirt and grey cargo trousers",
+     "helmet": "none",
+     "tomatoes": "ripe red tomato in her palm",
+     "location": "greenhouse"
+    }
+   }
+  },
+  {
+   "prompt": "The space station galley is framed with utilitarian white cabinetry, magnetic tool rails, and flush stainless-steel storage compartments. Cool, even LED illumination fills the compact interior, bouncing off clean brushed-metal surfaces and velcro-lined food prep stations. Small packets, utensils, and drinking pouches are secured neatly along the walls, lending the orbital kitchen an organized, lived-in realism. The atmosphere is quiet and calm, defined by functional technology adapted for life in weightlessness.\n\nCommander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, stands anchored by foot loops before the galley counter. She wears a navy-blue polo shirt and grey cargo trousers, without a helmet. Holding the ripe red tomato, she places it against a small velcro cutting board attached to the counter surface. She draws a short stainless prep knife across the tomato, cutting neat, vibrant red disks. Free of gravity, a couple of juicy slices gently float upward into the air. Imani watches them rise, chuckles softly with amused ease, and carefully plucks the drifting slices from the air, pressing them back onto the board. By the end, the tomato sits cleanly sliced into bright red rounds across the prep surface.\n\nThe camera holds a steady medium shot at chest height, capturing Imani’s upper body, her expressive face, and the floating culinary activity on the counter. Gentle ambient light highlights the rich red flesh of the sliced fruit against the neutral tones of the galley. The framing remains centered, letting the subtle drifting motion of the tomato slices and Imani's relaxed reaction unfold naturally within the frame.",
+   "annotation": {
+    "title_en": "Galley",
+    "scene": "station_galley",
+    "camera": "medium shot",
+    "beat": "In the station galley Imani slices the red tomato on a velcro cutting board; the slices drift slightly and she catches them with a laugh.",
+    "state": {
+     "outfit": "navy-blue polo shirt and grey cargo trousers",
+     "helmet": "none",
+     "tomatoes": "sliced red tomato",
+     "location": "galley"
+    }
+   }
+  },
+  {
+   "prompt": "The scene is set inside the station galley, illuminated by soft white lighting from overhead strips. Metallic storage lockers, velcro-lined preparation surfaces, and utility clips line the compact space. Muted silver and white composite panels define the background, subtly accented by colored LEDs on diagnostic displays. The atmosphere is quiet and intimate, offering a comforting, domestic warmth within the high-tech spacecraft.\n\nCommander Imani, a Black woman in her late thirties with close-cropped hair and an oval face, appears from the chest up wearing a navy-blue polo shirt and grey cargo trousers, without a helmet. In her hand she holds a small, folded tortilla cradling a slice of moist red tomato. She lifts the tortilla to her mouth and takes a bite. As she chews, she closes her eyes in visible bliss, taking a quiet moment to savour the fresh acidity and sweetness. A radiant smile spreads across her face before she opens her eyes and looks directly into the lens. She speaks warmly to the camera, explaining that it is the best thing she has tasted in six months.\n\nThe camera maintains a stable, eye-level close-up with a faint, fluid drift that conveys the microgravity environment. The tight framing keeps Imani’s animated face, her upper torso, and the partially eaten tomato tortilla clearly visible against the soft-focus galley interior.",
+   "annotation": {
+    "title_en": "First taste",
+    "scene": "station_galley",
+    "camera": "close-up",
+    "beat": "Imani eats a slice of tomato on a tortilla, closes her eyes and savours it, then tells the camera it is the best thing she has tasted in six months.",
+    "state": {
+     "outfit": "navy-blue polo shirt and grey cargo trousers",
+     "helmet": "none",
+     "tomatoes": "tomato on a tortilla being eaten",
+     "location": "galley"
+    }
+   }
+  },
+  {
+   "prompt": "The cupola module of the space station forms a quiet, panoramic sanctuary wrapped in large, curved multi-pane observation windows. Outside, the pitch-black void of space gives way to the deep curving horizon of Earth's night side, illuminated by sprawling clusters and webs of golden city lights glittering like scattered dust below. The interior walls of the cupola are clad in clean, utilitarian pale grey panels fitted with dark handrails, bathed in the faint ambient glow of station indicator lights and the warm reflection rising from the planet. The atmosphere is contemplative, hushed, and serene.\n\nCommander Imani, a Black woman in her late thirties with close-cropped dark hair and an oval face, enters the module in zero gravity. She wears a navy-blue short-sleeved polo shirt, grey cargo trousers, and no helmet. Clasped gently in both hands, she carries a small cylindrical pot containing a vibrant green tomato seedling with delicate leaves anchored in dark growth medium. Drifting weightlessly toward the central bay window, she secures one foot under a padded rail and gazes down at the glowing terrestrial networks. She smiles softly in quiet awe, tilting the tiny potted plant slightly toward the glass as if sharing the view.\n\nThe camera begins in a medium-wide shot positioned behind Imani as she floats into the frame, executing a smooth, slow push-in over her shoulder toward the massive windows. As the camera creeps closer, her silhouette, the crisp green leaves of the seedling, and the breathtaking golden arc of the night Earth remain centrally composed and sharply visible.",
+   "annotation": {
+    "title_en": "Window to Earth",
+    "scene": "cupola",
+    "camera": "slow push-in from behind",
+    "beat": "Imani floats into the domed cupola window module and looks down at the night side of Earth, city lights scattered like gold dust, a small potted tomato seedling in her hands.",
+    "state": {
+     "outfit": "navy-blue polo shirt and grey cargo trousers",
+     "helmet": "none",
+     "tomatoes": "new tomato seedling in a small pot",
+     "location": "cupola"
+    }
+   }
+  },
+  {
+   "prompt": "The video takes place inside the station’s domed cupola module, surrounded by multi-angled bay windows overlooking deep space. Outside, the curvature of Earth glows in luminous blues, whites, and scattered golden city lights along the night horizon. Inside, cool reflections from the planet blend with soft interior station lighting along the dark metallic frames, creating an intimate, serene atmosphere suspended high above the globe.\n\nCommander Imani, a Black woman in her late thirties with an oval face and close-cropped hair, is dressed in a navy-blue polo shirt and grey cargo trousers without a helmet. Floating gently in microgravity, she cradles a small plastic pot containing a vibrant green tomato seedling in one hand. She turns smoothly toward the lens, her gaze settling directly on the viewer. She speaks calmly to conclude her research log, her expression measured and reflective. As she finishes her report, her features ease into a warm, gentle smile. She lifts her free hand toward the lens to give a small, reassuring wave, keeping the delicate potted plant nestled securely against her torso.\n\nThe camera remains in a steady medium close-up at eye level, framing Imani from the chest up while keeping both the tomato seedling and the glowing Earth clearly visible. The subtle float of the camera preserves a natural, documentary realism without distracting movement, ending the scene on her calm, contented face.",
+   "annotation": {
+    "title_en": "Sign-off",
+    "scene": "cupola",
+    "camera": "medium close-up",
+    "beat": "Imani turns to the camera, Earth glowing behind her through the cupola windows, and ends her log with a smile and a small wave.",
+    "state": {
+     "outfit": "navy-blue polo shirt and grey cargo trousers",
+     "helmet": "none",
+     "tomatoes": "seedling",
+     "location": "cupola"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+# No entity pipelining: round 0 waits for every entity redraw before composing G / M (more memory lag).
+agent: {pipeline_entities: false}

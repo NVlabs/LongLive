@@ -1,0 +1,231 @@
+{
+ "id": "kite_runner_seasons",
+ "setup": {
+  "title": "The Red Kite",
+  "style": "Live-action, cinematic, natural light, lush countryside and a seaside festival.",
+  "cast": [
+   {
+    "id": "leo",
+    "name": "Leo",
+    "description": "Leo, a young adult man with freckles and thick auburn curls, wearing a denim jacket with a yellow star patch over a white T-shirt, brown trousers and brown boots, holding one red diamond kite."
+   }
+  ],
+  "extras": {
+   "voice": "Leo, a young man in his early twenties with a light, cheerful tenor voice, an eager quick pace and a soft Irish accent (S1),",
+   "music": "Light folk tune with acoustic guitar, tin whistle and gentle hand drum, kept at low volume beneath the dialogue throughout.",
+   "speech": "Leo talks to the camera like a vlogger."
+  }
+ },
+ "shots": [
+  {
+   "prompt": "A lush, rolling green hilltop stretches out beneath an expansive blue sky dotted with a few drifting clouds. Brilliant natural sunlight illuminates the grassy terrain, accentuating the vibrant emerald hues of the slope and casting gentle shadows along the turf. A steady, brisk breeze visibly sweeps across the crest, rippling through the grass and carrying a fresh, invigorating countryside atmosphere.\n\nLeo, a young adult man with freckles and thick, windblown auburn curls, stands planted on the crest. He wears a blue denim jacket featuring a yellow star patch, layered over a white T-shirt, paired with brown trousers and sturdy brown boots. In his hands, he holds an intact red diamond kite, its vivid fabric taut and its tail fluttering behind him. His curls blow freely across his forehead as he looks toward the camera with an enthusiastic smile. He speaks warmly to the viewer, explaining that the crisp, gusty afternoon offers perfect kite-flying conditions, subtly lifting the red kite to display it while keeping his footing steady against the wind.\n\nThe camera remains in a steady wide shot at eye level, framing Leo's entire figure against the sweeping hillside and open sky. The wide composition captures the expansive landscape while keeping Leo and the red kite clearly defined against the green grass. The bright sunlight and swaying greenery remain consistent throughout, preserving the authentic outdoor feel.",
+   "annotation": {
+    "title_en": "Windy hill",
+    "scene": "green_hill",
+    "camera": "wide shot",
+    "beat": "Leo stands on a windy green hill under a bright blue sky holding his red diamond kite, his auburn curls blowing, and tells the camera today is perfect kite weather.",
+    "state": {
+     "outfit": "denim jacket with yellow star patch, brown trousers",
+     "kite_condition": "intact red diamond kite",
+     "weather": "sunny and windy"
+    }
+   }
+  },
+  {
+   "prompt": "A lush, sunlit hillside rolls downward under a brilliant blue sky with faint, wispy clouds. Bright natural daylight sweeps across the open meadow, illuminating vibrant green blades of grass bending rhythmically in the strong, steady breeze. The atmosphere is crisp, exhilarating, and dynamic, filled with the clean air of open countryside and fresh coastal wind.\n\nLeo, a young adult man with freckles and thick auburn curls, wears a denim jacket featuring a yellow star patch over a white T-shirt, brown trousers, and brown boots. He starts at a brisk jog down the grassy slope, holding the spool of line and the red diamond kite. As his stride quickens, he releases the frame into the oncoming gusts and lets the string smoothly unspool through his fingers. Caught by the strong draft, the bright red diamond kite catches air, lifts sharply, and climbs steeply into the open sky. Leo glances upward with a focused, cheerful expression as he continues running down the hill, his curls bouncing. By the end of the shot, the kite is flying high above, pulling taut against the blue expanse while Leo keeps running below.\n\nThe camera tracks alongside him in a wide side tracking shot, moving smoothly parallel to his downhill run. The composition keeps Leo's full figure, the rushing green turf, and the ascending red kite framed together in natural light as the kite rises toward the upper edge of the frame.",
+   "annotation": {
+    "title_en": "Launch",
+    "scene": "green_hill",
+    "camera": "side tracking shot",
+    "beat": "Leo runs down the slope letting out the line; the red kite lifts and climbs high into the sky.",
+    "state": {
+     "outfit": "denim jacket with yellow star patch",
+     "kite_condition": "flying high",
+     "weather": "sunny and windy"
+    }
+   }
+  },
+  {
+   "prompt": "Underneath the expansive canopy of a massive oak tree, turbulent wind rushes across the countryside. Dappled natural sunlight flickers through the dense lattice of dark green leaves and thick, gnarled boughs as sudden, aggressive gusts toss the upper branches against a bright sky. The atmosphere feels abruptly chaotic, shifting from a gentle rural breeze to unpredictable, swirling squalls that bend the outer foliage.\n\nLeo, a young adult man with freckles and windblown thick auburn curls, stands near the base of the trunk wearing a denim jacket with a yellow star patch over a white T-shirt, brown trousers, and sturdy brown boots. He grips the taut spool of the airborne red diamond kite, but a sharp crosswind abruptly slams the kite sideways directly into the tree's upper crown. Leo frantically tugs backward on the string to dislodge it. Instead of coming loose, the line tightens against a rough branch, and the kite’s bright red fabric catches and rips violently down the center. He gasps in frustration, letting the slackened string drop slightly in his hands as the now torn and crippled kite remains helplessly tangled high among the oak branches.\n\nThe camera holds a dramatic low-angle perspective, looking up from near the ground to capture Leo in the foreground and the towering, leaf-heavy crown soaring overhead. A subtle upward tilt follows the red kite's flight path as it collides with the limbs, maintaining continuous focus on both Leo's anxious upward gaze and the torn red nylon flapping uselessly against the sturdy wooden boughs.",
+   "annotation": {
+    "title_en": "Into the oak",
+    "scene": "oak_tree",
+    "camera": "low angle",
+    "beat": "A sudden gust drives the kite into the crown of a huge oak tree. Leo tugs the line, the fabric rips and the kite hangs torn among the branches.",
+    "state": {
+     "outfit": "denim jacket with yellow star patch",
+     "kite_condition": "torn and stuck in the oak tree",
+     "weather": "gusty"
+    }
+   }
+  },
+  {
+   "prompt": "High up in the sprawling canopy of the massive oak tree, the camera looks steeply down through thick, mossy limbs toward the distant green ground below. Cool natural daylight filters through the rustling foliage as the gusty sky steadily clouds over with soft grey overcast. The breeze sways the leafy boughs, creating a precarious, windswept atmosphere high above the surrounding parkland.\n\nLeo, a young adult man with freckles and thick auburn curls, climbs carefully along a sturdy fork in the branches. He begins the climb wearing an intact denim jacket featuring a yellow star patch over a white T-shirt, paired with brown trousers and brown boots. As he stretches his arm forward to rescue the trapped object, his left sleeve catches on a rough, jagged spur of bark; the denim snags firmly and tears open at the left elbow, revealing the white fabric underneath. Undeterred by the snag, Leo reaches into the twigs and detaches the red diamond kite from the branches. Balancing securely, he holds up the salvaged red kite, showing its torn fabric and freshly broken spar alongside his newly torn jacket sleeve.\n\nThe high-angle framing looks downward from above the bough, emphasizing the height while keeping Leo framed against the textured bark and deep green leaves. A subtle downward tilt follows his movement as he works, maintaining clear focus on his curls, his damaged jacket elbow, and the battered kite held firmly in his hands.",
+   "annotation": {
+    "title_en": "Climbing",
+    "scene": "oak_tree",
+    "camera": "high angle looking down",
+    "beat": "Leo climbs the oak to rescue the kite, his denim jacket snagging on a branch and tearing at the elbow; he frees the ripped kite and holds it up.",
+    "state": {
+     "outfit": "denim jacket torn at the left elbow",
+     "kite_condition": "torn red kite with a broken spar",
+     "weather": "clouding over"
+    }
+   }
+  },
+  {
+   "prompt": "A narrow country lane cuts between lush, dripping hedgerows under a slate-grey overcast sky. Heavy rain sheets down relentlessly, dimming the natural daylight into cool, silvery tones and turning the dirt track into dark, churning mud dotted with overflowing puddles. Water streams through deep ruts, giving the rural path a cold, saturated, and urgent atmosphere.\n\nLeo, a young adult man with freckles and thick auburn curls, wears a denim jacket with a yellow star patch—torn at the left elbow—over a white T-shirt, brown trousers, and brown boots, holding a torn red diamond kite with a broken spar. As the downpour intensifies, he tucks the fragile kite against his chest and pulls his denim jacket around it to shield the rip from the storm. He sprints forward along the track, his curls flattening and plastering against his forehead under the deluge. Wet mud splashes furiously over his boots and the hems of his trousers with every stride. By the end, his jacket is completely soaked through and darkened with water, his trousers are spattered with grit, and the torn red kite stays sheltered beneath his arm.\n\nThe camera tracks smoothly backward ahead of Leo in a medium framing, retreating along the lane at his running pace. The shot keeps his drenched face, the tucked-in kite, and his mud-flecked trousers in consistent view, while the rain-streaked countryside blurs dynamically in the background.",
+   "annotation": {
+    "title_en": "Rain",
+    "scene": "country_lane",
+    "camera": "tracking shot",
+    "beat": "Rain starts pouring. Leo runs down a muddy country lane hugging the broken kite under his jacket, curls plastered to his forehead, mud splashing his boots and trousers.",
+    "state": {
+     "outfit": "soaked denim jacket torn at the elbow, muddy trousers",
+     "kite_condition": "torn kite under his jacket",
+     "weather": "heavy rain"
+    }
+   }
+  },
+  {
+   "prompt": "The interior of the rustic wooden garden shed provides a warm, dry refuge from the heavy downpour streaming down the small glass windowpane. A single incandescent bulb suspended by a twisted cord overhead casts a warm amber glow across rough timber walls lined with hand tools, dusty jars, and a sturdy workbench. Rain pats steadily against the roof, establishing a quiet, sheltered atmosphere inside the workshop.\n\nLeo stands in the shed, his freckled face wet with rain and his thick auburn curls damp and flattened to his forehead. He initially wears a thoroughly soaked denim jacket with a yellow star patch, torn at the elbow, over a white T-shirt, with mud-splattered brown trousers and wet brown boots. Hugged securely under his jacket is the broken red diamond kite. He gently draws the torn kite out, then shrugs the heavy, waterlogged denim jacket off his shoulders to reveal his plain white T-shirt. Moving slightly, he hangs the dripping jacket onto a rusty iron nail in the timber wall. He then turns to the workbench and carefully lays the broken kite flat onto the surface, leaving its damaged frame resting under the lamplight.\n\nThe camera holds a steady medium wide shot at eye level, capturing Leo's movements between the tool-lined wall and the workbench. The composition keeps the hanging wet denim jacket, Leo in his white T-shirt, and the broken red kite clearly visible together under the warm overhead bulb.",
+   "annotation": {
+    "title_en": "The workshop shed",
+    "scene": "garden_shed",
+    "camera": "medium wide",
+    "beat": "In a cosy wooden garden shed lit by a hanging bulb, Leo hangs his wet jacket on a nail and, in his white T-shirt, lays the broken kite on the workbench.",
+    "state": {
+     "outfit": "white T-shirt, wet jacket hanging on a nail",
+     "kite_condition": "broken kite on the bench",
+     "weather": "rain outside"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the rustic garden shed, warm amber light spills from a bare hanging bulb over the scarred wooden workbench. Outside, rain streaks against the dusty window pane, while the interior feels dry and intimate. Wood shavings, hand tools, and a coil of rough twine rest near the damaged red diamond kite, establishing a quiet craftsman atmosphere.\n\nLeo, a young adult man with freckles and thick auburn curls, leans forward in his white T-shirt and brown trousers, his wet denim jacket hanging on a wall nail behind him. With focused determination, he saws a slender bamboo stick to size, shedding fine pale dust over the bench. He positions the new stick along the red kite's frame to replace the broken spar, wrapping coarse twine firmly around the intersection. Leaning down, he grips one end of the twine between his teeth and pulls the other with his fingers, cinching a tight, secure knot. By the end of the task, the red diamond kite rests on the timber with the fresh bamboo spar securely fitted and bound.\n\nThe close-up camera stays focused on the workbench and Leo's working hands, tilting up slightly to capture his face as he pulls the knot with his teeth. The shallow depth of field emphasizes the tactile textures of the bamboo, twine, and crimson fabric, keeping the repair work clearly legible throughout.",
+   "annotation": {
+    "title_en": "New spar",
+    "scene": "garden_shed",
+    "camera": "close-up",
+    "beat": "Leo saws a thin bamboo stick and binds it into the kite as a new spar with twine, tying a tight knot with his teeth.",
+    "state": {
+     "outfit": "white T-shirt",
+     "kite_condition": "new bamboo spar fitted",
+     "weather": "rain outside"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the garden shed, cool diffuse daylight filters through rain-streaked windowpanes, casting soft reflections across a worn timber workbench. Rain patters steadily outside. Scattered across the dark wood are glue, brushes, and fabric remnants. The workshop's earthy shadows contrast with the vivid crimson nylon of the red diamond kite laid flat on the table, creating a quiet, focused atmosphere of patient craft.\n\nLeo, a young adult man with freckles and thick auburn curls, leans over the bench wearing his plain white T-shirt. His hands dominate the frame as he applies glue around the rip in the red kite and presses a bright blue fabric patch firmly over the damage, smoothing the edges flat. He then picks up a fine brush and paints a tidy five-pointed yellow star onto the center of the blue patch, mirroring the design on his jacket. As he lifts the brush, his knuckle brushes against wet pigment, leaving a distinct smear of yellow paint on his hand. By the end, the tear is securely covered by the blue patch and yellow star, with paint marking his skin.\n\nThe camera remains in a steady top-down close-up, focused directly on the center of the kite atop the workbench. The overhead angle captures Leo's hands and the crown of his auburn curls dipping into the upper frame. The view stays sharply centered on the kite's surface, ensuring the bright blue patch and freshly painted yellow star stay clearly visible against the red fabric.",
+   "annotation": {
+    "title_en": "Patching",
+    "scene": "garden_shed",
+    "camera": "top-down close-up",
+    "beat": "Leo glues a patch of bright blue fabric over the rip in the red kite, then paints a yellow star on the patch to match his jacket.",
+    "state": {
+     "outfit": "white T-shirt, a smear of yellow paint on his hand",
+     "kite_condition": "red kite with a blue patch and painted yellow star",
+     "weather": "rain outside"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the rustic garden shed, soft daylight filters through the rain-streaked window onto the cluttered wooden workbench. Outside, the steady drumming of rain begins to taper into a gentle drizzle. Weathered timber walls, hanging hand tools, and terracotta pots create an earthy, quiet backdrop, while the freshly mended red diamond kite—bearing its blue patch and yellow star—rests safely against the workbench edge.\n\nLeo, a young adult man with thick auburn curls, freckles, and brown trousers, sits at the bench wearing a white T-shirt, with a small smear of yellow paint on the side of his hand. Holding a needle and thread, he completes the final stitches fastening a bright blue fabric scrap over the torn elbow of his denim jacket. He snips the thread, stands up, and pulls the jacket back on over his white T-shirt. Turning his arm, he inspects the newly secured blue elbow patch beside the jacket’s original yellow star patch, smiling warmly at how it mirrors the kite's repair.\n\nThe camera holds a steady medium close-up at eye level, capturing the precision of his stitching before tilting gently upward as he stands to put the jacket on. The soft natural light accentuates the textured denim, the fresh blue patch, and his pleased expression, keeping Leo centered throughout the sequence.",
+   "annotation": {
+    "title_en": "Fixing the jacket",
+    "scene": "garden_shed",
+    "camera": "medium close-up",
+    "beat": "Leo sews the torn elbow of his denim jacket with a leftover piece of the same blue fabric, then puts the jacket back on and admires the matching patch.",
+    "state": {
+     "outfit": "denim jacket with yellow star patch and a blue elbow patch",
+     "kite_condition": "repaired red kite with blue patch",
+     "weather": "rain stopping"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the garden shed, the view looks outward through the open doorway toward rolling countryside where the rain has just ceased. Soft, clean sunlight breaks through retreating storm clouds, illuminating glistening raindrops on wooden beams and tall grass. Outside, a vibrant rainbow arches gracefully across the lush green fields under a pale blue sky, casting a warm, refreshing atmosphere across the damp landscape while contrasting with the shed's shadowed interior.\n\nLeo, a young adult man with freckles and thick auburn curls, stands near the threshold wearing his blue denim jacket—featuring a yellow star patch and a neat blue fabric patch on the elbow—over a white T-shirt, brown trousers, and brown boots. As the rain stops, he pushes the shed door fully open and looks out across the countryside. Seeing the bright rainbow, an energetic grin spreads across his face. He reaches down and picks up his repaired red diamond kite, which bears a matching blue patch over its mended spar, holding it firmly by his side with renewed excitement.\n\nThe camera remains fixed in a wide shot from inside the shed, using the wooden doorframe to frame Leo against the luminous outdoors. Both the rustic interior and the expansive exterior remain sharply visible, capturing the colourful arc of the rainbow across the wet fields alongside Leo's delighted expression and the newly mended red kite in his hand.",
+   "annotation": {
+    "title_en": "Rainbow",
+    "scene": "garden_shed",
+    "camera": "wide shot through the doorway",
+    "beat": "The rain stops. Leo opens the shed door and a rainbow arches over the wet fields; he grabs the repaired kite and grins.",
+    "state": {
+     "outfit": "denim jacket with blue elbow patch",
+     "kite_condition": "repaired red kite",
+     "weather": "rainbow after rain"
+    }
+   }
+  },
+  {
+   "prompt": "Bright midday sunlight floods an expansive sandy beach swept by a steady coastal sea breeze. High above the shoreline, the pale blue sky is filled with dozens of colourful kites in geometric and streaming shapes, dipping and fluttering in the wind. Along the background, gentle ocean waves roll into white surf against the coast, while loose clusters of spectators and colourful beach tents dot the dunes, establishing a lively, bustling outdoor festival atmosphere.\n\nLeo, a young adult man with freckles and thick auburn curls, walks forward across the firm golden sand through the scattered crowd. He wears a denim jacket featuring blue elbow patches over a plain white T-shirt, paired with earthy brown trousers and sturdy brown boots. Held securely under his arm is his repaired red diamond kite, its mended seams intact against the coastal gusts. As the sea breeze ruffles his curls, Leo gazes upward in admiration at the airborne displays, grinning slightly as he navigates past other festivalgoers.\n\nThe camera frames the scene in a wide establishing shot, smoothly tracking sideways and slightly forward to follow Leo's progress along the shore. The composition keeps Leo's full figure grounded in the midground, while allowing the sweeping ocean horizon and the vibrant, kite-filled sky above to dominate the frame under clear, natural daylight.",
+   "annotation": {
+    "title_en": "Seaside festival",
+    "scene": "beach_festival",
+    "camera": "wide establishing shot",
+    "beat": "Next day at a seaside kite festival: dozens of colourful kites fill the sky over a sandy beach. Leo walks through the crowd with his patched red kite.",
+    "state": {
+     "outfit": "denim jacket with blue elbow patch",
+     "kite_condition": "repaired red kite",
+     "weather": "sunny, sea breeze"
+    }
+   }
+  },
+  {
+   "prompt": "Bright coastal sunlight washes over the expansive seaside beach, where damp, flat sand glistens near the receding tide. Overhead, a clear azure sky is speckled with dozens of vibrant festival kites fluttering in the steady sea breeze. Gentle white surf laps softly in the distance, while colorful crowds gather along the far dunes. The atmosphere is open, sun-drenched, and alive with salt air, the firm shore creating mirror-like reflections.\n\nLeo, a young adult man with freckled cheeks and thick, windblown auburn curls, sprints forward with buoyant energy. He wears a faded denim jacket featuring a yellow star patch and blue elbow patch over a plain white T-shirt, along with brown trousers. His brown boots are tied together by their laces and slung over his shoulder, leaving his bare feet to kick up thin sprays of wet sand. In his hands, he grips the string spool, feeding line out while glancing upward with an exhilarated smile. Above him, his repaired red diamond kite catches the wind, lifting gracefully into the air with its neat blue patch and yellow star design clearly visible against the red fabric.\n\nThe camera tracks smoothly alongside him in a lateral medium-wide shot, keeping pace with his stride along the waterline. The framing balances his running figure, the dangling boots bouncing on his shoulder, and the taut string leading toward the soaring red kite in the upper frame, preserving the documentary realism of the breezy coastal afternoon.",
+   "annotation": {
+    "title_en": "Flying again",
+    "scene": "beach_festival",
+    "camera": "side tracking shot",
+    "beat": "Leo runs barefoot along the wet sand, boots tied over his shoulder, and the patched red kite soars among the other kites, its blue patch and yellow star visible.",
+    "state": {
+     "outfit": "denim jacket with blue elbow patch, barefoot, boots over his shoulder",
+     "kite_condition": "repaired kite flying high",
+     "weather": "sunny"
+    }
+   }
+  },
+  {
+   "prompt": "The seaside beach festival is bathed in bright, natural afternoon sunlight under an open azure sky dotted with soaring kites. Warm light glints off the packed, damp sand near the gentle surf, casting soft shadows across the shore. In the soft-focus background, distant festival-goers and fluttering windsocks create a lively, cheerful atmosphere filled with the steady coastal breeze.\n\nLeo, a young adult man with freckles and thick auburn curls, wears a denim jacket featuring a yellow star patch and a blue elbow patch over a plain white T-shirt, brown trousers, and is barefoot with his brown boots tied by their laces over his shoulder. He holds the spool of line attached to his soaring red diamond kite. Beside him, a little girl with twin pigtails gazes upward in wide-eyed wonder. Smiling warmly, Leo kneels down onto the damp sand to meet her eye level and extends the wooden spool toward her. He gently places her hands around the handles, softly explaining how to balance the line against the wind. By the end of the shot, the girl firmly grips the spool and bursts into delighted laughter, while Leo keeps his hands loosely beneath hers to steady the pull.\n\nThe camera captures the interaction in a medium two-shot, smoothly lowering as Leo kneels to remain at eye level with both characters. The framing keeps Leo, the smiling child, and the upward angle of the kite string clearly visible against the sunny beach backdrop.",
+   "annotation": {
+    "title_en": "A child's wish",
+    "scene": "beach_festival",
+    "camera": "medium two-shot",
+    "beat": "A little girl with pigtails stares up at Leo's kite. Leo kneels down and hands her the line, helping her hold it as she laughs.",
+    "state": {
+     "outfit": "denim jacket with blue elbow patch",
+     "kite_condition": "kite flying, line in the girl's hands",
+     "weather": "sunny"
+    }
+   }
+  },
+  {
+   "prompt": "The coastal beach is bathed in the warm, radiant glow of a late golden sunset. Fiery orange, amber, and soft purple tones streak across the evening sky, reflecting brightly off the calm, incoming tide. In the background, the sea glitters like liquid gold beneath the descending sun, while the festival beach quiets down into a peaceful, reflective twilight. Soft sea breezes ripple across the cooling sand, carrying a serene, unhurried atmosphere across the shoreline.\n\nLeo, a young adult man with thick auburn curls and freckles, sits resting on the sand wearing a denim jacket with blue elbow patches, a white T-shirt, brown trousers, and brown boots. Next to him sits the little girl with pigtails, holding the spool of the flying kite string with both hands. Outlined softly against the brilliant sky, the two sit close together gazing upward. High above the glittering water, the single red diamond kite hovers steadily, its long tail rippling smoothly in the steady evening wind. Leo raises a hand to point gently toward the drifting kite, nodding in encouragement as the girl watches the bright red silhouette sail across the sunset.\n\nThe camera remains stationary in a wide silhouette shot, positioned at a low angle on the sand behind and to the side of the pair. The expansive framing keeps Leo and the little girl seated in the lower third, while the vast orange horizon, the shimmering ocean, and the floating red kite stay prominently visible throughout the shot.",
+   "annotation": {
+    "title_en": "Sunset",
+    "scene": "beach_festival",
+    "camera": "silhouette wide shot",
+    "beat": "At sunset Leo and the girl sit on the sand watching the red kite against an orange sky, the sea glittering gold.",
+    "state": {
+     "outfit": "denim jacket with blue elbow patch",
+     "kite_condition": "kite flying at sunset",
+     "weather": "golden sunset"
+    }
+   }
+  },
+  {
+   "prompt": "The beach festival shifts into dusk as the golden sunset softens into deep twilight hues of amber and dusky blue across the shore. A cool evening breeze sweeps across the sand, where distant seaside festival lights begin to flicker softly against the darkening tide. The ambient illumination is low and gentle, wrapping the coastal setting in quiet, reflective warmth.\n\nLeo, a young adult man with thick auburn curls and freckles, wears a denim jacket with a yellow star patch and blue elbow patch over a white T-shirt and brown trousers. Initially holding the taut string, he smoothly reels in the patched red diamond kite until it rests safely in his hands. He then turns and offers the kite to the nearby young girl, speaking a few quiet parting words. She beams and wraps her arms around the fabric, hugging the red kite tightly to her chest. Having surrendered the kite, Leo turns toward the camera with a relaxed, contented smile, his freckles catching the final amber glow of dusk.\n\nThe camera holds in an intimate close-up at eye level, tracking the handover before settling on Leo’s upper torso and face. The framing keeps both the girl hugging the kite and Leo’s face in view before centering on his expression. Soft seaside festival lights remain blurred in the background, preserving Leo's warm smile in the dimming natural light.",
+   "annotation": {
+    "title_en": "The gift",
+    "scene": "beach_festival",
+    "camera": "close-up",
+    "beat": "Leo reels the kite in and gives it to the girl; she hugs the patched red kite. Leo smiles at the camera, freckles glowing in the last light.",
+    "state": {
+     "outfit": "denim jacket with blue elbow patch",
+     "kite_condition": "kite given to the girl",
+     "weather": "dusk"
+    }
+   }
+  }
+ ]
+}

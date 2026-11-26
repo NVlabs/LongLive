@@ -1,0 +1,52 @@
+{
+ "name": "29_open_book",
+ "title": "Opening and Closing Desk Book",
+ "summary": "A robotic arm opens a white book on a table, closes it, shifts it across the desk, and reopens it.",
+ "camera": "fixed third-person camera",
+ "robot": "one white arm with a parallel gripper",
+ "setting": "a room with a wooden wall and a light grey table",
+ "first_frame": "29_open_book.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "7b4689112bbce478f587822b22499880",
+  "frame_index": 0,
+  "original_prompt": "open book",
+  "viewpoint": "third_person",
+  "first_frame_sha256": "0b40b2787996eee65644b2818cf536ad3f28e15450b33d6d1e460e7fd31d16e3"
+ },
+ "segments": [
+  {
+   "instruction": "Lower the gripper toward the standing white book cover on the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Grasp the top cover edge and open the book flat onto the desk.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Press down along the open spine to flatten the pages against the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Grasp the top cover and fold the book shut.",
+   "memory_event": "hide: inside pages hidden under the closed book cover"
+  },
+  {
+   "instruction": "Slide the closed book toward the far right edge of the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Slide the book back to the center of the table.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Lift the cover to open the book once more.",
+   "memory_event": "return: the book interior reopens showing the identical blank white pages"
+  },
+  {
+   "instruction": "Release the cover and raise the arm back to the resting position.",
+   "memory_event": "none"
+  }
+ ]
+}

@@ -1,0 +1,453 @@
+{
+  "id": "kintsugi_robot_k7_terse",
+  "setup": {
+    "title": "Unit K7 and the Golden Crack",
+    "style": "Live-action, cinematic, a gentle futuristic city with misty blue mornings and warm craft workshops.",
+    "cast": [
+      {
+        "id": "k7",
+        "name": "Unit K7",
+        "description": "Unit K7, a small knee-high cream ceramic robot with a round head, two glowing blue eyes, a hairline crack over its right eye, two brass antennae, and an orange canvas satchel worn across its body."
+      }
+    ],
+    "extras": {
+      "voice": "Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1),",
+      "music": "Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+      "speech": "K7 speaks only a few short, curious sentences to itself."
+    }
+  },
+  "shots": [
+    {
+      "prompt": "A wide, gently futuristic city plaza stretches under a cool, misty morning sky. Pale blue fog hangs low between sleek architectural towers, softening distant holographic signs and storefront illuminations into diffuse pastel glows of amber and cyan. The dark paving stones are slick with moisture, mirroring the hazy lights in long, glossy reflections. The atmosphere is calm and peaceful, enveloped in cool, damp air as the waking city stirs in the soft light.\n\nUnit K7, a small, knee-high robot made of smooth cream ceramic, journeys across the wet plaza tiles. The automaton features a round head with two glowing circular blue eyes, two thin brass antennae, and a distinct hairline crack over its right eye. A small, empty orange canvas satchel hangs across its torso by a diagonal strap. Unit K7 waddles steadily across the damp stones, its little feet pattering against the ground while the orange satchel bobs against its ceramic flank. The brass antennae vibrate faintly with each step, and the hairline crack over its luminous right eye remains visible as it moves forward without stopping.\n\nThe camera tracks smoothly in a wide shot, positioned at a low angle just above the damp pavement. This framing accentuates Unit K7’s modest stature against the vast, towering backdrop of the foggy plaza. The reflective ground, the gentle sway of the satchel, and the hazy glowing signs in the distance remain visible throughout the shot, presenting a grounded, documentary-style record of the robot's morning journey.",
+      "annotation": {
+        "title_en": "The foggy plaza",
+        "scene": "wet_plaza",
+        "camera": "wide tracking shot",
+        "beat": "Morning in a wet futuristic plaza with glowing signs. Unit K7 waddles across the reflective pavement, satchel bouncing, the hairline crack visible over its right eye.",
+        "state": {
+          "body_condition": "cream ceramic with a hairline crack over the right eye",
+          "satchel_contents": "empty",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 0,
+        "words": [
+          244,
+          244
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide, low-angle shot of a misty futuristic city plaza, where K7 journeys across the slick, reflective dark paving stones. The camera tracks smoothly just above the damp pavement at a low angle, accompanying K7 as the knee-high cream ceramic robot waddles steadily across the wet tiles. Sleek architectural towers rise into pale blue fog under the cool morning sky, while distant holographic signs and storefront illuminations diffuse into soft pastel amber and cyan glows mirrored on the slick ground. K7's round head turns forward, its two circular blue eyes glowing steadily beneath a visible hairline crack over the right eye. The thin brass antennae vibrate faintly with every step, and the small, empty orange canvas satchel bobs gently against its ceramic flank. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] The city feels so peaceful today.</d> As soon as the line ends, K7 falls silent for the rest of the shot. K7 patters forward without stopping across the vast, misty plaza.\n\noverall_soundscape: Rhythmic, light tapping of small feet echoes softly across wet stone tiles alongside the faint rustle of a bobbing canvas strap. A low, distant ambient hum filters gently through the quiet, damp morning fog.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide, low-angle shot of a misty futuristic city plaza, where K7 waddles steadily across the slick, damp paving stones. Pale blue fog hangs low between sleek architectural towers under a cool morning sky, softening distant holographic signs into pastel amber and cyan glows. K7, a knee-high cream ceramic robot with a round head, glowing blue eyes, a hairline crack over its right eye, two brass antennae, and an orange canvas satchel across its torso, waddles steadily across the moisture-slick paving stones. The camera tracks smoothly backward in a wide shot, floating at a low angle just above the damp pavement. K7’s little feet patter against the dark reflective tiles as the empty orange satchel bobs against its ceramic flank. The brass antennae vibrate faintly with each step. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] The morning mist is cool today.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Without stopping, K7 continues moving forward beneath the towering city skyline.\n\noverall_soundscape: Rhythmic ceramic footfalls patter steadily across wet stone tiles with soft, gentle splashes. A faint mechanical hum murmurs as the brass antennae quiver faintly. In the distance, a muffled city ambience echoes softly through the damp morning air.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still on the damp city plaza.\n\nUnit K7 waddles forward. Just as it approaches a curb, a violent plume of white steam erupts straight from a metal floor grate, instantly engulfing it in dense fog. When the swirling vapor quickly disperses, Unit K7 is sprawled on the wet paving stones, having tripped over the curb during the blast. The impact damages its casing: a prominent, jagged fracture splits across its face plate, while its eyes dim slightly in shock.\n\nThe camera maintains a low-angle medium shot, keeping Unit K7, the vent, and the curb centered in frame. The lens remains steady as the steam explodes and drifts away, ensuring the fall and resulting damage are plainly legible, highlighting the newly widened fracture across the face plate against the wet ground.",
+      "annotation": {
+        "title_en": "Steam vent",
+        "scene": "wet_plaza",
+        "camera": "medium shot",
+        "beat": "A white steam cloud bursts from a vent and swallows K7; when it clears, K7 has tripped over a curb and fallen, and the crack has widened into a jagged split across its face plate.",
+        "state": {
+          "body_condition": "jagged widened crack across the face plate",
+          "satchel_contents": "empty",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          247,
+          130
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle medium shot of the damp city plaza, where K7 waddles forward toward a curb and a metal floor grate. The camera holds a static low-angle medium shot, keeping K7, the metal floor grate, and the curb centered in frame. K7 waddles forward on the damp city plaza. Just as K7 approaches the curb, a violent plume of white steam erupts straight from the metal floor grate, instantly engulfing K7 in dense fog. The lens remains steady as the swirling vapor quickly disperses, revealing K7 sprawled on the wet paving stones after tripping over the curb during the blast. The impact damages its casing, causing a prominent, jagged fracture to split across its face plate while its eyes dim slightly in shock. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Where did that steam come from?</d> As soon as the line ends, K7 falls silent for the rest of the shot.\n\noverall_soundscape: A violent, hissing burst of pressurized steam roars from the metal grate, followed by a clattering impact and dull thud against wet paving stones. Damp ambient air echoes faintly as water droplets settle on the ground.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle medium shot of the damp futuristic city plaza, where K7 waddles across the dark, wet paving stones toward a metal floor grate and a curb. K7, a small knee-high cream ceramic robot with a round head, two glowing blue eyes, a hairline crack over its right eye, two brass antennae, and an empty orange canvas satchel worn across its body, waddles forward over the slick, reflective ground. As it nears the street curb, it glances downward. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] What is beneath this metal grate?</d> As soon as the line ends, K7 falls silent for the rest of the shot. Suddenly, a violent plume of white steam erupts straight from the metal floor grate, instantly engulfing K7 in dense fog. The camera holds a steady low-angle medium shot, keeping K7, the vent, and the curb centered. As the swirling white vapor quickly drifts away into the pale blue fog between sleek architectural towers, K7 is sprawled on the wet paving stones after tripping over the curb. The impact damages its casing: a prominent, jagged fracture splits across its face plate, widening from the previous flaw, while its blue eyes dim slightly in shock.\n\noverall_soundscape: Rhythmic wet tapping of small feet on slick stone, cut short by a violent, high-pressure roar of erupting steam. A hard ceramic clatter against the curb, followed by the soft hiss of fading vapor across a damp plaza.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still in the wet plaza.\n\nUnit K7 sits upright on the damp pavers. It lowers its gaze toward a shallow puddle, where a small curved ceramic shard lies in the water. Its eyes dim and flicker with a faint, sorrowful tremor. Tilting forward, it carefully reaches out with its hand, pinches the wet fragment, and lifts it from the puddle. Moving deliberately, K7 opens the satchel flap, places the recovered shard inside, and seals it shut.\n\nThe close-up camera remains low to the ground, holding a tight focus on K7’s head, eyes, and hands. A subtle downward tilt follows the retrieval of the shard from the puddle before resting level as the piece enters the satchel, maintaining crisp clarity throughout the shot.",
+      "annotation": {
+        "title_en": "A broken piece",
+        "scene": "wet_plaza",
+        "camera": "close-up",
+        "beat": "K7 sits up and finds a small curved ceramic shard broken off its head lying in a puddle. It picks the shard up carefully and puts it in its orange satchel, eyes flickering sadly.",
+        "state": {
+          "body_condition": "missing a small chip above the right eye, jagged crack",
+          "satchel_contents": "ceramic shard",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          240,
+          122
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot low to the ground in the wet plaza, with K7 sitting upright on damp pavers beside a shallow puddle. K7 sits upright on damp pavers, lowering its gaze toward a shallow puddle where a small curved ceramic shard lies in the water. Its eyes dim and flicker with a faint, sorrowful tremor. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] A broken piece. I will keep it safe.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Tilting forward, K7 carefully reaches out with its hand. The camera tilts subtly downward toward the puddle, holding tight focus on K7's hand as it pinches the wet fragment and lifts it from the water. Moving deliberately, K7 opens the satchel flap. The camera rests level as K7 places the recovered shard inside and seals the satchel shut, keeping crisp clarity on K7's head and hands.\n\noverall_soundscape: Subtle trickles of water echo across the wet plaza pavement. A gentle splash sounds as the ceramic shard is lifted from the puddle, followed by the quiet rustle and clasp of the satchel.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot low to the ground in the damp futuristic city plaza, where K7 sits upright on the slick dark paving stones. Unit K7, a small knee-high cream ceramic robot with a round head, two brass antennae, a prominent jagged fracture across its face plate, and an orange canvas satchel, sits upright on the damp reflective pavers. Its dimmed blue eyes flicker with a faint tremor as it lowers its gaze toward a shallow puddle containing a small curved ceramic shard. The low camera tilts downward subtly at slow speed, tracking K7's ceramic hand reaching forward to pinch the wet fragment. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] A piece of me. Stay safe inside.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Lifting the shard clear of the water, K7 tilts upright as the camera levels out. Moving deliberately, K7 lifts the flap of its orange canvas satchel, slips the recovered shard inside, and presses the satchel shut.\n\noverall_soundscape: Gentle water ripples and a distant city hum reverberate softly through the damp morning fog. A delicate ceramic clinking accompanies the lifting of the shard from the puddle, followed by the soft rustle and snap of the canvas satchel flap.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "A bustling covered market street stretches beneath an arched glass canopy, where cool morning mist filters through to mix with the golden glow of hanging paper lanterns. Rows of wooden artisan stalls display handcrafted goods, pottery, and woven textiles, bathed in amber lamplight that reflects softly off damp paving stones. The atmosphere is quiet yet lively, filled with the gentle presence of shoppers and drifting steam rising into the cool blue morning shadows of the corridor.\n\nUnit K7 walks steadily along the flagstones. K7 toddles forward with small, measured steps, constantly tilting its head upward to scan the suspended wooden signs. Navigating carefully around market baskets and passing legs, K7 gradually slows to a halt as its gaze locks onto a small hanging sign painted with an illustration of a golden bowl.\n\nThe camera moves in a smooth, low-angle tracking shot, retreating backward just above pavement level to match K7's walking pace. The framing keeps K7 centered in full view against the bustling market and tall stall posts. As K7 stops, the camera eases to a rest and tilts slightly upward, keeping K7's uplifted face and the illuminated sign framed together in the warm ambient light.",
+      "annotation": {
+        "title_en": "Searching the streets",
+        "scene": "market_street",
+        "camera": "low tracking shot",
+        "beat": "K7 walks through a busy covered market street of lantern-lit stalls, looking up at signs until it spots a small sign with a golden bowl painted on it.",
+        "state": {
+          "body_condition": "missing chip, jagged crack",
+          "satchel_contents": "ceramic shard",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          258,
+          196
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle full shot of a misty covered market street beneath an arched glass canopy, where K7 walks along damp paving stones past wooden artisan stalls. The camera retreats backward in a smooth low-angle tracking shot just above pavement level, keeping K7 centered in full view against the bustling market and tall wooden stall posts. Cool morning mist filters beneath the arched glass canopy, mingling with the golden glow of hanging paper lanterns and drifting steam. K7 toddles forward along the damp flagstones with small, measured steps, constantly tilting its head upward to scan suspended wooden signs while navigating around market baskets and passing legs. Gradually slowing to a halt, K7 locks its gaze onto a small hanging sign painted with an illustration of a golden bowl. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] There it is. A small golden bowl.</d> As soon as the line ends, K7 falls silent for the rest of the shot. The camera eases to a rest and tilts slightly upward, framing K7's uplifted face and the illuminated sign together in the warm ambient light.\n\noverall_soundscape: Soft, rhythmic patter of small steps on damp flagstones blends with the rustle of woven market baskets and passing footsteps. A gentle murmur of distant market chatter mixes with the faint, steady hiss of drifting steam.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle full shot of a bustling covered market street beneath an arched glass canopy, where K7 walks steadily along damp, reflective paving stones. The camera moves in a smooth, low-angle tracking shot, retreating backward just above pavement level to match K7's walking pace, keeping K7 centered in full view against wooden artisan stalls displaying pottery and woven textiles. Unit K7, a small knee-high cream ceramic robot with two glowing blue eyes, a prominent jagged fracture across its face plate over its right eye, two brass antennae, and an orange canvas satchel sealed shut across its body, toddles forward with small, measured steps through drifting steam and cool morning mist. Rows of hanging paper lanterns cast a golden glow across the damp stones. Constantly tilting its round head upward to scan suspended wooden signs, K7 navigates carefully around market baskets and passing legs. K7 gradually slows to a halt as its gaze locks onto a small hanging sign painted with an illustration of a golden bowl. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] A golden bowl... is that it?</d> As soon as the line ends, K7 falls silent for the rest of the shot. As K7 stops, the camera eases to a rest and tilts slightly upward, keeping K7's uplifted face and the illuminated sign framed together in the warm ambient light.\n\noverall_soundscape: Soft footsteps and quiet chatter of morning market shoppers echo under the high glass canopy. Tiny, rhythmic ceramic feet patter lightly against the wet paving stones amid the faint hiss of rising steam and the gentle clatter of wooden stall wares.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "The interior of the kintsugi workshop glows with soft amber light spilling from hanging paper lanterns and small workbench lamps. Natural cedar paneling wraps the walls, lined with shelves displaying dozens of repaired ceramic vessels joined by gleaming seams of polished gold. Worktables are organized with horsehair brushes, jars of natural lacquer, and dusting powders. The atmosphere is quiet, contemplative, and still, carrying the faint, earthy scent of cured resin and aged wood.\n\nAt the threshold, Unit K7 pushes open the slatted wooden sliding door and steps quietly onto the timber floorboards. Across the room, an elderly craftswoman with silver hair pinned in a neat bun, wearing an indigo apron over a work shirt, looks up from her bench. Setting down a fine tool, she smiles warmly at the small visitor.\n\nThe camera holds in a steady medium wide shot, framing both the entrance and the artisan's workstation in balanced view. The composition stays stationary at a low-neutral height, preserving K7’s modest stature alongside the seated craftswoman. Soft lighting catches the golden seams of pottery resting on the background shelves, keeping the entire interaction quiet and intimate.",
+      "annotation": {
+        "title_en": "The kintsugi workshop",
+        "scene": "kintsugi_workshop",
+        "camera": "medium wide",
+        "beat": "K7 pushes open the sliding door of a warm wooden workshop full of repaired bowls with gold seams. An old craftswoman with silver hair in a bun and an indigo apron looks up from her bench and smiles.",
+        "state": {
+          "body_condition": "missing chip, jagged crack",
+          "satchel_contents": "ceramic shard",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          225,
+          187
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium wide shot of the amber-lit kintsugi workshop, where K7 stands at the threshold sliding door opposite an elderly craftswoman at her bench. The camera holds a static medium wide shot at a low-neutral height, framing both the entrance and the artisan's workstation in balanced view. Soft amber light spills from hanging paper lanterns and small workbench lamps across natural cedar-paneled walls lined with shelves of repaired ceramic vessels. At the threshold, K7 pushes open the slatted wooden sliding door and steps quietly onto the timber floorboards. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] The broken pieces are joined with gold.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Across the room by worktables organized with horsehair brushes, jars of natural lacquer, and dusting powders, the elderly craftswoman with silver hair pinned in a neat bun, wearing an indigo apron over a work shirt, looks up from her bench. Setting down a fine tool, she smiles warmly at the small visitor as soft lighting catches the polished golden seams.\n\noverall_soundscape: The soft slide and rumble of a slatted wooden door opening along its track, followed by gentle footfalls on timber floorboards. A tiny, quiet clink sounds as a metal tool is set onto a wooden workbench.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium wide shot of the amber-lit kintsugi workshop, where K7 stands at the threshold pushing open a slatted wooden sliding door. The camera holds a static medium wide shot at a low-neutral height, framing both the entrance and the artisan's workstation in balanced view. Soft amber light spills from hanging paper lanterns and small workbench lamps across cedar-paneled walls lined with shelves of repaired ceramic vessels joined by gleaming seams of polished gold. At the threshold, K7—a small knee-high cream ceramic robot with a round head, two glowing blue eyes, two brass antennae, a prominent jagged fracture across its face plate, and a sealed orange canvas satchel across its body—pushes open the slatted sliding door and steps quietly onto the timber floorboards. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] So many broken pieces mended with gold.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Across the room, an elderly craftswoman with silver hair pinned in a neat bun, wearing an indigo apron over a work shirt, looks up from her worktable organized with horsehair brushes, lacquer jars, and dusting powders. Setting down a fine tool, she smiles warmly at the small visitor as soft lighting glints off the golden ceramic seams.\n\noverall_soundscape: A soft wooden slide and gentle click as the slatted door opens, followed by delicate footsteps on timber floorboards. A faint metallic tap sounds as a fine tool is placed onto the wooden workbench amidst a quiet, still room presence.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the kintsugi workshop.\n\nUnit K7 stands beside the worktable facing the craftswoman. K7 reaches into its satchel, pulls out the shard, and presents it upward with both hands, leaving the satchel empty. The craftswoman receives the fragment into her hands and raises a brass loupe to her eye to inspect the broken edge. Lowering the lens, she offers a gentle, knowing smile and reaches out to softly tap the fracture on K7’s brow. K7 tilts its head slightly upward, its eyes dimming and brightening in quiet relief.\n\nThe camera holds a steady close-up two-shot at workbench height, framing K7’s head alongside the craftswoman’s hands. The shallow depth of field keeps the delicate transfer of the shard and the tender touch against K7's forehead in crisp focus, while the background softly blurs.",
+      "annotation": {
+        "title_en": "Showing the shard",
+        "scene": "kintsugi_workshop",
+        "camera": "close-up two-shot",
+        "beat": "K7 hands the ceramic shard to the craftswoman with both little hands. She examines it with a loupe and gently taps the crack on K7's head.",
+        "state": {
+          "body_condition": "missing chip, jagged crack",
+          "satchel_contents": "empty",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          244,
+          133
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady close-up two-shot at workbench height inside the kintsugi workshop, where K7 stands beside the worktable facing the craftswoman. The camera holds a steady close-up two-shot at workbench height, framing K7’s head alongside the craftswoman’s hands while a shallow depth of field keeps the delicate transfer and touch in crisp focus and softly blurs the background. K7 reaches into its satchel, pulls out the shard, and presents it upward with both hands, leaving the satchel empty. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] I brought back the missing piece.</d> As soon as the line ends, K7 falls silent for the rest of the shot. The craftswoman receives the fragment into her hands and raises a brass loupe to her eye to inspect the broken edge. Lowering the lens, she offers a gentle, knowing smile and reaches out to softly tap the fracture on K7’s brow. K7 tilts its head slightly upward, its eyes dimming and brightening in quiet relief.\n\noverall_soundscape: A soft rustle of the satchel accompanies the emergence of the shard, followed by a gentle ceramic clink as hands meet. A faint metallic click sounds from the brass loupe, concluding with a light, muted tap against K7's brow.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up two-shot at workbench height inside the quiet kintsugi workshop, where K7 stands beside the worktable facing the elderly craftswoman. The camera holds a static close-up two-shot at workbench height with a shallow depth of field, framing K7’s head alongside the craftswoman’s hands while the background softly blurs. K7, a small cream ceramic robot with glowing blue eyes, two brass antennae, and a prominent jagged fracture across its face plate, reaches into its orange canvas satchel. It pulls out the ceramic shard, leaving the satchel empty, and presents the fragment upward with both hands. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Can this piece be joined again?</d> As soon as the line ends, K7 falls silent for the rest of the shot. The elderly craftswoman, wearing an indigo apron over a work shirt with silver hair pinned in a neat bun, gently receives the fragment into her hands. She raises a brass loupe to her eye to inspect the broken edge. Lowering the lens, she offers a gentle, knowing smile and reaches out to softly tap the fracture on K7’s brow. K7 tilts its head slightly upward, its eyes dimming and brightening in quiet relief.\n\noverall_soundscape: A gentle rustle of canvas precedes the soft clink of ceramic transferring between hands. A faint metallic click sounds as the loupe moves, followed by a light, resonant tap against ceramic in the still room.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the kintsugi workshop.\n\nUnit K7 sits completely motionless on the bench, its eyes dimmed to a faint, resting glow. The artisan's hands enter the frame wielding a slender brush tipped with dark, glossy urushi lacquer. With smooth precision, she paints the fracture with the dark resin. She then uses wooden tweezers to guide the shard back into place, pressing it flush into the gap. By the end of the shot, the shard is securely reseated, leaving the break filled and sealed with a neat line of dark lacquer.\n\nThe camera holds a tight macro close-up focused squarely on K7’s forehead and the artisan’s fingertips. A shallow depth of field keeps the repair zone pin-sharp while softening the rest of the chassis and background bench. The framing remains virtually static, preserving full view of the brushwork and the newly bonded seam.",
+      "annotation": {
+        "title_en": "Lacquer",
+        "scene": "kintsugi_workshop",
+        "camera": "macro close-up",
+        "beat": "With a fine brush the craftswoman fills the crack with dark urushi lacquer and sets the shard back into place; K7 sits very still on the bench, eyes dimmed.",
+        "state": {
+          "body_condition": "crack filled with dark lacquer, shard reattached",
+          "satchel_contents": "empty",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          235,
+          142
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro close-up inside the kintsugi workshop, where K7 sits completely motionless on the bench with its forehead centered in the frame. The camera holds a static shot focused squarely on K7’s forehead and the artisan’s fingertips, maintaining a shallow depth of field that keeps the repair zone sharp while softening the rest of the chassis and background bench. K7 sits completely motionless, its eyes dimmed to a faint, resting glow. The artisan's hands enter the frame wielding a slender brush tipped with dark, glossy urushi lacquer. With smooth precision, she paints the fracture with the dark resin. She then uses wooden tweezers to guide the shard back into place, pressing it flush into the gap. The shard becomes securely reseated, leaving the break filled and sealed with a neat line of dark lacquer while the framing remains static.\n\noverall_soundscape: The faint, continuous low hum of K7's resting power core. The delicate, wet drag of a fine brush applying lacquer, followed by the soft, precise click of a shard being pressed flush into place.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight macro close-up inside the quiet, amber-lit kintsugi workshop, where K7, a small cream ceramic robot with brass antennae, sits motionless on a wooden worktable. The camera holds a static macro close-up focused squarely on K7’s forehead and the artisan’s fingertips, keeping a shallow depth of field that softens the cream ceramic chassis, orange canvas satchel, and background cedar workshop. Unit K7 sits completely motionless on the bench, brass antennae still and glowing blue eyes dimmed to a faint, resting glow beneath a prominent jagged fracture across its face plate. The artisan's hands enter the frame holding a slender brush tipped with dark, glossy urushi lacquer. With smooth, steady precision, she carefully paints the fracture with the dark resin. She then uses wooden tweezers to guide the displaced ceramic shard back into place, pressing it gently flush into the gap. By the end of the shot, the shard rests securely reseated, leaving the break neatly sealed beneath a clean seam of dark lacquer.\n\noverall_soundscape: A quiet, contemplative room tone fills the workshop. Soft, delicate brush bristles lightly drag across smooth ceramic, followed by the faint wooden click and gentle pressure of tweezers reseating the fragment.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the kintsugi workshop, now in the afternoon.\n\nUnit K7 sits steadily on a woven indigo cushion atop a low bench. Curled beside K7, the craftswoman’s calico cat sleeps soundly, breathing in slow, rhythmic pulses. K7 remains patient, tilting its head slightly downward to watch the resting animal. Aside from this subtle motion, it stays tranquil and still, waiting for the lacquer to cure.\n\nThe camera holds a static wide shot, framing K7, the sleeping cat, and the surrounding workshop. Without any camera movement, the gradual movement of golden sunlight across the table visually conveys the passage of time. Both figures remain in crisp view within the quiet, textured workspace from start to finish.",
+      "annotation": {
+        "title_en": "Waiting",
+        "scene": "kintsugi_workshop",
+        "camera": "static wide, light changing",
+        "beat": "Afternoon light moves across the workshop as K7 waits patiently on a cushion, watching the craftswoman's cat sleep beside it.",
+        "state": {
+          "body_condition": "crack filled with dark lacquer",
+          "satchel_contents": "empty",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          225,
+          115
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static wide shot of the kintsugi workshop in the afternoon, where K7 sits steadily on a woven indigo cushion atop a low bench beside a sleeping calico cat. The camera holds a static wide shot framing K7, the sleeping calico cat curled beside it on the low bench, and the surrounding workshop. The cat sleeps soundly, breathing in slow, rhythmic pulses beside K7 on the woven indigo cushion. K7 remains patient and tilts its head slightly downward to watch the resting animal. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Breathing so slowly while the lacquer cures.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Aside from this subtle motion, K7 stays tranquil and still, waiting for the lacquer to cure. Without any camera movement, golden sunlight gradually moves across the table to convey the passage of time. Both figures remain in crisp view within the quiet, textured workspace from start to finish.\n\noverall_soundscape: Soft, rhythmic breathing from the sleeping cat fills the quiet room alongside faint workshop room tone. A gentle afternoon breeze murmurs faintly from outside.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static wide shot of the sunlit kintsugi workshop in the afternoon, where K7 sits steadily on a woven indigo cushion atop a low bench. The camera holds a static wide shot framing the quiet, contemplative workshop, with its natural cedar paneling, shelves of repaired ceramic vessels with gold seams, and worktables with brushes and lacquer bathed in soft amber light. K7 is a small knee-high cream ceramic robot with a round head, two glowing blue eyes, a hairline crack over its right eye, two brass antennae, and an empty orange canvas satchel worn across its body. Its ceramic shard is reseated, with the break filled and sealed with a neat line of dark lacquer. Curled beside K7 on the low bench, the craftswoman’s calico cat sleeps soundly, breathing in slow, rhythmic pulses. K7 remains patient, tilting its round head slightly downward to watch the resting animal. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Soft breathing. We must wait for the lacquer.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Aside from this subtle motion, K7 stays tranquil and still. Without any camera movement, golden afternoon sunlight gradually tracks across the table, marking the passage of time.\n\noverall_soundscape: The faint, rhythmic sound of the calico cat breathing peacefully fills the quiet room. Subtle ambient room tone of the wooden workshop drifts alongside a gentle exterior afternoon breeze.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the kintsugi workshop.\n\nUnit K7 sits perfectly still. The craftswoman's hand enters the frame holding a slender brush dusted with fine gold powder. With slow, precise sweeps, she dusts the powder directly onto the dark seam. The shimmering grains instantly adhere to the wet lacquer, turning the dark fissure into an intricate ribbon of lustrous gold. K7 remains motionless as the transformation unfolds. By the end of the shot, the dark seam across its brow has become a brilliant, shining golden kintsugi seam.\n\nThe macro close-up holds an extremely shallow depth of field, focused tightly on the repair area. The camera tracks with a slow, almost imperceptible drift downward alongside the brush's path. The brush bristles and the newly radiant golden line stay crisply in focus throughout the movement.",
+      "annotation": {
+        "title_en": "Gold dust",
+        "scene": "kintsugi_workshop",
+        "camera": "macro close-up",
+        "beat": "The craftswoman dusts fine gold powder along the lacquered seam with a soft brush; the crack becomes a shining golden line across K7's face.",
+        "state": {
+          "body_condition": "shining golden kintsugi seam across the face",
+          "satchel_contents": "empty",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 2,
+        "words": [
+          236,
+          131
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up inside the kintsugi workshop, where K7 sits perfectly still while focused tightly on the repair area across its brow with an extremely shallow depth of field. A craftswoman's hand enters the frame holding a slender brush dusted with fine gold powder. With slow, precise sweeps, she dusts the powder directly onto the dark seam on K7's brow. The shimmering grains instantly adhere to the wet lacquer, turning the dark fissure into an intricate ribbon of lustrous gold. K7 remains motionless as the transformation unfolds. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] The dark fissure turns to bright gold.</d> As soon as the line ends, K7 falls silent for the rest of the shot. The camera tracks with a slow, almost imperceptible drift downward alongside the brush's path, keeping the brush bristles and the newly radiant golden line crisply in focus throughout the movement. By the end of the shot, the dark seam across the brow has become a brilliant, shining golden kintsugi seam.\n\noverall_soundscape: The soft whisper of fine brush bristles dusting gently across wet lacquer fills the room. A subtle, dry rustle of metallic powder settles within the quiet stillness of the workshop.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a macro close-up inside the quiet kintsugi workshop, where Unit K7 sits perfectly still under soft amber light. Unit K7, a small knee-high cream ceramic robot with a round head, two glowing blue eyes, two brass antennae, and an empty orange canvas satchel worn across its body, remains motionless with its break reseated and sealed by a neat line of dark lacquer. The craftswoman's hand enters the frame holding a slender brush dusted with fine gold powder. With slow, precise sweeps, she dusts the powder directly onto the dark seam over K7's right eye. The camera tracks with a slow, almost imperceptible drift downward alongside the brush's path, keeping an extremely shallow depth of field tightly focused on the repair area. The shimmering grains instantly adhere to the wet lacquer, transforming the dark fissure into an intricate ribbon of lustrous gold. The brush bristles and newly radiant golden line stay crisply in focus. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Shining like sunlight now.</d> As soon as the line ends, K7 falls silent for the rest of the shot. By the end of the shot, the dark seam across K7's brow has become a brilliant, shining golden kintsugi seam as K7 watches in quiet wonder.\n\noverall_soundscape: Soft, delicate sweeps of fine brush bristles dusting across smooth ceramic. A faint whisper of settling metallic powder against sticky lacquer in a quiet room.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still inside the kintsugi workshop.\n\nLooking into a circular polished hand mirror propped on the table, Unit K7 gazes at its reflection as its eyes brighten with quiet wonder. It raises a finger to gently trace the golden seam across its brow. Pleased, K7 turns slightly toward the craftsperson off-angle and emits a soft series of melodic chime tones to express its gratitude.\n\nThe camera maintains an intimate over-the-shoulder angle from behind K7, framing the back of its head in soft focus while keeping the mirror reflection sharply defined. A very gentle push-in slightly tightens the framing around the mirror, ensuring the reflection of its eyes, finger, and the golden seam remain clearly visible through the end of the shot.",
+      "annotation": {
+        "title_en": "The mirror",
+        "scene": "kintsugi_workshop",
+        "camera": "over-the-shoulder into a mirror",
+        "beat": "K7 looks into a round hand mirror and sees the golden seam. Its blue eyes brighten and it touches the gold line with one finger and says thank you.",
+        "state": {
+          "body_condition": "golden kintsugi seam",
+          "satchel_contents": "empty",
+          "accessory": "none"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          236,
+          120
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate over-the-shoulder shot inside the kintsugi workshop, where K7 sits before a circular polished hand mirror propped on the table. From an intimate over-the-shoulder angle, the back of K7's head rests in soft focus while its reflection in the circular polished hand mirror propped on the table remains sharply defined. Looking into the glass, K7 gazes at its reflection as its eyes brighten with quiet wonder. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] The golden seam is completely whole now.</d> As soon as the line ends, K7 falls silent for the rest of the shot. It raises a finger to gently trace the golden seam across its brow. The camera pushes in with very gentle motion at slow speed, slightly tightening the framing around the mirror to keep the reflection of its eyes, finger, and the seam clearly visible. Pleased, K7 turns slightly toward the craftsperson off-angle, emitting a soft series of melodic chime tones to express its gratitude.\n\noverall_soundscape: A gentle whispering friction as a fingertip softly brushes across the brow seam. A sequence of soft, melodic electronic chime tones rings out cleanly in the quiet space.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate over-the-shoulder shot inside the kintsugi workshop, where K7 sits at a worktable looking into a circular polished hand mirror. The camera frames the back of K7's round cream ceramic head and brass antennae in soft focus while sharply defining its reflection in the circular hand mirror propped on the wooden worktable. K7 wears an empty orange canvas satchel across its body under the quiet, contemplative amber light. In the mirror, K7's two glowing blue eyes brighten with quiet wonder. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Look at the gold. It feels whole again.</d> As soon as the line ends, K7 falls silent for the rest of the shot. K7 raises a cream ceramic finger to gently trace the newly set golden seam across its brow over its right eye. The camera pushes in with small amplitude at slow speed toward the mirror, tightening the framing so the reflection of its eyes, finger, and the golden seam remain clearly visible. Pleased, K7 turns slightly toward the craftsperson off-angle and emits a soft series of melodic chime tones.\n\noverall_soundscape: A faint, smooth friction sounds as a ceramic finger touches the golden seam. Soft electronic chime tones ring out in a gentle melodic sequence amidst the subtle quiet of the wooden room.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still in the kintsugi workshop.\n\nUnit K7 stands on the low bench. The craftswoman carefully ties a small red silk ribbon around K7’s left antenna, letting its short tails flutter gently. She then takes a tiny ceramic teacup, detailed with delicate golden seams, and places it tenderly inside K7's satchel. K7 remains still, its eyes pulsing with a soft, appreciative glow. By the end, the red ribbon adorns the left antenna and the miniature teacup rests securely inside the satchel.\n\nThe camera holds a steady medium close-up at K7’s eye level, keeping the head, antennae, and satchel in clear view. The framing captures the artisan’s hands performing each action, allowing warm light to pick out the vivid red ribbon and K7's face. The workshop background stays gently blurred, preserving an authentic documentary feel.",
+      "annotation": {
+        "title_en": "A gift",
+        "scene": "kintsugi_workshop",
+        "camera": "medium close-up",
+        "beat": "The craftswoman ties a small red silk ribbon to one of K7's brass antennae and puts a tiny gold-seamed teacup into its satchel.",
+        "state": {
+          "body_condition": "golden kintsugi seam",
+          "satchel_contents": "tiny gold-seamed teacup",
+          "accessory": "red ribbon on the left antenna"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          222,
+          133
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up in the kintsugi workshop at eye level, where K7 stands on a low bench before the craftswoman. The camera holds a steady medium close-up at K7’s eye level, keeping its head, antennae, and satchel in clear view against the gently blurred workshop background. Warm light illuminates K7’s face as the craftswoman’s hands carefully tie a small red silk ribbon around K7’s left antenna, letting its short tails flutter gently. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] A precious gift, mended with gold.</d> As soon as the line ends, K7 falls silent for the rest of the shot. The artisan then takes a tiny ceramic teacup detailed with delicate golden seams and tenderly places it inside K7's satchel. K7 remains still, its eyes pulsing with a soft, appreciative glow while the red ribbon adorns the left antenna and the miniature teacup rests securely inside the satchel.\n\noverall_soundscape: The soft rustle of silk ribbon brushing metal accompanies the delicate, muted tap of the ceramic teacup settling inside the satchel. A gentle electronic hum emanates softly from K7 amid the quiet workshop stillness.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a steady medium close-up of Unit K7 standing on a low bench inside the soft amber-lit kintsugi workshop. The camera holds a static medium close-up at the eye level of K7, a small knee-high cream ceramic robot with a round head, glowing blue eyes, a golden kintsugi seam across its brow, two brass antennae, and an orange canvas satchel, standing on the low bench. In the warm light, the artisan's hands reach in to carefully tie a small red silk ribbon around K7's left antenna, allowing its short tails to flutter gently. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] A tiny ribbon, and a cup for me?</d> As soon as the line ends, K7 falls silent for the rest of the shot. The craftswoman then lifts a tiny ceramic teacup detailed with delicate golden seams and tenderly places it inside K7's satchel. K7 remains still as its blue eyes pulse with a soft, appreciative glow, leaving the red ribbon gracing its antenna and the teacup secure in the satchel against the gently blurred workshop interior.\n\noverall_soundscape: The soft rustle of silk ribbon being knotted around metal, followed by the faint muffled clink of glazed ceramic settling into canvas. A gentle electronic pulse hums faintly from K7.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Back on the covered market street, now in the evening.\n\nUnit K7 walks along the street with proud, rhythmic steps. As it moves forward, the ribbon flutters softly in the evening draft. Passing market-goers glance downward and turn toward the little robot, their faces showing genuine admiration for its gleaming repair. K7 tilts its head slightly upward, emitting a soft chime of satisfaction as it continues its steady stroll.\n\nThe camera tracks backward at a low knee-height angle, maintaining a steady medium shot directly in front of K7. The smooth retreat keeps K7 fully in view from head to base, preserving sharp focus while the warm market and admiring bystanders drift naturally past in the background.",
+      "annotation": {
+        "title_en": "Back into the city",
+        "scene": "market_street",
+        "camera": "tracking shot",
+        "beat": "Evening. K7 walks proudly back through the lantern-lit market street, red ribbon fluttering, people turning to admire the golden seam on its face.",
+        "state": {
+          "body_condition": "golden kintsugi seam",
+          "satchel_contents": "teacup",
+          "accessory": "red ribbon on the antenna"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          246,
+          116
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low knee-height medium shot of an evening covered market street, where K7 walks forward along the bustling walkway. The camera tracks backward smoothly at a low knee-height angle directly in front of K7, maintaining a steady medium shot that keeps the robot fully in view from head to base. K7 advances along the evening street with proud, rhythmic steps. A ribbon attached to it flutters softly in the evening draft. Passing market-goers glance downward and turn toward the little robot, their faces showing genuine admiration for its gleaming repair as the warm market drifts past in the background. K7 tilts its head slightly upward. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Everyone is looking at the shiny repair.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Emitting a soft chime of satisfaction, K7 continues its steady stroll forward in sharp focus.\n\noverall_soundscape: Rhythmic mechanical footfalls click against the ground amid the distant ambient murmur and rustling of a covered market. A light breeze softly rustles fabric, punctuated by a gentle electronic chime.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low knee-height medium shot of a covered market street in the evening, where K7 walks forward along the stone walkway. The camera tracks backward at a low knee-height angle directly in front of K7, maintaining a steady medium shot that keeps the small knee-high cream ceramic robot fully in view from its round head to its base. K7 advances with proud, rhythmic steps, carrying an orange canvas satchel across its body and displaying two brass antennae, glowing blue eyes, and a hairline crack over its right eye. The small red silk ribbon on its left antenna flutters softly in the evening draft. Passing market-goers glance downward and turn toward K7, their faces showing genuine admiration for the gleaming golden kintsugi seam across its brow. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Everyone is looking at my bright new gold.</d> As soon as the line ends, K7 falls silent for the rest of the shot. K7 tilts its head slightly upward, emitting a soft chime of satisfaction as it continues its steady stroll while the warm market and admiring bystanders drift past in the background.\n\noverall_soundscape: Rhythmic ceramic footfalls clack gently against the stone market ground beneath the soft murmur of evening market-goers. A light draft flutters the ribbon, punctuated by a delicate, electronic chime of satisfaction.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "An open rooftop garden overlooks a gentle futuristic city beneath a serene dusk. A deep purple and rose-colored sky casts soft, diffused evening light across the weathered stone terrace. Lush potted ferns, flowering shrubs, and trailing ivy crowd the edges, creating a quiet botanical haven high above the streets. The atmosphere is peaceful and cool, with gentle evening air rustling the leaves against the distant skyline.\n\nUnit K7 enters the terrace. K7 steps carefully between the terracotta planters toward a flat stone ledge. It reaches into its satchel, lifts out the teacup, and places it upright onto the ledge. By the end of the action, the teacup rests securely on the stone, leaving the satchel empty as K7 gazes outward in contemplation.\n\nThe camera holds a wide, static shot at mid-terrace level, framing K7 against the sprawling plants and the vast purple sky. The wide composition keeps K7, the ledge, and the teacup in clear view without cutting or pushing in, allowing the gentle placement to anchor the quiet moment.",
+      "annotation": {
+        "title_en": "Rooftop garden",
+        "scene": "rooftop_garden",
+        "camera": "wide shot",
+        "beat": "K7 climbs onto a rooftop garden full of potted plants under a purple dusk sky and carefully sets the teacup on a ledge.",
+        "state": {
+          "body_condition": "golden kintsugi seam",
+          "satchel_contents": "empty",
+          "accessory": "red ribbon"
+        }
+      },
+      "terse": {
+        "location_status": "new",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          230,
+          170
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of an open rooftop garden overlooking a futuristic city at dusk, where K7 enters the weathered stone terrace between terracotta planters. The camera holds a static wide shot at mid-terrace level throughout the scene. K7 enters the terrace under the soft, diffused evening light of the purple and rose-colored sky, stepping carefully between the terracotta planters toward a flat stone ledge. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] This is a quiet place to leave it.</d> As soon as the line ends, K7 falls silent for the rest of the shot. K7 reaches into its satchel, lifts out the teacup, and sets it upright onto the weathered stone ledge. The camera remains fixed as the teacup rests securely in place, leaving the satchel empty while K7 gazes outward in quiet contemplation toward the distant skyline framed by potted ferns, flowering shrubs, and trailing ivy.\n\noverall_soundscape: A gentle evening breeze rustles through the potted ferns and ivy leaves. Soft scuffs of footsteps sound against the weathered stone terrace, followed by the faint clink of the teacup settling onto the ledge.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of an open rooftop garden at dusk, where Unit K7 enters between terracotta planters toward a stone ledge overlooking the city. Under a deep purple and rose-colored dusk sky, soft diffused light illuminates the weathered stone terrace bordered by lush potted ferns, flowering shrubs, and trailing ivy. Unit K7, a small knee-high cream ceramic robot with a round head, two glowing blue eyes, a hairline crack over its right eye, a golden kintsugi seam across its brow, two brass antennae with a small red silk ribbon on the left, and an orange canvas satchel worn across its body, steps carefully between terracotta planters toward the flat stone ledge. The camera holds a wide, static shot at mid-terrace level. K7 reaches into its satchel and carefully lifts out the tiny ceramic teacup with delicate golden seams. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] This is a quiet place for you.</d> As soon as the line ends, K7 falls silent for the rest of the shot. K7 places the teacup upright onto the stone ledge, leaving the satchel empty, and pauses to gaze outward in contemplation across the distant skyline.\n\noverall_soundscape: A gentle evening breeze rustles through the potted ferns and ivy against the distant, low hum of the futuristic city. Light ceramic footfalls scuff softly across weathered flagstones, followed by a faint, delicate clink as the teacup meets the stone ledge.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still on the rooftop garden as a gentle drizzle begins to fall.\n\nUnit K7 kneels beside a planter, carefully holding the teacup forward into the open air to catch descending raindrops. After gathering a few drops inside the basin, K7 smoothly tilts the cup, letting the water trickle down onto a tiny green seedling emerging from the earth. By the end of the action, glistening rain beads coat K7's surface, resting along the mended seam over its eye.\n\nThe camera remains in an intimate close-up at plant height, tilting subtly to follow the teacup as it tips toward the seedling. The focus stays crisp on K7's fingers, the seam over its eye, and the emerging sprout, while the rain-slicked background foliage softens into a blur.",
+      "annotation": {
+        "title_en": "Catching rain",
+        "scene": "rooftop_garden",
+        "camera": "close-up",
+        "beat": "Light rain begins. K7 holds the teacup out to catch raindrops, then waters a small seedling with them, rain beading on its gold seam.",
+        "state": {
+          "body_condition": "golden kintsugi seam, wet with rain",
+          "satchel_contents": "empty",
+          "accessory": "red ribbon"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          239,
+          125
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up shot at plant height in a rooftop garden, where K7 kneels beside a planter in a gentle drizzle. As a gentle drizzle falls across the rooftop garden, K7 carefully holds the teacup forward into the open air to catch descending raindrops. Glistening rain beads coat K7's surface, resting along the mended seam over its eye. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Catch the rain. Drink up, little sprout.</d> As soon as the line ends, K7 falls silent for the rest of the shot. After gathering a few drops inside the basin, K7 smoothly tilts the cup, letting the water trickle down onto a tiny green seedling emerging from the earth. The camera remains in an intimate close-up at plant height, keeping crisp focus on K7's fingers, the seam over its eye, and the emerging sprout while rain-slicked background foliage softens into a blur, tilting subtly to follow the teacup as it tips toward the seedling.\n\noverall_soundscape: A gentle drizzle patters softly across rooftop foliage and into the teacup. Drops trickle from the rim and land with quiet damp taps on the soil.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an intimate close-up shot at plant height in a rooftop garden, where K7 kneels beside a planter in the gentle drizzle. A gentle drizzle falls over the rooftop garden. K7, a small knee-high cream ceramic robot with a round head, glowing blue eyes, two brass antennae with a small red silk ribbon on the left antenna, an orange canvas satchel, and a golden kintsugi mended seam across its brow over its right eye, carefully holds a teacup forward into the open air. After gathering raindrops inside the basin, K7 smoothly tilts the cup downward toward a tiny green seedling emerging from the earth. The camera remains in an intimate close-up at plant height, tilting subtly to follow the teacup as it tips. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Drink the rain, little green sprout.</d> As soon as the line ends, K7 falls silent for the rest of the shot. Water trickles gently from the cup onto the sprout. The camera holds a crisp focus on K7's fingers, the mended seam over its eye, and the emerging sprout, while rain-slicked foliage in the background softens into a blur. Glistening rain beads coat K7's surface, settling along the golden mended seam.\n\noverall_soundscape: The soft, rhythmic patter of a gentle drizzle on garden foliage and wet soil. Raindrops tap delicately against the ceramic teacup, followed by a light trickle of water splashing softly into the damp earth.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Still on the rooftop garden, now night after the rain has cleared.\n\nUnit K7 sits quietly on the damp stone beside the seedling. K7 rests its hands near its knees, looking out toward the open horizon. It remains peacefully still beside the plant as the warm city lights catch and shimmer across its mended seam.\n\nThe camera begins in a medium framing focused on K7 and the seedling before executing a smooth, continuous pull-back upward and outward. As the lens retreats, the garden ledge widens into the full rooftop terrace, gradually unveiling the sweeping panorama of towering buildings, softly lit skyways, and quiet atmospheric mist. K7 and the seedling remain visible at the centre of the wide composition, resting quietly above the glowing metropolis.",
+      "annotation": {
+        "title_en": "Night lights",
+        "scene": "rooftop_garden",
+        "camera": "slow pull-back to wide",
+        "beat": "Night. The rain stops and the city lights glow. K7 sits beside the seedling, its golden seam reflecting the lights, and the camera pulls back over the skyline.",
+        "state": {
+          "body_condition": "golden kintsugi seam",
+          "satchel_contents": "empty",
+          "accessory": "red ribbon"
+        }
+      },
+      "terse": {
+        "location_status": "same",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          260,
+          124
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a damp rooftop garden at night after rain, where K7 sits quietly beside a seedling looking toward the horizon. K7 rests its hands near its knees on the damp stone, remaining peacefully still beside the seedling. Warm city lights catch and shimmer across K7's mended seam as it gazes out into the distance. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] The storm has passed. It is quiet now.</d> As soon as the line ends, K7 falls silent for the rest of the shot. The camera pulls back smoothly upward and outward at a slow, continuous pace. As the lens retreats, the garden ledge widens into the full rooftop terrace, gradually unveiling a sweeping panorama of towering buildings, softly lit skyways, and quiet atmospheric mist. K7 and the seedling remain visible at the centre of the wide composition, resting quietly above the glowing metropolis.\n\noverall_soundscape: A gentle night breeze drifts across the damp rooftop terrace amid faint water drips. A quiet, muffled hum echoes from the sprawling metropolis below.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of a damp stone rooftop garden at night, where K7 sits quietly beside a small seedling overlooking the horizon. Unit K7, a small knee-high cream ceramic robot with a round head, two glowing blue eyes, a hairline crack over its right eye, two brass antennae adorned with a small red silk ribbon on the left, and an orange canvas satchel across its body, sits quietly on the damp weathered stone beside the seedling. Glistening rain beads coat its ceramic shell as warm city lights catch and shimmer across the golden kintsugi seam across its brow. K7 rests its hands near its knees, gazing out toward the open horizon. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Look how bright the world is now.</d> As soon as the line ends, K7 falls silent for the rest of the shot. The camera smoothly pulls back upward and outward at a slow, continuous pace. As the frame expands past lush potted ferns, flowering shrubs, and trailing ivy, the terrace widens to unveil a sweeping night panorama of towering buildings, softly lit skyways, and quiet atmospheric mist, leaving K7 and the seedling centered peacefully above the glowing metropolis.\n\noverall_soundscape: A gentle night breeze rustles damp foliage as a distant, low hum resonates from futuristic skyways and illuminated city traffic. A stray drop of water softly drips onto the wet stone ledge.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    },
+    {
+      "prompt": "Back in the misty city plaza.\n\nUnit K7 walks steadily across the wet surface. As it advances, the ground grate suddenly releases a burst of dense, hissing white steam that plumes upward into its walking path. K7 pauses for a fraction of a second, adjusts its footing, and smoothly arcs around the cloud of vapor. It steps past the vent and resumes its steady stride.\n\nThe camera moves alongside in a low-angle wide tracking shot, traveling parallel to K7 at ground level. The wide perspective maintains K7 in view against the open expanse, clearly showing the steam vent erupting and the robot successfully circling the plume before continuing into the foggy distance.",
+      "annotation": {
+        "title_en": "Morning again",
+        "scene": "wet_plaza",
+        "camera": "wide tracking shot",
+        "beat": "The next morning K7 crosses the same foggy plaza from the first shot; the steam vent bursts again, and this time K7 steps around it, golden seam gleaming.",
+        "state": {
+          "body_condition": "golden kintsugi seam",
+          "satchel_contents": "empty",
+          "accessory": "red ribbon"
+        }
+      },
+      "terse": {
+        "location_status": "revisit",
+        "flags": [],
+        "attempts": 1,
+        "words": [
+          256,
+          112
+        ]
+      },
+      "variants": {
+        "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle wide shot of a misty city plaza, where K7 walks steadily across the wet surface against the open foggy expanse. The camera travels parallel to K7 at ground level in a low-angle wide tracking shot across the wet surface of the misty city plaza. As K7 advances across the open expanse, a ground grate suddenly releases a burst of dense, hissing white steam that plumes upward into its walking path. K7 pauses for a fraction of a second and adjusts its footing. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] A sudden thermal burst. Adjusting path now.</d> As soon as the line ends, K7 falls silent for the rest of the shot. K7 smoothly arcs around the cloud of vapor, steps past the vent, and resumes its steady stride, continuing into the foggy distance while the camera moves alongside.\n\noverall_soundscape: Rhythmic mechanical footsteps click and splash against the wet pavement, followed by a sudden, violent hiss of dense pressurized steam erupting into the ambient city air.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout.",
+        "h3mem": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle wide shot of a misty city plaza, where K7 walks steadily across the wet ground. Unit K7, a small knee-high cream ceramic robot with a round head, two glowing blue eyes, a hairline crack over its right eye, a golden kintsugi seam across its brow, two brass antennae with its left antenna adorned with a small red silk ribbon, glistening rain beads coating its surface, and an empty orange canvas satchel worn across its body, advances across the wet plaza. As it walks, a ground grate suddenly erupts with a burst of dense, hissing white steam pluming upward into its walking path. Unit K7, a small robot with a soft, slightly synthetic childlike voice, a gentle curious pace and a warm tone (S1) says: <d>[English] Careful now, step around the steam.</d> As soon as the line ends, K7 falls silent for the rest of the shot. K7 pauses for a fraction of a second, adjusts its footing, and smoothly arcs around the billowing cloud of vapor. Stepping past the vent, the robot resumes its steady stride into the foggy distance. The camera tracks parallel to K7 at ground level in a low-angle wide shot, maintaining the robot in view against the open expanse throughout the encounter.\n\noverall_soundscape: A sharp, loud hiss erupts as pressurized steam bursts from the metal grate into the damp air. Wet ceramic footsteps patter softly against the slick pavement, backed by the subtle whir of small servomotors and distant misty urban ambience.\n\nnon_diegetic_music: Delicate music-box melody with soft strings and a light glockenspiel, kept at low volume throughout."
+      }
+    }
+  ]
+}

@@ -1,0 +1,3594 @@
+{
+ "id": "hd13_bba9f7_terse",
+ "setup": {
+  "title": "Blood on the Brocade",
+  "style": "Cinematic behind-the-scenes documentary style with rich natural light and warm period manor interiors.",
+  "cast": [
+   {
+    "id": "clara",
+    "name": "Clara Vance",
+    "description": "Clara Vance, Late 20s actress, pale skin, auburn wavy hair, slender frame, green eyes, modern grey bathrobe over black thermal leggings, tight pinned Gibson girl updo."
+   }
+  ]
+ },
+ "bible": {
+  "entities": {
+   "clara": {
+    "id": "clara",
+    "kind": "character",
+    "name": "Clara Vance",
+    "identity": "Late 20s actress, pale skin, auburn wavy hair, slender frame, green eyes",
+    "initial": {
+     "outfit": "modern grey bathrobe over black thermal leggings",
+     "hairstyle": "tight pinned Gibson girl updo"
+    },
+    "protagonist": true
+   },
+   "marcus": {
+    "id": "marcus",
+    "kind": "character",
+    "name": "Marcus Kane",
+    "identity": "Mid 30s actor, tall, tan skin, short dark brown curly hair, square chiseled jaw",
+    "initial": {
+     "outfit": "navy rehearsal tracksuit with white stripes",
+     "hairstyle": "short slicked pompadour",
+     "facial_hair": "clean-shaven"
+    },
+    "protagonist": false
+   },
+   "fiona": {
+    "id": "fiona",
+    "kind": "character",
+    "name": "Fiona Bell",
+    "identity": "Early 40s props master, fair skin, round wire spectacles, sturdy build, blonde hair",
+    "initial": {
+     "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "accessory": "black utility belt with heavy shears and gaffer tape",
+     "hairstyle": "messy topknot bun"
+    },
+    "protagonist": false
+   },
+   "prop_rapier": {
+    "id": "prop_rapier",
+    "kind": "object",
+    "name": "Prop Rapier",
+    "identity": "Slender dueling rapier with ornate brass basket hilt and dull silver-painted blade",
+    "initial": {
+     "state": "intact polished blade with ornate brass basket hilt"
+    },
+    "protagonist": false
+   },
+   "blood_pump_rig": {
+    "id": "blood_pump_rig",
+    "kind": "object",
+    "name": "Special Effects Blood Pump",
+    "identity": "Hand-cranked plastic fluid cylinder with clear vinyl hose and brass nozzle",
+    "initial": {
+     "state": "empty and clean clear plastic canister with dry vinyl tubing"
+    },
+    "protagonist": false
+   },
+   "velvet_period_cloak": {
+    "id": "velvet_period_cloak",
+    "kind": "object",
+    "name": "Royal Purple Velvet Cloak",
+    "identity": "Heavy floor-length purple velvet cloak with gold frog clasp and faux-ermine border",
+    "initial": {
+     "state": "clean and pressed on a wooden hanger with polished gold clasp"
+    },
+    "protagonist": false
+   },
+   "directors_slate": {
+    "id": "directors_slate",
+    "kind": "object",
+    "name": "Director's Slate",
+    "identity": "Wooden clapperboard with black and white chevron arm and chalk surface",
+    "initial": {
+     "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+    },
+    "protagonist": false
+   },
+   "manuscript_letter": {
+    "id": "manuscript_letter",
+    "kind": "object",
+    "name": "Prop Manuscript Letter",
+    "identity": "Aged imitation-parchment document written in faded sepia calligraphic ink",
+    "initial": {
+     "state": "rolled tight and sealed with a crimson silk ribbon"
+    },
+    "protagonist": false
+   },
+   "tea_trolley": {
+    "id": "tea_trolley",
+    "kind": "object",
+    "name": "Brass Tea Trolley",
+    "identity": "Two-tiered wheeled brass tea cart with decorative filigree rails",
+    "initial": {
+     "state": "polished brass with steaming silver kettle and intact floral teacups"
+    },
+    "protagonist": false
+   },
+   "wardrobe_rack": {
+    "id": "wardrobe_rack",
+    "kind": "object",
+    "name": "Wheeled Wardrobe Rack",
+    "identity": "Heavy-duty chrome mobile clothing rail with caster wheels",
+    "initial": {
+     "state": "full chrome rack packed with hanging plastic garment bags"
+    },
+    "protagonist": false
+   },
+   "c_stand_light": {
+    "id": "c_stand_light",
+    "kind": "object",
+    "name": "C-Stand with Diffusion",
+    "identity": "Three-legged black steel grip stand holding a large round white diffusion frame",
+    "initial": {
+     "state": "upright black stand with circular diffusion scrim mounted"
+    },
+    "protagonist": false
+   },
+   "script_binder": {
+    "id": "script_binder",
+    "kind": "object",
+    "name": "Production Script Binder",
+    "identity": "Bulky three-ring binder with bright neon yellow plastic covers",
+    "initial": {
+     "state": "crisp bright yellow binder with color-coded tab dividers"
+    },
+    "protagonist": false
+   },
+   "antique_dueling_pistol": {
+    "id": "antique_dueling_pistol",
+    "kind": "object",
+    "name": "Antique Flintlock Pistol",
+    "identity": "Non-firing prop flintlock pistol with engraved brass barrel and dark walnut grip",
+    "initial": {
+     "state": "pristine polished brass barrel and oiled walnut stock"
+    },
+    "protagonist": false
+   }
+  },
+  "locations": {
+   "grand_ballroom": {
+    "id": "grand_ballroom",
+    "name": "Grand Ballroom",
+    "look": "Cavernous hall with gilded plasterwork, towering arched mirrors, and checkerboard marble flooring."
+   },
+   "dressing_trailer": {
+    "id": "dressing_trailer",
+    "name": "Cast Wardrobe Trailer",
+    "look": "Narrow mobile production trailer flanked by lit vanity bulbs, full-length mirrors, and linoleum floors."
+   },
+   "manor_library": {
+    "id": "manor_library",
+    "name": "Manor Library",
+    "look": "Wood-paneled room lined floor-to-ceiling with leather-bound books, heavy emerald drapes, and rolling ladders."
+   },
+   "prop_tent": {
+    "id": "prop_tent",
+    "name": "Outdoor Props Tent",
+    "look": "White canvas marquee pitched on gravel with metal folding tables, plastic tool bins, and work lights."
+   },
+   "conservatory": {
+    "id": "conservatory",
+    "name": "Victorian Conservatory",
+    "look": "Domed glass greenhouse with peeling white iron girders, overgrown potted palms, and damp flagstone pavers."
+   }
+  }
+ },
+ "shots": [
+  {
+   "prompt": "The Grand Ballroom is a cavernous hall with gilded plasterwork, towering arched mirrors, and checkerboard marble flooring. Clara Vance, a late 20s actress with pale skin, auburn wavy hair in a tight pinned Gibson girl updo, and green eyes, wears a modern grey bathrobe over black thermal leggings. Beside an upright Director's Slate chalked with 'SCENE 12 - TAKE 1' and a C-Stand with Diffusion holding a round white scrim, Clara walks onto her marks, sipping black coffee from a disposable cup with a tired smile. Wide establishing pan tracking Clara across the marble floor.",
+   "annotation": {
+    "title_en": "Clara walks onto the ballroom marks while a camera assistant",
+    "scene": "grand_ballroom",
+    "camera": "Wide establishing pan tracking Clara across the marble floor.",
+    "beat": "Clara walks onto the ballroom marks while a camera assistant checks focus against the slate.",
+    "present": [
+     "clara",
+     "directors_slate",
+     "c_stand_light"
+    ],
+    "first_appearance": [
+     "clara",
+     "directors_slate",
+     "c_stand_light"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Clara sips black coffee from a disposable cup with a tired smile.",
+    "start_state": {
+     "clara": {
+      "outfit": "modern grey bathrobe over black thermal leggings",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "modern grey bathrobe over black thermal leggings",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     }
+    },
+    "state": {
+     "clara.outfit": "modern grey bathrobe over black thermal leggings",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "directors_slate.state": "blackboard chalked with 'SCENE 12 - TAKE 1'",
+     "c_stand_light.state": "upright black stand with circular diffusion scrim mounted"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide establishing shot of the Grand Ballroom with checkerboard marble flooring, where Vance walks past film production equipment. The camera executes a wide establishing pan tracking Vance across the checkerboard marble floor of the cavernous Grand Ballroom, framed by gilded plasterwork and towering arched mirrors. Vance, a late 20s actress with pale skin, green eyes, and auburn wavy hair in a tight pinned Gibson girl updo, wears a modern grey bathrobe over black thermal leggings. She walks past an upright Director's Slate chalked with 'SCENE 12 - TAKE 1' beside a C-Stand with Diffusion holding a round white scrim. The narrator says: <d>[English] Another early morning call, but at least the black coffee is warm enough to keep me upright.</d> After this line the voice-over stays silent for the rest of the shot. Vance steps onto her marks, sipping black coffee from a disposable cup with a tired smile.\n\noverall_soundscape: Soft footsteps and fabric rustling echo gently across the expansive marble space. The disposable paper cup lightly crinkles as liquid shifts inside.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Grand Ballroom. Clara Vance flips through the Production Script Binder, a bulky three-ring binder with crisp neon yellow plastic covers and color-coded tabs, standing near the Director's Slate. She recites her introductory lines while tapping her thumb rhythmically against the script's edge. Medium profile shot focusing on Clara's face and hands.",
+   "annotation": {
+    "title_en": "Clara flips through her script binder near the clapperboard,",
+    "scene": "grand_ballroom",
+    "camera": "Medium profile shot focusing on Clara's face and hands.",
+    "beat": "Clara flips through her script binder near the clapperboard, reciting her character's introductory lines.",
+    "present": [
+     "clara",
+     "script_binder",
+     "directors_slate"
+    ],
+    "first_appearance": [
+     "script_binder"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara taps her thumb rhythmically against the script's edge.",
+    "start_state": {
+     "clara": {
+      "outfit": "modern grey bathrobe over black thermal leggings",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "modern grey bathrobe over black thermal leggings",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     }
+    },
+    "state": {
+     "clara.outfit": "modern grey bathrobe over black thermal leggings",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "script_binder.state": "crisp bright yellow binder with color-coded tab dividers",
+     "directors_slate.state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium profile shot in the Grand Ballroom, where Vance stands near the Director's Slate with a bulky three-ring binder in hand. The camera holds a static medium profile shot focusing closely on Vance's face and hands as she stands beside the Director's Slate in the Grand Ballroom. She holds the Production Script Binder, a bulky three-ring binder with crisp neon yellow plastic covers and color-coded tabs. Her fingers flip through the pages before resting along the margin. The narrator says: <d>[English] Welcome everyone to the grand ballroom event, where tonight we present our full production slate.</d> After this line the voice-over stays silent for the rest of the shot. As she recites her introductory lines, Vance taps her thumb rhythmically against the script's edge, maintaining her focused profile composure.\n\noverall_soundscape: The crisp rustle of script binder pages flipping echoes faintly across the expansive room. A steady, rhythmic tapping sound repeats as a thumb strikes against the binder's firm edge.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Grand Ballroom. Fiona Bell, a sturdy early 40s props master with fair skin, round wire spectacles, and blonde hair in a messy topknot, wears a black oversized crewneck, cargo trousers, and a loaded utility belt. She wheels the Brass Tea Trolley—a polished two-tiered brass cart with steaming kettle and teacups—past the C-Stand with Diffusion, wiping sweat from her forehead with her forearm. Low-angle dolly shot following the rolling brass wheels.",
+   "annotation": {
+    "title_en": "Fiona wheels the tea trolley into the ballroom near the ligh",
+    "scene": "grand_ballroom",
+    "camera": "Low-angle dolly shot following the rolling brass wheels.",
+    "beat": "Fiona wheels the tea trolley into the ballroom near the lighting stand to set the background scene.",
+    "present": [
+     "fiona",
+     "c_stand_light",
+     "tea_trolley"
+    ],
+    "first_appearance": [
+     "fiona",
+     "tea_trolley"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Fiona wipes sweat from her forehead with the back of her forearm.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "modern grey bathrobe over black thermal leggings",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     }
+    },
+    "state": {
+     "clara.outfit": "modern grey bathrobe over black thermal leggings",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "black utility belt with heavy shears and gaffer tape",
+     "fiona.hairstyle": "messy topknot bun",
+     "c_stand_light.state": "upright black stand with circular diffusion scrim mounted",
+     "tea_trolley.state": "polished brass with steaming silver kettle and intact floral teacups"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle shot inside the Grand Ballroom, where Vance, a sturdy props master wearing round wire spectacles, wheels a brass tea trolley across the floor. The camera dollies forward at low angle, tracking alongside the rolling brass wheels of the Brass Tea Trolley. Steam rises steadily from the kettle set beside teacups on the polished two-tiered brass cart. Vance, a sturdy early 40s props master with fair skin, round wire spectacles, and blonde hair gathered in a messy topknot, wears a black oversized crewneck, cargo trousers, and a loaded utility belt as she pushes the cart. She wheels the trolley past the C-Stand with Diffusion. The narrator says: <d>[English] Mind the diffusion stand, coming through with piping hot tea for the ballroom scene.</d> After this line the voice-over stays silent for the rest of the shot. Vance then wipes sweat from her forehead with her forearm while maintaining the cart's forward motion.\n\noverall_soundscape: Rattling porcelain teacups and the continuous hum of brass wheels rolling across the smooth floor. A soft hiss of steam vents from the kettle alongside the muffled rustle of cargo trousers.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "The Cast Wardrobe Trailer is a narrow mobile production trailer flanked by lit vanity bulbs, full-length mirrors, and linoleum floors. Clara Vance enters toward the Wheeled Wardrobe Rack, a heavy-duty chrome rail packed with plastic garment bags, where the Royal Purple Velvet Cloak hangs pressed with a polished gold clasp. Clara unties her bathrobe belt and stretches her shoulders. Tight interior tracking shot through the trailer doorway.",
+   "annotation": {
+    "title_en": "Clara enters the dressing trailer where the heavy velvet clo",
+    "scene": "dressing_trailer",
+    "camera": "Tight interior tracking shot through the trailer doorway.",
+    "beat": "Clara enters the dressing trailer where the heavy velvet cloak hangs ready for the first major scene.",
+    "present": [
+     "clara",
+     "wardrobe_rack",
+     "velvet_period_cloak"
+    ],
+    "first_appearance": [
+     "wardrobe_rack",
+     "velvet_period_cloak"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Clara unties the belt of her bathrobe and stretches her shoulders.",
+    "start_state": {
+     "clara": {
+      "outfit": "modern grey bathrobe over black thermal leggings",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "modern grey bathrobe over black thermal leggings",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     }
+    },
+    "state": {
+     "clara.outfit": "modern grey bathrobe over black thermal leggings",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "wardrobe_rack.state": "full chrome rack packed with hanging plastic garment bags",
+     "velvet_period_cloak.state": "clean and pressed on a wooden hanger with polished gold clasp"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight shot through the trailer doorway into the narrow cast wardrobe trailer, where Vance enters across the linoleum floor. The camera tracks forward through the trailer doorway in a tight interior shot as Vance enters along the linoleum floor. Lit vanity bulbs and full-length mirrors flank the narrow mobile production trailer. Vance approaches the wheeled wardrobe rack, stepping toward the heavy-duty chrome rail packed with plastic garment bags. On the rail, the royal purple velvet cloak hangs pressed with a polished gold clasp. The narrator says: <d>[English] The velvet cloak is pressed and waiting.</d> Vance pauses before the rack, unties her bathrobe belt, and stretches her shoulders. Vance (S1) adds: <d>[English] Time to slip out of this robe and get dressed.</d> After this line the voice-over stays silent for the rest of the shot. The camera continues tracking gently inward as she loosens the robe.\n\noverall_soundscape: Soft footsteps scuff over the linoleum floor amid the faint electric hum of lit vanity bulbs. Fabric rustles as Vance unties the belt of her bathrobe, accompanied by the faint shift of plastic garment bags on the chrome rail.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Cast Wardrobe Trailer. Near the Wheeled Wardrobe Rack, Clara Vance changes into an emerald silk Victorian ballgown with gold brocade corset. She checks the fit in the mirror, adjusting the boning around her waist while checking her posture. Static medium shot framed by illuminated vanity mirrors.",
+   "annotation": {
+    "title_en": "Clara changes into her ornate emerald period gown, checking ",
+    "scene": "dressing_trailer",
+    "camera": "Static medium shot framed by illuminated vanity mirrors.",
+    "beat": "Clara changes into her ornate emerald period gown, checking the corset fitting in the mirror.",
+    "present": [
+     "clara",
+     "wardrobe_rack"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "emerald silk Victorian ballgown with gold brocade corset"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara adjusts the boning around her waist while checking her posture.",
+    "start_state": {
+     "clara": {
+      "outfit": "modern grey bathrobe over black thermal leggings",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "wardrobe_rack.state": "full chrome rack packed with hanging plastic garment bags"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a static medium shot inside the Cast Wardrobe Trailer framed by illuminated vanity mirrors, where Vance stands near the Wheeled Wardrobe Rack wearing an emerald silk Victorian ballgown with gold brocade corset. The camera holds a static medium shot framed by illuminated vanity mirrors. In the Cast Wardrobe Trailer near the Wheeled Wardrobe Rack, Vance checks the fit of the emerald silk Victorian ballgown with gold brocade corset. Looking directly into the mirror, she slides her fingers along the bodice, adjusting the boning around her waist while carefully checking her posture. The narrator says: <d>[English] The boning sits tightly around the waist, but the silhouette looks just right for the scene.</d> After this line the voice-over stays silent for the rest of the shot. She smooths the fabric against her torso and holds her poise before the reflection.\n\noverall_soundscape: The rustle of heavy silk fabric mingles with the subtle creak of corset boning being adjusted. A soft, continuous electric hum emanates from the illuminated vanity mirrors.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Cast Wardrobe Trailer. Clara Vance lifts the Royal Purple Velvet Cloak off the Wheeled Wardrobe Rack, examining its heavy gold clasp. She rubs the velvet between her fingertips appraisingly. Close-up on Clara's hands grasping the royal purple fabric.",
+   "annotation": {
+    "title_en": "Clara lifts the velvet period cloak off the rack, examining ",
+    "scene": "dressing_trailer",
+    "camera": "Close-up on Clara's hands grasping the royal purple fabric.",
+    "beat": "Clara lifts the velvet period cloak off the rack, examining its heavy gold clasp.",
+    "present": [
+     "clara",
+     "velvet_period_cloak",
+     "wardrobe_rack"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara rubs the velvet between her fingertips appraisingly.",
+    "start_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "velvet_period_cloak.state": "clean and pressed on a wooden hanger with polished gold clasp",
+     "wardrobe_rack.state": "full chrome rack packed with hanging plastic garment bags"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot in the Cast Wardrobe Trailer, where Vance stands beside a Wheeled Wardrobe Rack. In the Cast Wardrobe Trailer, Vance lifts the Royal Purple Velvet Cloak off the Wheeled Wardrobe Rack. She examines its heavy gold clasp carefully. The narrator says: <d>[English] The weight of this royal velvet feels remarkably authentic, right down to the heavy gold clasp.</d> After this line the voice-over stays silent for the rest of the shot. Vance rubs the velvet between her fingertips appraisingly. The camera pushes in with smooth motion at slow speed to a close-up on Vance's hands grasping the royal purple fabric.\n\noverall_soundscape: Hangers slide and clatter softly along the metal rail of the wardrobe rack. The plush velvet fabric rustles quietly as fingers stroke its surface, accompanied by the subtle metallic clink of a heavy clasp.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Inside the Manor Library, a wood-paneled room lined floor-to-ceiling with leather-bound books, heavy emerald drapes, and rolling ladders. Marcus Kane, a mid-30s actor with tall build, tan skin, short dark brown curly hair in a slicked pompadour, and clean-shaven chiseled jaw, enters having changed into a cream Regency waistcoat with brass buttons and tailored fawn breeches. He carries the Production Script Binder, a bulky neon yellow binder with color tabs. Marcus leans against a mahogany desk, clears his throat loudly, and gestures grandly with an open palm. Slow forward push-in toward Marcus.",
+   "annotation": {
+    "title_en": "Marcus enters the library now dressed in his Regency costume",
+    "scene": "manor_library",
+    "camera": "Slow forward push-in toward Marcus leaning against a mahogany desk.",
+    "beat": "Marcus enters the library now dressed in his Regency costume, clutching his script binder.",
+    "present": [
+     "marcus",
+     "script_binder"
+    ],
+    "first_appearance": [
+     "marcus"
+    ],
+    "changes": [
+     {
+      "entity": "marcus",
+      "attr": "outfit",
+      "value": "cream Regency waistcoat with brass buttons and tailored fawn breeches"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Marcus clears his throat loudly and gestures grandly with an open palm.",
+    "start_state": {
+     "marcus": {
+      "outfit": "navy rehearsal tracksuit with white stripes",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "clean-shaven",
+     "script_binder.state": "crisp bright yellow binder with color-coded tab dividers"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot inside the wood-paneled Manor Library, where Vance enters beside heavy emerald drapes and rolling ladders. Vance, a mid-30s actor with a tall build, tan skin, short dark brown curly hair in a slicked pompadour, and a clean-shaven chiseled jaw, enters the wood-paneled room lined floor-to-ceiling with leather-bound books. Wearing a cream Regency waistcoat with brass buttons and tailored fawn breeches, he carries a bulky neon yellow Production Script Binder with color tabs. The camera pushes in with small amplitude at slow speed toward Vance as he leans against a mahogany desk and clears his throat loudly. The narrator says: <d>[English] Now, my lady, shall we review our grand prologue together?</d> Gesturing grandly with an open palm, Vance (S1) adds: <d>[English] Page forty holds our destiny.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: Firm footsteps tap across polished floorboards followed by a deliberate, resonant throat clear. Tailored fabric rustles softly as the binder taps against the mahogany desk.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Manor Library. Marcus Kane inspects the Prop Manuscript Letter, an aged imitation-parchment roll tightly bound with a crimson silk ribbon, resting on the green baize desk mat. Marcus picks up the sealed roll and weighs it gently in his palm. Over-the-shoulder shot looking down at the desk.",
+   "annotation": {
+    "title_en": "Marcus inspects the rolled manuscript letter resting on the ",
+    "scene": "manor_library",
+    "camera": "Over-the-shoulder shot looking down at the desk.",
+    "beat": "Marcus inspects the rolled manuscript letter resting on the green baize desk mat.",
+    "present": [
+     "marcus",
+     "manuscript_letter"
+    ],
+    "first_appearance": [
+     "manuscript_letter"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Marcus picks up the sealed roll and weighs it gently in his palm.",
+    "start_state": {
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "clean-shaven",
+     "manuscript_letter.state": "rolled tight and sealed with a crimson silk ribbon"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an over-the-shoulder shot looking down at the desk in the Manor Library, where Vance stands beside a green baize desk mat. From an over-the-shoulder angle looking downward, Vance inspects the prop manuscript letter, an aged imitation-parchment roll tightly bound with a crimson silk ribbon, resting on the green baize desk mat atop the desk. The camera slowly pushes in toward the desk while maintaining the over-the-shoulder framing. Vance reaches down and picks up the sealed roll from the green baize mat. The narrator says: <d>[English] The crimson ribbon remains completely unbroken, yet the roll feels surprisingly light in my palm.</d> After this line the voice-over stays silent for the rest of the shot. Holding the roll, he gently weighs it in his open palm, pausing to observe it closely.\n\noverall_soundscape: Quiet interior room tone of an empty library. The subtle friction of parchment lifting softly from green baize cloth, followed by the faint rustle of silk ribbon moving in a palm.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Manor Library. Fiona Bell, an early 40s props master with fair skin, round wire spectacles, and blonde messy topknot bun, wearing a black oversized crewneck sweatshirt, cargo trousers, and utility belt with shears and gaffer tape, arrives. She carries the Antique Flintlock Pistol with polished brass barrel and oiled walnut stock, setting it beside the Brass Tea Trolley. Fiona clicks her tongue while aligning the pistol with precision. Eye-level side tracking shot along the oak shelves.",
+   "annotation": {
+    "title_en": "Fiona arrives in the library with the antique dueling pistol",
+    "scene": "manor_library",
+    "camera": "Eye-level side tracking shot along the oak shelves.",
+    "beat": "Fiona arrives in the library with the antique dueling pistol and arranges it next to the tea trolley.",
+    "present": [
+     "fiona",
+     "antique_dueling_pistol",
+     "tea_trolley"
+    ],
+    "first_appearance": [
+     "antique_dueling_pistol"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Fiona clicks her tongue while setting the pistol down with careful precision.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "black utility belt with heavy shears and gaffer tape",
+     "fiona.hairstyle": "messy topknot bun",
+     "antique_dueling_pistol.state": "pristine polished brass barrel and oiled walnut stock",
+     "tea_trolley.state": "polished brass with steaming silver kettle and intact floral teacups"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an eye-level medium shot in the Manor Library, where Vance walks along the oak shelves toward a Brass Tea Trolley. The camera moves at eye level in a side tracking shot along the oak shelves as Vance, an early 40s props master with fair skin, round wire spectacles, and a blonde messy topknot bun, wearing a black oversized crewneck sweatshirt, cargo trousers, and a utility belt with shears and gaffer tape, arrives carrying the Antique Flintlock Pistol with its polished brass barrel and oiled walnut stock. She sets the weapon beside the Brass Tea Trolley. The narrator says: <d>[English] This antique pistol needs to sit just right beside the tea trolley before the scene starts.</d> After this line the voice-over stays silent for the rest of the shot. Vance clicks her tongue while aligning the pistol with precision.\n\noverall_soundscape: Soft footsteps move across the library floor alongside the faint jingling of shears on a utility belt. A gentle metallic and wooden clatter sounds as the pistol is set down, followed by a crisp tongue click.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Inside the Outdoor Props Tent, a white canvas marquee pitched on gravel with metal folding tables, plastic bins, and work lights. Fiona Bell pours viscous crimson fake blood into the Special Effects Blood Pump, an empty plastic cylinder with vinyl tubing, until it becomes a pressurized canister filled with thick crimson liquid with a primed tube. Fiona pumps the hand-crank carefully, testing the valve seal. High-angle close-up looking down into the open plastic canister.",
+   "annotation": {
+    "title_en": "In the prop tent, Fiona fills the blood pump canister with v",
+    "scene": "prop_tent",
+    "camera": "High-angle close-up looking down into the open plastic canister.",
+    "beat": "In the prop tent, Fiona fills the blood pump canister with viscous crimson liquid and primes the line.",
+    "present": [
+     "fiona",
+     "blood_pump_rig"
+    ],
+    "first_appearance": [
+     "blood_pump_rig"
+    ],
+    "changes": [
+     {
+      "entity": "blood_pump_rig",
+      "attr": "state",
+      "value": "pressurized canister filled with thick crimson fake blood and primed tube"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Fiona pumps the hand-crank carefully, testing the valve seal.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "blood_pump_rig": {
+      "state": "empty and clean clear plastic canister with dry vinyl tubing"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "pressurized canister filled with thick crimson fake blood and primed tube"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "black utility belt with heavy shears and gaffer tape",
+     "fiona.hairstyle": "messy topknot bun",
+     "blood_pump_rig.state": "pressurized canister filled with thick crimson fake blood and primed tube"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high-angle close-up inside the outdoor props tent, looking down into an open plastic canister on a metal folding table where Vance works. Under the glow of work lights inside the white canvas marquee pitched on gravel, the camera holds a static shot looking directly down into the open plastic cylinder of the Special Effects Blood Pump. Nearby on the metal folding tables sit plastic bins. Vance steadily pours viscous crimson fake blood into the empty plastic cylinder fitted with vinyl tubing. The narrator says: <d>[English] The valve seal looks tight enough to hold the crimson mix.</d> The cylinder fills until it becomes a pressurized canister filled with thick crimson liquid with a primed tube. Vance pumps the hand-crank carefully, testing the valve seal. Vance (S1) adds: <d>[English] Now we just prime the line.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: A thick, viscous fluid glugs smoothly into the hollow plastic chamber. A mechanical ratcheting click and a soft pressurized hiss sound as the hand-crank turns, set against the faint rustle of tent canvas.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Outdoor Props Tent. Fiona Bell tests the tubing of the Special Effects Blood Pump alongside the Prop Rapier, a slender dueling sword with an intact polished blade and ornate brass basket hilt, preparing for the sword fight. Fiona squintingly inspects the brass nozzle for blockages. Medium shot across the metal folding worktable.",
+   "annotation": {
+    "title_en": "Fiona tests the tubing alignment alongside the rapier to pre",
+    "scene": "prop_tent",
+    "camera": "Medium shot across the metal folding worktable.",
+    "beat": "Fiona tests the tubing alignment alongside the rapier to prepare for the staged sword fight.",
+    "present": [
+     "fiona",
+     "blood_pump_rig",
+     "prop_rapier"
+    ],
+    "first_appearance": [
+     "prop_rapier"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Fiona squintingly inspects the brass nozzle for blockages.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "blood_pump_rig": {
+      "state": "pressurized canister filled with thick crimson fake blood and primed tube"
+     },
+     "prop_rapier": {
+      "state": "intact polished blade with ornate brass basket hilt"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "pressurized canister filled with thick crimson fake blood and primed tube"
+     },
+     "prop_rapier": {
+      "state": "intact polished blade with ornate brass basket hilt"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "black utility belt with heavy shears and gaffer tape",
+     "fiona.hairstyle": "messy topknot bun",
+     "blood_pump_rig.state": "pressurized canister filled with thick crimson fake blood and primed tube",
+     "prop_rapier.state": "intact polished blade with ornate brass basket hilt"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot across a metal folding worktable inside an outdoor props tent, where Vance stands inspecting props for an upcoming sword fight. The camera holds a static medium shot across the metal folding worktable. Vance tests the tubing of the Special Effects Blood Pump, running fingers along its surface. Resting alongside the pump on the table lies the Prop Rapier, a slender dueling sword with an intact polished blade and an ornate brass basket hilt. The narrator says: <d>[English] The tubing feels clear enough, but this nozzle might still give us trouble during the duel.</d> After this line the voice-over stays silent for the rest of the shot. Vance squintingly inspects the brass nozzle for blockages, turning the tip closely to check the opening while preparing for the sword fight.\n\noverall_soundscape: Canvas fabric flutters faintly in an outdoor breeze outside the tent. Plastic tubing flexes with subtle squeaks as metal faintly taps against the worktable.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Outdoor Props Tent. Fiona Bell takes off her utility belt and dons a faded denim tool apron covered in chalk dust. Holding the Prop Rapier, she rubs the blade with an oily cloth, wiping away fingerprints. Medium profile shot focusing on Fiona's apron pockets.",
+   "annotation": {
+    "title_en": "Fiona switches from her utility belt to a heavy denim apron ",
+    "scene": "prop_tent",
+    "camera": "Medium profile shot focusing on Fiona's apron pockets.",
+    "beat": "Fiona switches from her utility belt to a heavy denim apron and polishes the rapier blade.",
+    "present": [
+     "fiona",
+     "prop_rapier"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "fiona",
+      "attr": "accessory",
+      "value": "faded denim tool apron covered in chalk dust"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Fiona rubs the blade with an oily cloth, wiping away fingerprints.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "black utility belt with heavy shears and gaffer tape",
+      "hairstyle": "messy topknot bun"
+     },
+     "prop_rapier": {
+      "state": "intact polished blade with ornate brass basket hilt"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "pressurized canister filled with thick crimson fake blood and primed tube"
+     },
+     "prop_rapier": {
+      "state": "intact polished blade with ornate brass basket hilt"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "faded denim tool apron covered in chalk dust",
+     "fiona.hairstyle": "messy topknot bun",
+     "prop_rapier.state": "intact polished blade with ornate brass basket hilt"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium profile shot at the Outdoor Props Tent focusing on Vance's apron pockets as she prepares her gear. Vance removes her utility belt and dons a faded denim tool apron covered in chalk dust. Holding the Prop Rapier, she rubs the metal blade methodically with an oily cloth, wiping away visible fingerprints along its length. The narrator says: <d>[English] Just clearing the greasy smudges off this prop blade before our morning rehearsal begins.</d> After this line the voice-over stays silent for the rest of the shot. The camera maintains a steady medium profile frame centered on the chalk-dusted pockets of her apron as her hands work the cloth smoothly over the steel.\n\noverall_soundscape: Heavy denim fabric rustles as the apron settles into place. An oily cloth drags smoothly across the metal rapier blade with soft, rhythmic friction. Faint breeze flaps against the canvas of the outdoor tent in the background.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Outdoor Props Tent.\n\nClara Vance stands with her arms outstretched as Fiona Bell checks the routing of the concealed tubing from the Special Effects Blood Pump through her bodice.\n\nA medium two-shot frames the two women through the canvas tent flaps.",
+   "annotation": {
+    "title_en": "Clara arrives at the tent in her emerald gown to have the co",
+    "scene": "prop_tent",
+    "camera": "Medium two-shot framed by the canvas tent flaps.",
+    "beat": "Clara arrives at the tent in her emerald gown to have the concealed blood tube routed through her bodice.",
+    "present": [
+     "clara",
+     "fiona",
+     "blood_pump_rig"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara holds her arms outward while Fiona checks the tubing's route.",
+    "start_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "blood_pump_rig": {
+      "state": "pressurized canister filled with thick crimson fake blood and primed tube"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "pressurized canister filled with thick crimson fake blood and primed tube"
+     },
+     "prop_rapier": {
+      "state": "intact polished blade with ornate brass basket hilt"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "faded denim tool apron covered in chalk dust",
+     "fiona.hairstyle": "messy topknot bun",
+     "blood_pump_rig.state": "pressurized canister filled with thick crimson fake blood and primed tube"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium two-shot at the outdoor props tent, where Vance stands with her arms outstretched framed through the canvas tent flaps. The camera holds a static shot, framing the two women through the canvas tent flaps at the outdoor props tent. Vance stands with her arms outstretched as Fiona Bell checks the routing of the concealed tubing from the Special Effects Blood Pump through her bodice. The narrator says: <d>[English] Hold still for a moment while I check this tubing through your bodice.</d> Vance remains in place with her arms outstretched. Vance (S1) adds: <d>[English] Is everything running smoothly?</d> After this line the voice-over stays silent for the rest of the shot. Fiona Bell finishes checking the tubing through the bodice.\n\noverall_soundscape: The outdoor breeze gently flutters the canvas tent flaps. Soft rustling sounds accompany the adjustment of the concealed tubing against the bodice.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Outdoor Props Tent.\n\nThe Special Effects Blood Pump suffers a pressure failure, its tubing rupturing into a half-empty canister spraying red residue that coats Clara Vance's chest and lace collar in a heavy splatter of sticky crimson fake blood. Clara gasps and flinches backwards in dismay with raised hands.\n\nA dramatic crash-zoom snaps onto Clara's startled expression.",
+   "annotation": {
+    "title_en": "A sudden pressure failure causes the tubing to burst, drench",
+    "scene": "prop_tent",
+    "camera": "Dramatic crash-zoom onto Clara's startled expression.",
+    "beat": "A sudden pressure failure causes the tubing to burst, drenching Clara's emerald gown in fake blood.",
+    "present": [
+     "clara",
+     "blood_pump_rig"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "blood_pump_rig",
+      "attr": "state",
+      "value": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     {
+      "entity": "clara",
+      "attr": "stains",
+      "value": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara gasps and flinches backwards, hands raised in dismay.",
+    "start_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo"
+     },
+     "blood_pump_rig": {
+      "state": "pressurized canister filled with thick crimson fake blood and primed tube"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "intact polished blade with ornate brass basket hilt"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar",
+     "blood_pump_rig.state": "half-empty canister with split ruptured tube spraying red residue"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the outdoor props tent, where Vance stands beside a special effects blood pump. Beside Vance, the special effects blood pump suddenly suffers a pressure failure, its tubing rupturing into a half-empty canister. Red residue sprays outwards, coating Vance's chest and lace collar in a heavy splatter of sticky crimson fake blood. Vance gasps and flinches backwards in dismay with raised hands. The narrator says: <d>[English] Oh no, the pump burst and covered my entire costume in sticky fake blood!</d> After this line the voice-over stays silent for the rest of the shot. The camera performs a dramatic crash-zoom, snapping rapidly onto Vance's startled expression.\n\noverall_soundscape: A loud hiss of pressurized air bursting from rubber tubing, followed by the wet splattering impact of liquid hitting fabric.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Grand Ballroom.\n\nCovered in red splatter, Clara Vance shivers and crosses her blood-speckled arms over her chest near the C-Stand with Diffusion and Director's Slate while production assesses the costume damage.\n\nA wide shot echoing the grand opening framing emphasizes Clara's ruined dress beneath the ballroom chandeliers.",
+   "annotation": {
+    "title_en": "Back in the ballroom, Clara stands covered in red splatter w",
+    "scene": "grand_ballroom",
+    "camera": "Wide shot echoing shot 1, emphasizing Clara's ruined dress under the ballroom chandeliers.",
+    "beat": "Back in the ballroom, Clara stands covered in red splatter while production assesses the costume damage.",
+    "present": [
+     "clara",
+     "c_stand_light",
+     "directors_slate"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Clara shivers and crosses her blood-speckled arms over her chest.",
+    "start_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "intact polished blade with ornate brass basket hilt"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar",
+     "c_stand_light.state": "upright black stand with circular diffusion scrim mounted",
+     "directors_slate.state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide shot of the Grand Ballroom beneath towering chandeliers, where Vance stands shivering near a C-stand with diffusion. The camera holds a static wide shot echoing the grand opening framing, emphasizing Vance's ruined dress beneath the illuminated ballroom chandeliers. Covered in red splatter, Vance stands near the C-Stand with Diffusion and Director's Slate. She shivers noticeably and crosses her blood-speckled arms tightly over her chest while production assesses the costume damage around her. The narrator says: <d>[English] It is freezing in here, and this dress is completely ruined for the rest of tonight.</d> After this line the voice-over stays silent for the rest of the shot. Vance glances down at the red stains across the fabric, maintaining her shivering posture until the shot settles.\n\noverall_soundscape: Faint room reverberation hums beneath the chandeliers alongside the soft rustle of stained fabric as arms cross. Low shuffling footsteps from production echo quietly in the spacious ballroom.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Grand Ballroom.\n\nWhile Clara Vance demonstrates a blocking move, an accidental stumble snaps the Prop Rapier against a stone pillar, leaving a bent tip and breaking the blade into two pieces. Clara stares down at the broken sword at her feet in shock.\n\nA low-angle shot tracks the severed blade clattering onto the marble.",
+   "annotation": {
+    "title_en": "While demonstrating a blocking move, an accidental stumble c",
+    "scene": "grand_ballroom",
+    "camera": "Low-angle shot tracking the severed blade as it clatters onto marble.",
+    "beat": "While demonstrating a blocking move, an accidental stumble causes the prop rapier to snap against a stone pillar.",
+    "present": [
+     "clara",
+     "prop_rapier"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "prop_rapier",
+      "attr": "state",
+      "value": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara stares down at the broken sword at her feet in shock.",
+    "start_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "prop_rapier": {
+      "state": "intact polished blade with ornate brass basket hilt"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar",
+     "prop_rapier.state": "snapped jagged blade broken into two pieces with bent tip"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle shot of the grand ballroom, where Vance stands near a stone pillar with a prop rapier. Vance demonstrates a blocking move in the grand ballroom. An accidental stumble sends Vance forward, snapping the prop rapier against the stone pillar, leaving a bent tip and breaking the blade into two pieces. The camera tracks at a low angle as the severed blade clatters onto the marble. Vance stares down at the broken sword at Vance's feet in shock. The narrator says: <d>[English] I lost my footing on that step, and the blade just completely snapped in two.</d> After this line the voice-over stays silent for the rest of the shot.\n\noverall_soundscape: A sharp metallic crack echoes as the rapier strikes the stone pillar. The severed blade clatters loudly and skitters across the hard marble floor in the cavernous ballroom.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Grand Ballroom.\n\nClara Vance picks up the snapped hilt of the Prop Rapier and shakes her head ruefully, biting her lower lip as the Director's Slate is held up to officially pause the shoot.\n\nA close-up frames Clara holding the jagged stump of the sword.",
+   "annotation": {
+    "title_en": "Clara picks up the broken hilt as the crew holds up the slat",
+    "scene": "grand_ballroom",
+    "camera": "Close-up on Clara holding the jagged stump of the sword.",
+    "beat": "Clara picks up the broken hilt as the crew holds up the slate to officially pause the shoot.",
+    "present": [
+     "clara",
+     "prop_rapier",
+     "directors_slate"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara shakes her head ruefully, biting her lower lip.",
+    "start_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar",
+     "prop_rapier.state": "snapped jagged blade broken into two pieces with bent tip",
+     "directors_slate.state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot in the Grand Ballroom, where Vance looks down while holding the snapped hilt of the Prop Rapier. The camera holds a static close-up shot on Vance in the Grand Ballroom. Vance picks up the snapped hilt of the Prop Rapier and examines the jagged stump of the sword resting in hand. Shaking her head ruefully, she bites her lower lip in dismay. The narrator says: <d>[English] I am so sorry, I truly did not mean to snap this prop sword during the routine.</d> After this line the voice-over stays silent for the rest of the shot. The Director's Slate is held up into the frame to officially pause the shoot, while Vance keeps her gaze lowered on the broken prop.\n\noverall_soundscape: The metallic rattle of a broken prop rapier hilt being handled, followed by the sharp wooden clap of a director's slate closing in a cavernous ballroom.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Cast Wardrobe Trailer.\n\nClara Vance retreats inside, carefully lifting the stained lace off her neck with two fingers beside the hanging Royal Purple Velvet Cloak.\n\nA medium tracking shot follows Clara as she steps inside the trailer door.",
+   "annotation": {
+    "title_en": "Clara retreats to the wardrobe trailer, peeling off her soak",
+    "scene": "dressing_trailer",
+    "camera": "Medium tracking shot following Clara as she steps inside the trailer door.",
+    "beat": "Clara retreats to the wardrobe trailer, peeling off her soaked costume accessories near the velvet cloak.",
+    "present": [
+     "clara",
+     "velvet_period_cloak"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Clara carefully lifts the stained lace off her neck with two fingers.",
+    "start_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "emerald silk Victorian ballgown with gold brocade corset",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar",
+     "velvet_period_cloak.state": "clean and pressed on a wooden hanger with polished gold clasp"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium tracking shot of the cast wardrobe trailer, where Vance steps through the doorway and retreats inside. The medium tracking shot follows Vance as she steps inside the trailer door, retreating into the cast wardrobe trailer. Vance stops beside the hanging Royal Purple Velvet Cloak. The narrator says: <d>[English] I need to get this ruined lace away from my neck before it sets permanently.</d> After this line the voice-over stays silent for the rest of the shot. She carefully lifts the stained lace off her neck with two fingers, holding the fabric away. The camera continues to track alongside Vance as she performs the delicate movement, holding the medium framing steady.\n\noverall_soundscape: Footsteps step onto the trailer floor, accompanied by the soft click of the closing trailer door. A faint, gentle rustle of delicate lace follows as it is lifted.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Cast Wardrobe Trailer. Clara Vance changes out of her fake-blood-soaked ballgown into a clean high-necked charcoal mourning dress with black lace trim retrieved from the Wheeled Wardrobe Rack. Clara fastens the high row of black pearl buttons up her throat. Medium shot reflecting in the bright vanity mirror.",
+   "annotation": {
+    "title_en": "Clara changes out of the ruined ballgown into a clean charco",
+    "scene": "dressing_trailer",
+    "camera": "Medium shot reflecting in the bright vanity mirror.",
+    "beat": "Clara changes out of the ruined ballgown into a clean charcoal mourning dress from the wardrobe rack.",
+    "present": [
+     "clara",
+     "wardrobe_rack"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "high-necked charcoal mourning dress with black lace trim"
+     },
+     {
+      "entity": "clara",
+      "attr": "stains",
+      "value": "no stains (removed)"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara fastens the high row of black pearl buttons up her throat.",
+    "start_state": {
+     "clara": {
+      "outfit": "emerald silk Victorian ballgown with gold brocade corset",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "heavy splatter of sticky crimson fake blood across the chest and lace collar"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "wardrobe_rack.state": "full chrome rack packed with hanging plastic garment bags"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot reflecting in the bright vanity mirror inside the Cast Wardrobe Trailer, where Vance stands beside a Wheeled Wardrobe Rack. Vance changes out of her fake-blood-soaked ballgown into a clean high-necked charcoal mourning dress with black lace trim retrieved from the Wheeled Wardrobe Rack. Through the reflection in the bright vanity mirror, the camera holds a static shot as Vance looks toward the glass. The narrator says: <d>[English] I need to fasten every one of these buttons before they call me back onto the set.</d> After this line the voice-over stays silent for the rest of the shot. She fastens the high row of black pearl buttons up her throat, working her fingers steadily up toward her chin.\n\noverall_soundscape: The soft rustle of fabric as the mourning dress is put on and adjusted. Delicate clicking sounds of pearl buttons being slipped through their loops. A low ambient hum inside the trailer.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Cast Wardrobe Trailer. Clara Vance watches as the Director's Slate is rewritten from 'SCENE 12 - TAKE 1' to 'SCENE 18 - TAKE 1' for the upcoming mourning sequence. Clara nods in agreement as she reads the chalk markings. Overhead angle looking down at the vanity counter.",
+   "annotation": {
+    "title_en": "The script supervisor delivers the updated slate showing the",
+    "scene": "dressing_trailer",
+    "camera": "Overhead angle looking down at the vanity counter.",
+    "beat": "The script supervisor delivers the updated slate showing the jump to the mourning scene.",
+    "present": [
+     "clara",
+     "directors_slate"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "directors_slate",
+      "attr": "state",
+      "value": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara nods in agreement as she reads the chalk markings.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 12 - TAKE 1'"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "directors_slate.state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an overhead shot looking down at the vanity counter inside the cast wardrobe trailer, where Vance stands watching the surface. The camera holds a static overhead shot looking down at the vanity counter inside the cast wardrobe trailer. On the counter, the Director's Slate has its chalk markings rewritten from 'SCENE 12 - TAKE 1' to 'SCENE 18 - TAKE 1' for the upcoming mourning sequence. Vance watches the board as the chalk is wiped and the new numbers are inscribed. As she reads the fresh chalk markings, The narrator says: <d>[English] We are moving right into the mourning sequence now, which makes total sense for today.</d> After this line the voice-over stays silent for the rest of the shot. Vance nods in agreement, her gaze remaining fixed on the vanity counter below.\n\noverall_soundscape: A dry cloth rubs against the slate surface, followed by the scratch and scuff of chalk writing onto the board. A subtle ambient room hum settles within the quiet trailer interior.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Victorian Conservatory: Domed glass greenhouse with peeling white iron girders, overgrown potted palms, and damp flagstone pavers. Marcus Kane paces across the flagstones carrying his Production Script Binder, reviewing his revised script notes amidst the ferns. Marcus furrows his brow, mouthing silent lines under his breath. Slow lateral dolly through overgrown palm fronds.",
+   "annotation": {
+    "title_en": "Marcus paces across the conservatory flagstones, reviewing h",
+    "scene": "conservatory",
+    "camera": "Slow lateral dolly through overgrown palm fronds.",
+    "beat": "Marcus paces across the conservatory flagstones, reviewing his revised script notes amidst the ferns.",
+    "present": [
+     "marcus",
+     "script_binder"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Marcus furrows his brow, mouthing silent lines under his breath.",
+    "start_state": {
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "clean-shaven",
+     "script_binder.state": "crisp bright yellow binder with color-coded tab dividers"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium tracking shot of a Victorian conservatory with a domed glass greenhouse and peeling white iron girders, where Vance paces across damp flagstone pavers. The camera moves in a slow lateral dolly through overgrown palm fronds inside the domed glass greenhouse with peeling white iron girders. Vance paces across the damp flagstone pavers carrying his Production Script Binder, reviewing his revised script notes amidst the ferns and overgrown potted palms. Furrowing his brow, he looks down at the pages. The narrator says: <d>[English] If this scene breaks here, the entire sequence loses momentum completely.</d> He pauses briefly between the potted palms to turn a page. Vance (S1) adds: <d>[English] We must rewrite the second beat.</d> After this line the voice-over stays silent for the rest of the shot. Vance continues pacing along the pavers, examining his notes.\n\noverall_soundscape: Paced footsteps tap rhythmically against damp flagstone pavers. Palm fronds rustle faintly as a breeze moves through the greenhouse, accompanied by the crisp fluttering of paper pages.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Victorian Conservatory. Standing beside the Brass Tea Trolley, Marcus Kane receives a makeup touch-up, applying a thin glued-on pencil mustache to his upper lip. Marcus gently touches his upper lip to verify the adhesive hold. Tight profile portrait shot catching sunlight through the glass roof.",
+   "annotation": {
+    "title_en": "Having received fresh makeup touch-ups by the tea trolley, M",
+    "scene": "conservatory",
+    "camera": "Tight profile portrait shot catching sunlight through the glass roof.",
+    "beat": "Having received fresh makeup touch-ups by the tea trolley, Marcus now sports a thin villainous mustache.",
+    "present": [
+     "marcus",
+     "tea_trolley"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "marcus",
+      "attr": "facial_hair",
+      "value": "thin glued-on pencil mustache"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Marcus gently touches his upper lip to verify the adhesive hold.",
+    "start_state": {
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "clean-shaven"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache",
+     "tea_trolley.state": "polished brass with steaming silver kettle and intact floral teacups"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tight profile portrait shot in the Victorian Conservatory, where Vance stands beside the brass tea trolley in sunlight filtering through the glass roof. Sunlight streams down through the glass roof, illuminating Vance in profile as he stands by the brass tea trolley. Hands touch up his makeup, applying a thin glued-on pencil mustache onto his upper lip. The narrator says: <d>[English] Keep your lip completely still while this adhesive sets on your skin.</d> The camera holds a static profile shot as the application finishes. Vance gently touches his upper lip with his fingertips to verify the adhesive hold. Vance (S1) adds: <d>[English] The glue feels firmly set now.</d> After this line the voice-over stays silent for the rest of the shot. He slowly lowers his hand while maintaining his posture.\n\noverall_soundscape: Soft rustling of cosmetic tools and the faint ambient hum of a conservatory interior. A quiet tap of fingertips against skin as the mustache is checked.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Victorian Conservatory. Clara Vance joins Marcus Kane on the flagstones, both actors quietly conferring on their character dynamics. Clara smooths down the black lace trim on her cuffs. Two-shot with soft bokeh, framed by antique wrought-iron arches.",
+   "annotation": {
+    "title_en": "Clara joins Marcus in the conservatory, both actors quietly ",
+    "scene": "conservatory",
+    "camera": "Two-shot with soft bokeh, framed by antique wrought-iron arches.",
+    "beat": "Clara joins Marcus in the conservatory, both actors quietly conferring on their character dynamics.",
+    "present": [
+     "clara",
+     "marcus"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara smooths down the black lace trim on her cuffs.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a two-shot with soft bokeh inside the Victorian Conservatory framed by antique wrought-iron arches, where Vance joins Marcus Kane on the flagstones. The camera holds a static shot framed through the antique wrought-iron arches. Vance steps forward onto the flagstones beside Marcus Kane. The two actors confer quietly about their character dynamics, maintaining serious expressions against the soft bokeh backdrop. The narrator says: <d>[English] We should emphasize the hesitation before this exchange.</d> As Marcus listens attentively, Vance smooths down the black lace trim on her cuffs. Vance (S1) adds: <d>[English] It makes the underlying tension feel much more deliberate.</d> After this line the voice-over stays silent for the rest of the shot. Both continue discussing their scene while Vance finishes adjusting her lace cuffs.\n\noverall_soundscape: Soft footsteps click lightly against the stone flagstones. The delicate rustle of lace fabric brushing against skin accompanies a quiet, airy conservatory draft.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Victorian Conservatory. Fiona Bell arrives to inspect Clara Vance's mourning gown and brief both Clara and Marcus Kane on prop handoffs. Fiona pulls a measuring tape from her apron and lets it snap back. Medium group shot showing Fiona standing between Clara and Marcus.",
+   "annotation": {
+    "title_en": "Fiona arrives in the conservatory to inspect Clara's new cha",
+    "scene": "conservatory",
+    "camera": "Medium group shot showing Fiona standing between Clara and Marcus.",
+    "beat": "Fiona arrives in the conservatory to inspect Clara's new charcoal costume and briefing both actors.",
+    "present": [
+     "fiona",
+     "clara",
+     "marcus"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Fiona pulls a measuring tape from her apron and lets it snap back.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "faded denim tool apron covered in chalk dust",
+     "fiona.hairstyle": "messy topknot bun",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium group shot of the Victorian Conservatory, where Vance stands beside Fiona Bell and Marcus Kane. The camera holds a static medium group shot inside the Victorian Conservatory. Fiona Bell arrives and positions herself directly between Vance and Marcus Kane to inspect Vance's mourning gown. The narrator says: <d>[English] Stand still while I check this mourning gown, then we will practice the prop handoffs.</d> After this line the voice-over stays silent for the rest of the shot. Fiona closely examines the mourning gown worn by Vance. She reaches down into her apron, extracts a measuring tape, pulls the tape outward, and lets it snap sharply back. Fiona turns her attention between Vance and Marcus Kane, briefing both of them on the prop handoffs.\n\noverall_soundscape: A sharp metallic snap of a spring-loaded measuring tape retracting. The subtle rustle of heavy gown fabric and faint reverberant room tone within the glass conservatory.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Victorian Conservatory. Fiona Bell examines the Prop Rapier, now repaired and bound tightly at the break with silver duct tape. She flexes the sword slightly against the air to test its structural resistance. Close-up on Fiona holding up the taped blade against the greenhouse light.",
+   "annotation": {
+    "title_en": "Fiona reveals the emergency repair on the broken sword, firm",
+    "scene": "conservatory",
+    "camera": "Close-up on Fiona holding up the taped blade against the greenhouse light.",
+    "beat": "Fiona reveals the emergency repair on the broken sword, firmly secured with layers of silver tape.",
+    "present": [
+     "fiona",
+     "prop_rapier"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "prop_rapier",
+      "attr": "state",
+      "value": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Fiona flexes the sword slightly to test its structural resistance.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "prop_rapier": {
+      "state": "snapped jagged blade broken into two pieces with bent tip"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "faded denim tool apron covered in chalk dust",
+     "fiona.hairstyle": "messy topknot bun",
+     "prop_rapier.state": "repaired rapier bound tightly at the break with silver duct tape"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up in the Victorian Conservatory, where Vance stands holding a repaired prop rapier bound tightly with silver duct tape. Vance carefully examines the prop rapier, which is now repaired and bound tightly at the break with silver duct tape. Vance flexes the sword slightly against the air to test its structural resistance. The camera holds a close-up on Vance holding up the taped blade against the greenhouse light. The narrator says: <d>[English] The silver tape should hold the blade firmly together for our next rehearsal scene.</d> After this line the voice-over stays silent for the rest of the shot. Vance turns the rapier slowly, continuing to observe the repaired break against the light.\n\noverall_soundscape: A soft whoosh of air sounds as the rapier flexes, accompanied by a faint crinkle of strained duct tape. Quiet ambient drafts drift through the glass conservatory.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Outdoor Props Tent. Fiona Bell works over the Special Effects Blood Pump, vigorously scrubbing red syrup off the vinyl tubing with rags to salvage the brass nozzle. Overhead worktable shot illuminated by hanging clamp lights.",
+   "annotation": {
+    "title_en": "Back at the prop tent, Fiona cleans the ruptured blood pump ",
+    "scene": "prop_tent",
+    "camera": "Overhead worktable shot illuminated by hanging clamp lights.",
+    "beat": "Back at the prop tent, Fiona cleans the ruptured blood pump with rags to salvage the brass nozzle.",
+    "present": [
+     "fiona",
+     "blood_pump_rig"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Fiona vigorously scrubs red syrup off the vinyl tubing.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "faded denim tool apron covered in chalk dust",
+     "fiona.hairstyle": "messy topknot bun",
+     "blood_pump_rig.state": "half-empty canister with split ruptured tube spraying red residue"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an overhead shot of the outdoor props tent illuminated by hanging clamp lights, where Vance stands over a worktable with the special effects blood pump. Hanging clamp lights illuminate the worktable from above. Vance works over the special effects blood pump, holding the vinyl tubing in place. The narrator says: <d>[English] This sticky syrup is completely clogging the tubing, but I can still save this brass nozzle.</d> After this line the voice-over stays silent for the rest of the shot. Vance vigorously scrubs red syrup off the vinyl tubing with rags, applying firm pressure across the surface to salvage the brass nozzle. The camera holds a static overhead shot over the worktable as red syrup smears away onto the cloth.\n\noverall_soundscape: Wet squeaking and friction sounds occur as cloth scrubs vigorously against vinyl tubing. A subtle outdoor breeze rustles the tent canvas beneath the faint hum of clamp lights.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Outdoor Props Tent. Fiona Bell sets down her cleaning cloth and picks up the Antique Flintlock Pistol, a non-firing prop with an engraved brass barrel and dark walnut grip. Fiona cocks the brass hammer back to test the spring mechanism. Medium shot of Fiona working at the trestle table.",
+   "annotation": {
+    "title_en": "Fiona sets down the cleaning cloth to prepare the antique du",
+    "scene": "prop_tent",
+    "camera": "Medium shot of Fiona working at the trestle table.",
+    "beat": "Fiona sets down the cleaning cloth to prepare the antique dueling pistol for the duel sequence.",
+    "present": [
+     "fiona",
+     "antique_dueling_pistol"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Fiona cocks the brass hammer back to test the spring mechanism.",
+    "start_state": {
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "tight pinned Gibson girl updo",
+     "clara.stains": "no stains (removed)",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "faded denim tool apron covered in chalk dust",
+     "fiona.hairstyle": "messy topknot bun",
+     "antique_dueling_pistol.state": "pristine polished brass barrel and oiled walnut stock"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of Vance working at a trestle table inside the outdoor props tent. Vance sets down the cleaning cloth on the trestle table and picks up the antique flintlock pistol, a non-firing prop with an engraved brass barrel and dark walnut grip. Holding the prop securely, The narrator says: <d>[English] The spring tension holds nicely on this antique piece; it should work smoothly for the scene.</d> After this line the voice-over stays silent for the rest of the shot. Vance cocks the brass hammer back to test the spring mechanism, observing the mechanical action closely. The camera holds a steady medium shot of Vance working at the trestle table throughout the process.\n\noverall_soundscape: The soft rustle of cloth touching the wooden table is followed by the weight of the pistol shifting in hand. A distinct metallic click sounds as the hammer pulls back against the internal spring, accompanied by distant outdoor ambience.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Outdoor Props Tent. Clara Vance enters, her hair restyled into disheveled half-down waves with loose stray curls. Holding the Production Script Binder, Clara tucks an auburn curl behind her ear while checking the binder. Medium close-up of Clara entering under the tent awning.",
+   "annotation": {
+    "title_en": "Clara enters with her hair restyled into loose, grieving wav",
+    "scene": "prop_tent",
+    "camera": "Medium close-up of Clara entering under the tent awning.",
+    "beat": "Clara enters with her hair restyled into loose, grieving waves for the dramatic climax.",
+    "present": [
+     "clara",
+     "script_binder"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "hairstyle",
+      "value": "disheveled half-down waves with loose stray curls"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara tucks an auburn curl behind her ear while checking the binder.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "tight pinned Gibson girl updo",
+      "stains": "no stains (removed)"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "script_binder.state": "crisp bright yellow binder with color-coded tab dividers"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium close-up of the outdoor props tent, where Vance enters under the tent awning holding the production script binder. Vance steps under the awning of the outdoor props tent, her hair restyled into disheveled half-down waves with loose stray curls. As the camera tracks backward smoothly with small amplitude at slow speed to maintain her framing, she looks down, checking the production script binder held in her hands. She reaches up with one hand and tucks a loose auburn curl behind her ear. The narrator says: <d>[English] Let me check the next scene breakdown before the director calls us back on set.</d> After this line the voice-over stays silent for the rest of the shot. She flips a page in the binder, her eyes scanning the text attentively as she settles under the shelter of the awning.\n\noverall_soundscape: A gentle breeze rustles the canvas fabric of the outdoor tent awning. Footsteps crunch softly on dry grass, followed by the faint rustle of binder paper turning.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Manor Library. Clara Vance and Marcus Kane take their positions beside the desk where the Prop Manuscript Letter rests. Marcus folds his arms sternly behind his back. Wide establishing master shot of the dramatic book-lined set.",
+   "annotation": {
+    "title_en": "In the library, Clara and Marcus take their positions beside",
+    "scene": "manor_library",
+    "camera": "Wide establishing master shot of the dramatic book-lined set.",
+    "beat": "In the library, Clara and Marcus take their positions beside the desk where the manuscript letter rests.",
+    "present": [
+     "clara",
+     "marcus",
+     "manuscript_letter"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Marcus folds his arms sternly behind his back.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache",
+     "manuscript_letter.state": "rolled tight and sealed with a crimson silk ribbon"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide establishing master shot of the Manor Library, where Vance stands beside a desk on the dramatic book-lined set. The camera holds a static wide establishing master shot across the dramatic book-lined set of the Manor Library. Vance and Marcus Kane take their positions beside the desk where the Prop Manuscript Letter rests. The narrator says: <d>[English] The manuscript letter rests right here on the desk, completely untouched since yesterday afternoon's meeting.</d> After this line the voice-over stays silent for the rest of the shot. Marcus Kane folds his arms sternly behind his back as Vance remains standing beside the desk. Both characters hold their positions beside the desk in place.\n\noverall_soundscape: The subtle rustle of clothing accompanies Marcus Kane folding his arms. A faint, hollow room tone echoes gently throughout the spacious library.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Manor Library. The Director's Slate claps in front of Clara Vance and Marcus Kane as the scene begins. Clara tilts her chin upward with cold, regal intensity. Snap zoom starting on the clapperboard and pulling out to Clara and Marcus.",
+   "annotation": {
+    "title_en": "The slate claps in front of Clara and Marcus as the director",
+    "scene": "manor_library",
+    "camera": "Snap zoom starting on the clapperboard and pulling out to Clara and Marcus.",
+    "beat": "The slate claps in front of Clara and Marcus as the director calls action for the confrontation.",
+    "present": [
+     "clara",
+     "marcus",
+     "directors_slate"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara tilts her chin upward with cold, regal intensity.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache",
+     "directors_slate.state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a close-up shot in the Manor Library, where the director's slate rests in front of Vance and Marcus Kane. The director's slate claps sharply in front of Vance and Marcus Kane as the scene begins. The camera executes a rapid snap zoom, pulling out from the clapperboard to frame Vance and Marcus Kane together. Vance tilts her chin upward with cold, regal intensity. The narrator says: <d>[English] You forget your place in this manor, Marcus.</d> She fixes him with an unyielding gaze. Vance (S1) adds: <d>[English] I will not tolerate another moment of defiance.</d> After this line the voice-over stays silent for the rest of the shot. Marcus Kane stands opposite her as the shot holds steady.\n\noverall_soundscape: The sharp wooden slap of a clapperboard echoes through the library. Quiet ambient room tone follows with a faint rustle of clothing.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Manor Library.\n\nClara Vance snaps the ribbon on the Prop Manuscript Letter, unrolling and crumpling the parchment as she holds it to a candle flame until its edges blacken and char. Clara's eyes widen with simulated rage as embers glow.\n\nExtreme close-up on the parchment paper blackening and curling under flame.",
+   "annotation": {
+    "title_en": "During the scene, Clara unfurls the manuscript and holds it ",
+    "scene": "manor_library",
+    "camera": "Extreme close-up on the parchment paper blackening and curling under flame.",
+    "beat": "During the scene, Clara unfurls the manuscript and holds it to a candle, scorching its corners.",
+    "present": [
+     "clara",
+     "manuscript_letter"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "manuscript_letter",
+      "attr": "state",
+      "value": "unrolled and crumpled parchment with charred scorched edges"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara's eyes widen with simulated rage as embers glow.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "manuscript_letter": {
+      "state": "rolled tight and sealed with a crimson silk ribbon"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "manuscript_letter.state": "unrolled and crumpled parchment with charred scorched edges"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, an extreme close-up in the Manor Library, where Vance holds the Prop Manuscript Letter over a candle flame. Vance snaps the ribbon on the Prop Manuscript Letter. She unrolls and crumples the parchment as she holds it to a candle flame until its edges blacken and char. The narrator says: <d>[English] Let every deceitful word burn down to ash so nothing ever remains of your promise.</d> After this line the voice-over stays silent for the rest of the shot. The camera holds an extreme close-up on the parchment paper blackening and curling under flame. Vance's eyes widen with simulated rage as embers glow across the burning parchment.\n\noverall_soundscape: The taut ribbon snaps with a sharp pop, followed by the dry rustle of crumpling parchment. A gentle sizzle and crackle rise as the paper chars over the quiet hiss of the candle flame.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Manor Library.\n\nClara Vance grabs the Antique Flintlock Pistol from the desk and points it directly at her unseen antagonist. Her breath hitches dramatically as she takes aim.\n\nLow-angle heroic close-up on Clara holding the heavy brass barrel steady.",
+   "annotation": {
+    "title_en": "Clara grabs the flintlock pistol from the desk and points it",
+    "scene": "manor_library",
+    "camera": "Low-angle heroic close-up on Clara holding the heavy brass barrel steady.",
+    "beat": "Clara grabs the flintlock pistol from the desk and points it directly at her unseen antagonist.",
+    "present": [
+     "clara",
+     "antique_dueling_pistol"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara's breath hitches dramatically as she takes aim.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "antique_dueling_pistol.state": "pristine polished brass barrel and oiled walnut stock"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low-angle close-up in the Manor Library, where Vance stands poised beside the desk. Vance reaches down to the desk, her hand grasping the antique flintlock pistol firmly. She raises the weapon and points it directly forward at her unseen antagonist off-camera. Her chest tightens and her breath hitches dramatically as she takes careful aim. The camera tilts slightly upward at slow speed to frame her face and the weapon from below. The narrator says: <d>[English] Do not take another step, or I swear this will be your last mistake.</d> After this line the voice-over stays silent for the rest of the shot. Vance keeps her arms locked in place, holding the heavy brass barrel steady without flinching.\n\noverall_soundscape: A sharp hitch of intake breath echoes faintly in the quiet room. A metallic clink and wooden rustle sound as the pistol is lifted from the desk surface.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Manor Library.\n\nMarcus Kane steps forward with hands raised, reacting to the Antique Flintlock Pistol leveled toward him. Marcus swallows hard and takes a deliberate half-step back.\n\nReverse medium shot centered on Marcus's tense expression.",
+   "annotation": {
+    "title_en": "Marcus steps forward with hands raised, reacting to the pist",
+    "scene": "manor_library",
+    "camera": "Reverse medium shot centered on Marcus's tense expression.",
+    "beat": "Marcus steps forward with hands raised, reacting to the pistol leveled toward him.",
+    "present": [
+     "marcus",
+     "antique_dueling_pistol"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Marcus swallows hard and takes a deliberate half-step back.",
+    "start_state": {
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache",
+     "antique_dueling_pistol.state": "pristine polished brass barrel and oiled walnut stock"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a reverse medium shot in the Manor Library, where Vance stands with hands raised facing an antique flintlock pistol. The camera holds a static reverse medium shot centered on Vance's tense expression inside the Manor Library. Vance initially steps forward with both hands raised, reacting directly to the antique flintlock pistol leveled toward him in the room. The narrator says: <d>[English] Just lower the weapon now. There is no reason for either of us to do this.</d> After this line the voice-over stays silent for the rest of the shot. Vance swallows hard, pausing under the aim of the weapon, before he carefully takes a deliberate half-step back while keeping his hands elevated and his anxious focus locked ahead.\n\noverall_soundscape: A quiet draft whispers through the spacious library interior. Dry floorboards creak faintly beneath shifting leather shoes alongside the quiet, tense sound of a nervous swallow.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Victorian Conservatory.\n\nMarcus Kane rehearses his counter-thrust holding the repaired Prop Rapier. Marcus lunges forward across the wet flagstones, extending the silver-taped blade.\n\nTracking shot moving alongside Marcus's footwork on the wet flagstones.",
+   "annotation": {
+    "title_en": "In the conservatory, Marcus rehearses his counter-thrust hol",
+    "scene": "conservatory",
+    "camera": "Tracking shot moving alongside Marcus's footwork on the wet flagstones.",
+    "beat": "In the conservatory, Marcus rehearses his counter-thrust holding the duct-taped prop rapier.",
+    "present": [
+     "marcus",
+     "prop_rapier"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Marcus lunges forward, extending the silver-taped blade.",
+    "start_state": {
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache",
+     "prop_rapier.state": "repaired rapier bound tightly at the break with silver duct tape"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a tracking medium shot inside the Victorian Conservatory, where Vance stands on the wet flagstones holding the repaired Prop Rapier. Vance begins rehearsing his counter-thrust within the Victorian Conservatory, holding the repaired Prop Rapier firmly. The camera tracks along, moving alongside Vance's footwork on the wet flagstones. The narrator says: <d>[English] Keep the balance steady on the wet stone, step through, and drive the tip directly forward.</d> After this line the voice-over stays silent for the rest of the shot. Vance lunges forward across the wet flagstones, extending the silver-taped blade. The tracking shot continues moving alongside Vance's footwork across the wet flagstones until he holds the thrust.\n\noverall_soundscape: Wet footsteps squeak and splash faintly against the wet flagstones as Vance lunges. The soft swoosh of the blade cutting through the air echoes gently within the conservatory.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Victorian Conservatory.\n\nClara Vance enters the greenhouse now wearing an ornate silver cameo choker, stepping directly into Marcus Kane's eyeline. Clara touches the cool silver cameo with her thumb.\n\nMedium shot panning from Marcus's sword tip to Clara's adorned neck.",
+   "annotation": {
+    "title_en": "Clara enters the greenhouse now wearing a silver cameo choke",
+    "scene": "conservatory",
+    "camera": "Medium shot panning from Marcus's sword tip to Clara's adorned neck.",
+    "beat": "Clara enters the greenhouse now wearing a silver cameo choker, stepping into Marcus's eyeline.",
+    "present": [
+     "clara",
+     "marcus"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "accessory",
+      "value": "ornate silver cameo choker"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara touches the cool silver cameo with her thumb.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "clara.accessory": "ornate silver cameo choker",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium shot of the Victorian conservatory, where Vance enters the greenhouse into Marcus Kane's eyeline. The camera starts focused on Marcus's sword tip and pans across the Victorian conservatory to Vance as she enters the greenhouse, now wearing an ornate silver cameo choker. Stepping directly into Marcus Kane's eyeline, she halts as the framing centers on her adorned neck. The narrator says: <d>[English] Do not lower your blade yet; look closely at what has returned to the conservatory.</d> After this line the voice-over stays silent for the rest of the shot. Following her words, Vance raises her hand and touches the cool silver cameo with her thumb.\n\noverall_soundscape: Soft footsteps echo across the greenhouse floor. A faint breeze drafts through the conservatory glass, alongside the quiet friction of skin brushing against silver metal.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Victorian Conservatory.\n\nFiona Bell approaches Clara Vance beside the Brass Tea Trolley to check the choker's placement before cameras roll. Fiona nudges the pendant slightly to the center of Clara's collar.\n\nTwo-shot framed between hanging tropical vines.",
+   "annotation": {
+    "title_en": "Fiona approaches Clara by the tea trolley to check the choke",
+    "scene": "conservatory",
+    "camera": "Two-shot framed between hanging tropical vines.",
+    "beat": "Fiona approaches Clara by the tea trolley to check the choker's placement before the cameras roll.",
+    "present": [
+     "clara",
+     "fiona",
+     "tea_trolley"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Fiona nudges the pendant slightly to the center of Clara's collar.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "clara.accessory": "ornate silver cameo choker",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "faded denim tool apron covered in chalk dust",
+     "fiona.hairstyle": "messy topknot bun",
+     "tea_trolley.state": "polished brass with steaming silver kettle and intact floral teacups"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a two-shot framed between hanging tropical vines inside the Victorian Conservatory, where Vance stands beside a brass tea trolley as Fiona Bell approaches. The camera holds a static two-shot framed between hanging tropical vines in the Victorian Conservatory. Fiona Bell approaches Vance beside the brass tea trolley to check the choker's placement before cameras roll. The narrator says: <d>[English] Hold still for just a second while I center this pendant.</d> Reaching toward Vance's neck, Fiona nudges the pendant slightly to the center of Vance's collar. Vance (S1) adds: <d>[English] Does it sit right now?</d> After this line the voice-over stays silent for the rest of the shot. Fiona completes the adjustment and lowers her hands, leaving Vance positioned neatly beside the brass tea trolley.\n\noverall_soundscape: A gentle rustle of hanging tropical vines blends with the soft echo of the glass conservatory. Light footsteps and fabric rustling accompany the delicate click of the pendant against the choker.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Victorian Conservatory. Clara lifts the Royal Purple Velvet Cloak from its hanger and drapes it over her mourning dress, pulling the heavy velvet folds snugly around her shoulders against the biting air. A medium wide shot captures damp mist catching the glass panes above.",
+   "annotation": {
+    "title_en": "Clara drapes the royal purple velvet cloak over her mourning",
+    "scene": "conservatory",
+    "camera": "Medium wide shot with damp mist catching the glass panes above.",
+    "beat": "Clara drapes the royal purple velvet cloak over her mourning dress as the cold conservatory air bites.",
+    "present": [
+     "clara",
+     "velvet_period_cloak"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara pulls the heavy velvet folds snugly around her shoulders.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "clara.accessory": "ornate silver cameo choker",
+     "velvet_period_cloak.state": "clean and pressed on a wooden hanger with polished gold clasp"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a medium wide shot inside the Victorian Conservatory, where Vance stands beneath high glass panes misty with damp air. Damp mist catches on the glass panes above as the camera holds a steady medium wide frame. Vance reaches up, lifts the Royal Purple Velvet Cloak from its hanger, and smoothly drapes it over her mourning dress. The narrator says: <d>[English] The damp air seeps through the glass panes.</d> She gathers the heavy velvet folds and pulls them snugly around her shoulders against the biting air. Settling into the thick fabric, Vance (S1) adds: <d>[English] This heavy velvet cloak should keep out the bitter frost.</d> After this line the voice-over stays silent for the rest of the shot. She exhales gently, looking upward toward the conservatory glass.\n\noverall_soundscape: A soft rustle of heavy velvet moving through the air. A distant, muffled gust of wind buffets against the conservatory glass.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Back at the Grand Ballroom. Clara and Marcus take their marks beside the Director's Slate for the climax. Marcus bows deeply with formal flourish while Clara maintains her icy gaze. A high crane shot descends slowly toward them on the checkerboard floor.",
+   "annotation": {
+    "title_en": "The entire unit gathers back in the grand ballroom for the f",
+    "scene": "grand_ballroom",
+    "camera": "High crane shot descending slowly toward Clara and Marcus on the checkerboard floor.",
+    "beat": "The entire unit gathers back in the grand ballroom for the final wide shot of the dramatic climax.",
+    "present": [
+     "clara",
+     "marcus",
+     "directors_slate"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Marcus bows deeply with formal flourish while Clara maintains her icy gaze.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "clara.accessory": "ornate silver cameo choker",
+     "marcus.outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+     "marcus.hairstyle": "short slicked pompadour",
+     "marcus.facial_hair": "thin glued-on pencil mustache",
+     "directors_slate.state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a high crane shot of the Grand Ballroom, where Vance and Clara stand on the checkerboard floor beside the Director's Slate. The camera descends slowly on the crane toward Vance and Clara on the checkerboard floor. Vance and Clara take their marks beside the Director's Slate for the climax. The narrator says: <d>[English] Take your mark beside the slate.</d> Vance bows deeply with formal flourish while Clara maintains her icy gaze. Vance (S1) adds: <d>[English] I am fully prepared for our grand climax tonight.</d> After this line the voice-over stays silent for the rest of the shot. The high crane shot continues descending slowly toward them as they remain on the checkerboard floor.\n\noverall_soundscape: Footsteps tap firmly across the polished checkerboard floor alongside the faint mechanical hum of the descending crane. A spacious room reverberation echoes softly through the grand ballroom.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Grand Ballroom. Clara stands illuminated by the C-Stand with Diffusion, pointing the taped Prop Rapier downward in victory as her chest rises and falls with focused, rhythmic breathing. A low dramatic tilt moves up from the taped rapier tip to Clara's regal expression.",
+   "annotation": {
+    "title_en": "Clara stands illuminated by the diffusion stand, pointing th",
+    "scene": "grand_ballroom",
+    "camera": "Low dramatic tilt up from the taped rapier tip to Clara's regal expression.",
+    "beat": "Clara stands illuminated by the diffusion stand, pointing the taped rapier downward in victory.",
+    "present": [
+     "clara",
+     "prop_rapier",
+     "c_stand_light"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara's chest rises and falls with focused, rhythmic breathing.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "clara.accessory": "ornate silver cameo choker",
+     "prop_rapier.state": "repaired rapier bound tightly at the break with silver duct tape",
+     "c_stand_light.state": "upright black stand with circular diffusion scrim mounted"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a low dramatic shot in the Grand Ballroom, where Vance stands illuminated by a C-Stand with Diffusion, pointing a taped Prop Rapier downward. The camera tilts up dramatically from the tip of the taped Prop Rapier toward Vance. Vance stands in victory, illuminated by the C-Stand with Diffusion, while pointing the taped Prop Rapier downward. Vance's chest rises and falls with focused, rhythmic breathing. As the camera tilts upward, The narrator says: <d>[English] The contest has ended, and the ballroom belongs to none other than me.</d> The camera settles smoothly to frame Vance's regal expression. Vance (S1) adds: <d>[English] Yield the match.</d> After this line the voice-over stays silent for the rest of the shot. Vance maintains the regal expression and steady breathing.\n\noverall_soundscape: Deep, rhythmic breathing echoes gently within the vast Grand Ballroom. A faint, hollow room tone reverberates through the spacious interior.\n\nnon_diegetic_music: "
+   }
+  },
+  {
+   "prompt": "Still at the Grand Ballroom. The Director's Slate claps one final time as the wrap is announced. Clara breaks character into a broad, relieved laugh and hugs Fiona. A wide tracking shot follows the crew breaking into applause across the ballroom.",
+   "annotation": {
+    "title_en": "The slate claps one final time as the director announces the",
+    "scene": "grand_ballroom",
+    "camera": "Wide tracking shot as the crew breaks into applause across the ballroom.",
+    "beat": "The slate claps one final time as the director announces the wrap of the period drama production.",
+    "present": [
+     "clara",
+     "fiona",
+     "directors_slate"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara breaks character into a broad, relieved laugh and hugs Fiona.",
+    "start_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "high-necked charcoal mourning dress with black lace trim",
+      "hairstyle": "disheveled half-down waves with loose stray curls",
+      "stains": "no stains (removed)",
+      "accessory": "ornate silver cameo choker"
+     },
+     "directors_slate": {
+      "state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+     },
+     "c_stand_light": {
+      "state": "upright black stand with circular diffusion scrim mounted"
+     },
+     "script_binder": {
+      "state": "crisp bright yellow binder with color-coded tab dividers"
+     },
+     "fiona": {
+      "outfit": "black oversized crewneck sweatshirt and cargo trousers",
+      "accessory": "faded denim tool apron covered in chalk dust",
+      "hairstyle": "messy topknot bun"
+     },
+     "tea_trolley": {
+      "state": "polished brass with steaming silver kettle and intact floral teacups"
+     },
+     "wardrobe_rack": {
+      "state": "full chrome rack packed with hanging plastic garment bags"
+     },
+     "velvet_period_cloak": {
+      "state": "clean and pressed on a wooden hanger with polished gold clasp"
+     },
+     "marcus": {
+      "outfit": "cream Regency waistcoat with brass buttons and tailored fawn breeches",
+      "hairstyle": "short slicked pompadour",
+      "facial_hair": "thin glued-on pencil mustache"
+     },
+     "manuscript_letter": {
+      "state": "unrolled and crumpled parchment with charred scorched edges"
+     },
+     "antique_dueling_pistol": {
+      "state": "pristine polished brass barrel and oiled walnut stock"
+     },
+     "blood_pump_rig": {
+      "state": "half-empty canister with split ruptured tube spraying red residue"
+     },
+     "prop_rapier": {
+      "state": "repaired rapier bound tightly at the break with silver duct tape"
+     }
+    },
+    "state": {
+     "clara.outfit": "high-necked charcoal mourning dress with black lace trim",
+     "clara.hairstyle": "disheveled half-down waves with loose stray curls",
+     "clara.stains": "no stains (removed)",
+     "clara.accessory": "ornate silver cameo choker",
+     "fiona.outfit": "black oversized crewneck sweatshirt and cargo trousers",
+     "fiona.accessory": "faded denim tool apron covered in chalk dust",
+     "fiona.hairstyle": "messy topknot bun",
+     "directors_slate.state": "blackboard chalked with 'SCENE 18 - TAKE 1'"
+    }
+   },
+   "variants": {
+    "h3": "integrated_multimodal_description: [Shot 1] Live-action, cinematic, a wide tracking shot of the Grand Ballroom, where Vance stands with the crew facing Clara and Fiona. Still in the Grand Ballroom, the Director's Slate claps one final time in front of the camera as the wrap is announced. The narrator says: <d>[English] That is an official wrap on the entire production, everybody! Thank you all for your incredible dedication and hard work.</d> After this line the voice-over stays silent for the rest of the shot. Clara breaks character into a broad, relieved laugh and hugs Fiona. The camera then moves in a wide tracking shot, following Vance and the crew as they break into applause across the ballroom.\n\noverall_soundscape: A sharp wooden clap of the director's slate echoes through the room. Enthusiastic handclaps and applause spread and reverberate across the ballroom.\n\nnon_diegetic_music: "
+   }
+  }
+ ]
+}

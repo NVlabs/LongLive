@@ -1,0 +1,5 @@
+# CPU stand-ins for the agent models (tests and dry runs).
+agent:
+  planner: {provider: mock, model: mock}
+  checker: {provider: mock, model: mock}
+  image: {provider: mock, model: mock, max_concurrency: 4}

@@ -1,0 +1,38 @@
+# The paper's self-hosted agent (keeps up with the generator: memory for shot i covers prompts up to i-1).
+#   planner  RL memory planner: Qwen3-8B + GRPO LoRA (merged), served with EAGLE-3 speculative decoding
+#   checker  Qwen3.6-35B-A3B (FP8, MTP): image checks; it also answers the scene router (backend.params.route_llm_*)
+#   image    FLUX.2-klein-4B (4 steps): entity images and the G / M memory pictures
+# Start the servers with scripts/serve_agent.sh; URLs and model ids can be overridden from the environment.
+agent:
+  image_size: 1024x576          # memory pictures are fitted to the video frame by the backend
+  # Round 0 of every update is committed (agent.commit_first_round); later rounds and entity redraws must pass the
+  # check. Qwen3.6 scores minor misses 6 and wrong state / identity <= 4, so a score >= 6 counts as passing.
+  commit_min_score: 6
+  planner:
+    provider: openai_compat
+    base_url: ${oc.env:AGL_PLANNER_URL,http://127.0.0.1:30000/v1}
+    model: ${oc.env:AGL_PLANNER_MODEL,agentic-longlive-planner}
+    params: {temperature: 0.2, max_tokens: 4096, max_image_side: 768,
+             extra_body: {chat_template_kwargs: {enable_thinking: false}}}
+    max_concurrency: 16
+    timeout_s: 120
+  checker:
+    provider: openai_compat
+    base_url: ${oc.env:AGL_CHECK_URL,http://127.0.0.1:31001/v1}
+    model: ${oc.env:AGL_CHECK_MODEL,Qwen/Qwen3.6-35B-A3B-FP8}
+    params: {temperature: 0.0, max_tokens: 1024, max_image_side: 768,
+             extra_body: {chat_template_kwargs: {enable_thinking: false}}}
+    max_concurrency: 16
+    timeout_s: 60
+  image:
+    provider: openai_image
+    model: ${oc.env:AGL_IMAGE_MODEL,black-forest-labs/FLUX.2-klein-4B}
+    params:
+      flavor: local
+      base_urls: ${oc.env:AGL_IMAGE_URLS,http://127.0.0.1:32001/v1}   # comma-separated, least-busy routing
+      max_refs: 4
+      max_ref_side: 1024
+      extra_fields: {num_inference_steps: 4, guidance_scale: 1.0}
+    max_concurrency: 1           # requests in flight per image server: queued entity redraws yield to G/M pictures
+    max_retries: 3
+    timeout_s: 120

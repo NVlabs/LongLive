@@ -1,0 +1,52 @@
+{
+ "name": "10_stock_drink_shelf",
+ "title": "Restocking Drinks and Sorting Snacks",
+ "summary": "A dual-arm robot places an iced lemon tea bottle on the upper shelf, sorts snacks below into a box, and verifies the stocked shelves.",
+ "camera": "head camera",
+ "robot": "two black robotic arms with parallel grippers and wrist-mounted sensor modules",
+ "setting": "a convenience store aisle with wooden shelves holding various bottled and canned beverages, with snack items below",
+ "first_frame": "10_stock_drink_shelf.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "a675a25508511a481d0d45086d35e281",
+  "frame_index": 0,
+  "original_prompt": "Place the held iced lemon tea on the shelf at the position with iced lemon tea using right arm",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "d0672bed74172cb244ef9fadf623db72dbf514e8245266c907d9e7c9988746e7"
+ },
+ "segments": [
+  {
+   "instruction": "The right arm lifts the green iced lemon tea bottle toward the top shelf next to the existing green bottles while the camera remains focused forward.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The right arm positions the green bottle upright next to the other green tea bottles on the top shelf and releases its grip.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot retracts its arms and tilts its head down to look at the snack items on the lower level, panning away from the top shelf.",
+   "memory_event": "hide: top shelf with the stocked green tea bottle leaves camera view"
+  },
+  {
+   "instruction": "The left gripper reaches down and grasps a colorful snack bag lying on the lower shelf.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The left gripper places the snack bag into a storage box on the floor and pushes the box flap shut.",
+   "memory_event": "hide: snack bag enclosed inside the box"
+  },
+  {
+   "instruction": "The robot tilts its head back up to view the upper beverage shelves.",
+   "memory_event": "return: top shelf returns to view with the newly placed green tea bottle beside the other green bottles"
+  },
+  {
+   "instruction": "The right gripper grasps the small clear juice bottle on the upper shelf and slides it slightly to the right.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "The robot tilts its head down toward the floor, and the left gripper opens the box flap.",
+   "memory_event": "return: opened box reveals the snack bag placed inside earlier"
+  }
+ ]
+}

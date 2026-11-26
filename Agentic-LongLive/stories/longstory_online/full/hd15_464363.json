@@ -1,0 +1,3566 @@
+{
+ "id": "hd15_464363_full",
+ "setup": {
+  "title": "The Master of Strings",
+  "style": "Warm cinematic realism with rich amber workshop lighting, theatrical stage glows, and tactile woodcraft textures",
+  "cast": [
+   {
+    "id": "clara",
+    "name": "Clara",
+    "description": "Clara, Female puppeteer in her late 20s with a slender build, pale skin, wavy brown hair, and hazel eyes, linen smock over brown corduroys, worn leather work boots, wavy brown hair tied in a loose low bun."
+   }
+  ]
+ },
+ "bible": {
+  "entities": {
+   "clara": {
+    "id": "clara",
+    "kind": "character",
+    "name": "Clara",
+    "identity": "Female puppeteer in her late 20s with a slender build, pale skin, wavy brown hair, and hazel eyes",
+    "initial": {
+     "outfit": "linen smock over brown corduroys",
+     "footwear": "worn leather work boots",
+     "hairstyle": "wavy brown hair tied in a loose low bun"
+    },
+    "protagonist": true
+   },
+   "mateo": {
+    "id": "mateo",
+    "kind": "character",
+    "name": "Mateo",
+    "identity": "Male stage apprentice in his early 20s with a stocky build, tan skin, and short black curly hair",
+    "initial": {
+     "outfit": "faded denim overalls over gray tee",
+     "footwear": "scuffed work clogs"
+    },
+    "protagonist": false
+   },
+   "barnaby": {
+    "id": "barnaby",
+    "kind": "character",
+    "name": "Barnaby",
+    "identity": "Elderly orange tabby cat with a notched left ear and pale green eyes",
+    "initial": {
+     "accessory": "brass bell on red leather collar"
+    },
+    "protagonist": false
+   },
+   "madame_vane": {
+    "id": "madame_vane",
+    "kind": "character",
+    "name": "Madame Vane",
+    "identity": "Female theater patron in her 60s, tall and gaunt, with an aquiline nose and an elegant silver updo",
+    "initial": {
+     "outfit": "high-collared midnight silk gown",
+     "footwear": "black pointed heeled slippers"
+    },
+    "protagonist": false
+   },
+   "harlequin_marionette": {
+    "id": "harlequin_marionette",
+    "kind": "object",
+    "name": "Harlequin Marionette",
+    "identity": "Carved pine marionette of a court jester with articulated limbs and pointed chin",
+    "initial": {
+     "state": "raw unvarnished pine with carved facial features, unstrung"
+    },
+    "protagonist": false
+   },
+   "pegasus_marionette": {
+    "id": "pegasus_marionette",
+    "kind": "object",
+    "name": "Pegasus Marionette",
+    "identity": "Carved pearwood winged horse marionette with hinged joints and painted gold hooves",
+    "initial": {
+     "state": "fully painted ivory and gold, strung to its control bar"
+    },
+    "protagonist": false
+   },
+   "woodcarving_chisel": {
+    "id": "woodcarving_chisel",
+    "kind": "object",
+    "name": "Woodcarving Chisel",
+    "identity": "Carbon-steel bevelled chisel with an octagonal ash handle",
+    "initial": {
+     "state": "sharp polished blade with oiled wooden handle"
+    },
+    "protagonist": false
+   },
+   "waxed_linen_spool": {
+    "id": "waxed_linen_spool",
+    "kind": "object",
+    "name": "Waxed Linen Spool",
+    "identity": "Cylindrical wooden spool wound with thick braided black linen thread",
+    "initial": {
+     "state": "full spool of heavy black waxed cord"
+    },
+    "protagonist": false
+   },
+   "control_cross": {
+    "id": "control_cross",
+    "kind": "object",
+    "name": "Control Cross",
+    "identity": "Crossed birchwood marionette controller bar fitted with polished brass screw-eyes",
+    "initial": {
+     "state": "smooth birch cross without strings attached"
+    },
+    "protagonist": false
+   },
+   "varnish_pot": {
+    "id": "varnish_pot",
+    "kind": "object",
+    "name": "Varnish Pot",
+    "identity": "Glazed earthy stoneware pot with a wide rim and brass wire handle",
+    "initial": {
+     "state": "sealed stoneware jar, full of amber resin"
+    },
+    "protagonist": false
+   },
+   "velvet_travel_trunk": {
+    "id": "velvet_travel_trunk",
+    "kind": "object",
+    "name": "Velvet Travel Trunk",
+    "identity": "Rectangular cedar chest with brass corner braces and plum-colored quilted velvet lining",
+    "initial": {
+     "state": "open cedar trunk with empty padded compartments"
+    },
+    "protagonist": false
+   },
+   "stage_backdrop": {
+    "id": "stage_backdrop",
+    "kind": "object",
+    "name": "Stage Backdrop",
+    "identity": "Heavy scenic canvas depicting a moonlit clock tower above cobblestone rooftops",
+    "initial": {
+     "state": "rolled tightly around a counterweighted wooden pole"
+    },
+    "protagonist": false
+   },
+   "brass_sconce_lantern": {
+    "id": "brass_sconce_lantern",
+    "kind": "object",
+    "name": "Brass Sconce Lantern",
+    "identity": "Hexagonal antique brass lantern with bevelled glass panes and candle mount",
+    "initial": {
+     "state": "unlit brass lantern with trimmed wick and clear glass"
+    },
+    "protagonist": false
+   },
+   "tuning_peg_case": {
+    "id": "tuning_peg_case",
+    "kind": "object",
+    "name": "Tuning Peg Case",
+    "identity": "Small mahogany hinged case with brass clasp and velvet dividers",
+    "initial": {
+     "state": "closed mahogany box with brass latch"
+    },
+    "protagonist": false
+   }
+  },
+  "locations": {
+   "workshop_main": {
+    "id": "workshop_main",
+    "name": "Clara's Workshop Ground Floor",
+    "look": "Sunlit timber workshop with cluttered workbenches, curls of wood shavings on the floorboards, and dangling suspension hooks"
+   },
+   "workshop_loft": {
+    "id": "workshop_loft",
+    "name": "Clara's Workshop Loft",
+    "look": "Cozy mezzanine loft under angled rafters, featuring a patchwork daybed, drafting table, and dormer window"
+   },
+   "theater_backstage": {
+    "id": "theater_backstage",
+    "name": "Grand Marionette Backstage",
+    "look": "Dim theater wings crowded with rope fly-systems, sandbags, painted scenery flats, and wooden floorboards"
+   },
+   "stage_floor": {
+    "id": "stage_floor",
+    "name": "The Proscenium Marionette Stage",
+    "look": "Polished miniature oak stage with red velvet curtain wings, an elevated bridge overhead, and warm footlights"
+   },
+   "dressing_room": {
+    "id": "dressing_room",
+    "name": "Puppeteer Dressing Room",
+    "look": "Cramped backstage dressing nook with an illuminated mirror, garment racks, and prop crates"
+   }
+  }
+ },
+ "shots": [
+  {
+   "prompt": "Clara's Workshop Ground Floor is filled with quiet morning light, featuring sunlit timber workbenches, curled wood shavings across the floorboards, and iron suspension hooks hanging overhead.\n\nClara, a slender female puppeteer in her late 20s with pale skin, hazel eyes, and wavy brown hair in a loose low bun, wears a linen smock over brown corduroys and worn leather work boots. Barnaby, an elderly orange tabby cat with a notched left ear, rests near the vice wearing a brass bell on his red leather collar. Clara uses a sharp carbon-steel woodcarving chisel with an oiled ash handle to carve delicate diamond notches into the chest of the Harlequin Marionette, an unstrung figurine of raw pine. She pauses to gently blow pine dust from its carved surface.\n\nA close-up tracks Clara's focused hands as fine wood curls peel away beneath the chisel blade.",
+   "annotation": {
+    "title_en": "In the quiet morning light, Clara sits at her workbench carv",
+    "scene": "workshop_main",
+    "camera": "Close-up tracking Clara's focused hands as wood curls peel beneath the chisel blade.",
+    "beat": "In the quiet morning light, Clara sits at her workbench carving delicate diamond notches into the Harlequin's chest.",
+    "present": [
+     "clara",
+     "barnaby",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [
+     "clara",
+     "barnaby",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Clara gently blows pine dust off the carved figurine; Barnaby naps beside the vice.",
+    "start_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "brass bell on red leather collar"
+     },
+     "harlequin_marionette": {
+      "state": "raw unvarnished pine with carved facial features, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "brass bell on red leather collar"
+     },
+     "harlequin_marionette": {
+      "state": "raw unvarnished pine with carved facial features, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "state": {
+     "clara.outfit": "linen smock over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "barnaby.accessory": "brass bell on red leather collar",
+     "harlequin_marionette.state": "raw unvarnished pine with carved facial features, unstrung",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   }
+  },
+  {
+   "prompt": "Clara's Workshop Ground Floor remains illuminated by warm amber workshop light spilling over the cluttered timber bench.\n\nClara, dressed in her linen smock, brown corduroys, and worn leather work boots with her wavy brown hair in a loose low bun, sets down the sharp carbon-steel woodcarving chisel. With a fine paintbrush, she carefully brushes rich lacquer over the Harlequin Marionette, turning its raw pine body into a smoothly sanded figure painted in vivid checkered crimson and ivory. Clara inspects the wet checkered paint under the desk lamp, a satisfied smile gracing her lips.\n\nA medium shot over Clara's shoulder watches the vibrant paint smoothly coat the pale pine facets.",
+   "annotation": {
+    "title_en": "Clara lays the chisel aside to brush rich crimson and ivory ",
+    "scene": "workshop_main",
+    "camera": "Medium shot over Clara's shoulder watching the vibrant paint coat the pale pine.",
+    "beat": "Clara lays the chisel aside to brush rich crimson and ivory lacquer across the sanded facets of the puppet.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "harlequin_marionette",
+      "attr": "state",
+      "value": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara inspects the wet checkered paint under the lamp, a satisfied smile on her lips.",
+    "start_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "raw unvarnished pine with carved facial features, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "brass bell on red leather collar"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "state": {
+     "clara.outfit": "linen smock over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "smoothly sanded and painted in checkered crimson and ivory, unstrung",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   }
+  },
+  {
+   "prompt": "Clara's Workshop Loft is a cozy mezzanine nested under angled rafters, featuring a colorful patchwork daybed, a drafting table, and morning sun glowing through a dormer window.\n\nClara, wearing her linen smock, brown corduroys, and worn leather work boots with her wavy brown hair tied in a loose low bun, crouches by the low table for tea. Barnaby, the orange tabby cat with a notched ear, rubs his red leather collar against a carved table leg until the dangling brass bell pops loose. Barnaby rolls onto his back purring happily as Clara unhooks the broken bell fragment, leaving him wearing a plain red leather collar.\n\nA static eye-level two-shot captures Clara and Barnaby relaxing together on the woven loft rug.",
+   "annotation": {
+    "title_en": "Clara heads up to the loft for tea, petting Barnaby as the o",
+    "scene": "workshop_loft",
+    "camera": "Static eye-level two-shot of Clara and Barnaby on the loft rug.",
+    "beat": "Clara heads up to the loft for tea, petting Barnaby as the old cat scratches off his jingling bell against the table leg.",
+    "present": [
+     "clara",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "barnaby",
+      "attr": "accessory",
+      "value": "plain red leather collar without bell"
+     }
+    ],
+    "location_visit": "new",
+    "momentary": "Barnaby rolls onto his back purring as Clara unhooks the broken bell fragment.",
+    "start_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "brass bell on red leather collar"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "state": {
+     "clara.outfit": "linen smock over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "barnaby.accessory": "plain red leather collar without bell"
+    }
+   }
+  },
+  {
+   "prompt": "Clara's Workshop Ground Floor welcomes the puppeteer back to sunlit workbenches scattered with wood shavings and iron suspension hooks.\n\nClara, her wavy brown hair gathered in a loose low bun and wearing worn leather boots, removes her linen smock and ties on a sturdy leather-paneled apron over her brown corduroys. On the bench sits the sharp woodcarving chisel beside the Harlequin Marionette, which now gleams with smoothly sanded checkered crimson and ivory paint. Clara gently tests the flexibility of the Harlequin's elbow hinges with her fingertips, preparing for the rigging process.\n\nA medium low-angle shot captures Clara tying the apron straps firmly behind her waist in the amber light.",
+   "annotation": {
+    "title_en": "Returning downstairs, Clara puts on her heavy leather-panele",
+    "scene": "workshop_main",
+    "camera": "Medium low-angle shot as Clara ties the apron straps behind her waist.",
+    "beat": "Returning downstairs, Clara puts on her heavy leather-paneled apron to begin the intricate rigging phase.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "leather-paneled apron over brown corduroys"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Clara tests the flexibility of Harlequin's elbow hinges with her fingertips.",
+    "start_state": {
+     "clara": {
+      "outfit": "linen smock over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "smoothly sanded and painted in checkered crimson and ivory, unstrung",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   }
+  },
+  {
+   "prompt": "Clara's Workshop Ground Floor is bathed in warm amber rays that illuminate dust motes, cluttered benches, and timber floorboards.\n\nClara wears her leather-paneled apron over brown corduroys and worn leather work boots, her wavy brown hair secured in a loose low bun. Resting on an open wooden toolbox nearby, Barnaby lazily watches in his plain red leather collar. Clara takes hold of the Waxed Linen Spool, a full wooden spool loaded with thick braided black cord, and measures out long strands across the room. She firmly bites through the waxed thread and tensions the cord between both hands.\n\nA wide shot captures crisp sunbeams cutting across the black string lines stretched taut between wooden pegs.",
+   "annotation": {
+    "title_en": "Clara measures out long strands of waxed cord from the heavy",
+    "scene": "workshop_main",
+    "camera": "Wide shot capturing the sunbeams cutting across the string lines stretched between pegs.",
+    "beat": "Clara measures out long strands of waxed cord from the heavy spool while Barnaby watches lazily from a toolbox.",
+    "present": [
+     "clara",
+     "waxed_linen_spool",
+     "barnaby"
+    ],
+    "first_appearance": [
+     "waxed_linen_spool"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara bites through the wax thread, tensioning it between both hands.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "waxed_linen_spool.state": "full spool of heavy black waxed cord",
+     "barnaby.accessory": "plain red leather collar without bell"
+    }
+   }
+  },
+  {
+   "prompt": "Clara's Workshop Ground Floor displays overhead suspension frames and sun-drenched timber rafters above the busy carving floor.\n\nClara stands dressed in her leather-paneled apron over brown corduroys, worn leather work boots, and wavy brown hair gathered in a loose low bun. She holds the Control Cross, an unstrung crossed birchwood controller bar fitted with polished brass screw-eyes, checking its proportions beside the Pegasus Marionette, an articulated pearwood winged horse painted in ivory and gold, already strung to its own controller. Clara gently rocks the control cross to test balance, making Pegasus's carved wings flutter softly.\n\nA high-angle view looks down through the elevated puppet bridge as Pegasus hovers gracefully above the timber floorboards.",
+   "annotation": {
+    "title_en": "Clara pauses to calibrate a control cross against Pegasus, e",
+    "scene": "workshop_main",
+    "camera": "High-angle view looking down through the puppet bridge at Pegasus hovering above the floor.",
+    "beat": "Clara pauses to calibrate a control cross against Pegasus, ensuring the wing-flapping counterbalance is balanced.",
+    "present": [
+     "clara",
+     "pegasus_marionette",
+     "control_cross"
+    ],
+    "first_appearance": [
+     "pegasus_marionette",
+     "control_cross"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara rocks the cross gently, making Pegasus's carved wings flutter softly.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "pegasus_marionette.state": "fully painted ivory and gold, strung to its control bar",
+     "control_cross.state": "smooth birch cross without strings attached"
+    }
+   }
+  },
+  {
+   "prompt": "Sunlit timber beams frame the cluttered ground-floor workshop, where curls of wood shavings scatter across the rustic floorboards beneath dangling suspension hooks.\n\nClara, a slender puppeteer in her late 20s with pale skin and hazel eyes, wears a leather-paneled apron over brown corduroys, worn leather work boots, and a loose low bun. Beside the smoothly sanded, unstrung Harlequin Marionette painted in crimson and ivory, rests the Varnish Pot, a glazed earthy stoneware jar full of amber resin with a brass wire handle. Clara pops the cork seal free, places a hog-bristle brush into the fragrant resin, and taps the excess liquid off against the pot's rim.\n\nA tight close-up frames the thick amber resin swirling inside the jar.",
+   "annotation": {
+    "title_en": "Clara pops the cork seal off the varnish pot and stirs the f",
+    "scene": "workshop_main",
+    "camera": "Tight close-up of the thick amber resin swirling in the jar.",
+    "beat": "Clara pops the cork seal off the varnish pot and stirs the fragrant resin with a hog-bristle brush.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "varnish_pot"
+    ],
+    "first_appearance": [
+     "varnish_pot"
+    ],
+    "changes": [
+     {
+      "entity": "varnish_pot",
+      "attr": "state",
+      "value": "uncapped stoneware jar, brush resting inside amber resin"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara dips the brush and taps off excess liquid on the pot rim.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "varnish_pot": {
+      "state": "sealed stoneware jar, full of amber resin"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "smoothly sanded and painted in checkered crimson and ivory, unstrung",
+     "varnish_pot.state": "uncapped stoneware jar, brush resting inside amber resin"
+    }
+   }
+  },
+  {
+   "prompt": "Golden light floods the timber workshop, highlighting scattered carving tools, curled wood shavings, and suspension rigging dangling above the worktables.\n\nClara wears her leather-paneled apron over brown corduroys and worn work boots, her wavy brown hair gathered in a loose low bun. The pearwood Pegasus Marionette rests nearby, fully painted ivory and gold and tethered to its control bar. Clara threads cords from the unstrung, checkered crimson Harlequin Marionette to the birch Control Cross, tying off the lines until it becomes a glossy varnished pine puppet tethered to its controller. Clara tilts her head, inspecting Harlequin's knee joints.\n\nA medium tracking shot follows Clara as she tests Harlequin's walking motion beside Pegasus.",
+   "annotation": {
+    "title_en": "Clara secures the final knots from Harlequin to the birch co",
+    "scene": "workshop_main",
+    "camera": "Medium tracking shot as Clara tests Harlequin's walking motion beside Pegasus.",
+    "beat": "Clara secures the final knots from Harlequin to the birch control cross, admiring the glossy finished pair.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "control_cross",
+     "pegasus_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "harlequin_marionette",
+      "attr": "state",
+      "value": "glossy varnished pine with complete waxed cords tethered to cross"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara tilts her head, evaluating the smooth articulation of Harlequin's knees.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "smoothly sanded and painted in checkered crimson and ivory, unstrung"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "control_cross.state": "smooth birch cross without strings attached",
+     "pegasus_marionette.state": "fully painted ivory and gold, strung to its control bar"
+    }
+   }
+  },
+  {
+   "prompt": "Warm amber workshop light washes over the timber benches, scattered wood shavings, and overhead suspension hooks.\n\nClara, dressed in her leather-paneled apron, brown corduroys, and worn leather boots with her hair in a low bun, lowers the glossy, tethered Harlequin Marionette toward a stool. Barnaby, an elderly orange tabby cat with a notched left ear, pale green eyes, and a plain red leather collar, taps playfully at the puppet's dangling painted foot. Clara laughs softly and gently scoots Barnaby away from the newly dried cords.\n\nA low-angle shot from the floor frames the action beside Barnaby's paws.",
+   "annotation": {
+    "title_en": "Barnaby taps playfully at Harlequin's dangling foot as Clara",
+    "scene": "workshop_main",
+    "camera": "Low-angle shot from the floor beside Barnaby's paws.",
+    "beat": "Barnaby taps playfully at Harlequin's dangling foot as Clara lowers the finished puppet to rest on the stool.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara laughs and gently scoots Barnaby away from the freshly dried strings.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "barnaby.accessory": "plain red leather collar without bell"
+    }
+   }
+  },
+  {
+   "prompt": "Amber workshop sunlight illuminates the timber floorboards, cluttered tool benches, and ceiling suspension hooks in Clara's ground floor workshop.\n\nClara wears her leather-paneled apron over brown corduroys, worn leather work boots, and loose low bun. Open on the table sits the Velvet Travel Trunk, a rectangular cedar chest with brass corner braces and empty plum-colored quilted velvet compartments. Clara carefully nestles the glossy Harlequin Marionette and the ivory-and-gold Pegasus Marionette into the plush velvet pockets. She lowers the cedar lid and secures the two heavy brass toggles shut.\n\nA top-down shot looks directly into the trunk as the marionettes are settled into purple velvet.",
+   "annotation": {
+    "title_en": "Clara carefully lays Harlequin and Pegasus into the plush ve",
+    "scene": "workshop_main",
+    "camera": "Top-down shot of the puppets nested securely into the purple velvet.",
+    "beat": "Clara carefully lays Harlequin and Pegasus into the plush velvet pockets of her cedar travel trunk.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "pegasus_marionette",
+     "velvet_travel_trunk"
+    ],
+    "first_appearance": [
+     "velvet_travel_trunk"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara closes the trunk lid and fastens the two heavy brass toggles.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "pegasus_marionette.state": "fully painted ivory and gold, strung to its control bar",
+     "velvet_travel_trunk.state": "open cedar trunk with empty padded compartments"
+    }
+   }
+  },
+  {
+   "prompt": "The Grand Marionette Backstage is dim and atmospheric, crowded with towering rope fly-systems, hanging sandbags, painted scenic flats, and scuffed floorboards.\n\nClara wears her leather-paneled apron over brown corduroys, worn leather work boots, and loose low bun, gripping one end of the cedar Velvet Travel Trunk. Mateo, a stocky stage apprentice in his early 20s with tan skin and short black curly hair, wearing faded denim overalls over a gray tee and scuffed work clogs, lifts the opposite handle. Together they carry the trunk past hanging counterweights as Mateo wipes his brow and points toward the call board.\n\nA dolly shot moves ahead of Clara and Mateo down the shadowy backstage hallway.",
+   "annotation": {
+    "title_en": "At the theater backstage, Mateo helps Clara hoist the cedar ",
+    "scene": "theater_backstage",
+    "camera": "Dolly shot leading Clara and Mateo down the shadowy backstage hallway.",
+    "beat": "At the theater backstage, Mateo helps Clara hoist the cedar trunk past the hanging counterweights.",
+    "present": [
+     "clara",
+     "mateo",
+     "velvet_travel_trunk"
+    ],
+    "first_appearance": [
+     "mateo"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Mateo wipes sweat from his brow, gesturing toward the backstage call board.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "mateo.outfit": "faded denim overalls over gray tee",
+     "mateo.footwear": "scuffed work clogs",
+     "velvet_travel_trunk.state": "open cedar trunk with empty padded compartments"
+    }
+   }
+  },
+  {
+   "prompt": "The shadows of the Grand Marionette Backstage deepen around rope fly-systems, leaning painted scenery flats, and worn wooden floorboards.\n\nClara, wearing her leather-paneled apron over brown corduroys and worn boots with her hair in a low bun, stands near Mateo in his faded denim overalls. Having snagged her thumb on a cable, Clara wraps clean white medical tape around the cut until a white bandage is bound firmly around her left thumb. She winces slightly as she flexes her taped thumb, then nods reassuringly to Mateo.\n\nA close-up shot focuses on Clara's hands as she finishes knotting the medical tape around her thumb.",
+   "annotation": {
+    "title_en": "After catching her thumb in a snagged stage cable, Clara bin",
+    "scene": "theater_backstage",
+    "camera": "Close-up on Clara's hands as she finishes knotting the bandage tape around her thumb.",
+    "beat": "After catching her thumb in a snagged stage cable, Clara binds the cut firmly with clean white medical tape.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "injury",
+      "value": "white bandage wrapped tightly around left thumb"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara flexes her thumb with a brief wince before nodding reassuringly to Mateo.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "faded denim overalls over gray tee",
+     "mateo.footwear": "scuffed work clogs"
+    }
+   }
+  },
+  {
+   "prompt": "The Puppeteer Dressing Room is a cramped backstage dressing nook illuminated by soft vanity light bulbs, featuring crowded garment racks and weathered prop crates.\n\nClara, a slender puppeteer in her late twenties with pale skin, hazel eyes, wavy brown hair in a loose low bun, and a white bandage wrapped tightly around her left thumb, wears a leather-paneled apron over brown corduroys and worn leather work boots. She unclasps the open rectangular cedar Velvet Travel Trunk, showing its plum-colored quilted velvet lining, and gently withdraws the Harlequin Marionette, an articulated pine jester with glossy varnish and untangled black cords. She hangs the puppet from a rack and smooths his painted collar.\n\nThe medium shot reflects Clara's actions off the warm glowing vanity mirrors.",
+   "annotation": {
+    "title_en": "In the dressing room, Clara unclasps the trunk to withdraw H",
+    "scene": "dressing_room",
+    "camera": "Medium shot reflecting off the warm vanity mirrors.",
+    "beat": "In the dressing room, Clara unclasps the trunk to withdraw Harlequin, verifying the strings have not tangled during transit.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "velvet_travel_trunk"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Clara hangs Harlequin from a dressing rack and smooths his painted collar.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "velvet_travel_trunk.state": "open cedar trunk with empty padded compartments"
+    }
+   }
+  },
+  {
+   "prompt": "Grand Marionette Backstage is dim and cavernous, filled with hanging rope fly-systems, stacked sandbags, painted scenery flats, and dusty wooden floorboards.\n\nClara stands near the proscenium in her leather-paneled apron, brown corduroys, worn boots, bun, and thumb bandage. Mateo, a stocky young stage apprentice with tan skin and short black curly hair wearing scuffed work clogs, steps out from the crew alcove having swapped his denim overalls for a tailored burgundy waistcoat over a gray dress shirt. He straightens his collar with a proud, nervous grin, fully prepped for opening night.\n\nA full-body pan follows Mateo across the backstage boards as he fastens his brass waistcoat buttons.",
+   "annotation": {
+    "title_en": "Mateo emerges from the crew alcove wearing his formal theate",
+    "scene": "theater_backstage",
+    "camera": "Full-body pan following Mateo as he adjusts his brass waistcoat buttons.",
+    "beat": "Mateo emerges from the crew alcove wearing his formal theater waistcoat, ready for opening night duty.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "mateo",
+      "attr": "outfit",
+      "value": "tailored burgundy waistcoat over gray dress shirt"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Mateo straightens his shirt collar with a proud, nervous grin.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "faded denim overalls over gray tee",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs"
+    }
+   }
+  },
+  {
+   "prompt": "The Proscenium Marionette Stage features polished miniature oak stage boards framed by rich red velvet curtain wings, an elevated wooden bridge overhead, and unlit footlights.\n\nClara, wearing her leather-paneled apron, corduroys, worn boots, loose bun, and thumb bandage, teams up with Mateo, who wears his burgundy waistcoat, gray dress shirt, and scuffed work clogs. Together they hoist the Stage Backdrop, a heavy scenic canvas rolled tightly around a counterweighted wooden pole depicting a moonlit clock tower above cobblestone rooftops, hauling it toward the overhead battens. Mateo secures the hemp tie line around a bronze belaying pin.\n\nA wide low-angle view looks upward toward the wooden battens in the fly loft as they work.",
+   "annotation": {
+    "title_en": "Out on the stage, Clara and Mateo haul the heavy rolled canv",
+    "scene": "stage_floor",
+    "camera": "Wide low-angle view looking upward toward the wooden battens in the fly loft.",
+    "beat": "Out on the stage, Clara and Mateo haul the heavy rolled canvas backdrop up toward the overhead fly rigging.",
+    "present": [
+     "clara",
+     "mateo",
+     "stage_backdrop"
+    ],
+    "first_appearance": [
+     "stage_backdrop"
+    ],
+    "changes": [],
+    "location_visit": "new",
+    "momentary": "Mateo secures the hemp tie line around a bronze belaying pin.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   }
+  },
+  {
+   "prompt": "The Proscenium Marionette Stage remains quiet, its polished miniature oak floorboards glowing warmly beneath the elevated wooden bridge and crimson velvet wings.\n\nClara stands observant in her leather-paneled apron, corduroy trousers, worn boots, loose hair bun, and white thumb bandage alongside the rolled Stage Backdrop. Madame Vane, a tall, gaunt theater patron in her sixties with an aquiline nose and an elegant silver updo, sweeps onto the boards dressed in a high-collared midnight silk gown and black pointed heeled slippers. Inspecting the clock tower backdrop's alignment, Madame Vane gestures pointedly with a manicured hand toward the stage left wings.\n\nA profile two-shot frames Madame Vane and Clara standing together upon the empty stage boards.",
+   "annotation": {
+    "title_en": "Madame Vane glides onto the stage to inspect the positioning",
+    "scene": "stage_floor",
+    "camera": "Profile two-shot of Madame Vane and Clara standing on the empty stage boards.",
+    "beat": "Madame Vane glides onto the stage to inspect the positioning of the moonlit clock tower backdrop.",
+    "present": [
+     "clara",
+     "madame_vane",
+     "stage_backdrop"
+    ],
+    "first_appearance": [
+     "madame_vane"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Madame Vane gestures with a manicured hand toward the stage left wings.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "madame_vane.outfit": "high-collared midnight silk gown",
+     "madame_vane.footwear": "black pointed heeled slippers",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   }
+  },
+  {
+   "prompt": "The Proscenium Marionette Stage glows with atmospheric warmth beneath the shadowy overhead bridge, framed by deep red velvet side curtains and the rigged Stage Backdrop.\n\nClara, dressed in her leather-paneled apron, corduroys, worn leather work boots, low hair bun, and bandaged thumb, approaches the proscenium arch. Mounted beside the arch is the Brass Sconce Lantern, a hexagonal antique brass lantern fitted with clear bevelled glass panes, an unlit candle, and a trimmed wick. Clara checks its brass catch and aligns the glass door to ensure the light will not swing during the performance.\n\nA close-up captures Clara's careful hands adjusting the bevelled glass door of the antique sconce.",
+   "annotation": {
+    "title_en": "Clara trims the sconce lantern mounted by the proscenium arc",
+    "scene": "stage_floor",
+    "camera": "Close-up on the lantern as Clara adjusts the bevelled glass door.",
+    "beat": "Clara trims the sconce lantern mounted by the proscenium arch, preparing the footlighting for the opening scene.",
+    "present": [
+     "clara",
+     "brass_sconce_lantern",
+     "stage_backdrop"
+    ],
+    "first_appearance": [
+     "brass_sconce_lantern"
+    ],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara checks the lantern's brass catch to ensure it will not swing during the act.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "leather-paneled apron over brown corduroys",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "brass_sconce_lantern.state": "unlit brass lantern with trimmed wick and clear glass",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   }
+  },
+  {
+   "prompt": "The Puppeteer Dressing Room is bathed in the warm amber glow of vanity bulbs bouncing off worn prop crates and crowded costume racks.\n\nClara has changed out of her work apron and now wears a formal black velvet vest over a crisp white collared shirt and tailored black slacks, retaining her worn boots, low hair bun, and bandaged thumb. Beside the suspended, glossy pine Harlequin Marionette, she finishes buttoning her velvet vest and tucks stray locks behind her ears before reaching out toward the marionette's birch controller cross.\n\nA medium shot captures Clara poised in front of the vanity lights as she readies herself.",
+   "annotation": {
+    "title_en": "Clara changes into her performance attire, donning her crisp",
+    "scene": "dressing_room",
+    "camera": "Medium shot of Clara in front of the vanity lights.",
+    "beat": "Clara changes into her performance attire, donning her crisp black velvet vest before grabbing Harlequin's controller.",
+    "present": [
+     "clara",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "outfit",
+      "value": "formal black velvet vest over crisp white collared shirt and black slacks"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Clara buttons her vest and tucks her hair neatly behind her ears.",
+    "start_state": {
+     "clara": {
+      "outfit": "leather-paneled apron over brown corduroys",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the cramped backstage Puppeteer Dressing Room, warm vanity bulbs illuminate the crowded mirror, garment racks, and stacked prop crates.\n\nClara, a slender female puppeteer in her late 20s with pale skin and hazel eyes, wears a formal black velvet vest over a crisp white collared shirt, black slacks, and worn leather work boots, her wavy brown hair tied in a loose low bun with a white bandage wrapped tightly around her left thumb. Madame Vane, a tall and gaunt woman in her 60s with an aquiline nose, wearing a high-collared midnight silk gown and black pointed heeled slippers, pins a feathered emerald fascinator into her silver updo as she steps through the doorway. She delivers a sharp nod of encouragement to announce five minutes until curtain, tapping her folded program under her arm as Clara turns to greet her.\n\nA two-shot frames Madame Vane in the doorway and Clara turning to greet her.",
+   "annotation": {
+    "title_en": "Madame Vane steps into the dressing room wearing an emerald ",
+    "scene": "dressing_room",
+    "camera": "Two-shot framing Madame Vane in the doorway and Clara turning to greet her.",
+    "beat": "Madame Vane steps into the dressing room wearing an emerald fascinator to announce five minutes until curtain.",
+    "present": [
+     "clara",
+     "madame_vane"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "madame_vane",
+      "attr": "headwear",
+      "value": "feathered emerald fascinator pinned to silver updo"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Madame Vane delivers a sharp nod of encouragement, tapping her program folded under her arm.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "madame_vane.outfit": "high-collared midnight silk gown",
+     "madame_vane.footwear": "black pointed heeled slippers",
+     "madame_vane.headwear": "feathered emerald fascinator pinned to silver updo"
+    }
+   }
+  },
+  {
+   "prompt": "Upon the polished miniature oak stage of The Proscenium Marionette Stage, rich red velvet curtain wings flank the boards beneath the elevated puppeteer bridge.\n\nClara, the slender puppeteer dressed in her formal black velvet vest, crisp white collared shirt, black slacks, and worn leather boots, with her hair in a low bun and left thumb wrapped in a tight white bandage, climbs onto the elevated gantry. Down on the stage rests the Harlequin Marionette, carved of glossy varnished pine with complete waxed cords tethered to its cross, beside the unlit hexagonal Brass Sconce Lantern whose wick soon catches light. The house lights dim, and Clara takes a deep breath, resting her bandaged thumb gently on the guide rod.\n\nA low-angle shot from the stage floor looks up at Clara poised on the gantry overhead.",
+   "annotation": {
+    "title_en": "Clara climbs onto the puppeteer bridge behind the proscenium",
+    "scene": "stage_floor",
+    "camera": "Low-angle shot from the stage floor looking up at Clara poised on the gantry.",
+    "beat": "Clara climbs onto the puppeteer bridge behind the proscenium as the house lights dim and the lantern glows.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "brass_sconce_lantern"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Clara takes a deep breath, resting her bandaged thumb on the guide rod.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "brass_sconce_lantern.state": "unlit brass lantern with trimmed wick and clear glass"
+    }
+   }
+  },
+  {
+   "prompt": "Warm footlights glow across the polished oak boards of The Proscenium Marionette Stage, framed by crimson velvet drapery and the Stage Backdrop rolled tightly around its counterweighted wooden pole above.\n\nClara stands on the gantry in her formal black velvet vest, white collared shirt, black slacks, and worn boots, her wavy hair in a low bun and her left thumb bound in white bandage. She manipulates the Pegasus Marionette, an ivory and gold painted pearwood winged horse strung to its control bar. Act One opens as Pegasus glides smoothly across the painted moonlit scene to the gasps of the audience, Clara expertly tilting the wing wires into a sweeping arc.\n\nA wide proscenium shot captures Pegasus suspended against the painted moonlight.",
+   "annotation": {
+    "title_en": "Act One opens with Pegasus soaring across the painted clock ",
+    "scene": "stage_floor",
+    "camera": "Wide proscenium framing Pegasus suspended against the painted moonlight.",
+    "beat": "Act One opens with Pegasus soaring across the painted clock tower canvas to the gasps of the audience.",
+    "present": [
+     "clara",
+     "pegasus_marionette",
+     "stage_backdrop"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara expertly tilts the wing wires, creating a smooth gliding arc.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "pegasus_marionette.state": "fully painted ivory and gold, strung to its control bar",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   }
+  },
+  {
+   "prompt": "Amber stage lights illuminate the polished oak surface and heavy velvet curtain wings of The Proscenium Marionette Stage.\n\nFrom the overhead bridge, Clara, wearing her black velvet vest, white collared shirt, black slacks, and worn leather boots, with her low bun and white-bandaged left thumb, operates the Harlequin Marionette—a glossy carved pine jester with intact waxed cords—beside a smooth birch Control Cross. Clara commands Harlequin dancing into the spotlight, executing nimble pirouettes and grand theatrical bows with effortless, fluid dexterity.\n\nA medium tracking shot moves along the stage, keeping pace with Harlequin's rhythmic leaps.",
+   "annotation": {
+    "title_en": "Clara brings Harlequin dancing into the spotlight, commandin",
+    "scene": "stage_floor",
+    "camera": "Medium tracking shot keeping pace with Harlequin's rhythmic leaps across the stage.",
+    "beat": "Clara brings Harlequin dancing into the spotlight, commanding nimble pirouettes and grand bows with the cross.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "control_cross"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara's fingers work the controller with effortless, fluid dexterity.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "control_cross.state": "smooth birch cross without strings attached"
+    }
+   }
+  },
+  {
+   "prompt": "Deep shadows drape the backstage wings of The Proscenium Marionette Stage, where the polished oak floor meets the crimson velvet borders under warm theatrical glows.\n\nMadame Vane, tall and gaunt with her silver updo, watches from the dim wings dressed in her high-collared midnight silk gown, black pointed heeled slippers, and feathered emerald fascinator. Up on the gantry, Clara, in her black velvet vest, white shirt, black slacks, and bandaged left thumb, guides the glossy pine Harlequin Marionette through an intricate acrobatic sequence. Madame Vane's expression softens from skeptical scrutiny into genuine delight.\n\nAn over-the-shoulder shot from Madame Vane's perspective in the shadows frames Clara and the dancing puppet.",
+   "annotation": {
+    "title_en": "From the wings, Madame Vane watches intently as Clara guides",
+    "scene": "stage_floor",
+    "camera": "Over-the-shoulder shot from Madame Vane's perspective in the shadows.",
+    "beat": "From the wings, Madame Vane watches intently as Clara guides Harlequin through a complex acrobatic sequence.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "madame_vane"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Madame Vane's expression shifts from skeptical scrutiny to genuine delight.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "glossy varnished pine with complete waxed cords tethered to cross",
+     "madame_vane.outfit": "high-collared midnight silk gown",
+     "madame_vane.footwear": "black pointed heeled slippers",
+     "madame_vane.headwear": "feathered emerald fascinator pinned to silver updo"
+    }
+   }
+  },
+  {
+   "prompt": "Bright stage footlights cast crisp shadows across the oak floorboards and red velvet borders of The Proscenium Marionette Stage.\n\nClara stands on the overhead bridge in her black velvet vest, white collared shirt, black slacks, and bandaged thumb, holding the birch Control Cross as she guides the Harlequin Marionette into a high aerial leap. Midway through the jump, an audible snap echoes as Harlequin's shoulder and wrist cords shear, leaving limp threads dangling and its left arm hanging loose as the puppet drops hard to the floorboards. Clara gasps on the bridge, fighting to keep the remaining strings from entangling.\n\nA dramatic zoom-in captures Harlequin hitting the wooden stage floor as severed cords recoil upward.",
+   "annotation": {
+    "title_en": "Midway through a high aerial leap, an audible snap echoes as",
+    "scene": "stage_floor",
+    "camera": "Dramatic zoom-in on Harlequin hitting the wooden stage floor as severed cords recoil upward.",
+    "beat": "Midway through a high aerial leap, an audible snap echoes as Harlequin's left cords shear and the puppet drops.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "control_cross"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "harlequin_marionette",
+      "attr": "state",
+      "value": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara gasps on the bridge, fighting to keep the remaining strings from entangling.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "glossy varnished pine with complete waxed cords tethered to cross"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose",
+     "control_cross.state": "smooth birch cross without strings attached"
+    }
+   }
+  },
+  {
+   "prompt": "On The Proscenium Marionette Stage, polished miniature oak floorboards glint under footlights against rich red velvet wings, with an elevated bridge above. Clara, a slender woman in her late 20s with pale skin, wavy brown hair gathered in a loose low bun, and a bandage wrapped tightly around her left thumb, wears a formal black velvet vest, crisp white collared shirt, black slacks, and worn leather work boots. Mateo, a stocky young man with tan skin and short black curls, wears a burgundy waistcoat over a gray dress shirt and scuffed clogs. The Harlequin Marionette, a carved pine jester with a pointed chin, lies with broken shoulder and wrist cords dangling limp and its left arm splayed loose. Overhead hangs the Stage Backdrop, rolled tightly around a counterweighted wooden pole.\n\nMateo furiously pulls the fly rope, dropping the heavy crimson intermission curtain while calling out the emergency cue to the control booth. Clara drops to her knees and scoops up the limp Harlequin marionette into her arms.\n\nFast-moving eye-level tracking shot moving laterally just behind the falling velvet fabric as it obscures the audience.",
+   "annotation": {
+    "title_en": "Mateo swiftly lowers the velvet intermission traveler curtai",
+    "scene": "stage_floor",
+    "camera": "Fast-moving eye-level tracking shot behind the descending red curtain.",
+    "beat": "Mateo swiftly lowers the velvet intermission traveler curtain while Clara scoops Harlequin from the floor.",
+    "present": [
+     "clara",
+     "mateo",
+     "harlequin_marionette",
+     "stage_backdrop"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Mateo calls out the emergency intermission cue to the booth as Clara cradles the broken puppet.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   }
+  },
+  {
+   "prompt": "In the Puppeteer Dressing Room, an illuminated vanity mirror casts a warm bulb glow across garment racks and stacked prop crates in the narrow alcove. Clara, slender with pale skin and wavy brown hair tied in a loose low bun, is dressed in her black velvet vest, white collared shirt, black slacks, and worn boots, her left thumb bound in a tight white bandage. Resting open on a low bench is the Velvet Travel Trunk, a rectangular cedar chest lined in plum-colored quilted velvet with empty compartments. She holds the carved Harlequin Marionette, its shoulder and wrist cords snapped and dangling, its left arm hanging loose.\n\nClara rushes inside and lays the broken jester flat into the velvet trunk. Her trembling fingers part the frayed black strings, and she bites her lip upon seeing the anchor screw-eye ripped entirely out of the carved shoulder socket.\n\nClose-up over the trunk interior, tracking her shaking hands examining the splintered joint.",
+   "annotation": {
+    "title_en": "Clara rushes into the dressing room, laying Harlequin across",
+    "scene": "dressing_room",
+    "camera": "Close-up over the trunk as Clara separates the frayed ends with shaking hands.",
+    "beat": "Clara rushes into the dressing room, laying Harlequin across the open trunk to inspect the sheared cords.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "velvet_travel_trunk"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Clara bites her lower lip, realizing the anchor screw-eye has torn clean out of the shoulder.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose",
+     "velvet_travel_trunk.state": "open cedar trunk with empty padded compartments"
+    }
+   }
+  },
+  {
+   "prompt": "The Puppeteer Dressing Room remains close and cluttered, illuminated by vanity bulbs reflecting off wooden crate edges. Clara stands tensely beside the open trunk, wearing her black velvet vest over a white collared shirt, black slacks, worn boots, and a white bandage on her left thumb, her brown hair in a loose low bun. Mateo stands before her in his burgundy waistcoat, gray dress shirt, and scuffed work clogs. Between them lies the Harlequin Marionette with its snapped cords and dangling left arm.\n\nMateo barges through the doorway clutching a leather emergency repair pouch, holding up a pair of metal pliers with an urgent, questioning expression. Clara firmly shakes her head, refusing the field fix because the structural wood requires her bench tools across the lane, and Mateo lowers the pliers with a frustrated sigh.\n\nTight two-shot framing Clara and Mateo over the cluttered dressing table.",
+   "annotation": {
+    "title_en": "Mateo bursts in with an emergency repair pouch, but Clara sh",
+    "scene": "dressing_room",
+    "camera": "Tight two-shot framing Clara and Mateo over the dressing table.",
+    "beat": "Mateo bursts in with an emergency repair pouch, but Clara shakes her head, needing her workshop tools for a structural repair.",
+    "present": [
+     "clara",
+     "mateo",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Mateo holds up a pair of pliers questioningly before setting them down.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the cramped Puppeteer Dressing Room, warm vanity lighting reflects off glass perfume bottles and cosmetic trays. Clara stands near the doorway in her formal black velvet vest, white shirt, black slacks, worn work boots, and bandaged left thumb, hair bound in a loose bun. Mateo stands by the narrow dressing counter wearing his burgundy waistcoat, gray shirt, and scuffed clogs.\n\nTurning abruptly to clear a path to the exit, Mateo's elbow snags a small glass bottle on the counter. The amber vial tips and shatters, splashing dark lavender oil across his chest, instantly soaking a deep, spreading stain into his waistcoat lapel. He winces, hurriedly blotting at the greasy patch with a dry rag to no avail.\n\nLow-angle shot focusing on the dark liquid rapidly seeping into Mateo's burgundy fabric.",
+   "annotation": {
+    "title_en": "In his haste to clear the path, Mateo knocks over an oil via",
+    "scene": "dressing_room",
+    "camera": "Low-angle shot focusing on the dark liquid spreading across Mateo's burgundy fabric.",
+    "beat": "In his haste to clear the path, Mateo knocks over an oil vial from the vanity, splashing lavender oil across his waistcoat.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "mateo",
+      "attr": "stains",
+      "value": "dark lavender oil stain soaked into waistcoat lapel"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Mateo dabs fruitlessly at his lapel with a dry towel, grimacing.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel"
+    }
+   }
+  },
+  {
+   "prompt": "In the dim rear corner of the Puppeteer Dressing Room, shadows gather around the heavy rear exit door leading into the theater alley. Clara wears her black velvet vest, white collared shirt, black slacks, worn leather work boots, and bandaged thumb, her wavy brown hair coming loose from its low bun. She cradles the Harlequin Marionette, its broken cords and limp left arm bundled securely beneath a protective swath of plum velvet.\n\nClara kicks the heavy iron latch of the alley exit open, pushing through into the cool draft outside. As she crosses the threshold, she casts a brief, anxious look upward toward the glowing clock face of the theater tower to gauge the dwindling intermission.\n\nFollowing shot tracking behind Clara as the alley door swings outward into the alleyway.",
+   "annotation": {
+    "title_en": "Clara wraps Harlequin in a velvet cloth and heads out throug",
+    "scene": "dressing_room",
+    "camera": "Following shot tracking Clara as she kicks open the alley exit door.",
+    "beat": "Clara wraps Harlequin in a velvet cloth and heads out through the back door toward her workshop across the lane.",
+    "present": [
+     "clara",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara glances up at the theater clock tower, checking the remaining intermission minutes.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+    }
+   }
+  },
+  {
+   "prompt": "Inside Clara's Workshop Ground Floor, rich amber sunlight streams through broad timber windows, illuminating hanging suspension hooks, cluttered workbenches, and thick curls of wood shavings carpeting the floorboards. Clara enters first, wearing her formal black velvet vest, crisp white collared shirt, black slacks, worn leather boots, and bandaged left thumb, hair in a loose low bun, clutching the bundled puppet. Following closely behind is Mateo, wearing his gray dress shirt, scuffed clogs, and burgundy waistcoat heavily marked by a dark lavender oil stain on the lapel.\n\nThe pair burst through the entrance, their boots kicking up dry wood shavings across the plank floor. Mateo leans heavily against the doorframe to steady the swinging timber door while panting for breath.\n\nWide shot from deep within the sun-drenched workshop as the heavy entrance door flies open.",
+   "annotation": {
+    "title_en": "Clara and Mateo burst into the sun-drenched workshop, scatte",
+    "scene": "workshop_main",
+    "camera": "Wide shot from the interior of the workshop as the heavy entrance door swings wide.",
+    "beat": "Clara and Mateo burst into the sun-drenched workshop, scattering loose wood shavings across the threshold.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "Mateo holds the door steady while catching his breath against the jamb.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel"
+    }
+   }
+  },
+  {
+   "prompt": "In Clara's sunlit timber ground floor workshop, curled wood shavings carpet the floorboards beneath dangling suspension hooks and cluttered workbenches.\n\nClara, a slender female puppeteer in her late twenties with pale skin, wavy brown hair in a loose low bun, and hazel eyes, wears a formal black velvet vest, crisp white shirt, black slacks, and worn leather boots, her left thumb tightly wrapped in a white bandage. On the bench rests the closed mahogany tuning peg case with its brass latch alongside the carbon-steel woodcarving chisel with its sharp polished blade and octagonal ash handle. Clara flips open the case, revealing velvet dividers and brass wires, and extracts two violin pegs. She tests the sharp chisel edge against her thumb.\n\nA close-up frames Clara's bandaged hand selecting pegs alongside the glistening chisel blade.",
+   "annotation": {
+    "title_en": "Clara flings open the tuning peg box and grabs two sturdy vi",
+    "scene": "workshop_main",
+    "camera": "Close-up on Clara's bandaged hand picking out pegs and the polished chisel blade.",
+    "beat": "Clara flings open the tuning peg box and grabs two sturdy violin pegs alongside her trusty chisel.",
+    "present": [
+     "clara",
+     "tuning_peg_case",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [
+     "tuning_peg_case"
+    ],
+    "changes": [
+     {
+      "entity": "tuning_peg_case",
+      "attr": "state",
+      "value": "open mahogany box with brass wires and two pegs removed"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara tests the sharpness of the chisel edge against her apron thumb.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "tuning_peg_case": {
+      "state": "closed mahogany box with brass latch"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "tuning_peg_case.state": "open mahogany box with brass wires and two pegs removed",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   }
+  },
+  {
+   "prompt": "Sunlight cuts through Clara's cluttered timber workshop, illuminating golden curls of wood shavings beneath hanging suspension hooks.\n\nClara, a pale, slender puppeteer with wavy brown hair pinned in a low bun and hazel eyes, wears her black velvet vest, white shirt, slacks, worn leather boots, and tightly bandaged left thumb. Laying out the carved pine Harlequin marionette with its pointed chin, articulated limbs, and limp dangling cords on its detached arm, she grips the carbon-steel woodcarving chisel by its ash handle. As Clara carves out the damaged shoulder socket, pine shavings flutter, and she brushes a smudge of charcoal and amber varnish across her right cheek, blowing a stray hair from her eyes.\n\nA tight profile shot focuses closely on Clara's smudged face and the airborne pine dust.",
+   "annotation": {
+    "title_en": "Clara re-bores the damaged shoulder socket with the chisel, ",
+    "scene": "workshop_main",
+    "camera": "Tight profile shot focusing on Clara's face and the flying pine dust.",
+    "beat": "Clara re-bores the damaged shoulder socket with the chisel, accidentally wiping a greasy varnish smudge across her cheek.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "woodcarving_chisel"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "stains",
+      "value": "charcoal and amber varnish smudge across right cheek"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara blows a lock of loose hair from her eyes while carving the new shoulder recess.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "harlequin_marionette.state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose",
+     "woodcarving_chisel.state": "sharp polished blade with oiled wooden handle"
+    }
+   }
+  },
+  {
+   "prompt": "Inside the amber-lit timber workshop, workbenches remain strewn with carving tools, curls of shavings, and iron suspension hooks.\n\nClara, the slender puppeteer with wavy brown hair in a low bun, hazel eyes, and a charcoal and amber varnish smudge on her cheek, wears her black velvet vest, white shirt, slacks, work boots, and bandaged thumb. Beside the injured pine Harlequin marionette lies the cylindrical wooden waxed linen spool wound with heavy black cord. Taking threaded cord from the spool, Clara stitches through Harlequin's shoulder socket, pulling the braided line taut with a sharp snap, leaving the marionette fully re-strung with reinforced double-knotted braided cord.\n\nAn extreme close-up captures Clara's needle drawing black waxed cord through the carved joint.",
+   "annotation": {
+    "title_en": "Using the heavy waxed linen spool, Clara threads double-knot",
+    "scene": "workshop_main",
+    "camera": "Extreme close-up of Clara's needle pulling the black waxed cord through the shoulder socket.",
+    "beat": "Using the heavy waxed linen spool, Clara threads double-knotted cord through Harlequin's newly carved joint.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "waxed_linen_spool"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "harlequin_marionette",
+      "attr": "state",
+      "value": "fully re-strung with reinforced double-knotted braided cord"
+     }
+    ],
+    "location_visit": "same",
+    "momentary": "Clara draws the knot tight with a sharp snap of tension.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "harlequin_marionette": {
+      "state": "snapped shoulder and wrist cords dangling limp, left arm hanging loose"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "waxed_linen_spool.state": "full spool of heavy black waxed cord"
+    }
+   }
+  },
+  {
+   "prompt": "The ground floor workshop glows under warm sunlight filtering across cluttered timber benches and wood-shaving-strewn floorboards.\n\nClara, a slender puppeteer with hazel eyes, a varnish-smudged cheek, and wavy brown hair in a low bun, is dressed in her black velvet vest, white shirt, black slacks, worn boots, and thumb bandage. She picks up the smooth birch control cross with its brass screw-eyes and attaches the double-knotted cords of the fully re-strung pine Harlequin marionette. Raising the cross, Clara sends Harlequin into a fluid mock pirouette over the workbench, watching the repaired arm lift smoothly in tandem with the tilted bar.\n\nA medium shot captures Clara swinging the dancing marionette directly above the wooden table.",
+   "annotation": {
+    "title_en": "Clara anchors the new cord lines to the birch control cross,",
+    "scene": "workshop_main",
+    "camera": "Medium shot of Clara swinging Harlequin through a mock pirouette above the workbench.",
+    "beat": "Clara anchors the new cord lines to the birch control cross, lifting Harlequin to test the restored articulation.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "control_cross"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Harlequin's repaired arm rises smoothly in unison with the cross tilt.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "control_cross.state": "smooth birch cross without strings attached"
+    }
+   }
+  },
+  {
+   "prompt": "In the dim backstage wings of the Grand Marionette theater, rope fly-systems, dangling sandbags, and painted scenery flats flank the worn floorboards.\n\nClara—wearing her black velvet vest, white collared shirt, slacks, worn boots, bandaged thumb, and varnish-smeared cheek—sprints in carrying the fully re-strung pine Harlequin marionette. Mateo, a stocky young apprentice with tan skin and short black curly hair, wears a burgundy waistcoat stained with dark lavender oil, a gray shirt, and clogs. Running through the wings, Clara slips an antique brass loupe necklace over her head, resting it against her chest. Mateo shouts ahead to the stage manager that Harlequin is ready.\n\nA tracking shot retreats backwards ahead of Clara as she dashes across the wings.",
+   "annotation": {
+    "title_en": "Sprinting back through the stage door, Clara slips her brass",
+    "scene": "theater_backstage",
+    "camera": "Tracking shot moving backward in front of Clara as she runs through the theater wings.",
+    "beat": "Sprinting back through the stage door, Clara slips her brass loupe necklace over her head for emergency checks.",
+    "present": [
+     "clara",
+     "mateo",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [
+     {
+      "entity": "clara",
+      "attr": "accessory",
+      "value": "brass loupe necklace resting against chest"
+     }
+    ],
+    "location_visit": "revisit",
+    "momentary": "Mateo yells ahead to the stage manager that the puppet is restored.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord"
+    }
+   }
+  },
+  {
+   "prompt": "Dim backstage theatrical wings surround the iron gantry ladder with shadowed fly ropes, scenic flats, and dusty floorboards.\n\nClara, the slender puppeteer with hazel eyes, low bun, cheek varnish smudge, and bandaged thumb, wears her black velvet vest, white shirt, slacks, boots, and brass loupe necklace. Beside the ladder stands Mateo, stocky with short black curls, clad in his lavender-oil-stained burgundy waistcoat, gray shirt, and scuffed clogs. Clara steps onto the bottom rungs, clutching strings in her good hand and nodding firmly, as the intermission bell chimes its final cue and Mateo offers an encouraging thumbs-up.\n\nA low-angle shot frames Clara ascending the ladder rungs looking down toward Mateo.",
+   "annotation": {
+    "title_en": "At the base of the gantry ladder, Mateo gives Clara a thumbs",
+    "scene": "theater_backstage",
+    "camera": "Low-angle shot framing Clara on the first rungs of the ladder looking down at Mateo.",
+    "beat": "At the base of the gantry ladder, Mateo gives Clara a thumbs-up as the intermission bell rings its final chime.",
+    "present": [
+     "clara",
+     "mateo"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara nods firmly, gathering Harlequin's strings in her uninjured hand.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel"
+    }
+   }
+  },
+  {
+   "prompt": "The Proscenium Marionette Stage features a polished miniature oak stage framed by rich red velvet curtain wings, warm glowing footlights, and an elevated bridge above. Positioned at the rear, the Stage Backdrop remains rolled tightly around its counterweighted wooden pole.\n\nClara, a slender puppeteer in her late twenties with pale skin, hazel eyes, and wavy brown hair in a loose low bun, stands on the overhead bridge dressed in a formal black velvet vest, crisp white collared shirt, black slacks, and worn leather work boots, her left thumb bound in a tight white bandage, charcoal and amber varnish smudged across her right cheek, and a brass loupe necklace resting on her chest. Down on the stage floor, the carved pine Harlequin Marionette stands perfectly poised, fully re-strung with reinforced double-knotted braided cord. As the traveler curtains part in full, the auditorium erupts into startled, ecstatic applause at the sight of the restored puppet.\n\nA wide shot framed from the auditorium perspective captures the curtain opening and the audience's reaction.",
+   "annotation": {
+    "title_en": "Clara regains her place above the stage as the traveler curt",
+    "scene": "stage_floor",
+    "camera": "Wide shot from the auditorium perspective as the curtain parts in full.",
+    "beat": "Clara regains her place above the stage as the traveler curtain opens to reveal Harlequin poised before the clock tower.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "stage_backdrop"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "revisit",
+    "momentary": "The audience erupts into startled applause upon seeing the repaired puppet standing tall.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "stage_backdrop.state": "rolled tightly around a counterweighted wooden pole"
+    }
+   }
+  },
+  {
+   "prompt": "The Proscenium Marionette Stage is illuminated by golden theatrical footlights against plush red velvet curtain wings.\n\nOn the overhead bridge, Clara manipulates the control strings, her face bearing a smudge of charcoal and amber varnish, dressed in her formal black velvet vest, white collared shirt, black slacks, work boots, loupe necklace, and thumb bandage. Below, the fully re-strung Harlequin Marionette spins across the polished oak boards in a bravura encore dance. In the ornate prompt box, Madame Vane—a tall, gaunt patron in her sixties with an aquiline nose and silver updo beneath a feathered emerald fascinator—beams in her high-collared midnight silk gown and pointed black heeled slippers, clutching her theater program to her chest in palpable relief as she applauds.\n\nEye-level medium shot alternating between Harlequin's spinning form and Madame Vane's joyful applause.",
+   "annotation": {
+    "title_en": "Madame Vane beams from the prompt box as Clara commands Harl",
+    "scene": "stage_floor",
+    "camera": "Eye-level medium shot cutting between Harlequin's spinning form and Madame Vane's joyful applause.",
+    "beat": "Madame Vane beams from the prompt box as Clara commands Harlequin into a bravura encore dance.",
+    "present": [
+     "clara",
+     "madame_vane",
+     "harlequin_marionette"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Madame Vane clutches her program to her chest with visible relief.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "madame_vane.outfit": "high-collared midnight silk gown",
+     "madame_vane.footwear": "black pointed heeled slippers",
+     "madame_vane.headwear": "feathered emerald fascinator pinned to silver updo",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord"
+    }
+   }
+  },
+  {
+   "prompt": "The Proscenium Marionette Stage glows below the elevated rigging, where thick ropes and suspended catwalks overlook the polished oak floorboards.\n\nClara, wearing her velvet vest, white collared shirt, black slacks, work boots, thumb bandage, and loupe necklace with soot and varnish on her cheek, expertly tilts her controls. High above on the catwalk, Barnaby, the elderly orange tabby cat with a notched left ear, pale green eyes, and a plain red leather collar, rests inside a coiled rope basket. Barnaby blinks calmly at the brilliant footlights below as the Harlequin Marionette, strung with braided black cord, leaps through the air to complete a flawless triple backflip.\n\nHigh-angle perspective past Barnaby's notched ear looking down onto the illuminated puppet.",
+   "annotation": {
+    "title_en": "High on the backstage catwalk, Barnaby watches quietly from ",
+    "scene": "stage_floor",
+    "camera": "High-angle perspective past Barnaby's notched ear looking down onto the illuminated puppet.",
+    "beat": "High on the backstage catwalk, Barnaby watches quietly from a rope basket as Harlequin completes a flawless triple backflip.",
+    "present": [
+     "clara",
+     "harlequin_marionette",
+     "barnaby"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Barnaby blinks calmly at the bright footlights below.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "barnaby.accessory": "plain red leather collar without bell"
+    }
+   }
+  },
+  {
+   "prompt": "The Proscenium Marionette Stage is blanketed in golden amber warmth under glowing stage lights beside an unlit hexagonal Brass Sconce Lantern mounted near the proscenium arch.\n\nClara stands beside Mateo, a stocky young apprentice with tan skin and short curly black hair, dressed in a tailored burgundy waistcoat with a lavender oil stain on the lapel, gray dress shirt, and scuffed work clogs. Between them, the Harlequin Marionette rests on the oak floorboards. Clara, still sporting her smudged cheek, loupe necklace, velvet vest, and bandaged thumb, tips Harlequin forward into a deep, elegant courtly bow while grinning broadly at Mateo as floral bouquets shower onto the stage.\n\nSlow pull-back wide shot capturing the stage, the bowing puppeteers, and the showering floral bouquets.",
+   "annotation": {
+    "title_en": "As the brass lantern casts warm golden light across the stag",
+    "scene": "stage_floor",
+    "camera": "Slow pull-back wide shot capturing the stage, the puppeteers, and the showering floral bouquets.",
+    "beat": "As the brass lantern casts warm golden light across the stage, Clara and Mateo take a triumphant bow alongside Harlequin.",
+    "present": [
+     "clara",
+     "mateo",
+     "harlequin_marionette",
+     "brass_sconce_lantern"
+    ],
+    "first_appearance": [],
+    "changes": [],
+    "location_visit": "same",
+    "momentary": "Clara tips Harlequin forward in a deep courtly bow while grinning broadly at Mateo.",
+    "start_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     }
+    },
+    "entity_state": {
+     "clara": {
+      "outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+      "footwear": "worn leather work boots",
+      "hairstyle": "wavy brown hair tied in a loose low bun",
+      "injury": "white bandage wrapped tightly around left thumb",
+      "stains": "charcoal and amber varnish smudge across right cheek",
+      "accessory": "brass loupe necklace resting against chest"
+     },
+     "barnaby": {
+      "accessory": "plain red leather collar without bell"
+     },
+     "harlequin_marionette": {
+      "state": "fully re-strung with reinforced double-knotted braided cord"
+     },
+     "woodcarving_chisel": {
+      "state": "sharp polished blade with oiled wooden handle"
+     },
+     "waxed_linen_spool": {
+      "state": "full spool of heavy black waxed cord"
+     },
+     "pegasus_marionette": {
+      "state": "fully painted ivory and gold, strung to its control bar"
+     },
+     "control_cross": {
+      "state": "smooth birch cross without strings attached"
+     },
+     "varnish_pot": {
+      "state": "uncapped stoneware jar, brush resting inside amber resin"
+     },
+     "velvet_travel_trunk": {
+      "state": "open cedar trunk with empty padded compartments"
+     },
+     "mateo": {
+      "outfit": "tailored burgundy waistcoat over gray dress shirt",
+      "footwear": "scuffed work clogs",
+      "stains": "dark lavender oil stain soaked into waistcoat lapel"
+     },
+     "stage_backdrop": {
+      "state": "rolled tightly around a counterweighted wooden pole"
+     },
+     "madame_vane": {
+      "outfit": "high-collared midnight silk gown",
+      "footwear": "black pointed heeled slippers",
+      "headwear": "feathered emerald fascinator pinned to silver updo"
+     },
+     "brass_sconce_lantern": {
+      "state": "unlit brass lantern with trimmed wick and clear glass"
+     },
+     "tuning_peg_case": {
+      "state": "open mahogany box with brass wires and two pegs removed"
+     }
+    },
+    "state": {
+     "clara.outfit": "formal black velvet vest over crisp white collared shirt and black slacks",
+     "clara.footwear": "worn leather work boots",
+     "clara.hairstyle": "wavy brown hair tied in a loose low bun",
+     "clara.injury": "white bandage wrapped tightly around left thumb",
+     "clara.stains": "charcoal and amber varnish smudge across right cheek",
+     "clara.accessory": "brass loupe necklace resting against chest",
+     "mateo.outfit": "tailored burgundy waistcoat over gray dress shirt",
+     "mateo.footwear": "scuffed work clogs",
+     "mateo.stains": "dark lavender oil stain soaked into waistcoat lapel",
+     "harlequin_marionette.state": "fully re-strung with reinforced double-knotted braided cord",
+     "brass_sconce_lantern.state": "unlit brass lantern with trimmed wick and clear glass"
+    }
+   }
+  }
+ ]
+}

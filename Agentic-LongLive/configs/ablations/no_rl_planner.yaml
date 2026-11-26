@@ -1,0 +1,5 @@
+# Planner without RL: the frozen Qwen3.6-35B-A3B checker model also writes the memory updates.
+agent:
+  planner:
+    base_url: ${oc.env:AGL_CHECK_URL,http://127.0.0.1:31001/v1}
+    model: ${oc.env:AGL_CHECK_MODEL,Qwen/Qwen3.6-35B-A3B-FP8}

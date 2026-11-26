@@ -1,0 +1,52 @@
+{
+ "name": "02_wash_pan",
+ "title": "Washing and Stowing Frying Pan",
+ "summary": "The robot washes a frying pan under running water, stows it into a dish crate, inspects the counter, and turns off the faucet.",
+ "camera": "head camera",
+ "robot": "two robotic arms with multi-fingered dexterous hands",
+ "setting": "a kitchen sink area with a running faucet, dish soap, sponge, and blue dish crate",
+ "first_frame": "02_wash_pan.png",
+ "source": {
+  "dataset": "DAGroup-PKU/RoVid-X",
+  "split": "val",
+  "clip_id": "bf4e06c43dab91bef98914eeae535816",
+  "frame_index": 0,
+  "original_prompt": "Wash the held black frying pan under the faucet",
+  "viewpoint": "first_person",
+  "first_frame_sha256": "5fc6a1078d0fd41e403d7e1ebc9a3d9cf007722c1a71691aba20fe6bdcfa7ede"
+ },
+ "segments": [
+  {
+   "instruction": "Rotate the pan under the running faucet with the left hand while the right hand reaches toward the sponge on the counter.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Scrub the interior of the frying pan with the sponge in the right hand while holding it under running water.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Place the sponge back on the rear ledge and set the rinsed frying pan down inside the blue dish crate.",
+   "memory_event": "hide: the frying pan is placed inside the blue crate among the dishes"
+  },
+  {
+   "instruction": "Turn the head camera to the left counter away from the sink and crate, focusing on the dish soap bottle.",
+   "memory_event": "hide: the sink, running faucet, and blue crate leave the field of view"
+  },
+  {
+   "instruction": "Use the left hand to push the dish soap bottle slightly back against the wall while keeping the camera on the left counter.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Turn the head camera back toward the center sink and the blue dish crate.",
+   "memory_event": "return: the sink with running water, sponge on the ledge, and the crate containing the rinsed pan reappear"
+  },
+  {
+   "instruction": "Reach up with the right hand and push the faucet handle to shut off the running water.",
+   "memory_event": "none"
+  },
+  {
+   "instruction": "Reach into the blue dish crate with the left hand and pick up the pan placed there earlier.",
+   "memory_event": "return: the frying pan is lifted from the blue crate, appearing clean and wet"
+  }
+ ]
+}
