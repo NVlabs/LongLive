@@ -28,7 +28,7 @@ Changes: Add the independent Long-WAM and Agentic LongLive projects and group th
   <a href="https://nvlabs.github.io/LongLive/Long-WAM/"><img src="https://img.shields.io/badge/Demo-Long--WAM-76B900" alt="Demo: Long-WAM"></a>
   <a href="https://nvlabs.github.io/LongLive/LongLive-Plug/"><img src="https://img.shields.io/badge/Demo-LongLive--Plug-brown" alt="Demo: LongLive-Plug"></a>
   <a href="https://nvlabs.github.io/LongLive/LongLive2/"><img src="https://img.shields.io/badge/Demo-LongLive_2.0-red" alt="Demo: LongLive 2.0"></a>
-  <a href="https://nvlabs.github.io/LongLive/"><img src="https://img.shields.io/badge/Demo-LongLive_1.0-orange" alt="Demo: LongLive 1.0"></a>
+  <a href="https://nvlabs.github.io/LongLive/LongLive1/"><img src="https://img.shields.io/badge/Demo-LongLive_1.0-orange" alt="Demo: LongLive 1.0"></a>
 </p>
 
 ## Projects
@@ -86,7 +86,7 @@ Changes: Add the independent Long-WAM and Agentic LongLive projects and group th
   <a href="LongLive1.0"><b>LongLive 1.0</b></a><br>
   Real-time interactive long video generation.<br>
   <sub>Type prompts and watch a long video appear in real time, steered as you go.</sub><br>
-  <sub><a href="https://arxiv.org/abs/2509.22622">Paper</a> · <a href="LongLive1.0">Code</a> · <a href="https://nvlabs.github.io/LongLive/">Project page</a> · <a href="https://www.youtube.com/watch?v=CO1QC7BNvig">Video</a></sub>
+  <sub><a href="https://arxiv.org/abs/2509.22622">Paper</a> · <a href="LongLive1.0">Code</a> · <a href="https://nvlabs.github.io/LongLive/LongLive1/">Project page</a> · <a href="https://www.youtube.com/watch?v=CO1QC7BNvig">Video</a></sub>
 </td>
 </tr>
 </table>
@@ -130,7 +130,7 @@ Agentic LongLive runs its LongLive-2.0 generator from `LongLive2.0/`
 - 🎉 [2026.01.27] LongLive is accepted by **ICLR-2026**.
 - 🔥 [2026.01.11] LongLive supports adapting LongLive's original RoPE into KV-cache relative RoPE and generates infinite long videos!
 - 🔥 [2025.11.03] We implement LongLive on linear attention model [SANA-Video](https://nvlabs.github.io/Sana/Video/)! Now SANA-Video can generate 60s interactive videos in real-time.
-- 🔥 [2025.09.29] We release [Paper](https://arxiv.org/abs/2509.22622), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive).
+- 🔥 [2025.09.29] We release [Paper](https://arxiv.org/abs/2509.22622), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive/LongLive1/).
 
 </details>
 
@@ -288,7 +288,7 @@ Checkpoint: [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLiv
 [table above](#checkpoints-longlive-20-and-10)).
 
 → [Paper](https://arxiv.org/abs/2509.22622) · [Code and documentation](LongLive1.0) ·
-[Project page](https://nvlabs.github.io/LongLive/) · [Video](https://www.youtube.com/watch?v=CO1QC7BNvig)
+[Project page](https://nvlabs.github.io/LongLive/LongLive1/) · [Video](https://www.youtube.com/watch?v=CO1QC7BNvig)
 
 ## Awesome work using LongLive
 

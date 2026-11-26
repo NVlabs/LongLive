@@ -10,7 +10,7 @@
 [![Video](https://img.shields.io/badge/YouTube-Video-red)](https://www.youtube.com/watch?v=CO1QC7BNvig)
 [![vs-Sora2](https://img.shields.io/badge/VS-Sora2-red)](https://x.com/yukangchen_/status/1973405662177529993)
 [![Docs](https://img.shields.io/badge/Docs-Online-brightgreen)](https://nvlabs.github.io/LongLive/docs)
-[![Demo](https://img.shields.io/badge/Demo-Page-bron)](https://nvlabs.github.io/LongLive) 
+[![Demo](https://img.shields.io/badge/Demo-Page-bron)](https://nvlabs.github.io/LongLive/LongLive1/) 
 [![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/NVlabs/LongLive)
 
 <div align="center">
@@ -47,7 +47,7 @@
 - [x] [2025.10.11] Many thanks to @yondonfu for building an interactive UI based on LongLive. Please check it [here](https://github.com/daydreamlive/scope).
 - [x] [2025.10.1] We compare Sora2 (+ GPT-5 prompt engineering) with LongLive-1.3B in the interactive long video generation. See [here](https://x.com/yukangchen_/status/1973405662177529993) for details.
 - [x] [2025.9.30] We release [example prompts](https://github.com/NVlabs/LongLive/tree/main/example) to reproduce our demo videos.
-- [x] [2025.9.29] We release [Paper](https://arxiv.org/abs/2509.22622), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive).
+- [x] [2025.9.29] We release [Paper](https://arxiv.org/abs/2509.22622), this GitHub repo [LongLive](https://github.com/NVlabs/LongLive) with all training and inference code, the model weight [LongLive-1.3B](https://huggingface.co/Efficient-Large-Model/LongLive-1.3B), and demo page [Website](https://nvlabs.github.io/LongLive/LongLive1/).
 
 ## Highlights
 1. **Long Video Gen**: LongLive supports up to 240s video generation, with visual consistency.
